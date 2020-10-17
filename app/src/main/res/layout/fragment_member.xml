@@ -1,0 +1,1004 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_EDEFF2"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_59"
+        android:layout_marginBottom="@dimen/dp_7"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_add"
+                android:layout_width="@dimen/dp_75"
+                android:layout_height="@dimen/dp_28"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:background="@drawable/shape_f1fefd_3dp"
+                android:gravity="center"
+                android:orientation="horizontal">>
+
+                <ImageView
+                    android:layout_width="@dimen/dp_16"
+                    android:layout_height="@dimen/dp_16"
+                    android:src="@mipmap/vip_add" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dp_4_5"
+                    android:text="新增"
+                    android:textColor="@color/c_1EC1B3"
+                    android:textSize="@dimen/sp_13" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_charge"
+                android:layout_width="@dimen/dp_75"
+                android:layout_height="@dimen/dp_28"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:background="@drawable/shape_f1fefd_3dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_16"
+                    android:layout_height="@dimen/dp_16"
+                    android:src="@mipmap/vip_charge" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dp_4_5"
+                    android:text="充值"
+                    android:textColor="@color/c_1EC1B3"
+                    android:textSize="@dimen/sp_13" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/dp_256"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_16"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:background="@drawable/shape_d2d2d2"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/dp_12"
+                android:layout_height="@dimen/dp_12"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dp_6"
+                android:layout_marginRight="@dimen/dp_6"
+                android:src="@mipmap/search" />
+
+            <EditText
+                android:id="@+id/et_code"
+                android:layout_width="@dimen/dp_180"
+                android:layout_height="28dp"
+                android:background="@null"
+                android:gravity="center|left"
+                android:hint="请输入手机号  会员码  卡号  读卡(F1)"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:textColor="@color/color_3"
+                android:textColorHint="@color/color_9"
+                android:textSize="@dimen/sp_8" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_4_5"
+                android:layout_marginBottom="@dimen/dp_4_5"
+                android:background="@color/c_e5e5e5" />
+
+            <Button
+                android:id="@+id/btn_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:text="搜索"
+                android:textColor="@color/c_1EC1B3"
+                android:textSize="@dimen/sp_9" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <FrameLayout
+        android:visibility="gone"
+        android:id="@+id/fl_next"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_bigdata"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_22"
+                            android:layout_marginTop="@dimen/dp_14_5"
+                            android:text="会员"
+                            android:textColor="@color/color_3"
+                            android:textSize="@dimen/sp_10" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_6"
+                            android:layout_marginTop="@dimen/dp_14_5"
+                            android:text="当前会员信息"
+                            android:textColor="@color/color_6"
+                            android:textSize="@dimen/sp_7" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_9"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/ll_one"
+                            android:layout_width="@dimen/dp_115"
+                            android:layout_height="@dimen/dp_59"
+                            android:layout_gravity="center|left"
+                            android:layout_marginLeft="@dimen/dp_17"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_ef9623_2dp"
+                            android:gravity="center|left"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/dp_19">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="￥888"
+                                android:textColor="@color/c_ef9623"
+                                android:textSize="@dimen/sp_10" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_7"
+                                android:text="会员总数"
+                                android:textColor="@color/c_202020"
+                                android:textSize="@dimen/sp_8" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_two"
+                            android:layout_width="@dimen/dp_115"
+                            android:layout_height="@dimen/dp_59"
+                            android:layout_gravity="center|left"
+                            android:layout_marginLeft="@dimen/dp_6"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_ef9623_2dp"
+                            android:gravity="center|left"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/dp_19">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="￥888"
+                                android:textColor="@color/c_ef9623"
+                                android:textSize="@dimen/sp_10" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_7"
+                                android:text="今日新增"
+                                android:textColor="@color/c_202020"
+                                android:textSize="@dimen/sp_8" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_three"
+                            android:layout_width="@dimen/dp_115"
+                            android:layout_height="@dimen/dp_59"
+                            android:layout_gravity="center|left"
+                            android:layout_marginLeft="@dimen/dp_6"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_ef9623_2dp"
+                            android:gravity="center|left"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/dp_19">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="￥888"
+                                android:textColor="@color/c_ef9623"
+                                android:textSize="@dimen/sp_10" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_7"
+                                android:text="昨日新增"
+                                android:textColor="@color/c_202020"
+                                android:textSize="@dimen/sp_8" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_four"
+                            android:layout_width="@dimen/dp_115"
+                            android:layout_height="@dimen/dp_59"
+                            android:layout_gravity="center|left"
+                            android:layout_marginLeft="@dimen/dp_6"
+                            android:layout_marginRight="@dimen/dp_17"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_ef9623_2dp"
+                            android:gravity="center|left"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/dp_19">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="￥888"
+                                android:textColor="@color/c_ef9623"
+                                android:textSize="@dimen/sp_10" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_7"
+                                android:text="本月新增"
+                                android:textColor="@color/c_202020"
+                                android:textSize="@dimen/sp_8" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_22"
+                            android:layout_marginTop="@dimen/dp_14_5"
+                            android:text="储值"
+                            android:textColor="@color/color_3"
+                            android:textSize="@dimen/sp_10" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_6"
+                            android:layout_marginTop="@dimen/dp_14_5"
+                            android:text="当前储值会员"
+                            android:textColor="@color/color_6"
+                            android:textSize="@dimen/sp_7" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_9"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="@dimen/dp_115"
+                            android:layout_height="@dimen/dp_59"
+                            android:layout_gravity="center|left"
+                            android:layout_marginLeft="@dimen/dp_17"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_f2fefd_2dp"
+                            android:gravity="center|left"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/dp_19">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="￥888"
+                                android:textColor="@color/c_1EC1B3"
+                                android:textSize="@dimen/sp_10" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_7"
+                                android:text="今日生日"
+                                android:textColor="@color/color_3"
+                                android:textSize="@dimen/sp_8" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="@dimen/dp_115"
+                            android:layout_height="@dimen/dp_59"
+                            android:layout_gravity="center|left"
+                            android:layout_marginLeft="@dimen/dp_6"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_f2fefd_2dp"
+                            android:gravity="center|left"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/dp_19">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="￥888"
+                                android:textColor="@color/c_1EC1B3"
+                                android:textSize="@dimen/sp_10" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_7"
+                                android:text="本周生日"
+                                android:textColor="@color/color_3"
+                                android:textSize="@dimen/sp_8" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="@dimen/dp_115"
+                            android:layout_height="@dimen/dp_59"
+                            android:layout_gravity="center|left"
+                            android:layout_marginLeft="@dimen/dp_6"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_f2fefd_2dp"
+                            android:gravity="center|left"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/dp_19">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="￥888"
+                                android:textColor="@color/c_1EC1B3"
+                                android:textSize="@dimen/sp_10" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_7"
+                                android:text="下周生日"
+                                android:textColor="@color/color_3"
+                                android:textSize="@dimen/sp_8" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="@dimen/dp_115"
+                            android:layout_height="@dimen/dp_59"
+                            android:layout_gravity="center|left"
+                            android:layout_marginLeft="@dimen/dp_6"
+                            android:layout_marginRight="@dimen/dp_17"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_f2fefd_2dp"
+                            android:gravity="center|left"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/dp_19">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="￥888"
+                                android:textColor="@color/c_1EC1B3"
+                                android:textSize="@dimen/sp_10" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_7"
+                                android:text="本月生日"
+                                android:textColor="@color/color_3"
+                                android:textSize="@dimen/sp_8" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_25"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_22"
+                            android:text="会员生日"
+                            android:textColor="@color/color_3"
+                            android:textSize="@dimen/sp_10" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_6"
+                            android:text="当前会员生日"
+                            android:textColor="@color/color_6"
+                            android:textSize="@dimen/sp_7" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_9"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/ll_five"
+                            android:layout_width="@dimen/dp_115"
+                            android:layout_height="@dimen/dp_59"
+                            android:layout_gravity="center|left"
+                            android:layout_marginLeft="@dimen/dp_17"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_7b58ff_2dp"
+                            android:gravity="center|left"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/dp_19">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="￥888"
+                                android:textColor="@color/c_7b58ff"
+                                android:textSize="@dimen/sp_10" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_7"
+                                android:text="Plus会员"
+                                android:textColor="@color/color_3"
+                                android:textSize="@dimen/sp_8" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_six"
+                            android:layout_width="@dimen/dp_115"
+                            android:layout_height="@dimen/dp_59"
+                            android:layout_gravity="center|left"
+                            android:layout_marginLeft="@dimen/dp_6"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_7b58ff_2dp"
+                            android:gravity="center|left"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/dp_19">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="￥888"
+                                android:textColor="@color/c_7b58ff"
+                                android:textSize="@dimen/sp_10" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_7"
+                                android:text="今日新增"
+                                android:textColor="@color/color_3"
+                                android:textSize="@dimen/sp_8" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_seven"
+                            android:layout_width="@dimen/dp_115"
+                            android:layout_height="@dimen/dp_59"
+                            android:layout_gravity="center|left"
+                            android:layout_marginLeft="@dimen/dp_6"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_7b58ff_2dp"
+                            android:gravity="center|left"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/dp_19">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="￥888"
+                                android:textColor="@color/c_7b58ff"
+                                android:textSize="@dimen/sp_10" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_7"
+                                android:text="昨日新增"
+                                android:textColor="@color/color_3"
+                                android:textSize="@dimen/sp_8" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_eight"
+                            android:layout_width="@dimen/dp_115"
+                            android:layout_height="@dimen/dp_59"
+                            android:layout_gravity="center|left"
+                            android:layout_marginLeft="@dimen/dp_6"
+                            android:layout_marginRight="@dimen/dp_17"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_7b58ff_2dp"
+                            android:gravity="center|left"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/dp_19">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="￥888"
+                                android:textColor="@color/c_7b58ff"
+                                android:textSize="@dimen/sp_10" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_7"
+                                android:text="会费总额"
+                                android:textColor="@color/color_3"
+                                android:textSize="@dimen/sp_8" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_25"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_22"
+                            android:layout_marginTop="@dimen/dp_14_5"
+                            android:text="Plus会员"
+                            android:textColor="@color/color_3"
+                            android:textSize="@dimen/sp_10" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_6"
+                            android:layout_marginTop="@dimen/dp_14_5"
+                            android:text="当前Plus会员"
+                            android:textColor="@color/color_6"
+                            android:textSize="@dimen/sp_7" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_9"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/ll_nine"
+                            android:layout_width="@dimen/dp_115"
+                            android:layout_height="@dimen/dp_59"
+                            android:layout_gravity="center|left"
+                            android:layout_marginLeft="@dimen/dp_17"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_f07716_2dp"
+                            android:gravity="center|left"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/dp_19">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="￥888"
+                                android:textColor="@color/c_f07716"
+                                android:textSize="@dimen/sp_10" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_7"
+                                android:text="Plus会员"
+                                android:textColor="@color/color_3"
+                                android:textSize="@dimen/sp_8" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_ten"
+                            android:layout_width="@dimen/dp_115"
+                            android:layout_height="@dimen/dp_59"
+                            android:layout_gravity="center|left"
+                            android:layout_marginLeft="@dimen/dp_6"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_f07716_2dp"
+                            android:gravity="center|left"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/dp_19">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="￥888"
+                                android:textColor="@color/c_f07716"
+                                android:textSize="@dimen/sp_10" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_7"
+                                android:text="今日新增"
+                                android:textColor="@color/color_3"
+                                android:textSize="@dimen/sp_8" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_elven"
+                            android:layout_width="@dimen/dp_115"
+                            android:layout_height="@dimen/dp_59"
+                            android:layout_gravity="center|left"
+                            android:layout_marginLeft="@dimen/dp_6"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_f07716_2dp"
+                            android:gravity="center|left"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/dp_19">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="￥888"
+                                android:textColor="@color/c_f07716"
+                                android:textSize="@dimen/sp_10" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_7"
+                                android:text="昨日新增"
+                                android:textColor="@color/color_3"
+                                android:textSize="@dimen/sp_8" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_twelve"
+                            android:layout_width="@dimen/dp_115"
+                            android:layout_height="@dimen/dp_59"
+                            android:layout_gravity="center|left"
+                            android:layout_marginLeft="@dimen/dp_6"
+                            android:layout_marginRight="@dimen/dp_17"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_f07716_2dp"
+                            android:gravity="center|left"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/dp_19">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="￥888"
+                                android:textColor="@color/c_f07716"
+                                android:textSize="@dimen/sp_10" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_7"
+                                android:text="会费总额"
+                                android:textColor="@color/color_3"
+                                android:textSize="@dimen/sp_8" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_7"
+                    android:background="@color/c_f7f8fa" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_22"
+                            android:layout_marginTop="@dimen/dp_14_5"
+                            android:text="会员非会员交易对比概况"
+                            android:textColor="@color/color_3"
+                            android:textSize="@dimen/sp_10" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_6"
+                            android:layout_marginTop="@dimen/dp_14_5"
+                            android:text="会员"
+                            android:textColor="@color/color_6"
+                            android:textSize="@dimen/sp_7" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_6"
+                            android:layout_marginTop="@dimen/dp_14_5"
+                            android:text="非会员"
+                            android:textColor="@color/color_6"
+                            android:textSize="@dimen/sp_7" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_23"
+                        android:layout_marginBottom="@dimen/dp_25"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|left"
+                            android:layout_weight="1"
+                            android:gravity="center|left"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/dp_37">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="本月笔数"
+                                android:textColor="@color/color_3"
+                                android:textSize="@dimen/sp_10" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_7"
+                                android:text="88888"
+                                android:textColor="@color/c_7b58ff"
+                                android:textSize="@dimen/sp_8" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_7"
+                                android:text="88888"
+                                android:textColor="@color/c_009dff"
+                                android:textSize="@dimen/sp_8" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|left"
+                            android:layout_weight="1"
+                            android:gravity="center|left"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/dp_37">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="上月笔数"
+                                android:textColor="@color/color_3"
+                                android:textSize="@dimen/sp_10" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_7"
+                                android:text="88888"
+                                android:textColor="@color/c_7b58ff"
+                                android:textSize="@dimen/sp_8" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_7"
+                                android:text="88888"
+                                android:textColor="@color/c_009dff"
+                                android:textSize="@dimen/sp_8" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|left"
+                            android:layout_weight="1"
+                            android:gravity="center|left"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/dp_37">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="本月客单价"
+                                android:textColor="@color/color_3"
+                                android:textSize="@dimen/sp_10" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_7"
+                                android:text="88888"
+                                android:textColor="@color/c_7b58ff"
+                                android:textSize="@dimen/sp_8" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_7"
+                                android:text="88888"
+                                android:textColor="@color/c_009dff"
+                                android:textSize="@dimen/sp_8" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|left"
+                            android:layout_weight="1"
+                            android:gravity="center|left"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/dp_37">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="上月客单价"
+                                android:textColor="@color/color_3"
+                                android:textSize="@dimen/sp_10" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_7"
+                                android:text="88888"
+                                android:textColor="@color/c_7b58ff"
+                                android:textSize="@dimen/sp_8" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_7"
+                                android:text="88888"
+                                android:textColor="@color/c_009dff"
+                                android:textSize="@dimen/sp_8" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|left"
+                            android:layout_weight="1"
+                            android:gravity="center|left"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/dp_37">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="今年笔数"
+                                android:textColor="@color/color_3"
+                                android:textSize="@dimen/sp_10" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_7"
+                                android:text="88888"
+                                android:textColor="@color/c_7b58ff"
+                                android:textSize="@dimen/sp_8" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_7"
+                                android:text="88888"
+                                android:textColor="@color/c_009dff"
+                                android:textSize="@dimen/sp_8" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|left"
+                            android:layout_weight="1"
+                            android:gravity="center|left"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/dp_37">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="今年客单价"
+                                android:textColor="@color/color_3"
+                                android:textSize="@dimen/sp_10" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_7"
+                                android:text="88888"
+                                android:textColor="@color/c_7b58ff"
+                                android:textSize="@dimen/sp_8" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_7"
+                                android:text="88888"
+                                android:textColor="@color/c_009dff"
+                                android:textSize="@dimen/sp_8" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+

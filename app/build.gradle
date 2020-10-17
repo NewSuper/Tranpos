@@ -1,0 +1,83 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+android {
+    compileSdkVersion "${COMPILESDKVERSION}" as int
+    buildToolsVersion "28.0.3"
+
+    defaultConfig {
+        applicationId "com.transpos.market"
+        minSdkVersion "${MINSDKVERSION}" as int
+        targetSdkVersion "${TARGETSDKVERSION}" as int
+        versionCode "${VERSIONCODE}" as int
+        versionName "${VERSIONNAME}"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file('app/posSaleAndoid.jks')
+            storePassword "pos2020"
+            keyAlias "pos"
+            keyPassword "pos2020"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            // Zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            // 自定义输出配置
+            applicationVariants.all { variant ->
+                variant.outputs.all { output ->
+                    def createTime = new Date().format("YYYY-MM-dd", TimeZone.getTimeZone("GMT+08:00"))
+                    def fileName = "pos_${defaultConfig.versionName}_${createTime}.apk"
+                    def outFile = output.outputFile
+                    if (outFile != null && outFile.name.endsWith('.apk')) {
+                        outputFileName = fileName  //  output.outputFile 改为 outputFileName
+                    }
+                }
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "com.android.support:appcompat-v7:${SUPPORT_V7_VERSION}"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation project(':PosLibs:network')
+    implementation "android.arch.persistence.room:runtime:$ROOM_VERSION"
+    kapt "android.arch.persistence.room:compiler:$ROOM_VERSION"
+    implementation "com.jakewharton:butterknife:${BUTTERKNIFE_VERSION}"
+    kapt "com.jakewharton:butterknife-compiler:${BUTTERKNIFE_VERSION}"
+    implementation "com.github.bumptech.glide:glide:${GLIDE_VERSION}"
+    implementation "org.apache.commons:commons-lang3:${LANG3_VERSION}"
+    implementation "com.android.support:design:${SUPPORT_V7_VERSION}"
+    implementation "com.android.support:recyclerview-v7:${SUPPORT_V7_VERSION}"
+    implementation "com.github.CymChad:BaseRecyclerViewAdapterHelper:${ADAPTER_VERSION}"
+    //头条适配方案
+    implementation "me.jessyan:autosize:${AUTOSIZE_VERSION}"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${KOTLIN_VERSION}"
+    implementation "android.arch.lifecycle:extensions:${VIEWMODEL_VERSION}"
+    implementation "com.android.support:multidex:${MULTIDEX_VERSION}"
+    implementation "com.gyf.immersionbar:immersionbar:${IMMBAR_VERSION}"
+
+    implementation 'org.apache.commons:commons-collections4:4.1'
+    implementation 'com.tencent.bugly:crashreport:latest.release'
+    implementation files('libs/wxfacepay-release.aar')
+}

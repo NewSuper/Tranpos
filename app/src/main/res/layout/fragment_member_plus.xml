@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:layout_marginLeft="@dimen/dp_5"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_14_5"
+                    android:paddingLeft="@dimen/dp_22"
+                    android:text="PLUS会员"
+                    android:textColor="@color/color_3"
+                    android:textSize="@dimen/sp_10" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_24"
+                    android:paddingLeft="@dimen/dp_22"
+                    android:text="120天Plus"
+                    android:textColor="@color/c_DFB05C"
+                    android:textSize="@dimen/sp_13" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_7_5"
+                    android:paddingLeft="@dimen/dp_22"
+                    android:text="到期：2020年11月16日，剩余116天。"
+                    android:textColor="@color/color_3"
+                    android:textSize="@dimen/sp_8" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_43"
+                    android:paddingLeft="@dimen/dp_22"
+                    android:text="PLUS会员专属特权"
+                    android:textColor="@color/color_3"
+                    android:textSize="@dimen/sp_10" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10_5"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginRight="@dimen/dp_10_5"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:id="@+id/rg_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_23"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.transpos.market.view.CenterRadioButton
+                            android:id="@+id/rb_personal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/selector_radiobutton3"
+                            android:button="@null"
+                            android:checked="true"
+                            android:gravity="center"
+                            android:paddingTop="7dp"
+                            android:paddingBottom="7dp"
+                            android:text="7天体验会员"
+                            android:textColor="@drawable/selector_text_color3"
+                            android:textSize="@dimen/sp_8" />
+
+                        <com.transpos.market.view.CenterRadioButton
+                            android:id="@+id/rb_chuzhi"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/selector_radiobutton3"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:paddingTop="7dp"
+                            android:paddingBottom="7dp"
+                            android:text="15天体验会员"
+                            android:textColor="@drawable/selector_text_color3"
+                            android:textSize="@dimen/sp_8" />
+
+                        <com.transpos.market.view.CenterRadioButton
+                            android:id="@+id/rb_point"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/selector_radiobutton3"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:paddingTop="7dp"
+                            android:paddingBottom="7dp"
+                            android:text="30天体验会员"
+                            android:textColor="@drawable/selector_text_color3"
+                            android:textSize="@dimen/sp_8" />
+
+                        <com.transpos.market.view.CenterRadioButton
+                            android:id="@+id/rb_quanyi"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/selector_radiobutton3"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:paddingTop="7dp"
+                            android:paddingBottom="7dp"
+                            android:text="120天体验会员"
+                            android:textColor="@drawable/selector_text_color3"
+                            android:textSize="@dimen/sp_8" />
+
+                        <com.transpos.market.view.CenterRadioButton
+                            android:id="@+id/rb_plus"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/selector_radiobutton3"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:paddingTop="7dp"
+                            android:paddingBottom="7dp"
+                            android:text="更多"
+                            android:textColor="@drawable/selector_text_color3"
+                            android:textSize="@dimen/sp_8" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:background="@color/white">
+
+                    <FrameLayout
+                        android:id="@+id/fragment_vip"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"></FrameLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+

@@ -1,0 +1,2 @@
+include ':app',':PosLibs:network', ':PosLibs:thread', ':PosLibs:tools'
+rootProject.name = "Market"
