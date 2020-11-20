@@ -1,7 +1,0 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.transpos.tools" >
-    <application>
-        <meta-data android:name="tp_impl" android:value="1"/>
-    </application>
-</manifest>
