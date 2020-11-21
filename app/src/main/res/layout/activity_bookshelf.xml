@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_title"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ws60dp"
+                android:paddingTop="@dimen/ws25dp">
+
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="@dimen/ws10dp"
+                    android:paddingRight="@dimen/ws10dp"
+                    android:src="@mipmap/backblack" />
+
+                <com.flyco.tablayout.SlidingTabLayout
+                    android:id="@+id/table"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/ws40dp"
+                    android:layout_marginRight="@dimen/ws40dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    app:tl_indicator_corner_radius="@dimen/ws3dp"
+                    app:tl_indicator_width="@dimen/ws30dp"
+                    app:tl_indicator_height="@dimen/ws3dp"
+                    app:tl_indicator_color="@color/c_ff6600"
+                    app:tl_tab_padding="@dimen/ws20dp"
+                    app:tl_textSelectColor="@color/c_ff6600"
+                    app:tl_textUnselectColor="@color/c_999999"
+                    app:tl_textsize="@dimen/ws17sp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ws0_5dp"
+                android:background="@color/c_f0f0f0" />
+
+            <com.newsuper.t.juejinbao.view.LoadingView
+                android:id="@+id/loading"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/vp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.newsuper.t.juejinbao.view.LoadingView>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_bookshelf"
+            android:layout_width="@dimen/ws67dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/ws70dp"
+            android:src="@mipmap/icon_story_adv_enter"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/ws10dp"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</layout>

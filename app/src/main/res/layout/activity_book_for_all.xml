@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/title_bar"
+                layout="@layout/module_include_title_bar" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ws0_5dp"
+                android:background="@color/c_f0f0f0"/>
+
+            <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                android:id="@+id/refresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.newsuper.t.juejinbao.view.LoadingView
+                    android:id="@+id/loading"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_book_for_all"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/ws15dp"
+                        android:paddingRight="@dimen/ws15dp"/>
+
+                </com.newsuper.t.juejinbao.view.LoadingView>
+
+            </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_bookshelf"
+            android:layout_width="@dimen/ws67dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/ws70dp"
+            android:src="@mipmap/icon_story_adv_enter"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/ws10dp"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/view_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.6"
+        android:background="#000000" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_click_up"
+        android:layout_centerInParent="true"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_circle_white"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp_50"
+        android:layout_marginRight="@dimen/dp_18"
+        android:layout_marginLeft="@dimen/dp_18"
+        android:padding="3dp">
+
+        <com.juejinchain.android.view.CirclePercentView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            app:circleBgColor="@color/c_fff7f7"
+            app:circleIsGradient="false"
+            app:circleProgressColor="@color/red_500" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableLeft="@mipmap/ic_arcticle_circle_reward"
+            android:text=""
+            android:textSize="@dimen/ws10dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="转满一圈后就可以获得金币奖励哦！"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="3.0"
+        android:shadowColor="#4d000000"
+        android:lineSpacingExtra="@dimen/dp_5"
+        android:layout_toLeftOf="@+id/rl_circle"
+        android:layout_marginLeft="@dimen/dp_100"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp_50"
+        android:textStyle="bold"/>
+
+    <RelativeLayout
+        android:layout_above="@+id/img_arrows"
+        android:id="@+id/rl_dec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/bg_acticle_reward_btn_outer" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="进度条转满1圈可收获阅读金币"
+            android:textColor="@color/white"
+            android:textSize="@dimen/ws14dp" />
+    </RelativeLayout>
+
+    <ImageView
+       android:layout_marginRight="-20dp"
+        android:layout_marginBottom="@dimen/ws80dp"
+        android:layout_toLeftOf="@+id/circle"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/img_arrows"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_guide_arrows"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/ws60dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/confirm_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/bg_btn_orange"
+            android:gravity="center"
+            android:text="知道了"
+
+            android:textColor="@color/white"
+            android:textSize="@dimen/ws15sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/bg_btn_outer_small" />
+
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="@dimen/ws20dp"
+        android:layout_marginBottom="@dimen/ws60dp"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/shape_circle_white"
+            android:padding="3dp">
+
+            <com.juejinchain.android.view.CirclePercentView
+                android:id="@+id/circle_percent_progress"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                app:circleBgColor="@color/c_fff7f7"
+                app:circleIsGradient="false"
+                app:circleProgressColor="@color/red_500" />
+
+            <TextView
+                android:id="@+id/tv_circle_inner_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@mipmap/ic_arcticle_circle_reward"
+                android:text=""
+                android:textSize="@dimen/ws10dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:src="@mipmap/bg_circle_outer" />
+
+
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ws230dp"
+        android:layout_marginLeft="@dimen/ws3dp"
+        android:layout_marginRight="@dimen/ws3dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="没有更多数据"
+        android:textSize="@dimen/app_text2"
+        android:textColor="@color/app_text2"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/ws60dp"/>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="@dimen/ws32dp"
+        android:layout_height="@dimen/ws32dp"
+        android:layout_marginTop="@dimen/ws12dp"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="邀请好友"
+        android:textColor="@color/c_666666"
+        android:textSize="@dimen/ws13sp"
+        android:layout_marginTop="@dimen/ws5dp"
+        android:layout_marginBottom="@dimen/ws12dp"/>
+
+</LinearLayout>

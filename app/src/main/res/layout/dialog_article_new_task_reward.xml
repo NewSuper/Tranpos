@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/ic_article_reward_bg"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_160"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_gold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+1000金币"
+                android:textColor="@color/c_f45610"
+                android:textSize="24dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="恭喜你完成阅读文章任务"
+                android:textColor="@color/c_f45610"
+                android:textSize="15dp"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10000金币=1掘金宝"
+                android:textColor="@color/c_333333"
+                android:textSize="15dp"
+                android:layout_marginTop="@dimen/dp_20"/>
+
+            <TextView
+                android:id="@+id/tv_rmb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1掘金宝≈4.87元"
+                android:textColor="@color/c_333333"
+                android:textSize="15dp"
+                android:layout_marginTop="@dimen/dp_5"/>
+
+            <TextView
+                android:id="@+id/tv_close"
+                android:layout_width="@dimen/dp_200"
+                android:layout_height="@dimen/dp_40"
+                android:text="收下啦"
+                android:textColor="@color/c_EC5A29"
+                android:textSize="14dp"
+                android:gravity="center"
+                android:background="@drawable/bg_radio7"
+                android:layout_marginTop="@dimen/dp_20"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

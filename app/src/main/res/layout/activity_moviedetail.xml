@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="#000000" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:background="#000">
+
+            <com.juejinchain.android.module.movie.player.JzvdPlayerBusiness
+                android:id="@+id/player"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <!--返回-->
+            <RelativeLayout
+                android:id="@+id/rl_back"
+                android:layout_width="50dp"
+                android:layout_height="50dp">
+
+                <ImageButton
+                    android:id="@+id/ib_bback"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/jz_back_normal" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true">
+
+
+                <RelativeLayout
+                    android:visibility="invisible"
+                    android:id="@+id/rl_projection_screen"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/tp" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_activityshare"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_centerInParent="true"
+                        android:background="@mipmap/ic_music_share" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <com.juejinchain.android.view.LoadingView2
+                android:id="@+id/loading_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+
+                        <!--测试-->
+                        <!--<TextView-->
+                        <!--android:id="@+id/test1"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="123456" />-->
+
+                        <!--<TextView-->
+                        <!--android:id="@+id/test2"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="123456" />-->
+
+                        <!--<TextView-->
+                        <!--android:id="@+id/test3"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="123456" />-->
+
+                        <!--<TextView-->
+                        <!--android:id="@+id/test4"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="123456" />-->
+
+                        <!--<TextView-->
+                        <!--android:id="@+id/test5"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="123456" />-->
+
+                        <!--<TextView-->
+                        <!--android:id="@+id/test6"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="123456" />-->
+
+                        <!--<TextView-->
+                        <!--android:id="@+id/test7"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="123456" />-->
+
+                        <!--<TextView-->
+                        <!--android:id="@+id/test8"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="123456" />-->
+
+
+                        <!--影视详情-->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="15dp">
+
+                                    <TextView
+                                        android:id="@+id/tv_name"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_toLeftOf="@id/ll_share"
+                                        android:ellipsize="end"
+                                        android:maxLines="2"
+                                        android:text="--"
+                                        android:textColor="#000"
+                                        android:textSize="19dp"
+                                        android:textStyle="bold" />
+
+                                    <!--分享按钮-->
+                                    <!--<LinearLayout-->
+                                    <!--android:id="@+id/ll_share"-->
+                                    <!--android:layout_alignParentRight="true"-->
+                                    <!--android:layout_marginRight="10dp"-->
+                                    <!--android:layout_width="wrap_content"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:orientation="horizontal"-->
+                                    <!--android:gravity="center_vertical"-->
+                                    <!--android:background="@drawable/bg_moviedetail_share"-->
+                                    <!--android:paddingLeft="10dp"-->
+                                    <!--android:paddingRight="10dp"-->
+                                    <!--android:paddingTop="5dp"-->
+                                    <!--android:paddingBottom="5dp">-->
+                                    <!---->
+                                    <!---->
+                                    <!--<ImageView-->
+                                    <!--android:layout_width="20dp"-->
+                                    <!--android:layout_height="16dp"-->
+                                    <!--android:background="@mipmap/red_share"/>-->
+
+                                    <!--<TextView-->
+                                    <!--android:layout_width="wrap_content"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:text=" 分享"-->
+                                    <!--android:textSize="14dp"-->
+                                    <!--android:textColor="#ff5500"/>-->
+                                    <!---->
+                                    <!--</LinearLayout>-->
+
+                                    <!--开关-->
+                                    <LinearLayout
+                                        android:id="@+id/ll_share"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_marginRight="10dp"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal"
+                                        android:paddingLeft="10dp"
+                                        android:paddingTop="5dp"
+                                        android:paddingRight="10dp"
+                                        android:paddingBottom="5dp">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginRight="5dp"
+                                            android:text="影视加速"
+                                            android:textColor="#666666"
+                                            android:textSize="14dp" />
+
+                                        <Switch
+                                            android:id="@+id/swc"
+                                            android:layout_width="44dp"
+                                            android:layout_height="22dp"
+                                            android:thumb="@drawable/switch_ios_thumb"
+                                            android:track="@drawable/switch_ios_track_selector" />
+
+
+                                    </LinearLayout>
+
+                                </RelativeLayout>
+
+                                <TextView
+                                    android:id="@+id/tv_now"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:text="--"
+                                    android:textColor="#666"
+                                    android:textSize="16dp" />
+
+                                <TextView
+                                    android:id="@+id/tv_actor"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:ellipsize="end"
+                                    android:maxLines="2"
+                                    android:text="--"
+                                    android:textColor="#666"
+                                    android:textSize="16dp" />
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="12dp">
+
+                                    <!--收起状态-->
+                                    <RelativeLayout
+                                        android:id="@+id/rl_sq"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <TextView
+                                            android:id="@+id/tv_detail"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginRight="40dp"
+                                            android:includeFontPadding="false"
+                                            android:maxLines="2"
+                                            android:text="--"
+                                            android:textColor="#666"
+                                            android:textSize="16dp" />
+
+                                        <TextView
+                                            android:id="@+id/tv_zk"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@id/tv_detail"
+                                            android:layout_alignParentRight="true"
+                                            android:background="#fff"
+                                            android:paddingLeft="10dp"
+                                            android:paddingRight="10dp"
+                                            android:text="展开"
+                                            android:textColor="#FDA310" />
+
+
+                                    </RelativeLayout>
+
+                                    <!--展开状态-->
+                                    <RelativeLayout
+                                        android:id="@+id/rl_zk"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:visibility="gone">
+
+                                        <TextView
+                                            android:id="@+id/tv_detail2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginRight="32dp"
+                                            android:includeFontPadding="false"
+                                            android:text="--"
+                                            android:textColor="#666"
+                                            android:textSize="16dp" />
+
+                                        <TextView
+                                            android:id="@+id/tv_sq"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@id/tv_detail2"
+                                            android:layout_alignParentRight="true"
+                                            android:background="#fff"
+                                            android:paddingLeft="10dp"
+                                            android:paddingRight="10dp"
+                                            android:text="收起"
+                                            android:textColor="#FDA310" />
+
+                                    </RelativeLayout>
+
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_marginTop="20dp"
+                                    android:orientation="horizontal">
+
+
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1">
+
+                                        <LinearLayout
+                                            android:id="@+id/ll_share_wx"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_centerInParent="true"
+                                            android:background="@drawable/bg_movieshareline"
+                                            android:gravity="center_vertical"
+                                            android:orientation="horizontal"
+                                            android:paddingLeft="20dp"
+                                            android:paddingRight="25dp">
+
+                                            <ImageView
+                                                android:layout_width="20dp"
+                                                android:layout_height="20dp"
+                                                android:background="@mipmap/icon_login_wx" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="  分享微信"
+                                                android:textColor="#333333"
+                                                android:textSize="14dp" />
+
+
+                                        </LinearLayout>
+
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1">
+
+                                        <LinearLayout
+                                            android:id="@+id/ll_share_pyq"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_centerInParent="true"
+                                            android:background="@drawable/bg_movieshareline"
+                                            android:gravity="center_vertical"
+                                            android:orientation="horizontal"
+                                            android:paddingLeft="20dp"
+                                            android:paddingRight="25dp">
+
+                                            <ImageView
+                                                android:layout_width="20dp"
+                                                android:layout_height="20dp"
+                                                android:background="@mipmap/invidecode_pyq" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="  分享朋友圈"
+                                                android:textColor="#333333"
+                                                android:textSize="14dp" />
+
+
+                                        </LinearLayout>
+
+                                    </RelativeLayout>
+
+                                </LinearLayout>
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1px"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginRight="8dp"
+                                    android:background="#eeeeee" />
+
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginTop="20dp">
+
+                                    <TextView
+                                        android:id="@+id/tv_bfy"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="播放源"
+                                        android:textColor="#000000"
+                                        android:textSize="16dp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/tv_bfytext"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_toRightOf="@id/tv_bfy"
+                                        android:text="（点击下方可以切换播放源哦~）"
+                                        android:textColor="#999"
+                                        android:textSize="14dp"
+                                        android:visibility="gone" />
+
+                                    <RelativeLayout
+                                        android:id="@+id/rl_sort"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+
+                                        <TextView
+                                            android:id="@+id/tv_sort"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_centerVertical="true"
+                                            android:paddingLeft="5dp"
+                                            android:paddingRight="10dp"
+                                            android:text="排序"
+                                            android:textColor="#FDA310" />
+
+                                        <ImageView
+                                            android:layout_width="14dp"
+                                            android:layout_height="16dp"
+                                            android:layout_centerVertical="true"
+                                            android:layout_toLeftOf="@id/tv_sort"
+                                            android:background="@mipmap/moviedetail_sort" />
+                                    </RelativeLayout>
+
+                                </RelativeLayout>
+
+                                <!--播放源-->
+                                <HorizontalScrollView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginRight="8dp"
+                                    android:scrollbars="none">
+
+                                    <RadioGroup
+                                        android:id="@+id/rg_tab"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="40dp"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+
+                                    </RadioGroup>
+
+                                </HorizontalScrollView>
+
+                                <HorizontalScrollView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_marginBottom="50dp"
+                                    android:scrollbars="none">
+
+                                    <RadioGroup
+                                        android:id="@+id/rg_tab2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="40dp"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+
+                                    </RadioGroup>
+
+                                </HorizontalScrollView>
+
+
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+
+            </com.juejinchain.android.view.LoadingView2>
+
+            <LinearLayout
+                android:id="@+id/ll_progress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/half_transparent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="海报生成中...."
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</layout>

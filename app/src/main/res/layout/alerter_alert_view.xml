@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/flClickShield"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:clickable="false">
+
+    <FrameLayout
+        android:background="#85000000"
+        android:id="@+id/flAlertBackground"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ws130dp">
+
+        <RelativeLayout
+            android:layout_marginBottom="@dimen/ws20dp"
+            android:layout_marginLeft="@dimen/ws20dp"
+            android:id="@+id/rlContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@null">
+
+            <ImageView
+                android:id="@+id/ivIcon"
+                android:layout_width="@dimen/ws45dp"
+                android:layout_height="@dimen/ws45dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:maxWidth="@dimen/alerter_alert_icn_size"
+                android:maxHeight="@dimen/alerter_alert_icn_size"
+                android:src="@mipmap/icon_app" />
+
+            <LinearLayout
+                android:id="@+id/llAlertTextContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/alerter_activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/alerter_activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/alerter_activity_horizontal_margin"
+                android:layout_marginRight="@dimen/alerter_activity_horizontal_margin"
+                android:layout_toEndOf="@id/ivIcon"
+                android:layout_toRightOf="@id/ivIcon"
+                android:background="@null"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="#EEEEEE"
+                    android:textSize="15sp"
+                    android:visibility="gone"
+                    tools:text="Title"
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/tvText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textSize="18sp"
+                    android:textColor="#FFFFFF"
+                    android:paddingTop="@dimen/alerter_padding_small"
+                    android:paddingBottom="@dimen/alerter_padding_small"
+                    android:visibility="gone"
+                    tools:text="Text"
+                    tools:visibility="visible" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="30dp"
+            android:layout_height="2dp"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="10dp"
+            android:background="#eee" />
+    </FrameLayout>
+
+</FrameLayout>

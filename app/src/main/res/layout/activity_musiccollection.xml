@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/app_white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <RelativeLayout
+                android:id="@+id/rl2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ws48dp">
+
+                <!--返回-->
+                <RelativeLayout
+                    android:id="@+id/rl_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="@dimen/ws8dp"
+                        android:layout_height="@dimen/ws16dp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/ws20dp"
+                        android:layout_marginRight="@dimen/ws20dp"
+                        android:background="@mipmap/backblack" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="@dimen/ws150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:text="我的收藏"
+                    android:textColor="#333"
+                    android:textSize="@dimen/app_text" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#efefef" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_above="@id/bottom_controller"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <!--我喜欢的音乐-->
+                    <RelativeLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="12dp"
+                            android:text="我喜欢的音乐"
+                            android:textColor="#010101"
+                            android:textSize="18dp" />
+
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_likesong"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="6dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="110dp"
+                            android:orientation="vertical"
+                            android:background="@mipmap/myfaveritesong">
+
+
+                        </RelativeLayout>
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"/>
+
+                    </LinearLayout>
+
+                    <!--收藏歌单-->
+                    <RelativeLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="12dp"
+                            android:text="收藏歌单"
+                            android:textColor="#010101"
+                            android:textSize="18dp" />
+
+
+
+                    </RelativeLayout>
+
+                    <com.juejinchain.android.view.LoadingView2
+                        android:id="@+id/loading"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    </com.juejinchain.android.view.LoadingView2>
+                </LinearLayout>
+
+
+
+            </android.support.v4.widget.NestedScrollView>
+
+            <com.juejinchain.android.module.song.view.BottomSongPlayBar
+                android:id="@+id/bottom_controller"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+</LinearLayout>
+</layout>

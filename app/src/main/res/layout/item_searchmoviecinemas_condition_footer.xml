@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  ＋ 添加  "
+        android:textColor="@color/app_text"
+        android:textSize="@dimen/app_text2"
+        android:paddingTop="@dimen/ws3dp"
+        android:paddingBottom="@dimen/ws3dp"
+        android:paddingRight="@dimen/ws10dp"
+        android:paddingLeft="@dimen/ws10dp"
+        android:background="@drawable/bg_radio"
+        android:layout_marginLeft="@dimen/ws10dp"
+        android:layout_marginRight="@dimen/ws10dp"/>
+
+</LinearLayout>

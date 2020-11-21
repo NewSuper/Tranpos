@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioButton xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:button="@null"
+    android:gravity="center"
+    android:text="播放源1"
+    android:paddingRight="20dp"
+    android:textColor="@drawable/movietab_color_sel"
+    android:textStyle="bold"
+    android:textSize="15dp" />

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/c_111111"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/ws60dp"
+            android:paddingLeft="@dimen/ws10dp"
+            android:paddingTop="@dimen/ws20dp"
+            android:paddingRight="@dimen/ws10dp"
+            android:src="@mipmap/ic_back" />
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            app:srlEnableRefresh="false"
+            android:id="@+id/refresh_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/iv_back">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_circle_reward"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="60dp"
+            android:background="@mipmap/bg_read_acticle_circle"
+            android:padding="3dp"
+            android:visibility="gone">
+
+            <com.newsuper.t.juejinbao.view.CirclePercentView
+                android:id="@+id/circle_percent_progress"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal"
+                app:circleBgColor="@color/c_fff7f7"
+                app:circleIsGradient="true"
+                app:circleStartColor="@color/yellow_general_btn"
+                app:circleProgressMax="1000"
+                app:circleEndColor="@color/red_500"
+                app:circleProgressColor="@color/red_500" />
+
+            <TextView
+                android:id="@+id/tv_circle_inner_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@mipmap/ic_arcticle_circle_reward"
+                android:text=""
+                android:textColor="@color/c_F45546"
+                android:textSize="@dimen/ws10dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

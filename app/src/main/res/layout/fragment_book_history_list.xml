@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_book"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/ws90dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_book_empty"
+                android:visibility="visible"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="暂无阅读记录..."
+                android:textColor="@color/c_CECECE"
+                android:textSize="@dimen/ws14sp"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

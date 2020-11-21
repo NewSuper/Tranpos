@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_root"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:gravity="center_horizontal"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:id="@+id/reward_content"
+                android:layout_width="300dp"
+                android:layout_height="350dp"
+                android:background="@mipmap/bg_welcome_back"
+                >
+                <ImageView
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_above="@+id/tv_title"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/img_close"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/close_icon"
+                    />
+
+                <TextView
+                    android:lineSpacingExtra="5dp"
+                    android:textSize="13dp"
+                    android:textColor="@color/c_333333"
+                    android:layout_marginBottom="10dp"
+                    android:layout_above="@+id/tv_coin"
+                    android:id="@+id/tv_title"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:text="亲爱的**\n在您忙碌的这段时间我们为您准备了"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_coin"
+                    android:layout_marginBottom="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_above="@+id/tv_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" + 23金币"
+                    android:textColor="@color/c_FF4E00"
+                    android:textSize="17dp"
+                    />
+                <TextView
+                    android:id="@+id/tv_tip"
+                    android:layout_marginBottom="5dp"
+                    android:layout_above="@+id/tv_enter"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已存至您的账户"
+                    android:textSize="11dp"
+                    />
+
+
+                <TextView
+                    android:layout_marginBottom="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="@dimen/ws10dp"
+                    android:paddingTop="@dimen/ws10dp"
+                    android:paddingLeft="@dimen/ws40dp"
+                    android:paddingRight="@dimen/ws40dp"
+                    android:id="@+id/tv_enter"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="去赚更多金币"
+                    android:textColor="@color/c_FF5912"
+                    android:background="@drawable/shap_line_ff6600_round_100"
+                    android:textStyle="bold"
+                    />
+
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+
+        <FrameLayout
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@+id/reward_content"
+            android:id="@+id/ad_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_white_radius" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="100dp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/loading_progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <ProgressBar
+            android:layout_width="@dimen/ws50dp"
+            android:layout_height="@dimen/ws50dp"
+            android:layout_centerInParent="true"
+            android:indeterminateDrawable="@drawable/loading_login_black" />
+    </LinearLayout>
+
+
+
+</RelativeLayout>

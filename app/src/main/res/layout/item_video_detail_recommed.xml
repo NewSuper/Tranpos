@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/ws10dp"
+        android:layout_marginTop="@dimen/ws15dp"
+        android:layout_marginRight="@dimen/ws10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:paddingBottom="@dimen/ws1dp"
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:enabled="true"
+            android:letterSpacing="0.05"
+            android:maxLines="2"
+            android:text="Title"
+            android:textColor="@color/selecter_color_title"
+            android:textSize="@dimen/content_lager" />
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="5dp">
+
+            <com.juejinchain.android.view.RoundImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:srcCompat="@mipmap/default_img" />
+
+            <TextView
+                android:drawableLeft="@mipmap/icon_video_duration"
+                android:drawablePadding="3dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="2dp"
+                android:id="@+id/tv_videoLength"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:background="@drawable/video_times_shape_without_stroke"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="00:00"
+                android:textColor="@android:color/white"
+                android:textSize="10sp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/ws10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="@dimen/ws10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/tv_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="来源"
+            android:textColor="@color/text_666666"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/tv_readTimes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ws20dp"
+            android:text="阅读 10W"
+            android:textColor="@color/text_666666"
+            android:textSize="12dp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ws1dp"
+        android:background="@color/line_color" />
+</LinearLayout>

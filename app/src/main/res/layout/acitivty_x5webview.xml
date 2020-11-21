@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/tv_status"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ws20dp"
+        android:background="@color/app_color"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <FrameLayout
+        android:id="@+id/frame_web_video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--<com.tencent.smtt.sdk.WebView-->
+        <!--android:id="@+id/x5webview"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" />-->
+    </RelativeLayout>
+
+</LinearLayout>
+</layout>

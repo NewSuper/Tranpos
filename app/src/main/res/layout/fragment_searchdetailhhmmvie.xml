@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <!--标签-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_condition"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ws35dp"
+            android:layout_marginTop="@dimen/ws10dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--webview容器-->
+            <LinearLayout
+                android:id="@+id/ll_webcontain"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" />
+
+            <!--服务器数据列表-->
+            <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                android:id="@+id/srl2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_jjbmovie"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#fff"
+                    android:paddingLeft="@dimen/ws6dp"
+                    android:paddingRight="@dimen/ws6dp" />
+            </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+            <!--第三方数据列表-->
+            <LinearLayout
+                android:id="@+id/ll_third"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_path"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/ws9dp"
+                    android:paddingBottom="@dimen/ws5dp"
+                    android:textColor="#ccc"
+                    android:textSize="@dimen/ws12dp" />
+
+                <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                    android:id="@+id/srl3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_thirdmovie"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="@dimen/ws6dp"
+                        android:paddingRight="@dimen/ws6dp" />
+                </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+            </LinearLayout>
+
+
+            <!--去全网搜-->
+            <ImageView
+                android:id="@+id/iv_qqws"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/qwss"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/ws23dp"
+                android:layout_marginRight="@dimen/ws4dp"
+                android:layout_marginLeft="@dimen/ws4dp"/>
+
+            <!--blank-->
+            <LinearLayout
+                android:id="@+id/rl_blank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <!--<ImageView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:src="@mipmap/blank" />-->
+
+                <TextView
+                    android:id="@+id/tv_loadresult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ws10dp"
+                    android:text="未找到相关影视"
+                    android:textColor="@color/app_text3"
+                    android:textSize="@dimen/app_text" />
+
+
+            </LinearLayout>
+
+
+            <!--log页-->
+            <RelativeLayout
+                android:id="@+id/ll_log"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#80333333"
+                android:focusableInTouchMode="false"
+                android:visibility="gone">
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/ws250dp"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="@dimen/ws20dp"
+                    android:background="@drawable/base_white_shadow"
+
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/ws40dp"
+                        android:gravity="center"
+                        android:text="嗅探中"
+                        android:textColor="@color/app_color"
+                        android:textSize="@dimen/app_text" />
+
+                    <ScrollView
+                        android:id="@+id/sv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/ws10dp"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/ws200dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_log"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text=""
+                                android:textColor="#999999"
+                                android:textSize="@dimen/ws14dp" />
+
+                        </LinearLayout>
+                    </ScrollView>
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <!--跑马灯-->
+            <RelativeLayout
+                android:id="@+id/rl_pmd"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/ws10dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ws50dp"
+                android:background="@drawable/bg_moviesearch_lunbo"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_pmd"
+                    android:layout_width="@dimen/ws15dp"
+                    android:layout_height="@dimen/ws15dp"
+                    android:background="@mipmap/close_icon"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/ws15dp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_pmd"
+                    android:layout_toLeftOf="@id/iv_pmd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="            当前（19:00-23:00）为观影高峰期，可能会有卡顿或解析失败现象。建议您多尝试几次，或避开高峰期观看。"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/ws20dp"
+                    android:layout_marginRight="@dimen/ws10dp"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:textSize="@dimen/ws14dp"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

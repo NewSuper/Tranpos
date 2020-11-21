@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/root_view"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/ll_jj_channel"
+        android:layout_marginLeft="@dimen/ws10dp"
+        android:layout_marginTop="@dimen/ws20dp"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="@dimen/ws35dp"
+            android:layout_height="@dimen/ws35dp"
+            android:src="@mipmap/ic_app_logo_round"
+            />
+        <TextView
+            android:textColor="@color/c_333333"
+            android:layout_marginLeft="@dimen/ws10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="掘金宝"
+            android:textSize="@dimen/ws16dp"
+            />
+        <TextView
+            android:layout_marginLeft="@dimen/ws5dp"
+            android:id="@+id/tv_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/shape_radius_5"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/ws2dp"
+            android:paddingTop="@dimen/ws2dp"
+            android:paddingLeft="@dimen/ws5dp"
+            android:paddingRight="@dimen/ws5dp"
+            android:text="公告"
+            android:textColor="@color/app_color"
+            android:textSize="@dimen/ws10sp"
+        />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/ws10dp"
+        android:paddingRight="@dimen/ws10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ws13dp"
+            android:orientation="horizontal">
+
+            <com.juejinchain.android.view.TagTextView
+                android:paddingBottom="@dimen/ws1dp"
+                android:id="@+id/tv_title"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:enabled="true"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="sdfsdfsd"
+                android:textColor="@color/selecter_color_title"
+                android:textSize="@dimen/content_middle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <com.juejinchain.android.view.RoundImageView
+                android:id="@+id/imageView0"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="5dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@mipmap/default_img" />
+        </LinearLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/ly_middle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            tools:ignore="MissingConstraints">
+
+            <com.juejinchain.android.view.RoundImageView
+                android:id="@+id/imageView1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintDimensionRatio="H,21:12"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/imageView2"
+                app:srcCompat="@mipmap/default_img" />
+            <!-- android:scaleType="centerCrop" 这个会影响glide的圆角
+             所以使用RoundImageView 或circleImageView-->
+            <com.juejinchain.android.view.RoundImageView
+                android:id="@+id/imageView2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="2.5dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintDimensionRatio="H,21:12"
+                app:layout_constraintLeft_toRightOf="@+id/imageView1"
+                app:layout_constraintRight_toLeftOf="@+id/imageView3"
+                app:srcCompat="@mipmap/default_img" />
+
+            <com.juejinchain.android.view.RoundImageView
+                android:id="@+id/imageView3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintDimensionRatio="H,21:12"
+                app:layout_constraintLeft_toRightOf="@+id/imageView2"
+                app:layout_constraintRight_toRightOf="parent"
+                app:srcCompat="@mipmap/default_img" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/large_img"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ws200dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="H,16:9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@mipmap/default_img" />
+
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="60dp"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:visibility="visible">-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/imageView1"-->
+        <!--app:srcCompat="@drawable/dcloud_gallery_default_image"-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="1"-->
+        <!--/>-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/imageView2"-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_marginLeft="5dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:maxWidth="100dp"-->
+        <!--app:srcCompat="@drawable/dcloud_gallery_default_image" />-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/imageView3"-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_marginLeft="5dp"-->
+        <!--android:layout_weight="1"-->
+        <!--app:srcCompat="@drawable/dcloud_gallery_default_image" />-->
+        <!--</LinearLayout>-->
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/ws10dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_hot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="置顶"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="10dp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="来源"
+                android:textColor="@color/text_666666"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/tv_readTimes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="阅读 10W"
+                android:textColor="@color/text_666666"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="04:25 12:00"
+                android:textColor="@color/text_666666"
+                android:textSize="12dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/iv_share"
+                    android:background="@mipmap/homelist_share"
+                    android:layout_width="55dp"
+                    android:layout_height="21dp"/>
+
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0.2dp"-->
+    <!--android:background="#DBDBDB"/>-->
+    <LinearLayout
+        android:id="@+id/rl_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="#f5f5f5">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上次您看到这里  点击刷新"
+            android:textColor="@color/c_77A8EE"
+            android:textSize="14dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:src="@mipmap/ic_last_time_refresh" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/footer"
+        layout="@layout/footer"
+        android:visibility="gone" />
+</LinearLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ws160dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="@dimen/ws95dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/ws10dp"
+            android:layout_marginBottom="@dimen/ws10dp"
+            android:layout_marginLeft="@dimen/ws10dp">
+
+            <ImageView
+                android:scaleType="centerCrop"
+                android:id="@+id/iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:paddingLeft="@dimen/ws5dp"
+                android:paddingRight="@dimen/ws5dp"
+                android:layout_marginLeft="@dimen/ws5dp"
+                android:layout_marginRight="@dimen/ws5dp"
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="#ff5500"
+                android:text="2019"
+                android:textColor="@color/app_white"
+                android:textSize="@dimen/app_text3" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/ws10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_marginTop="@dimen/ws20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="狮子王"
+                android:textColor="@color/app_text"
+                android:textSize="@dimen/ws16dp"
+                android:textStyle="bold" />
+
+
+
+            <TextView
+                android:id="@+id/tv_long"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ws15dp"
+                android:text="118分钟 美国"
+                android:textColor="@color/app_text2"
+                android:textSize="@dimen/app_text2"
+                android:lines="1"
+                android:ellipsize="end"
+                android:layout_marginRight="@dimen/ws10dp"/>
+
+            <TextView
+                android:id="@+id/tv_direct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ws4dp"
+                android:text="导演"
+                android:textColor="@color/app_text2"
+                android:textSize="@dimen/app_text2"
+                android:lines="1"
+                android:ellipsize="end"
+                android:layout_marginRight="@dimen/ws10dp"/>
+
+            <TextView
+                android:id="@+id/tv_actor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ws4dp"
+                android:text="主演"
+                android:textColor="@color/app_text2"
+                android:textSize="@dimen/app_text2"
+                android:lines="1"
+                android:ellipsize="end"
+                android:layout_marginRight="@dimen/ws10dp"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#efefef"/>
+
+</LinearLayout>

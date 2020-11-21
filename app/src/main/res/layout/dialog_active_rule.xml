@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/ws280dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/bg_white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="活动规则"
+        android:textColor="@color/c_333333"
+        android:textSize="@dimen/ws20sp"
+        android:layout_marginTop="@dimen/ws10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="睡觉就能赚钱了,每晚20:00至次日6:00,可以开启睡眠赚功能。睡醒时记得来领取金币,"
+        android:textColor="@color/c_666666"
+        android:textSize="@dimen/ws16sp"
+        android:layout_margin="@dimen/ws15dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ws15dp"
+        android:text="快去点击“我要睡了”开启睡觉赚金币哦~"
+        android:textColor="@color/c_666666"
+        android:textSize="@dimen/ws16sp"
+        android:layout_margin="@dimen/ws15dp"/>
+
+
+<!--    <Button-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="@dimen/ws15dp"-->
+<!--        android:layout_marginBottom="@dimen/ws15dp"-->
+<!--        android:background="@drawable/bg_useragreement_bt"-->
+<!--        android:text="我知道了"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="@dimen/ws16sp" />-->
+    <TextView
+        android:id="@+id/tv_sleep_rule"
+        android:layout_width="@dimen/ws150dp"
+        android:layout_height="@dimen/ws38dp"
+        android:layout_marginTop="@dimen/ws10dp"
+        android:layout_marginBottom="@dimen/ws26dp"
+        android:background="@drawable/shape_gradient_radius_20"
+        android:gravity="center"
+        android:text="知道了"
+        android:textColor="@color/white"
+        android:textSize="@dimen/ws14sp" />
+</LinearLayout>

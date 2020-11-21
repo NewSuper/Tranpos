@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@mipmap/bg_reward_dialog"
+    android:orientation="vertical">
+    <ImageView
+        android:id="@+id/img_close"
+        android:layout_alignParentRight="true"
+        android:padding="@dimen/ws10dp"
+        android:layout_gravity="right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/close_icon"
+        />
+    <RelativeLayout
+        android:layout_marginTop="@dimen/ws10dp"
+        android:layout_marginBottom="@dimen/ws20dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_coin" />
+        <RelativeLayout
+            android:layout_marginLeft="@dimen/ws10dp"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textStyle="bold"
+                android:textColor="@color/c_333333"
+                android:id="@+id/title"
+                android:textSize="@dimen/ws17dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="时段奖励领取成功" />
+
+            <TextView
+                android:layout_marginTop="@dimen/ws3dp"
+                android:id="@+id/tv_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:textSize="@dimen/ws15dp"
+                android:textColor="@color/c_999999"
+                android:textStyle="bold"
+                android:text="恭喜获得" />
+
+            <TextView
+                android:textStyle="bold"
+                android:textSize="@dimen/ws15dp"
+                android:layout_below="@+id/title"
+                android:id="@+id/tv_reward_coin"
+                android:layout_marginLeft="@dimen/ws5dp"
+                android:textColor="@color/c_FF5500"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tv_label"
+                android:layout_toRightOf="@+id/tv_label"
+                android:text="+ 22金币" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <FrameLayout
+        android:id="@+id/fl_enter"
+        android:layout_marginRight="@dimen/ws10dp"
+        android:layout_marginLeft="@dimen/ws10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/image_ad"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/bg_watch_ad"
+            />
+、    </FrameLayout>
+    <TextView
+        android:paddingBottom="@dimen/ws10dp"
+        android:paddingTop="@dimen/ws10dp"
+        android:paddingLeft="@dimen/ws30dp"
+        android:paddingRight="@dimen/ws30dp"
+        android:id="@+id/tv_enter"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/ws30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="看视频赚金币 >"
+        android:textColor="@color/c_ff6600"
+        android:background="@drawable/shap_line_ff6600_round_100"
+        />
+</LinearLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/top_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ws5dp"
+            android:background="#f3f4f5"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_sgad_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_img"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:layout_below="@+id/tv_sgad_title"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <com.juejinchain.android.view.RoundImageView
+            android:id="@+id/iv_sgad_img0"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            app:srcCompat="@mipmap/ic_launcher" />
+
+        <com.juejinchain.android.view.RoundImageView
+            android:id="@+id/iv_sgad_img2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="1dp"
+            android:paddingRight="1dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@mipmap/ic_launcher" />
+
+        <com.juejinchain.android.view.RoundImageView
+            android:id="@+id/iv_sgad_img1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            app:srcCompat="@mipmap/ic_launcher" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_sgad_client"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_img"
+        android:layout_marginTop="10dp"
+        android:text="TextView"
+        android:textSize="12sp" />
+
+        </RelativeLayout>
+
+
+        <View
+            android:id="@+id/bottom_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ws5dp"
+            android:background="#f3f4f5"
+            android:layout_below="@+id/express_ad_container"/>
+
+
+    </LinearLayout>
+</RelativeLayout>

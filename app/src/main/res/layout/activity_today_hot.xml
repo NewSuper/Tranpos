@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff">
+
+        <ImageView
+            android:id="@+id/iv_header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/header_today_hot"
+            android:scaleType="centerCrop"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/module_include_title_bar_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/ws15dp"
+            android:paddingTop="@dimen/ws30dp"
+            android:paddingRight="@dimen/ws15dp"
+            android:paddingBottom="@dimen/ws15dp"
+            android:src="@mipmap/icon_back_white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ws30dp"
+            android:text="实时热点，每10分钟更新一次"
+            android:textColor="@color/c_999999"
+            android:textSize="12dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/ws10dp"
+            android:paddingRight="@dimen/ws10dp"
+            android:background="@color/c_FDEEEB"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_header"/>
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/smallLabel"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title">
+
+            <com.newsuper.t.juejinbao.view.LoadingView
+                android:id="@+id/loading_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recy"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical">
+
+                </android.support.v7.widget.RecyclerView>
+
+            </com.newsuper.t.juejinbao.view.LoadingView>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

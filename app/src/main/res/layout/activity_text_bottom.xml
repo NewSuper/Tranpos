@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <View
+        android:id="@+id/pop_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ws213dp" />
+
+    <RelativeLayout
+        android:id="@+id/pop_all_about"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/pop_view"
+        android:layout_alignParentBottom="true"
+        android:layout_weight="7"
+        android:background="@drawable/shape_white_radiu_top_10">
+
+        <TextView
+            android:id="@+id/pop_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ws45dp"
+            android:background="@drawable/shape_white_radiu_top_10"
+            android:gravity="center"
+            android:text="评论"
+            android:textColor="@color/c_333333"
+            android:textSize="@dimen/ws16dp" />
+
+        <ImageView
+            android:id="@+id/pop_close"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/ws45dp"
+            android:paddingLeft="@dimen/ws14dp"
+            android:paddingRight="@dimen/ws14dp"
+            android:scaleType="center"
+            android:src="@mipmap/icon_small_video_close" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ws0_5dp"
+            android:layout_below="@id/pop_close"
+            android:background="@color/line_color" />
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/pop_close"
+            android:layout_marginBottom="@dimen/ws43dp"
+            android:fillViewport="true"
+            android:overScrollMode="never">
+
+            <com.juejinchain.android.view.LoadingView
+                android:id="@id/loading_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/small_video_pop_comments_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/ws15dp">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/ws30dp">
+
+                        <ProgressBar
+                            android:id="@+id/loading_progressbar"
+                            android:layout_width="@dimen/ws20dp"
+                            android:layout_height="@dimen/ws20dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:indeterminateDrawable="@drawable/picture_content_load"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:id="@+id/small_video_pop_comments_list_more"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/ws10dp"
+                            android:gravity="center"
+                            android:text="没有更多评论了"
+                            android:textColor="@color/c_333333"
+                            android:textSize="@dimen/ws14dp"
+                            android:visibility="invisible" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+            </com.juejinchain.android.view.LoadingView>
+        </android.support.v4.widget.NestedScrollView>
+
+
+        <LinearLayout
+            android:id="@+id/small_video_pop_comments_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/pop_close"
+            android:layout_marginTop="@dimen/ws0_5dp"
+            android:layout_marginBottom="@dimen/ws43dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/empty_small_video_comment" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ws10dp"
+                android:text="暂无相关评论~"
+                android:textColor="@color/c_999999"
+                android:textSize="@dimen/ws13dp" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/ws9dp">
+
+        <EditText
+            android:id="@+id/model_activity_micro_video_edit"
+            style="@null"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ws34dp"
+            android:layout_marginLeft="@dimen/ws9dp"
+            android:layout_marginRight="@dimen/ws61dp"
+            android:background="@drawable/shap_line_cccccc_round_100"
+            android:drawableLeft="@mipmap/icon_my_reply_edtit"
+            android:drawablePadding="@dimen/ws7dp"
+            android:gravity="center_vertical"
+            android:hint="写评论..."
+            android:maxLength="100"
+            android:paddingLeft="@dimen/ws11dp"
+            android:paddingRight="@dimen/ws5dp"
+            android:textColor="@color/c_333333"
+            android:textColorHint="@color/c_999999"
+            android:textSize="@dimen/ws15dp" />
+        <!--        android:textColor="#D69308"-->
+        <TextView
+            android:id="@+id/small_video_pop_comments_commit"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/ws34dp"
+            android:layout_alignParentRight="true"
+            android:enabled="false"
+            android:gravity="center"
+            android:paddingRight="@dimen/ws15dp"
+            android:text="发布"
+            android:textColor="@color/c_999999"
+            android:textSize="@dimen/ws14dp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

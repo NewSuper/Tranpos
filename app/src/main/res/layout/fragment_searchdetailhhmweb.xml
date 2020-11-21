@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+
+    <!--净化-->
+    <RelativeLayout
+        android:id="@+id/rl_jh"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ws40dp">
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/ws10dp"
+            android:layout_marginRight="@dimen/ws10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="净化"
+                android:textColor="#ff9100"
+                android:textSize="@dimen/ws9dp"
+                android:background="@drawable/bg_jh"
+                android:padding="@dimen/ws1dp"/>
+
+            <TextView
+                android:id="@+id/tv_pmd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:ellipsize="end"
+                android:text=" 您访问的内容非掘金宝提供，请注意可能存在的风险"
+                android:textSize="@dimen/ws12dp"
+                android:textColor="#ff9100"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!--<com.scwang.smartrefresh.layout.SmartRefreshLayout-->
+        <!--android:id="@+id/srl"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+    <!--网页-->
+    <LinearLayout
+        android:layout_below="@id/rl_jh"
+        android:id="@+id/ll_webcontain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"></LinearLayout>
+
+    <!--</com.scwang.smartrefresh.layout.SmartRefreshLayout>-->
+    <RelativeLayout
+        android:id="@+id/rl_mzsm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ws40dp"
+        android:background="#b0333333"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/jg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/ws14dp"
+            android:textColor="#fff"
+            android:text="敬告："
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/ws10dp"/>
+
+        <TextView
+            android:layout_toRightOf="@id/jg"
+            android:layout_toLeftOf="@id/tv_mzsm"
+            android:id="@+id/jg_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/ws14dp"
+            android:textColor="#fff"
+            android:singleLine="true"
+            android:text="用户搜索内容及用户自愿充值付费行为与掘金宝无关"
+            android:ellipsize="marquee"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/ws10dp"
+            android:layout_marginLeft="@dimen/ws10dp"/>
+
+        <TextView
+            android:id="@+id/tv_mzsm"
+            android:layout_width="@dimen/ws93dp"
+            android:layout_height="@dimen/ws23dp"
+            android:background="@drawable/bg_moviesearch_mzsm"
+            android:text="阅读免责声明"
+            android:textSize="@dimen/ws11dp"
+            android:textColor="#FF9100"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/ws10dp"/>
+
+
+    </RelativeLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="center"
+        android:progressDrawable="@drawable/bg_moviesearch_progress"
+        android:max="100" />
+
+</RelativeLayout>
+</layout>

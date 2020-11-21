@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:id="@+id/root"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <View
+            android:id="@+id/tv_status"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ws20dp" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:id="@+id/fl_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/ws50dp" />
+
+            <ImageView
+                android:id="@+id/img_bottomLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/ws50dp"
+                android:background="@drawable/actionbar_shadow_up" />
+
+            <com.chaychan.library.BottomBarLayout
+                android:layout_gravity="bottom"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/bbl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ws60dp"
+                android:orientation="horizontal"
+                android:gravity="bottom"
+                android:background="@android:color/transparent"
+                >
+
+                <com.chaychan.library.BottomBarItem
+
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/ws50dp"
+                    app:iconNormal="@mipmap/ic_nav_home"
+                    app:iconSelected="@mipmap/ic_nav_home"
+                    app:itemText="首页"
+                    app:textColorNormal="@color/tab_normal_color"
+                    app:textColorSelected="@color/tab_selected_color"
+                    app:itemTextSize="8sp"
+                    app:itemMarginTop="@dimen/ws2dp"
+                    />
+
+                <com.chaychan.library.BottomBarItem
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/ws50dp"
+                    app:iconNormal="@mipmap/ic_nav_movie"
+                    app:iconSelected="@mipmap/ic_nav_movie"
+                    app:itemText="视频"
+                    app:textColorNormal="@color/tab_normal_color"
+                    app:textColorSelected="@color/tab_selected_color"
+                    app:itemTextSize="8sp"
+                    app:itemMarginTop="@dimen/ws2dp"
+                    />
+
+
+                <com.chaychan.library.BottomBarItem
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="60dp"
+                    app:iconNormal="@mipmap/ic_car_and_money"
+                    app:iconSelected="@mipmap/ic_car_and_money"
+                    app:textColorNormal="@color/tab_normal_color"
+                    app:textColorSelected="@color/tab_selected_color"
+                    app:itemTextSize="8sp"
+                    />
+
+                <com.chaychan.library.BottomBarItem
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/ws50dp"
+                    app:iconNormal="@mipmap/ic_nav_task"
+                    app:iconSelected="@mipmap/ic_nav_task"
+                    app:itemText="任务"
+                    app:textColorNormal="@color/tab_normal_color"
+                    app:textColorSelected="@color/tab_selected_color"
+                    app:itemTextSize="8sp"
+                    app:itemMarginTop="@dimen/ws2dp"
+                    />
+
+                <com.chaychan.library.BottomBarItem
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/ws50dp"
+                    app:iconNormal="@mipmap/ic_nav_my"
+                    app:iconSelected="@mipmap/ic_nav_my"
+                    app:itemText="我的"
+                    app:textColorNormal="@color/tab_normal_color"
+                    app:textColorSelected="@color/tab_selected_color"
+                    app:itemTextSize="8sp"
+                    app:itemMarginTop="@dimen/ws2dp"
+                    />
+
+            </com.chaychan.library.BottomBarLayout>
+
+        </FrameLayout>
+
+    </LinearLayout></layout>

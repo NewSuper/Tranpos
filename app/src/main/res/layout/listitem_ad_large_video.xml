@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/ad_intent"
+    tools:ignore="HardcodedText">
+
+    <View
+        android:id="@+id/top_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ws5dp"
+        android:background="#f3f4f5"/>
+
+    <TextView
+        android:id="@+id/tv_listitem_ad_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:layout_margin="10dp"
+        android:textColor="@color/ad_title_color"
+        android:textSize="18sp" />
+    <!--==== 测试下载状态控制功能 end ========-->
+
+    <FrameLayout
+        android:id="@+id/iv_listitem_video"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/tv_listitem_ad_title"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:scaleType="centerCrop" />
+
+        <!--==== 测试下载状态控制功能 begin ========-->
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<Button-->
+                <!--android:id="@+id/btn_listitem_stop"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="暂停"-->
+                <!--android:visibility="gone" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/btn_listitem_remove"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="删除"-->
+                <!--android:visibility="gone" />-->
+        <!--</LinearLayout>-->
+
+
+    <!--<TextView-->
+        <!--android:id="@+id/tv_listitem_ad_source"-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginBottom="10dp"-->
+        <!--android:ellipsize="end"-->
+        <!--android:singleLine="true"-->
+        <!--android:textSize="10sp" />-->
+
+    <LinearLayout
+        android:id="@+id/tv_source_desc_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10dp"
+        android:layout_marginHorizontal="@dimen/ws10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tt_ad_tv"
+            style="@style/JJ.Label.Light.Little"
+            android:textColor="@color/ccc"
+            android:paddingHorizontal="2dp"
+            android:textSize="8sp"
+            android:background="@drawable/shape_ad_radius"
+            android:text="广告" />
+
+        <ImageView
+            android:id="@+id/iv_listitem_icon"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_below="@id/layout_image_group"
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:id="@+id/tv_listitem_ad_title"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:singleLine="true"
+            android:textColor="@color/text_666666"
+            android:text="爱上……"
+            android:textSize="10sp" />
+
+        <!-- tv_listitem_ad_desc-->
+        <Button
+            android:visibility="gone"
+            android:id="@+id/btn_listitem_creative"
+            android:layout_width="47dp"
+            android:layout_height="22dp"
+            android:text="立即下载"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_blun_radius"
+            android:singleLine="true"
+            android:layout_marginHorizontal="10dp"
+            android:textSize="10sp" />
+
+        <!--==== 测试下载状态控制功能 begin ========-->
+        <ImageButton
+            android:id="@+id/btn_listitem_dislike"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@null"
+            android:src="@mipmap/dislike_icon" />
+
+        <!--==== 测试下载状态控制功能 end ========-->
+    </LinearLayout>
+
+    <View
+        android:id="@+id/bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ws5dp"
+        android:background="#f3f4f5"/>
+
+</LinearLayout>

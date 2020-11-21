@@ -1,0 +1,772 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".module.my.activity.InviteFriendActivity"
+        android:orientation="vertical">
+        <include
+            android:id="@+id/model_title_bar"
+            layout="@layout/module_include_title_bar" />
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+           >
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/c_FF1618">
+
+                <ViewFlipper
+                    android:background="@color/c_FFEED0"
+                    android:id="@+id/flipper"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:autoStart="true"
+                    android:inAnimation="@anim/in_bottomtotop"
+                    android:outAnimation="@anim/in_bottomtotop">
+
+                </ViewFlipper>
+
+
+                <ImageView
+                    android:layout_below="@+id/flipper"
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/bg_invite_friend" />
+
+                <LinearLayout
+                    android:layout_below="@+id/flipper"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:includeFontPadding="false"
+                        android:id="@+id/label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="15dp"
+                        android:text="邀请好友助力冲榜"
+                        android:textColor="@color/white"
+                        android:textSize="36dp"
+                        android:shadowColor="#ba2a06"
+                        android:shadowRadius="1"
+                        android:shadowDx="4"
+                        android:shadowDy="4"/>
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:includeFontPadding="false"
+                        android:id="@+id/tv_head_first_reward"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_below="@+id/label"
+                        android:layout_gravity="center_horizontal"
+                        android:text="首邀得1000掘金宝"
+                        android:textColor="@color/white"
+                        android:textSize="36dp"
+                        android:shadowColor="#ba2a06"
+                        android:shadowRadius="1"
+                        android:shadowDx="4"
+                        android:shadowDy="4"/>
+
+                    <TextView
+                        android:includeFontPadding="false"
+                        android:id="@+id/tv_head_again_reward"
+                        android:layout_width="wrap_content"
+                        android:layout_height="14dp"
+                        android:layout_below="@+id/tv_head_first_reward"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:lineSpacingExtra="2dp"
+                        android:text="（再次邀请得1000个，好友阅读再得提成）"
+                        android:textColor="@color/white"
+                        android:textSize="14dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="75dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_whatinvite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="60dp"
+                            android:text="什么是邀请码 "
+                            android:textColor="@color/c_666666"
+                            android:drawableRight="@mipmap/invitecode_wenhao"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/shape_fff0e3_radius_30"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="我的邀请码："
+                                android:textSize="17dp"
+                                android:textColor="@color/c_333333" />
+
+                            <TextView
+                                android:id="@+id/tv_invite_code"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="12345678"
+                                android:textSize="17dp"
+                                android:textColor="@color/c_333333"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_copy"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="40dp"
+                                android:text="复制"
+                                android:textColor="@color/c_FF0E2C" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/shape_white_radius"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="30dp"
+                            android:text="一键快捷邀请"
+                            android:textColor="@color/c_666666"
+                            android:textSize="17dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_pyq"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:drawableTop="@mipmap/ic_share_wechat_friend"
+                                android:gravity="center"
+                                android:text="朋友圈" />
+
+                            <TextView
+                                android:id="@+id/tv_wx"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:drawableTop="@mipmap/ic_share_wechat"
+                                android:gravity="center"
+                                android:text="微信好友" />
+
+                            <TextView
+                                android:id="@+id/tv_wb"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:drawableTop="@mipmap/ic_share_sina"
+                                android:gravity="center"
+                                android:text="微博" />
+
+                            <TextView
+                                android:id="@+id/tv_qq"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:drawableTop="@mipmap/ic_share_qq"
+                                android:gravity="center"
+                                android:text="QQ好友" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:id="@+id/tv_qqkj"
+                                    android:layout_centerInParent="true"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:drawableTop="@mipmap/ic_share_qq_zone"
+                                    android:gravity="center"
+                                    android:text="QQ空间" />
+
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:id="@+id/tv_bsewm"
+                                    android:layout_centerInParent="true"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:drawableTop="@mipmap/ic_share_qr_code"
+                                    android:gravity="center"
+                                    android:text="不死二维码" />
+
+
+                            </RelativeLayout>
+
+
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_value"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="20dp"
+                            android:gravity="center"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:lineSpacingExtra="2dp"
+                            android:text="好友进入“赚钱”页面,填写你的邀请码，就算邀请成功，首邀可获得--个掘金宝，再次邀请得--个。"
+                            android:textColor="@color/c_333333"
+                            android:textSize="13dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="vertical">
+
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="10dp"
+                                android:layout_alignParentBottom="true"
+                                android:background="@color/c_FF9507"/>
+                        <RadioGroup
+                            android:id="@+id/radio"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="bottom"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/rb_rule"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:layout_weight="1"
+                                android:background="@drawable/invite_rule_selector"
+                                android:button="@null"
+                                android:checked="true"
+                                android:gravity="center"
+                                android:text="奖励规则"
+                                android:textSize="16dp"
+                                android:textColor="@color/radio_textcolor" />
+
+                            <RadioButton
+                                android:id="@+id/rb_invite_list"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:layout_weight="1"
+                                android:background="@drawable/invite_my_selector"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="我的邀请"
+                                android:textSize="16dp"
+                                android:textColor="@color/radio_textcolor" />
+                        </RadioGroup>
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_rule"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_white_radius_bottom"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="15dp"
+                                android:text="奖励规则"
+                                android:textColor="@color/c_333333"
+                                android:textSize="17dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="2dp"
+                                android:text="(实时到账)"
+                                android:textColor="@color/c_FF3244"
+                                android:textSize="13dp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="1"
+                                    android:background="@mipmap/bg_reward_rule"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="10dp"
+                                        android:text="首次邀请"
+                                        android:textColor="@color/c_A76A32"
+                                        android:textSize="16dp" />
+
+
+                                    <LinearLayout
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="25dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:layout_gravity="center_horizontal"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="bottom"
+                                                android:gravity="center"
+                                                android:text="奖励"
+                                                android:textColor="@color/c_A76A32"
+                                                android:textSize="14dp" />
+
+                                            <TextView
+                                                android:id="@+id/tv_value1"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center_horizontal"
+                                                android:gravity="center"
+                                                android:text="100个"
+                                                android:textColor="#FF152E"
+                                                android:textSize="18dp" />
+
+                                        </LinearLayout>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_horizontal"
+                                            android:gravity="center"
+                                            android:text="掘金宝"
+                                            android:textColor="@color/c_A76A32"
+                                            android:textSize="14dp" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="1"
+                                    android:background="@mipmap/bg_reward_rule"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="10dp"
+                                        android:text="非首次邀请"
+                                        android:textColor="@color/c_A76A32"
+                                        android:textSize="16dp" />
+
+                                    <LinearLayout
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="25dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:layout_gravity="center_horizontal"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="bottom"
+                                                android:gravity="center"
+                                                android:text="奖励"
+                                                android:textColor="@color/c_A76A32"
+                                                android:textSize="14dp" />
+
+                                            <TextView
+                                                android:id="@+id/tv_value2"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center_horizontal"
+                                                android:gravity="center"
+                                                android:text="100个"
+                                                android:textColor="#FF152E"
+                                                android:textSize="18dp" />
+
+                                        </LinearLayout>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_horizontal"
+                                            android:gravity="center"
+                                            android:text="掘金宝"
+                                            android:textColor="@color/c_A76A32"
+                                            android:textSize="14dp" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="1"
+                                    android:background="@mipmap/bg_reward_rule"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="10dp"
+                                        android:text="邀请码锁粉"
+                                        android:textColor="@color/c_A76A32"
+                                        android:textSize="16dp" />
+
+                                    <LinearLayout
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="25dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:layout_gravity="center_horizontal"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="bottom"
+                                                android:gravity="center"
+                                                android:text="奖励"
+                                                android:textColor="@color/c_A76A32"
+                                                android:textSize="14dp" />
+
+                                            <TextView
+                                                android:id="@+id/tv_value3"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center_horizontal"
+                                                android:gravity="center"
+                                                android:text="100个"
+                                                android:textColor="#FF152E"
+                                                android:textSize="18dp" />
+
+                                        </LinearLayout>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_horizontal"
+                                            android:gravity="center"
+                                            android:text="掘金宝"
+                                            android:textColor="@color/c_A76A32"
+                                            android:textSize="14dp" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="15dp"
+                                android:gravity="center"
+                                android:lineSpacingExtra="2dp"
+                                android:text="只要分享文章到微信群，新用户打开，掘金宝\n实时到账！"
+                                android:textColor="@color/c_333333" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="5dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="15dp"
+                                android:background="@color/line_color" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text="好友阅读提成"
+                                android:textColor="@color/c_333333"
+                                android:textSize="17dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:lineSpacingExtra="2dp"
+                                android:text="除了邀请奖励，邀请好友的阅读奖励也将双倍\n奖励给你（每日凌晨结算），邀请越多，\n奖励越多！"
+                                android:textColor="@color/c_333333" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginBottom="15dp"
+                                android:background="@drawable/shape_fff0e3_radius_30"
+                                android:gravity="center"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="好友阅读提成奖励=好友每日阅读奖励*2倍"
+                                    android:textColor="@color/c_333333" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:visibility="gone"
+                            android:id="@+id/rl_invite_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_white_radius_bottom"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:minHeight="50dp">
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/rv_invite_list"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="30dp"
+                        android:background="@drawable/shape_white_radius"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_tip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="20dp"
+                            android:text="邀请小技巧"
+                            android:textColor="@color/c_333333"
+                            android:textSize="17dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_tip"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="1dp"
+                            android:text="成功率提升200%"
+                            android:textColor="@color/c_FF3244"
+                            android:textSize="13dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginRight="40dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/ic_first" />
+
+                            <TextView
+                                android:id="@+id/tv_inviteshare"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="分享到3个以上微信群/qq群，成功邀请的几率提升200%！"
+                                android:textColor="@color/c_333333" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginRight="40dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/ic_second" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="邀请你的家人、朋友、同事和同学成功率最高。"
+                                android:textColor="@color/c_333333" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginRight="40dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/ic_third" />
+
+                            <TextView
+                                android:id="@+id/tv_inviteregister"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="可以告诉邀请的朋友：注册可领10个掘金宝，一起冲百万富豪榜。"
+                                android:textColor="@color/c_333333" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginRight="40dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="25dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/ic_four" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="越早参与，邀请人数越多，奖励越大。"
+                                android:textColor="@color/c_333333" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+
+    </LinearLayout>
+</layout>

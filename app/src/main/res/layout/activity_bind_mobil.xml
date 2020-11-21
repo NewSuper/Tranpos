@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f9f9f9"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/activity_bind_mobil_bar"
+            layout="@layout/module_include_title_bar" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ws100dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ws100dp"
+                android:layout_marginLeft="@dimen/ws15dp"
+                android:layout_marginTop="@dimen/ws15dp"
+                android:layout_marginRight="@dimen/ws15dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/icon_banner_mobil_bg" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/ws30dp"
+                android:layout_marginTop="@dimen/ws15dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="关联手机号"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/ws20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="立得250金币奖励"
+                    android:layout_marginTop="@dimen/ws3dp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/ws20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <EditText
+            android:id="@+id/activity_bind_mobil_mobil"
+            android:layout_width="@dimen/ws318dp"
+            android:layout_height="@dimen/ws40dp"
+            android:layout_marginTop="@dimen/ws35dp"
+            android:background="@drawable/shap_line_cccccc_round_100"
+            android:hint="手机号码"
+            android:inputType="number"
+            android:maxLength="11"
+            android:paddingLeft="@dimen/ws22dp"
+            android:textColor="@color/c_333333"
+            android:textColorHint="@color/c_999999"
+            android:textSize="@dimen/ws15sp" />
+
+        <LinearLayout
+            android:id="@+id/activity_bind_mobil_code_about"
+            android:layout_width="@dimen/ws318dp"
+            android:layout_height="@dimen/ws40dp"
+            android:layout_marginTop="@dimen/ws20dp"
+            android:background="@drawable/shap_line_cccccc_round_100"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/activity_bind_mobil_code"
+                android:layout_width="@dimen/ws0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.68"
+                android:background="@null"
+                android:hint="手机验证码"
+                android:inputType="number"
+                android:paddingLeft="@dimen/ws22dp"
+                android:textColor="@color/c_333333"
+                android:textColorHint="@color/c_999999"
+                android:textSize="@dimen/ws15dp" />
+
+            <View
+                android:layout_width="@dimen/ws0_5dp"
+                android:layout_height="@dimen/ws16dp"
+                android:background="@color/line_color" />
+
+            <TextView
+                android:id="@+id/activity_bind_mobil_get_code"
+                android:layout_width="@dimen/ws0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.32"
+                android:gravity="center"
+                android:text="获取验证码"
+                android:textColor="#FF4112"
+                android:textSize="@dimen/ws15dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/activity_bind_mobil_commit"
+            android:layout_width="@dimen/ws318_5dp"
+            android:layout_height="@dimen/ws40_5dp"
+            android:layout_marginTop="@dimen/ws20dp"
+            android:background="@drawable/shap_bg_ed6b2c_round_100"
+            android:gravity="center"
+            android:text="提交"
+            android:textColor="@color/white"
+            android:textSize="@dimen/ws16dp" />
+    </LinearLayout>
+</layout>

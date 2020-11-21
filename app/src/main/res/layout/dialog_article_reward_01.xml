@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/ws288dp"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="@dimen/ws288dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_bg_white_round_10"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/textView"
+            style="@style/JJ.Label.Dark.Max"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ws79dp"
+            android:background="@mipmap/bg_dialog_title"
+            android:gravity="center"
+            android:text="阅读奖励"
+            android:textSize="@dimen/ws21sp"
+            android:textColor="@color/white"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ws10dp">
+
+            <ImageView
+                android:layout_width="@dimen/ws122dp"
+                android:layout_height="@dimen/ws68dp"
+                android:src="@mipmap/ic_reward_star"/>
+            <LinearLayout
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@color/c_AA5200"
+                    android:layout_marginTop="@dimen/ws10dp"
+                    android:id="@+id/tv_coin"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/ws17sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="@dimen/ws10sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="金币"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_marginTop="@dimen/ws5dp"
+            android:layout_marginStart="@dimen/ws18dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="金币是什么?"
+            android:textStyle="bold"
+            android:textSize="@dimen/ws17sp"
+            android:textColor="@color/c_333333"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ws5dp">
+
+            <ImageView
+                android:layout_marginTop="@dimen/ws6dp"
+                android:layout_width="@dimen/ws6dp"
+                android:layout_height="@dimen/ws6dp"
+                android:src="@drawable/circle_solid_red"/>
+
+            <TextView
+                android:lineSpacingExtra="5dp"
+                android:layout_marginStart="@dimen/ws8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/ws13sp"
+                android:text="金币就是钱，金币第二天自动转为掘金\n宝(原始股)，积累的原始股变现后可以\n换汽车、房子。" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="@dimen/ws5dp"
+            android:layout_marginStart="@dimen/ws18dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="怎么赚?"
+            android:textStyle="bold"
+            android:textSize="@dimen/ws17sp"
+            android:textColor="@color/c_333333"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ws5dp">
+
+            <ImageView
+                android:layout_marginTop="@dimen/ws6dp"
+                android:layout_width="@dimen/ws6dp"
+                android:layout_height="@dimen/ws6dp"
+                android:src="@drawable/circle_solid_red"/>
+
+            <TextView
+                android:lineSpacingExtra="15dp"
+                android:layout_marginStart="@dimen/ws8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="邀请和阅读文章越多，获得金币就越多。"
+                android:textSize="@dimen/ws13sp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/dialog_config_my_title_know"
+            android:layout_width="@dimen/ws192dp"
+            android:layout_height="@dimen/ws38dp"
+            android:layout_marginTop="@dimen/ws15dp"
+            android:layout_marginBottom="@dimen/ws30dp"
+            android:background="@drawable/shape_gradient_radius_20"
+            android:gravity="center"
+            android:text="知道了"
+            android:textColor="@color/white"
+            android:textSize="@dimen/ws14sp" />
+
+
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>

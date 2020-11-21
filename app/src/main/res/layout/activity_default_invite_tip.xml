@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".module.login.activity.DefaultInviteTipActivity">
+        <include
+            android:id="@+id/model_title_bar"
+            layout="@layout/module_include_title_bar" />
+        <View
+            android:background="@color/line_color"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ws0_5dp"/>
+        <TextView
+            android:textColor="@color/c_333333"
+            android:layout_marginTop="@dimen/ws25dp"
+            android:textSize="@dimen/ws17dp"
+            android:layout_marginLeft="@dimen/ws15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="没有邀请人怎么办？"
+            />
+        <TextView
+            android:lineSpacingExtra="9dp"
+            android:id="@+id/tv_desc"
+            android:layout_marginRight="@dimen/ws30dp"
+            android:textColor="@color/c_666666"
+            android:layout_marginTop="@dimen/ws18dp"
+            android:textSize="@dimen/ws15dp"
+            android:layout_marginLeft="@dimen/ws15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="如果没有邀请人，无法获得邀请码，你可以输入掘 金宝官方邀请码。"
+            />
+        <TextView
+            android:id="@+id/tv_invite_code"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="@dimen/ws30dp"
+            android:textColor="@color/c_333333"
+            android:layout_marginTop="@dimen/ws50dp"
+            android:textSize="@dimen/ws20dp"
+            android:layout_marginLeft="@dimen/ws15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="官方邀请码:"
+            />
+        <Button
+            android:id="@+id/btn_copy"
+            android:layout_marginTop="@dimen/ws50dp"
+            android:background="@drawable/shape_ff5500_radius"
+            android:layout_marginLeft="@dimen/ws30dp"
+            android:layout_marginRight="@dimen/ws30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="点击复制邀请码"
+            android:textColor="@color/white"
+            android:textSize="@dimen/ws17dp"
+            />
+
+    </LinearLayout>
+</layout>

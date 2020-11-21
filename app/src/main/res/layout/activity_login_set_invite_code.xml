@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout
+        android:background="@color/white"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".module.login.activity.LoginSetInviteCodeActivity">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include
+                android:id="@+id/model_title_bar"
+                layout="@layout/module_include_title_bar" />
+            <View
+                android:background="@color/line_color"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ws0_5dp"/>
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/ws50dp"
+                android:layout_marginRight="@dimen/ws30dp"
+                android:layout_marginLeft="@dimen/ws30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_invite_code_label"
+                    />
+                <EditText
+                    android:inputType="number"
+                    android:id="@+id/ed_input"
+                    android:layout_marginLeft="@dimen/ws10dp"
+                    android:background="@color/white"
+                    android:hint="请输入邀请码"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/ws15dp"
+                    />
+
+            </LinearLayout>
+            <View
+                android:layout_marginRight="@dimen/ws10dp"
+                android:layout_marginLeft="@dimen/ws10dp"
+                android:layout_marginTop="@dimen/ws8dp"
+                android:background="@color/line_color"
+                android:layout_width="match_parent"
+                android:layout_height="1px"/>
+            <TextView
+                android:layout_marginTop="@dimen/ws5dp"
+                android:textColor="@color/c_FF5500"
+                android:layout_marginLeft="@dimen/ws30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="请向你的邀请人索要邀请码"
+                android:textSize="@dimen/ws14dp"
+                />
+            <Button
+                android:alpha="0.5"
+                android:id="@+id/btn_commmit"
+                android:layout_marginTop="@dimen/ws50dp"
+                android:background="@drawable/shape_ff5500_radius"
+                android:layout_marginLeft="@dimen/ws30dp"
+                android:layout_marginRight="@dimen/ws30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="提交"
+                android:textColor="@color/white"
+                android:textSize="@dimen/ws17dp"
+                />
+            <TextView
+                android:id="@+id/tv_no_invite"
+                android:paddingRight="@dimen/ws30dp"
+                android:layout_gravity="right"
+                android:paddingTop="@dimen/ws15dp"
+                android:paddingBottom="@dimen/ws15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="没有邀请人？"
+                android:textSize="@dimen/ws13dp"
+                android:textColor="@color/c_333333"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/loading_progressbar_login"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:layout_width="@dimen/ws50dp"
+                android:layout_height="@dimen/ws50dp"
+                android:layout_centerInParent="true"
+                android:indeterminateDrawable="@drawable/loading_login_black" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/button_one"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="按钮1"
+        android:background="#D1A3A3"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/button_two"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="隐藏"
+        android:background="#D1A3A3"
+        android:visibility="gone" />
+</LinearLayout>

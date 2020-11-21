@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/ws301dp"
+    android:layout_marginRight="@dimen/ws1dp"
+    android:layout_marginBottom="@dimen/ws1dp">
+
+    <ImageView
+        android:id="@+id/adapter_model_home_micro_video_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ws129dp"
+        android:layout_alignParentBottom="true"
+        android:scaleType="fitXY"
+        android:src="@mipmap/model_home_micro_video_bg" />
+
+    <TextView
+        android:id="@+id/model_adapter_micro_video_home_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/ws9dp"
+        android:layout_marginRight="@dimen/ws28_5dp"
+        android:layout_marginBottom="@dimen/ws12dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/ws16dp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/model_adapter_micro_video_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ws129dp"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/model_adapter_micro_video_list_name"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/ws18dp"
+            android:layout_marginLeft="@dimen/ws10dp"
+            android:layout_above="@+id/model_adapter_micro_video_list_content"
+            android:layout_marginBottom="@dimen/ws10dp"
+            android:background="@drawable/shape_black_65000000_radius_4"
+            android:gravity="center"
+            android:paddingLeft="@dimen/ws6dp"
+            android:paddingRight="@dimen/ws6dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/ws12dp" />
+
+        <TextView
+            android:id="@+id/model_adapter_micro_video_list_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/ws10dp"
+            android:layout_marginRight="@dimen/ws10dp"
+            android:layout_marginBottom="@dimen/ws28dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/white"
+            android:textSize="@dimen/ws16dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/ws10dp"
+            android:layout_marginRight="@dimen/ws10dp"
+            android:layout_marginBottom="@dimen/ws8dp">
+
+            <ImageView
+                android:id="@+id/model_adapter_micro_video_list_video_icon"
+                android:layout_width="@dimen/ws11dp"
+                android:layout_height="@dimen/ws13dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/video_icon" />
+
+            <TextView
+                android:id="@+id/model_adapter_micro_video_list_play_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/ws3dp"
+                android:layout_toRightOf="@+id/model_adapter_micro_video_list_video_icon"
+                android:text="0万次播放"
+                android:textColor="@color/white"
+                android:textSize="@dimen/ws11dp" />
+
+            <TextView
+                android:id="@+id/model_adapter_micro_video_list_good_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="0万次点赞"
+                android:textColor="@color/white"
+                android:textSize="@dimen/ws11dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/model_adapter_video_list_more"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#50000000"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/ws36_5dp"
+                android:layout_height="@dimen/ws36_5dp"
+                android:src="@mipmap/icon_video_more" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ws8_5dp"
+                android:text="查看更多"
+                android:textColor="@color/white"
+                android:textSize="@dimen/ws15dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/remove_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:paddingTop="@dimen/ws5dp"
+        android:paddingRight="@dimen/ws13dp"
+        android:src="@mipmap/icon_remove_video" />
+</RelativeLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/view_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.6"
+        android:background="#000000" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="@dimen/ws288dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/shap_bg_white_round_8"
+            android:layout_marginTop="@dimen/ws43dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_receive_two"
+                android:layout_marginTop="@dimen/ws70dp"/>
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="恭喜你完成赚鸡蛋任务（1/2）"
+                android:textColor="@color/c_333333"
+                android:textSize="16dp"
+                android:layout_marginTop="@dimen/ws15dp"/>
+
+            <TextView
+                android:id="@+id/tv_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4枚鸡蛋已放入小程序【橱柜】里\n快去查看吧！"
+                android:textColor="@color/c_666666"
+                android:lineSpacingExtra="@dimen/ws2dp"
+                android:textSize="14dp"
+                android:layout_marginTop="@dimen/ws10dp"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/btn_receive"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ws36dp"
+                android:text="再领两枚蛋"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:layout_marginLeft="@dimen/ws24dp"
+                android:layout_marginRight="@dimen/ws24dp"
+                android:layout_marginTop="@dimen/ws25dp"
+                android:layout_marginBottom="@dimen/ws20dp"
+                android:gravity="center"
+                android:background="@drawable/bg_receive_two"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_egg_more"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_close_white"
+            android:layout_below="@+id/ll_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/ws20dp"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

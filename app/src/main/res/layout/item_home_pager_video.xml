@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/top_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ws5dp"
+        android:background="#f3f4f5"/>
+
+    <TextView
+        android:layout_marginTop="@dimen/ws15dp"
+        android:paddingLeft="@dimen/ws10dp"
+        android:layout_marginRight="@dimen/ws10dp"
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="案例发接口"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:layout_weight="1"
+        android:textColor="@color/selecter_color_title"
+        android:enabled="true"
+        android:textSize="18sp" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_marginTop="@dimen/ws10dp"
+        android:paddingLeft="@dimen/ws10dp"
+        android:layout_marginRight="@dimen/ws10dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ws200dp"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/img_video"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ws200dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="H,16:9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@mipmap/default_img" />
+
+        <ImageView
+            android:layout_width="@dimen/jz_start_button_w_h_normal"
+            android:layout_height="@dimen/jz_start_button_w_h_normal"
+            android:src="@drawable/jz_click_play_selector"
+            app:layout_constraintBottom_toBottomOf="@+id/img_video"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/img_video" />
+
+        <TextView
+            android:id="@+id/tv_videoLength"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_marginEnd="@dimen/ws10dp"
+            android:layout_marginRight="@dimen/ws10dp"
+            android:layout_marginBottom="@dimen/ws10dp"
+            android:background="@drawable/video_times_shape_without_stroke"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="00:00"
+            android:textColor="@android:color/white"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+        <cn.jzvd.JzvdStd
+            android:visibility="invisible"
+            android:id="@+id/jzvdPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ws200dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_readTimes"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_marginBottom="@dimen/ws10dp"-->
+            <!--android:lines="1"-->
+            <!--android:paddingLeft="@dimen/ws10dp"-->
+            <!--android:text="TextView"-->
+            <!--android:textColor="@android:color/white"-->
+            <!--android:textSize="12sp"-->
+            <!--app:layout_constraintBottom_toBottomOf="parent" />-->
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <LinearLayout
+        android:layout_marginLeft="@dimen/ws10dp"
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_marginRight="5dp"
+            android:id="@+id/tv_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="来源"
+            android:textColor="@color/text_666666"
+            android:textSize="12sp" />
+        <TextView
+            android:id="@+id/tv_readTimes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="阅读 10W"
+            android:textColor="@color/text_666666"
+            android:textSize="12sp" />
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="04:25 12:00"
+            android:textColor="@color/text_666666"
+            android:textSize="12sp" />
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ws5dp"
+        android:background="#f3f4f5"/>
+
+</LinearLayout>

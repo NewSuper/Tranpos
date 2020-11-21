@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/smallLabel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tvRecommend">
+
+            <com.juejinchain.android.view.LoadingView
+                android:id="@+id/loading_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recy"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scrollbars="vertical" />
+                </LinearLayout>
+
+            </com.juejinchain.android.view.LoadingView>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <TextView
+            android:id="@+id/tvRecommend"
+            style="@style/JJ.WidthFill"
+            android:background="#D4E8F6"
+            android:gravity="center"
+            android:paddingVertical="5dp"
+            android:text="掘金宝推荐引擎有1条更新"
+            android:textColor="#2F99D9"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <!--<ImageView-->
+        <!--android:id="@+id/img_loading_bg"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:scaleType="centerInside"-->
+        <!--android:visibility="gone" />-->
+
+    </RelativeLayout>
+</layout>

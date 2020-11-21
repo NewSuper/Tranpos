@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <LinearLayout
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".module.my.activity.PrivacyActivity">
+
+        <include
+            android:id="@+id/model_title_bar"
+            layout="@layout/module_include_title_bar" />
+
+        <View
+            android:background="@color/line_color"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ws0_5dp"/>
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ws50dp">
+            <TextView
+                android:textColor="@color/c_333333"
+                android:textSize="@dimen/ws15dp"
+                android:layout_marginLeft="@dimen/ws10dp"
+                android:layout_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="手机号对上下级可见"
+                />
+            <CheckBox
+                android:id="@+id/cb_phone"
+                style="@style/mycheckbox"
+                android:layout_marginRight="@dimen/ws18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <View
+            android:background="@color/line_color"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ws0_5dp"/>
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ws50dp">
+            <TextView
+                android:textColor="@color/c_333333"
+                android:textSize="@dimen/ws15dp"
+                android:layout_marginLeft="@dimen/ws10dp"
+                android:layout_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="微信号对上下级可见"
+                />
+            <CheckBox
+                android:id="@+id/cb_weChat"
+                style="@style/mycheckbox"
+                android:layout_marginRight="@dimen/ws18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+
+        <View
+            android:background="@color/line_color"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ws0_5dp"/>
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ws50dp">
+            <TextView
+                android:textColor="@color/c_333333"
+                android:textSize="@dimen/ws15dp"
+                android:layout_marginLeft="@dimen/ws10dp"
+                android:layout_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="微信群对上下级可见"
+                />
+            <CheckBox
+                android:id="@+id/cb_weChatGroup"
+                style="@style/mycheckbox"
+                android:layout_marginRight="@dimen/ws18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+
+        <View
+            android:background="@color/line_color"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ws0_5dp"/>
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ws50dp">
+            <TextView
+                android:textColor="@color/c_333333"
+                android:textSize="@dimen/ws15dp"
+                android:layout_marginLeft="@dimen/ws10dp"
+                android:layout_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="QQ群对上下级可见"
+                />
+            <CheckBox
+                android:id="@+id/cb_qq_group"
+                style="@style/mycheckbox"
+                android:layout_marginRight="@dimen/ws18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+
+        <View
+            android:background="@color/line_color"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ws0_5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="打开后，方便您与上下级沟通，一起赚取更多掘金宝"
+            android:textColor="@color/c_999999"
+            android:textSize="@dimen/ws12sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/ws20dp"/>
+
+    </LinearLayout>
+</layout>

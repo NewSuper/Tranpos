@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/title_bar"
+                layout="@layout/module_include_title_bar" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ws0_5dp"
+                android:background="@color/c_f0f0f0"/>
+
+            <com.newsuper.t.juejinbao.view.LoadingView
+                android:id="@+id/loading"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/ws78dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:background="@color/c_f6f6f6">
+
+                        <LinearLayout
+                            android:id="@+id/ll_click_ranking"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/ws66dp"
+                            android:orientation="vertical"
+                            android:background="@color/white"
+                            android:gravity="center">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical">
+
+                                <View
+                                    android:id="@+id/view_click"
+                                    android:layout_width="@dimen/ws2dp"
+                                    android:layout_height="@dimen/ws18dp"
+                                    android:layout_marginLeft="@dimen/ws2dp"
+                                    android:layout_marginRight="@dimen/ws7dp"
+                                    android:background="@color/c_FF5500"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="点击排行"
+                                    android:textColor="@color/c_666666"
+                                    android:textSize="@dimen/ws14dp"
+                                    android:textStyle="bold"/>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="TOP 8"
+                                android:textColor="@color/c_888888"
+                                android:textSize="@dimen/ws13dp"
+                                android:layout_marginTop="@dimen/ws7dp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_collect_ranking"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/ws66dp"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical">
+
+                                <View
+                                    android:id="@+id/view_collect"
+                                    android:layout_width="@dimen/ws2dp"
+                                    android:layout_height="@dimen/ws18dp"
+                                    android:layout_marginLeft="@dimen/ws2dp"
+                                    android:layout_marginRight="@dimen/ws7dp"
+                                    android:background="@color/c_FF5500"
+                                    android:visibility="invisible"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="收藏排行"
+                                    android:textColor="@color/c_666666"
+                                    android:textSize="@dimen/ws14dp"
+                                    android:textStyle="bold"/>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="TOP 8"
+                                android:textColor="@color/c_888888"
+                                android:textSize="@dimen/ws13dp"
+                                android:layout_marginTop="@dimen/ws7dp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_new_ranking"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/ws66dp"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical">
+
+                                <View
+                                    android:id="@+id/view_new"
+                                    android:layout_width="@dimen/ws2dp"
+                                    android:layout_height="@dimen/ws18dp"
+                                    android:layout_marginLeft="@dimen/ws2dp"
+                                    android:layout_marginRight="@dimen/ws7dp"
+                                    android:background="@color/c_FF5500"
+                                    android:visibility="invisible"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="最新入库"
+                                    android:textColor="@color/c_666666"
+                                    android:textSize="@dimen/ws14dp"
+                                    android:textStyle="bold"/>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="TOP 8"
+                                android:textColor="@color/c_888888"
+                                android:textSize="@dimen/ws13dp"
+                                android:layout_marginTop="@dimen/ws7dp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rv_ranking"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/tv_more"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="更多"
+                            android:textColor="@color/c_999999"
+                            android:textSize="@dimen/ws14dp"
+                            android:drawableRight="@mipmap/ic_more_right"
+                            android:gravity="center"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/rv_ranking"
+                            android:drawablePadding="@dimen/ws5dp"
+                            android:layout_marginTop="@dimen/ws30dp"
+                            android:paddingTop="@dimen/ws10dp"
+                            android:paddingBottom="@dimen/ws10dp"
+                            android:paddingLeft="@dimen/ws60dp"
+                            android:paddingRight="@dimen/ws60dp"
+                            android:background="@drawable/shape_f6f6f6_round_3"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </com.newsuper.t.juejinbao.view.LoadingView>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_bookshelf"
+            android:layout_width="@dimen/ws67dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/ws70dp"
+            android:src="@mipmap/icon_story_adv_enter"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/ws10dp"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</layout>
+

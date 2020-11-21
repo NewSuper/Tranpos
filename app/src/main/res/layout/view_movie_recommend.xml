@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/tv_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:text="热门电影"
+                android:textColor="#010101"
+                android:textSize="18dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="9dp">
+
+                <TextView
+                    android:id="@+id/tv_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="更多"
+                    android:textColor="#666666"
+                    android:textSize="14dp" />
+
+                <ImageView
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="6dp"
+                    android:layout_height="11dp"
+                    android:background="@mipmap/next"/>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <!--图1-->
+        <RelativeLayout
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <ImageView
+                android:id="@+id/iv1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="精英律师"
+            android:textSize="16dp"
+            android:textColor="#010101"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:lines="1"
+            android:ellipsize="end"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
+</layout>

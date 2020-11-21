@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/ws10dp"
+        android:paddingRight="@dimen/ws10dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ws0_5dp"
+            android:background="@color/c_f0f0f0"/>
+
+        <TextView
+            android:id="@+id/tv_chapter_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="有声的紫禁"
+            android:paddingTop="@dimen/ws15dp"
+            android:paddingBottom="@dimen/ws15dp"
+            android:textColor="@color/c_333333"
+            android:textSize="@dimen/ws16sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

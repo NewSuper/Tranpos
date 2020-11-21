@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_item"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ws132dp"
+        android:layout_margin="@dimen/ws10dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_book_bg"
+            android:layout_width="@dimen/ws96dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_cccccc_round_2">
+
+           <!-- <TextView
+                android:id="@+id/tv_empty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="猫头鹰阅读"
+                android:textColor="@color/white"
+                android:textSize="@dimen/ws7sp"
+                android:drawableTop="@mipmap/ic_book_null"
+                android:layout_centerInParent="true"
+                android:drawablePadding="@dimen/ws5dp"
+                android:gravity="center"/>-->
+
+            <TextView
+                android:id="@+id/tv_empty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@mipmap/icon_book_empty"/>
+
+            <ImageView
+                android:id="@+id/iv_book_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/ws7dp"
+            android:paddingRight="@dimen/ws7dp"
+            android:layout_toRightOf="@+id/rl_book_bg"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_book_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="万古最强部落"
+                android:textColor="@color/c_333333"
+                android:textSize="@dimen/ws14dp"
+                android:layout_marginBottom="@dimen/ws10dp"
+                android:layout_marginTop="@dimen/ws10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="作者：山人自有妙计"
+                android:textColor="@color/c_999999"
+                android:textSize="@dimen/ws12dp"
+                android:gravity="center_vertical"
+                android:id="@+id/tv_writer"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="类型：玄幻"
+                android:gravity="center_vertical"
+                android:textColor="@color/c_999999"
+                android:textSize="@dimen/ws12dp"
+                android:id="@+id/tv_classify"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="时间：7小时前"
+                android:gravity="center_vertical"
+                android:textColor="@color/c_999999"
+                android:textSize="@dimen/ws12dp"
+                android:id="@+id/tv_time"/>
+
+            <TextView
+                android:id="@+id/tv_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="还有1442章节未读"
+                android:textColor="@color/c_999999"
+                android:textSize="@dimen/ws12dp"
+                android:layout_marginTop="@dimen/ws15dp"
+                android:layout_marginBottom="@dimen/ws5dp"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_delete"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/ws10dp"/>
+
+        <TextView
+            android:id="@+id/tv_read"
+            android:layout_width="@dimen/ws72dp"
+            android:layout_height="@dimen/ws24dp"
+            android:text="继续阅读"
+            android:textColor="@color/white"
+            android:textSize="@dimen/ws12dp"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/shape_ff5500_radius_4"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

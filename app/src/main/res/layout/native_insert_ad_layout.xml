@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/native_insert_ad_root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:ignore="MergeRootFrame">
+
+    <ImageView
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/native_insert_ad_img"
+        android:scaleType="fitXY"
+        android:layout_marginTop="32dp"/>
+
+    <ImageView
+        android:layout_centerHorizontal="true"
+        android:id="@+id/native_insert_close_icon_img"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="end|top"
+        android:scaleType="fitXY"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/dislike_icon"
+        android:layout_below="@+id/native_insert_ad_img"
+        />
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/native_insert_ad_logo"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="end|bottom"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp" />
+    <TextView
+        android:visibility="gone"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/circle_solid_main"
+        android:textColor="@color/tt_white"
+        android:text="@string/tt_ad"
+        android:gravity="center"
+        android:layout_gravity="start|bottom"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp" />
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/native_insert_dislike_text"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/circle_solid_main"
+        android:textColor="@color/tt_white"
+        android:text="i"
+        android:gravity="center"
+        android:layout_gravity="start|bottom"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp" />
+
+</RelativeLayout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/rg_dy"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ws52dp"
+        android:orientation="horizontal">
+
+
+        <RadioButton
+            android:id="@+id/rb1_dy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="近期热门"
+            android:button="@null"
+            android:gravity="center"
+            android:layout_marginRight="@dimen/ws20dp"
+            android:layout_marginLeft="@dimen/ws10dp"
+            android:textSize="@dimen/ws15dp"
+            android:background="@drawable/movierd_bg_sel2"
+            android:textColor="@drawable/movierd_color_sel"
+            android:layout_marginTop="@dimen/ws12dp"
+            android:layout_marginBottom="@dimen/ws12dp"/>
+
+        <RadioButton
+            android:id="@+id/rb2_dy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="影院热映"
+            android:button="@null"
+            android:gravity="center"
+            android:textSize="@dimen/ws15dp"
+            android:layout_marginRight="@dimen/ws15dp"
+            android:layout_marginLeft="@dimen/ws15dp"
+            android:background="@drawable/movierd_bg_sel2"
+            android:textColor="@drawable/movierd_color_sel"
+            android:layout_marginTop="@dimen/ws12dp"
+            android:layout_marginBottom="@dimen/ws12dp"/>
+
+        <RadioButton
+            android:id="@+id/rb3_dy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="即将上映"
+            android:button="@null"
+            android:gravity="center"
+            android:textSize="@dimen/ws15dp"
+            android:layout_marginRight="@dimen/ws10dp"
+            android:layout_marginLeft="@dimen/ws20dp"
+            android:background="@drawable/movierd_bg_sel2"
+            android:textColor="@drawable/movierd_color_sel"
+            android:layout_marginTop="@dimen/ws12dp"
+            android:layout_marginBottom="@dimen/ws12dp"/>
+
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/rg_dsj"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ws52dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb1_dsj"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="国产剧"
+            android:button="@null"
+            android:gravity="center"
+            android:layout_marginRight="@dimen/ws5dp"
+            android:layout_marginLeft="@dimen/ws1dp"
+            android:background="@drawable/movierd_bg_sel2"
+            android:textColor="@drawable/movierd_color_sel"
+            android:textSize="@dimen/ws15dp"
+            android:layout_marginTop="@dimen/ws12dp"
+            android:layout_marginBottom="@dimen/ws12dp"/>
+
+        <RadioButton
+            android:id="@+id/rb2_dsj"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="韩剧"
+            android:button="@null"
+            android:gravity="center"
+            android:layout_marginRight="@dimen/ws5dp"
+            android:layout_marginLeft="@dimen/ws5dp"
+            android:textSize="@dimen/ws15dp"
+            android:background="@drawable/movierd_bg_sel2"
+            android:textColor="@drawable/movierd_color_sel"
+            android:layout_marginTop="@dimen/ws12dp"
+            android:layout_marginBottom="@dimen/ws12dp"/>
+
+        <RadioButton
+            android:id="@+id/rb3_dsj"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="日剧"
+            android:textSize="@dimen/ws15dp"
+            android:button="@null"
+            android:gravity="center"
+            android:layout_marginRight="@dimen/ws5dp"
+            android:layout_marginLeft="@dimen/ws5dp"
+            android:background="@drawable/movierd_bg_sel2"
+            android:textColor="@drawable/movierd_color_sel"
+            android:layout_marginTop="@dimen/ws12dp"
+            android:layout_marginBottom="@dimen/ws12dp"/>
+
+        <RadioButton
+            android:id="@+id/rb4_dsj"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="@dimen/ws15dp"
+            android:text="美剧"
+            android:button="@null"
+            android:gravity="center"
+            android:layout_marginRight="@dimen/ws5dp"
+            android:layout_marginLeft="@dimen/ws5dp"
+            android:background="@drawable/movierd_bg_sel2"
+            android:textColor="@drawable/movierd_color_sel"
+            android:layout_marginTop="@dimen/ws12dp"
+            android:layout_marginBottom="@dimen/ws12dp"/>
+
+        <RadioButton
+            android:id="@+id/rb5_dsj"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="港剧"
+            android:button="@null"
+            android:gravity="center"
+            android:textSize="@dimen/ws15dp"
+            android:layout_marginRight="@dimen/ws1dp"
+            android:layout_marginLeft="@dimen/ws5dp"
+            android:background="@drawable/movierd_bg_sel2"
+            android:textColor="@drawable/movierd_color_sel"
+            android:layout_marginTop="@dimen/ws12dp"
+            android:layout_marginBottom="@dimen/ws12dp"/>
+
+
+    </RadioGroup>
+
+</LinearLayout>

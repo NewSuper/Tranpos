@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <View
+            android:id="@+id/tv_status"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ws20dp"
+            android:visibility="gone"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:id="@+id/ll_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/ws50dp" />
+            <ImageView
+                android:id="@+id/img_bottomLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/ws50dp"
+                android:background="@drawable/actionbar_shadow_up" />
+
+            <com.newsuper.t.juejinbao.view.BottomBar
+                android:id="@+id/bottomBar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ws63dp"
+                android:layout_gravity="bottom"
+                android:background="@android:color/transparent" />
+            <!-- @dimen/bottombar_wechat_height
+             android:background=设置透明后无点击波浪效果-->
+
+            <!--<com.juejinchain.android.view.AdCarHolderView
+                android:id="@+id/adsView"
+                style="@style/JJ.WrapContent"
+                android:layout_gravity="bottom|right"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:layout_marginRight="@dimen/ws12dp"
+                android:layout_marginBottom="@dimen/ws65dp" />-->
+        </FrameLayout>
+    </LinearLayout>
+</layout>

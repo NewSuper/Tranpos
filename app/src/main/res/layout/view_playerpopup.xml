@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="400dp"
+        android:layout_height="match_parent"
+        android:background="#cc201D1E"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_centerInParent="true">
+
+                        <!--下载按钮-->
+                        <LinearLayout
+                            android:id="@+id/ll_download"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:layout_marginRight="80dp">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="16dp"
+                                android:background="@drawable/dianjixiazai" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="下载"
+                                android:textColor="#ffffff"
+                                android:textSize="14dp" />
+
+
+                        </LinearLayout>
+
+                        <!--投屏按钮-->
+                        <LinearLayout
+                            android:id="@+id/ll_upnp"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="16dp"
+                                android:background="@drawable/tp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="投屏"
+                                android:textColor="#ffffff"
+                                android:textSize="14dp" />
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#333031" />
+
+                <!--倍速播放-->
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="20dp"-->
+                    <!--android:layout_marginTop="30dp"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="倍速播放  "-->
+                        <!--android:textColor="#fff"-->
+                        <!--android:textSize="14dp" />-->
+
+                    <!--<RadioGroup-->
+                        <!--android:id="@+id/rg_bs"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:orientation="horizontal">-->
+
+                        <!--<RadioButton-->
+                            <!--android:id="@+id/rb_bs_1"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:background="@android:color/transparent"-->
+                            <!--android:button="@null"-->
+                            <!--android:text="  0.75倍 "-->
+                            <!--android:textColor="@drawable/player_operate_textcolor_sel"-->
+                            <!--android:textSize="14dp" />-->
+
+                        <!--<RadioButton-->
+                            <!--android:id="@+id/rb_bs_2"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:background="@android:color/transparent"-->
+                            <!--android:button="@null"-->
+                            <!--android:text="  正常 "-->
+                            <!--android:textColor="@drawable/player_operate_textcolor_sel"-->
+                            <!--android:textSize="14dp" />-->
+
+                        <!--<RadioButton-->
+                            <!--android:id="@+id/rb_bs_3"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:background="@android:color/transparent"-->
+                            <!--android:button="@null"-->
+                            <!--android:text="  1.25倍 "-->
+                            <!--android:textColor="@drawable/player_operate_textcolor_sel"-->
+                            <!--android:textSize="14dp" />-->
+
+                        <!--<RadioButton-->
+                            <!--android:id="@+id/rb_bs_4"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:background="@android:color/transparent"-->
+                            <!--android:button="@null"-->
+                            <!--android:text="  1.5倍 "-->
+                            <!--android:textColor="@drawable/player_operate_textcolor_sel"-->
+                            <!--android:textSize="14dp" />-->
+                        <!--<RadioButton-->
+                            <!--android:id="@+id/rb_bs_5"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:background="@android:color/transparent"-->
+                            <!--android:button="@null"-->
+                            <!--android:text="  2倍"-->
+                            <!--android:textColor="@drawable/player_operate_textcolor_sel"-->
+                            <!--android:textSize="14dp" />-->
+
+
+                    <!--</RadioGroup>-->
+
+                <!--</LinearLayout>-->
+
+                <!--画面尺寸-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="画面尺寸  "
+                        android:textColor="#fff"
+                        android:textSize="14dp" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_cc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!--<RadioButton-->
+                            <!--android:id="@+id/rb_cc_1"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:background="@android:color/transparent"-->
+                            <!--android:button="@null"-->
+                            <!--android:text="  满屏 "-->
+                            <!--android:textColor="@drawable/player_operate_textcolor_sel"-->
+                            <!--android:textSize="14dp" />-->
+
+                        <RadioButton
+                            android:id="@+id/rb_cc_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:button="@null"
+                            android:text="  100% "
+                            android:textColor="@drawable/player_operate_textcolor_sel"
+                            android:textSize="14dp" />
+
+                        <RadioButton
+                            android:id="@+id/rb_cc_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:button="@null"
+                            android:text="  75% "
+                            android:textColor="@drawable/player_operate_textcolor_sel"
+                            android:textSize="14dp" />
+
+                        <RadioButton
+                            android:id="@+id/rb_cc_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:button="@null"
+                            android:text="  50%"
+                            android:textColor="@drawable/player_operate_textcolor_sel"
+                            android:textSize="14dp" />
+
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <!--定时关闭-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="定时关闭  "
+                        android:textColor="#fff"
+                        android:textSize="14dp" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_gb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_gb_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:button="@null"
+                            android:text="  不开启 "
+                            android:textColor="@drawable/player_operate_textcolor_sel"
+                            android:textSize="14dp" />
+
+                        <RadioButton
+                            android:id="@+id/rb_gb_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:button="@null"
+                            android:text="  30分钟 "
+                            android:textColor="@drawable/player_operate_textcolor_sel"
+                            android:textSize="14dp" />
+
+                        <RadioButton
+                            android:id="@+id/rb_gb_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:button="@null"
+                            android:text="  60分钟 "
+                            android:textColor="@drawable/player_operate_textcolor_sel"
+                            android:textSize="14dp" />
+
+                        <RadioButton
+                            android:id="@+id/rb_gb_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:button="@null"
+                            android:text="  90分钟"
+                            android:textColor="@drawable/player_operate_textcolor_sel"
+                            android:textSize="14dp" />
+
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <!--音量-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp">
+
+                    <ImageView
+                        android:id="@+id/tv_vol1"
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_centerVertical="true"
+                        android:background="@mipmap/vol_small" />
+
+                    <ImageView
+                        android:id="@+id/tv_vol2"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@mipmap/vol_large" />
+                    <!--进度条-->
+                    <SeekBar
+                        android:id="@+id/sb2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/tv_vol2"
+                        android:layout_toRightOf="@id/tv_vol1"
+                        android:progressBackgroundTint="#ffffff"
+                        android:progressTint="#FF5500"
+                        android:thumb="@drawable/my_thumb" />
+
+
+                </RelativeLayout>
+
+                <!--光亮-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="30dp">
+
+                    <ImageView
+                        android:id="@+id/tv_sun1"
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_centerVertical="true"
+                        android:background="@mipmap/sun_small" />
+
+                    <ImageView
+                        android:id="@+id/tv_sun2"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@mipmap/sun_big" />
+                    <!--进度条-->
+                    <SeekBar
+                        android:id="@+id/sb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/tv_sun2"
+                        android:layout_toRightOf="@id/tv_sun1"
+                        android:progressBackgroundTint="#ffffff"
+                        android:progressTint="#FF5500"
+                        android:thumb="@drawable/my_thumb" />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+</layout>

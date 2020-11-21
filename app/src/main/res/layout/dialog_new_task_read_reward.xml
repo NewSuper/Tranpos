@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/view_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.6"
+        android:background="#000000" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_click"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击阅读任一篇文章即可开始获得福利奖励"
+            android:layout_marginTop="@dimen/ws10dp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="@dimen/ws80dp"
+            android:layout_marginRight="@dimen/ws80dp"
+            android:lineSpacingExtra="@dimen/ws5dp"
+            android:gravity="center"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="3.0"
+            android:shadowColor="#4d000000"
+            android:textSize="18dp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

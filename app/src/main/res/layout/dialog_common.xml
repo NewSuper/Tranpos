@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:id="@+id/dialog_config_accredit"
+        android:layout_width="@dimen/ws300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shap_bg_white_round_8"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:padding="@dimen/ws10dp"
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ws15dp"
+            android:layout_marginTop="@dimen/ws10dp"
+            android:layout_marginRight="@dimen/ws15dp"
+            android:layout_marginBottom="@dimen/ws10dp"
+            android:background="@drawable/shape_white_radiu_top_8"
+            android:gravity="center"
+            android:text="usb调试模式下无法使用,请前往设置关闭开发者模式"
+            android:textColor="@color/c_333333"
+            android:textSize="@dimen/ws16sp" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ws0_5dp"
+            android:background="@color/line_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ws45dp"
+            android:background="@drawable/shape_white_radiu_bottom_8">
+
+            <TextView
+                android:id="@+id/cancel"
+                android:layout_width="@dimen/ws0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/shape_white_radiu_bottom_8"
+                android:gravity="center"
+                android:text="关闭"
+                android:textColor="@color/c_666666"
+                android:textSize="@dimen/ws16sp" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/line_color" />
+
+            <TextView
+                android:id="@+id/confirm"
+                android:layout_width="@dimen/ws0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/shape_white_radiu_bottom_8"
+                android:gravity="center"
+                android:text="去设置"
+                android:textColor="@color/c_FF6633"
+                android:textSize="@dimen/ws16sp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#fff">
+
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp">
+
+
+
+        <TextView
+
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="剧情"
+            android:textSize="14dp"
+            android:textColor="#666666"
+            android:id="@+id/tv_form"
+            />
+
+        <LinearLayout
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/tv_form"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="15dp">
+
+            <TextView
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="标题"
+                android:textSize="19dp"
+                android:textColor="#333333"
+                android:id="@+id/tv_title"
+                />
+
+
+            <TextView
+                android:layout_marginTop="4dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="来源"
+                android:textSize="14dp"
+                android:textColor="#666666"
+                android:id="@+id/tv_cinema"
+                android:layout_gravity="center_vertical"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#efefef"/>
+
+
+</LinearLayout>

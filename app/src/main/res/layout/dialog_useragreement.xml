@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <RelativeLayout
+                android:layout_width="268dp"
+                android:layout_height="340dp"
+                android:background="@drawable/bg_white">
+
+
+                <LinearLayout
+                    android:id="@+id/ll_bt"
+                    android:layout_width="225dp"
+                    android:layout_height="36dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="14dp">
+
+                    <Button
+                        android:visibility="gone"
+                        android:layout_marginRight="10dp"
+                        android:id="@+id/bt_refuse"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_useragreement_bt2"
+                        android:text="不同意"
+                        android:textColor="@color/app_color"
+                        android:textSize="14dp" />
+
+                    <Button
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/bt"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_useragreement_bt"
+                        android:text="同意"
+                        android:textColor="#ffffff"
+                        android:textSize="14dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="21dp"
+                    android:text="用户协议及隐私条款"
+                    android:textColor="#161616"
+                    android:textSize="17dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@id/ll_bt"
+                    android:layout_below="@id/tv_title"
+                    android:layout_margin="20dp">
+
+                    <ScrollView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lineSpacingExtra="5dp"
+                            android:text="1.在浏览时，我们会收集、使用设备标识信息用于推荐。
+2.我们可能会申请位置权限，用于为您丰富信息推荐维度。
+3.您可以查看完整版《用户协议和隐私政策》以便了解我们收集、使用共享、存储信息的情况，以及对信息的保护措施。
+4.如您同意请点击下面的按钮以接受我们的服务"
+                            android:textColor="#333"
+                            android:textSize="12dp" />
+                    </ScrollView>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/bg_useragreementcontent" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

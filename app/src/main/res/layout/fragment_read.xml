@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/srl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.newsuper.t.juejinbao.view.LoadingView
+                android:id="@+id/loading"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <android.support.v4.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/ws126dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/ws50dp"
+                                android:src="@mipmap/ic_read_bg"
+                                android:scaleType="fitXY"/>
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@mipmap/banner_bg"
+                                android:scaleType="fitXY"
+                                android:src="@mipmap/ic_banner"/>
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/ws75dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:id="@+id/bookshelf"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="书架"
+                                android:drawableTop="@mipmap/bookshelf"
+                                android:textSize="@dimen/ws14dp"
+                                android:textColor="@color/c_010101"
+                                android:gravity="center"/>
+
+                            <TextView
+                                android:id="@+id/classify"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="分类"
+                                android:drawableTop="@mipmap/ic_classify"
+                                android:textSize="@dimen/ws14dp"
+                                android:textColor="@color/c_010101"
+                                android:gravity="center"/>
+
+                            <TextView
+                                android:id="@+id/ranking"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="榜单"
+                                android:drawableTop="@mipmap/ic_ranking"
+                                android:textSize="@dimen/ws14dp"
+                                android:textColor="@color/c_010101"
+                                android:gravity="center"/>
+
+                            <TextView
+                                android:id="@+id/all_book"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="完结"
+                                android:drawableTop="@mipmap/ic_all_book"
+                                android:textSize="@dimen/ws14dp"
+                                android:textColor="@color/c_010101"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_hot"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/ws10dp"
+                            android:paddingRight="@dimen/ws10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="热门推荐"
+                                android:textColor="@color/c_333333"
+                                android:textSize="@dimen/ws16dp"
+                                android:textStyle="bold"
+                                android:layout_marginTop="@dimen/ws13dp"
+                                android:layout_marginBottom="@dimen/ws10dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="更多"
+                                android:layout_centerVertical="true"
+                                android:textColor="@color/c_666666"
+                                android:textSize="@dimen/ws13dp"
+                                android:drawableRight="@mipmap/ic_more_right"
+                                android:drawablePadding="@dimen/ws5dp"
+                                android:layout_alignParentRight="true"/>
+
+                        </RelativeLayout>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rv_hot"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/ws4dp"/>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_hot_classics"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/ws10dp"
+                            android:paddingRight="@dimen/ws10dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_hot"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/ws13dp"
+                                    android:layout_marginBottom="@dimen/ws3dp"
+                                    android:text="热门小说"
+                                    android:textColor="@color/c_333333"
+                                    android:textSize="@dimen/ws16dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tv_classics"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="经典不错过"
+                                    android:textColor="@color/c_666666"
+                                    android:textSize="@dimen/ws12dp"
+                                    android:layout_marginLeft="@dimen/ws10dp"
+                                    android:layout_marginRight="@dimen/ws10dp"
+                                    android:layout_marginTop="@dimen/ws13dp"
+                                    android:layout_marginBottom="@dimen/ws13dp"/>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="更多"
+                                android:layout_centerVertical="true"
+                                android:textColor="@color/c_666666"
+                                android:textSize="@dimen/ws13dp"
+                                android:drawableRight="@mipmap/ic_more_right"
+                                android:drawablePadding="@dimen/ws5dp"
+                                android:layout_alignParentRight="true"/>
+
+                        </RelativeLayout>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rv_hot_classics"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/ws10dp"
+                            android:paddingRight="@dimen/ws10dp"/>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_classify"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/ws10dp"
+                            android:paddingRight="@dimen/ws10dp"
+                            android:layout_marginTop="@dimen/ws10dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_classify"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="分类推荐"
+                                    android:textColor="@color/c_333333"
+                                    android:textSize="@dimen/ws16dp"
+                                    android:textStyle="bold"
+                                    android:layout_marginTop="@dimen/ws13dp"
+                                    android:layout_marginBottom="@dimen/ws3dp"/>
+
+                                <TextView
+                                    android:id="@+id/tv_hot_book"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="热门好书抢先看"
+                                    android:textColor="@color/c_666666"
+                                    android:textSize="@dimen/ws12dp"
+                                    android:layout_marginLeft="@dimen/ws10dp"
+                                    android:layout_marginRight="@dimen/ws10dp"
+                                    android:layout_marginTop="@dimen/ws13dp"
+                                    android:layout_marginBottom="@dimen/ws13dp"/>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="更多"
+                                android:layout_centerVertical="true"
+                                android:textColor="@color/c_666666"
+                                android:textSize="@dimen/ws13dp"
+                                android:drawableRight="@mipmap/ic_more_right"
+                                android:drawablePadding="@dimen/ws5dp"
+                                android:layout_alignParentRight="true"
+                                android:visibility="gone"/>
+
+                        </RelativeLayout>
+
+                        <com.flyco.tablayout.SlidingTabLayout
+                            android:id="@+id/classify_table1"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/ws30dp"
+                            app:tl_indicator_corner_radius="@dimen/ws2dp"
+                            app:tl_indicator_width="@dimen/ws15dp"
+                            app:tl_indicator_height="@dimen/ws2dp"
+                            app:tl_indicator_color="@color/c_ff6600"
+                            app:tl_tab_padding="@dimen/ws28dp"
+                            app:tl_textSelectColor="@color/c_ff6600"
+                            app:tl_textUnselectColor="@color/c_999999"
+                            app:tl_textsize="@dimen/ws15dp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/ws0_5dp"
+                            android:background="@color/c_f0f0f0"/>
+
+                        <com.newsuper.t.juejinbao.view.CustomViewPager
+                            android:id="@+id/vp_classify1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <com.flyco.tablayout.SlidingTabLayout
+                            android:id="@+id/classify_table2"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/ws30dp"
+                            app:tl_indicator_corner_radius="@dimen/ws2dp"
+                            app:tl_indicator_width="@dimen/ws15dp"
+                            app:tl_indicator_height="@dimen/ws2dp"
+                            app:tl_indicator_color="@color/c_ff6600"
+                            app:tl_tab_padding="@dimen/ws28dp"
+                            app:tl_textSelectColor="@color/c_ff6600"
+                            app:tl_textUnselectColor="@color/c_999999"
+                            app:tl_textsize="@dimen/ws15dp"  />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/ws0_5dp"
+                            android:background="@color/c_f0f0f0"/>
+
+                        <com.newsuper.t.juejinbao.view.CustomViewPager
+                            android:id="@+id/vp_classify2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_new"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/ws10dp"
+                            android:paddingRight="@dimen/ws10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="最近更新"
+                                android:textColor="@color/c_333333"
+                                android:textSize="@dimen/ws16dp"
+                                android:textStyle="bold"
+                                android:layout_marginTop="@dimen/ws13dp"
+                                android:layout_marginBottom="@dimen/ws3dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="更多"
+                                android:layout_centerVertical="true"
+                                android:textColor="@color/c_666666"
+                                android:textSize="@dimen/ws13dp"
+                                android:drawableRight="@mipmap/ic_more_right"
+                                android:drawablePadding="@dimen/ws5dp"
+                                android:layout_alignParentRight="true"/>
+
+                        </RelativeLayout>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rv_new"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/ws10dp"
+                            android:paddingRight="@dimen/ws10dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/ws50dp"
+                            android:text="我是有底线的..."
+                            android:gravity="center"
+                            android:textColor="@color/c_999999"
+                            android:textSize="@dimen/ws12dp"/>
+
+                    </LinearLayout>
+
+                </android.support.v4.widget.NestedScrollView>
+
+            </com.newsuper.t.juejinbao.view.LoadingView>
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <ImageView
+            android:id="@+id/iv_bookshelf"
+            android:layout_width="@dimen/ws67dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/ws20dp"
+            android:src="@mipmap/icon_story_adv_enter"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/ws10dp"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</layout>

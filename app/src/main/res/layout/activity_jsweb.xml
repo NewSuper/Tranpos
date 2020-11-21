@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000">
+
+        <LinearLayout
+            android:id="@+id/ll_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/app_color" />
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/rl2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ws48dp"
+                android:background="#ffffff">
+
+                <!--返回-->
+                <RelativeLayout
+                    android:id="@+id/rl_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="@dimen/ws8dp"
+                        android:layout_height="@dimen/ws16dp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/ws20dp"
+                        android:layout_marginRight="@dimen/ws20dp"
+                        android:background="@mipmap/icon_bar_title_return" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="@dimen/ws150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="标题"
+                    android:lines="1"
+                    android:ellipsize="end"
+                    android:textColor="@color/app_text"
+                    android:textSize="@dimen/app_text" />
+
+                <LinearLayout
+                    android:id="@+id/ll_yxl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_yxl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="云线路1"
+                        android:textColor="@color/app_text"
+                        android:textSize="@dimen/app_text2" />
+
+                    <ImageView
+                        android:layout_width="@dimen/ws15dp"
+                        android:layout_height="@dimen/ws15dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/ws5dp"
+                        android:layout_marginRight="@dimen/ws10dp"
+                        android:background="@mipmap/tab_icon_rec_normal" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/ll_title"
+            android:background="#000">
+
+            <!--网页-->
+            <LinearLayout
+                android:id="@+id/ll_webcontain"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+            </LinearLayout>
+
+            <!--播放器-->
+            <RelativeLayout
+                android:id="@+id/cl_play"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+
+                <cn.jzvd.JzvdStd
+                    android:visibility="invisible"
+                    android:id="@+id/player"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/full_video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</layout>

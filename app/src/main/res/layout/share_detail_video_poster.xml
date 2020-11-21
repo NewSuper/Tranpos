@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_share_recommend">
+
+        <ImageView
+            android:id="@+id/iv_content"
+            android:layout_marginLeft="@dimen/ws20dp"
+            android:layout_marginRight="@dimen/ws20dp"
+            android:layout_marginTop="@dimen/ws15dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_share_recommend_sub"
+            android:layout_marginBottom="@dimen/ws10dp"
+            app:layout_constraintBottom_toTopOf="@id/iv_bg"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/ws15dp"
+            app:layout_constraintTop_toTopOf="@id/iv_content"
+            app:layout_constraintLeft_toLeftOf="@id/iv_content"
+            app:layout_constraintRight_toRightOf="@id/iv_content"
+            android:layout_marginTop="@dimen/ws65dp"
+            android:background="@mipmap/bg_head_recommend"/>
+
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="@dimen/ws42dp"
+            android:layout_height="@dimen/ws42dp"
+            android:layout_marginLeft="@dimen/ws36dp"
+            android:layout_marginTop="@dimen/ws29dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:maxEms="6"
+            android:lines="1"
+            android:ellipsize="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ws10dp"
+            android:text="满满"
+            android:textColor="#333333"
+            android:textSize="@dimen/ws16dp"
+            app:layout_constraintLeft_toRightOf="@id/iv_avatar"
+            app:layout_constraintTop_toTopOf="@id/iv_avatar" />
+
+        <TextView
+            android:id="@+id/tv_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ws10dp"
+            android:text="为你推荐精彩影片"
+            android:textColor="#999999"
+            android:textSize="@dimen/ws15dp"
+            app:layout_constraintLeft_toRightOf="@id/iv_avatar"
+            app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+        <ImageView
+            app:layout_constraintLeft_toRightOf="@+id/tv_label"
+            app:layout_constraintBottom_toTopOf="@+id/tv_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_movie_tag"
+            />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ws25dp"
+            android:text="《等风来》"
+            android:textColor="#333333"
+            android:textSize="@dimen/ws17dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ws5dp"
+            android:text="2017年上映"
+            android:textColor="#666666"
+            android:textSize="@dimen/ws14dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+        <TextView
+            android:id="@+id/tv_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ws5dp"
+            android:text="主演"
+            android:gravity="center"
+            android:textColor="#666666"
+            android:textSize="@dimen/ws14dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:maxLines="3"
+            android:ellipsize="end"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_date" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_juejin_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ws50dp"
+            android:layout_marginTop="@dimen/ws10dp"
+            android:text="掘金宝评分：9.5分"
+            android:textColor="#F4A82B"
+            android:textSize="@dimen/ws14dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_other" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_douban_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ws10dp"
+            android:layout_marginRight="@dimen/ws50dp"
+            android:text="豆瓣评分：9.5分"
+            android:textColor="#0DB918"
+            android:textSize="@dimen/ws14dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_other" />
+
+        <ImageView
+            android:id="@+id/iv_poster"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/ws10dp"
+            android:layout_marginTop="@dimen/ws5dp"
+            android:layout_marginRight="@dimen/ws10dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintLeft_toLeftOf="@id/iv_content"
+            app:layout_constraintRight_toRightOf="@id/iv_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_juejin_score"
+            app:layout_constraintBottom_toBottomOf="@id/iv_content"
+            android:layout_marginBottom="@dimen/ws10dp"/>
+
+
+        <ImageView
+            android:id="@+id/iv_bg"
+            android:layout_width="@dimen/ws239dp"
+            android:layout_height="@dimen/ws70dp"
+            android:layout_marginBottom="@dimen/ws10dp"
+            android:background="#FBECBE"
+            app:layout_constraintBottom_toTopOf="@id/ll_bottom"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_erweima"
+            android:layout_width="@dimen/ws60dp"
+            android:layout_height="@dimen/ws60dp"
+            android:layout_marginLeft="@dimen/ws5dp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_bg"
+            app:layout_constraintLeft_toLeftOf="@id/iv_bg"
+            app:layout_constraintTop_toTopOf="@id/iv_bg" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ws8dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@id/iv_bg"
+            app:layout_constraintLeft_toRightOf="@id/iv_erweima"
+            app:layout_constraintTop_toTopOf="@id/iv_bg">
+
+            <TextView
+                android:id="@+id/tv_invset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="邀请码：123455"
+                android:textColor="#333333"
+                android:textSize="@dimen/ws14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="长按扫码，免费在线观看"
+                android:textColor="#333333"
+                android:textSize="@dimen/ws14dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ws50dp"
+            android:background="#A7813A">
+
+            <TextView
+                android:layout_marginLeft="@dimen/ws37dp"
+                android:layout_marginRight="@dimen/ws37dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/ws14dp"
+                android:text="“掘金宝”拥有全球最大最全影视片库，覆盖 1930～2019年优秀影片，最新最热一网打尽"/>
+
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+
+
+</LinearLayout>

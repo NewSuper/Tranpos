@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ws70dp"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/ws10dp"
+            android:paddingRight="@dimen/ws10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="你的答案"
+                    android:ellipsize="end"
+                    android:maxLength="23"
+                    android:maxLines="1"
+                    android:textColor="@color/c_333333"
+                    android:textSize="@dimen/ws16dp"
+                    android:id="@+id/tv_title"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="周杰伦"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textColor="@color/c_999999"
+                    android:textSize="@dimen/ws13dp"
+                    android:layout_marginLeft="@dimen/ws5dp"
+                    android:layout_marginRight="@dimen/ws5dp"
+                    android:id="@+id/tv_author"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(来源：打破一切恐惧 我能找到答案)"
+                android:textColor="@color/c_999999"
+                android:textSize="@dimen/ws13dp"
+                android:layout_marginTop="@dimen/ws2dp"
+                android:id="@+id/tv_type"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_play"
+            android:padding="@dimen/ws10dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#efefef"/>
+
+</LinearLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/JJ.WidthFill.Vertical"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/shape_rect_radius">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_rect_radius"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/ws20dp"
+        android:textSize="@dimen/ws16sp"
+        android:textColor="#333333"
+        android:text="字体大小" />
+
+    <RadioGroup
+        android:id="@+id/rg_text_setting"
+        android:layout_marginLeft="@dimen/ws10dp"
+        android:layout_marginRight="@dimen/ws10dp"
+        android:layout_marginTop="@dimen/ws25dp"
+        android:layout_marginBottom="@dimen/ws30dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ws44dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_small"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:gravity="center"
+            android:text="小字"
+            android:textColor="@drawable/selector_text_setting_color"
+            android:background="@drawable/selector_text_setting_left"/>
+
+        <RadioButton
+            android:id="@+id/rb_middle"
+            android:layout_marginLeft="-1dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:gravity="center"
+            android:text="标准"
+            android:textColor="@drawable/selector_text_setting_color"
+            android:background="@drawable/selector_text_setting_noradius"/>
+
+        <RadioButton
+            android:id="@+id/rb_big"
+            android:layout_marginLeft="-1dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:gravity="center"
+            android:text="大字"
+            android:textColor="@drawable/selector_text_setting_color"
+            android:background="@drawable/selector_text_setting_noradius"/>
+
+        <RadioButton
+            android:id="@+id/rb_large"
+            android:layout_marginLeft="-1dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:gravity="center"
+            android:text="超大"
+            android:textColor="@drawable/selector_text_setting_color"
+            android:background="@drawable/selector_text_setting_right"/>
+
+    </RadioGroup>
+
+    <View style="@style/JJ.Line.Horizontal"/>
+
+    <TextView
+        android:id="@+id/cancel"
+        style="@style/JJ.Label.Minor.Large"
+        android:layout_width="match_parent"
+        android:background="@drawable/shape_bottom_btn_raidus"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="确定" />
+</LinearLayout>

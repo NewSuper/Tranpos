@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/c_f6f6f6">
+
+        <com.newsuper.t.juejinbao.view.LoadingView
+            android:id="@+id/loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.v4.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/ws205dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/iv_bg"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@mipmap/bg_book_default"/>
+
+                            <ImageView
+                                android:id="@+id/iv_back"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/ws10dp"
+                                android:layout_marginTop="@dimen/ws20dp"
+                                android:src="@mipmap/ic_back"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/ws10dp"
+                                android:layout_marginRight="@dimen/ws10dp"
+                                android:layout_marginTop="@dimen/ws8dp"
+                                android:layout_marginBottom="@dimen/ws20dp"
+                                android:layout_below="@+id/iv_back">
+
+                                <RelativeLayout
+                                    android:layout_width="@dimen/ws88dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/shape_cccccc_round_2">
+
+                                    <!-- <TextView
+                                         android:id="@+id/tv_empty"
+                                         android:layout_width="wrap_content"
+                                         android:layout_height="wrap_content"
+                                         android:text="猫头鹰阅读"
+                                         android:drawableTop="@mipmap/ic_book_null"
+                                         android:textColor="@color/white"
+                                         android:textSize="@dimen/ws7sp"
+                                         android:layout_centerInParent="true"
+                                         android:drawablePadding="@dimen/ws5dp"
+                                         android:gravity="center"/>-->
+
+                                    <TextView
+                                        android:id="@+id/tv_empty"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@mipmap/icon_book_empty"/>
+
+                                    <ImageView
+                                        android:id="@+id/iv_book_bg"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:scaleType="centerCrop"/>
+
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="@dimen/ws12dp"
+                                    android:orientation="vertical"
+                                    android:gravity="center_vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="李清照传：半生烟雨，半世落花"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/ws16dp"
+                                        android:id="@+id/tv_book_name"/>
+
+                                    <TextView
+                                        android:id="@+id/tv_writer"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:text="作者：随园散人"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/ws13dp"
+                                        android:layout_marginTop="@dimen/ws10dp"/>
+
+                                    <TextView
+                                        android:id="@+id/tv_classics"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:text="分类：文艺诗集"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/ws13dp"/>
+
+                                    <TextView
+                                        android:id="@+id/tv_time"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:text="时间：2019-08-16 18:20:11"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/ws13dp"/>
+
+                                    <TextView
+                                        android:id="@+id/tv_new"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:text="最新：第1448章 魔君之威"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/ws13dp"/>
+
+                                    <TextView
+                                        android:id="@+id/tv_from"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:text="来源：点点小说网"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/ws13dp"/>
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="@dimen/ws10dp"
+                            android:paddingRight="@dimen/ws10dp"
+                            android:background="@color/white">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="[简介]"
+                                android:textColor="@color/c_333333"
+                                android:layout_marginTop="@dimen/ws15dp"
+                                android:layout_marginBottom="@dimen/ws10dp"
+                                android:textSize="@dimen/ws14sp"/>
+
+                            <TextView
+                                android:id="@+id/tv_content"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:maxLines="3"
+                                android:ellipsize="end"
+                                android:lineSpacingExtra="@dimen/ws5dp"
+                                android:textColor="@color/c_666666"
+                                android:textSize="@dimen/ws13sp"
+                                android:layout_marginBottom="@dimen/ws20dp"/>
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/ws50dp"
+                            android:background="@color/white"
+                            android:layout_marginTop="@dimen/ws10dp"
+                            android:paddingLeft="@dimen/ws10dp"
+                            android:paddingRight="@dimen/ws10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="章节目录"
+                                android:textColor="@color/c_333333"
+                                android:textSize="@dimen/ws16sp"
+                                android:textStyle="bold"
+                                android:layout_centerVertical="true"/>
+
+                            <TextView
+                                android:id="@+id/tv_catalogue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="完整目录"
+                                android:textColor="@color/c_4a9012"
+                                android:textSize="@dimen/ws13sp"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentRight="true"/>
+
+                        </RelativeLayout>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rv_catalogue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:paddingLeft="@dimen/ws15dp"
+                            android:paddingRight="@dimen/ws15dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/ws45dp"
+                            android:text="猜你喜欢"
+                            android:textColor="@color/c_333333"
+                            android:textSize="@dimen/ws16sp"
+                            android:gravity="center_vertical"
+                            android:background="@color/white"
+                            android:layout_marginTop="@dimen/ws10dp"
+                            android:textStyle="bold"
+                            android:paddingLeft="@dimen/ws15dp"
+                            android:paddingRight="@dimen/ws15dp"/>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rv_like"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:paddingLeft="@dimen/ws9dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/ws45dp"
+                            android:text="好书推荐"
+                            android:textColor="@color/c_333333"
+                            android:textSize="@dimen/ws16sp"
+                            android:gravity="center_vertical"
+                            android:background="@color/white"
+                            android:layout_marginTop="@dimen/ws10dp"
+                            android:textStyle="bold"
+                            android:paddingLeft="@dimen/ws15dp"
+                            android:paddingRight="@dimen/ws15dp"/>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rv_recommend"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/ws15dp"
+                            android:paddingRight="@dimen/ws10dp"
+                            android:background="@color/white"/>
+
+                    </LinearLayout>
+
+                </android.support.v4.widget.NestedScrollView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/ws50dp">
+
+                    <TextView
+                        android:id="@+id/tv_read"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="免费阅读"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/ws15sp"
+                        android:gravity="center"
+                        android:background="@color/app_color"/>
+
+                    <LinearLayout
+                        android:id="@+id/ll_add"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/iv_add"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/ic_add_book"/>
+
+                        <TextView
+                            android:id="@+id/tv_add"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="加入书架"
+                            android:layout_marginLeft="@dimen/ws10dp"
+                            android:textColor="@color/c_FF9900"
+                            android:textSize="@dimen/ws15sp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.newsuper.t.juejinbao.view.LoadingView>
+
+        <ImageView
+            android:id="@+id/iv_bookshelf"
+            android:layout_width="@dimen/ws67dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/ws70dp"
+            android:src="@mipmap/icon_story_adv_enter"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/ws10dp"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</layout>

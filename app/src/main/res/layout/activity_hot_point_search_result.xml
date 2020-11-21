@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <LinearLayout
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".module.home.activity.HotPointSearchResultActivity">
+        <LinearLayout
+            android:layout_marginLeft="@dimen/ws10dp"
+            android:layout_marginRight="@dimen/ws10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_search_hot_point"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <TextView
+                android:id="@+id/tv_key"
+                android:layout_marginLeft="@dimen/ws10dp"
+                android:text="2019年4月5日 - 冰岛蓝湖地热..."
+                android:layout_weight="1"
+                android:textSize="@dimen/ws15dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_marginTop="@dimen/ws10dp"
+                android:layout_marginBottom="@dimen/ws10dp"
+                android:layout_width="@dimen/ws1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line_color"
+                />
+
+            <TextView
+                android:id="@+id/tv_close"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="取消"
+                android:paddingLeft="@dimen/ws30dp"
+                android:paddingRight="30dp"
+                android:textSize="@dimen/ws14dp"
+                android:textColor="@color/c_999999"
+                />
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</layout>

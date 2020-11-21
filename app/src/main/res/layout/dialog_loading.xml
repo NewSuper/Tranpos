@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/list_view_item_white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/list_view_item_white">
+
+    <!--android:background="@drawable/loading_shape"-->
+    <!--<RelativeLayout-->
+        <!--android:layout_width="@dimen/ws70dp"-->
+        <!--android:layout_height="@dimen/ws70dp"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="@dimen/ws15dp"-->
+        <!--&gt;-->
+
+        <!--<ImageView-->
+            <!--android:visibility="gone"-->
+            <!--android:id="@+id/loading_imge"-->
+            <!--android:layout_width="41dp"-->
+            <!--android:layout_height="54dp"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:src="@mipmap/refresh_32" />-->
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_centerInParent="true"
+            android:layout_width="@dimen/ws100dp"
+            android:layout_height="@dimen/ws30dp"
+            android:background="@color/list_view_item_white"/>
+    <!--</RelativeLayout>-->
+    </RelativeLayout>
+
+</RelativeLayout>

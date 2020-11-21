@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ws52dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_No"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textColor="@color/c_f85535"
+            android:textSize="18dp"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/ws17dp"
+            android:paddingRight="@dimen/ws17dp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/ws20dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="湖北省委主要负责同志职"
+                android:maxLength="16"
+                android:singleLine="true"
+                android:textColor="@color/c_333333"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tv_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="2421005"
+                android:textColor="@color/c_999999"
+                android:textSize="12dp"
+                android:layout_marginLeft="@dimen/ws10dp"
+                android:layout_marginRight="@dimen/ws10dp"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_tag"
+            android:layout_width="@dimen/ws14dp"
+            android:layout_height="@dimen/ws14dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_more_right"
+            android:layout_marginLeft="@dimen/ws10dp"
+            android:layout_marginRight="@dimen/ws10dp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ws0_5dp"
+        android:background="@color/c_E1E1E1"/>
+
+</LinearLayout>

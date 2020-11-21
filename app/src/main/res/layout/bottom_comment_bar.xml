@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:layout_alignParentBottom="true"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <ImageButton
+        android:id="@+id/btn_btmBack"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:src="@mipmap/icon_bar_title_return" />
+
+    <EditText
+        android:inputType="text"
+        android:id="@+id/edt_btmComment"
+        android:layout_width="wrap_content"
+        android:drawableLeft="@mipmap/detail_edit_icon"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:drawablePadding="3dp"
+        android:imeOptions="actionSend"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:textSize="15sp"
+        android:hint="写评论..."
+        android:layout_height="30dp"
+        android:background="@drawable/edit_shape_comment"
+        android:layout_weight="1"/>
+    <TextView
+        android:id="@+id/tvSend"
+        android:padding="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发送"
+        />
+    <RelativeLayout
+        android:layout_width="40dp"
+        android:layout_height="40dp">
+        <ImageView
+            android:scaleType="centerCrop"
+            android:layout_centerInParent="true"
+            android:id="@+id/btn_btmComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:src="@mipmap/nav_comment_icon"
+            android:text="Button" />
+        <TextView
+            android:gravity="center"
+            android:textSize="12sp"
+            android:id="@+id/comment_num"
+            android:textColor="@color/white"
+            android:layout_width="22dp"
+            android:layout_height="15dp"
+            android:src="@drawable/shape_red_radius"
+            android:layout_marginLeft="18dp"
+            android:text="99+"
+            android:background="@drawable/shape_red_radius"
+            />
+    </RelativeLayout>
+    <ImageView
+        android:layout_marginRight="10dp"
+        android:id="@+id/btn_btmShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_share_video"
+        android:textSize="15sp"
+        android:scaleType="centerCrop"
+        />
+
+
+</LinearLayout>

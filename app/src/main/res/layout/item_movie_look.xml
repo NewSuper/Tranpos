@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/ws45dp"
+    android:layout_height="@dimen/ws55dp">
+
+    <com.juejinchain.android.view.RoundImageView
+        android:id="@+id/iv"
+        android:layout_width="@dimen/ws45dp"
+        android:layout_height="@dimen/ws45dp"
+        android:layout_marginBottom="@dimen/ws10dp" />
+
+    <ImageView
+        android:id="@+id/iv_j"
+        android:layout_width="@dimen/ws20dp"
+        android:layout_height="@dimen/ws20dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/ws10dp"
+        android:scaleType="fitXY" />
+
+</RelativeLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/ws40dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/ws10dp"
+            android:text="影院热播"
+            android:textColor="@color/app_text"
+            android:textSize="@dimen/app_text" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/ws5dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_more"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/app_text2"
+                android:includeFontPadding="false"
+                android:text="更多"
+                android:textColor="@color/app_text3"
+                android:textSize="@dimen/app_text2"
+                android:layout_marginBottom="@dimen/ws1dp"/>
+
+            <ImageView
+                android:layout_marginLeft="@dimen/ws5dp"
+                android:layout_width="@dimen/ws5dp"
+                android:layout_height="@dimen/ws10dp"
+                android:background="@mipmap/intot"
+                android:layout_gravity="center_vertical"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

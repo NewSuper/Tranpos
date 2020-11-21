@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/ws6dp"
+        android:layout_marginRight="@dimen/ws6dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="@dimen/ws96dp"
+            android:layout_height="@dimen/ws128dp"
+            android:background="@drawable/shape_cccccc_round_2">
+
+           <!-- <TextView
+                android:id="@+id/tv_empty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="猫头鹰阅读"
+                android:textColor="@color/white"
+                android:textSize="@dimen/ws7sp"
+                android:drawableTop="@mipmap/ic_book_null"
+                android:layout_centerInParent="true"
+                android:drawablePadding="@dimen/ws5dp"
+                android:gravity="center"/>-->
+
+            <TextView
+                android:id="@+id/tv_empty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@mipmap/icon_book_empty"/>
+
+            <ImageView
+                android:id="@+id/iv_book_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_book_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="金牌助理师..."
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/c_333333"
+            android:textSize="@dimen/ws15dp"
+            android:layout_marginTop="@dimen/ws10dp"
+            android:layout_marginBottom="@dimen/ws5dp"/>
+
+        <TextView
+            android:id="@+id/tv_book_writer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="一朵菜"
+            android:textColor="@color/c_999999"
+            android:textSize="@dimen/ws12dp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_marginBottom="@dimen/ws20dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

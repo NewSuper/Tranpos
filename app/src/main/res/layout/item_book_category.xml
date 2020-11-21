@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="青春文学"
+        android:textColor="@color/c_666666"
+        android:textSize="@dimen/ws15sp"
+        android:paddingLeft="@dimen/ws15dp"
+        android:paddingRight="@dimen/ws15dp"
+        android:paddingTop="@dimen/ws5dp"
+        android:paddingBottom="@dimen/ws5dp"
+        android:layout_margin="@dimen/ws10dp"
+        android:background="@drawable/bg_channel_normal"/>
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ws47dp">
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="@dimen/ws17dp"
+            android:layout_height="@dimen/ws17dp"
+            android:background="@mipmap/moviesearchhistory"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="match_parent"
+            android:lines="1"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/ws5dp"
+            android:layout_toRightOf="@id/iv"
+            android:text="标题"
+            android:textColor="@color/app_text"
+            android:textSize="@dimen/ws14dp" />
+
+
+        <RelativeLayout
+            android:id="@+id/rl_close"
+            android:layout_width="@dimen/ws35dp"
+            android:layout_height="@dimen/ws35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="@dimen/ws10dp"
+                android:layout_height="@dimen/ws10dp"
+                android:layout_centerInParent="true"
+                android:background="@mipmap/movesearchclose" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

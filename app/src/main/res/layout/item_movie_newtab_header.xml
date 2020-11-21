@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:descendantFocusability="blocksDescendants">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:descendantFocusability="blocksDescendants">
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:orientation="horizontal">
+
+            <!--找电影-->
+            <RelativeLayout
+                android:id="@+id/rl_zdy"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:visibility="gone">
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="23dp"
+                    android:layout_marginRight="7dp"
+                    android:background="@drawable/bg_douban_movie_zdy">
+
+                    <ImageView
+                        android:id="@+id/iv_zdy"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="6dp"
+                        android:background="@mipmap/movie_zdy" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/iv_zdy"
+                        android:text="找电影"
+                        android:textColor="#666666"
+                        android:textSize="14dp" />
+
+                    <ImageView
+                        android:layout_width="8dp"
+                        android:layout_height="11dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="12dp"
+                        android:background="@mipmap/next_point" />
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+            <!--即将上映-->
+            <RelativeLayout
+                android:id="@+id/rl_jjsy"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:visibility="gone">
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="23dp"
+                    android:background="@drawable/bg_douban_movie_jjsy">
+
+                    <ImageView
+                        android:id="@+id/iv_jjsy"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="6dp"
+                        android:background="@mipmap/movie_jjsy" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/iv_jjsy"
+                        android:text="即将上映"
+                        android:textColor="#666666"
+                        android:textSize="14dp" />
+
+                    <ImageView
+                        android:layout_width="8dp"
+                        android:layout_height="11dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="12dp"
+                        android:background="@mipmap/next_point" />
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+            <!--找电视-->
+            <RelativeLayout
+                android:id="@+id/rl_zds"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="23dp"
+                    android:layout_marginRight="7dp"
+                    android:background="@drawable/bg_douban_movie_zds">
+
+                    <ImageView
+                        android:id="@+id/iv_zds"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="6dp"
+                        android:background="@mipmap/movie_zds" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/iv_zds"
+                        android:text="找电视"
+                        android:textColor="#666666"
+                        android:textSize="14dp" />
+
+                    <ImageView
+                        android:layout_width="8dp"
+                        android:layout_height="11dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="12dp"
+                        android:background="@mipmap/next_point" />
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+            <!--播出时间表 -->
+            <RelativeLayout
+                android:id="@+id/rl_bcsjb"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="23dp"
+                    android:background="@drawable/bg_douban_movie_bcsjb">
+
+                    <ImageView
+                        android:id="@+id/iv_bcsjb"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="6dp"
+                        android:background="@mipmap/movie_bcsjb" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/iv_bcsjb"
+                        android:text="播出时间"
+                        android:textColor="#666666"
+                        android:textSize="14dp" />
+
+                    <ImageView
+                        android:layout_width="8dp"
+                        android:layout_height="11dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="12dp"
+                        android:background="@mipmap/next_point" />
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="18dp"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:id="@+id/tv_1"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:text="新剧热播"
+                android:includeFontPadding="false"
+                android:textColor="#010101"
+                android:textSize="18dp" />
+
+            <LinearLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="9dp">
+
+                <TextView
+                    android:id="@+id/tv_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="更多"
+                    android:textColor="#666666"
+                    android:textSize="14dp" />
+                
+                <ImageView
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="6dp"
+                    android:layout_height="11dp"
+                    android:background="@mipmap/next"/>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <!--热门推荐tab-->
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/stb"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:tl_indicator_color="#ff5500"
+            app:tl_indicator_corner_radius="2dp"
+            app:tl_indicator_width="30dp"
+            app:tl_tab_padding="10dp"
+            app:tl_textSelectColor="#ff5500"
+            app:tl_textUnselectColor="#666666"
+            app:tl_textsize="15dp" />
+
+        <android.support.v4.view.ViewPager
+            android:layout_marginTop="10dp"
+            android:id="@+id/vp"
+            android:layout_width="match_parent"
+            android:layout_height="440dp"
+            android:descendantFocusability="blocksDescendants"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="18dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/tv_2"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:includeFontPadding="false"
+                android:text="电影排行榜"
+                android:textColor="#010101"
+                android:textSize="18dp"
+               />
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginRight="9dp"-->
+            <!--android:text="查看更多"-->
+            <!--android:textColor="#666666"-->
+            <!--android:textSize="14dp" />-->
+
+        </RelativeLayout>
+
+        <!--榜单-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_rank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <!--<HorizontalScrollView-->
+            <!--android:id="@+id/hsv_movie"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:scrollbars="none">-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<include layout="@layout/item_recommend_movie_recommend"-->
+                    <!--android:id="@+id/item_movie_1"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--/>-->
+
+                <!--<include layout="@layout/item_recommend_movie_recommend"-->
+                    <!--android:id="@+id/item_movie_2"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_width="wrap_content"/>-->
+
+                <!--<include layout="@layout/item_recommend_movie_recommend"-->
+                    <!--android:id="@+id/item_movie_3"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_width="wrap_content"/>-->
+
+            <!--</LinearLayout>-->
+        <!--</HorizontalScrollView>-->
+
+        <RelativeLayout
+
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="18dp"
+            android:layout_marginBottom="2dp">
+
+            <TextView
+                android:id="@+id/tv_3"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:includeFontPadding="false"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:text="热门电影推荐"
+                android:textColor="#010101"
+                android:textSize="18dp" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

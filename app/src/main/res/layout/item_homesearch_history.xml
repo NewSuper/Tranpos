@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="16dp"
+        android:textColor="#333"
+        android:gravity="center_vertical"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp"
+        android:lines="1"
+        android:ellipsize="end"
+        android:text="亲爱的热爱的"/>
+
+        <View
+            android:layout_alignParentRight="true"
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:background="#dddddd"/>
+
+    </RelativeLayout>
+</LinearLayout>

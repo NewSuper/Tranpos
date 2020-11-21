@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/JJ.WidthFill"
+    android:layout_marginTop="5dp"
+    android:paddingVertical="10dp">
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/JJ.Label.Dark.Large"
+        android:layout_marginLeft="5dp"
+        android:text="@string/other_channel" />
+
+    <TextView
+        android:id="@+id/tv_channel_otherEdit"
+        style="@style/JJ.Label.Minor.Small"
+        android:layout_alignBaseline="@id/title"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/title"
+        android:text="@string/other_channel_click_add"
+        android:textColor="@color/ccc" />
+</RelativeLayout>

@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <!--<android.support.design.widget.CoordinatorLayout-->
+            <!--android:layout_above="@+id/bottom_controller"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="#ffffff">-->
+
+            <!--<android.support.design.widget.AppBarLayout-->
+                <!--android:id="@+id/app_bar"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--app:elevation="0dp"-->
+                <!--android:background="#F0F2F5"-->
+                <!--android:fitsSystemWindows="true">-->
+
+                <!--<android.support.design.widget.CollapsingToolbarLayout-->
+                    <!--android:id="@+id/toolbar_layout"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:minHeight="0dp"-->
+                    <!--app:layout_scrollFlags="scroll|exitUntilCollapsed"-->
+                    <!--app:statusBarScrim="@android:color/transparent">-->
+
+                    <!--<RelativeLayout-->
+                        <!--android:background="#fff"-->
+                        <!--android:id="@+id/rl_hb"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="160dp"-->
+                        <!--android:paddingRight="15dp"-->
+                        <!--android:paddingLeft="15dp"-->
+                        <!--android:paddingBottom="12dp"-->
+                        <!--android:paddingTop="15dp"-->
+                        <!--android:layout_marginBottom="8dp">-->
+
+                        <!--<ImageView-->
+                            <!--android:id="@+id/iv"-->
+                            <!--android:scaleType="centerCrop"-->
+                            <!--android:layout_width="94dp"-->
+                            <!--android:layout_height="match_parent" />-->
+
+                        <!--<TextView-->
+                            <!--android:maxLines="1"-->
+                            <!--android:ellipsize="end"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="标题"-->
+                            <!--android:textSize="19dp"-->
+                            <!--android:textColor="#333333"-->
+                            <!--android:id="@+id/tv_title"-->
+                            <!--android:layout_toRightOf="@id/iv"-->
+                            <!--android:layout_marginLeft="9dp"/>-->
+
+                        <!--<LinearLayout-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:orientation="horizontal"-->
+                            <!--android:layout_alignParentBottom="true"-->
+                            <!--android:layout_toRightOf="@id/iv"-->
+                            <!--android:layout_marginLeft="9dp">-->
+
+                            <!--<TextView-->
+                                <!--android:lines="2"-->
+                                <!--android:ellipsize="end"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:text="演员："-->
+                                <!--android:textSize="14dp"-->
+                                <!--android:textColor="#666666"></TextView>-->
+
+                            <!--<TextView-->
+                                <!--android:lines="2"-->
+                                <!--android:ellipsize="end"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:text="演员"-->
+                                <!--android:textSize="14dp"-->
+                                <!--android:textColor="#666666"-->
+                                <!--android:id="@+id/tv_actor"></TextView>-->
+
+                        <!--</LinearLayout>-->
+
+
+
+
+                        <!--<LinearLayout-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_centerVertical="true"-->
+                            <!--android:layout_toRightOf="@id/iv"-->
+                            <!--android:layout_marginLeft="9dp"-->
+                            <!--android:orientation="vertical"-->
+                            <!--android:paddingBottom="14dp">-->
+
+                            <!--&lt;!&ndash;评分&ndash;&gt;-->
+                            <!--<LinearLayout-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:orientation="horizontal"-->
+                                <!--android:gravity="center_horizontal">-->
+
+                                <!--<TextView-->
+                                    <!--android:layout_width="wrap_content"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:text="评分："-->
+                                    <!--android:textColor="#666666"-->
+                                    <!--android:textSize="15dp" />-->
+
+                                <!--<RelativeLayout-->
+                                    <!--android:layout_gravity="center_vertical"-->
+                                    <!--android:layout_width="60dp"-->
+                                    <!--android:layout_height="13dp"-->
+                                    <!--android:background="#dddddd">-->
+
+                                    <!--<com.juejinchain.android.module.movie.view.ScoreView-->
+                                        <!--android:id="@+id/scv"-->
+                                        <!--android:layout_width="match_parent"-->
+                                        <!--android:layout_height="match_parent" />-->
+
+                                    <!--<ImageView-->
+                                        <!--android:layout_width="match_parent"-->
+                                        <!--android:layout_height="match_parent"-->
+                                        <!--android:layout_alignTop="@+id/scv"-->
+                                        <!--android:background="@mipmap/score_bg" />-->
+
+                                <!--</RelativeLayout>-->
+
+                                <!--<TextView-->
+                                    <!--android:id="@+id/tv_point"-->
+                                    <!--android:layout_marginLeft="10dp"-->
+                                    <!--android:layout_width="wrap_content"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:text="8.2分"-->
+                                    <!--android:textColor="@color/app_color"-->
+                                    <!--android:textSize="15dp" />-->
+
+                            <!--</LinearLayout>-->
+
+                            <!--<TextView-->
+                                <!--android:layout_marginTop="5dp"-->
+                                <!--android:maxLines="1"-->
+                                <!--android:ellipsize="end"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:text="剧情"-->
+                                <!--android:textSize="14dp"-->
+                                <!--android:textColor="#666666"-->
+                                <!--android:id="@+id/tv_form"-->
+                                <!--/>-->
+
+
+
+
+                        <!--</LinearLayout>-->
+
+
+
+
+
+                    <!--</RelativeLayout>-->
+
+                <!--</android.support.design.widget.CollapsingToolbarLayout>-->
+
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:background="#fff">-->
+
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:layout_marginLeft="10dp"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:orientation="horizontal">-->
+                        <!--<ProgressBar-->
+                            <!--android:layout_gravity="center_vertical"-->
+                            <!--android:layout_marginRight="5dp"-->
+                            <!--android:visibility="gone"-->
+                            <!--android:id="@+id/pb"-->
+                            <!--android:layout_width="15dp"-->
+                            <!--android:layout_height="15dp"-->
+                            <!--android:indeterminateDrawable="@drawable/moviedt_loading" />-->
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/tv_searchnum"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_gravity="center_vertical"-->
+                            <!--android:text="正在搜索"-->
+                            <!--android:textColor="#666666"-->
+                            <!--android:textSize="15dp" />-->
+                    <!--</LinearLayout>-->
+
+                    <!--<RelativeLayout-->
+                        <!--android:visibility="gone"-->
+                        <!--android:id="@+id/rl_switch"-->
+                        <!--android:layout_width="50dp"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_alignParentRight="true">-->
+
+                        <!--<ImageView-->
+                            <!--android:id="@+id/tv_switch"-->
+                            <!--android:layout_width="15dp"-->
+                            <!--android:layout_height="15dp"-->
+                            <!--android:layout_centerInParent="true"-->
+                            <!--android:background="@mipmap/radar_grid" />-->
+
+                    <!--</RelativeLayout>-->
+
+
+                <!--</RelativeLayout>-->
+
+            <!--</android.support.design.widget.AppBarLayout>-->
+
+            <!--<android.support.v4.widget.NestedScrollView-->
+                <!--android:id="@+id/scrollView"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--app:layout_behavior="@string/appbar_scrolling_view_behavior">-->
+            <!--<com.juejinchain.android.view.LoadingView-->
+                <!--android:id="@+id/loading_view"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent">-->
+
+                    <!--<android.support.v7.widget.RecyclerView-->
+                        <!--android:id="@+id/rv_list"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent" />-->
+
+                    <!--<android.support.v7.widget.RecyclerView-->
+                        <!--android:id="@+id/rv_grid"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:visibility="gone"/>-->
+
+
+
+                <!--</RelativeLayout>-->
+
+            <!--</com.juejinchain.android.view.LoadingView>-->
+            <!--</android.support.v4.widget.NestedScrollView>-->
+        <!--</android.support.design.widget.CoordinatorLayout>-->
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#fff">
+
+
+            <LinearLayout
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <ProgressBar
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:visibility="gone"
+                android:id="@+id/pb"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:indeterminateDrawable="@drawable/moviedt_loading" />
+
+            <TextView
+                android:id="@+id/tv_searchnum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="正在搜索"
+                android:textColor="#666666"
+                android:textSize="15dp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/rl_switch"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true">
+
+                <ImageView
+                    android:id="@+id/tv_switch"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_centerInParent="true"
+                    android:background="@mipmap/radar_grid" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <com.juejinchain.android.view.LoadingView
+            android:id="@+id/loading_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_grid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"/>
+
+
+
+        </RelativeLayout>
+
+        </com.juejinchain.android.view.LoadingView>
+
+    </LinearLayout>
+
+
+</layout>

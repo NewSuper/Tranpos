@@ -1,0 +1,986 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:descendantFocusability="afterDescendants">
+
+    <FrameLayout
+        android:id="@+id/surface_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+
+    <ImageView
+        android:id="@+id/start"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/jz_play_normal"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/fullscreen"
+        android:layout_width="52.5dp"
+        android:layout_height="52.5dp"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/jz_enlarge"
+        android:visibility="gone" />
+
+    <SeekBar
+        android:id="@+id/bottom_seek_progress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1.0"
+        android:background="@null"
+        android:max="100"
+        android:maxHeight="1dp"
+        android:minHeight="1dp"
+        android:paddingLeft="12dp"
+        android:paddingTop="8dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="8dp"
+        android:progressDrawable="@drawable/jz_bottom_seek_progress"
+        android:thumb="@drawable/jz_bottom_seek_thumb"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/current"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:text="00:00"
+        android:textColor="#ffffff"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="14dp"
+        android:text="00:00"
+        android:textColor="#ffffff"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
+
+
+    </RelativeLayout>
+
+
+    <!--横屏中间播放按钮-->
+    <ImageButton
+        android:id="@+id/ib_play"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/jz_play_normal"
+        android:visibility="gone" />
+
+    <!--竖屏中间播放按钮-->
+    <ImageButton
+        android:id="@+id/ib_play2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/jz_play_normal"
+        android:visibility="gone" />
+
+    <!--横屏底部-->
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/player_shadow_bottom"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <!--进度展示-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tv_time_now"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="00:00"
+                android:textColor="#fff"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/tv_time_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:text="00:00"
+                android:textColor="#fff"
+                android:textSize="14dp" />
+
+            <SeekBar
+                android:id="@+id/sb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/tv_time_total"
+                android:layout_toRightOf="@id/tv_time_now"
+                android:background="@null"
+                android:max="100"
+                android:maxHeight="1dp"
+                android:minHeight="1dp"
+                android:progressDrawable="@drawable/jz_bottom_seek_progress"
+                android:thumb="@drawable/jz_bottom_seek_thumb" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <!--播放-->
+            <ImageButton
+                android:id="@+id/ib_start"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@mipmap/player_bofang" />
+
+            <!--全屏-->
+            <ImageButton
+                android:id="@+id/iv_full"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/jz_shrink"
+                android:scaleType="centerInside" />
+
+            <!--下一集-->
+            <RelativeLayout
+                android:id="@+id/rl_next"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/ib_start">
+
+                <ImageView
+                    android:id="@+id/iv_next"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/bofang_next" />
+
+            </RelativeLayout>
+
+
+            <!--选集-->
+            <RelativeLayout
+                android:id="@+id/rl_xuanji"
+                android:layout_width="52.5dp"
+                android:layout_height="52.5dp"
+                android:layout_marginRight="12.5dp"
+                android:layout_toLeftOf="@id/iv_full">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="选集"
+                    android:textColor="#ffffff"
+                    android:textSize="15dp" />
+            </RelativeLayout>
+
+            <!--倍速-->
+            <RelativeLayout
+                android:id="@+id/rl_speed"
+                android:layout_width="52.5dp"
+                android:layout_height="52.5dp"
+                android:layout_toLeftOf="@id/rl_xuanji">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="倍速"
+                    android:textColor="#ffffff"
+                    android:textSize="15dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_copylink"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/rl_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <TextView
+
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="复制视频链接"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:background="@drawable/bg_movieplayer_error"
+                android:textColor="#ffffff"
+                android:textSize="15dp"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <!--竖屏底部-->
+    <LinearLayout
+        android:id="@+id/ll_bottom2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/player_shadow_bottom"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <!--进度展示-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp">
+
+            <!--播放-->
+            <ImageButton
+                android:id="@+id/ib_start2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@mipmap/player_bofang" />
+
+            <!--全屏-->
+            <ImageButton
+                android:id="@+id/iv_full2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/jz_enlarge"
+                android:scaleType="centerInside" />
+
+            <TextView
+                android:id="@+id/tv_time_now2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/ib_start2"
+                android:text="00:00"
+                android:textColor="#fff"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/tv_time_total2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/iv_full2"
+                android:text="00:00"
+                android:textColor="#fff"
+                android:textSize="14dp" />
+
+            <SeekBar
+                android:id="@+id/sb2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/tv_time_total2"
+                android:layout_toRightOf="@id/tv_time_now2"
+                android:background="@null"
+                android:max="100"
+                android:maxHeight="1dp"
+                android:minHeight="1dp"
+                android:progressDrawable="@drawable/jz_bottom_seek_progress"
+                android:thumb="@drawable/jz_bottom_seek_thumb" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <!--横屏顶部-->
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/player_shadow_top"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toLeftOf="@id/ll"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:visibility="gone"
+                    android:id="@+id/v_xiaomi"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"/>
+
+                <!--返回-->
+                <ImageButton
+                    android:id="@+id/ib_back"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/jz_back_normal" />
+
+                <!--网络状态-->
+                <TextView
+                    android:id="@+id/tv_net"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/bg_wifi"
+                    android:gravity="center"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:text="WIFI"
+                    android:textColor="#fff"
+                    android:textSize="12dp" />
+
+                <!--标题-->
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="标题"
+                    android:textColor="#fff"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!--投屏按钮-->
+                <RelativeLayout
+                    android:id="@+id/ll_upnp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="16dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/tp" />
+
+
+                </RelativeLayout>
+
+                <!--下载按钮-->
+                <RelativeLayout
+                    android:id="@+id/ll_download"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="20dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="16dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/dianjixiazai" />
+
+
+                </RelativeLayout>
+
+
+                <!--电量-->
+                <ImageView
+                    android:id="@+id/iv_battery"
+                    android:layout_width="23dp"
+                    android:layout_height="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/jz_battery_level_10"
+                    android:visibility="gone" />
+
+                <!--时间-->
+                <TextView
+                    android:id="@+id/tv_time"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10:00"
+                    android:textColor="#fff"
+                    android:textSize="14dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+
+
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <!--竖屏顶部-->
+    <LinearLayout
+        android:id="@+id/ll_top2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/player_shadow_top"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/rl_top"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!--返回-->
+                <ImageButton
+                    android:id="@+id/ib_back2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/jz_back_normal" />
+
+                <!--标题-->
+                <TextView
+                    android:id="@+id/tv_title2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="标题"
+                    android:textColor="#fff"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_top"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true">
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_playershare"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true">
+
+                    <ImageView
+                        android:layout_centerInParent="true"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:background="@mipmap/ic_music_share"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <!--加载中-->
+    <LinearLayout
+        android:id="@+id/ll_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ProgressBar
+                android:id="@+id/pb_loading"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:indeterminateDrawable="@drawable/jz_loading" />
+
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/iv_loading"
+                android:layout_width="124dp"
+                android:layout_height="86dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_network_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#fff"
+            android:textSize="12dp" />
+
+
+    </LinearLayout>
+
+    <!--锁屏按钮-->
+    <ImageButton
+        android:id="@+id/ib_lock"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="50dp"
+        android:background="@drawable/player_unlock"
+        android:visibility="gone" />
+
+    <!--操作栏-->
+    <RelativeLayout
+        android:id="@+id/rl_operate"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:visibility="gone">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <!--设置-->
+            <ImageView
+                android:id="@+id/iv_set"
+                android:layout_width="54dp"
+                android:layout_height="68dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/playmovie_set" />
+
+            <!--投屏教程-->
+            <ImageView
+                android:id="@+id/iv_tpjc"
+                android:layout_width="54dp"
+                android:layout_height="85dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/toupinjiaochen" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <!--重试按钮-->
+    <RelativeLayout
+        android:id="@+id/rl_playerror"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80333333"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_playerror"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_movieplayer_error"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="5dp"
+            android:text="播放失败，点击重试"
+            android:textColor="#ffffff"
+            android:textSize="14dp" />
+    </RelativeLayout>
+
+    <!--中场栏-->
+    <RelativeLayout
+        android:id="@+id/rl_halftime"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="gone">
+
+        <!--文本-->
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="正在跳转下一集..."
+            android:textColor="#fff"
+            android:textSize="16dp" />
+
+    </RelativeLayout>
+
+
+    <!--引导蒙层-->
+    <RelativeLayout
+        android:id="@+id/rl_guide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#bb000000"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp">
+
+                    <ImageView
+                        android:layout_width="61dp"
+                        android:layout_height="42dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/movieplayguide_ld" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="屏幕左侧"
+                    android:textColor="#fff"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="17dp"
+                    android:text="亮度"
+                    android:textColor="#FFAA00"
+                    android:textSize="17dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp">
+
+                    <ImageView
+                        android:layout_width="44dp"
+                        android:layout_height="66dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/movieplayguide_tc" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="屏幕左右滑"
+                    android:textColor="#fff"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="17dp"
+                    android:text="调整进度"
+                    android:textColor="#FFAA00"
+                    android:textSize="17dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp">
+
+                    <ImageView
+                        android:layout_width="44dp"
+                        android:layout_height="66dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/movieplayguide_dj" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="单击"
+                    android:textColor="#fff"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="17dp"
+                    android:text="播放/暂停"
+                    android:textColor="#FFAA00"
+                    android:textSize="17dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp">
+
+                    <ImageView
+                        android:layout_width="61dp"
+                        android:layout_height="42dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/movieplayguide_ld" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="屏幕右侧"
+                    android:textColor="#fff"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="17dp"
+                    android:text="音量"
+                    android:textColor="#FFAA00"
+                    android:textSize="17dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <!--分享弹框-->
+    <RelativeLayout
+        android:id="@+id/rl_share"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#bb000000"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="————    分享后继续播放    ————"
+                android:textColor="#fff"
+                android:textSize="17dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_pyq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerInParent="true"
+                        android:background="@mipmap/ic_share_wechat_friend" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="朋友圈"
+                    android:textColor="#fff"
+                    android:textSize="17dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_wx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerInParent="true"
+                        android:background="@mipmap/ic_share_wechat" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="微信"
+                    android:textColor="#fff"
+                    android:textSize="17dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_qq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerInParent="true"
+                        android:background="@mipmap/ic_share_qq" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="QQ"
+                    android:textColor="#fff"
+                    android:textSize="17dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_qqkj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerInParent="true"
+                        android:background="@mipmap/ic_share_qq_zone" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="QQ空间"
+                    android:textColor="#fff"
+                    android:textSize="17dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/shouye_guide1"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="全网独创赚钱新模式\n赚车赚房不再是梦想"
+            android:textSize="16dp"
+            android:lineSpacingExtra="2dp"
+
+            android:textColor="#ffffff"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

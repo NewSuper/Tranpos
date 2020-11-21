@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="5dp">
+
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:id="@+id/iv"
+            android:layout_width="match_parent"
+            android:layout_height="95dp"/>
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textColor="#333333"
+            android:layout_marginTop="5dp"
+            android:lines="1"
+            android:text="精英律师"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:textColor="#999999"
+            android:layout_marginTop="2dp"
+            android:lines="1"
+            android:text="精英律师"
+            android:ellipsize="end"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
+</layout>

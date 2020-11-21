@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/srl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v4.widget.NestedScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/c_f3f3f3">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_task_title_bg"
+                        android:scaleType="fitXY"/>
+
+                    <LinearLayout
+                        android:id="@+id/ll_flipper"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/ws20dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/ws10dp"
+                        android:layout_marginRight="@dimen/ws10dp">
+
+                        <ViewFlipper
+                            android:id="@+id/view_flipper"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="@dimen/ws32dp"
+                            android:autoStart="true"
+                            android:background="@drawable/bg_search_shape"
+                            android:inAnimation="@anim/in_bottomtotop"
+                            android:outAnimation="@anim/in_bottomtotop"/>
+
+                        <TextView
+                            android:id="@+id/tv_title"
+                            android:layout_width="@dimen/ws62dp"
+                            android:layout_height="@dimen/ws22dp"
+                            android:layout_marginLeft="@dimen/ws24dp"
+                            android:text="如何赚钱"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/ws12sp"
+                            android:background="@drawable/shape_ffffff_radius_10"
+                            android:gravity="center"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_sign"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/icon_task_bg"
+                        android:layout_marginTop="@dimen/ws10dp"
+                        android:layout_marginLeft="@dimen/ws5dp"
+                        android:layout_marginRight="@dimen/ws5dp"
+                        android:layout_below="@+id/ll_flipper"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_sign_question"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="每日签到领金币"
+                            android:gravity="center"
+                            android:textColor="@color/c_333333"
+                            android:textSize="@dimen/ws16sp"
+                            android:paddingLeft="@dimen/ws15dp"
+                            android:paddingRight="@dimen/ws15dp"
+                            android:paddingTop="@dimen/ws15dp"
+                            android:paddingBottom="@dimen/ws10dp"
+                            android:drawableRight="@mipmap/ic_sign_info"
+                            android:drawablePadding="@dimen/ws5dp"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tv_login"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="立即登录"
+                                android:textColor="@color/c_FF5500"
+                                android:paddingLeft="@dimen/ws24dp"
+                                android:paddingRight="@dimen/ws24dp"
+                                android:paddingBottom="@dimen/ws5dp"
+                                android:paddingTop="@dimen/ws5dp"
+                                android:textSize="@dimen/ws16sp"
+                                android:layout_centerHorizontal="true"
+                                android:background="@drawable/shape_radius_20"
+                                android:visibility="gone"/>
+
+                            <TextView
+                                android:id="@+id/tv_sign"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="登录后自动签到领金币"
+                                android:layout_marginTop="@dimen/ws10dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_below="@+id/tv_login"
+                                android:textColor="#75310F"
+                                android:textSize="@dimen/ws14sp"
+                                android:visibility="gone"/>
+
+                            <TextView
+                                android:id="@+id/tv_next_day_sign"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="今日已签到,明天可领40金币"
+                                android:textColor="@color/c_FF5500"
+                                android:textSize="@dimen/ws18sp"
+                                android:layout_centerInParent="true"
+                                android:visibility="visible"/>
+
+                        </RelativeLayout>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rv_sign"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/ws10dp"
+                            android:layout_marginBottom="@dimen/ws20dp"
+                            android:layout_gravity="center_horizontal"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_business"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_below="@+id/ll_sign"
+                        android:padding="@dimen/ws10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <View
+                            android:layout_width="@dimen/ws3dp"
+                            android:layout_height="@dimen/ws16dp"
+                            android:background="@drawable/shape_ff5500_radius"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="邀请好友"
+                            android:layout_marginLeft="@dimen/ws5dp"
+                            android:layout_marginRight="@dimen/ws5dp"
+                            android:textColor="@color/c_FF5500"
+                            android:textSize="@dimen/ws18sp" />
+
+                    </LinearLayout>
+
+                    <com.youth.banner.Banner
+                        android:paddingLeft="@dimen/ws10dp"
+                        android:paddingRight="@dimen/ws10dp"
+                        android:id="@+id/business_banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/ws100dp"
+                        android:paddingBottom="@dimen/ws10dp"
+                        android:background="@color/white"
+                        android:layout_below="@+id/ll_business"
+                        app:delay_time="2000"
+                        app:image_scale_type="fit_xy"
+                        app:indicator_margin="@dimen/ws5dp"
+                        app:is_auto_play="true"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/iv_business"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:paddingLeft="@dimen/ws10dp"
+                        android:paddingRight="@dimen/ws10dp"
+                        android:paddingBottom="@dimen/ws10dp"
+                        android:src="@mipmap/ic_task_banner"
+                        android:layout_below="@+id/ll_business"
+                        android:scaleType="fitXY"
+                        android:visibility="gone"/>
+
+                    <LinearLayout
+                        android:id="@+id/ll_activity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_below="@+id/business_banner"
+                        android:padding="@dimen/ws10dp"
+                        android:layout_marginTop="@dimen/ws10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="@dimen/ws3dp"
+                            android:layout_height="@dimen/ws16dp"
+                            android:background="@drawable/shape_ff5500_radius"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="活动专区"
+                            android:layout_marginLeft="@dimen/ws5dp"
+                            android:layout_marginRight="@dimen/ws5dp"
+                            android:textColor="@color/c_FF5500"
+                            android:textSize="@dimen/ws18sp" />
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_task"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ll_activity"
+                        android:background="@color/white"/>
+
+                    <LinearLayout
+                        android:id="@+id/ll_game"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_below="@+id/rv_task"
+                        android:layout_marginTop="@dimen/ws10dp"
+                        android:padding="@dimen/ws10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="@dimen/ws3dp"
+                            android:layout_height="@dimen/ws16dp"
+                            android:background="@drawable/shape_ff5500_radius"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="边玩游戏边赚金币"
+                            android:layout_marginLeft="@dimen/ws5dp"
+                            android:layout_marginRight="@dimen/ws5dp"
+                            android:textColor="@color/c_FF5500"
+                            android:textSize="@dimen/ws18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="更多"
+                            android:textColor="@color/c_666666"
+                            android:textSize="@dimen/ws13sp"
+                            android:drawableRight="@mipmap/ic_more_right"
+                            android:drawablePadding="@dimen/ws5dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/game"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/ws180dp"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/ws10dp"
+                        android:layout_below="@id/ll_game"
+                        android:paddingTop="@dimen/ws5dp"
+                        android:paddingLeft="@dimen/ws5dp"
+                        android:paddingRight="@dimen/ws5dp"
+                        android:background="@color/white"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/iv_game1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/ws5dp"
+                            android:layout_marginRight="@dimen/ws5dp"
+                            android:layout_weight="1"
+                            android:src="@mipmap/ic_game1"
+                            android:scaleType="fitXY"/>
+
+                        <ImageView
+                            android:id="@+id/iv_game2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/ws5dp"
+                            android:layout_marginRight="@dimen/ws5dp"
+                            android:layout_weight="1"
+                            android:src="@mipmap/ic_game2"
+                            android:scaleType="fitXY"/>
+
+                        <ImageView
+                            android:id="@+id/iv_game3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/ws5dp"
+                            android:layout_marginRight="@dimen/ws5dp"
+                            android:layout_weight="1"
+                            android:src="@mipmap/ic_game3"
+                            android:scaleType="fitXY"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_new_task"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_below="@+id/game"
+                        android:padding="@dimen/ws10dp"
+                        android:layout_marginTop="@dimen/ws10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <View
+                            android:layout_width="@dimen/ws3dp"
+                            android:layout_height="@dimen/ws16dp"
+                            android:background="@drawable/shape_ff5500_radius"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="新手任务"
+                            android:layout_marginLeft="@dimen/ws5dp"
+                            android:layout_marginRight="@dimen/ws5dp"
+                            android:textColor="@color/c_FF5500"
+                            android:textSize="@dimen/ws18sp" />
+                        
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical|end">
+
+                            <TextView
+                                android:id="@+id/tv_task_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@mipmap/time_icon"
+                                android:text="还有30天结束"
+                                android:drawablePadding="@dimen/ws5dp"
+                                android:textColor="@color/c_999999"
+                                android:textSize="@dimen/ws12sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_new_task"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_below="@id/ll_new_task"
+                        android:visibility="gone"/>
+
+                    <LinearLayout
+                        android:id="@+id/ll_day_task"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_below="@+id/rv_new_task"
+                        android:padding="@dimen/ws10dp"
+                        android:layout_marginTop="@dimen/ws10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="@dimen/ws3dp"
+                            android:layout_height="@dimen/ws16dp"
+                            android:background="@drawable/shape_ff5500_radius"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="日常任务"
+                            android:layout_marginLeft="@dimen/ws5dp"
+                            android:layout_marginRight="@dimen/ws5dp"
+                            android:textColor="@color/c_FF5500"
+                            android:textSize="@dimen/ws18sp" />
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_day_task"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_below="@id/ll_day_task"/>
+
+                    <View
+                        android:id="@+id/view_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/ws0_5dp"
+                        android:background="@color/c_E8E8E8"
+                        android:layout_below="@+id/rv_day_task"/>
+
+                    <TextView
+                        android:id="@+id/tv_end"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/ws130dp"
+                        android:text="教你用掘金宝赚车子房子>"
+                        android:textColor="#ff4986d9"
+                        android:layout_below="@+id/view_line"
+                        android:background="@color/white"
+                        android:textSize="@dimen/ws14sp"
+                        android:gravity="center"/>
+
+                </RelativeLayout>
+
+            </android.support.v4.widget.NestedScrollView>
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_box"
+            android:layout_width="@dimen/ws108dp"
+            android:layout_height="@dimen/ws95dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/ws33dp"
+            android:layout_marginRight="@dimen/ws20dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/ic_box"/>
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="立即开启"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:paddingLeft="@dimen/ws11dp"
+                android:paddingBottom="@dimen/ws5dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/ws13sp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_circle_reward"
+            android:layout_width="@dimen/ws64dp"
+            android:layout_height="@dimen/ws64dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/ws14dp"
+            android:layout_marginLeft="@dimen/ws14dp"
+            android:layout_marginBottom="@dimen/ws117dp"
+            android:background="@mipmap/bg_read_acticle_circle"
+            android:padding="3dp"
+            android:visibility="gone">
+
+            <com.juejinchain.android.view.CirclePercentView
+                android:id="@+id/circle_progress"
+                android:layout_centerInParent="true"
+                android:layout_width="@dimen/ws50dp"
+                android:layout_height="@dimen/ws50dp"
+                android:layout_gravity="center_horizontal"
+                app:circleBgColor="@color/c_fff7f7"
+                app:circleIsGradient="true"
+                app:circleStartColor="@color/yellow_general_btn"
+                app:circleProgressMax="1000"
+                app:circleEndColor="@color/red_500"
+                app:circleProgressColor="@color/red_500" />
+
+            <ImageView
+                android:id="@+id/iv_eggs"
+                android:layout_width="@dimen/ws32dp"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_to_receive_eggs"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

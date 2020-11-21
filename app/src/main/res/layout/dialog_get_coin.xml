@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:id="@+id/ll_root"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:orientation="vertical"
+            android:id="@+id/reward_content"
+            android:layout_width="@dimen/ws285dp"
+            android:layout_height="@dimen/ws242_5dp"
+            android:background="@mipmap/bg_get_coin">
+            <ImageView
+                android:layout_marginTop="@dimen/ws72dp"
+                android:id="@+id/img_close"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/ws10dp"
+                android:layout_gravity="right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/close_icon" />
+
+            <TextView
+                android:layout_marginBottom="10dp"
+                android:layout_above="@+id/ll_content"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/c_333333"
+                android:id="@+id/title"
+                android:textSize="@dimen/ws18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="领取成功" />
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:id="@+id/ll_content"
+                android:layout_marginBottom="15dp"
+                android:layout_above="@+id/tv_enter"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textStyle="bold"
+                    android:textSize="@dimen/ws15dp"
+                    android:layout_below="@+id/title"
+                    android:id="@+id/tv_total_coin"
+                    android:layout_marginLeft="@dimen/ws5dp"
+                    android:textColor="@color/c_FF6918"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/tv_label"
+                    android:layout_toRightOf="@+id/tv_label" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginBottom="15dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="@dimen/ws10dp"
+                android:paddingTop="@dimen/ws10dp"
+                android:paddingLeft="@dimen/ws30dp"
+                android:paddingRight="@dimen/ws30dp"
+                android:id="@+id/tv_enter"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="看视频赚翻倍"
+                android:textColor="@color/c_ff6600"
+                android:background="@drawable/shap_line_ff6600_round_100" />
+
+
+
+        </RelativeLayout>
+
+
+        <FrameLayout
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/ad_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_white_radius"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/reward_content" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/loading_progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:layout_width="@dimen/ws50dp"
+            android:layout_height="@dimen/ws50dp"
+            android:layout_centerInParent="true"
+            android:indeterminateDrawable="@drawable/loading_login_black" />
+    </LinearLayout>
+</RelativeLayout>
