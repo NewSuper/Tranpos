@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">T</string>
+    <string name="app_name" translatable="false">掘金宝</string>
+    <string name="login_agreement" translatable="false">“使用协议和隐私政策”</string>
+    <string name="login_agree_to_a_deal" translatable="false">登录/注册表示同意</string>
+    <string name="login_edt_phone" translatable="false">请输入11位手机号</string>
+    <string name="login_edt_phone_code" translatable="false">请输入验证码</string>
+    <string name="login_edt_phone_psw" translatable="false">请输入6-20位密码</string>
+    <string name="login_confirm_login" translatable="false">确认登录</string>
+
+    <string name="get" translatable="false">领取</string>
+    <string name="manage_channel" translatable="false">频道管理</string>
+    <string name="my_cahnnel" translatable="false">我的频道</string>
+    <string name="tip_drag" translatable="false">点击删除频道</string>
+    <string name="edit" translatable="false">编辑</string>
+    <string name="finish" translatable="false">完成</string>
+    <string name="other_channel" translatable="false">其他频道</string>
+
+    <string name="other_channel_click_add" translatable="false">点击添加频道</string>
+    <string name="other_channel_click_remove" translatable="false">最多16个频道，请删除一些</string>
+    <string name="other_channel_click_five_remove" translatable="false">最多16个频道，请删除一些</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="home" translatable="false">首页</string>
+    <string name="movie" translatable="false">免费看</string>
+    <string name="task" translatable="false">赚钱</string>
+    <string name="mine" translatable="false">我的</string>
+    <string name="lingqu" translatable="false">领取</string>
+    <string name="picture_manager_title" translatable="false">拖动下方按钮可调整顺序</string>
+    <string name="picture_manager_other_title" translatable="false">点击可添加图集</string>
+    <string name="move_view_tip">打开游戏悬浮窗功能</string>
+
+</resources>

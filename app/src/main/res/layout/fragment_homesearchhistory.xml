@@ -93,7 +93,7 @@
 
                 </RelativeLayout>
 
-                <com.juejinchain.android.view.LoadingView
+                <com.newsuper.t.juejinbao.view.LoadingView
                     android:layout_marginTop="10dp"
                     android:id="@+id/loading"
                     android:layout_width="match_parent"
@@ -106,7 +106,7 @@
                     android:layout_height="wrap_content"
 
                     />
-                </com.juejinchain.android.view.LoadingView>
+                </com.newsuper.t.juejinbao.view.LoadingView>
 
             </LinearLayout>
 

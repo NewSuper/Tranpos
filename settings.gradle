@@ -1,0 +1,2 @@
+include ':app',':jiaozivideoplayer', ':steplibrary',':videocompressor'
+rootProject.name = "T"

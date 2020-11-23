@@ -1,10 +1,5 @@
 package com.newsuper.t.juejinbao.base;
 
-/**
- * 版权：掘金宝科技有限公司 版权所有
- * @author Tyan
- * @email  zthemail.@163.com
- */
 
 public class BusConstant {
 

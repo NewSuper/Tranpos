@@ -25,7 +25,7 @@
         android:layout_height="1px"
         android:background="#efefef" />
 
-    <com.juejinchain.android.view.CanScrollViewPager
+    <com.newsuper.t.juejinbao.view.CanScrollViewPager
         android:id="@+id/vp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
