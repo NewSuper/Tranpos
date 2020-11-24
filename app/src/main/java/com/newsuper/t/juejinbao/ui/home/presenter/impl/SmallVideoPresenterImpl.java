@@ -3,21 +3,19 @@ package com.newsuper.t.juejinbao.ui.home.presenter.impl;
 import android.app.Activity;
 import android.util.Log;
 
-import com.bytedance.sdk.openadsdk.AdSlot;
-import com.bytedance.sdk.openadsdk.TTAdNative;
-import com.bytedance.sdk.openadsdk.TTDrawFeedAd;
-import com.juejinchain.android.base.ApiService;
-import com.juejinchain.android.module.home.entity.GetCoinEntity;
-import com.juejinchain.android.module.home.entity.HomeListEntity;
-import com.juejinchain.android.module.home.entity.RewardDoubleEntity;
-import com.juejinchain.android.module.home.presenter.SmallVideoPresenter;
-import com.juejinchain.android.utils.MyToast;
-import com.ys.network.base.BasePresenter;
-import com.ys.network.network.HttpRequestBody;
-import com.ys.network.network.RetrofitManager;
-import com.ys.network.progress.HttpResultFunc;
-import com.ys.network.progress.ProgressSubscriber;
-import com.ys.network.progress.SubscriberOnResponseListenter;
+
+import com.newsuper.t.juejinbao.base.ApiService;
+import com.newsuper.t.juejinbao.base.BasePresenter;
+import com.newsuper.t.juejinbao.base.RetrofitManager;
+import com.newsuper.t.juejinbao.ui.home.entity.GetCoinEntity;
+import com.newsuper.t.juejinbao.ui.home.entity.HomeListEntity;
+import com.newsuper.t.juejinbao.ui.home.entity.RewardDoubleEntity;
+import com.newsuper.t.juejinbao.ui.home.presenter.SmallVideoPresenter;
+import com.newsuper.t.juejinbao.utils.MyToast;
+import com.newsuper.t.juejinbao.utils.SubscriberOnResponseListenter;
+import com.newsuper.t.juejinbao.utils.network.HttpRequestBody;
+import com.newsuper.t.juejinbao.utils.network.HttpResultFunc;
+import com.newsuper.t.juejinbao.utils.network.ProgressSubscriber;
 
 import java.util.List;
 import java.util.Map;
@@ -53,32 +51,32 @@ public class SmallVideoPresenterImpl extends BasePresenter<SmallVideoPresenter.S
     }
 
     //请求广告
-    public void requestTTDrawFeedAds(TTAdNative mTTAdNative){
-        AdSlot adSlot = new AdSlot.Builder()
-                .setCodeId("920793078")
-                .setSupportDeepLink(true)
-                .setImageAcceptedSize(1080, 1920)
-                .setAdCount(3) //请求广告数量为1到3条
-                .build();
-
-
-        //step4:请求广告,对请求回调的广告作渲染处理
-        mTTAdNative.loadDrawFeedAd(adSlot, new TTAdNative.DrawFeedAdListener() {
-            @Override
-            public void onError(int code, String message) {
-                Log.e("zy" , message);
-                getView().requestTTDrawFeedAds(null);
-            }
-
-            @Override
-            public void onDrawFeedAdLoad(List<TTDrawFeedAd> ads) {
-                if (ads == null || ads.isEmpty()) {
-                    return;
-                }
-                getView().requestTTDrawFeedAds(ads);
-            }
-        });
-    }
+//    public void requestTTDrawFeedAds(TTAdNative mTTAdNative){
+//        AdSlot adSlot = new AdSlot.Builder()
+//                .setCodeId("920793078")
+//                .setSupportDeepLink(true)
+//                .setImageAcceptedSize(1080, 1920)
+//                .setAdCount(3) //请求广告数量为1到3条
+//                .build();
+//
+//
+//        //step4:请求广告,对请求回调的广告作渲染处理
+//        mTTAdNative.loadDrawFeedAd(adSlot, new TTAdNative.DrawFeedAdListener() {
+//            @Override
+//            public void onError(int code, String message) {
+//                Log.e("zy" , message);
+//                getView().requestTTDrawFeedAds(null);
+//            }
+//
+//            @Override
+//            public void onDrawFeedAdLoad(List<TTDrawFeedAd> ads) {
+//                if (ads == null || ads.isEmpty()) {
+//                    return;
+//                }
+//                getView().requestTTDrawFeedAds(ads);
+//            }
+//        });
+//    }
 
     @Override
     public void getRewardOf30second(Map<String, String> StringMap, Activity activity) {

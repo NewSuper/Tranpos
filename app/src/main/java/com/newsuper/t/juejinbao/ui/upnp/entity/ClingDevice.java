@@ -1,19 +1,14 @@
 package com.newsuper.t.juejinbao.ui.upnp.entity;
 
 
-import com.juejinchain.android.module.movie.adapter.EasyAdapter;
+import android.bluetooth.BluetoothClass;
 
-import org.fourthline.cling.model.meta.Device;
+import com.newsuper.t.juejinbao.ui.movie.adapter.EasyAdapter;
 
-/**
- * 说明：
- * 作者：zhouzhan
- * 日期：17/6/27 17:47
- */
 
 public class ClingDevice extends EasyAdapter.TypeBean implements IDevice<Device> {
 
-    private Device mDevice;
+    private BluetoothClass.Device mDevice;
     /** 是否已选中 */
     private boolean isSelected;
 

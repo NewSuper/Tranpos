@@ -7,15 +7,12 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 
-import com.juejinchain.android.R;
-import com.ys.network.base.PagerCons;
-import com.juejinchain.android.module.share.interf.OnButtonClickLintener;
-import com.juejinchain.android.utils.SPUtils;
+import com.newsuper.t.juejinbao.ui.share.interf.OnButtonClickLintener;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
-import razerdp.basepopup.BasePopupWindow;
+//import razerdp.basepopup.BasePopupWindow;
 
 public class GuidePop extends BasePopupWindow {
 

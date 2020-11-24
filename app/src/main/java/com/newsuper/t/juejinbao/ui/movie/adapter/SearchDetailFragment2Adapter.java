@@ -7,9 +7,10 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.alibaba.fastjson.JSON;
-import com.juejinchain.android.module.movie.entity.MovieCinamesEntity;
-import com.juejinchain.android.module.movie.fragment.HHMhkFragment;
-import com.juejinchain.android.module.movie.fragment.HHMthirdFragment;
+import com.newsuper.t.juejinbao.ui.movie.entity.MovieCinamesEntity;
+import com.newsuper.t.juejinbao.ui.movie.fragment.HHMhkFragment;
+import com.newsuper.t.juejinbao.ui.movie.fragment.HHMthirdFragment;
+
 
 import java.util.List;
 

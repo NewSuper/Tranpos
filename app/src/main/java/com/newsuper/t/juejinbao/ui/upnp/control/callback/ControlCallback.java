@@ -1,13 +1,6 @@
 package com.newsuper.t.juejinbao.ui.upnp.control.callback;
 
-
-import com.juejinchain.android.module.upnp.entity.IResponse;
-
-/**
- * 说明：设备控制操作 回调
- * 作者：zhouzhan
- * 日期：17/7/4 10:56
- */
+import com.newsuper.t.juejinbao.ui.upnp.entity.IResponse;
 
 public interface ControlCallback<T> {
 

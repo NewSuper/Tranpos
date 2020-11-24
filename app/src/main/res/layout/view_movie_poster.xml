@@ -90,7 +90,7 @@
                             android:layout_marginTop="@dimen/ws5dp"
                             android:background="#dddddd">
 
-                            <com.juejinchain.android.module.movie.view.ScoreView
+                            <com.newsuper.t.juejinbao.ui.movie.view.ScoreView
                                 android:id="@+id/scv"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent" />
@@ -119,7 +119,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="2">
 
-                <com.juejinchain.android.module.movie.view.CircleImageView
+                <com.newsuper.t.juejinbao.ui.movie.view.CircleImageView
                     android:id="@+id/iv_img"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"

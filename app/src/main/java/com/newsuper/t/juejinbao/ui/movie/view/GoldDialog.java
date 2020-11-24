@@ -10,12 +10,8 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.DialogGoldBinding;
-import com.juejinchain.android.databinding.DialogTreasureboxBinding;
-import com.juejinchain.android.module.WebFragment;
-import com.juejinchain.android.module.movie.activity.BridgeWebViewActivity;
-import com.juejinchain.android.module.share.entity.ShareInfo;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.DialogGoldBinding;
 
 public class GoldDialog{
 

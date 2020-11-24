@@ -14,24 +14,23 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.bytedance.sdk.openadsdk.TTDrawFeedAd;
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.FragmentSmallVideoBinding;
-import com.juejinchain.android.event.TabSelectedEvent;
-import com.juejinchain.android.event.TextSettingEvent;
-import com.juejinchain.android.module.MainActivity;
-import com.juejinchain.android.module.home.activity.PlaySmallVideoActivity;
-import com.juejinchain.android.module.home.adapter.MicroVideoListAdapter;
-import com.juejinchain.android.module.home.entity.HomeListEntity;
-import com.juejinchain.android.module.home.entity.RewardDoubleEntity;
-import com.juejinchain.android.module.home.entity.ScrollToPositionEvent;
-import com.juejinchain.android.module.home.presenter.SmallVideoPresenter;
-import com.juejinchain.android.module.home.presenter.impl.SmallVideoPresenterImpl;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.FragmentSmallVideoBinding;
+import com.newsuper.t.juejinbao.base.BaseFragment;
+import com.newsuper.t.juejinbao.base.PagerCons;
+import com.newsuper.t.juejinbao.bean.TabSelectedEvent;
+import com.newsuper.t.juejinbao.bean.TextSettingEvent;
+import com.newsuper.t.juejinbao.ui.JunjinBaoMainActivity;
+import com.newsuper.t.juejinbao.ui.home.activity.PlaySmallVideoActivity;
+import com.newsuper.t.juejinbao.ui.home.adapter.MicroVideoListAdapter;
+import com.newsuper.t.juejinbao.ui.home.entity.HomeListEntity;
+import com.newsuper.t.juejinbao.ui.home.entity.RewardDoubleEntity;
+import com.newsuper.t.juejinbao.ui.home.entity.ScrollToPositionEvent;
+import com.newsuper.t.juejinbao.ui.home.presenter.SmallVideoPresenter;
+import com.newsuper.t.juejinbao.ui.home.presenter.impl.SmallVideoPresenterImpl;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
-import com.ys.network.base.BaseFragment;
-import com.ys.network.base.PagerCons;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -47,7 +46,6 @@ import io.paperdb.Paper;
 
 import static io.paperdb.Paper.book;
 
-
 public class SmallVideoFragment extends BaseFragment<SmallVideoPresenterImpl, FragmentSmallVideoBinding>
         implements SmallVideoPresenter.SmallVideoPresenterView {
 
@@ -56,7 +54,7 @@ public class SmallVideoFragment extends BaseFragment<SmallVideoPresenterImpl, Fr
     private ArrayList<HomeListEntity.DataBean.OtherBean.SmallvideoListBean> mListAdd = new ArrayList<>();
     //分页，目前后台未做分页
     private int page = 1;
-    private HomeListEntity HomeListEntity;
+    private com.newsuper.t.juejinbao.ui.home.entity.HomeListEntity HomeListEntity;
     private int perloadTime = 3;
     private int addGoldCoinCount = 10;
     private int preloadCount = 5;
@@ -358,7 +356,7 @@ public class SmallVideoFragment extends BaseFragment<SmallVideoPresenterImpl, Fr
 
     @Subscribe
     public void onTabSelectedEvent(TabSelectedEvent event) {
-        if (event.position == MainActivity.HOME && event.channelName.equals("小视频")) {
+        if (event.position == JunjinBaoMainActivity.HOME && event.channelName.equals("小视频")) {
             page = 0;
             mViewBinding.fragmentSmallVideoRecycler.scrollToPosition(0);
             mViewBinding.fragmentSmallVideoRefresh.autoRefresh();

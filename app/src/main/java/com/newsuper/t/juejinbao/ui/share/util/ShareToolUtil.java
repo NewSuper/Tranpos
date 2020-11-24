@@ -10,15 +10,11 @@ import android.os.Build;
 import android.os.Environment;
 import android.support.v4.app.ActivityCompat;
 
-import com.juejinchain.android.R;
+import com.newsuper.t.R;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-
-/**
- * Created by gudongdong on 2018/2/6.
- */
 
 public class ShareToolUtil {
 

@@ -58,7 +58,7 @@
                 android:layout_below="@+id/rl_title"
                 android:paddingBottom="10dp">
 
-                <com.juejinchain.android.module.song.view.LyricView
+                <com.newsuper.t.juejinbao.ui.song.view.LyricView
                     android:id="@+id/lrc"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"

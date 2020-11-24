@@ -3,7 +3,7 @@
     android:layout_width="@dimen/ws45dp"
     android:layout_height="@dimen/ws55dp">
 
-    <com.juejinchain.android.view.RoundImageView
+    <com.newsuper.t.juejinbao.view.RoundImageView
         android:id="@+id/iv"
         android:layout_width="@dimen/ws45dp"
         android:layout_height="@dimen/ws45dp"

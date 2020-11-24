@@ -2,9 +2,8 @@ package com.newsuper.t.juejinbao.ui.home.presenter;
 
 import android.app.Activity;
 
-import com.bytedance.sdk.openadsdk.TTDrawFeedAd;
-import com.juejinchain.android.module.home.entity.HomeListEntity;
-import com.juejinchain.android.module.home.entity.RewardDoubleEntity;
+
+import com.newsuper.t.juejinbao.ui.home.entity.RewardDoubleEntity;
 
 import java.io.Serializable;
 import java.util.List;
@@ -28,7 +27,7 @@ public interface SmallVideoPresenter {
         void showError(String msg);
 
         //获取广告
-        void requestTTDrawFeedAds(List<TTDrawFeedAd> ads);
+      //  void requestTTDrawFeedAds(List<TTDrawFeedAd> ads);
 
         void getRewardOf30secondSuccess(Serializable serializable);
 

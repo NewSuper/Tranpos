@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.juejinchain.android.view.CustomLayout
+    <com.newsuper.t.juejinbao.view.CustomLayout
         android:id="@+id/view_bg"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -18,7 +18,7 @@
             android:layout_marginLeft="@dimen/ws5dp"
             android:layout_marginRight="@dimen/ws5dp"/>
 
-    </com.juejinchain.android.view.CustomLayout>
+    </com.newsuper.t.juejinbao.view.CustomLayout>
 
     <View
         android:id="@+id/view"

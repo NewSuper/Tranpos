@@ -8,11 +8,10 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.view.ViewGroup;
 
 import com.alibaba.fastjson.JSON;
-import com.juejinchain.android.module.movie.entity.MovieIndexRecommendEntity;
-import com.juejinchain.android.module.movie.entity.V2PlayListEntity;
-import com.juejinchain.android.module.movie.fragment.MovieNewTabsTabFragment;
-import com.juejinchain.android.module.movie.fragment.MovieTabAndListPageFragment;
-import com.juejinchain.android.module.movie.utils.Utils;
+import com.newsuper.t.juejinbao.ui.movie.entity.V2PlayListEntity;
+import com.newsuper.t.juejinbao.ui.movie.fragment.MovieTabAndListPageFragment;
+import com.newsuper.t.juejinbao.ui.movie.utils.Utils;
+
 
 import java.util.List;
 

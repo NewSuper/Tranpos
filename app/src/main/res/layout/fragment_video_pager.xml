@@ -8,7 +8,7 @@
             android:id="@+id/refresh_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <com.juejinchain.android.view.LoadingView
+            <com.newsuper.t.juejinbao.view.LoadingView
                 android:id="@+id/loading_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -17,7 +17,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
 
-            </com.juejinchain.android.view.LoadingView>
+            </com.newsuper.t.juejinbao.view.LoadingView>
         </com.scwang.smartrefresh.layout.SmartRefreshLayout>
     </RelativeLayout>
 </layout>

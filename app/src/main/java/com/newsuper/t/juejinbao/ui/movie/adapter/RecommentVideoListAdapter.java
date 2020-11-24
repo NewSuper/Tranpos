@@ -17,21 +17,21 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.bitmap.CenterCrop;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.bumptech.glide.request.RequestOptions;
-import com.juejinchain.android.R;
-import com.juejinchain.android.base.ApiService;
-import com.juejinchain.android.module.login.activity.GuideLoginActivity;
-import com.juejinchain.android.module.movie.activity.MovieSearchActivity;
-import com.juejinchain.android.module.movie.craw.BeanMovieSearchItem;
-import com.juejinchain.android.module.movie.entity.RecommendRankingEntity;
-import com.juejinchain.android.module.movie.view.ScoreView;
-import com.juejinchain.android.module.my.entity.BaseDefferentEntity;
-import com.ys.network.base.LoginEntity;
-import com.ys.network.network.HttpRequestBody;
-import com.ys.network.network.RetrofitManager;
-import com.ys.network.progress.HttpResultFunc;
-import com.ys.network.progress.ProgressSubscriber;
-import com.ys.network.progress.SubscriberOnResponseListenter;
-import com.ys.network.utils.ToastUtils;
+import com.newsuper.t.R;
+import com.newsuper.t.juejinbao.base.ApiService;
+import com.newsuper.t.juejinbao.base.RetrofitManager;
+import com.newsuper.t.juejinbao.bean.LoginEntity;
+import com.newsuper.t.juejinbao.ui.login.activity.GuideLoginActivity;
+import com.newsuper.t.juejinbao.ui.movie.activity.MovieSearchActivity;
+import com.newsuper.t.juejinbao.ui.movie.craw.BeanMovieSearchItem;
+import com.newsuper.t.juejinbao.ui.movie.entity.RecommendRankingEntity;
+import com.newsuper.t.juejinbao.ui.movie.view.ScoreView;
+import com.newsuper.t.juejinbao.ui.my.entity.BaseDefferentEntity;
+import com.newsuper.t.juejinbao.utils.SubscriberOnResponseListenter;
+import com.newsuper.t.juejinbao.utils.ToastUtils;
+import com.newsuper.t.juejinbao.utils.network.HttpRequestBody;
+import com.newsuper.t.juejinbao.utils.network.HttpResultFunc;
+import com.newsuper.t.juejinbao.utils.network.ProgressSubscriber;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -41,9 +41,6 @@ import java.util.Map;
 import rx.Subscriber;
 import rx.Subscription;
 
-/**
- *
- */
 public class RecommentVideoListAdapter extends RecyclerView.Adapter<RecommentVideoListAdapter.ItemView> {
     private Context context;
     private List<RecommendRankingEntity.DataBean.ListBean> items = new ArrayList<>();
@@ -74,17 +71,6 @@ public class RecommentVideoListAdapter extends RecyclerView.Adapter<RecommentVid
         return null != items ? items.size() : 0;
     }
 
-//    class MyViewHolder extends RecyclerView.ViewHolder {
-//
-//
-//        public MyViewHolder(ViewGroup parent) {
-//            super(parent);
-//        }
-//
-//        public void setData(Object object,int position) {
-//
-//        }
-//    }
 
     class ItemView extends RecyclerView.ViewHolder {
 

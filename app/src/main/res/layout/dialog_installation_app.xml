@@ -125,7 +125,7 @@
 
             </LinearLayout>
 
-            <com.juejinchain.android.view.NumberProgressBar
+            <com.newsuper.t.juejinbao.view.NumberProgressBar
                 android:id="@+id/progessbar"
                 style="@style/UpdateAppNumberProgressBar_Red"
                 android:layout_width="@dimen/ws300dp"

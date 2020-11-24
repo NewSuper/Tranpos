@@ -3,8 +3,8 @@ package com.newsuper.t.juejinbao.ui.movie.craw;
 import android.util.Log;
 
 import com.alibaba.fastjson.JSON;
-import com.juejinchain.android.base.BaseConfigEntity;
-import com.ys.network.base.PagerCons;
+import com.newsuper.t.juejinbao.base.PagerCons;
+import com.newsuper.t.juejinbao.bean.BaseConfigEntity;
 
 import org.greenrobot.eventbus.EventBus;
 import org.jsoup.Connection;

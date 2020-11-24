@@ -1,7 +1,7 @@
 package com.newsuper.t.juejinbao.ui.movie.craw.moviedetail;
 
 
-import com.juejinchain.android.module.movie.craw.CrawValue;
+import com.newsuper.t.juejinbao.ui.movie.craw.CrawValue;
 
 import java.util.List;
 

@@ -18,7 +18,7 @@
         android:textColor="@color/gift_txtColor"
         android:textSize="24sp" />
 
-    <com.juejinchain.android.view.StrokeTextView
+    <com.newsuper.t.juejinbao.view.StrokeTextView
         android:id="@+id/tv_juejinBao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

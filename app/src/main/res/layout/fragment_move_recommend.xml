@@ -50,7 +50,7 @@
                                 android:src="@mipmap/poster_bg" />
 
 
-                            <com.juejinchain.android.module.movie.view.MyViewPager
+                            <com.newsuper.t.juejinbao.ui.movie.view.MyViewPager
                                 android:id="@+id/vp"
                                 android:layout_width="match_parent"
                                 android:layout_height="@dimen/ws359dp"

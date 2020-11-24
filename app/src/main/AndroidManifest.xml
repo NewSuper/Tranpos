@@ -100,6 +100,31 @@
             </intent-filter>
         </activity>
         <activity android:name=".juejinbao.ui.home.activity.HomeSearchActivity" />
+        <activity android:name=".juejinbao.ui.module.ad.YoudaoPlayRewardVideoActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:hardwareAccelerated="true" />
+        <activity android:name=".juejinbao.ui.module.home.activity.HotPointSearchResultActivity" />
+        <activity android:name=".juejinbao.ui.module.home.activity.YuYueTuiWXAdActivity" />
+        <activity android:name=".module.home.activity.YuYueTuiAdActivity" />
+        <activity android:name=".module.ad.GDTRewardVideoActivityActivity" />
+        <activity android:name=".module.ad.KSRewardVideoActivityActivity" />
+        <activity
+            android:name=".juejinbao.ui.module.song.Activity.SongListActivity"
+            android:theme="@style/AppTheme.Transparent" />
+        <activity
+            android:name=".juejinbao.ui.module.song.Activity.SongActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.Transparent" />
+        <activity
+            android:name=".module.my.activity.InviteFriendActivity"
+            android:theme="@style/AppTheme.Transparent" />
+        <activity android:name=".module.task.sleep.SleepMoneyActivity"
+            android:theme="@style/AppTheme.Transparent"   />
+        <activity
+            android:name=".module.my.activity.PrivacyActivity"
+            android:theme="@style/AppTheme.Transparent" />
+
     </application>
 
 </manifest>

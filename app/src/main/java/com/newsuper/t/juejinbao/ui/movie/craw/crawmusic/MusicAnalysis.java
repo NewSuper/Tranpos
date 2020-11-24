@@ -1,9 +1,7 @@
 package com.newsuper.t.juejinbao.ui.movie.craw.crawmusic;
 
 import com.alibaba.fastjson.JSON;
-import com.juejinchain.android.module.movie.craw.BaseAnalysis;
-import com.juejinchain.android.module.movie.craw.CrawUtils;
-import com.juejinchain.android.module.movie.craw.CrawValue;
+import com.newsuper.t.juejinbao.ui.movie.craw.BaseAnalysis;
 
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;

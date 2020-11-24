@@ -3,16 +3,16 @@ package com.newsuper.t.juejinbao.ui.movie.presenter.impl;
 import android.content.Context;
 import android.text.TextUtils;
 
-import com.juejinchain.android.base.ApiService;
-import com.juejinchain.android.base.BaseEntity;
-import com.juejinchain.android.module.MainActivity;
-import com.juejinchain.android.module.movie.craw.MovieSearchManager;
-import com.juejinchain.android.module.movie.entity.MovieRadarSearchListEntity;
-import com.ys.network.base.BasePresenter;
-import com.ys.network.network.RetrofitManager;
-import com.ys.network.progress.HttpResultFunc;
-import com.ys.network.progress.ProgressSubscriber;
-import com.ys.network.progress.SubscriberOnResponseListenter;
+import com.newsuper.t.juejinbao.base.ApiService;
+import com.newsuper.t.juejinbao.base.BasePresenter;
+import com.newsuper.t.juejinbao.base.RetrofitManager;
+import com.newsuper.t.juejinbao.bean.BaseEntity;
+import com.newsuper.t.juejinbao.ui.JunjinBaoMainActivity;
+import com.newsuper.t.juejinbao.ui.movie.craw.MovieSearchManager;
+import com.newsuper.t.juejinbao.ui.movie.entity.MovieRadarSearchListEntity;
+import com.newsuper.t.juejinbao.utils.SubscriberOnResponseListenter;
+import com.newsuper.t.juejinbao.utils.network.HttpResultFunc;
+import com.newsuper.t.juejinbao.utils.network.ProgressSubscriber;
 
 import java.util.HashMap;
 import java.util.List;
@@ -24,8 +24,6 @@ import rx.Subscription;
 import static io.paperdb.Paper.book;
 
 public class MovieRadarImpl extends BasePresenter<MovieRadarImpl.MvpView> {
-
-
 
     public void getCinemaSearchList(final String key , List<String> jsons , String tag) {
         String tempkey = key.trim();
@@ -75,9 +73,9 @@ public class MovieRadarImpl extends BasePresenter<MovieRadarImpl.MvpView> {
 
     //请求影院爬取规则
     public void movieRadarCrawListValue(Context context ){
-        if(MainActivity.movieRadarSearchListEntity != null) {
+        if(JunjinBaoMainActivity.movieRadarSearchListEntity != null) {
 
-            getView().movieRadarCrawListValue(MainActivity.movieRadarSearchListEntity);
+            getView().movieRadarCrawListValue(JunjinBaoMainActivity.movieRadarSearchListEntity);
             return;
         }
 
@@ -86,7 +84,7 @@ public class MovieRadarImpl extends BasePresenter<MovieRadarImpl.MvpView> {
             @Override
             public void next(MovieRadarSearchListEntity movieRadarSearchListEntity) {
                 if(movieRadarSearchListEntity.getCode() == 0){
-                    MainActivity.movieRadarSearchListEntity = movieRadarSearchListEntity;
+                    JunjinBaoMainActivity.movieRadarSearchListEntity = movieRadarSearchListEntity;
                     getView().movieRadarCrawListValue(movieRadarSearchListEntity);
                 }
             }

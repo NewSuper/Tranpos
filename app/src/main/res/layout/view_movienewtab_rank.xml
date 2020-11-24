@@ -12,7 +12,7 @@
         android:background="#ffffff"
         >
 
-        <com.juejinchain.android.view.RecommendRoundImageView
+        <com.newsuper.t.juejinbao.view.RecommendRoundImageView
             android:id="@+id/iv_poster"
             android:layout_width="0dp"
             android:layout_height="111dp"

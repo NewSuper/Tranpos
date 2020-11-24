@@ -66,7 +66,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/iv_pointer">
 
-            <com.juejinchain.android.view.RoundImageView
+            <com.newsuper.t.juejinbao.view.RoundImageView
                 android:layout_centerInParent="true"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"

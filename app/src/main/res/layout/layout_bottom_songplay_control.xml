@@ -50,7 +50,7 @@
                 android:layout_height="match_parent"
                 android:src="@mipmap/ic_bottom_controller_play" />
 
-            <com.juejinchain.android.view.CirclePercentView
+            <com.newsuper.t.juejinbao.view.CirclePercentView
                 android:layout_centerInParent="true"
                 android:id="@+id/circle_percent_progress"
                 android:layout_width="match_parent"

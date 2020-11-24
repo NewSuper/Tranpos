@@ -2,12 +2,11 @@ package com.newsuper.t.juejinbao.ui.home.presenter;
 
 import android.app.Activity;
 
-import com.juejinchain.android.module.home.entity.ExChangeMiniProgramEntity;
-import com.juejinchain.android.module.home.entity.ExChangeWalkMiniProgramEntity;
-import com.juejinchain.android.module.home.entity.WelFareRewardEntity;
-import com.juejinchain.android.module.home.entity.WelfareEntity;
-import com.juejinchain.android.module.login.entity.IsShowQQEntity;
-import com.juejinchain.android.module.movie.entity.MovieRadarSearchListEntity;
+import com.newsuper.t.juejinbao.ui.home.entity.ExChangeMiniProgramEntity;
+import com.newsuper.t.juejinbao.ui.home.entity.ExChangeWalkMiniProgramEntity;
+import com.newsuper.t.juejinbao.ui.home.entity.WelFareRewardEntity;
+import com.newsuper.t.juejinbao.ui.home.entity.WelfareEntity;
+import com.newsuper.t.juejinbao.ui.login.entity.IsShowQQEntity;
 
 import java.io.Serializable;
 import java.util.Map;

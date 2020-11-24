@@ -2,8 +2,7 @@ package com.newsuper.t.juejinbao.ui.upnp.control;
 
 import android.content.Context;
 
-import com.juejinchain.android.module.upnp.entity.IDevice;
-
+import com.newsuper.t.juejinbao.ui.upnp.entity.IDevice;
 
 /**
  * 说明：tv端回调

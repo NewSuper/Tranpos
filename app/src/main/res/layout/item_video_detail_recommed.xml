@@ -32,7 +32,7 @@
             android:layout_height="60dp"
             android:layout_marginLeft="5dp">
 
-            <com.juejinchain.android.view.RoundImageView
+            <com.newsuper.t.juejinbao.view.RoundImageView
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

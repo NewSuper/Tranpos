@@ -30,7 +30,7 @@
         android:layout_marginLeft="@dimen/dp_18"
         android:padding="3dp">
 
-        <com.juejinchain.android.view.CirclePercentView
+        <com.newsuper.t.juejinbao.view.CirclePercentView
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center_horizontal"
@@ -144,7 +144,7 @@
             android:background="@drawable/shape_circle_white"
             android:padding="3dp">
 
-            <com.juejinchain.android.view.CirclePercentView
+            <com.newsuper.t.juejinbao.view.CirclePercentView
                 android:id="@+id/circle_percent_progress"
                 android:layout_width="50dp"
                 android:layout_height="50dp"

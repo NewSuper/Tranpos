@@ -14,11 +14,12 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.ActivityPlayvideoBinding;
-import com.juejinchain.android.module.home.presenter.impl.PublicPresenterImpl;
-import com.ys.network.base.BaseActivity;
-import com.ys.network.base.PagerCons;
+
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivityPlayvideoBinding;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.base.PagerCons;
+import com.newsuper.t.juejinbao.ui.home.presenter.impl.PublicPresenterImpl;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -29,7 +30,7 @@ import cn.jzvd.JzvdStd;
 import static io.paperdb.Paper.book;
 
 //播放广告视频
-public class PlayVideoActivity extends BaseActivity<PublicPresenterImpl , ActivityPlayvideoBinding> {
+public class PlayVideoActivity extends BaseActivity<PublicPresenterImpl, ActivityPlayvideoBinding> {
 //    public static final int TOTHIS = 108;
 
     private String title;

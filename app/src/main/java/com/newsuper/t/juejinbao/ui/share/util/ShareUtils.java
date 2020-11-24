@@ -9,20 +9,12 @@ import android.net.Uri;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.juejinchain.android.BuildConfig;
-import com.juejinchain.android.base.MyApplication;
-import com.juejinchain.android.module.share.constant.Constant;
-import com.juejinchain.android.module.share.interf.GetResultListener;
-import com.tencent.mm.sdk.modelmsg.SendMessageToWX;
-import com.tencent.mm.sdk.modelmsg.WXMediaMessage;
-import com.tencent.mm.sdk.modelmsg.WXWebpageObject;
-import com.umeng.socialize.Config;
-import com.umeng.socialize.ShareAction;
-import com.umeng.socialize.UMShareListener;
-import com.umeng.socialize.bean.SHARE_MEDIA;
-import com.umeng.socialize.media.UMImage;
-import com.umeng.socialize.media.UMMin;
-import com.ys.network.utils.LogUtils;
+
+import com.newsuper.t.juejinbao.base.Constant;
+import com.newsuper.t.juejinbao.base.JJBApplication;
+import com.tencent.mm.opensdk.modelmsg.SendMessageToWX;
+import com.tencent.mm.opensdk.modelmsg.WXMediaMessage;
+import com.tencent.mm.opensdk.modelmsg.WXWebpageObject;
 
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
@@ -36,82 +28,82 @@ import java.net.URL;
  */
 public class ShareUtils {
 
-    public static void shareToWXMiniProgram(Activity mActivity,String url,UMImage umImage,String title,String des,String path,String id,SHARE_MEDIA share_media){
+//    public static void shareToWXMiniProgram(Activity mActivity,String url,UMImage umImage,String title,String des,String path,String id,SHARE_MEDIA share_media){
+////        UMImage umImage = new UMImage(mActivity, imgUrl);
+////        if (BuildConfig.DEBUG) {
+//            // 测试环境下设置成预览版
+////            com.umeng.socialize.Config.setMiniPreView();
+////        }
+//        UMMin umMin = new UMMin(url);//兼容低版本的网页链接
+//        umMin.setThumb(umImage);// 小程序消息封面图片
+//        umMin.setTitle(title);// 小程序消息title
+//        umMin.setDescription(des);// 小程序消息描述
+//        umMin.setPath(path);//小程序页面路径
+//        umMin.setUserName(id);// 小程序原始id,在微信平台查询
+//        new ShareAction(mActivity)
+//                .withMedia(umMin)
+//                .setPlatform(share_media)// 分享微信好友
+//                .setCallback(new UMShareListener() {
+//                    @Override
+//                    public void onStart(SHARE_MEDIA share_media) {
+//                        LogUtils.i("shareToWXMiniProgram onStart==>",share_media.toString());
+//                    }
+//
+//                    @Override
+//                    public void onResult(SHARE_MEDIA share_media) {
+//                        LogUtils.i("shareToWXMiniProgram 成功==>",share_media.toString());
+//                    }
+//
+//                    @Override
+//                    public void onError(SHARE_MEDIA share_media, Throwable throwable) {
+//                        LogUtils.i("shareToWXMiniProgram 失敗==>",throwable.getMessage());
+//                    }
+//
+//                    @Override
+//                    public void onCancel(SHARE_MEDIA share_media) {
+//                        LogUtils.i("shareToWXMiniProgram 取消==>",share_media.toString());
+//                    }
+//                })
+//                .share();
+//    }
+
+  //  public static void shareToWXMiniProgram(Activity mActivity,String url,UMImage umImage,String title,String des,String path,String id,SHARE_MEDIA share_media,int mode){
 //        UMImage umImage = new UMImage(mActivity, imgUrl);
-//        if (BuildConfig.DEBUG) {
-            // 测试环境下设置成预览版
+//        if (mode == 1) {
 //            com.umeng.socialize.Config.setMiniPreView();
 //        }
-        UMMin umMin = new UMMin(url);//兼容低版本的网页链接
-        umMin.setThumb(umImage);// 小程序消息封面图片
-        umMin.setTitle(title);// 小程序消息title
-        umMin.setDescription(des);// 小程序消息描述
-        umMin.setPath(path);//小程序页面路径
-        umMin.setUserName(id);// 小程序原始id,在微信平台查询
-        new ShareAction(mActivity)
-                .withMedia(umMin)
-                .setPlatform(share_media)// 分享微信好友
-                .setCallback(new UMShareListener() {
-                    @Override
-                    public void onStart(SHARE_MEDIA share_media) {
-                        LogUtils.i("shareToWXMiniProgram onStart==>",share_media.toString());
-                    }
-
-                    @Override
-                    public void onResult(SHARE_MEDIA share_media) {
-                        LogUtils.i("shareToWXMiniProgram 成功==>",share_media.toString());
-                    }
-
-                    @Override
-                    public void onError(SHARE_MEDIA share_media, Throwable throwable) {
-                        LogUtils.i("shareToWXMiniProgram 失敗==>",throwable.getMessage());
-                    }
-
-                    @Override
-                    public void onCancel(SHARE_MEDIA share_media) {
-                        LogUtils.i("shareToWXMiniProgram 取消==>",share_media.toString());
-                    }
-                })
-                .share();
-    }
-
-    public static void shareToWXMiniProgram(Activity mActivity,String url,UMImage umImage,String title,String des,String path,String id,SHARE_MEDIA share_media,int mode){
-//        UMImage umImage = new UMImage(mActivity, imgUrl);
-        if (mode == 1) {
-            com.umeng.socialize.Config.setMiniPreView();
-        }
-        UMMin umMin = new UMMin(url);//兼容低版本的网页链接
-        umMin.setThumb(umImage);// 小程序消息封面图片
-        umMin.setTitle(title);// 小程序消息title
-        umMin.setDescription(des);// 小程序消息描述
-        umMin.setPath(path);//小程序页面路径
-        umMin.setUserName(id);// 小程序原始id,在微信平台查询
-        new ShareAction(mActivity)
-                .withMedia(umMin)
-                .setPlatform(share_media)// 分享微信好友
-                .setCallback(new UMShareListener() {
-                    @Override
-                    public void onStart(SHARE_MEDIA share_media) {
-                        LogUtils.i("shareToWXMiniProgram onStart==>",share_media.toString());
-                    }
-
-                    @Override
-                    public void onResult(SHARE_MEDIA share_media) {
-                        LogUtils.i("shareToWXMiniProgram 成功==>",share_media.toString());
-                    }
-
-                    @Override
-                    public void onError(SHARE_MEDIA share_media, Throwable throwable) {
-                        LogUtils.i("shareToWXMiniProgram 失敗==>",throwable.getMessage());
-                    }
-
-                    @Override
-                    public void onCancel(SHARE_MEDIA share_media) {
-                        LogUtils.i("shareToWXMiniProgram 取消==>",share_media.toString());
-                    }
-                })
-                .share();
-    }
+//        UMMin umMin = new UMMin(url);//兼容低版本的网页链接
+//        umMin.setThumb(umImage);// 小程序消息封面图片
+//        umMin.setTitle(title);// 小程序消息title
+//        umMin.setDescription(des);// 小程序消息描述
+//        umMin.setPath(path);//小程序页面路径
+//        umMin.setUserName(id);// 小程序原始id,在微信平台查询
+//        new ShareAction(mActivity)
+//                .withMedia(umMin)
+//                .setPlatform(share_media)// 分享微信好友
+//                .setCallback(new UMShareListener() {
+//                    @Override
+//                    public void onStart(SHARE_MEDIA share_media) {
+//                        LogUtils.i("shareToWXMiniProgram onStart==>",share_media.toString());
+//                    }
+//
+//                    @Override
+//                    public void onResult(SHARE_MEDIA share_media) {
+//                        LogUtils.i("shareToWXMiniProgram 成功==>",share_media.toString());
+//                    }
+//
+//                    @Override
+//                    public void onError(SHARE_MEDIA share_media, Throwable throwable) {
+//                        LogUtils.i("shareToWXMiniProgram 失敗==>",throwable.getMessage());
+//                    }
+//
+//                    @Override
+//                    public void onCancel(SHARE_MEDIA share_media) {
+//                        LogUtils.i("shareToWXMiniProgram 取消==>",share_media.toString());
+//                    }
+//                })
+//                .share();
+ //   }
 
 
 //------------------------------------------------------------华丽的分割线------------------------------------------------------------
@@ -132,7 +124,7 @@ public class ShareUtils {
             intentFriend.setType("image/*");
             intentFriend.putExtra(Intent.EXTRA_TEXT, share_word);
             intentFriend.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_GRANT_READ_URI_PERMISSION);
-            MyApplication.getInstance().startActivity(intentFriend);
+            JJBApplication.getInstance().startActivity(intentFriend);
         }catch (Exception e){
             LogUtil.e(Log.getStackTraceString(e));
         }
@@ -152,7 +144,7 @@ public class ShareUtils {
             intentFriend.setType("image/*");
             intentFriend.putExtra(Intent.EXTRA_STREAM, imageUri);
             intentFriend.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_GRANT_READ_URI_PERMISSION);
-            MyApplication.getInstance().startActivity(intentFriend);
+            JJBApplication.getInstance().startActivity(intentFriend);
         }catch (Exception e){
             LogUtil.e(Log.getStackTraceString(e));
         }
@@ -165,27 +157,27 @@ public class ShareUtils {
      * @param shareWord
      * @param fileUri
      */
-    public static void throughIntentShareWXCircle(String shareWord, Uri fileUri) {
-        if (!AppUtils.checkApkExist(MyApplication.getInstance(), "com.tencent.mm")) {
-            Toast.makeText(MyApplication.getInstance(), "亲，你还没安装微信", Toast.LENGTH_SHORT).show();
-            return;
-        }
-        try{
-            Intent intent = new Intent();
-            ComponentName comp = new ComponentName("com.tencent.mm", "com.tencent.mm.ui.tools.ShareToTimeLineUI");
-            intent.setComponent(comp);
-            intent.setAction(Intent.ACTION_SEND);
-            intent.setType("image/*");
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_GRANT_READ_URI_PERMISSION);
-            intent.putExtra("Kdescription", shareWord);
-            intent.putExtra(Intent.EXTRA_STREAM,fileUri);
-            MyApplication.getInstance().startActivity(intent);
-        }catch (Exception e){
-            LogUtil.e(Log.getStackTraceString(e));
-        }
-
-
-    }
+//    public static void throughIntentShareWXCircle(String shareWord, Uri fileUri) {
+//        if (!AppUtils.checkApkExist(MyApplication.getInstance(), "com.tencent.mm")) {
+//            Toast.makeText(MyApplication.getInstance(), "亲，你还没安装微信", Toast.LENGTH_SHORT).show();
+//            return;
+//        }
+//        try{
+//            Intent intent = new Intent();
+//            ComponentName comp = new ComponentName("com.tencent.mm", "com.tencent.mm.ui.tools.ShareToTimeLineUI");
+//            intent.setComponent(comp);
+//            intent.setAction(Intent.ACTION_SEND);
+//            intent.setType("image/*");
+//            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_GRANT_READ_URI_PERMISSION);
+//            intent.putExtra("Kdescription", shareWord);
+//            intent.putExtra(Intent.EXTRA_STREAM,fileUri);
+//            MyApplication.getInstance().startActivity(intent);
+//        }catch (Exception e){
+//            LogUtil.e(Log.getStackTraceString(e));
+//        }
+//
+//
+//    }
 
     /**
      * 通过intent分享到QQ空间 ，这里需要先安装qq空间才能分享，注意：不是qq是qq空间
@@ -223,7 +215,7 @@ public class ShareUtils {
             intent.setType("text/*");
             intent.putExtra(Intent.EXTRA_TEXT,desc);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_GRANT_READ_URI_PERMISSION);
-            MyApplication.getInstance().startActivity(intent);
+            JJBApplication.getInstance().startActivity(intent);
         }catch (Exception e){
             LogUtil.e(Log.getStackTraceString(e));
         }
@@ -243,7 +235,7 @@ public class ShareUtils {
                 intent.setType("image/*");
                 intent.putExtra(Intent.EXTRA_STREAM,fileUri);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_GRANT_READ_URI_PERMISSION);
-                MyApplication.getInstance().startActivity(intent);
+                JJBApplication.getInstance().startActivity(intent);
             }
         }catch (Exception e){
             LogUtil.e(Log.getStackTraceString(e));
@@ -269,7 +261,7 @@ public class ShareUtils {
         intent.setData(content_url);
         intent.setClassName(Constant.WEIXINAPPPACKAGEQQBROWSER, "com.tencent.mtt.MainActivity");
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_GRANT_READ_URI_PERMISSION);
-        MyApplication.getInstance().startActivity(intent);
+        JJBApplication.getInstance().startActivity(intent);
     }
 
 
@@ -293,18 +285,18 @@ public class ShareUtils {
             shareBitmap=null;
         }
         //通过原始的微信sdk来组装参数
-        WXWebpageObject localWXWebpageObject = new WXWebpageObject();
-        localWXWebpageObject.webpageUrl = shareUrl;
-        WXMediaMessage localWXMediaMessage = new WXMediaMessage(localWXWebpageObject);
-        localWXMediaMessage.title = shareTitle;
-        localWXMediaMessage.description = shareContent;
-        localWXMediaMessage.thumbData = (bmpToByteArray(localBitmap2, true));
-        SendMessageToWX.Req localReq = new SendMessageToWX.Req();
-        localReq.transaction = System.currentTimeMillis() + "";
-        localReq.message = localWXMediaMessage;
-        localReq.scene = type;
+//        WXWebpageObject localWXWebpageObject = new WXWebpageObject();
+//        localWXWebpageObject.webpageUrl = shareUrl;
+//        WXMediaMessage localWXMediaMessage = new WXMediaMessage(localWXWebpageObject);
+//        localWXMediaMessage.title = shareTitle;
+//        localWXMediaMessage.description = shareContent;
+//        localWXMediaMessage.thumbData = (bmpToByteArray(localBitmap2, true));
+//        SendMessageToWX.Req localReq = new SendMessageToWX.Req();
+//        localReq.transaction = System.currentTimeMillis() + "";
+//        localReq.message = localWXMediaMessage;
+//        localReq.scene = type;
         //在分享的时候不调用sdk中原有的分享代码，改调用自己的，这里需要注意不要使用新的jar包，里面有的方法已经取消了，就用项目里的
-        WxShare.sendReq(weakReference, onShareLitener, localReq, AppId, packageName);
+       // WxShare.sendReq(weakReference, onShareLitener, localReq, AppId, packageName);
     }
     /**
      *  做分享前的准备，判断当前有哪个应用能进行分享 （使用回调方式）
@@ -341,7 +333,7 @@ public class ShareUtils {
                         ,share_word,shareUrl,type,bitmap,onShareLitener);
             }else if (AppUtils.checkApkExist(Constant.WEIXINAPPPACKAGESINA)){
                 LogUtil.e("安装了sina");
-                ShareUtils.shareWX(weakReference,Constant.WEIXINAPPKEYSINA,Constant.WEIXINAPPPACKAGESINA,shareTitle
+                ShareUtils.shareWX(weakReference,Constant.WEIXINAPPKEYSINA, Constant.WEIXINAPPPACKAGESINA,shareTitle
                         ,share_word,shareUrl,type,bitmap,onShareLitener);
             }else{
                 LogUtil.e("没有其他的");
@@ -394,7 +386,7 @@ public class ShareUtils {
         localReq.message = localWXMediaMessage;
         localReq.scene = type;
         //在分享的时候不调用sdk中原有的分享代码，改调用自己的，这里需要注意不要使用新的jar包，里面有的方法已经取消了，就用我这项目里的
-        WxShare.sendReq(weakReference, localReq, AppId, packageName);
+      //  WxShare.sendReq(weakReference, localReq, AppId, packageName);
     }
 
     /**
@@ -502,7 +494,7 @@ public class ShareUtils {
         intent.setAction(Intent.ACTION_VIEW);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_GRANT_READ_URI_PERMISSION);
         intent.setData(Uri.parse(url));
-        MyApplication.getInstance().startActivity(intent);
+        JJBApplication.getInstance().startActivity(intent);
     }
 
     public static String buildTransaction(final String type) {

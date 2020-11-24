@@ -1,58 +1,44 @@
+/*
 package com.newsuper.t.juejinbao.ui.upnp.control;
 
+import android.app.Service;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
-import com.juejinchain.android.module.upnp.control.callback.ControlCallback;
-import com.juejinchain.android.module.upnp.control.callback.ControlReceiveCallback;
-import com.juejinchain.android.module.upnp.entity.ClingPositionResponse;
-import com.juejinchain.android.module.upnp.entity.ClingResponse;
-import com.juejinchain.android.module.upnp.entity.ClingVolumeResponse;
-import com.juejinchain.android.module.upnp.entity.DLANPlayState;
-import com.juejinchain.android.module.upnp.entity.IResponse;
-import com.juejinchain.android.module.upnp.service.manager.ClingManager;
-import com.juejinchain.android.module.upnp.util.ClingUtils;
-import com.juejinchain.android.module.upnp.util.Utils;
-
-import org.fourthline.cling.controlpoint.ControlPoint;
-import org.fourthline.cling.model.action.ActionInvocation;
-import org.fourthline.cling.model.message.UpnpResponse;
-import org.fourthline.cling.model.meta.Service;
-import org.fourthline.cling.support.avtransport.callback.GetPositionInfo;
-import org.fourthline.cling.support.avtransport.callback.Pause;
-import org.fourthline.cling.support.avtransport.callback.Play;
-import org.fourthline.cling.support.avtransport.callback.Seek;
-import org.fourthline.cling.support.avtransport.callback.SetAVTransportURI;
-import org.fourthline.cling.support.avtransport.callback.Stop;
-import org.fourthline.cling.support.model.DIDLObject;
-import org.fourthline.cling.support.model.PositionInfo;
-import org.fourthline.cling.support.model.ProtocolInfo;
-import org.fourthline.cling.support.model.Res;
-import org.fourthline.cling.support.model.item.VideoItem;
-import org.fourthline.cling.support.renderingcontrol.callback.GetVolume;
-import org.fourthline.cling.support.renderingcontrol.callback.SetMute;
-import org.fourthline.cling.support.renderingcontrol.callback.SetVolume;
-import org.seamless.util.MimeType;
+import com.newsuper.t.juejinbao.ui.upnp.control.callback.ControlCallback;
+import com.newsuper.t.juejinbao.ui.upnp.entity.DLANPlayState;
+import com.newsuper.t.juejinbao.ui.upnp.entity.IResponse;
+import com.newsuper.t.juejinbao.ui.upnp.service.manager.ClingManager;
+import com.newsuper.t.juejinbao.ui.upnp.util.ClingUtils;
+import com.newsuper.t.juejinbao.ui.upnp.util.Utils;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+*/
 /**
  * 说明：Cling 实现的控制方法
  * 作者：zhouzhan
  * 日期：17/6/27 17:17
- */
+ *//*
+
 
 public class ClingPlayControl implements IPlayControl {
 
     private static final String TAG = ClingPlayControl.class.getSimpleName();
-    /** 每次接收 500ms 延迟 */
+    */
+/** 每次接收 500ms 延迟 *//*
+
     private static final int RECEIVE_DELAY = 500;
-    /** 上次设置音量时间戳, 防抖动 */
+    */
+/** 上次设置音量时间戳, 防抖动 *//*
+
     private long mVolumeLastTime;
-    /**
+    */
+/**
      * 当前状态
-     */
+     *//*
+
     private @DLANPlayState.DLANPlayStates int mCurrentState = DLANPlayState.STOP;
     private static final String DIDL_LITE_FOOTER = "</DIDL-Lite>";
     private static final String DIDL_LITE_HEADER = "<?xml version=\"1.0\"?>" + "<DIDL-Lite " + "xmlns=\"urn:schemas-upnp-org:metadata-1-0/DIDL-Lite/\" " +
@@ -281,12 +267,14 @@ public class ClingPlayControl implements IPlayControl {
         });
     }
 
-    /**
+    */
+/**
      * 设置片源，用于首次播放
      *
      * @param url   片源地址
      * @param callback  回调
-     */
+     *//*
+
     private void setAVTransportURI(String url, final ControlCallback callback) {
         if (Utils.isNull(url)) {
             return;
@@ -410,7 +398,6 @@ public class ClingPlayControl implements IPlayControl {
         long size = 0;
         long bitrate = 0;
         Res res = new Res(new MimeType(ProtocolInfo.WILDCARD, ProtocolInfo.WILDCARD), size, url);
-
         String creator = "unknow";
         String resolution = "unknow";
         VideoItem videoItem = new VideoItem(id, "0", name, creator, res);
@@ -419,6 +406,7 @@ public class ClingPlayControl implements IPlayControl {
         Log.e(TAG, "metadata: " + metadata);
         return metadata;
     }
+
 
     private String createItemMetadata(DIDLObject item) {
         StringBuilder metadata = new StringBuilder();
@@ -488,3 +476,4 @@ public class ClingPlayControl implements IPlayControl {
         return metadata.toString();
     }
 }
+*/

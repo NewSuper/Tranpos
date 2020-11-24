@@ -465,7 +465,7 @@
             android:padding="3dp"
             android:visibility="gone">
 
-            <com.juejinchain.android.view.CirclePercentView
+            <com.newsuper.t.juejinbao.view.CirclePercentView
                 android:id="@+id/circle_progress"
                 android:layout_centerInParent="true"
                 android:layout_width="@dimen/ws50dp"

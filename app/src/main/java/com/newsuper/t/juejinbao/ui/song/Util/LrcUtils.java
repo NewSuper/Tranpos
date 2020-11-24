@@ -4,7 +4,7 @@ import android.animation.ValueAnimator;
 import android.text.TextUtils;
 import android.text.format.DateUtils;
 
-import com.juejinchain.android.module.song.entity.LrcEntry;
+import com.newsuper.t.juejinbao.ui.song.entity.LrcEntry;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;

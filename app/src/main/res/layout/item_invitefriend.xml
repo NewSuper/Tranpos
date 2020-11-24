@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="55dp">
     
-    <com.juejinchain.android.view.RoundImageView
+    <com.newsuper.t.juejinbao.view.RoundImageView
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_centerVertical="true"

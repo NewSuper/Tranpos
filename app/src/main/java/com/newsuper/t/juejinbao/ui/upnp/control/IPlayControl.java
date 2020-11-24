@@ -2,14 +2,12 @@ package com.newsuper.t.juejinbao.ui.upnp.control;
 
 import android.support.annotation.Nullable;
 
-import com.juejinchain.android.module.upnp.control.callback.ControlCallback;
-import com.juejinchain.android.module.upnp.control.callback.ControlReceiveCallback;
+import com.newsuper.t.juejinbao.ui.upnp.control.callback.ControlCallback;
+import com.newsuper.t.juejinbao.ui.upnp.control.callback.ControlReceiveCallback;
 
 
 /**
  * 说明：对视频的控制操作定义
- * 作者：zhouzhan
- * 日期：17/6/27 17:13
  */
 public interface IPlayControl {
 

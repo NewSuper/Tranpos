@@ -76,7 +76,7 @@
                     android:layout_height="13dp"
                     android:background="#dddddd">
 
-                    <com.juejinchain.android.module.movie.view.ScoreView
+                    <com.newsuper.t.juejinbao.ui.movie.view.ScoreView
                         android:id="@+id/scv"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent" />

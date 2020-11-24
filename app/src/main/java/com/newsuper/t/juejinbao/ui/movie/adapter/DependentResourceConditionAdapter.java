@@ -8,8 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.module.movie.entity.DependentResourcesDataEntity;
+
+import com.newsuper.t.juejinbao.ui.movie.entity.DependentResourcesDataEntity;
 
 import java.util.ArrayList;
 import java.util.List;

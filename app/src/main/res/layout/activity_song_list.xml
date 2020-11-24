@@ -75,7 +75,7 @@
                     android:layout_height="@dimen/dp_1"
                     android:layout_below="@id/rl_list_title"
                     android:background="#f0f0f0" />
-                <com.juejinchain.android.view.LoadingView
+                <com.newsuper.t.juejinbao.view.LoadingView
                     android:layout_below="@id/rl_list_title"
                     android:id="@+id/loading_view"
                     android:layout_width="match_parent"
@@ -87,7 +87,7 @@
 
                     android:layout_marginTop="@dimen/dp_3"
                     />
-                </com.juejinchain.android.view.LoadingView>
+                </com.newsuper.t.juejinbao.view.LoadingView>
 
             </RelativeLayout>
         </RelativeLayout>

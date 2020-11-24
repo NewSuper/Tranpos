@@ -3,14 +3,14 @@ package com.newsuper.t.juejinbao.ui.home.presenter.impl;
 import android.app.Activity;
 import android.util.Log;
 
-import com.juejinchain.android.base.ApiService;
-import com.juejinchain.android.module.home.entity.PictureContentEntity;
-import com.juejinchain.android.module.home.presenter.PictureContentPresenter;
-import com.ys.network.base.BasePresenter;
-import com.ys.network.network.RetrofitManager;
-import com.ys.network.progress.HttpResultFunc;
-import com.ys.network.progress.ProgressSubscriber;
-import com.ys.network.progress.SubscriberOnResponseListenter;
+import com.newsuper.t.juejinbao.base.ApiService;
+import com.newsuper.t.juejinbao.base.BasePresenter;
+import com.newsuper.t.juejinbao.base.RetrofitManager;
+import com.newsuper.t.juejinbao.ui.home.entity.PictureContentEntity;
+import com.newsuper.t.juejinbao.ui.home.presenter.PictureContentPresenter;
+import com.newsuper.t.juejinbao.utils.SubscriberOnResponseListenter;
+import com.newsuper.t.juejinbao.utils.network.HttpResultFunc;
+import com.newsuper.t.juejinbao.utils.network.ProgressSubscriber;
 
 import java.util.Map;
 

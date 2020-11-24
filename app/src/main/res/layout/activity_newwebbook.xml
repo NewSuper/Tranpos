@@ -20,7 +20,7 @@
             android:layout_below="@id/tv_status">
 
 
-            <com.juejinchain.android.view.LoadingView
+            <com.newsuper.t.juejinbao.view.LoadingView
                 android:id="@+id/loading"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -32,7 +32,7 @@
 
                 </LinearLayout>
 
-            </com.juejinchain.android.view.LoadingView>
+            </com.newsuper.t.juejinbao.view.LoadingView>
 
         </RelativeLayout>
 

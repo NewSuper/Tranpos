@@ -20,7 +20,7 @@
 
 
 
-    <com.juejinchain.android.jsbridge.BridgeWebView
+    <com.newsuper.t.juejinbao.utils.jsbridge.BridgeWebView
         android:id="@+id/webView"
         android:layout_below="@+id/rl_title"
         android:layout_width="match_parent"

@@ -11,17 +11,13 @@
         android:layout_marginRight="@dimen/ws1dp"
         android:layout_marginBottom="@dimen/ws2dp">
 
-
-
             <!--图片-->
-            <com.juejinchain.android.view.RoundImageView
+            <com.newsuper.t.juejinbao.view.RoundImageView
                 android:clickable="false"
                 android:id="@+id/iv"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/ws70dp"
-                android:scaleType="centerCrop"></com.juejinchain.android.view.RoundImageView>
-
-
+                android:scaleType="centerCrop"/>
 
 
     </RelativeLayout>

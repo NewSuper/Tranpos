@@ -7,11 +7,9 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.view.ViewGroup;
 
-import com.juejinchain.android.module.movie.entity.MovieTabDataEntity;
-import com.juejinchain.android.module.movie.fragment.MovieTabFilterFragment;
-import com.juejinchain.android.module.movie.fragment.MovieTabFragment;
-import com.juejinchain.android.module.movie.fragment.MovieTabRecommendFragment;
-import com.juejinchain.android.module.movie.fragment.RecommendFragment;
+import com.newsuper.t.juejinbao.ui.movie.entity.MovieTabDataEntity;
+import com.newsuper.t.juejinbao.ui.movie.fragment.MovieTabFilterFragment;
+import com.newsuper.t.juejinbao.ui.movie.fragment.MovieTabRecommendFragment;
 
 import java.util.List;
 

@@ -31,7 +31,7 @@
         android:visibility="gone">
 
 
-        <com.juejinchain.android.view.RoundImageView
+        <com.newsuper.t.juejinbao.view.RoundImageView
             android:id="@+id/adapter_picture_content_img_one"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -41,7 +41,7 @@
             app:layout_constraintDimensionRatio="H,21:12"
             app:srcCompat="@mipmap/default_img" />
 
-        <com.juejinchain.android.view.RoundImageView
+        <com.newsuper.t.juejinbao.view.RoundImageView
             android:id="@+id/adapter_picture_content_img_two"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -56,7 +56,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1">
 
-            <com.juejinchain.android.view.RoundImageView
+            <com.newsuper.t.juejinbao.view.RoundImageView
                 android:id="@+id/adapter_picture_content_img_three"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -101,7 +101,7 @@
         android:layout_marginRight="@dimen/ws15dp"
         android:visibility="gone">
 
-        <com.juejinchain.android.view.RoundImageView
+        <com.newsuper.t.juejinbao.view.RoundImageView
             android:id="@+id/adapter_picture_content_type_two"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

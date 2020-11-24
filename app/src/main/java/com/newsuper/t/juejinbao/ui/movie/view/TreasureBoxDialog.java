@@ -10,12 +10,13 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.DialogTreasureboxBinding;
-import com.juejinchain.android.module.WebFragment;
-import com.juejinchain.android.module.my.activity.InviteFriendActivity;
-import com.juejinchain.android.module.share.entity.ShareInfo;
-import com.juejinchain.android.module.task.fragment.TaskDetailFragment;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.DialogTreasureboxBinding;
+import com.newsuper.t.juejinbao.ui.WebFragment;
+import com.newsuper.t.juejinbao.ui.my.activity.InviteFriendActivity;
+import com.newsuper.t.juejinbao.ui.share.entity.ShareInfo;
+import com.newsuper.t.juejinbao.ui.task.fragment.TaskDetailFragment;
+
 
 public class TreasureBoxDialog{
     private Context context;
@@ -88,11 +89,7 @@ public class TreasureBoxDialog{
                 hide();
             }
         });
-
-
     }
-
-
 
     public void show() {
         mDialog.show();
@@ -101,9 +98,5 @@ public class TreasureBoxDialog{
     public void hide() {
         mDialog.dismiss();
     }
-
-
-
-
 
 }

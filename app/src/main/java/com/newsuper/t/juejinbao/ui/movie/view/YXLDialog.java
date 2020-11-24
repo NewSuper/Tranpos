@@ -11,16 +11,10 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.DialogPlayteachBinding;
-import com.juejinchain.android.databinding.DialogXylBinding;
-import com.juejinchain.android.module.movie.adapter.EasyAdapter;
-import com.juejinchain.android.module.movie.bean.YXL;
-import com.juejinchain.android.module.movie.entity.SearchResultDataEntity;
-import com.juejinchain.android.module.movie.utils.Utils;
-import com.juejinchain.android.module.movie.vip.VipPlayActivity;
-import com.ys.network.bus.BusConstant;
-import com.ys.network.bus.BusProvider;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.DialogXylBinding;
+import com.newsuper.t.juejinbao.ui.movie.adapter.EasyAdapter;
+import com.newsuper.t.juejinbao.ui.movie.bean.YXL;
 
 import java.util.ArrayList;
 import java.util.List;

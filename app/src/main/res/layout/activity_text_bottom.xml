@@ -54,7 +54,7 @@
             android:fillViewport="true"
             android:overScrollMode="never">
 
-            <com.juejinchain.android.view.LoadingView
+            <com.newsuper.t.juejinbao.view.LoadingView
                 android:id="@id/loading_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -99,7 +99,7 @@
 
                 </LinearLayout>
 
-            </com.juejinchain.android.view.LoadingView>
+            </com.newsuper.t.juejinbao.view.LoadingView>
         </android.support.v4.widget.NestedScrollView>
 
 

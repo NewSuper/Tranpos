@@ -22,7 +22,7 @@
             android:padding="10dp"
             android:src="@mipmap/ic_back" />
 
-        <com.juejinchain.android.view.searchview.EditText_Clear
+        <com.newsuper.t.juejinbao.view.searchview.EditText_Clear
             android:background="@drawable/search_button_shape"
             android:id="@+id/et_search"
             android:layout_width="match_parent"
@@ -84,12 +84,10 @@
 
             </LinearLayout>
 
-            <com.juejinchain.android.view.searchview.SearchListView
+            <com.newsuper.t.juejinbao.view.searchview.SearchListView
                 android:id="@+id/listView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-            </com.juejinchain.android.view.searchview.SearchListView>
+                android:layout_height="wrap_content"/>
 
         </LinearLayout>
     </ScrollView>

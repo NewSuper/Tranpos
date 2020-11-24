@@ -8,7 +8,7 @@
         android:layout_height="match_parent"
         android:background="#ffffff">
 
-        <com.juejinchain.android.view.LoadingView2
+        <com.newsuper.t.juejinbao.view.LoadingView2
             android:id="@+id/loading"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -65,7 +65,7 @@
                             android:background="@mipmap/ic_back" />
                     </LinearLayout>
                     
-                    <com.juejinchain.android.view.RoundImageView
+                    <com.newsuper.t.juejinbao.view.RoundImageView
                         android:id="@+id/iv"
                         android:layout_width="130dp"
                         android:layout_height="130dp"
@@ -173,6 +173,6 @@
 
             </LinearLayout>
         </android.support.v4.widget.NestedScrollView>
-        </com.juejinchain.android.view.LoadingView2>
+        </com.newsuper.t.juejinbao.view.LoadingView2>
     </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 </layout>

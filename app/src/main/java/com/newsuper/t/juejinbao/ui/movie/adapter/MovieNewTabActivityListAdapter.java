@@ -13,18 +13,16 @@ import com.bumptech.glide.load.resource.bitmap.CenterCrop;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.bumptech.glide.request.RequestOptions;
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.ItemMovienewtabActivityRanklistBinding;
-import com.juejinchain.android.module.movie.activity.MovieSearchActivity;
-import com.juejinchain.android.module.movie.craw.BeanMovieSearchItem;
-import com.juejinchain.android.module.movie.entity.MovieNewTabRankEntity;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ItemMovienewtabActivityRanklistBinding;
+import com.newsuper.t.juejinbao.ui.movie.activity.MovieSearchActivity;
+import com.newsuper.t.juejinbao.ui.movie.craw.BeanMovieSearchItem;
+import com.newsuper.t.juejinbao.ui.movie.entity.MovieNewTabRankEntity;
+
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- */
 public class MovieNewTabActivityListAdapter extends RecyclerView.Adapter<MovieNewTabActivityListAdapter.ItemView> {
     private Context context;
     private List<MovieNewTabRankEntity.DataBeanX.DataBean> items = new ArrayList<>();

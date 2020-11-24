@@ -98,7 +98,7 @@
                 />
         </LinearLayout>
 
-            <com.juejinchain.android.module.song.view.BottomSongPlayBar
+            <com.newsuper.t.juejinbao.ui.song.view.BottomSongPlayBar
                 android:id="@+id/bottom_controller"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"

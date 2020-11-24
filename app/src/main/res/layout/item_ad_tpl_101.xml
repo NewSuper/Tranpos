@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:padding="16dp">
 
-            <com.juejinchain.android.view.RoundImageView
+            <com.newsuper.t.juejinbao.view.RoundImageView
                 android:id="@+id/iv_sgad_img"
                 android:layout_width="114dp"
                 android:layout_height="74dp"

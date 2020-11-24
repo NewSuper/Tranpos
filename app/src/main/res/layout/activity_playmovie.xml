@@ -126,7 +126,7 @@
 
 
 
-                <com.juejinchain.android.module.movie.utils.JzvdStdEx
+                <com.newsuper.t.juejinbao.ui.movie.utils.JzvdStdEx
                     android:id="@+id/player"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

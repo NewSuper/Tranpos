@@ -12,14 +12,14 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.DialogDeviceselectBinding;
-import com.juejinchain.android.module.movie.adapter.EasyAdapter;
-import com.juejinchain.android.module.upnp.UpnpManager;
-import com.juejinchain.android.module.upnp.entity.ClingDevice;
-import com.juejinchain.android.module.upnp.entity.IDevice;
-import com.juejinchain.android.module.upnp.service.manager.ClingManager;
-import com.juejinchain.android.utils.MyToast;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.DialogDeviceselectBinding;
+import com.newsuper.t.juejinbao.ui.movie.adapter.EasyAdapter;
+import com.newsuper.t.juejinbao.ui.upnp.UpnpManager;
+import com.newsuper.t.juejinbao.ui.upnp.entity.ClingDevice;
+import com.newsuper.t.juejinbao.ui.upnp.entity.IDevice;
+import com.newsuper.t.juejinbao.ui.upnp.service.manager.ClingManager;
+import com.newsuper.t.juejinbao.utils.MyToast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -78,8 +78,8 @@ public class DeviceSelectDialog {
                     @Override
                     public void setData(EasyAdapter.TypeBean typeBean , int position) {
                         super.setData(typeBean , position);
-                        clingDevice = (ClingDevice) typeBean;
-                        ((TextView)itemView.findViewById(R.id.tv)).setText(clingDevice.getDevice().getDisplayString());
+                     //   clingDevice = (ClingDevice) typeBean;
+                      //  ((TextView)itemView.findViewById(R.id.tv)).setText(clingDevice.getDevice().getDisplayString());
 
 
                         if(clingDevice.isSelected()){

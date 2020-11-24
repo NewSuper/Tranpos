@@ -12,14 +12,12 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.bumptech.glide.request.RequestOptions;
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.DialogCheckinBinding;
-import com.juejinchain.android.module.movie.activity.BridgeWebViewActivity;
-import com.juejinchain.android.module.movie.activity.WebActivity;
-import com.juejinchain.android.module.movie.entity.CheckInEntity;
-import com.juejinchain.android.module.movie.utils.Utils;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.DialogCheckinBinding;
+import com.newsuper.t.juejinbao.ui.movie.activity.WebActivity;
+import com.newsuper.t.juejinbao.ui.movie.entity.CheckInEntity;
+import com.newsuper.t.juejinbao.ui.movie.utils.Utils;
+
 
 import java.util.HashMap;
 import java.util.Map;

@@ -48,7 +48,7 @@
 
             </LinearLayout>
 
-            <com.juejinchain.android.module.song.view.AudioWaveView
+            <com.newsuper.t.juejinbao.ui.song.view.AudioWaveView
                 android:id="@+id/audioWaveView"
                 android:layout_width="@dimen/ws20dp"
                 android:layout_height="@dimen/ws20dp"

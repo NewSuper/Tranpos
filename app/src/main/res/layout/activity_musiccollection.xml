@@ -145,7 +145,7 @@
 
                     </RelativeLayout>
 
-                    <com.juejinchain.android.view.LoadingView2
+                    <com.newsuper.t.juejinbao.view.LoadingView2
                         android:id="@+id/loading"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
@@ -155,14 +155,14 @@
                         android:layout_marginRight="6dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
-                    </com.juejinchain.android.view.LoadingView2>
+                    </com.newsuper.t.juejinbao.view.LoadingView2>
                 </LinearLayout>
 
 
 
             </android.support.v4.widget.NestedScrollView>
 
-            <com.juejinchain.android.module.song.view.BottomSongPlayBar
+            <com.newsuper.t.juejinbao.ui.song.view.BottomSongPlayBar
                 android:id="@+id/bottom_controller"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"

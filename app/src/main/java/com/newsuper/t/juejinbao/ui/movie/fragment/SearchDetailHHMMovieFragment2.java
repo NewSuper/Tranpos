@@ -16,24 +16,23 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.FragmentSearchdetailhhmmvie2Binding;
-import com.juejinchain.android.module.movie.activity.MovieHelpActivity;
-import com.juejinchain.android.module.movie.activity.MovieSearchActivity;
-import com.juejinchain.android.module.movie.adapter.SearchDetailFragment2Adapter;
-import com.juejinchain.android.module.movie.entity.DependentResourcesDataEntity;
-import com.juejinchain.android.module.movie.entity.MovieCinamesEntity;
-import com.juejinchain.android.module.movie.presenter.impl.SearchDetailHHMMovieImpl;
-import com.juejinchain.android.module.movie.utils.Utils;
-import com.juejinchain.android.utils.ClickUtil;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.FragmentSearchdetailhhmmvie2Binding;
+import com.newsuper.t.juejinbao.base.BaseFragment;
+import com.newsuper.t.juejinbao.base.BusConstant;
+import com.newsuper.t.juejinbao.base.BusProvider;
+import com.newsuper.t.juejinbao.base.PagerCons;
+import com.newsuper.t.juejinbao.base.RetrofitManager;
+import com.newsuper.t.juejinbao.ui.movie.activity.MovieHelpActivity;
+import com.newsuper.t.juejinbao.ui.movie.activity.MovieSearchActivity;
+import com.newsuper.t.juejinbao.ui.movie.adapter.SearchDetailFragment2Adapter;
+import com.newsuper.t.juejinbao.ui.movie.entity.DependentResourcesDataEntity;
+import com.newsuper.t.juejinbao.ui.movie.entity.MovieCinamesEntity;
+import com.newsuper.t.juejinbao.ui.movie.presenter.impl.SearchDetailHHMMovieImpl;
+import com.newsuper.t.juejinbao.ui.movie.utils.Utils;
+import com.newsuper.t.juejinbao.utils.ClickUtil;
+import com.newsuper.t.juejinbao.utils.StringUtils;
 import com.squareup.otto.Subscribe;
-import com.ys.network.base.BaseFragment;
-import com.ys.network.base.PagerCons;
-import com.ys.network.bus.BusConstant;
-import com.ys.network.bus.BusProvider;
-import com.ys.network.network.RetrofitManager;
-import com.ys.network.utils.StringUtils;
-
 import static io.paperdb.Paper.book;
 
 /**
@@ -174,8 +173,6 @@ public class SearchDetailHHMMovieFragment2 extends BaseFragment<SearchDetailHHMM
                     mAdapter.setDefualtKw(newKW);
                 }
             }
-
-
         }
     }
 

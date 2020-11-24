@@ -7,7 +7,6 @@ import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.juejinchain.android.R;
 
 public class ScoreView extends View {
     private Context context;

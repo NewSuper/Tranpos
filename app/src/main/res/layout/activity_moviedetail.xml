@@ -18,7 +18,7 @@
             android:layout_height="210dp"
             android:background="#000">
 
-            <com.juejinchain.android.module.movie.player.JzvdPlayerBusiness
+            <com.newsuper.t.juejinbao.ui.movie.player.JzvdPlayerBusiness
                 android:id="@+id/player"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
@@ -83,7 +83,7 @@
             android:layout_height="match_parent">
 
 
-            <com.juejinchain.android.view.LoadingView2
+            <com.newsuper.t.juejinbao.view.LoadingView2
                 android:id="@+id/loading_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -527,7 +527,7 @@
                 </ScrollView>
 
 
-            </com.juejinchain.android.view.LoadingView2>
+            </com.newsuper.t.juejinbao.view.LoadingView2>
 
             <LinearLayout
                 android:id="@+id/ll_progress"

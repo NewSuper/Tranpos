@@ -12,33 +12,26 @@ import android.widget.ImageView;
 import com.alibaba.fastjson.JSON;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-import com.bytedance.sdk.openadsdk.AdSlot;
-import com.bytedance.sdk.openadsdk.TTAdNative;
-import com.bytedance.sdk.openadsdk.TTImage;
-import com.bytedance.sdk.openadsdk.TTNativeAd;
 import com.google.gson.JsonObject;
-import com.juejinchain.android.R;
-import com.juejinchain.android.base.ApiService;
-import com.juejinchain.android.config.TTAdManagerHolder;
-import com.juejinchain.android.module.MainActivity;
-import com.juejinchain.android.module.movie.bean.UpdateEntity;
-import com.juejinchain.android.module.movie.bean.YXL;
-import com.juejinchain.android.module.movie.entity.CommenEntity;
-import com.juejinchain.android.module.movie.entity.MovieReadEntity;
-import com.juejinchain.android.module.movie.entity.MovieThirdIframeEntity;
-import com.juejinchain.android.module.movie.entity.PlayerADEntity;
-import com.juejinchain.android.module.movie.entity.VideoProgressBean;
-import com.juejinchain.android.module.movie.utils.GlideRoundTransform;
-import com.juejinchain.android.utils.MyToast;
-import com.juejinchain.android.view.PlayerADDialog;
-import com.ys.network.base.BasePresenter;
-import com.ys.network.base.PagerCons;
-import com.ys.network.network.HttpRequestBody;
-import com.ys.network.network.RetrofitManager;
-import com.ys.network.progress.HttpResultFunc;
-import com.ys.network.progress.ProgressSubscriber;
-import com.ys.network.progress.SubscriberOnResponseListenter;
-import com.ys.network.utils.ToastUtils;
+import com.newsuper.t.R;
+import com.newsuper.t.juejinbao.base.ApiService;
+import com.newsuper.t.juejinbao.base.BasePresenter;
+import com.newsuper.t.juejinbao.base.PagerCons;
+import com.newsuper.t.juejinbao.base.RetrofitManager;
+import com.newsuper.t.juejinbao.ui.movie.bean.UpdateEntity;
+import com.newsuper.t.juejinbao.ui.movie.bean.YXL;
+import com.newsuper.t.juejinbao.ui.movie.entity.CommenEntity;
+import com.newsuper.t.juejinbao.ui.movie.entity.MovieReadEntity;
+import com.newsuper.t.juejinbao.ui.movie.entity.MovieThirdIframeEntity;
+import com.newsuper.t.juejinbao.ui.movie.entity.PlayerADEntity;
+import com.newsuper.t.juejinbao.ui.movie.entity.VideoProgressBean;
+import com.newsuper.t.juejinbao.utils.MyToast;
+import com.newsuper.t.juejinbao.utils.SubscriberOnResponseListenter;
+import com.newsuper.t.juejinbao.utils.ToastUtils;
+import com.newsuper.t.juejinbao.utils.network.HttpRequestBody;
+import com.newsuper.t.juejinbao.utils.network.HttpResultFunc;
+import com.newsuper.t.juejinbao.utils.network.ProgressSubscriber;
+import com.newsuper.t.juejinbao.view.PlayerADDialog;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -362,128 +355,128 @@ public class PlayMovieImpl extends BasePresenter<PlayMovieImpl.MvpView> {
     @SuppressWarnings({"ALL", "SameParameterValue"})
     public void loadInteractionAd(Activity mActivity) {
         //step4:创建广告请求参数AdSlot,注意其中的setNativeAdtype方法，具体参数含义参考文档
-        AdSlot adSlot = new AdSlot.Builder()
-                .setCodeId(TTAdManagerHolder.POS_ID_MOVIEPAUSE)
-                .setSupportDeepLink(true)
-                .setImageAcceptedSize(900, 600)
-                .setNativeAdType(AdSlot.TYPE_INTERACTION_AD)//请求原生广告时候，请务必调用该方法，设置参数为TYPE_BANNER或TYPE_INTERACTION_AD
-                .build();
-
-        //step5:请求广告，对请求回调的广告作渲染处理
-        MainActivity.mTTAdNative.loadNativeAd(adSlot, new TTAdNative.NativeAdListener() {
-            @Override
-            public void onError(int code, String message) {
-
-            }
-
-            @Override
-            public void onNativeAdLoad(List<TTNativeAd> ads) {
-                if (ads.get(0) == null) {
-                    return;
-                }
-                showAd(mActivity , ads.get(0));
-            }
-        });
-    }
-
-    @SuppressWarnings("RedundantCast")
-    private void showAd(Activity mActivity , TTNativeAd ad) {
-        Dialog mAdDialog = new Dialog(mActivity, R.style.native_insert_dialog);
-        mAdDialog.setCancelable(false);
-        mAdDialog.setContentView(R.layout.native_insert_ad_layout2);
-        ViewGroup mRootView = mAdDialog.findViewById(R.id.native_insert_ad_root);
-        ImageView mAdImageView = (ImageView) mAdDialog.findViewById(R.id.iv);
-        //限制dialog 的最大宽度不能超过屏幕，宽高最小为屏幕宽的 1/3
-//        DisplayMetrics dm = mActivity.getResources().getDisplayMetrics();
-//        int maxWidth = (dm == null) ? 0 : dm.widthPixels;
-//        int minWidth = maxWidth / 3;
-//        mAdImageView.setMaxWidth(maxWidth);
-//        mAdImageView.setMinimumWidth(minWidth);
-//        //noinspection SuspiciousNameCombination
-//        mAdImageView.setMinimumHeight(minWidth);
-        ImageView mCloseImageView = (ImageView) mAdDialog.findViewById(R.id.iv_close);
-        ImageView iv_dislike = (ImageView) mAdDialog.findViewById(R.id.iv_dislike);
-
-
-        mCloseImageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mAdDialog.dismiss();
-            }
-        });
-
-        //绑定广告view事件交互
-        //可以被点击的view, 比如标题、icon等,点击后尝试打开落地页，也可以把nativeView放进来意味整个广告区域可被点击
-        List<View> clickViewList = new ArrayList<>();
-        clickViewList.add(mAdImageView);
-
-        //触发创意广告的view（点击下载或拨打电话），比如可以设置为一个按钮，按钮上文案根据广告类型设定提示信息
-        List<View> creativeViewList = new ArrayList<>();
-        //如果需要点击图文区域也能进行下载或者拨打电话动作，请将图文区域的view传入
-        //creativeViewList.add(nativeView);
-        creativeViewList.add(mAdImageView);
-
-        //重要! 这个涉及到广告计费，必须正确调用。convertView必须使用ViewGroup。
-        ad.registerViewForInteraction(mRootView, clickViewList, creativeViewList, iv_dislike, new TTNativeAd.AdInteractionListener() {
-            @Override
-            public void onAdClicked(View view, TTNativeAd ad) {
-                if (ad != null) {
-//                    ToastUtils.getInstance().show(mActivity, "广告" + ad.getTitle() + "被点击");
-                }
-                mAdDialog.dismiss();
-            }
-
-            @Override
-            public void onAdCreativeClick(View view, TTNativeAd ad) {
-                if (ad != null) {
-//                    ToastUtils.getInstance().show(mActivity, "广告" + ad.getTitle() + "被创意按钮被点击");
-                }
-                mAdDialog.dismiss();
-            }
-
-            @Override
-            public void onAdShow(TTNativeAd ad) {
-                if (ad != null) {
-//                    ToastUtils.getInstance().show(mActivity, "广告" + ad.getTitle() + "展示");
-                }
-            }
-        });
-        //加载ad 图片资源
-        if (ad.getImageList() != null && !ad.getImageList().isEmpty()) {
-            TTImage image = ad.getImageList().get(0);
-            if (image != null && image.isValid()) {
-//                mRequestManager.load(image.getImageUrl()).into(mAdImageView);
-
-                RequestOptions myOptions = new RequestOptions()
-                        .centerCrop()
-                        .transform(new GlideRoundTransform(mActivity,10));
-                Glide.with(mActivity).load(image.getImageUrl()).apply(myOptions).into(mAdImageView);
-            }
-        }
-
-        mAdDialog.show();
-
-//        TTImage image = ad.getImageList().get(0);
-//        int width = image.getWidth();
-//        String url = image.getImageUrl();
-//        Glide.with(mActivity).asBitmap().load(url).into(
-//                new SimpleTarget<Bitmap>() {
-//                    @Override
-//                    public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
-//                        // 保存图片至相册
-//                        if (mAdImageView != null) {
-//                            mAdImageView.setBackground(bitmapToDrawable(mActivity, resource));
+//        AdSlot adSlot = new AdSlot.Builder()
+//                .setCodeId(TTAdManagerHolder.POS_ID_MOVIEPAUSE)
+//                .setSupportDeepLink(true)
+//                .setImageAcceptedSize(900, 600)
+//                .setNativeAdType(AdSlot.TYPE_INTERACTION_AD)//请求原生广告时候，请务必调用该方法，设置参数为TYPE_BANNER或TYPE_INTERACTION_AD
+//                .build();
 //
-//                            if (Looper.getMainLooper() != Looper.myLooper()) {
-//                                throw new IllegalStateException("不能在子线程调用 TTInteractionAd.showInteractionAd");
-//                            }
-//                            mAdDialog.show();
-//                        }
+//        //step5:请求广告，对请求回调的广告作渲染处理
+//        MainActivity.mTTAdNative.loadNativeAd(adSlot, new TTAdNative.NativeAdListener() {
+//            @Override
+//            public void onError(int code, String message) {
 //
-//                    }
+//            }
+//
+//            @Override
+//            public void onNativeAdLoad(List<TTNativeAd> ads) {
+//                if (ads.get(0) == null) {
+//                    return;
 //                }
-//        );
+//                showAd(mActivity , ads.get(0));
+//            }
+//        });
     }
+
+//    @SuppressWarnings("RedundantCast")
+//    private void showAd(Activity mActivity , TTNativeAd ad) {
+//        Dialog mAdDialog = new Dialog(mActivity, R.style.native_insert_dialog);
+//        mAdDialog.setCancelable(false);
+//        mAdDialog.setContentView(R.layout.native_insert_ad_layout2);
+//        ViewGroup mRootView = mAdDialog.findViewById(R.id.native_insert_ad_root);
+//        ImageView mAdImageView = (ImageView) mAdDialog.findViewById(R.id.iv);
+//        //限制dialog 的最大宽度不能超过屏幕，宽高最小为屏幕宽的 1/3
+////        DisplayMetrics dm = mActivity.getResources().getDisplayMetrics();
+////        int maxWidth = (dm == null) ? 0 : dm.widthPixels;
+////        int minWidth = maxWidth / 3;
+////        mAdImageView.setMaxWidth(maxWidth);
+////        mAdImageView.setMinimumWidth(minWidth);
+////        //noinspection SuspiciousNameCombination
+////        mAdImageView.setMinimumHeight(minWidth);
+//        ImageView mCloseImageView = (ImageView) mAdDialog.findViewById(R.id.iv_close);
+//        ImageView iv_dislike = (ImageView) mAdDialog.findViewById(R.id.iv_dislike);
+//
+//
+//        mCloseImageView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                mAdDialog.dismiss();
+//            }
+//        });
+//
+//        //绑定广告view事件交互
+//        //可以被点击的view, 比如标题、icon等,点击后尝试打开落地页，也可以把nativeView放进来意味整个广告区域可被点击
+//        List<View> clickViewList = new ArrayList<>();
+//        clickViewList.add(mAdImageView);
+//
+//        //触发创意广告的view（点击下载或拨打电话），比如可以设置为一个按钮，按钮上文案根据广告类型设定提示信息
+//        List<View> creativeViewList = new ArrayList<>();
+//        //如果需要点击图文区域也能进行下载或者拨打电话动作，请将图文区域的view传入
+//        //creativeViewList.add(nativeView);
+//        creativeViewList.add(mAdImageView);
+//
+//        //重要! 这个涉及到广告计费，必须正确调用。convertView必须使用ViewGroup。
+//        ad.registerViewForInteraction(mRootView, clickViewList, creativeViewList, iv_dislike, new TTNativeAd.AdInteractionListener() {
+//            @Override
+//            public void onAdClicked(View view, TTNativeAd ad) {
+//                if (ad != null) {
+////                    ToastUtils.getInstance().show(mActivity, "广告" + ad.getTitle() + "被点击");
+//                }
+//                mAdDialog.dismiss();
+//            }
+//
+//            @Override
+//            public void onAdCreativeClick(View view, TTNativeAd ad) {
+//                if (ad != null) {
+////                    ToastUtils.getInstance().show(mActivity, "广告" + ad.getTitle() + "被创意按钮被点击");
+//                }
+//                mAdDialog.dismiss();
+//            }
+//
+//            @Override
+//            public void onAdShow(TTNativeAd ad) {
+//                if (ad != null) {
+////                    ToastUtils.getInstance().show(mActivity, "广告" + ad.getTitle() + "展示");
+//                }
+//            }
+//        });
+//        //加载ad 图片资源
+//        if (ad.getImageList() != null && !ad.getImageList().isEmpty()) {
+//            TTImage image = ad.getImageList().get(0);
+//            if (image != null && image.isValid()) {
+////                mRequestManager.load(image.getImageUrl()).into(mAdImageView);
+//
+//                RequestOptions myOptions = new RequestOptions()
+//                        .centerCrop()
+//                        .transform(new GlideRoundTransform(mActivity,10));
+//                Glide.with(mActivity).load(image.getImageUrl()).apply(myOptions).into(mAdImageView);
+//            }
+//        }
+//
+//        mAdDialog.show();
+//
+////        TTImage image = ad.getImageList().get(0);
+////        int width = image.getWidth();
+////        String url = image.getImageUrl();
+////        Glide.with(mActivity).asBitmap().load(url).into(
+////                new SimpleTarget<Bitmap>() {
+////                    @Override
+////                    public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
+////                        // 保存图片至相册
+////                        if (mAdImageView != null) {
+////                            mAdImageView.setBackground(bitmapToDrawable(mActivity, resource));
+////
+////                            if (Looper.getMainLooper() != Looper.myLooper()) {
+////                                throw new IllegalStateException("不能在子线程调用 TTInteractionAd.showInteractionAd");
+////                            }
+////                            mAdDialog.show();
+////                        }
+////
+////                    }
+////                }
+////        );
+//    }
 
     //加载插屏广告
 //    public void loadInteractionAd(Activity activity , TTAdNative mTTAdNative){

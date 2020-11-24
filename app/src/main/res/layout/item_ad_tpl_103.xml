@@ -38,7 +38,7 @@
         android:text="TextView"
         android:textSize="12sp" />
 
-    <com.juejinchain.android.view.RoundImageView
+    <com.newsuper.t.juejinbao.view.RoundImageView
         android:id="@+id/iv_sgad_img"
         android:layout_width="match_parent"
         android:layout_height="170dp"

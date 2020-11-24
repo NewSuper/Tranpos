@@ -2,8 +2,8 @@ package com.newsuper.t.juejinbao.ui.home.presenter;
 
 import android.app.Activity;
 
-import com.juejinchain.android.module.home.entity.ShenmaHotWordsEntity;
-import com.juejinchain.android.module.home.entity.TodayHotEntity;
+import com.newsuper.t.juejinbao.ui.home.entity.ShenmaHotWordsEntity;
+import com.newsuper.t.juejinbao.ui.home.entity.TodayHotEntity;
 
 import java.io.Serializable;
 import java.util.Map;

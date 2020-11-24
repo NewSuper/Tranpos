@@ -4,14 +4,13 @@ import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.module.share.base.ShareBasePresenter;
-import com.juejinchain.android.module.share.util.LogUtil;
-import com.juejinchain.android.module.share.util.NativeShareTool;
-import com.juejinchain.android.module.share.util.ShareUtils;
-import com.juejinchain.android.module.share.util.ShareStringUtils;
-import com.ys.network.base.LoginEntity;
-
+import com.newsuper.t.R;
+import com.newsuper.t.juejinbao.bean.LoginEntity;
+import com.newsuper.t.juejinbao.ui.share.base.ShareBasePresenter;
+import com.newsuper.t.juejinbao.ui.share.util.LogUtil;
+import com.newsuper.t.juejinbao.ui.share.util.NativeShareTool;
+import com.newsuper.t.juejinbao.ui.share.util.ShareStringUtils;
+import com.newsuper.t.juejinbao.ui.share.util.ShareUtils;
 
 import java.lang.ref.WeakReference;
 
@@ -77,8 +76,6 @@ public class ShareFragmentPresenter extends ShareBasePresenter {
                             LogUtil.e("没有任何可以分享的平台");
                             //这里根据需求来修改，我们是如果没有任何可以而分享的平台就走intent　方式进行分享，utils中也有，这里就不细写了
                             NativeShareTool.shareBySystem(shareTiele + "邀请码 [" + LoginEntity.getInvitation() + "]  \n"  + jumpUrl, context);
-
-
                             return false;
                         } else {
                             shareAppId = strings[0];

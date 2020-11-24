@@ -20,8 +20,7 @@ import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.util.Log;
 
-
-import com.juejinchain.android.base.MyApplication;
+import com.newsuper.t.juejinbao.base.JJBApplication;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
@@ -566,7 +565,7 @@ public final class AppUtils {
 		if (ShareStringUtils.isEmpty(packageName)){
 			return false;
 		}
-		final PackageManager packageManager = MyApplication.getInstance().getPackageManager();
+		final PackageManager packageManager = JJBApplication.getInstance().getPackageManager();
 		List<PackageInfo> pinfo = packageManager.getInstalledPackages(0);
 		if (pinfo != null) {
 			for (int i = 0; i < pinfo.size(); i++) {

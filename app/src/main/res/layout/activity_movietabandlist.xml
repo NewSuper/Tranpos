@@ -53,7 +53,7 @@
         android:background="#efefef" />
 
 
-    <com.juejinchain.android.view.LoadingView2
+    <com.newsuper.t.juejinbao.view.LoadingView2
         android:id="@+id/loading"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -80,7 +80,7 @@
         android:layout_height="match_parent"
         />
     </LinearLayout>
-    </com.juejinchain.android.view.LoadingView2>
+    </com.newsuper.t.juejinbao.view.LoadingView2>
 
 
 </LinearLayout>
