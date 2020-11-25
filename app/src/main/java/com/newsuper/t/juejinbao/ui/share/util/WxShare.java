@@ -9,8 +9,8 @@ import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
 
-import com.juejinchain.android.module.share.interf.GetResultListener;
-import com.tencent.mm.sdk.modelmsg.SendMessageToWX;
+import com.newsuper.t.juejinbao.ui.share.interf.GetResultListener;
+import com.tencent.mm.opensdk.modelmsg.SendMessageToWX;
 
 import java.lang.ref.WeakReference;
 import java.lang.reflect.Method;

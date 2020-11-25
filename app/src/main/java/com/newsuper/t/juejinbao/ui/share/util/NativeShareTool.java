@@ -21,19 +21,17 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.SimpleTarget;
 import com.bumptech.glide.request.transition.Transition;
-import com.juejinchain.android.module.movie.utils.Utils;
-import com.juejinchain.android.module.share.interf.OnButtonClickLintener;
-import com.juejinchain.android.module.share.ppw.SaveSuccessPop;
-import com.juejinchain.android.module.share.presenter.ShareFragmentPresenter;
-import com.juejinchain.android.utils.BitmapUtil;
-import com.juejinchain.android.utils.ClipboardUtil;
-import com.ys.network.utils.ToastUtils;
+import com.newsuper.t.juejinbao.ui.movie.utils.Utils;
+import com.newsuper.t.juejinbao.ui.share.interf.OnButtonClickLintener;
+import com.newsuper.t.juejinbao.ui.share.ppw.SaveSuccessPop;
+import com.newsuper.t.juejinbao.ui.share.presenter.ShareFragmentPresenter;
+import com.newsuper.t.juejinbao.utils.ClipboardUtil;
+import com.newsuper.t.juejinbao.utils.ToastUtils;
 
 import java.io.File;
 import java.util.List;
 
 /**
- * Created by xiangrikui on 2018/3/23.
  * 使用原生Intent进行分享
  */
 

@@ -7,14 +7,14 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.view.ViewGroup;
 
-import com.juejinchain.android.base.Constant;
-import com.juejinchain.android.module.RefreshWebFragment;
-import com.juejinchain.android.module.book.fragment.ReadFragment;
-import com.juejinchain.android.module.movie.entity.MovieShowBookEntity;
-import com.juejinchain.android.module.movie.fragment.AlertWebFragment;
-import com.juejinchain.android.module.movie.fragment.MovieFragment;
-import com.juejinchain.android.module.song.fragment.MusicFragment;
-import com.ys.network.network.RetrofitManager;
+
+import com.newsuper.t.juejinbao.base.Constant;
+import com.newsuper.t.juejinbao.base.RetrofitManager;
+import com.newsuper.t.juejinbao.ui.book.fragment.ReadFragment;
+import com.newsuper.t.juejinbao.ui.movie.entity.MovieShowBookEntity;
+import com.newsuper.t.juejinbao.ui.movie.fragment.AlertWebFragment;
+import com.newsuper.t.juejinbao.ui.movie.fragment.MovieFragment;
+import com.newsuper.t.juejinbao.ui.song.fragment.MusicFragment;
 
 import java.util.List;
 

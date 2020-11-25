@@ -21,13 +21,6 @@ import android.net.Uri;
 import android.provider.MediaStore;
 import android.util.Log;
 
-import com.juejinchain.android.module.upnp.Application;
-import com.juejinchain.android.module.upnp.util.Utils;
-
-import org.eclipse.jetty.servlet.DefaultServlet;
-import org.eclipse.jetty.util.resource.FileResource;
-import org.eclipse.jetty.util.resource.Resource;
-
 import java.io.File;
 
 public class AudioResourceServlet extends DefaultServlet {

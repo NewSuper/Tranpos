@@ -9,9 +9,7 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.ItemMovieHeadBinding;
-import com.juejinchain.android.module.movie.bean.AdapterItem;
+import com.newsuper.t.juejinbao.ui.movie.bean.AdapterItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -61,14 +59,8 @@ public class RecommentFragmentAdapter extends RecyclerView.Adapter<MyViewHolder>
         return items.get(position).getUiType();
     }
 
-
-
-
-
-
     public interface GetViewListener{
         MyViewHolder getHeadView(ViewGroup viewGroup);
     }
-
 
 }

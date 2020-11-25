@@ -4,23 +4,20 @@ package com.newsuper.t.juejinbao.ui.upnp.dms;
 import android.content.Context;
 import android.util.Log;
 
-import com.juejinchain.android.module.upnp.Application;
-import com.juejinchain.android.module.upnp.util.FileUtil;
-import com.juejinchain.android.module.upnp.util.UpnpUtil;
 
-import org.fourthline.cling.binding.annotations.AnnotationLocalServiceBinder;
-import org.fourthline.cling.model.DefaultServiceManager;
-import org.fourthline.cling.model.ValidationException;
-import org.fourthline.cling.model.meta.DeviceDetails;
-import org.fourthline.cling.model.meta.DeviceIdentity;
-import org.fourthline.cling.model.meta.Icon;
-import org.fourthline.cling.model.meta.LocalDevice;
-import org.fourthline.cling.model.meta.LocalService;
-import org.fourthline.cling.model.meta.ManufacturerDetails;
-import org.fourthline.cling.model.meta.ModelDetails;
-import org.fourthline.cling.model.types.DeviceType;
-import org.fourthline.cling.model.types.UDADeviceType;
-import org.fourthline.cling.model.types.UDN;
+//import org.fourthline.cling.binding.annotations.AnnotationLocalServiceBinder;
+//import org.fourthline.cling.model.DefaultServiceManager;
+//import org.fourthline.cling.model.ValidationException;
+//import org.fourthline.cling.model.meta.DeviceDetails;
+//import org.fourthline.cling.model.meta.DeviceIdentity;
+//import org.fourthline.cling.model.meta.Icon;
+//import org.fourthline.cling.model.meta.LocalDevice;
+//import org.fourthline.cling.model.meta.LocalService;
+//import org.fourthline.cling.model.meta.ManufacturerDetails;
+//import org.fourthline.cling.model.meta.ModelDetails;
+//import org.fourthline.cling.model.types.DeviceType;
+//import org.fourthline.cling.model.types.UDADeviceType;
+//import org.fourthline.cling.model.types.UDN;
 
 import java.io.IOException;
 

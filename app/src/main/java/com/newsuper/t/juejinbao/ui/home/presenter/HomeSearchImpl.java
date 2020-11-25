@@ -1,8 +1,9 @@
 package com.newsuper.t.juejinbao.ui.home.presenter;
 
-import com.juejinchain.android.module.home.entity.TodayHotEntity;
-import com.ys.network.base.BasePresenter;
-import com.ys.network.base.PagerCons;
+
+import com.newsuper.t.juejinbao.base.BasePresenter;
+import com.newsuper.t.juejinbao.base.PagerCons;
+import com.newsuper.t.juejinbao.ui.home.entity.TodayHotEntity;
 
 import java.util.ArrayList;
 import java.util.List;

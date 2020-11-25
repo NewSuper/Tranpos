@@ -7,8 +7,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.view.ViewGroup;
 
-import com.juejinchain.android.module.movie.fragment.MovieCartonHotFragment;
-import com.juejinchain.android.module.movie.fragment.MovieShowHotFragment;
+import com.newsuper.t.juejinbao.ui.movie.fragment.MovieCartonHotFragment;
 
 import java.util.List;
 
@@ -53,13 +52,9 @@ public class MovieCartonHotPageAdapter extends FragmentStatePagerAdapter {
 
         MovieCartonHotFragment movieCartonHotFragment = new MovieCartonHotFragment();
         Bundle bundle = new Bundle();
-//
         bundle.putString("tag" , tabBean.get(position)); ;
         movieCartonHotFragment.setArguments(bundle);
         mFragments[position] = movieCartonHotFragment;
-
-
-
 
         return mFragments[position];
     }

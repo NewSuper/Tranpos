@@ -22,31 +22,25 @@ import android.widget.RadioButton;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.FragmentMoveRecommendBinding;
-import com.juejinchain.android.databinding.FragmentMovieTabRecommendBinding;
-import com.juejinchain.android.module.MainActivity;
-import com.juejinchain.android.module.movie.activity.MovieSearchActivity;
-import com.juejinchain.android.module.movie.adapter.ConditionAdapter;
-import com.juejinchain.android.module.movie.adapter.EasyAdapter;
-import com.juejinchain.android.module.movie.adapter.MovieMovieFilterAdapter;
-import com.juejinchain.android.module.movie.adapter.MovieMovieRecommendAdapter;
-import com.juejinchain.android.module.movie.adapter.TVAdapter;
-import com.juejinchain.android.module.movie.craw.BeanMovieSearchItem;
-import com.juejinchain.android.module.movie.entity.MovieMovieFilterDataEntity;
-import com.juejinchain.android.module.movie.entity.MovieMovieRecommendDataEntity;
-import com.juejinchain.android.module.movie.presenter.impl.MovieTabFragmentImpl;
-import com.juejinchain.android.module.movie.presenter.impl.MovieTabRecommendImpl;
-import com.juejinchain.android.module.movie.utils.OnClickReturnStringListener;
-import com.juejinchain.android.module.movie.utils.PreLoadUtils;
-import com.juejinchain.android.module.movie.utils.Utils;
-import com.juejinchain.android.module.movie.view.DependentResourceDialog;
-import com.juejinchain.android.module.movie.view.WrapContentGridViewManager;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.FragmentMovieTabRecommendBinding;
+import com.newsuper.t.juejinbao.base.BaseFragment;
+import com.newsuper.t.juejinbao.ui.movie.activity.MovieSearchActivity;
+import com.newsuper.t.juejinbao.ui.movie.adapter.EasyAdapter;
+import com.newsuper.t.juejinbao.ui.movie.adapter.MovieMovieFilterAdapter;
+import com.newsuper.t.juejinbao.ui.movie.adapter.MovieMovieRecommendAdapter;
+import com.newsuper.t.juejinbao.ui.movie.adapter.TVAdapter;
+import com.newsuper.t.juejinbao.ui.movie.craw.BeanMovieSearchItem;
+import com.newsuper.t.juejinbao.ui.movie.entity.MovieMovieRecommendDataEntity;
+import com.newsuper.t.juejinbao.ui.movie.presenter.impl.MovieTabRecommendImpl;
+import com.newsuper.t.juejinbao.ui.movie.utils.OnClickReturnStringListener;
+import com.newsuper.t.juejinbao.ui.movie.utils.PreLoadUtils;
+import com.newsuper.t.juejinbao.ui.movie.view.WrapContentGridViewManager;
+import com.newsuper.t.juejinbao.utils.LogUtils;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
-import com.ys.network.base.BaseFragment;
-import com.ys.network.utils.LogUtils;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -59,7 +53,6 @@ public class MovieTabRecommendFragment extends BaseFragment<MovieTabRecommendImp
     public static RecyclerView.RecycledViewPool recommendRecyclerViewPool2 = new RecyclerView.RecycledViewPool();
 
     private List<MovieMovieRecommendDataEntity.DataBeanX.DataBean> items = new ArrayList<>();
-
 
     //电影adapter
     MovieMovieRecommendAdapter movieMovieRecommendAdapter;

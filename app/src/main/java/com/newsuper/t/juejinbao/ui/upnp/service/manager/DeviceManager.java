@@ -13,11 +13,6 @@ import com.juejinchain.android.module.upnp.util.Utils;
 
 import java.util.Collection;
 
-/**
- * 说明：
- * 作者：zhouzhan
- * 日期：17/7/21 16:33
- */
 
 public class DeviceManager implements IDeviceManager {
     private static final String TAG = DeviceManager.class.getSimpleName();

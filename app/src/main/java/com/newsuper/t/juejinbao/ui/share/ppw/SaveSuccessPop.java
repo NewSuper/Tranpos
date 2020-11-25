@@ -10,8 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.juejinchain.android.R;
-import com.juejinchain.android.module.share.interf.OnButtonClickLintener;
+
 
 import razerdp.basepopup.BasePopupWindow;
 
