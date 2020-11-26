@@ -2,16 +2,16 @@ package com.newsuper.t.juejinbao.ui.task.presenter;
 
 import android.content.Context;
 
-import com.juejinchain.android.base.ApiService;
-import com.juejinchain.android.module.task.entity.SleepEarningEntity;
-import com.juejinchain.android.module.task.entity.SleepEarningEntity2;
-import com.ys.network.base.BasePresenter;
-import com.ys.network.network.HttpRequestBody;
-import com.ys.network.network.RetrofitManager;
-import com.ys.network.progress.HttpResultFunc;
-import com.ys.network.progress.ProgressSubscriber;
-import com.ys.network.progress.SubscriberOnResponseListenter;
-import com.ys.network.utils.ToastUtils;
+import com.newsuper.t.juejinbao.base.ApiService;
+import com.newsuper.t.juejinbao.base.BasePresenter;
+import com.newsuper.t.juejinbao.base.RetrofitManager;
+import com.newsuper.t.juejinbao.ui.task.entity.SleepEarningEntity;
+import com.newsuper.t.juejinbao.ui.task.entity.SleepEarningEntity2;
+import com.newsuper.t.juejinbao.utils.SubscriberOnResponseListenter;
+import com.newsuper.t.juejinbao.utils.ToastUtils;
+import com.newsuper.t.juejinbao.utils.network.HttpRequestBody;
+import com.newsuper.t.juejinbao.utils.network.HttpResultFunc;
+import com.newsuper.t.juejinbao.utils.network.ProgressSubscriber;
 
 import java.io.Serializable;
 import java.util.Map;

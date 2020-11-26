@@ -9,16 +9,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.ItemSongList2Binding;
-import com.juejinchain.android.module.login.activity.GuideLoginActivity;
-import com.juejinchain.android.module.song.Activity.SongActivity;
-import com.juejinchain.android.module.song.Event.MusicCancelEvent;
-import com.juejinchain.android.module.song.Event.MusicPauseEvent;
-import com.juejinchain.android.module.song.Event.MusicStartEvent;
-import com.juejinchain.android.module.song.manager.SongPlayManager;
 import com.lzx.starrysky.provider.SongInfo;
-import com.ys.network.base.LoginEntity;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ItemSongList2Binding;
+import com.newsuper.t.juejinbao.bean.LoginEntity;
+import com.newsuper.t.juejinbao.ui.login.activity.GuideLoginActivity;
+import com.newsuper.t.juejinbao.ui.song.Activity.SongActivity;
+import com.newsuper.t.juejinbao.ui.song.Event.MusicCancelEvent;
+import com.newsuper.t.juejinbao.ui.song.Event.MusicPauseEvent;
+import com.newsuper.t.juejinbao.ui.song.Event.MusicStartEvent;
+import com.newsuper.t.juejinbao.ui.song.manager.SongPlayManager;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;

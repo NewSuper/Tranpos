@@ -21,20 +21,17 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.bumptech.glide.request.RequestOptions;
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.FragmentSearchhistoryBinding;
-import com.juejinchain.android.module.movie.adapter.EasyAdapter;
-import com.juejinchain.android.module.movie.adapter.EasyAdapter2;
-import com.juejinchain.android.module.movie.entity.HotSearchDataEntity;
-import com.juejinchain.android.module.movie.entity.MovieNewTabRankEntity;
-import com.juejinchain.android.module.movie.entity.SearchResultDataEntity;
-import com.juejinchain.android.module.movie.presenter.impl.SearchHistoryImpl;
-import com.juejinchain.android.module.movie.utils.Utils;
-import com.juejinchain.android.utils.SPUtils;
-import com.ys.network.BaseConstants;
-import com.ys.network.base.BaseFragment;
-import com.ys.network.bus.BusConstant;
-import com.ys.network.bus.BusProvider;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.FragmentSearchhistoryBinding;
+import com.newsuper.t.juejinbao.base.BaseFragment;
+import com.newsuper.t.juejinbao.base.BusConstant;
+import com.newsuper.t.juejinbao.base.BusProvider;
+import com.newsuper.t.juejinbao.base.Constant;
+import com.newsuper.t.juejinbao.ui.movie.adapter.EasyAdapter;
+import com.newsuper.t.juejinbao.ui.movie.adapter.EasyAdapter2;
+import com.newsuper.t.juejinbao.ui.movie.entity.MovieNewTabRankEntity;
+import com.newsuper.t.juejinbao.ui.movie.presenter.impl.SearchHistoryImpl;
+
 
 import java.util.ArrayList;
 
@@ -69,7 +66,7 @@ public class SearchHistoryFragment extends BaseFragment<SearchHistoryImpl, Fragm
                         .setMessage("确认清空记录?")
                         .setPositiveButton("清空", (dialog, which) -> {
                             dialog.dismiss();
-                            book().write(BaseConstants.MOVIE_SEARCH_HISTORY, new ArrayList<String>());
+                            book().write(Constant.MOVIE_SEARCH_HISTORY, new ArrayList<String>());
                             show();
                             Toast.makeText(mActivity, "删除成功", Toast.LENGTH_SHORT).show();
                         })
@@ -207,7 +204,7 @@ public class SearchHistoryFragment extends BaseFragment<SearchHistoryImpl, Fragm
                                         .setPositiveButton("确定", (dialog, which) -> {
                                             dialog.dismiss();
 
-                                            ArrayList<String> labels = book().read(BaseConstants.MOVIE_SEARCH_HISTORY, new ArrayList<String>());
+                                            ArrayList<String> labels = book().read(Constant.MOVIE_SEARCH_HISTORY, new ArrayList<String>());
 
                                             if (labels == null) {
                                                 return;
@@ -220,7 +217,7 @@ public class SearchHistoryFragment extends BaseFragment<SearchHistoryImpl, Fragm
                                                 }
 
                                             }
-                                            book().write(BaseConstants.MOVIE_SEARCH_HISTORY, labels);
+                                            book().write(Constant.MOVIE_SEARCH_HISTORY, labels);
                                             show();
 
                                         })
@@ -261,7 +258,7 @@ public class SearchHistoryFragment extends BaseFragment<SearchHistoryImpl, Fragm
             return;
         }
 
-        ArrayList<String> labels = book().read(BaseConstants.MOVIE_SEARCH_HISTORY, new ArrayList<String>());
+        ArrayList<String> labels = book().read(Constant.MOVIE_SEARCH_HISTORY, new ArrayList<String>());
         ArrayList<EasyAdapter.TypeBean> beans = new ArrayList<>();
 
         for (String label : labels) {

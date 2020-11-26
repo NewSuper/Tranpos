@@ -2,14 +2,15 @@ package com.newsuper.t.juejinbao.ui.login.activity;
 
 import android.view.View;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.base.Constant;
-import com.juejinchain.android.databinding.ActivityVerificationCodeBinding;
-import com.juejinchain.android.module.movie.activity.BridgeWebViewActivity;
-import com.ys.network.base.BaseActivity;
-import com.ys.network.base.BasePresenter;
-import com.ys.network.network.RetrofitManager;
-import com.ys.network.utils.androidUtils.StatusBarUtil;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivityVerificationCodeBinding;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.base.BasePresenter;
+import com.newsuper.t.juejinbao.base.Constant;
+import com.newsuper.t.juejinbao.base.RetrofitManager;
+import com.newsuper.t.juejinbao.ui.movie.activity.BridgeWebViewActivity;
+import com.newsuper.t.juejinbao.utils.androidUtils.StatusBarUtil;
+
 
 public class VerificationCodeActivity extends BaseActivity<BasePresenter, ActivityVerificationCodeBinding> {
 

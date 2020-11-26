@@ -25,32 +25,34 @@ import android.widget.LinearLayout;
 
 import com.alibaba.fastjson.JSON;
 import com.google.gson.Gson;
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.ActivityMusicSearchBinding;
-import com.juejinchain.android.jsbridge.BridgeHandler;
-import com.juejinchain.android.jsbridge.BridgeWebView;
-import com.juejinchain.android.jsbridge.BridgeWebViewClient;
-import com.juejinchain.android.jsbridge.CallBackFunction;
-import com.juejinchain.android.module.login.activity.GuideLoginActivity;
-import com.juejinchain.android.module.share.util.LogUtil;
-import com.juejinchain.android.module.song.adapter.MusicHotAdapter;
-import com.juejinchain.android.module.song.adapter.MusicSearchAdapter;
-import com.juejinchain.android.module.song.adapter.SearchHistoryAdapter;
-import com.juejinchain.android.module.song.entity.AddSongEntity;
-import com.juejinchain.android.module.song.entity.MusicHotListEntity;
-import com.juejinchain.android.module.song.entity.MusicSearchEntity;
-import com.juejinchain.android.module.song.entity.MusicSearchFromEntity;
-import com.juejinchain.android.module.song.manager.SongPlayManager;
-import com.juejinchain.android.module.song.presenter.impl.MusicSearchImpl;
-import com.juejinchain.android.utils.ClickUtil;
-import com.juejinchain.android.utils.NetUtil;
 import com.lzx.starrysky.provider.SongInfo;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivityMusicSearchBinding;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.base.PagerCons;
+import com.newsuper.t.juejinbao.basepop.blur.thread.ThreadPoolManager;
+import com.newsuper.t.juejinbao.bean.LoginEntity;
+import com.newsuper.t.juejinbao.ui.login.activity.GuideLoginActivity;
+import com.newsuper.t.juejinbao.ui.share.util.LogUtil;
+import com.newsuper.t.juejinbao.ui.song.adapter.MusicHotAdapter;
+import com.newsuper.t.juejinbao.ui.song.adapter.MusicSearchAdapter;
+import com.newsuper.t.juejinbao.ui.song.adapter.SearchHistoryAdapter;
+import com.newsuper.t.juejinbao.ui.song.entity.AddSongEntity;
+import com.newsuper.t.juejinbao.ui.song.entity.MusicHotListEntity;
+import com.newsuper.t.juejinbao.ui.song.entity.MusicSearchEntity;
+import com.newsuper.t.juejinbao.ui.song.entity.MusicSearchFromEntity;
+import com.newsuper.t.juejinbao.ui.song.manager.SongPlayManager;
+import com.newsuper.t.juejinbao.ui.song.presenter.impl.MusicSearchImpl;
+import com.newsuper.t.juejinbao.utils.ClickUtil;
+import com.newsuper.t.juejinbao.utils.NetUtil;
+import com.newsuper.t.juejinbao.utils.ToastUtils;
+import com.newsuper.t.juejinbao.utils.androidUtils.StatusBarUtil;
+import com.newsuper.t.juejinbao.utils.jsbridge.BridgeHandler;
+import com.newsuper.t.juejinbao.utils.jsbridge.BridgeWebView;
+import com.newsuper.t.juejinbao.utils.jsbridge.BridgeWebViewClient;
+import com.newsuper.t.juejinbao.utils.jsbridge.CallBackFunction;
 import com.qq.e.comm.util.StringUtil;
-import com.ys.network.base.BaseActivity;
-import com.ys.network.base.LoginEntity;
-import com.ys.network.base.PagerCons;
-import com.ys.network.utils.ToastUtils;
-import com.ys.network.utils.androidUtils.StatusBarUtil;
+
 
 import java.io.ByteArrayOutputStream;
 import java.net.HttpURLConnection;
@@ -62,7 +64,6 @@ import java.util.List;
 import java.util.Map;
 
 import io.paperdb.Paper;
-import razerdp.blur.thread.ThreadPoolManager;
 
 
 public class MusicSearchActivity extends BaseActivity<MusicSearchImpl, ActivityMusicSearchBinding> implements MusicSearchImpl.MvpView, MusicSearchAdapter.OnItemClickListener, MusicHotAdapter.OnItemClickListener, SearchHistoryAdapter.OnItemClickListener {

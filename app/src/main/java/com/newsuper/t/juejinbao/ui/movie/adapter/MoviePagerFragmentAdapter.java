@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 
 import com.alibaba.fastjson.JSON;
 import com.newsuper.t.juejinbao.ui.movie.entity.MovieTabDataEntity;
+import com.newsuper.t.juejinbao.ui.movie.fragment.MovieNewTabFragment;
+import com.newsuper.t.juejinbao.ui.movie.fragment.RecommendFragment;
 
 import java.util.List;
 

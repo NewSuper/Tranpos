@@ -18,22 +18,22 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.bitmap.CenterCrop;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.bumptech.glide.request.RequestOptions;
-import com.juejinchain.android.R;
-import com.juejinchain.android.base.Constant;
-import com.juejinchain.android.databinding.ActivitySongslistBinding;
-import com.juejinchain.android.module.movie.adapter.EasyAdapter;
-import com.juejinchain.android.module.movie.adapter.EasyAdapter2;
-import com.juejinchain.android.module.movie.utils.Utils;
-import com.juejinchain.android.module.song.entity.ClassAreaDetailEntity;
-import com.juejinchain.android.module.song.manager.SongPlayManager;
-import com.juejinchain.android.module.song.presenter.impl.SongsListImpl;
-import com.ys.network.base.BaseActivity;
-import com.ys.network.utils.androidUtils.StatusBarUtil;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivitySongslistBinding;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.base.Constant;
+import com.newsuper.t.juejinbao.ui.movie.adapter.EasyAdapter2;
+import com.newsuper.t.juejinbao.ui.movie.utils.Utils;
+import com.newsuper.t.juejinbao.ui.song.entity.ClassAreaDetailEntity;
+import com.newsuper.t.juejinbao.ui.song.manager.SongPlayManager;
+import com.newsuper.t.juejinbao.ui.song.presenter.impl.SongsListImpl;
+import com.newsuper.t.juejinbao.utils.androidUtils.StatusBarUtil;
+
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class SongsListActivity extends BaseActivity<SongsListImpl , ActivitySongslistBinding> implements SongsListImpl.MvpView {
+public class SongsListActivity extends BaseActivity<SongsListImpl, ActivitySongslistBinding> implements SongsListImpl.MvpView {
 
     EasyAdapter2 adapter1 = null;
 

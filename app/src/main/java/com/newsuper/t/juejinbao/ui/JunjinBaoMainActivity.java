@@ -46,10 +46,13 @@ import com.newsuper.t.juejinbao.bean.BaseEntity;
 import com.newsuper.t.juejinbao.bean.EventBusOffLineEntity;
 import com.newsuper.t.juejinbao.bean.LoginEntity;
 import com.newsuper.t.juejinbao.bean.LoginEvent;
+import com.newsuper.t.juejinbao.bean.PushDataEvent;
 import com.newsuper.t.juejinbao.bean.ReadArticleLeaveEvent;
+import com.newsuper.t.juejinbao.bean.SettingLoginEvent;
+import com.newsuper.t.juejinbao.bean.ShowTabPopupWindowEvent;
+import com.newsuper.t.juejinbao.bean.SwitchTabEvent;
 import com.newsuper.t.juejinbao.bean.TabSelectedEvent;
-import com.newsuper.t.juejinbao.presenter.MainPresenter;
-import com.newsuper.t.juejinbao.presenter.MainPresenterImpl;
+import com.newsuper.t.juejinbao.bean.WatchAdGetRewardEvent;
 import com.newsuper.t.juejinbao.ui.ad.HomeAdDialogEntity;
 import com.newsuper.t.juejinbao.ui.ad.PushAdDialog;
 import com.newsuper.t.juejinbao.ui.home.activity.HomeDetailActivity;
@@ -74,6 +77,8 @@ import com.newsuper.t.juejinbao.ui.home.interf.CustomItemClickListener;
 import com.newsuper.t.juejinbao.ui.home.ppw.ActicleRewardPop;
 import com.newsuper.t.juejinbao.ui.home.ppw.TimeRewardPopup;
 import com.newsuper.t.juejinbao.ui.home.ppw.WelComeAdPop;
+import com.newsuper.t.juejinbao.ui.home.presenter.MainPresenter;
+import com.newsuper.t.juejinbao.ui.home.presenter.impl.MainPresenterImpl;
 import com.newsuper.t.juejinbao.ui.login.activity.GuideLoginActivity;
 import com.newsuper.t.juejinbao.ui.login.entity.IsShowQQEntity;
 import com.newsuper.t.juejinbao.ui.movie.activity.BridgeWebViewActivity;
@@ -99,10 +104,15 @@ import com.newsuper.t.juejinbao.utils.NetUtil;
 import com.newsuper.t.juejinbao.utils.NoDoubleListener;
 import com.newsuper.t.juejinbao.utils.PreloadVideoUtils;
 import com.newsuper.t.juejinbao.utils.StringUtils;
+import com.newsuper.t.juejinbao.utils.ToastUtils;
+import com.newsuper.t.juejinbao.utils.UpAppUtil;
 import com.newsuper.t.juejinbao.utils.androidUtils.OSUtils;
 import com.newsuper.t.juejinbao.utils.androidUtils.PermissionsUtils;
 import com.newsuper.t.juejinbao.view.BottomBar;
 import com.newsuper.t.juejinbao.view.BottomBarTab;
+import com.newsuper.t.juejinbao.view.NewGiftBagForEggsDialog;
+import com.newsuper.t.juejinbao.view.NewGiftBagSuccessDialog;
+import com.newsuper.t.juejinbao.view.ReceiveFourEggsDialog;
 import com.newsuper.t.juejinbao.view.TaskPopupWindow;
 import com.newsuper.t.juejinbao.view.alerter.Alerter;
 import com.squareup.otto.Subscribe;
@@ -1512,7 +1522,7 @@ public class JunjinBaoMainActivity extends BaseActivity<MainPresenterImpl, Activ
      * 显示未读消息alert
      */
     public void showUnreadAlert(List<UnReadEntity.DataBean> list) {
-        if (mUnreadAlerter == null) mUnreadAlerter = Alerter.create(MainActivity.this);
+        if (mUnreadAlerter == null) mUnreadAlerter = Alerter.create(JunjinBaoMainActivity.this);
 
         UnReadEntity.DataBean item = list.get(0);
         mBottomBarMine.showUnreadDot(true);
@@ -1746,7 +1756,7 @@ public class JunjinBaoMainActivity extends BaseActivity<MainPresenterImpl, Activ
             mPopupWindow = null;
         }
 
-        AdManager.getInstance(this).onAppExit();
+      //  AdManager.getInstance(this).onAppExit();
 
         try {
             SongPlayManager.getInstance().cancelPlay();
@@ -1873,7 +1883,7 @@ public class JunjinBaoMainActivity extends BaseActivity<MainPresenterImpl, Activ
                 } else if (Integer.valueOf(pushEntity.getShow_type()) == 3 || Integer.valueOf(pushEntity.getShow_type()) == 4) {
                     initPushAction(Integer.valueOf(pushEntity.getAction_type()), pushEntity, false);
                 } else {
-                    mUnreadAlerter = Alerter.create(MainActivity.this);
+                    mUnreadAlerter = Alerter.create(JunjinBaoMainActivity.this);
                     mUnreadAlerter
                             .setTitle(pushEntity.getShow_title())
                             .setText(pushEntity.getDesc())
@@ -1929,7 +1939,7 @@ public class JunjinBaoMainActivity extends BaseActivity<MainPresenterImpl, Activ
 //            mPresenter.watchAdVideoInTask(new HashMap<>(),mActivity);
 //        }
         super.onActivityResult(requestCode, resultCode, data);
-        UMShareAPI.get(this).onActivityResult(requestCode, resultCode, data);
+       // UMShareAPI.get(this).onActivityResult(requestCode, resultCode, data);
     }
 
 
@@ -1983,7 +1993,7 @@ public class JunjinBaoMainActivity extends BaseActivity<MainPresenterImpl, Activ
 
 
     public void initYuYueTui() {
-        AdManager.getInstance(this).init(this, Constant.YUYUETUI_APP_ID, LoginEntity.getUid() + "", Constant.YUYUETUI_APP_KEY, "");
+      //  AdManager.getInstance(this).init(this, Constant.YUYUETUI_APP_ID, LoginEntity.getUid() + "", Constant.YUYUETUI_APP_KEY, "");
     }
 
     //监听touch，所有带有广告的页面都需监听。建议在所有带有广告的Activity的dispatchTouchEvent中调用 搜狗广告

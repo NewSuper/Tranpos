@@ -16,42 +16,36 @@ import android.widget.GridLayout;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.FragmentMovieTabFilterBinding;
-import com.juejinchain.android.module.MainActivity;
-import com.juejinchain.android.module.movie.activity.MovieSearchActivity;
-import com.juejinchain.android.module.movie.adapter.ConditionAdapter;
-import com.juejinchain.android.module.movie.adapter.EasyAdapter;
-import com.juejinchain.android.module.movie.adapter.MovieMovieFilterAdapter;
-import com.juejinchain.android.module.movie.craw.BeanMovieSearchItem;
-import com.juejinchain.android.module.movie.entity.DependentResourcesDataEntity;
-import com.juejinchain.android.module.movie.entity.MovieMovieFilterDataEntity;
-import com.juejinchain.android.module.movie.entity.MovieMovieRecommendDataEntity;
-import com.juejinchain.android.module.movie.presenter.impl.MovieTabFilterImpl;
-import com.juejinchain.android.module.movie.utils.OnClickReturnStringListener;
-import com.juejinchain.android.module.movie.utils.PreLoadUtils;
-import com.juejinchain.android.module.movie.view.DependentResourceDialog;
-import com.juejinchain.android.module.movie.view.WrapContentGridViewManager;
-import com.juejinchain.android.utils.GlideCacheUtil;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.FragmentMovieTabFilterBinding;
+import com.newsuper.t.juejinbao.base.BaseFragment;
+import com.newsuper.t.juejinbao.ui.movie.activity.MovieSearchActivity;
+import com.newsuper.t.juejinbao.ui.movie.adapter.ConditionAdapter;
+import com.newsuper.t.juejinbao.ui.movie.adapter.EasyAdapter;
+import com.newsuper.t.juejinbao.ui.movie.adapter.MovieMovieFilterAdapter;
+import com.newsuper.t.juejinbao.ui.movie.craw.BeanMovieSearchItem;
+import com.newsuper.t.juejinbao.ui.movie.entity.MovieMovieFilterDataEntity;
+import com.newsuper.t.juejinbao.ui.movie.presenter.impl.MovieTabFilterImpl;
+import com.newsuper.t.juejinbao.ui.movie.utils.OnClickReturnStringListener;
+import com.newsuper.t.juejinbao.ui.movie.utils.PreLoadUtils;
+import com.newsuper.t.juejinbao.ui.movie.view.WrapContentGridViewManager;
+import com.newsuper.t.juejinbao.utils.GlideCacheUtil;
+import com.newsuper.t.juejinbao.utils.LogUtils;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
-import com.ys.network.base.BaseFragment;
-import com.ys.network.utils.LogUtils;
+
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.juejinchain.android.module.movie.fragment.MovieTabRecommendFragment.recommendRecyclerViewPool2;
+import static com.newsuper.t.juejinbao.ui.movie.fragment.MovieTabRecommendFragment.recommendRecyclerViewPool2;
 
 /**
  * 影视非推荐页-------内的筛选页  老版废弃
  */
-public class MovieTabFilterFragment extends BaseFragment<MovieTabFilterImpl , FragmentMovieTabFilterBinding> implements  MovieTabFilterImpl.MvpView{
+public class MovieTabFilterFragment extends BaseFragment<MovieTabFilterImpl, FragmentMovieTabFilterBinding> implements  MovieTabFilterImpl.MvpView{
 //    private static RecyclerView.RecycledViewPool filterRecyclerViewPool = new RecyclerView.RecycledViewPool();
-
-
-
     ConditionAdapter conditionAdapter1;
     ConditionAdapter conditionAdapter2;
     ConditionAdapter conditionAdapter3;
@@ -66,9 +60,6 @@ public class MovieTabFilterFragment extends BaseFragment<MovieTabFilterImpl , Fr
     MovieMovieFilterAdapter movieMovieRecommendAdapter;
 
     PreLoadUtils preLoadUtils;
-
-
-
     //数据
     List<MovieMovieFilterDataEntity.DataBeanX.DataBean> items = new ArrayList<>();
 
@@ -84,8 +75,6 @@ public class MovieTabFilterFragment extends BaseFragment<MovieTabFilterImpl , Fr
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_movie_tab_filter, container, false);
     }
-
-
 
     @Override
     public void initView() {
@@ -411,8 +400,6 @@ public class MovieTabFilterFragment extends BaseFragment<MovieTabFilterImpl , Fr
             mViewBinding.rlBlank.setVisibility(View.GONE);
         }
         GlideCacheUtil.getInstance().clearImageAllCache(context);
-
-
 
         //移除footer
         for(MovieMovieFilterDataEntity.DataBeanX.DataBean dataBean : items){

@@ -1,6 +1,5 @@
 package com.newsuper.t.juejinbao.ui.home.fragment;
 
-i
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.LayoutInflater;

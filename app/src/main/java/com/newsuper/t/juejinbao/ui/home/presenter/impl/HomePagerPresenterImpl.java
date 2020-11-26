@@ -5,6 +5,7 @@ import android.app.Activity;
 import com.newsuper.t.juejinbao.base.ApiService;
 import com.newsuper.t.juejinbao.base.BasePresenter;
 import com.newsuper.t.juejinbao.base.RetrofitManager;
+import com.newsuper.t.juejinbao.ui.home.entity.ClearUnreadEntity;
 import com.newsuper.t.juejinbao.ui.home.entity.HomeListEntity;
 import com.newsuper.t.juejinbao.ui.home.presenter.HomePagerPresenter;
 import com.newsuper.t.juejinbao.utils.SubscriberOnResponseListenter;

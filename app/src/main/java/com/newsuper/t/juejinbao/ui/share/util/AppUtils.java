@@ -582,7 +582,7 @@ public final class AppUtils {
 		if (ShareStringUtils.isEmpty(packageName)){
 			return false;
 		}
-		final PackageManager packageManager = MyApplication.getInstance().getPackageManager();
+		final PackageManager packageManager = JJBApplication.getInstance().getPackageManager();
 		List<PackageInfo> pinfo = packageManager.getInstalledPackages(0);
 		if (pinfo != null) {
 			for (int i = 0; i < pinfo.size(); i++) {

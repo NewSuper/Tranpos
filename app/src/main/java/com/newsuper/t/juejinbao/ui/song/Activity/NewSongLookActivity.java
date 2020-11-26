@@ -11,18 +11,14 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.juejinchain.android.R;
-
-import com.juejinchain.android.databinding.ActivityNewsonglookBinding;
-
-import com.juejinchain.android.module.song.adapter.NewSongLookPageAdapter;
-import com.juejinchain.android.module.song.entity.LatestMusicTagEntity;
-import com.juejinchain.android.module.song.manager.SongPlayManager;
-
-import com.juejinchain.android.module.song.presenter.impl.NewSongLookImpl;
-import com.ys.network.base.BaseActivity;
-import com.ys.network.utils.androidUtils.StatusBarUtil;
-
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivityNewsonglookBinding;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.ui.song.adapter.NewSongLookPageAdapter;
+import com.newsuper.t.juejinbao.ui.song.entity.LatestMusicTagEntity;
+import com.newsuper.t.juejinbao.ui.song.manager.SongPlayManager;
+import com.newsuper.t.juejinbao.ui.song.presenter.impl.NewSongLookImpl;
+import com.newsuper.t.juejinbao.utils.androidUtils.StatusBarUtil;
 
 public class NewSongLookActivity extends BaseActivity<NewSongLookImpl, ActivityNewsonglookBinding> implements NewSongLookImpl.MvpView {
 

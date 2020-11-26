@@ -1,12 +1,12 @@
 package com.newsuper.t.juejinbao.ui.movie.fragment;
 
-import android.content.Intent;
+
 import android.os.Bundle;
 import android.os.Message;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
-import android.support.v7.widget.RecyclerView;
+
 import android.text.TextPaint;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -17,25 +17,18 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.flyco.tablayout.listener.OnTabSelectListener;
-import com.juejinchain.android.R;
-import com.juejinchain.android.callback.NoDoubleListener;
-import com.juejinchain.android.databinding.FragmentMovieBinding;
-import com.juejinchain.android.module.login.activity.GuideLoginActivity;
-import com.juejinchain.android.module.movie.activity.MovieFilterActivity;
-import com.juejinchain.android.module.movie.activity.MovieNewFilterActivity;
-import com.juejinchain.android.module.movie.activity.MovieSearchActivity;
-import com.juejinchain.android.module.movie.adapter.MoviePagerFragmentAdapter;
-import com.juejinchain.android.module.movie.entity.MovieShowBookEntity;
-import com.juejinchain.android.module.movie.entity.MovieTabDataEntity;
-import com.juejinchain.android.module.movie.presenter.impl.MovieFragmentImpl;
-import com.juejinchain.android.module.share.dialog.ShareDialog;
-import com.juejinchain.android.module.share.entity.ShareInfo;
+
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.FragmentMovieBinding;
+import com.newsuper.t.juejinbao.base.BaseFragment;
+import com.newsuper.t.juejinbao.base.BusConstant;
+import com.newsuper.t.juejinbao.ui.movie.activity.MovieNewFilterActivity;
+import com.newsuper.t.juejinbao.ui.movie.adapter.MoviePagerFragmentAdapter;
+import com.newsuper.t.juejinbao.ui.movie.entity.MovieTabDataEntity;
+import com.newsuper.t.juejinbao.ui.movie.presenter.impl.MovieFragmentImpl;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 import com.squareup.otto.Subscribe;
-import com.ys.network.base.BaseFragment;
-import com.ys.network.base.LoginEntity;
-import com.ys.network.bus.BusConstant;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -10,14 +10,13 @@ import android.view.ViewGroup;
 import android.widget.GridLayout;
 import android.widget.TextView;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.module.movie.bean.AdapterItem;
-import com.juejinchain.android.module.movie.craw.BeanMovieSearchItem;
-import com.juejinchain.android.module.movie.entity.MoviePostDataEntity;
-import com.juejinchain.android.module.movie.utils.OnClickReturnStringListener;
-import com.juejinchain.android.module.movie.utils.Utils;
-import com.juejinchain.android.module.movie.view.MyGridView;
-import com.juejinchain.android.module.movie.view.WrapContentGridViewManager;
+
+import com.newsuper.t.R;
+import com.newsuper.t.juejinbao.ui.movie.bean.AdapterItem;
+import com.newsuper.t.juejinbao.ui.movie.craw.BeanMovieSearchItem;
+import com.newsuper.t.juejinbao.ui.movie.entity.MoviePostDataEntity;
+import com.newsuper.t.juejinbao.ui.movie.utils.OnClickReturnStringListener;
+import com.newsuper.t.juejinbao.ui.movie.view.WrapContentGridViewManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -152,9 +151,6 @@ public class RecommentMovieAdapter extends RecyclerView.Adapter<MyViewHolder>{
             rv_gv.setAdapter(movieRecommendAdapter);
 //            rv_gv.setRecycledViewPool(rcyclerViewPool);
             movieRecommendAdapter.update(beans);
-
-
-
 
         }
 

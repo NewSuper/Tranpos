@@ -22,6 +22,8 @@ import android.widget.Scroller;
 
 import com.newsuper.t.R;
 import com.newsuper.t.juejinbao.base.JJBApplication;
+import com.newsuper.t.juejinbao.ui.share.util.LogUtil;
+import com.newsuper.t.juejinbao.ui.song.Util.LrcUtils;
 import com.newsuper.t.juejinbao.ui.song.entity.LrcEntry;
 
 import java.util.ArrayList;

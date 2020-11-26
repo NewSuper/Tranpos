@@ -12,16 +12,16 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.LinearLayout;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.ActivityNewwebbookBinding;
-import com.juejinchain.android.jsbridge.BridgeWebView;
-import com.juejinchain.android.module.home.presenter.impl.PublicPresenterImpl;
-import com.juejinchain.android.module.movie.presenter.impl.WebActivityImpl;
-import com.juejinchain.android.module.movie.utils.PaxWebChromeClient;
-import com.juejinchain.android.module.movie.utils.WebViewUtils;
-import com.ys.network.base.BaseActivity;
-import com.ys.network.utils.NetworkUtils;
-import com.ys.network.utils.ToastUtils;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivityNewwebbookBinding;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.ui.home.presenter.impl.PublicPresenterImpl;
+import com.newsuper.t.juejinbao.ui.movie.presenter.impl.WebActivityImpl;
+import com.newsuper.t.juejinbao.ui.movie.utils.PaxWebChromeClient;
+import com.newsuper.t.juejinbao.ui.movie.utils.WebViewUtils;
+import com.newsuper.t.juejinbao.utils.NetworkUtils;
+import com.newsuper.t.juejinbao.utils.ToastUtils;
+import com.newsuper.t.juejinbao.utils.jsbridge.BridgeWebView;
 
 import static io.paperdb.Paper.book;
 

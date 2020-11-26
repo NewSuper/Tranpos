@@ -14,6 +14,8 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.bumptech.glide.request.RequestOptions;
+import com.newsuper.t.R;
+import com.newsuper.t.juejinbao.ui.movie.activity.MovieSearchActivity;
 import com.newsuper.t.juejinbao.ui.movie.entity.MovieNewRecommendEntity;
 
 

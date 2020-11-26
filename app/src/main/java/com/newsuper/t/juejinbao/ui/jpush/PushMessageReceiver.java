@@ -1,3 +1,4 @@
+/*
 package com.newsuper.t.juejinbao.ui.jpush;
 
 import android.content.Context;
@@ -6,19 +7,13 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.alibaba.fastjson.JSON;
-import com.juejinchain.android.event.PushDataEvent;
-import com.juejinchain.android.module.MainActivity;
+import com.newsuper.t.juejinbao.ui.JunjinBaoMainActivity;
+
 
 import org.greenrobot.eventbus.EventBus;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import cn.jpush.android.api.CmdMessage;
-import cn.jpush.android.api.CustomMessage;
-import cn.jpush.android.api.JPushInterface;
-import cn.jpush.android.api.JPushMessage;
-import cn.jpush.android.api.NotificationMessage;
-import cn.jpush.android.service.JPushMessageReceiver;
 
 public class PushMessageReceiver extends JPushMessageReceiver{
     private static final String TAG = "PushMessageReceiver";
@@ -33,7 +28,7 @@ public class PushMessageReceiver extends JPushMessageReceiver{
         Log.e(TAG,"[onNotifyMessageOpened] "+message);
 
         String key = JSON.parseObject(message.notificationExtras).getString("key");
-        Intent startIntent = new Intent(context, MainActivity.class);
+        Intent startIntent = new Intent(context, JunjinBaoMainActivity.class);
         if (message.notificationExtras != null) {
             startIntent.putExtra("pushType", 1);
             startIntent.putExtra("pushMsg",key );
@@ -165,3 +160,4 @@ public class PushMessageReceiver extends JPushMessageReceiver{
     }
     
 }
+*/

@@ -12,12 +12,10 @@ import android.view.ViewGroup;
 import android.widget.PopupWindow;
 import android.widget.RadioGroup;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.ViewPlayerspeedBinding;
-import com.juejinchain.android.module.movie.player.JzvdPlayerBusiness;
-import com.juejinchain.android.module.movie.utils.JzvdStdEx;
-import com.juejinchain.android.module.movie.utils.Utils;
-
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ViewPlayerspeedBinding;
+import com.newsuper.t.juejinbao.ui.movie.player.JzvdPlayerBusiness;
+import com.newsuper.t.juejinbao.ui.movie.utils.Utils;
 
 //倍速弹窗
 public class PlayerSpeedPopupWindow2 {

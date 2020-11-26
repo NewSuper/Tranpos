@@ -1,8 +1,8 @@
 package com.newsuper.t.juejinbao.ui.jpush;
 
-
-import cn.jpush.android.service.JCommonService;
-
-public class PushService extends JCommonService {
-
-}
+//
+//import cn.jpush.android.service.JCommonService;
+//
+//public class PushService extends JCommonService {
+//
+//}

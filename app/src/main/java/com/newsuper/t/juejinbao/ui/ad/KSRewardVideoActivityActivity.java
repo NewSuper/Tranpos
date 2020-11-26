@@ -97,7 +97,7 @@ public class KSRewardVideoActivityActivity extends BaseActivity<PlayAdVideoPrese
 
     // 1.请求激励视频广告，获取广告对象，KsRewardVideoAd
     public void requestRewardAd() {
-        mRewardVideoAd = null;
+      //  mRewardVideoAd = null;
 //        AdScene scene = new AdScene(90009001); // 此为测试posId，请联系快手平台申请正式posId
 //        KsAdSDK.getAdManager().loadRewardVideoAd(scene, new IAdRequestManager.RewardVideoAdListener() {
 //            @Override

@@ -12,12 +12,9 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.module.movie.adapter.EasyAdapter;
-import com.juejinchain.android.module.movie.craw.crawmusic.BeanMusic;
-import com.juejinchain.android.module.song.manager.SongPlayManager;
-import com.lzx.starrysky.provider.SongInfo;
-import com.ys.network.base.PagerCons;
+import com.newsuper.t.R;
+import com.newsuper.t.juejinbao.ui.movie.adapter.EasyAdapter;
+import com.newsuper.t.juejinbao.ui.movie.craw.crawmusic.BeanMusic;
 
 import java.util.List;
 
@@ -27,9 +24,6 @@ import static io.paperdb.Paper.book;
 public class CrawMusicListDialog extends Dialog {
 
     boolean alDismiss;
-
-
-
     private EasyAdapter adapter;
     private RecyclerView rv;
     private TextView tv_close;

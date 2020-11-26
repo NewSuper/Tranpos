@@ -12,11 +12,9 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.DialogMoviesearchguideBinding;
-import com.juejinchain.android.databinding.DialogShouyeguideBinding;
-import com.juejinchain.android.module.movie.utils.Utils;
-import com.ys.network.base.PagerCons;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.DialogShouyeguideBinding;
+import com.newsuper.t.juejinbao.base.PagerCons;
 
 import java.text.SimpleDateFormat;
 
@@ -50,12 +48,8 @@ public class ShouyeGuideDialog extends Dialog{
         params.dimAmount =0f;
         getWindow().setAttributes(params);
 
-
         setCancelable(false);
         setCanceledOnTouchOutside(false);
-
-
-
 
         mViewBinding.rl.setOnClickListener(new View.OnClickListener() {
             @Override

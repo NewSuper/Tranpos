@@ -93,7 +93,7 @@ public class PageFactory {
     private String charset = "UTF-8";
 
     public PageFactory(Context context, String bookId, List<BookChapterEntity.Chapter> chaptersList) {
-        this(context, ScreenUtils.getScreenWidth(), ScreenUtils.getScreenHeight(),
+        this(context, ScreenUtils.getScreenWidth(context), ScreenUtils.getScreenHeight(),
                 //SettingManager.getInstance().getReadFontSize(bookId),
                 SettingManager.getInstance().getReadFontSize(),
                 bookId, chaptersList);

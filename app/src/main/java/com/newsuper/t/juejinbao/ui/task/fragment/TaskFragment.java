@@ -15,26 +15,23 @@ import android.widget.TextView;
 
 import com.flyco.tablayout.listener.OnTabSelectListener;
 import com.gyf.immersionbar.ImmersionBar;
-import com.juejinchain.android.R;
-import com.juejinchain.android.base.Constant;
-import com.juejinchain.android.base.MyApplication;
-import com.juejinchain.android.databinding.FragmentTaskBinding;
-import com.juejinchain.android.module.MainActivity;
-import com.juejinchain.android.module.home.adapter.MyPagerAdapter;
-import com.juejinchain.android.module.home.entity.TabChangeEvent;
-import com.juejinchain.android.module.login.activity.GuideLoginActivity;
-import com.juejinchain.android.module.movie.entity.TaskADEntity;
-import com.juejinchain.android.module.movie.utils.NetUtils;
-import com.juejinchain.android.module.share.dialog.ShareDialog;
-import com.juejinchain.android.module.share.entity.ShareInfo;
-import com.juejinchain.android.module.task.presenter.TaskPresenterImpl;
-import com.juejinchain.android.view.TaskEarnPopupWindow;
-import com.umeng.analytics.MobclickAgent;
-import com.ys.network.base.BaseFragment;
-import com.ys.network.base.EventID;
-import com.ys.network.base.LoginEntity;
-import com.ys.network.base.PagerCons;
-import com.ys.network.network.RetrofitManager;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.FragmentTaskBinding;
+import com.newsuper.t.juejinbao.base.BaseFragment;
+import com.newsuper.t.juejinbao.base.Constant;
+import com.newsuper.t.juejinbao.base.PagerCons;
+import com.newsuper.t.juejinbao.base.RetrofitManager;
+import com.newsuper.t.juejinbao.bean.LoginEntity;
+import com.newsuper.t.juejinbao.ui.JunjinBaoMainActivity;
+import com.newsuper.t.juejinbao.ui.home.entity.TabChangeEvent;
+import com.newsuper.t.juejinbao.ui.login.activity.GuideLoginActivity;
+import com.newsuper.t.juejinbao.ui.movie.adapter.MyPagerAdapter;
+import com.newsuper.t.juejinbao.ui.movie.entity.TaskADEntity;
+import com.newsuper.t.juejinbao.ui.movie.utils.NetUtils;
+import com.newsuper.t.juejinbao.ui.share.dialog.ShareDialog;
+import com.newsuper.t.juejinbao.ui.share.entity.ShareInfo;
+import com.newsuper.t.juejinbao.ui.task.presenter.TaskPresenterImpl;
+import com.newsuper.t.juejinbao.view.TaskEarnPopupWindow;
 
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
@@ -77,7 +74,7 @@ public class TaskFragment extends BaseFragment<TaskPresenterImpl, FragmentTaskBi
                     mActivity.startActivity(intent);
                     return;
                 }
-                MobclickAgent.onEvent(getContext(), EventID.TASK_TOPRIGHT_SHARE);   //任务-分享-埋点
+                //MobclickAgent.onEvent(getContext(), EventID.TASK_TOPRIGHT_SHARE);   //任务-分享-埋点
                 //任务分享
                 ShareInfo shareInfo = new ShareInfo();
                 shareInfo.setUrl_type(ShareInfo.TYPE_TASK);
@@ -128,15 +125,15 @@ public class TaskFragment extends BaseFragment<TaskPresenterImpl, FragmentTaskBi
         oldUserStartTime = System.currentTimeMillis()/1000;
         touristsStartTime = System.currentTimeMillis()/1000;
 
-        MobclickAgent.onEvent(MyApplication.getContext(), EventID.EARNMONEYPAGE_PV);
-        MobclickAgent.onEvent(MyApplication.getContext(), EventID.EARNMONEYPAGE_UV);
+    //    MobclickAgent.onEvent(MyApplication.getContext(), EventID.EARNMONEYPAGE_PV);
+     //   MobclickAgent.onEvent(MyApplication.getContext(), EventID.EARNMONEYPAGE_UV);
     }
 
     // 每次Tab切换都刷
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onTabChange(TabChangeEvent tabChangeEvent) {
-        if ((((MainActivity)mActivity).Is_Show_Movie && tabChangeEvent.getTabPosition() == 3) ||
-                (!((MainActivity)mActivity).Is_Show_Movie && tabChangeEvent.getTabPosition() == 2)) {
+        if ((((JunjinBaoMainActivity)mActivity).Is_Show_Movie && tabChangeEvent.getTabPosition() == 3) ||
+                (!((JunjinBaoMainActivity)mActivity).Is_Show_Movie && tabChangeEvent.getTabPosition() == 2)) {
 
             newUserStartTime = System.currentTimeMillis()/1000;
             oldUserStartTime = System.currentTimeMillis()/1000;
@@ -245,14 +242,14 @@ public class TaskFragment extends BaseFragment<TaskPresenterImpl, FragmentTaskBi
         if(LoginEntity.getIsLogin()){
             if(LoginEntity.getIsNew()){
                 map.put("onLine", System.currentTimeMillis()/1000-(newUserStartTime==0?System.currentTimeMillis()/1000:touristsStartTime));
-                MobclickAgent.onEventObject(MyApplication.getContext(), EventID.EARNMONEYPAGE_USETIME, map);
+              //  MobclickAgent.onEventObject(MyApplication.getContext(), EventID.EARNMONEYPAGE_USETIME, map);
             }else{
                 map.put("onLine", System.currentTimeMillis()/1000-(oldUserStartTime==0?System.currentTimeMillis()/1000:touristsStartTime));
-                MobclickAgent.onEventObject(MyApplication.getContext(), EventID.EARNMONEYPAGE_OLD_USETIME, map);
+               // MobclickAgent.onEventObject(MyApplication.getContext(), EventID.EARNMONEYPAGE_OLD_USETIME, map);
             }
         }else{
             map.put("onLine", System.currentTimeMillis()/1000-(touristsStartTime==0?System.currentTimeMillis()/1000:touristsStartTime));
-            MobclickAgent.onEventObject(MyApplication.getContext(), EventID.EARNMONEYPAGE_TOURISTS_USETIME, map);
+          //  MobclickAgent.onEventObject(MyApplication.getContext(), EventID.EARNMONEYPAGE_TOURISTS_USETIME, map);
         }
     }
 

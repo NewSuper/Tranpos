@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.newsuper.t.juejinbao.base.Constant;
 import com.newsuper.t.juejinbao.base.JJBApplication;
+import com.newsuper.t.juejinbao.ui.share.interf.GetResultListener;
 import com.tencent.mm.opensdk.modelmsg.SendMessageToWX;
 import com.tencent.mm.opensdk.modelmsg.WXMediaMessage;
 import com.tencent.mm.opensdk.modelmsg.WXWebpageObject;
@@ -195,7 +196,7 @@ public class ShareUtils {
                 intentQZ.putExtra(Intent.EXTRA_TEXT, desc);
                 intentQZ.putExtra(Intent.EXTRA_STREAM, fileUri);
                 intentQZ.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_GRANT_READ_URI_PERMISSION);
-                MyApplication.getInstance().startActivity(intentQZ);
+                JJBApplication.getInstance().startActivity(intentQZ);
             }
         }catch (Exception e){
             LogUtil.e(Log.getStackTraceString(e));

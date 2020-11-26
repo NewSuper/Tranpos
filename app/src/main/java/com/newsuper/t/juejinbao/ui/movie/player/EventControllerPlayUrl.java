@@ -1,6 +1,7 @@
 package com.newsuper.t.juejinbao.ui.movie.player;
 
-import com.juejinchain.android.module.movie.craw.moviedetail.BeanMovieDetail;
+
+import com.newsuper.t.juejinbao.ui.movie.craw.moviedetail.BeanMovieDetail;
 
 import java.util.List;
 

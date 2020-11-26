@@ -13,7 +13,6 @@ public interface BaoquGamePrensenter {
      * @param StringMap
      * @param activity
      */
-    //
     void playGameGetCoin(Map<String, String> StringMap, Activity activity, OnDataBackLintener ib);
 
     /**

@@ -1,6 +1,5 @@
 package com.newsuper.t.juejinbao.bean;
 
-import com.ys.network.base.Entity;
 
 
 public class ReadArticleLeaveEvent extends Entity{

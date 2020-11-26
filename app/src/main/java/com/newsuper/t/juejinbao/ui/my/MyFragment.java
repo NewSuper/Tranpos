@@ -26,30 +26,50 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.CircleCrop;
 import com.bumptech.glide.request.RequestOptions;
 
-//import com.qmm.jncore.JNLoanAgent;
-//import com.qmm.jncore.base.JNBaseRequestCallback;
-//import com.qmm.jncore.base.JNMessageId;
-//import com.qmm.jncore.model.JNResponse;
-//import com.qmm.platform.net.base.ResultItem;
-//import com.qq.e.ads.banner2.UnifiedBannerADListener;
-//import com.qq.e.ads.banner2.UnifiedBannerView;
-//import com.qq.e.comm.util.AdError;
-//import com.qq.e.comm.util.GDTLogger;
-//import com.qq.e.comm.util.StringUtil;
 import com.newsuper.t.R;
 import com.newsuper.t.databinding.FragmentMyNewBinding;
+import com.newsuper.t.juejinbao.base.ApiService;
 import com.newsuper.t.juejinbao.base.BaseFragment;
 import com.newsuper.t.juejinbao.base.Constant;
 import com.newsuper.t.juejinbao.base.PagerCons;
 import com.newsuper.t.juejinbao.base.RetrofitManager;
+import com.newsuper.t.juejinbao.bean.LoginEntity;
 import com.newsuper.t.juejinbao.bean.SettingLoginEvent;
+import com.newsuper.t.juejinbao.ui.JunjinBaoMainActivity;
+import com.newsuper.t.juejinbao.ui.ad.GDTHolder;
+import com.newsuper.t.juejinbao.ui.home.dialog.HomeTipsAlertDialog;
+import com.newsuper.t.juejinbao.ui.home.entity.TabChangeEvent;
+import com.newsuper.t.juejinbao.ui.login.activity.GuideLoginActivity;
 import com.newsuper.t.juejinbao.ui.movie.activity.BridgeWebViewActivity;
 import com.newsuper.t.juejinbao.ui.movie.activity.DebugActivity;
+import com.newsuper.t.juejinbao.ui.movie.activity.WebActivity;
+import com.newsuper.t.juejinbao.ui.movie.entity.ResponseEntity;
+import com.newsuper.t.juejinbao.ui.my.activity.InviteFriendActivity;
+import com.newsuper.t.juejinbao.ui.my.activity.SettingActivity;
+import com.newsuper.t.juejinbao.ui.my.activity.UserInfoActivity;
 import com.newsuper.t.juejinbao.ui.my.dialog.FragmentMyConfigDialog;
+import com.newsuper.t.juejinbao.ui.my.entity.AdFirstEntity;
+import com.newsuper.t.juejinbao.ui.my.entity.AdTwoEntity;
+import com.newsuper.t.juejinbao.ui.my.entity.MyUnreadMessageEntity;
 import com.newsuper.t.juejinbao.ui.my.entity.UserDataEntity;
 import com.newsuper.t.juejinbao.ui.my.presenter.impl.MyFragmentPresenterImpl;
+import com.newsuper.t.juejinbao.ui.share.constant.ShareType;
 import com.newsuper.t.juejinbao.ui.share.dialog.ShareDialog;
+import com.newsuper.t.juejinbao.ui.share.entity.ShareInfo;
+import com.newsuper.t.juejinbao.utils.ClickUtil;
+import com.newsuper.t.juejinbao.utils.GlideImageLoader;
+import com.newsuper.t.juejinbao.utils.GlideImgsLoader;
+import com.newsuper.t.juejinbao.utils.MyToast;
+import com.newsuper.t.juejinbao.utils.NoDoubleListener;
+import com.newsuper.t.juejinbao.utils.SubscriberOnResponseListenter;
+import com.newsuper.t.juejinbao.utils.ToastUtils;
+import com.newsuper.t.juejinbao.utils.network.HttpRequestBody;
+import com.newsuper.t.juejinbao.utils.network.HttpResultFunc;
+import com.newsuper.t.juejinbao.utils.network.ProgressSubscriber;
+import com.qq.e.ads.banner2.UnifiedBannerADListener;
 import com.qq.e.ads.banner2.UnifiedBannerView;
+import com.qq.e.comm.util.AdError;
+import com.qq.e.comm.util.StringUtil;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 
@@ -148,11 +168,11 @@ public class MyFragment extends BaseFragment<MyFragmentPresenterImpl, FragmentMy
         }
 
         //debug入口
-        if (RetrofitManager.RELEASE) {
-            mViewBinding.modelFragmentDebug.setVisibility(View.GONE);
-        } else {
-            mViewBinding.modelFragmentDebug.setVisibility(View.VISIBLE);
-        }
+//        if (RetrofitManager.RELEASE) {
+//            mViewBinding.modelFragmentDebug.setVisibility(View.GONE);
+//        } else {
+       mViewBinding.modelFragmentDebug.setVisibility(View.VISIBLE);
+//        }
         mViewBinding.modelFragmentDebug.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -256,8 +276,8 @@ public class MyFragment extends BaseFragment<MyFragmentPresenterImpl, FragmentMy
             isRefresh = false;
         }
 
-        if ((((MainActivity) mActivity).Is_Show_Movie && tabChangeEvent.getTabPosition() == 4) ||
-                (!((MainActivity) mActivity).Is_Show_Movie && tabChangeEvent.getTabPosition() == 3)) {
+        if ((((JunjinBaoMainActivity) mActivity).Is_Show_Movie && tabChangeEvent.getTabPosition() == 4) ||
+                (!((JunjinBaoMainActivity) mActivity).Is_Show_Movie && tabChangeEvent.getTabPosition() == 3)) {
 
             newUserStartTime = System.currentTimeMillis() / 1000;
             oldUserStartTime = System.currentTimeMillis() / 1000;
@@ -308,15 +328,15 @@ public class MyFragment extends BaseFragment<MyFragmentPresenterImpl, FragmentMy
                 isDebug = true;
             }
             //初始化钱盟盟sdk
-            JNLoanAgent.getInstance().init(mActivity, Constant.QMM_APPID, Constant.QMM_APPKEY, isDebug, callback);
+          //  JNLoanAgent.getInstance().init(mActivity, Constant.QMM_APPID, Constant.QMM_APPKEY, isDebug, callback);
         }
 
         newUserStartTime = System.currentTimeMillis() / 1000;
         oldUserStartTime = System.currentTimeMillis() / 1000;
         touristsStartTime = System.currentTimeMillis() / 1000;
 
-        MobclickAgent.onEvent(MyApplication.getContext(), EventID.MYCENTERPAGE_PV);
-        MobclickAgent.onEvent(MyApplication.getContext(), EventID.MYCENTERPAGE_UV);
+      //  MobclickAgent.onEvent(MyApplication.getContext(), EventID.MYCENTERPAGE_PV);
+      //  MobclickAgent.onEvent(MyApplication.getContext(), EventID.MYCENTERPAGE_UV);
     }
 
     @OnClick({R.id.model_fragment_my_to_login, R.id.fragment_my_read_time,
@@ -369,7 +389,7 @@ public class MyFragment extends BaseFragment<MyFragmentPresenterImpl, FragmentMy
             //复制
             case R.id.fragment_my_copy:
                 //埋点（点击复制邀请码）
-                MobclickAgent.onEvent(MyApplication.getContext(), EventID.MINEPAGE_INVITE_CODE_COPY);
+               // MobclickAgent.onEvent(MyApplication.getContext(), EventID.MINEPAGE_INVITE_CODE_COPY);
 
                 //获取剪贴版
                 ClipboardManager clipboard = (ClipboardManager) getActivity().getSystemService(Context.CLIPBOARD_SERVICE);
@@ -387,7 +407,7 @@ public class MyFragment extends BaseFragment<MyFragmentPresenterImpl, FragmentMy
                 intent = new Intent(getActivity(), GuideLoginActivity.class);
                 getActivity().startActivity(intent);
 
-                MobclickAgent.onEvent(MyApplication.getContext(), EventID.MINEPAGE_REGISTER_TOURISTS_CLICK);
+            //    MobclickAgent.onEvent(MyApplication.getContext(), EventID.MINEPAGE_REGISTER_TOURISTS_CLICK);
                 break;
             //设置
             case R.id.model_fragment_my_setting:
@@ -491,7 +511,7 @@ public class MyFragment extends BaseFragment<MyFragmentPresenterImpl, FragmentMy
             //生成邀请链接
             case R.id.model_fragment_my_make_url:
                 //埋点（点击我的-生成邀请链接）
-                MobclickAgent.onEvent(MyApplication.getContext(), EventID.MINEPAGE_CREATE_INPUT_INNVITE_URL);
+             //   MobclickAgent.onEvent(MyApplication.getContext(), EventID.MINEPAGE_CREATE_INPUT_INNVITE_URL);
 
                 loginEntity = Paper.book().read(PagerCons.USER_DATA);
                 if (loginEntity == null) {
@@ -505,7 +525,7 @@ public class MyFragment extends BaseFragment<MyFragmentPresenterImpl, FragmentMy
             //生成邀请海报
             case R.id.model_fragment_my_make_picture:
                 //埋点（点击我的-生成邀请海报）
-                MobclickAgent.onEvent(MyApplication.getContext(), EventID.MINEPAGE_CREATE_INPUT_INNVITE_POSTER);
+              //  MobclickAgent.onEvent(MyApplication.getContext(), EventID.MINEPAGE_CREATE_INPUT_INNVITE_POSTER);
 
                 loginEntity = Paper.book().read(PagerCons.USER_DATA);
                 if (loginEntity == null) {
@@ -519,7 +539,7 @@ public class MyFragment extends BaseFragment<MyFragmentPresenterImpl, FragmentMy
             //邀请码
             case R.id.model_fragment_my_input_code:
                 //埋点(点击我的-输入邀请码)
-                MobclickAgent.onEvent(MyApplication.getContext(), EventID.MINEPAGE_INPUT_INNVITE_CODE);
+              //  MobclickAgent.onEvent(MyApplication.getContext(), EventID.MINEPAGE_INPUT_INNVITE_CODE);
                 loginEntity = Paper.book().read(PagerCons.USER_DATA);
                 if (loginEntity == null) {
                     intent = new Intent(getActivity(), GuideLoginActivity.class);
@@ -554,7 +574,7 @@ public class MyFragment extends BaseFragment<MyFragmentPresenterImpl, FragmentMy
                     return;
                 }
 
-                JNLoanAgent.getInstance().launchLoan(context, loginEntity.getData().getMobile(), loginEntity.getData().getUser_token());
+              //  JNLoanAgent.getInstance().launchLoan(context, loginEntity.getData().getMobile(), loginEntity.getData().getUser_token());
                 break;
             //进入交易入口
             case R.id.iv_deal_enter:
@@ -693,28 +713,28 @@ public class MyFragment extends BaseFragment<MyFragmentPresenterImpl, FragmentMy
     }
 
     private boolean isQmmSdkInit = false;
-    private JNBaseRequestCallback callback = new JNBaseRequestCallback() {
-        @Override
-        public void process(int id, JNResponse response) {
-            if (id == JNMessageId.JN_INIT.getId()) {   //初始化业务ID
-                if (response.getCode() == 0) {
-                    //设置登录回调
-                    JNLoanAgent.getInstance().setLoginCallback(callback);
-                } else {
-                    Log.e("qmmSdk", "-->code = " + response.getCode() + "，msg = " + response.getMsg());
-                }
-            } else if (id == JNMessageId.JN_LOGIN.getId()) {   //登录回调业务
-                if (response.getCode() == 0) {
-                    ResultItem it = response.getData();
-                    //openId 商戶可以保存到自己服務器，在跟sdk服务器数据回传的时候，需要传openId
-                    String openId = it.getString("openId");
-                    //todo 把openId保存到自己服务器
-                    Log.d("qmmSdk", "-->openId = " + openId);
-                    setQmmOpenId(openId);
-                }
-            }
-        }
-    };
+//    private JNBaseRequestCallback callback = new JNBaseRequestCallback() {
+//        @Override
+//        public void process(int id, JNResponse response) {
+//            if (id == JNMessageId.JN_INIT.getId()) {   //初始化业务ID
+//                if (response.getCode() == 0) {
+//                    //设置登录回调
+//                    JNLoanAgent.getInstance().setLoginCallback(callback);
+//                } else {
+//                    Log.e("qmmSdk", "-->code = " + response.getCode() + "，msg = " + response.getMsg());
+//                }
+//            } else if (id == JNMessageId.JN_LOGIN.getId()) {   //登录回调业务
+//                if (response.getCode() == 0) {
+//                    ResultItem it = response.getData();
+//                    //openId 商戶可以保存到自己服務器，在跟sdk服务器数据回传的时候，需要传openId
+//                    String openId = it.getString("openId");
+//                    //todo 把openId保存到自己服务器
+//                    Log.d("qmmSdk", "-->openId = " + openId);
+//                    setQmmOpenId(openId);
+//                }
+//            }
+//        }
+//    };
 
     private void setQmmOpenId(String openId) {
         LoginEntity loginEntity = Paper.book().read(PagerCons.USER_DATA);
@@ -832,7 +852,7 @@ public class MyFragment extends BaseFragment<MyFragmentPresenterImpl, FragmentMy
             @Override
             public void onNoDoubleClick(View view) {
                 if (LoginEntity.getIsLogin()) {
-                    MobclickAgent.onEvent(context, EventID.MINE_TOPRIGHT_SHARE);    //我的-分享-埋点
+                   // MobclickAgent.onEvent(context, EventID.MINE_TOPRIGHT_SHARE);    //我的-分享-埋点
                     shareInfo.setUrl_type(ShareInfo.TYPE_ME);
                     shareInfo.setUrl_path(ShareInfo.PATH_PERSONAL_CENTER);
                     mShareDialog = new ShareDialog(getActivity(), shareInfo, null);
@@ -1538,14 +1558,14 @@ public class MyFragment extends BaseFragment<MyFragmentPresenterImpl, FragmentMy
         if (LoginEntity.getIsLogin()) {
             if (LoginEntity.getIsNew()) {
                 map.put("onLine", System.currentTimeMillis() / 1000 - (newUserStartTime == 0 ? System.currentTimeMillis() / 1000 : touristsStartTime));
-                MobclickAgent.onEventObject(MyApplication.getContext(), EventID.MYCENTERPAGE_USETIME, map);
+               // MobclickAgent.onEventObject(MyApplication.getContext(), EventID.MYCENTERPAGE_USETIME, map);
             } else {
                 map.put("onLine", System.currentTimeMillis() / 1000 - (oldUserStartTime == 0 ? System.currentTimeMillis() / 1000 : touristsStartTime));
-                MobclickAgent.onEventObject(MyApplication.getContext(), EventID.MINEPAGE_OLD_USETIME, map);
+              //  MobclickAgent.onEventObject(MyApplication.getContext(), EventID.MINEPAGE_OLD_USETIME, map);
             }
         } else {
             map.put("onLine", System.currentTimeMillis() / 1000 - (touristsStartTime == 0 ? System.currentTimeMillis() / 1000 : touristsStartTime));
-            MobclickAgent.onEventObject(MyApplication.getContext(), EventID.MINEPAGE_TOURISTS_USETIME, map);
+           // MobclickAgent.onEventObject(MyApplication.getContext(), EventID.MINEPAGE_TOURISTS_USETIME, map);
         }
     }
 

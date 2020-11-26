@@ -3,12 +3,13 @@ package com.newsuper.t.juejinbao.ui.movie.activity;
 import android.content.Context;
 import android.content.Intent;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.ActivityWebmoviedetailBinding;
-import com.juejinchain.android.module.home.presenter.impl.PublicPresenterImpl;
-import com.ys.network.base.BaseActivity;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivityWebmoviedetailBinding;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.ui.home.presenter.impl.PublicPresenterImpl;
 
-public class JSWebMovieDetailActivity extends BaseActivity<PublicPresenterImpl , ActivityWebmoviedetailBinding> {
+
+public class JSWebMovieDetailActivity extends BaseActivity<PublicPresenterImpl, ActivityWebmoviedetailBinding> {
 
     @Override
     public boolean setStatusBarColor() {

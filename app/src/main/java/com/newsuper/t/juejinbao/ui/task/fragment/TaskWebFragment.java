@@ -12,11 +12,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebChromeClient;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.module.WebFragment;
-import com.juejinchain.android.module.movie.utils.Utils;
-import com.juejinchain.android.module.movie.utils.WebViewUtils;
-
+import com.newsuper.t.R;
+import com.newsuper.t.juejinbao.ui.WebFragment;
+import com.newsuper.t.juejinbao.ui.movie.utils.Utils;
+import com.newsuper.t.juejinbao.ui.movie.utils.WebViewUtils;
 
 public class TaskWebFragment extends WebFragment {
 

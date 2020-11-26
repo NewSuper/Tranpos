@@ -16,15 +16,14 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.flyco.tablayout.listener.OnTabSelectListener;
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.FragmentMoveTabBinding;
-import com.juejinchain.android.module.movie.adapter.MoviePagerFragmentAdapter;
-import com.juejinchain.android.module.movie.adapter.MovieTabPagerFragmentAdapter;
-import com.juejinchain.android.module.movie.entity.MovieTabDataEntity;
-import com.juejinchain.android.module.movie.presenter.impl.MovieTabFragmentImpl;
-import com.juejinchain.android.module.movie.utils.Utils;
-import com.ys.network.base.BaseActivity;
-import com.ys.network.base.BaseFragment;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.FragmentMoveTabBinding;
+import com.newsuper.t.juejinbao.base.BaseFragment;
+import com.newsuper.t.juejinbao.ui.movie.adapter.MovieTabPagerFragmentAdapter;
+import com.newsuper.t.juejinbao.ui.movie.entity.MovieTabDataEntity;
+import com.newsuper.t.juejinbao.ui.movie.presenter.impl.MovieTabFragmentImpl;
+import com.newsuper.t.juejinbao.ui.movie.utils.Utils;
+
 
 import java.util.ArrayList;
 import java.util.List;

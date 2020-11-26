@@ -4,15 +4,15 @@ import android.content.Intent;
 import android.text.TextUtils;
 import android.view.View;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.ActivityDefaultInviteTipBinding;
-import com.juejinchain.android.module.login.entity.DefaultIntviteCodeEntity;
-import com.juejinchain.android.module.login.presenter.DefaultInvitePresenter;
-import com.juejinchain.android.module.login.presenter.impl.DefaultInvitePresenterImpl;
-import com.ys.network.base.BaseActivity;
-import com.ys.network.base.BaseApplication;
-import com.ys.network.utils.ToastUtils;
-import com.ys.network.utils.androidUtils.StatusBarUtil;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivityDefaultInviteTipBinding;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.base.JJBApplication;
+import com.newsuper.t.juejinbao.ui.login.entity.DefaultIntviteCodeEntity;
+import com.newsuper.t.juejinbao.ui.login.presenter.DefaultInvitePresenter;
+import com.newsuper.t.juejinbao.ui.login.presenter.impl.DefaultInvitePresenterImpl;
+import com.newsuper.t.juejinbao.utils.ToastUtils;
+import com.newsuper.t.juejinbao.utils.androidUtils.StatusBarUtil;
 
 import java.io.Serializable;
 import java.util.HashMap;
@@ -54,10 +54,10 @@ public class DefaultInviteTipActivity extends BaseActivity<DefaultInvitePresente
         });
         // 原有渠道不提供官方邀请码
         if(
-                BaseApplication.getChannel().equals("normal")||
-                        BaseApplication.getChannel().equals("vivo")||
-                        BaseApplication.getChannel().equals("yingyongbao")||
-                        BaseApplication.getChannel().equals("other")
+                JJBApplication.getChannel().equals("normal")||
+                        JJBApplication.getChannel().equals("vivo")||
+                        JJBApplication.getChannel().equals("yingyongbao")||
+                        JJBApplication.getChannel().equals("other")
         ){
             mViewBinding.tvDesc.setText("【邀请码】是掘金宝为会员提供的专属编码，新会员需要有老会员的邀请码推荐才能在掘金宝得到会员身份，并获得会员权益。\n" +
                     "您可以百度搜索“掘金宝邀请码”发现您身边的会员，快来一起体验掘金宝的会员生活吧。");

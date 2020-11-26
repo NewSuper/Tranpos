@@ -17,14 +17,15 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.bitmap.CenterCrop;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.bumptech.glide.request.RequestOptions;
-import com.juejinchain.android.R;
-import com.juejinchain.android.base.Constant;
-import com.juejinchain.android.databinding.FragmentLatestalbumlistBinding;
-import com.juejinchain.android.module.movie.adapter.EasyAdapter;
-import com.juejinchain.android.module.song.Activity.MusicMenuActivity;
-import com.juejinchain.android.module.song.entity.LatestAlbumListEntity;
-import com.juejinchain.android.module.song.presenter.impl.LatestAlbumListImpl;
-import com.ys.network.base.BaseFragment;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.FragmentLatestalbumlistBinding;
+import com.newsuper.t.juejinbao.base.BaseFragment;
+import com.newsuper.t.juejinbao.base.Constant;
+import com.newsuper.t.juejinbao.ui.movie.adapter.EasyAdapter;
+import com.newsuper.t.juejinbao.ui.song.Activity.MusicMenuActivity;
+import com.newsuper.t.juejinbao.ui.song.entity.LatestAlbumListEntity;
+import com.newsuper.t.juejinbao.ui.song.presenter.impl.LatestAlbumListImpl;
+
 
 import java.util.ArrayList;
 import java.util.List;

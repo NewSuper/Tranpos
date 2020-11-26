@@ -1,10 +1,6 @@
 package com.newsuper.t.juejinbao.ui.upnp;
 
-/**
- * 说明：
- * 作者：zhouzhan
- * 日期：17/7/6 11:32
- */
+
 
 public class Config {
 

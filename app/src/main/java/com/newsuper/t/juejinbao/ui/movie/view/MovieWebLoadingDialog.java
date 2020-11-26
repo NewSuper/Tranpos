@@ -9,9 +9,8 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.DialogMoviesearchLoadingBinding;
-import com.juejinchain.android.databinding.DialogMoviesearchwebLoadingBinding;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.DialogMoviesearchwebLoadingBinding;
 
 import java.util.concurrent.TimeUnit;
 
@@ -25,10 +24,7 @@ public class MovieWebLoadingDialog {
     private Context context;
     DialogMoviesearchwebLoadingBinding mViewBinding;
 
-
     private Dialog mDialog;
-
-
 
     public MovieWebLoadingDialog(Context context) {
         this.context = context;
@@ -53,8 +49,6 @@ public class MovieWebLoadingDialog {
 
         mDialog.setCanceledOnTouchOutside(false);
 
-
-
     }
 
 
@@ -73,14 +67,8 @@ public class MovieWebLoadingDialog {
     }
 
 
-
     public void hide() {
         mDialog.dismiss();
     }
-
-
-
-
-
 
 }

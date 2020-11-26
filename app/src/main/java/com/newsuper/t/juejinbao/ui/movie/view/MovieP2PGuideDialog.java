@@ -9,9 +9,8 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.juejinchain.android.R;
-import com.umeng.commonsdk.debug.E;
-import com.ys.network.base.PagerCons;
+import com.newsuper.t.R;
+import com.newsuper.t.juejinbao.base.PagerCons;
 
 import static io.paperdb.Paper.book;
 

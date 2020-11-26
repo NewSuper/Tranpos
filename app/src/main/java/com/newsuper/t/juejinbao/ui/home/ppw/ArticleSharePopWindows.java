@@ -5,7 +5,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.view.View;
 import android.widget.PopupWindow;
 
-import com.juejinchain.android.R;
+import com.newsuper.t.R;
 
 
 public class ArticleSharePopWindows extends PopupWindow {

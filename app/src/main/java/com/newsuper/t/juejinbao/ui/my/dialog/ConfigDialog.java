@@ -15,8 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.utils.DataCleanManager;
+import com.newsuper.t.R;
 import com.qq.e.comm.util.StringUtil;
 
 import io.paperdb.Paper;

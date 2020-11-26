@@ -1058,9 +1058,7 @@
                                         app:mvGravity="left"
                                         app:mvInterval="1500"
                                         app:mvSingleLine="true"
-                                        app:mvTextSize="@dimen/ws12dp">
-
-                                    </com.sunfusheng.marqueeview.MarqueeView>
+                                        app:mvTextSize="@dimen/ws12dp"/>
                                 </LinearLayout>
                             </LinearLayout>
                         </LinearLayout>

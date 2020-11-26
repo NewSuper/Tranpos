@@ -16,16 +16,14 @@ import android.widget.GridLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.ViewSelecttvplaylistPopupBinding;
-import com.juejinchain.android.module.movie.adapter.EasyAdapter;
-import com.juejinchain.android.module.movie.bean.SelectSniff;
-import com.juejinchain.android.module.movie.craw.moviedetail.BeanMovieDetail;
-import com.juejinchain.android.module.movie.entity.MovieThirdIframeEntity;
-import com.juejinchain.android.module.movie.player.EventControllerPlayUrl;
-import com.juejinchain.android.module.movie.utils.StartSniffingListener;
-import com.juejinchain.android.module.movie.utils.Utils;
-import com.juejinchain.android.utils.MyToast;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ViewSelecttvplaylistPopupBinding;
+import com.newsuper.t.juejinbao.ui.movie.adapter.EasyAdapter;
+import com.newsuper.t.juejinbao.ui.movie.bean.SelectSniff;
+import com.newsuper.t.juejinbao.ui.movie.craw.moviedetail.BeanMovieDetail;
+import com.newsuper.t.juejinbao.ui.movie.player.EventControllerPlayUrl;
+import com.newsuper.t.juejinbao.ui.movie.utils.StartSniffingListener;
+import com.newsuper.t.juejinbao.ui.movie.utils.Utils;
 
 import org.greenrobot.eventbus.EventBus;
 

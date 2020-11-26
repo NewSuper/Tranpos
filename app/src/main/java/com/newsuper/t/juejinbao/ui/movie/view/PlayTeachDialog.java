@@ -9,8 +9,9 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.DialogPlayteachBinding;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.DialogPlayteachBinding;
+
 
 public class PlayTeachDialog {
     private Context context;
@@ -38,8 +39,6 @@ public class PlayTeachDialog {
         //高度包裹内容
         wl.height = ViewGroup.LayoutParams.WRAP_CONTENT;
         window.setAttributes(wl);
-
-
         //关闭
         mViewBinding.tvClose.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -47,12 +46,7 @@ public class PlayTeachDialog {
             }
         });
 
-
-
-
     }
-
-
 
     public void show() {
         mDialog.show();

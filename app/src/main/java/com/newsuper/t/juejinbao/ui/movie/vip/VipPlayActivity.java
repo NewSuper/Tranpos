@@ -31,16 +31,16 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import com.bumptech.glide.Glide;
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.ActivityVipplayBinding;
-import com.juejinchain.android.jsbridge.BridgeWebView;
-import com.juejinchain.android.jsbridge.BridgeWebViewClient;
-import com.juejinchain.android.module.movie.bean.YXL;
-import com.juejinchain.android.module.movie.presenter.impl.VipPlayImpl;
-import com.juejinchain.android.module.movie.utils.Utils;
-import com.juejinchain.android.module.movie.view.YXLDialog;
-import com.ys.network.base.BaseActivity;
-import com.ys.network.network.RetrofitManager;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivityVipplayBinding;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.base.RetrofitManager;
+import com.newsuper.t.juejinbao.ui.movie.bean.YXL;
+import com.newsuper.t.juejinbao.ui.movie.presenter.impl.VipPlayImpl;
+import com.newsuper.t.juejinbao.ui.movie.utils.Utils;
+import com.newsuper.t.juejinbao.ui.movie.view.YXLDialog;
+import com.newsuper.t.juejinbao.utils.jsbridge.BridgeWebView;
+import com.newsuper.t.juejinbao.utils.jsbridge.BridgeWebViewClient;
 
 import org.json.JSONException;
 import org.json.JSONObject;

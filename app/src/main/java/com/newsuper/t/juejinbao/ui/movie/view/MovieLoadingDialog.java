@@ -14,10 +14,9 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.DialogGoldBinding;
-import com.juejinchain.android.databinding.DialogMoviesearchLoadingBinding;
-import com.ys.network.utils.ToastUtils;
+
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.DialogMoviesearchLoadingBinding;
 
 import java.util.concurrent.TimeUnit;
 

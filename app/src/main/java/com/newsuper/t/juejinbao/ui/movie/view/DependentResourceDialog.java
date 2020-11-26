@@ -13,13 +13,14 @@ import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.DialogDependentresourceBinding;
-import com.juejinchain.android.module.movie.adapter.DependentResourceAdapter;
-import com.juejinchain.android.module.movie.adapter.DependentResourceConditionAdapter;
-import com.juejinchain.android.module.movie.adapter.EasyAdapter;
-import com.juejinchain.android.module.movie.entity.DependentResourcesDataEntity;
-import com.juejinchain.android.module.movie.presenter.impl.DependentResourceImpl;
+
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.DialogDependentresourceBinding;
+import com.newsuper.t.juejinbao.ui.movie.adapter.DependentResourceAdapter;
+import com.newsuper.t.juejinbao.ui.movie.adapter.DependentResourceConditionAdapter;
+import com.newsuper.t.juejinbao.ui.movie.adapter.EasyAdapter;
+import com.newsuper.t.juejinbao.ui.movie.entity.DependentResourcesDataEntity;
+import com.newsuper.t.juejinbao.ui.movie.presenter.impl.DependentResourceImpl;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;

@@ -6,17 +6,17 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.ActivityMoviesearchMzsmBinding;
-import com.juejinchain.android.module.home.presenter.impl.PublicPresenterImpl;
-import com.juejinchain.android.utils.ClickUtil;
-import com.ys.network.base.BaseActivity;
-import com.ys.network.utils.androidUtils.StatusBarUtil;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivityMoviesearchMzsmBinding;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.ui.home.presenter.impl.PublicPresenterImpl;
+import com.newsuper.t.juejinbao.utils.ClickUtil;
+import com.newsuper.t.juejinbao.utils.androidUtils.StatusBarUtil;
 
 /**
  * 影视搜索免责声明
  */
-public class MovieSearchMZSMActivity extends BaseActivity<PublicPresenterImpl , ActivityMoviesearchMzsmBinding> {
+public class MovieSearchMZSMActivity extends BaseActivity<PublicPresenterImpl, ActivityMoviesearchMzsmBinding> {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

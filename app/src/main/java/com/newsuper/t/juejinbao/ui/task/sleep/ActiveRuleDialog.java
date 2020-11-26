@@ -8,9 +8,9 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
-import com.juejinchain.android.R;
-import com.ys.network.utils.ScreenUtils;
-import com.ys.network.utils.androidUtils.NotchScreenUtil;
+import com.newsuper.t.R;
+import com.newsuper.t.juejinbao.utils.ScreenUtils;
+import com.newsuper.t.juejinbao.utils.androidUtils.NotchScreenUtil;
 
 public class ActiveRuleDialog extends Dialog implements View.OnClickListener {
 

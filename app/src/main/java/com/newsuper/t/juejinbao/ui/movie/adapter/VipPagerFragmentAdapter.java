@@ -14,6 +14,7 @@ import com.newsuper.t.juejinbao.ui.book.fragment.ReadFragment;
 import com.newsuper.t.juejinbao.ui.movie.entity.MovieShowBookEntity;
 import com.newsuper.t.juejinbao.ui.movie.fragment.AlertWebFragment;
 import com.newsuper.t.juejinbao.ui.movie.fragment.MovieFragment;
+import com.newsuper.t.juejinbao.ui.movie.fragment.RefreshWebFragment;
 import com.newsuper.t.juejinbao.ui.song.fragment.MusicFragment;
 
 import java.util.List;

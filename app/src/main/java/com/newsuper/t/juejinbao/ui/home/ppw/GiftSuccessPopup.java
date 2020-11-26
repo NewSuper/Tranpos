@@ -8,18 +8,19 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import com.alibaba.fastjson.JSONObject;
-import com.juejinchain.android.R;
-import com.juejinchain.android.view.CustomPopWindow;
+import com.newsuper.t.R;
+import com.newsuper.t.juejinbao.view.CustomPopWindow;
 
 import org.greenrobot.eventbus.EventBus;
 
 
 //public class GiftSuccessPopup extends CustomPopWindow {
-//    private TextView mTvCount;
-//    public Button mLookButton;
-//    private TextView mTvJJB;
-//    private TextView mTvMoney;
-//
+public class GiftSuccessPopup {
+    private TextView mTvCount;
+    public Button mLookButton;
+    private TextView mTvJJB;
+    private TextView mTvMoney;
+
 //    public GiftSuccessPopup(Context context) {
 //        super(context);
 //        initView();
@@ -62,5 +63,5 @@ import org.greenrobot.eventbus.EventBus;
 //    protected Animation onCreateDismissAnimation() {
 //        return super.onCreateDismissAnimation();
 //    }
-//
-//}
+
+}

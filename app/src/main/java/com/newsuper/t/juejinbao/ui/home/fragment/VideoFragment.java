@@ -11,21 +11,21 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.flyco.tablayout.listener.OnTabSelectListener;
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.FragmentVideoBinding;
-import com.juejinchain.android.event.UpdateVideoChannelEvent;
-import com.juejinchain.android.module.home.NetInfo.ChannelInfo;
-import com.juejinchain.android.module.home.activity.VideoChannelManagerActivity;
-import com.juejinchain.android.module.home.adapter.VideoPagerFragmentAdapter;
-import com.juejinchain.android.module.login.activity.GuideLoginActivity;
-import com.ys.network.base.PagerCons;
-import com.juejinchain.android.module.home.entity.ChannelEntity;
-import com.juejinchain.android.module.home.presenter.VideoFragmentPresenter;
-import com.juejinchain.android.module.home.presenter.impl.VideoFragmentPresenterImpl;
-import com.ys.network.base.LoginEntity;
-import com.juejinchain.android.utils.MyToast;
-import com.ys.network.base.BaseFragment;
-import com.ys.network.utils.ToastUtils;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.FragmentVideoBinding;
+import com.newsuper.t.juejinbao.base.BaseFragment;
+import com.newsuper.t.juejinbao.base.PagerCons;
+import com.newsuper.t.juejinbao.bean.LoginEntity;
+import com.newsuper.t.juejinbao.bean.UpdateVideoChannelEvent;
+import com.newsuper.t.juejinbao.ui.home.NetInfo.ChannelInfo;
+import com.newsuper.t.juejinbao.ui.home.activity.VideoChannelManagerActivity;
+import com.newsuper.t.juejinbao.ui.home.adapter.VideoPagerFragmentAdapter;
+import com.newsuper.t.juejinbao.ui.home.entity.ChannelEntity;
+import com.newsuper.t.juejinbao.ui.home.presenter.VideoFragmentPresenter;
+import com.newsuper.t.juejinbao.ui.home.presenter.impl.VideoFragmentPresenterImpl;
+import com.newsuper.t.juejinbao.ui.login.activity.GuideLoginActivity;
+import com.newsuper.t.juejinbao.utils.MyToast;
+import com.newsuper.t.juejinbao.utils.ToastUtils;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -40,10 +40,7 @@ import cn.jzvd.Jzvd;
 import io.paperdb.Paper;
 
 public class VideoFragment extends BaseFragment<VideoFragmentPresenterImpl, FragmentVideoBinding> implements VideoFragmentPresenter.View {
-
-
     List<ChannelEntity> channelEntities = new ArrayList<>();
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

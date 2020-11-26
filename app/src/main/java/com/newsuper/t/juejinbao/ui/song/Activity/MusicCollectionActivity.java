@@ -17,23 +17,23 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.bitmap.CenterCrop;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.bumptech.glide.request.RequestOptions;
-import com.juejinchain.android.R;
-import com.juejinchain.android.base.Constant;
-import com.juejinchain.android.databinding.ActivityMusiccollectionBinding;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivityMusiccollectionBinding;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.base.Constant;
+import com.newsuper.t.juejinbao.ui.movie.adapter.EasyAdapter2;
+import com.newsuper.t.juejinbao.ui.movie.utils.Utils;
+import com.newsuper.t.juejinbao.ui.song.entity.MusicCollectionEntity;
+import com.newsuper.t.juejinbao.ui.song.manager.SongPlayManager;
+import com.newsuper.t.juejinbao.ui.song.presenter.impl.MusicCollectionImpl;
+import com.newsuper.t.juejinbao.utils.MyToast;
+import com.newsuper.t.juejinbao.utils.androidUtils.StatusBarUtil;
 
-import com.juejinchain.android.module.movie.adapter.EasyAdapter2;
-import com.juejinchain.android.module.movie.utils.Utils;
-import com.juejinchain.android.module.song.entity.MusicCollectionEntity;
-import com.juejinchain.android.module.song.manager.SongPlayManager;
-import com.juejinchain.android.module.song.presenter.impl.MusicCollectionImpl;
-import com.juejinchain.android.utils.MyToast;
-import com.ys.network.base.BaseActivity;
-import com.ys.network.utils.androidUtils.StatusBarUtil;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MusicCollectionActivity extends BaseActivity<MusicCollectionImpl , ActivityMusiccollectionBinding> implements MusicCollectionImpl.MvpView {
+public class MusicCollectionActivity extends BaseActivity<MusicCollectionImpl, ActivityMusiccollectionBinding> implements MusicCollectionImpl.MvpView {
 
     EasyAdapter2 adapter = null;
 
@@ -132,8 +132,6 @@ public class MusicCollectionActivity extends BaseActivity<MusicCollectionImpl , 
                 MusicMenuActivity.intentMe(mActivity, Constant.MUSIC_COLLECTION , null,null);
             }
         });
-
-
 
     }
 

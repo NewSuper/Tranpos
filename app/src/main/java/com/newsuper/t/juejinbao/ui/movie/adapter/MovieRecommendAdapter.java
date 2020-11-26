@@ -14,33 +14,17 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.bumptech.glide.request.RequestOptions;
-import com.juejinchain.android.R;
-import com.juejinchain.android.module.movie.bean.AdapterItem;
-import com.juejinchain.android.module.movie.craw.BeanMovieSearchItem;
-import com.juejinchain.android.module.movie.entity.MovieLooklDataEntity;
-import com.juejinchain.android.module.movie.entity.MoviePostDataEntity;
-import com.juejinchain.android.module.movie.utils.DateUtils;
-import com.juejinchain.android.module.movie.utils.OnClickReturnStringListener;
-import com.juejinchain.android.module.movie.utils.Utils;
-import com.juejinchain.android.view.RoundImageView;
-import com.ys.network.utils.StringUtils;
+import com.newsuper.t.R;
+import com.newsuper.t.juejinbao.ui.movie.craw.BeanMovieSearchItem;
+import com.newsuper.t.juejinbao.ui.movie.entity.MoviePostDataEntity;
+import com.newsuper.t.juejinbao.ui.movie.utils.OnClickReturnStringListener;
+import com.newsuper.t.juejinbao.ui.movie.utils.Utils;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @projectName: funball
- * @package: com.yunzhou.funlive.module.selectcode.adapter
- * @className: GridTextMatchAdapter
  * @description: 用于平均分的textview的grid
- * @author: Mages
- * @email: 940167298@qq.com
- * @createDate: 2019/4/2 17:16
- * @updateUser: 更新者
- * @updateDate: 2019/4/2 17:16
- * @updateRemark: 更新说明
- * @version: 1.0
- * @copyright: 2018-2019 (C)深圳市云舟网络科技有限公司 Inc. All rights reserved.
  */
 public class MovieRecommendAdapter extends RecyclerView.Adapter<MovieRecommendAdapter.MyViewHolder>{
     private Context context;

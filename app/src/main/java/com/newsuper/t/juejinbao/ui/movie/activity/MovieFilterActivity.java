@@ -10,32 +10,32 @@ import android.view.View;
 import android.widget.GridLayout;
 
 import com.bumptech.glide.Glide;
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.ActivityMoviefilterBinding;
-import com.juejinchain.android.module.MainActivity;
-import com.juejinchain.android.module.movie.adapter.ConditionAdapter;
-import com.juejinchain.android.module.movie.adapter.EasyAdapter;
-import com.juejinchain.android.module.movie.adapter.MovieMovieFilterAdapter;
-import com.juejinchain.android.module.movie.craw.BeanMovieSearchItem;
-import com.juejinchain.android.module.movie.entity.MovieMovieFilterDataEntity;
-import com.juejinchain.android.module.movie.entity.MovieTabDataEntity;
-import com.juejinchain.android.module.movie.presenter.impl.MovieFilterImpl;
-import com.juejinchain.android.module.movie.utils.OnClickReturnStringListener;
-import com.juejinchain.android.module.movie.utils.PreLoadUtils;
-import com.juejinchain.android.module.movie.view.DependentResourceDialog;
-import com.juejinchain.android.module.movie.view.WrapContentGridViewManager;
-import com.juejinchain.android.utils.GlideCacheUtil;
+
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivityMoviefilterBinding;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.ui.movie.adapter.ConditionAdapter;
+import com.newsuper.t.juejinbao.ui.movie.adapter.EasyAdapter;
+import com.newsuper.t.juejinbao.ui.movie.adapter.MovieMovieFilterAdapter;
+import com.newsuper.t.juejinbao.ui.movie.entity.MovieMovieFilterDataEntity;
+import com.newsuper.t.juejinbao.ui.movie.entity.MovieTabDataEntity;
+import com.newsuper.t.juejinbao.ui.movie.presenter.impl.MovieFilterImpl;
+import com.newsuper.t.juejinbao.ui.movie.utils.OnClickReturnStringListener;
+import com.newsuper.t.juejinbao.ui.movie.utils.PreLoadUtils;
+import com.newsuper.t.juejinbao.ui.movie.view.WrapContentGridViewManager;
+import com.newsuper.t.juejinbao.utils.GlideCacheUtil;
+import com.newsuper.t.juejinbao.utils.androidUtils.StatusBarUtil;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
-import com.ys.network.base.BaseActivity;
-import com.ys.network.utils.androidUtils.StatusBarUtil;
+
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.juejinchain.android.module.movie.fragment.MovieTabRecommendFragment.recommendRecyclerViewPool2;
+import static com.newsuper.t.juejinbao.ui.movie.fragment.MovieTabRecommendFragment.recommendRecyclerViewPool2;
+
 
 /**
  * 影视筛选
@@ -174,16 +174,13 @@ public class MovieFilterActivity extends BaseActivity<MovieFilterImpl, ActivityM
         mViewBinding.rvCondition3.setAdapter(conditionAdapter3);
 
         //主数据界面
-        movieMovieRecommendAdapter = new MovieMovieFilterAdapter(this, type, new OnClickReturnStringListener() {
-            @Override
-            public void onClick(BeanMovieSearchItem beanMovieSearchItem) {
+        movieMovieRecommendAdapter = new MovieMovieFilterAdapter(this, type, beanMovieSearchItem -> {
 //                if (dependentResourceDialog == null) {
 //                    dependentResourceDialog = new DependentResourceDialog(mActivity);
 //                }
 //                dependentResourceDialog.show(name);
-                MovieSearchActivity.intentMe(mActivity , beanMovieSearchItem.getTitle() , TextUtils.isEmpty(beanMovieSearchItem.getImg()) ? null : beanMovieSearchItem);
+            MovieSearchActivity.intentMe(mActivity , beanMovieSearchItem.getTitle() , TextUtils.isEmpty(beanMovieSearchItem.getImg()) ? null : beanMovieSearchItem);
 
-            }
         });
         WrapContentGridViewManager gridLayoutManager = new WrapContentGridViewManager(this, 3);
         //设置RecycleView显示的方向是水平还是垂直 GridLayout.HORIZONTAL水平  GridLayout.VERTICAL默认垂直

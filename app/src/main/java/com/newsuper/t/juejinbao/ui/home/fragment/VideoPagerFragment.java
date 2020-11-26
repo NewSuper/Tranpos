@@ -15,35 +15,28 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.bytedance.sdk.openadsdk.AdSlot;
-import com.bytedance.sdk.openadsdk.TTAdNative;
-import com.bytedance.sdk.openadsdk.TTFeedAd;
-import com.juejinchain.android.R;
-import com.juejinchain.android.config.TTAdManagerHolder;
-import com.juejinchain.android.databinding.FragmentVideoPagerBinding;
-import com.juejinchain.android.event.TabSelectedEvent;
-import com.juejinchain.android.event.TextSettingEvent;
-import com.juejinchain.android.module.MainActivity;
-import com.juejinchain.android.module.home.activity.VideoDetailActivity;
-import com.juejinchain.android.module.home.adapter.VideoPagerAdapter;
-import com.juejinchain.android.module.home.entity.ChannelEntity;
-import com.juejinchain.android.module.home.entity.HomeListEntity;
-import com.juejinchain.android.module.home.interf.OnItemClickListener;
-import com.juejinchain.android.module.home.presenter.VideoPagerPresenter;
-import com.juejinchain.android.module.home.presenter.impl.VideoPagerPresenterImpl;
-import com.juejinchain.android.module.login.activity.GuideLoginActivity;
-import com.juejinchain.android.module.share.dialog.ShareDialog;
-import com.juejinchain.android.module.share.entity.ShareInfo;
-import com.juejinchain.android.utils.ClickUtil;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.FragmentVideoPagerBinding;
+import com.newsuper.t.juejinbao.base.BaseFragment;
+import com.newsuper.t.juejinbao.base.PagerCons;
+import com.newsuper.t.juejinbao.bean.LoginEntity;
+import com.newsuper.t.juejinbao.bean.TabSelectedEvent;
+import com.newsuper.t.juejinbao.bean.TextSettingEvent;
+import com.newsuper.t.juejinbao.ui.JunjinBaoMainActivity;
+import com.newsuper.t.juejinbao.ui.home.activity.VideoDetailActivity;
+import com.newsuper.t.juejinbao.ui.home.adapter.VideoPagerAdapter;
+import com.newsuper.t.juejinbao.ui.home.entity.ChannelEntity;
+import com.newsuper.t.juejinbao.ui.home.entity.HomeListEntity;
+import com.newsuper.t.juejinbao.ui.home.interf.OnItemClickListener;
+import com.newsuper.t.juejinbao.ui.home.presenter.VideoPagerPresenter;
+import com.newsuper.t.juejinbao.ui.home.presenter.impl.VideoPagerPresenterImpl;
+import com.newsuper.t.juejinbao.ui.login.activity.GuideLoginActivity;
+import com.newsuper.t.juejinbao.ui.share.dialog.ShareDialog;
+import com.newsuper.t.juejinbao.ui.share.entity.ShareInfo;
+import com.newsuper.t.juejinbao.utils.ClickUtil;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
-import com.umeng.analytics.MobclickAgent;
-import com.ys.network.base.BaseFragment;
-import com.ys.network.base.EventID;
-import com.ys.network.base.LoginEntity;
-import com.ys.network.base.PagerCons;
-
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
@@ -77,8 +70,8 @@ public class VideoPagerFragment extends BaseFragment<VideoPagerPresenterImpl, Fr
      */
     final int AD_Per_ReqCount = 3;
     int loadAdCount = 1;
-    private List<TTFeedAd> mTTFeedAds = new ArrayList<>();     //显示的广告
-    private List<TTFeedAd> mLastRemainAd = new ArrayList<>();       //上次加载未显示的广告
+  //  private List<TTFeedAd> mTTFeedAds = new ArrayList<>();     //显示的广告
+  //  private List<TTFeedAd> mLastRemainAd = new ArrayList<>();       //上次加载未显示的广告
 
     final int AD_Interval = 3;        //间隔多少行显示一条广告
     int adLastPos = AD_Interval - 1;    //广告插入位置
@@ -283,7 +276,7 @@ public class VideoPagerFragment extends BaseFragment<VideoPagerPresenterImpl, Fr
      */
     @Subscribe
     public void onTabSelectedEvent(TabSelectedEvent event) {
-        if (event.position == MainActivity.HOME && event.channelName.equals("视频")) {
+        if (event.position == JunjinBaoMainActivity.HOME && event.channelName.equals("视频")) {
             isRefresh = true;
             scrollToTopAndRefresh();
         }
@@ -337,7 +330,7 @@ public class VideoPagerFragment extends BaseFragment<VideoPagerPresenterImpl, Fr
 
                 } else {
                     if (LoginEntity.getIsLogin()) {
-                        MobclickAgent.onEvent(context, EventID.HOMEPAGE_VIDEO_SHARE);   //首页-视频分享-埋点
+                        //MobclickAgent.onEvent(context, EventID.HOMEPAGE_VIDEO_SHARE);   //首页-视频分享-埋点
                         shareInfo.setUrl_type(ShareInfo.TYPE_VIDEO);
                         shareInfo.setUrl_path("/VideoDetail/" + model.getId());
 
@@ -403,7 +396,7 @@ public class VideoPagerFragment extends BaseFragment<VideoPagerPresenterImpl, Fr
         }
 
         if (mData.size() > AD_Interval && homeListEntity.getData().size() != 0) {
-            loadListAd(homeListEntity.getData().size(), isTop); //加载广告
+           // loadListAd(homeListEntity.getData().size(), isTop); //加载广告
         }
 
         videoPagerAdapter.setTextSizeLevel(book().read(PagerCons.KEY_TEXTSET_SIZE, "middle"));
@@ -442,107 +435,107 @@ public class VideoPagerFragment extends BaseFragment<VideoPagerPresenterImpl, Fr
     /**
      * 加载穿山甲信息流广告
      *
-     * @param contentCount 本次加载文章条数
-     * @param isTop        加到头部还是尾部
+     * @paramcontentCount 本次加载文章条数
+     * @paramisTop        加到头部还是尾部
      */
-    void loadListAd(int contentCount, boolean isTop) {
-        int adPerCount = book().read(PagerCons.KEY_INTERVAL_HOME_PAGE_AD, 2);
-        /**
-         * 头条联盟信息流广告大图的尺寸为（690px*388px）、小图尺寸为（228px*150px）、组图为（228px*150px*3）
-         */
-        //feed广告请求类型参数
-        AdSlot adSlot = new AdSlot.Builder()
-                .setCodeId(TTAdManagerHolder.POS_ID_VIDEO)
-                .setSupportDeepLink(true)
-                .setImageAcceptedSize(690, 388) //加载返回类型是随机的，通过参数也改不了
-                .setAdCount(adPerCount) // 可选参数，针对信息流广告设置每次请求的广告返回个数，最多支持3个
-                .build();
-
-        //调用feed广告异步请求接口
-        MainActivity.mTTAdNative.loadFeedAd(adSlot, new TTAdNative.FeedAdListener() {
-            @Override
-            public void onError(int code, String message) {
-
-//                TToast.show(getContext(), "穿山甲异常："+message);
-            }
-
-            @Override
-            public void onFeedAdLoad(List<TTFeedAd> ads) {
-                if (ads == null || ads.isEmpty()) {
-//                    TToast.show(getContext(), "on FeedAdLoaded: ad is null!");
-                    return;
-                }
-
-
-//                ads = ADUtils.removeDuplicate(ads, mTTFeedAds);
-                //去除重复为空时，再加载两次
-                if (ads.size() == 0 && loadAdCount < 3) {
-                    loadAdCount++;
-                    loadListAd(contentCount, isTop);
-                    return;
-                }
-                loadAdCount = 1;
-
-                //一页多条时循环
-                for (int pos = 0; pos < ads.size(); pos++) {
-                    TTFeedAd ad = ads.get(pos);
-                    //非视频不加载
-//                    if (ad.getImageMode() != TTAdConstant.IMAGE_MODE_VIDEO) continue;
-
-//                    while (mData.get(adLastPos) instanceof TTFeedAd){
-//                        adLastPos += AD_Interval;     //正常往后加载用这个
-//                        if (adLastPos >= mData.size()){
-////                            adLastPos = mData.size()-1;
-////                            break;  //加到尾部时
-//                            return;
+//    void loadListAd(int contentCount, boolean isTop) {
+//        int adPerCount = book().read(PagerCons.KEY_INTERVAL_HOME_PAGE_AD, 2);
+//        /**
+//         * 头条联盟信息流广告大图的尺寸为（690px*388px）、小图尺寸为（228px*150px）、组图为（228px*150px*3）
+//         */
+//        //feed广告请求类型参数
+//        AdSlot adSlot = new AdSlot.Builder()
+//                .setCodeId(TTAdManagerHolder.POS_ID_VIDEO)
+//                .setSupportDeepLink(true)
+//                .setImageAcceptedSize(690, 388) //加载返回类型是随机的，通过参数也改不了
+//                .setAdCount(adPerCount) // 可选参数，针对信息流广告设置每次请求的广告返回个数，最多支持3个
+//                .build();
+//
+//        //调用feed广告异步请求接口
+//        MainActivity.mTTAdNative.loadFeedAd(adSlot, new TTAdNative.FeedAdListener() {
+//            @Override
+//            public void onError(int code, String message) {
+//
+////                TToast.show(getContext(), "穿山甲异常："+message);
+//            }
+//
+//            @Override
+//            public void onFeedAdLoad(List<TTFeedAd> ads) {
+//                if (ads == null || ads.isEmpty()) {
+////                    TToast.show(getContext(), "on FeedAdLoaded: ad is null!");
+//                    return;
+//                }
+//
+//
+////                ads = ADUtils.removeDuplicate(ads, mTTFeedAds);
+//                //去除重复为空时，再加载两次
+//                if (ads.size() == 0 && loadAdCount < 3) {
+//                    loadAdCount++;
+//                    loadListAd(contentCount, isTop);
+//                    return;
+//                }
+//                loadAdCount = 1;
+//
+//                //一页多条时循环
+//                for (int pos = 0; pos < ads.size(); pos++) {
+//                    TTFeedAd ad = ads.get(pos);
+//                    //非视频不加载
+////                    if (ad.getImageMode() != TTAdConstant.IMAGE_MODE_VIDEO) continue;
+//
+////                    while (mData.get(adLastPos) instanceof TTFeedAd){
+////                        adLastPos += AD_Interval;     //正常往后加载用这个
+////                        if (adLastPos >= mData.size()){
+//////                            adLastPos = mData.size()-1;
+//////                            break;  //加到尾部时
+////                            return;
+////                        }
+////                    }
+//
+////                    mData.set(adLastPos, ad);
+//
+//                    float percent = 2.0f / 3;
+//
+//
+//                    if (isTop) {
+//                        //下拉刷新
+//                        if (pos == 0) {
+//                            percent = 1.0f / 3;
+//                        } else if (pos == 1) {
+//                            percent = 2.0f / 3; //第二条时
+//                        } else if (pos == 2) {
+//                            percent = 3 / 3; //第二条时
+//                        }
+//
+//                    } else {
+//                        //上拉加载
+//                        if (pos == 0) {
+//                            percent = 0;
+//                        } else if (pos == 1) {
+//                            percent = 1.0f / 3; //第二条时
+//                        } else if (pos == 2) {
+//                            percent = 2.0f / 3; //第二条时
 //                        }
 //                    }
-
-//                    mData.set(adLastPos, ad);
-
-                    float percent = 2.0f / 3;
-
-
-                    if (isTop) {
-                        //下拉刷新
-                        if (pos == 0) {
-                            percent = 1.0f / 3;
-                        } else if (pos == 1) {
-                            percent = 2.0f / 3; //第二条时
-                        } else if (pos == 2) {
-                            percent = 3 / 3; //第二条时
-                        }
-
-                    } else {
-                        //上拉加载
-                        if (pos == 0) {
-                            percent = 0;
-                        } else if (pos == 1) {
-                            percent = 1.0f / 3; //第二条时
-                        } else if (pos == 2) {
-                            percent = 2.0f / 3; //第二条时
-                        }
-                    }
-
-                    if (ads.size() == 1) percent = 0.5f; //只有一条时
-
-                    int insertPosition = (int) (isTop ? contentCount * percent : (mData.size() - contentCount * percent));
-//                    mData.set(insertPosition, ad);
-//                    mTTFeedAds.add(ad);
-
-                    if (!mData.contains(ad)) {
-                        mData.add(insertPosition, ad); //add加载会出现连续两条广告的情况
-                        videoPagerAdapter.setTextSizeLevel(book().read(PagerCons.KEY_TEXTSET_SIZE, "middle"));
-                    }
-
-
-//                    if (percent == 2.0f / 3) //只有一条或第二条时
-//                        break; //
-                }
-
-            }
-        });
-    }
+//
+//                    if (ads.size() == 1) percent = 0.5f; //只有一条时
+//
+//                    int insertPosition = (int) (isTop ? contentCount * percent : (mData.size() - contentCount * percent));
+////                    mData.set(insertPosition, ad);
+////                    mTTFeedAds.add(ad);
+//
+//                    if (!mData.contains(ad)) {
+//                        mData.add(insertPosition, ad); //add加载会出现连续两条广告的情况
+//                        videoPagerAdapter.setTextSizeLevel(book().read(PagerCons.KEY_TEXTSET_SIZE, "middle"));
+//                    }
+//
+//
+////                    if (percent == 2.0f / 3) //只有一条或第二条时
+////                        break; //
+//                }
+//
+//            }
+//        });
+//    }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onTextSizeSetting(TextSettingEvent event) {

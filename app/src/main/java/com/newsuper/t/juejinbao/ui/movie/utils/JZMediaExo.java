@@ -37,7 +37,7 @@ import com.google.android.exoplayer2.upstream.DefaultHttpDataSource;
 import com.google.android.exoplayer2.upstream.DefaultHttpDataSourceFactory;
 import com.google.android.exoplayer2.util.Util;
 import com.google.android.exoplayer2.video.VideoListener;
-import com.juejinchain.android.base.MyApplication;
+import com.newsuper.t.juejinbao.base.JJBApplication;
 
 import cn.jzvd.JZMediaInterface;
 import cn.jzvd.Jzvd;
@@ -111,7 +111,7 @@ public class JZMediaExo extends JZMediaInterface implements Player.EventListener
 //                        .createMediaSource(Uri.parse(currUrl), handler, null);
                 DataSource.Factory dataSourceFactory2 =
                         new DefaultHttpDataSourceFactory(
-                                Util.getUserAgent(MyApplication.getContext(), "p2p-engine"),
+                                Util.getUserAgent(JJBApplication.getContext(), "p2p-engine"),
                                 DefaultHttpDataSource.DEFAULT_CONNECT_TIMEOUT_MILLIS,
                                 DefaultHttpDataSource.DEFAULT_READ_TIMEOUT_MILLIS,
                                 true   /* allowCrossProtocolRedirects */

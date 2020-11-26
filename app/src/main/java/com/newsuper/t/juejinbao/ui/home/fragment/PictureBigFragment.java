@@ -27,7 +27,12 @@ import com.bumptech.glide.request.target.Target;
 import com.newsuper.t.R;
 import com.newsuper.t.databinding.FragmentPictureBigBinding;
 import com.newsuper.t.juejinbao.base.BaseFragment;
+import com.newsuper.t.juejinbao.bean.PictureCollectEvent;
+import com.newsuper.t.juejinbao.bean.SavePictureEvent;
+import com.newsuper.t.juejinbao.ui.home.entity.IsCollectEntity;
 import com.newsuper.t.juejinbao.ui.home.presenter.impl.PictureBigPresenterImpl;
+import com.newsuper.t.juejinbao.utils.MyToast;
+import com.newsuper.t.juejinbao.utils.SaveImageIntoPhotoUtil;
 
 
 import org.greenrobot.eventbus.EventBus;

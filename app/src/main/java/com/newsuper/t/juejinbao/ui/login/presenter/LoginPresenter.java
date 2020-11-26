@@ -2,7 +2,7 @@ package com.newsuper.t.juejinbao.ui.login.presenter;
 
 import android.app.Activity;
 
-import com.juejinchain.android.module.login.entity.SetAndChangePswEntity;
+import com.newsuper.t.juejinbao.ui.login.entity.SetAndChangePswEntity;
 
 import java.io.Serializable;
 import java.util.Map;

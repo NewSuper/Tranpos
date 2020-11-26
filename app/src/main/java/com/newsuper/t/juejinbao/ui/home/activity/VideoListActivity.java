@@ -19,11 +19,26 @@ import android.widget.TextView;
 import com.newsuper.t.R;
 import com.newsuper.t.databinding.ActivityVideoListBinding;
 import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.base.EventID;
+import com.newsuper.t.juejinbao.base.PagerCons;
+import com.newsuper.t.juejinbao.bean.BaseEntity;
+import com.newsuper.t.juejinbao.bean.LoginEntity;
 import com.newsuper.t.juejinbao.ui.home.adapter.VideoPagerAdapter;
+import com.newsuper.t.juejinbao.ui.home.dialog.GuideActicleRewardDialog;
+import com.newsuper.t.juejinbao.ui.home.entity.GetCoinEntity;
 import com.newsuper.t.juejinbao.ui.home.entity.HomeListEntity;
+import com.newsuper.t.juejinbao.ui.home.entity.RewardEntity;
+import com.newsuper.t.juejinbao.ui.home.interf.OnItemClickListener;
+import com.newsuper.t.juejinbao.ui.home.ppw.ActicleRewardPop;
 import com.newsuper.t.juejinbao.ui.home.presenter.VideoListPresenter;
 import com.newsuper.t.juejinbao.ui.home.presenter.impl.VideoListPresenterImpl;
+import com.newsuper.t.juejinbao.ui.login.activity.GuideLoginActivity;
+import com.newsuper.t.juejinbao.ui.movie.utils.Utils;
 import com.newsuper.t.juejinbao.ui.share.dialog.ShareDialog;
+import com.newsuper.t.juejinbao.ui.share.entity.ShareInfo;
+import com.newsuper.t.juejinbao.utils.ClickUtil;
+import com.newsuper.t.juejinbao.utils.NetUtil;
+import com.newsuper.t.juejinbao.utils.ToastUtils;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
@@ -173,7 +188,7 @@ public class VideoListActivity extends BaseActivity<VideoListPresenterImpl, Acti
                 if (view.getId() == R.id.item_paager_share) {
                     //分享
                     if (LoginEntity.getIsLogin()) {
-                        MobclickAgent.onEvent(VideoListActivity.this, EventID.HOMEPAGE_VIDEO_SHARE);   //首页-视频分享-埋点
+                       // MobclickAgent.onEvent(VideoListActivity.this, EventID.HOMEPAGE_VIDEO_SHARE);   //首页-视频分享-埋点
                         shareInfo.setUrl_type(ShareInfo.TYPE_VIDEO);
                         shareInfo.setUrl_path("/VideoDetail/" + model.getId());
 
@@ -387,7 +402,7 @@ public class VideoListActivity extends BaseActivity<VideoListPresenterImpl, Acti
         }
 
         if (mData.size() > AD_Interval && homeListEntity.getData().size() != 0) {
-            loadListAd(homeListEntity.getData().size(), isTop); //加载广告
+           // loadListAd(homeListEntity.getData().size(), isTop); //加载广告
         }
 
         videoPagerAdapter.setTextSizeLevel(book().read(PagerCons.KEY_TEXTSET_SIZE, "middle"));
@@ -426,8 +441,6 @@ public class VideoListActivity extends BaseActivity<VideoListPresenterImpl, Acti
         } else {
             ToastUtils.getInstance().show(mActivity, baseEntity.getMsg());
         }
-
-
     }
 
     @Override
@@ -482,104 +495,104 @@ public class VideoListActivity extends BaseActivity<VideoListPresenterImpl, Acti
     /**
      * 加载穿山甲信息流广告
      *
-     * @param contentCount 本次加载文章条数
-     * @param isTop        加到头部还是尾部
+     * @paramcontentCount 本次加载文章条数
+     * @paramsTop        加到头部还是尾部
      */
-    void loadListAd(int contentCount, boolean isTop) {
-        int adPerCount = book().read(PagerCons.KEY_INTERVAL_HOME_PAGE_AD, 2);
-        /**
-         * 头条联盟信息流广告大图的尺寸为（690px*388px）、小图尺寸为（228px*150px）、组图为（228px*150px*3）
-         */
-        //feed广告请求类型参数
-        AdSlot adSlot = new AdSlot.Builder()
-                .setCodeId(TTAdManagerHolder.POS_ID_VIDEO)
-                .setSupportDeepLink(true)
-                .setImageAcceptedSize(690, 388) //加载返回类型是随机的，通过参数也改不了
-                .setAdCount(adPerCount) // 可选参数，针对信息流广告设置每次请求的广告返回个数，最多支持3个
-                .build();
-
-        //调用feed广告异步请求接口
-        MainActivity.mTTAdNative.loadFeedAd(adSlot, new TTAdNative.FeedAdListener() {
-            @Override
-            public void onError(int code, String message) {
-                //TToast.show(getContext(), "穿山甲异常："+message);
-            }
-
-            @Override
-            public void onFeedAdLoad(List<TTFeedAd> ads) {
-                if (ads == null || ads.isEmpty()) {
-                    //TToast.show(getContext(), "on FeedAdLoaded: ad is null!");
-                    return;
-                }
-
-                //ads = ADUtils.removeDuplicate(ads, mTTFeedAds);
-                //去除重复为空时，再加载两次
-                if (loadAdCount < 3) {
-                    loadAdCount++;
-                    loadListAd(contentCount, isTop);
-                    return;
-                }
-                loadAdCount = 1;
-
-                //一页多条时循环
-                for (int pos = 0; pos < ads.size(); pos++) {
-                    TTFeedAd ad = ads.get(pos);
-                    //非视频不加载
-//                    if (ad.getImageMode() != TTAdConstant.IMAGE_MODE_VIDEO) continue;
-
-//                    while (mData.get(adLastPos) instanceof TTFeedAd){
-//                        adLastPos += AD_Interval;     //正常往后加载用这个
-//                        if (adLastPos >= mData.size()){
-////                            adLastPos = mData.size()-1;
-////                            break;  //加到尾部时
-//                            return;
+//    void loadListAd(int contentCount, boolean isTop) {
+//        int adPerCount = book().read(PagerCons.KEY_INTERVAL_HOME_PAGE_AD, 2);
+//        /**
+//         * 头条联盟信息流广告大图的尺寸为（690px*388px）、小图尺寸为（228px*150px）、组图为（228px*150px*3）
+//         */
+//        //feed广告请求类型参数
+//        AdSlot adSlot = new AdSlot.Builder()
+//                .setCodeId(TTAdManagerHolder.POS_ID_VIDEO)
+//                .setSupportDeepLink(true)
+//                .setImageAcceptedSize(690, 388) //加载返回类型是随机的，通过参数也改不了
+//                .setAdCount(adPerCount) // 可选参数，针对信息流广告设置每次请求的广告返回个数，最多支持3个
+//                .build();
+//
+//        //调用feed广告异步请求接口
+//        MainActivity.mTTAdNative.loadFeedAd(adSlot, new TTAdNative.FeedAdListener() {
+//            @Override
+//            public void onError(int code, String message) {
+//                //TToast.show(getContext(), "穿山甲异常："+message);
+//            }
+//
+//            @Override
+//            public void onFeedAdLoad(List<TTFeedAd> ads) {
+//                if (ads == null || ads.isEmpty()) {
+//                    //TToast.show(getContext(), "on FeedAdLoaded: ad is null!");
+//                    return;
+//                }
+//
+//                //ads = ADUtils.removeDuplicate(ads, mTTFeedAds);
+//                //去除重复为空时，再加载两次
+//                if (loadAdCount < 3) {
+//                    loadAdCount++;
+//                    loadListAd(contentCount, isTop);
+//                    return;
+//                }
+//                loadAdCount = 1;
+//
+//                //一页多条时循环
+//                for (int pos = 0; pos < ads.size(); pos++) {
+//                    TTFeedAd ad = ads.get(pos);
+//                    //非视频不加载
+////                    if (ad.getImageMode() != TTAdConstant.IMAGE_MODE_VIDEO) continue;
+//
+////                    while (mData.get(adLastPos) instanceof TTFeedAd){
+////                        adLastPos += AD_Interval;     //正常往后加载用这个
+////                        if (adLastPos >= mData.size()){
+//////                            adLastPos = mData.size()-1;
+//////                            break;  //加到尾部时
+////                            return;
+////                        }
+////                    }
+//
+////                    mData.set(adLastPos, ad);
+//
+//                    float percent = 2.0f / 3;
+//
+//                    if (isTop) {
+//                        //下拉刷新
+//                        if (pos == 0) {
+//                            percent = 1.0f / 3;
+//                        } else if (pos == 1) {
+//                            percent = 2.0f / 3; //第二条时
+//                        } else if (pos == 2) {
+//                            percent = 1; //第二条时
+//                        }
+//
+//                    } else {
+//                        //上拉加载
+//                        if (pos == 0) {
+//                            percent = 0;
+//                        } else if (pos == 1) {
+//                            percent = 1.0f / 3; //第二条时
+//                        } else if (pos == 2) {
+//                            percent = 2.0f / 3; //第二条时
 //                        }
 //                    }
-
-//                    mData.set(adLastPos, ad);
-
-                    float percent = 2.0f / 3;
-
-                    if (isTop) {
-                        //下拉刷新
-                        if (pos == 0) {
-                            percent = 1.0f / 3;
-                        } else if (pos == 1) {
-                            percent = 2.0f / 3; //第二条时
-                        } else if (pos == 2) {
-                            percent = 1; //第二条时
-                        }
-
-                    } else {
-                        //上拉加载
-                        if (pos == 0) {
-                            percent = 0;
-                        } else if (pos == 1) {
-                            percent = 1.0f / 3; //第二条时
-                        } else if (pos == 2) {
-                            percent = 2.0f / 3; //第二条时
-                        }
-                    }
-
-                    if (ads.size() == 1) percent = 0.5f; //只有一条时
-
-                    int insertPosition = (int) (isTop ? contentCount * percent : (mData.size() - contentCount * percent));
-//                    mData.set(insertPosition, ad);
-//                    mTTFeedAds.add(ad);
-
-                    if (!mData.contains(ad)) {
-                        mData.add(insertPosition, ad); //add加载会出现连续两条广告的情况
-                        videoPagerAdapter.setTextSizeLevel(book().read(PagerCons.KEY_TEXTSET_SIZE, "middle"));
-                    }
-
-
-//                    if (percent == 2.0f / 3) //只有一条或第二条时
-//                        break; //
-                }
-
-            }
-        });
-    }
+//
+//                    if (ads.size() == 1) percent = 0.5f; //只有一条时
+//
+//                    int insertPosition = (int) (isTop ? contentCount * percent : (mData.size() - contentCount * percent));
+////                    mData.set(insertPosition, ad);
+////                    mTTFeedAds.add(ad);
+//
+//                    if (!mData.contains(ad)) {
+//                        mData.add(insertPosition, ad); //add加载会出现连续两条广告的情况
+//                        videoPagerAdapter.setTextSizeLevel(book().read(PagerCons.KEY_TEXTSET_SIZE, "middle"));
+//                    }
+//
+//
+////                    if (percent == 2.0f / 3) //只有一条或第二条时
+////                        break; //
+//                }
+//
+//            }
+//        });
+//    }
 
     public static void intentMe(Activity context, HomeListEntity.DataBean data, int requestCode) {
         Intent intent = new Intent(context, VideoListActivity.class);

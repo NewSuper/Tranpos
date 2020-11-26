@@ -9,12 +9,12 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.ActivityMoviecartonhotBinding;
-import com.juejinchain.android.module.movie.adapter.MovieCartonHotPageAdapter;
-import com.ys.network.base.BaseActivity;
-import com.ys.network.base.BasePresenter;
-import com.ys.network.utils.androidUtils.StatusBarUtil;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivityMoviecartonhotBinding;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.base.BasePresenter;
+import com.newsuper.t.juejinbao.ui.movie.adapter.MovieCartonHotPageAdapter;
+import com.newsuper.t.juejinbao.utils.androidUtils.StatusBarUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +22,7 @@ import java.util.List;
 /**
  * 动漫热门
  */
-public class MovieCartonHotActivity extends BaseActivity<BasePresenter, ActivityMoviecartonhotBinding>{
+public class MovieCartonHotActivity extends BaseActivity<BasePresenter, ActivityMoviecartonhotBinding> {
 
     MovieCartonHotPageAdapter pageAdapter;
 

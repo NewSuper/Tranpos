@@ -18,11 +18,11 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.juejinchain.android.R;
-import com.juejinchain.android.base.Constant;
-import com.juejinchain.android.module.movie.activity.BridgeWebViewActivity;
+import com.newsuper.t.R;
+import com.newsuper.t.juejinbao.base.Constant;
+import com.newsuper.t.juejinbao.base.RetrofitManager;
+import com.newsuper.t.juejinbao.ui.movie.activity.BridgeWebViewActivity;
 import com.qq.e.comm.util.StringUtil;
-import com.ys.network.network.RetrofitManager;
 
 import java.text.DecimalFormat;
 

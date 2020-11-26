@@ -9,18 +9,15 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.DialogInvitecodeBinding;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.DialogInvitecodeBinding;
+
 
 public class InviteCodeDialog extends Dialog {
 
     private Context context;
     DialogInvitecodeBinding mViewBinding;
-
-
     private Dialog mDialog;
-
-
 
     public InviteCodeDialog(Context context) {
         super(context);
@@ -48,11 +45,7 @@ public class InviteCodeDialog extends Dialog {
             }
         });
 
-
-
     }
-
-
 
     public void show() {
         mDialog.show();
@@ -61,12 +54,5 @@ public class InviteCodeDialog extends Dialog {
     public void hide() {
         mDialog.dismiss();
     }
-
-
-
-
-
-
-
 
 }

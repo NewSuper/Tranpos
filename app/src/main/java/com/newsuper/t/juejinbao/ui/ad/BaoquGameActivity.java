@@ -120,7 +120,7 @@ public class BaoquGameActivity extends AppCompatActivity  {
     /**
      * @param playTimeInSeconds 玩游戏时长，单位为秒
      */
-    @Override
+   // @Override
     public void gamePlayTimeCallback(String gameId, int playTimeInSeconds) {
         Log.d("cmgamesdk_Main2Activity", "play game ：" + gameId + "playTimeInSeconds : " + playTimeInSeconds);
 

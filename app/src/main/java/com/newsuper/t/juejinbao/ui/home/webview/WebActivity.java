@@ -5,10 +5,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebView;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.ActivityWebBinding;
-import com.juejinchain.android.module.home.presenter.impl.PublicPresenterImpl;
-import com.ys.network.base.BaseActivity;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivityWebBinding;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.ui.home.presenter.impl.PublicPresenterImpl;
+
 
 public class WebActivity extends BaseActivity<PublicPresenterImpl, ActivityWebBinding> {
 

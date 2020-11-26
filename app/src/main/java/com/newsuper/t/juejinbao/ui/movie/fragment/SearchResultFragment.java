@@ -14,18 +14,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.FragmentSearchresultBinding;
-import com.juejinchain.android.module.movie.adapter.EasyAdapter;
-import com.juejinchain.android.module.movie.adapter.EasyAdapter2;
-import com.juejinchain.android.module.movie.bean.V2MovieSearchEntity;
-import com.juejinchain.android.module.movie.entity.HotSearchDataEntity;
-import com.juejinchain.android.module.movie.entity.SearchResultDataEntity;
-import com.juejinchain.android.module.movie.presenter.impl.SearchResultImpl;
-import com.juejinchain.android.module.movie.utils.Utils;
-import com.ys.network.base.BaseFragment;
-import com.ys.network.bus.BusConstant;
-import com.ys.network.bus.BusProvider;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.FragmentSearchresultBinding;
+import com.newsuper.t.juejinbao.base.BaseFragment;
+import com.newsuper.t.juejinbao.base.BusConstant;
+import com.newsuper.t.juejinbao.base.BusProvider;
+import com.newsuper.t.juejinbao.ui.movie.adapter.EasyAdapter2;
+import com.newsuper.t.juejinbao.ui.movie.bean.V2MovieSearchEntity;
+import com.newsuper.t.juejinbao.ui.movie.presenter.impl.SearchResultImpl;
+import com.newsuper.t.juejinbao.ui.movie.utils.Utils;
 
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
@@ -71,10 +68,7 @@ public class SearchResultFragment extends BaseFragment<SearchResultImpl, Fragmen
                     public void setData(Object object , int position) {
                         super.setData(object , position);
                         string = (String)object;
-
                         ((TextView)itemView.findViewById(R.id.tv)).setText(Utils.getSearchTitle(context , string , kw) );
-
-
                     }
 
                     @Override
@@ -84,15 +78,9 @@ public class SearchResultFragment extends BaseFragment<SearchResultImpl, Fragmen
                         BusProvider.getInstance().post(BusProvider.createMessage(BusConstant.MOVIESEARCH_INPUT, string));
                         //跳转详情
                         BusProvider.getInstance().post(BusProvider.createMessage(BusConstant.MOVIESEARCH_DETAIL, string));
-
-
                     }
                 };
-
-
             }
-
-
         }));
     }
 

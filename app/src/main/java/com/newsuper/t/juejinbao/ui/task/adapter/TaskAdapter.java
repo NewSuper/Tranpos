@@ -10,9 +10,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.juejinchain.android.R;
-import com.juejinchain.android.module.movie.adapter.MyViewHolder;
-import com.juejinchain.android.module.task.entity.TaskListEntity;
+import com.newsuper.t.R;
+import com.newsuper.t.juejinbao.ui.movie.adapter.MyViewHolder;
+import com.newsuper.t.juejinbao.ui.task.entity.TaskListEntity;
 
 import java.util.ArrayList;
 import java.util.List;

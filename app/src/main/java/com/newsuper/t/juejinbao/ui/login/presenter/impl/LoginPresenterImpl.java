@@ -3,19 +3,19 @@ package com.newsuper.t.juejinbao.ui.login.presenter.impl;
 import android.app.Activity;
 import android.util.Log;
 
-import com.juejinchain.android.base.ApiService;
-import com.juejinchain.android.module.login.entity.BindInviterEntity;
-import com.juejinchain.android.module.login.entity.IsShowQQEntity;
-import com.juejinchain.android.module.login.entity.SetAndChangePswEntity;
-import com.juejinchain.android.module.login.presenter.LoginPresenter;
-import com.juejinchain.android.module.movie.entity.BindThirdEntity;
-import com.ys.network.base.BasePresenter;
-import com.ys.network.base.LoginEntity;
-import com.ys.network.network.HttpRequestBody;
-import com.ys.network.network.RetrofitManager;
-import com.ys.network.progress.HttpResultFunc;
-import com.ys.network.progress.ProgressSubscriber;
-import com.ys.network.progress.SubscriberOnResponseListenter;
+import com.newsuper.t.juejinbao.base.ApiService;
+import com.newsuper.t.juejinbao.base.BasePresenter;
+import com.newsuper.t.juejinbao.base.RetrofitManager;
+import com.newsuper.t.juejinbao.bean.LoginEntity;
+import com.newsuper.t.juejinbao.ui.login.entity.BindInviterEntity;
+import com.newsuper.t.juejinbao.ui.login.entity.IsShowQQEntity;
+import com.newsuper.t.juejinbao.ui.login.entity.SetAndChangePswEntity;
+import com.newsuper.t.juejinbao.ui.login.presenter.LoginPresenter;
+import com.newsuper.t.juejinbao.ui.movie.entity.BindThirdEntity;
+import com.newsuper.t.juejinbao.utils.SubscriberOnResponseListenter;
+import com.newsuper.t.juejinbao.utils.network.HttpRequestBody;
+import com.newsuper.t.juejinbao.utils.network.HttpResultFunc;
+import com.newsuper.t.juejinbao.utils.network.ProgressSubscriber;
 
 import java.util.Map;
 

@@ -30,13 +30,12 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.ActivityJswebBinding;
-import com.juejinchain.android.jsbridge.BridgeWebView;
-import com.juejinchain.android.jsbridge.BridgeWebViewClient;
-import com.juejinchain.android.module.home.presenter.impl.PublicPresenterImpl;
-
-import com.ys.network.base.BaseActivity;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivityJswebBinding;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.ui.home.presenter.impl.PublicPresenterImpl;
+import com.newsuper.t.juejinbao.utils.jsbridge.BridgeWebView;
+import com.newsuper.t.juejinbao.utils.jsbridge.BridgeWebViewClient;
 
 import org.json.JSONException;
 import org.json.JSONObject;

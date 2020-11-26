@@ -10,14 +10,14 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.module.song.Event.MusicPauseEvent;
-import com.juejinchain.android.module.song.Event.MusicStartEvent;
-import com.juejinchain.android.module.song.manager.SongPlayManager;
-import com.juejinchain.android.module.song.view.AudioWaveView;
 import com.lzx.starrysky.provider.SongInfo;
-import com.ys.network.base.BaseAdapter;
-import com.ys.network.base.BaseHolder;
+import com.newsuper.t.R;
+import com.newsuper.t.juejinbao.base.BaseAdapter;
+import com.newsuper.t.juejinbao.base.BaseHolder;
+import com.newsuper.t.juejinbao.ui.song.Event.MusicPauseEvent;
+import com.newsuper.t.juejinbao.ui.song.Event.MusicStartEvent;
+import com.newsuper.t.juejinbao.ui.song.manager.SongPlayManager;
+import com.newsuper.t.juejinbao.ui.song.view.AudioWaveView;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;

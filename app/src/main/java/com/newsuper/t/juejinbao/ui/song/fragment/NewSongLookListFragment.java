@@ -8,14 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.FragmentNewsonglooklistBinding;
-import com.juejinchain.android.module.song.adapter.SongListAdapter;
-import com.juejinchain.android.module.song.adapter.SongListAdapter2;
-import com.juejinchain.android.module.song.manager.SongPlayManager;
-import com.juejinchain.android.module.song.presenter.impl.NewSongLookListImpl;
+
 import com.lzx.starrysky.provider.SongInfo;
-import com.ys.network.base.BaseFragment;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.FragmentNewsonglooklistBinding;
+import com.newsuper.t.juejinbao.base.BaseFragment;
+import com.newsuper.t.juejinbao.ui.song.adapter.SongListAdapter2;
+import com.newsuper.t.juejinbao.ui.song.presenter.impl.NewSongLookListImpl;
+
 
 import java.util.ArrayList;
 import java.util.List;

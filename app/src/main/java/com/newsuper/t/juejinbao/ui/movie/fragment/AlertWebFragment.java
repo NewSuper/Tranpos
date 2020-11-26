@@ -17,20 +17,20 @@ import android.webkit.WebView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.FragmentAlertwebBinding;
-import com.juejinchain.android.jsbridge.BridgeWebView;
-import com.juejinchain.android.jsbridge.BridgeWebViewClient;
-import com.juejinchain.android.module.home.presenter.impl.PublicPresenterImpl;
-import com.juejinchain.android.module.login.activity.GuideLoginActivity;
-import com.juejinchain.android.module.movie.activity.BridgeWebViewActivity;
-import com.juejinchain.android.module.movie.activity.BridgeWebViewFullActivity;
-import com.juejinchain.android.module.movie.vip.AlertWebActivity;
-import com.juejinchain.android.module.movie.vip.VipLiveActivity;
-import com.ys.network.base.BaseFragment;
-import com.ys.network.base.LoginEntity;
-import com.ys.network.utils.NetworkUtils;
-import com.ys.network.utils.ToastUtils;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.FragmentAlertwebBinding;
+import com.newsuper.t.juejinbao.base.BaseFragment;
+import com.newsuper.t.juejinbao.bean.LoginEntity;
+import com.newsuper.t.juejinbao.ui.home.presenter.impl.PublicPresenterImpl;
+import com.newsuper.t.juejinbao.ui.login.activity.GuideLoginActivity;
+import com.newsuper.t.juejinbao.ui.movie.activity.BridgeWebViewActivity;
+import com.newsuper.t.juejinbao.ui.movie.activity.BridgeWebViewFullActivity;
+import com.newsuper.t.juejinbao.ui.movie.vip.AlertWebActivity;
+import com.newsuper.t.juejinbao.ui.movie.vip.VipLiveActivity;
+import com.newsuper.t.juejinbao.utils.NetworkUtils;
+import com.newsuper.t.juejinbao.utils.ToastUtils;
+import com.newsuper.t.juejinbao.utils.jsbridge.BridgeWebView;
+import com.newsuper.t.juejinbao.utils.jsbridge.BridgeWebViewClient;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -40,7 +40,7 @@ import cn.jzvd.Jzvd;
 /**
  * vip - 全网VIP
  */
-public class AlertWebFragment extends BaseFragment<PublicPresenterImpl , FragmentAlertwebBinding>  {
+public class AlertWebFragment extends BaseFragment<PublicPresenterImpl, FragmentAlertwebBinding> {
     View view;
 
     private BridgeWebView webView;

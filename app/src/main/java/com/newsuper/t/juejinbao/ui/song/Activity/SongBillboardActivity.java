@@ -15,16 +15,16 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
-import com.juejinchain.android.R;
-import com.juejinchain.android.base.Constant;
-import com.juejinchain.android.databinding.ActivitySongbillboardBinding;
-import com.juejinchain.android.module.movie.adapter.EasyAdapter;
-import com.juejinchain.android.module.movie.adapter.EasyAdapter2;
-import com.juejinchain.android.module.song.entity.SongBillBoardEntity;
-import com.juejinchain.android.module.song.manager.SongPlayManager;
-import com.juejinchain.android.module.song.presenter.impl.SongBillboardImpl;
-import com.ys.network.base.BaseActivity;
-import com.ys.network.utils.androidUtils.StatusBarUtil;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivitySongbillboardBinding;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.base.Constant;
+import com.newsuper.t.juejinbao.ui.movie.adapter.EasyAdapter2;
+import com.newsuper.t.juejinbao.ui.song.entity.SongBillBoardEntity;
+import com.newsuper.t.juejinbao.ui.song.manager.SongPlayManager;
+import com.newsuper.t.juejinbao.ui.song.presenter.impl.SongBillboardImpl;
+import com.newsuper.t.juejinbao.utils.androidUtils.StatusBarUtil;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +32,7 @@ import java.util.List;
 /**
  * 歌曲榜单
  */
-public class SongBillboardActivity extends BaseActivity<SongBillboardImpl , ActivitySongbillboardBinding> implements SongBillboardImpl.MvpView {
+public class SongBillboardActivity extends BaseActivity<SongBillboardImpl, ActivitySongbillboardBinding> implements SongBillboardImpl.MvpView {
 
     private List<SongBillBoardEntity.DataBean> dataBeans;
 

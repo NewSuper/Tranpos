@@ -6,6 +6,7 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.bumptech.glide.request.RequestOptions;
+import com.newsuper.t.R;
 import com.youth.banner.loader.ImageLoader;
 
 public class GlideImgsLoader extends ImageLoader {

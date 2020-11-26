@@ -10,10 +10,7 @@ import android.view.ViewGroup;
 import android.widget.GridLayout;
 import android.widget.TextView;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.module.movie.bean.AdapterItem;
-import com.juejinchain.android.module.movie.entity.MovieMovieFilterDataEntity;
-import com.juejinchain.android.module.movie.entity.MoviePostDataEntity;
+import com.newsuper.t.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -86,26 +83,18 @@ public class ConditionAdapter extends RecyclerView.Adapter<MyViewHolder>{
                 tv.setTextColor(context.getResources().getColor(R.color.app_text));
                 tv.setBackgroundResource(R.drawable.bg_radio2);
             }
-
-
         }
 
         @Override
         public void onClick(View view) {
-
             if(enable) {
                 for (Condition condition2 : items) {
                     condition2.isCheck = condition2.name.equals(condition.name);
                 }
                 notifyDataSetChanged();
-
                 onItemClickListener.click(condition.name);
             }
-
         }
-
-
-
     }
 
     public static class Condition{

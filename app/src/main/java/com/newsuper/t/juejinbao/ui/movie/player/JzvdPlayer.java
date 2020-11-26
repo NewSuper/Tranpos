@@ -16,13 +16,10 @@ import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-
-import com.juejinchain.android.R;
-import com.juejinchain.android.base.Constant;
-import com.juejinchain.android.utils.ClickUtil;
-import com.juejinchain.android.utils.MyToast;
-import com.ys.network.base.BaseApplication;
-import com.ys.network.base.PagerCons;
+import com.newsuper.t.R;
+import com.newsuper.t.juejinbao.base.JJBApplication;
+import com.newsuper.t.juejinbao.base.PagerCons;
+import com.newsuper.t.juejinbao.utils.ClickUtil;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -192,7 +189,7 @@ public class JzvdPlayer extends Jzvd {
 
 
 
-        if(BaseApplication.getChannel().equals(JZConstants.CHANNEL_XIAOMI)) {
+        if(JJBApplication.getChannel().equals(JZConstants.CHANNEL_XIAOMI)) {
             JzvdStd.setViewMargin(ib_back, 150, 0, 0, 0);
             JzvdStd.setViewMargin(ib_back2, 150, 0, 0, 0);
         }

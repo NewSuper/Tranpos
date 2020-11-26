@@ -8,11 +8,8 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.view.ViewGroup;
 
 import com.alibaba.fastjson.JSON;
-import com.juejinchain.android.module.movie.entity.V2PlayListEntity;
-import com.juejinchain.android.module.movie.fragment.MovieTabAndListPageFragment;
-import com.juejinchain.android.module.movie.utils.Utils;
-import com.juejinchain.android.module.song.entity.LatestAlbumTagEntity;
-import com.juejinchain.android.module.song.fragment.LatestAlbumListFragment;
+import com.newsuper.t.juejinbao.ui.song.entity.LatestAlbumTagEntity;
+import com.newsuper.t.juejinbao.ui.song.fragment.LatestAlbumListFragment;
 
 import java.util.List;
 
@@ -61,9 +58,6 @@ public class LatestAlbumPageAdapter extends FragmentStatePagerAdapter {
         bundle.putString("tag" , tabBean.get(position).getEn()); ;
         latestAlbumListFragment.setArguments(bundle);
         mFragments[position] = latestAlbumListFragment;
-
-
-
 
         return mFragments[position];
     }

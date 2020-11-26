@@ -5,17 +5,17 @@ import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.ActivityPrivacyBinding;
-import com.juejinchain.android.module.home.entity.GetCoinEntity;
-import com.juejinchain.android.module.home.entity.RewardEntity;
-import com.juejinchain.android.module.home.ppw.ActicleRewardPop;
-import com.juejinchain.android.module.my.entity.UserInfoEntity;
-import com.juejinchain.android.module.my.presenter.PrivacyPresenter;
-import com.juejinchain.android.module.my.presenter.impl.PrivacyPresenterImpl;
-import com.ys.network.base.BaseActivity;
-import com.ys.network.utils.ToastUtils;
-import com.ys.network.utils.androidUtils.StatusBarUtil;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivityPrivacyBinding;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.ui.home.entity.GetCoinEntity;
+import com.newsuper.t.juejinbao.ui.home.entity.RewardEntity;
+import com.newsuper.t.juejinbao.ui.home.ppw.ActicleRewardPop;
+import com.newsuper.t.juejinbao.ui.my.entity.UserInfoEntity;
+import com.newsuper.t.juejinbao.ui.my.presenter.PrivacyPresenter;
+import com.newsuper.t.juejinbao.ui.my.presenter.impl.PrivacyPresenterImpl;
+import com.newsuper.t.juejinbao.utils.ToastUtils;
+import com.newsuper.t.juejinbao.utils.androidUtils.StatusBarUtil;
 
 import java.io.Serializable;
 import java.util.HashMap;
@@ -39,10 +39,7 @@ public class PrivacyActivity extends BaseActivity<PrivacyPresenterImpl, Activity
 
     @Override
     public void initView() {
-
         entryType = getIntent().getIntExtra(ENTRY_TYPE, 0);
-
-
         StatusBarUtil.setStatusBarDarkTheme(this, true);
         mViewBinding.modelTitleBar.moduleIncludeTitleBarTitle.setText("隐私设置");
         mViewBinding.modelTitleBar.moduleIncludeTitleBarReturn.setOnClickListener(new View.OnClickListener() {

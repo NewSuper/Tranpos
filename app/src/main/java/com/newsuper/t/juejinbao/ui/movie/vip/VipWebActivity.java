@@ -34,18 +34,19 @@ import android.widget.LinearLayout;
 
 import com.alibaba.fastjson.JSON;
 import com.bumptech.glide.Glide;
-import com.juejinchain.android.R;
-import com.juejinchain.android.base.BaseConfigEntity;
-import com.juejinchain.android.databinding.ActivityVipwebdetaiBinding;
-import com.juejinchain.android.jsbridge.BridgeWebView;
-import com.juejinchain.android.jsbridge.BridgeWebViewClient;
-import com.juejinchain.android.module.home.presenter.impl.PublicPresenterImpl;
-import com.juejinchain.android.module.movie.activity.PlayMovieActivity;
-import com.juejinchain.android.module.movie.entity.MovieThirdIframeEntity;
-import com.juejinchain.android.module.movie.view.PlayTeachDialog;
-import com.ys.network.base.BaseActivity;
-import com.ys.network.base.PagerCons;
-import com.ys.network.network.RetrofitManager;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivityVipwebdetaiBinding;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.base.PagerCons;
+import com.newsuper.t.juejinbao.base.RetrofitManager;
+import com.newsuper.t.juejinbao.bean.BaseConfigEntity;
+import com.newsuper.t.juejinbao.ui.home.presenter.impl.PublicPresenterImpl;
+import com.newsuper.t.juejinbao.ui.movie.activity.PlayMovieActivity;
+import com.newsuper.t.juejinbao.ui.movie.entity.MovieThirdIframeEntity;
+import com.newsuper.t.juejinbao.ui.movie.view.PlayTeachDialog;
+import com.newsuper.t.juejinbao.utils.jsbridge.BridgeWebView;
+import com.newsuper.t.juejinbao.utils.jsbridge.BridgeWebViewClient;
+
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -477,12 +478,6 @@ public class VipWebActivity extends BaseActivity<PublicPresenterImpl, ActivityVi
                     });
                 }
             }
-//
-//
-//
-//
-
-
         }
 
 

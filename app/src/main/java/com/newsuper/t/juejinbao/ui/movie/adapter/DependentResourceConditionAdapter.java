@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 
+import com.newsuper.t.R;
 import com.newsuper.t.juejinbao.ui.movie.entity.DependentResourcesDataEntity;
 
 import java.util.ArrayList;

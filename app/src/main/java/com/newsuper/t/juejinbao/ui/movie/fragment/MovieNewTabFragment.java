@@ -14,20 +14,17 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.google.android.exoplayer2.DefaultLoadControl;
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.FragmentMovieNewtabBinding;
-import com.juejinchain.android.module.movie.adapter.EasyAdapter;
-import com.juejinchain.android.module.movie.adapter.MovieNewTabListAdapter;
-import com.juejinchain.android.module.movie.adapter.PagerFragmentTabAdapter;
-import com.juejinchain.android.module.movie.entity.MovieIndexRecommendEntity;
-import com.juejinchain.android.module.movie.presenter.impl.MovieNewTabImpl;
-import com.juejinchain.android.utils.MyToast;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.FragmentMovieNewtabBinding;
+import com.newsuper.t.juejinbao.base.BaseFragment;
+import com.newsuper.t.juejinbao.ui.movie.adapter.EasyAdapter;
+import com.newsuper.t.juejinbao.ui.movie.adapter.MovieNewTabListAdapter;
+import com.newsuper.t.juejinbao.ui.movie.entity.MovieIndexRecommendEntity;
+import com.newsuper.t.juejinbao.ui.movie.presenter.impl.MovieNewTabImpl;
+import com.newsuper.t.juejinbao.utils.MyToast;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
-import com.ys.network.base.BaseFragment;
-import com.ys.network.utils.LogUtils;
 
 import java.util.ArrayList;
 import java.util.List;

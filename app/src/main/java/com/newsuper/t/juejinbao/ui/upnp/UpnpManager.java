@@ -10,17 +10,6 @@ import android.content.ServiceConnection;
 import android.os.IBinder;
 import android.util.Log;
 
-import com.newsuper.t.juejinbao.ui.upnp.control.ClingPlayControl;
-import com.newsuper.t.juejinbao.ui.upnp.control.callback.ControlCallback;
-import com.newsuper.t.juejinbao.ui.upnp.entity.ClingDeviceList;
-import com.newsuper.t.juejinbao.ui.upnp.entity.DLANPlayState;
-import com.newsuper.t.juejinbao.ui.upnp.entity.IDevice;
-import com.newsuper.t.juejinbao.ui.upnp.entity.IResponse;
-import com.newsuper.t.juejinbao.ui.upnp.listener.BrowseRegistryListener;
-import com.newsuper.t.juejinbao.ui.upnp.listener.DeviceListChangedListener;
-import com.newsuper.t.juejinbao.ui.upnp.service.ClingUpnpService;
-import com.newsuper.t.juejinbao.ui.upnp.service.manager.ClingManager;
-import com.newsuper.t.juejinbao.ui.upnp.service.manager.DeviceManager;
 
 public class UpnpManager {
     private Activity activity;
@@ -50,29 +39,29 @@ public class UpnpManager {
 
         // 设置发现设备监听
         mBrowseRegistryListener = new BrowseRegistryListener();
-//        mBrowseRegistryListener.setOnDeviceListChangedListener(new DeviceListChangedListener() {
-//            @Override
-//            public void onDeviceAdded(final IDevice device) {
-//                activity.runOnUiThread(new Runnable() {
-//                    public void run() {
-//                        Log.e("zy" , "发现设备" + device.getDevice().toString());
-//
-//                        addDeviceListener.addDevice(device);
-//
-////                        play();
-//                    }
-//                });
-//            }
-//
-//            @Override
-//            public void onDeviceRemoved(final IDevice device) {
-//                activity.runOnUiThread(new Runnable() {
-//                    public void run() {
-//
-//                    }
-//                });
-//            }
-//        });
+        mBrowseRegistryListener.setOnDeviceListChangedListener(new DeviceListChangedListener() {
+            @Override
+            public void onDeviceAdded(final IDevice device) {
+                activity.runOnUiThread(new Runnable() {
+                    public void run() {
+                        Log.e("zy" , "发现设备" + device.getDevice().toString());
+
+                        addDeviceListener.addDevice(device);
+
+//                        play();
+                    }
+                });
+            }
+
+            @Override
+            public void onDeviceRemoved(final IDevice device) {
+                activity.runOnUiThread(new Runnable() {
+                    public void run() {
+
+                    }
+                });
+            }
+        });
 
         //service连接回调
         mUpnpServiceConnection = new ServiceConnection() {
@@ -83,9 +72,9 @@ public class UpnpManager {
                 ClingUpnpService.LocalBinder binder = (ClingUpnpService.LocalBinder) service;
                 ClingUpnpService beyondUpnpService = binder.getService();
 
-//                ClingManager clingUpnpServiceManager = ClingManager.getInstance();
-//                clingUpnpServiceManager.setUpnpService(beyondUpnpService);
-//                clingUpnpServiceManager.setDeviceManager(new DeviceManager());
+                ClingManager clingUpnpServiceManager = ClingManager.getInstance();
+                clingUpnpServiceManager.setUpnpService(beyondUpnpService);
+                clingUpnpServiceManager.setDeviceManager(new DeviceManager());
 
 
                 //张野:添加服务设备
@@ -97,9 +86,9 @@ public class UpnpManager {
 //                    e.printStackTrace();
 //                }
 
-//                clingUpnpServiceManager.getRegistry().addListener(mBrowseRegistryListener);
-//                //Search on service created.
-//                clingUpnpServiceManager.searchDevices();
+                clingUpnpServiceManager.getRegistry().addListener(mBrowseRegistryListener);
+                //Search on service created.
+                clingUpnpServiceManager.searchDevices();
 
 
             }
@@ -118,7 +107,7 @@ public class UpnpManager {
 
     //选择设备
     public void selectDeviceAndPlay(final IDevice device){
-    //    ClingManager.getInstance().setSelectedDevice(device);
+        ClingManager.getInstance().setSelectedDevice(device);
 //        play(url);
     }
 
@@ -174,46 +163,47 @@ public class UpnpManager {
          * 通过判断状态 来决定 是继续播放 还是重新播放
          */
 
-//        if (currentState == DLANPlayState.STOP) {
-////            mClingPlayControl.playNew(mIP + Config.LOCAL_URL, new ControlCallback() {
-//            mClingPlayControl.playNew(url, new ControlCallback() {
-//
-//                @Override
-//                public void success(IResponse response) {
-//                    //                    ClingUpnpServiceManager.getInstance().subscribeMediaRender();
-//                    //                    getPositionInfo();
-//                    ClingManager.getInstance().registerAVTransport(activity);
-//                    ClingManager.getInstance().registerRenderingControl(activity);
-//                }
-//
-//                @Override
-//                public void fail(IResponse response) {
-//                }
-//            });
-//        } else {
-//            mClingPlayControl.play(new ControlCallback() {
-//                @Override
-//                public void success(IResponse response) {
-//                }
-//
-//                @Override
-//                public void fail(IResponse response) {
-//                }
-//            });
-//        }
+        if (currentState == DLANPlayState.STOP) {
+//            mClingPlayControl.playNew(mIP + Config.LOCAL_URL, new ControlCallback() {
+            mClingPlayControl.playNew(url, new ControlCallback() {
+
+                @Override
+                public void success(IResponse response) {
+                    //                    ClingUpnpServiceManager.getInstance().subscribeMediaRender();
+                    //                    getPositionInfo();
+                    // TODO: 17/7/21 play success
+                    ClingManager.getInstance().registerAVTransport(activity);
+                    ClingManager.getInstance().registerRenderingControl(activity);
+                }
+
+                @Override
+                public void fail(IResponse response) {
+                }
+            });
+        } else {
+            mClingPlayControl.play(new ControlCallback() {
+                @Override
+                public void success(IResponse response) {
+                }
+
+                @Override
+                public void fail(IResponse response) {
+                }
+            });
+        }
     }
 
 
     public void stop(){
-//        mClingPlayControl.stop(new ControlCallback() {
-//            @Override
-//            public void success(IResponse response) {
-//            }
-//
-//            @Override
-//            public void fail(IResponse response) {
-//            }
-//        });
+        mClingPlayControl.stop(new ControlCallback() {
+            @Override
+            public void success(IResponse response) {
+            }
+
+            @Override
+            public void fail(IResponse response) {
+            }
+        });
     }
 
         //设备选择监听

@@ -2,6 +2,7 @@ package com.newsuper.t.juejinbao.ui.movie.craw.crawmusic;
 
 import com.alibaba.fastjson.JSON;
 import com.newsuper.t.juejinbao.ui.movie.craw.BaseAnalysis;
+import com.newsuper.t.juejinbao.ui.movie.craw.CrawValue;
 
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;

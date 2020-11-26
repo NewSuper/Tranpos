@@ -21,20 +21,14 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.juejinchain.android.R;
-import com.juejinchain.android.base.MyApplication;
-import com.juejinchain.android.databinding.ActivityAlertwebBinding;
-import com.juejinchain.android.databinding.ActivityVipliveBinding;
-import com.juejinchain.android.jsbridge.BridgeWebView;
-import com.juejinchain.android.jsbridge.BridgeWebViewClient;
-import com.juejinchain.android.module.ad.BaoquGameActivity;
-import com.juejinchain.android.module.home.presenter.impl.PublicPresenterImpl;
-import com.juejinchain.android.module.login.activity.GuideLoginActivity;
-import com.umeng.analytics.MobclickAgent;
-import com.ys.network.base.BaseActivity;
-import com.ys.network.base.EventID;
-import com.ys.network.base.LoginEntity;
-import com.ys.network.base.PagerCons;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivityAlertwebBinding;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.bean.LoginEntity;
+import com.newsuper.t.juejinbao.ui.home.presenter.impl.PublicPresenterImpl;
+import com.newsuper.t.juejinbao.ui.login.activity.GuideLoginActivity;
+import com.newsuper.t.juejinbao.utils.jsbridge.BridgeWebView;
+import com.newsuper.t.juejinbao.utils.jsbridge.BridgeWebViewClient;
 
 import org.json.JSONException;
 import org.json.JSONObject;

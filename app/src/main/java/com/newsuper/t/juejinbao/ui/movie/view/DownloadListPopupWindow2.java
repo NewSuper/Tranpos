@@ -17,20 +17,15 @@ import android.widget.GridLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.ViewDownloadlistPopupBinding;
-import com.juejinchain.android.module.movie.adapter.EasyAdapter;
-import com.juejinchain.android.module.movie.bean.EventDownloadSelect;
-import com.juejinchain.android.module.movie.bean.Sniff;
-import com.juejinchain.android.module.movie.craw.EventCrawMovieList;
-import com.juejinchain.android.module.movie.craw.moviedetail.BeanMovieDetail;
-import com.juejinchain.android.module.movie.player.EventControllerPlayUrl;
-import com.juejinchain.android.module.movie.utils.PlayerExFunc;
-import com.juejinchain.android.module.movie.utils.StartSniffingListener;
-import com.juejinchain.android.module.movie.utils.ToLightApp;
-import com.juejinchain.android.module.movie.utils.ToLightApp2;
-import com.juejinchain.android.module.movie.utils.Utils;
-import com.juejinchain.android.utils.MyToast;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ViewDownloadlistPopupBinding;
+import com.newsuper.t.juejinbao.ui.movie.adapter.EasyAdapter;
+import com.newsuper.t.juejinbao.ui.movie.craw.moviedetail.BeanMovieDetail;
+import com.newsuper.t.juejinbao.ui.movie.player.EventControllerPlayUrl;
+import com.newsuper.t.juejinbao.ui.movie.utils.PlayerExFunc;
+import com.newsuper.t.juejinbao.ui.movie.utils.ToLightApp2;
+import com.newsuper.t.juejinbao.ui.movie.utils.Utils;
+import com.newsuper.t.juejinbao.utils.MyToast;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -210,7 +205,7 @@ public class DownloadListPopupWindow2 {
 
 
                 //确认下载
-                ToLightApp2.download(activity , dramaList , movieName , appDownloadUrl ,PlayerExFunc.LIGHT_DOWNLOAD);
+                ToLightApp2.download(activity , dramaList , movieName , appDownloadUrl , PlayerExFunc.LIGHT_DOWNLOAD);
                 hide();
             }
         });

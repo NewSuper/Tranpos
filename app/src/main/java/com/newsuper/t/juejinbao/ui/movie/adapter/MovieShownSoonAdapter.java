@@ -16,13 +16,10 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.bumptech.glide.request.RequestOptions;
-import com.juejinchain.android.R;
-import com.juejinchain.android.module.movie.activity.MovieSearchActivity;
-import com.juejinchain.android.module.movie.craw.BeanMovieSearchItem;
-import com.juejinchain.android.module.movie.entity.MovieNewTabRankEntity;
-import com.juejinchain.android.module.movie.entity.V2PlayListEntity;
-import com.juejinchain.android.module.movie.view.ScoreView;
-import com.juejinchain.android.utils.MyToast;
+import com.newsuper.t.R;
+import com.newsuper.t.juejinbao.ui.movie.entity.MovieNewTabRankEntity;
+import com.newsuper.t.juejinbao.ui.movie.view.ScoreView;
+import com.newsuper.t.juejinbao.utils.MyToast;
 
 import java.util.ArrayList;
 import java.util.List;

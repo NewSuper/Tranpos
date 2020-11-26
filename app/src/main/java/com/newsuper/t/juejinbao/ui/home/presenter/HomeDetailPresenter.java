@@ -2,7 +2,7 @@ package com.newsuper.t.juejinbao.ui.home.presenter;
 
 import android.app.Activity;
 
-import com.juejinchain.android.module.home.entity.RewardDoubleEntity;
+import com.newsuper.t.juejinbao.ui.home.entity.RewardDoubleEntity;
 
 import java.io.Serializable;
 import java.util.Map;

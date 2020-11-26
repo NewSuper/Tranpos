@@ -9,7 +9,7 @@ import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.juejinchain.android.R;
+import com.newsuper.t.R;
 
 public class WebSmsActivity extends AppCompatActivity {
     WebView bridgeWebView;

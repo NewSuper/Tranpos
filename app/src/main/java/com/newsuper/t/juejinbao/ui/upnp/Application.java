@@ -2,12 +2,10 @@
 package com.newsuper.t.juejinbao.ui.upnp;
 
 import com.newsuper.t.juejinbao.base.JJBApplication;
-import com.newsuper.t.juejinbao.ui.upnp.dms.JettyResourceServer;
 
 import java.net.InetAddress;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-
 
 public class Application extends JJBApplication {
     private static Application sBeyondApplication = null;

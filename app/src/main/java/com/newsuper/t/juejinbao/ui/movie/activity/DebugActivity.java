@@ -4,20 +4,19 @@ import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 
-//import com.igexin.sdk.PushManager;
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.ActivityDebugBinding;
-import com.juejinchain.android.module.home.presenter.impl.PublicPresenterImpl;
-import com.ys.network.base.BaseActivity;
-import com.ys.network.base.LoginEntity;
-import com.ys.network.base.PagerCons;
-import com.ys.network.network.RetrofitManager;
-import com.ys.network.utils.ActivityCollector;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivityDebugBinding;
+import com.newsuper.t.juejinbao.base.ActivityCollector;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.base.PagerCons;
+import com.newsuper.t.juejinbao.base.RetrofitManager;
+import com.newsuper.t.juejinbao.bean.LoginEntity;
+import com.newsuper.t.juejinbao.ui.home.presenter.impl.PublicPresenterImpl;
 
 import butterknife.OnClick;
 import io.paperdb.Paper;
 
-public class DebugActivity extends BaseActivity<PublicPresenterImpl , ActivityDebugBinding> {
+public class DebugActivity extends BaseActivity<PublicPresenterImpl, ActivityDebugBinding> {
 
     private String api;
 //    private String res;

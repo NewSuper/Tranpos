@@ -1,18 +1,4 @@
-/*
- * Copyright 2014 - 2015 Henning Dodenhof
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.newsuper.t.juejinbao.ui.movie.view;
 
 import android.annotation.SuppressLint;
@@ -33,8 +19,8 @@ import android.net.Uri;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
-import com.juejinchain.android.base.MyApplication;
-import com.juejinchain.android.module.movie.utils.Utils;
+import com.newsuper.t.juejinbao.base.JJBApplication;
+import com.newsuper.t.juejinbao.ui.movie.utils.Utils;
 
 
 @SuppressLint("AppCompatCustomView")
@@ -150,7 +136,7 @@ public class CircleImageView extends ImageView {
         RectF rectF = new RectF();
         rectF.set(0 , 0 , getWidth() , getHeight() );
 
-        canvas.drawRoundRect (rectF , Utils.dip2px(MyApplication.getInstance(), 10) , Utils.dip2px(MyApplication.getInstance() , 10) , mBitmapPaint);
+        canvas.drawRoundRect (rectF , Utils.dip2px(JJBApplication.getInstance(), 10) , Utils.dip2px(JJBApplication.getInstance() , 10) , mBitmapPaint);
     }
 
     @Override

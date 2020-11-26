@@ -8,8 +8,9 @@ import android.os.Environment;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 
-import com.juejinchain.android.utils.ALiYunOssHelper;
-import com.ys.network.utils.ToastUtils;
+
+import com.newsuper.t.juejinbao.utils.ALiYunOssHelper;
+import com.newsuper.t.juejinbao.utils.ToastUtils;
 
 import java.io.File;
 

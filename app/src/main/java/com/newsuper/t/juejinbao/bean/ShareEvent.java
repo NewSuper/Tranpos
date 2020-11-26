@@ -1,7 +1,7 @@
 package com.newsuper.t.juejinbao.bean;
 
-import com.juejinchain.android.module.share.entity.ShareEntity;
-import com.juejinchain.android.module.share.entity.ShareInfo;
+
+import com.newsuper.t.juejinbao.ui.share.entity.ShareInfo;
 
 public class ShareEvent {
 

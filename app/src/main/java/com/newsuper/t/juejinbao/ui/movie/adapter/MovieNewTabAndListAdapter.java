@@ -19,6 +19,7 @@ import com.newsuper.t.R;
 import com.newsuper.t.juejinbao.ui.movie.activity.MovieSearchActivity;
 import com.newsuper.t.juejinbao.ui.movie.craw.BeanMovieSearchItem;
 import com.newsuper.t.juejinbao.ui.movie.entity.V2PlayListEntity;
+import com.newsuper.t.juejinbao.ui.movie.view.ScoreView;
 
 
 import java.util.ArrayList;

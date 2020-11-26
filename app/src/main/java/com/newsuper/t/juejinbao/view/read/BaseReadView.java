@@ -40,7 +40,7 @@ public abstract class BaseReadView extends View {
         this.listener = listener;
         this.bookId = bookId;
 
-        mScreenWidth = ScreenUtils.getScreenWidth();
+        mScreenWidth = ScreenUtils.getScreenWidth(context);
         mScreenHeight = ScreenUtils.getScreenHeight();
 
         mCurPageBitmap = Bitmap.createBitmap(mScreenWidth, mScreenHeight, Bitmap.Config.ARGB_8888);

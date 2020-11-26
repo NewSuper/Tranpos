@@ -13,15 +13,11 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.module.ad.BaoquGameActivity;
-import com.juejinchain.android.module.login.activity.GuideLoginActivity;
-import com.juejinchain.android.module.movie.adapter.MyViewHolder;
-import com.juejinchain.android.module.movie.utils.Utils;
-import com.juejinchain.android.module.task.entity.TaskListEntity;
-import com.umeng.socialize.bean.SHARE_MEDIA;
-import com.ys.network.base.LoginEntity;
-import com.ys.network.base.PagerCons;
+
+import com.newsuper.t.R;
+import com.newsuper.t.juejinbao.base.PagerCons;
+import com.newsuper.t.juejinbao.ui.movie.adapter.MyViewHolder;
+import com.newsuper.t.juejinbao.ui.task.entity.TaskListEntity;
 
 import java.util.ArrayList;
 import java.util.List;

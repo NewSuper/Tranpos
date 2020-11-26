@@ -9,15 +9,15 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.ActivityMovietabandlistBinding;
-import com.juejinchain.android.module.movie.adapter.MovieTabAndListPageAdapter;
-import com.juejinchain.android.module.movie.entity.V2PlayListEntity;
-import com.juejinchain.android.module.movie.presenter.impl.MovieTabAndListImpl;
-import com.juejinchain.android.module.movie.utils.Utils;
-import com.juejinchain.android.utils.MyToast;
-import com.ys.network.base.BaseActivity;
-import com.ys.network.utils.androidUtils.StatusBarUtil;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivityMovietabandlistBinding;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.ui.movie.adapter.MovieTabAndListPageAdapter;
+import com.newsuper.t.juejinbao.ui.movie.entity.V2PlayListEntity;
+import com.newsuper.t.juejinbao.ui.movie.presenter.impl.MovieTabAndListImpl;
+import com.newsuper.t.juejinbao.ui.movie.utils.Utils;
+import com.newsuper.t.juejinbao.utils.MyToast;
+import com.newsuper.t.juejinbao.utils.androidUtils.StatusBarUtil;
 
 import java.util.Collections;
 import java.util.Comparator;

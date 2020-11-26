@@ -11,10 +11,10 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-import com.juejinchain.android.R;
-import com.juejinchain.android.module.movie.adapter.MyViewHolder;
-import com.juejinchain.android.module.song.entity.CategorysBean;
-import com.juejinchain.android.module.song.entity.MusicDataListEntity;
+import com.newsuper.t.R;
+import com.newsuper.t.juejinbao.ui.movie.adapter.MyViewHolder;
+import com.newsuper.t.juejinbao.ui.song.entity.CategorysBean;
+
 
 import java.util.ArrayList;
 import java.util.List;

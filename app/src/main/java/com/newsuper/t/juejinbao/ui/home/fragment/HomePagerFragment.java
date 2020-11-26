@@ -528,17 +528,17 @@ public class HomePagerFragment extends BaseFragment<HomePagerPresenterImpl, Frag
    public void initCSJExPressAD(boolean isTop, HomeListEntity newsEntity){
         final boolean isTop1 = isTop;
 
-        if (mLastRemainAd.size() > 0) {
-            mViewBinding.recy.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    insertAdView(newsEntity.getData().size() - 1, isTop1, mLastRemainAd);
-                    mLastRemainAd.clear();
-                }
-            }, 500);
-        } else {
-            loadListAd(newsEntity.getData().size(), isTop); //加载广告
-        }
+//        if (mLastRemainAd.size() > 0) {
+//            mViewBinding.recy.postDelayed(new Runnable() {
+//                @Override
+//                public void run() {
+//                    insertAdView(newsEntity.getData().size() - 1, isTop1, mLastRemainAd);
+//                    mLastRemainAd.clear();
+//                }
+//            }, 500);
+//        } else {
+//            loadListAd(newsEntity.getData().size(), isTop); //加载广告
+//        }
     }
 
     private int mMutiType = 3;

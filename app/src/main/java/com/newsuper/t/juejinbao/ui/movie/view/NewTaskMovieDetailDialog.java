@@ -10,11 +10,9 @@ import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.module.home.interf.CustomItemClickListener;
-import com.juejinchain.android.module.my.entity.UserDataEntity;
-import com.juejinchain.android.view.CustomLayout;
-import com.ys.network.base.PagerCons;
+import com.newsuper.t.R;
+import com.newsuper.t.juejinbao.ui.home.interf.CustomItemClickListener;
+import com.newsuper.t.juejinbao.view.CustomLayout;
 
 import io.paperdb.Paper;
 

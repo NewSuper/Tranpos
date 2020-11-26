@@ -10,8 +10,8 @@ import android.text.TextUtils;
 import com.google.gson.JsonParseException;
 import com.newsuper.t.juejinbao.base.BusProvider;
 import com.newsuper.t.juejinbao.base.PagerCons;
-import com.newsuper.t.juejinbao.bean.base.EventBusOffLineEntity;
-import com.newsuper.t.juejinbao.bean.base.LoginEntity;
+import com.newsuper.t.juejinbao.bean.EventBusOffLineEntity;
+import com.newsuper.t.juejinbao.bean.LoginEntity;
 import com.newsuper.t.juejinbao.utils.SubscriberOnResponseListenter;
 
 import org.apache.http.conn.ConnectTimeoutException;

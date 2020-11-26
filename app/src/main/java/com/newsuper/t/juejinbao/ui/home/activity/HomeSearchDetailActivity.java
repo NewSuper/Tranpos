@@ -34,11 +34,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HomeSearchDetailActivity extends BaseActivity<HomeSearchDetailImpl, ActivityHomesearchdetailBinding> implements HomeSearchDetailImpl.MvpView {
-
-
     HomeSearchDetailPageAdapter homeSearchDetailPageAdapter;
-
-
     String kw;
 
     @Override

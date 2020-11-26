@@ -503,8 +503,8 @@ public class PlaySmallVideoActivity extends BaseActivity<SmallVideoPresenterImpl
         //无广告
         else {
             for (int i = 0; i < mList.size(); i++) {
-                com.newsuper.t.juejinbao.ui.home.entity.HomeListEntity.DataBean.OtherBean.SmallvideoListBean smallvideoListBean =
-                        com.newsuper.t.juejinbao.ui.home.entity.HomeListEntity.DataBean.OtherBean.SmallvideoListBean) mList.get(i);
+                com.newsuper.t.juejinbao.ui.home.entity.HomeListEntity.DataBean.OtherBean.SmallvideoListBean smallvideoListBean
+                        = (com.newsuper.t.juejinbao.ui.home.entity.HomeListEntity.DataBean.OtherBean.SmallvideoListBean) mList.get(i);
 
 
                 MeiVideoDragFragment videoDragFragment = new MeiVideoDragFragment();

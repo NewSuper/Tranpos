@@ -32,17 +32,26 @@ import com.newsuper.t.databinding.ActivityMoviedetailBinding;
 import com.newsuper.t.juejinbao.base.BaseActivity;
 import com.newsuper.t.juejinbao.base.PagerCons;
 import com.newsuper.t.juejinbao.bean.BaseConfigEntity;
+import com.newsuper.t.juejinbao.bean.BaseEntity;
 import com.newsuper.t.juejinbao.bean.LoginEntity;
+import com.newsuper.t.juejinbao.ui.movie.bean.UpdateEntity;
 import com.newsuper.t.juejinbao.ui.movie.craw.moviedetail.BeanMovieDetail;
+import com.newsuper.t.juejinbao.ui.movie.entity.UploadMovieDetailBean;
+import com.newsuper.t.juejinbao.ui.movie.player.EventControllerPlayUrl;
+import com.newsuper.t.juejinbao.ui.movie.player.EventNetChange;
 import com.newsuper.t.juejinbao.ui.movie.player.JzvdPlayerBusiness;
 import com.newsuper.t.juejinbao.ui.movie.presenter.impl.MovieDetailImpl;
 import com.newsuper.t.juejinbao.ui.movie.utils.NetWorkStateReceiver;
+import com.newsuper.t.juejinbao.ui.movie.utils.Utils;
 import com.newsuper.t.juejinbao.ui.movie.view.ForceShareByPlayMovieDialog;
+import com.newsuper.t.juejinbao.ui.movie.view.MovieP2PGuideDialog;
+import com.newsuper.t.juejinbao.ui.movie.view.NewTaskRewordDialog;
 import com.newsuper.t.juejinbao.ui.my.entity.UserDataEntity;
 import com.newsuper.t.juejinbao.ui.share.constant.ShareType;
 import com.newsuper.t.juejinbao.ui.share.dialog.ShareDialog;
 import com.newsuper.t.juejinbao.ui.share.entity.ShareConfigEntity;
 import com.newsuper.t.juejinbao.ui.share.entity.ShareInfo;
+import com.newsuper.t.juejinbao.utils.ClickUtil;
 import com.newsuper.t.juejinbao.utils.GetPicByView;
 import com.newsuper.t.juejinbao.utils.MyToast;
 import com.newsuper.t.juejinbao.utils.ToastUtils;
@@ -685,7 +694,7 @@ public class MovieDetailActivity extends BaseActivity<MovieDetailImpl, ActivityM
 //                    Log.e("zy", "url:" + playUrl + "，是否连接" + P2pEngine.getInstance().isConnected());
                     BaseConfigEntity.DataBean dataBean = Paper.book().read(PagerCons.KEY_JJB_CONFIG);
                     if (dataBean != null && dataBean.getIs_open_p2p() == 1) {
-                        parsedUrl = P2pEngine.getInstance().parseStreamUrl(playUrl);
+                      //  parsedUrl = P2pEngine.getInstance().parseStreamUrl(playUrl);
 
                         //测试
 //                        mViewBinding.test1.setText("onHttpDownloaded:");
@@ -1131,7 +1140,7 @@ public class MovieDetailActivity extends BaseActivity<MovieDetailImpl, ActivityM
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        UMShareAPI.get(this).onActivityResult(requestCode, resultCode, data);
+      //  UMShareAPI.get(this).onActivityResult(requestCode, resultCode, data);
     }
 
     public void uploadMovieDetail(BeanMovieDetail detail) {

@@ -2,18 +2,18 @@ package com.newsuper.t.juejinbao.ui.song.presenter.impl;
 
 import android.content.Context;
 
-import com.juejinchain.android.base.ApiService;
-import com.juejinchain.android.module.song.entity.MusicCollectEntity;
-import com.juejinchain.android.module.song.entity.MusicCollectionEntity;
-import com.juejinchain.android.module.song.entity.MusicDataListEntity;
-import com.juejinchain.android.module.song.entity.SongBean;
-import com.juejinchain.android.module.song.manager.SongPlayManager;
-import com.ys.network.base.BasePresenter;
-import com.ys.network.base.PagerCons;
-import com.ys.network.network.RetrofitManager;
-import com.ys.network.progress.HttpResultFunc;
-import com.ys.network.progress.ProgressSubscriber;
-import com.ys.network.progress.SubscriberOnResponseListenter;
+import com.newsuper.t.juejinbao.base.ApiService;
+import com.newsuper.t.juejinbao.base.BasePresenter;
+import com.newsuper.t.juejinbao.base.PagerCons;
+import com.newsuper.t.juejinbao.base.RetrofitManager;
+import com.newsuper.t.juejinbao.ui.song.entity.MusicCollectEntity;
+import com.newsuper.t.juejinbao.ui.song.entity.MusicCollectionEntity;
+import com.newsuper.t.juejinbao.ui.song.entity.MusicDataListEntity;
+import com.newsuper.t.juejinbao.ui.song.entity.SongBean;
+import com.newsuper.t.juejinbao.ui.song.manager.SongPlayManager;
+import com.newsuper.t.juejinbao.utils.SubscriberOnResponseListenter;
+import com.newsuper.t.juejinbao.utils.network.HttpResultFunc;
+import com.newsuper.t.juejinbao.utils.network.ProgressSubscriber;
 
 import java.util.ArrayList;
 import java.util.HashMap;

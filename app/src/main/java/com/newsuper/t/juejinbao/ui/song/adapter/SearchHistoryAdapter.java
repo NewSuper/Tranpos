@@ -8,8 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.module.movie.adapter.MyViewHolder;
+
+import com.newsuper.t.R;
+import com.newsuper.t.juejinbao.ui.movie.adapter.MyViewHolder;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -6,6 +6,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.SeekBar;
 
+import com.newsuper.t.R;
+
 import java.util.Timer;
 import java.util.TimerTask;
 

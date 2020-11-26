@@ -6,14 +6,14 @@ import android.util.TypedValue;
 import android.view.View;
 import android.widget.RadioGroup;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.ActivityTextSizeSettingBinding;
-import com.juejinchain.android.event.TextSettingEvent;
-import com.ys.network.base.BaseActivity;
-import com.ys.network.base.BasePresenter;
-import com.ys.network.base.PagerCons;
-import com.ys.network.utils.ActivityCollector;
-import com.ys.network.utils.ToastUtils;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivityTextSizeSettingBinding;
+import com.newsuper.t.juejinbao.base.ActivityCollector;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.base.BasePresenter;
+import com.newsuper.t.juejinbao.base.PagerCons;
+import com.newsuper.t.juejinbao.bean.TextSettingEvent;
+import com.newsuper.t.juejinbao.utils.ToastUtils;
 
 import org.greenrobot.eventbus.EventBus;
 

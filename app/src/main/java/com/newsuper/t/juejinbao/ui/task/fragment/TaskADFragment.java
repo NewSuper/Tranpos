@@ -11,12 +11,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.FragmentTaskAdBinding;
-import com.juejinchain.android.jsbridge.BridgeWebView;
-import com.juejinchain.android.module.home.presenter.impl.PublicPresenterImpl;
-import com.juejinchain.android.module.movie.utils.Utils;
-import com.ys.network.base.BaseFragment;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.FragmentTaskAdBinding;
+import com.newsuper.t.juejinbao.base.BaseFragment;
+import com.newsuper.t.juejinbao.ui.home.presenter.impl.PublicPresenterImpl;
+import com.newsuper.t.juejinbao.ui.movie.utils.Utils;
+import com.newsuper.t.juejinbao.utils.jsbridge.BridgeWebView;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -334,10 +334,10 @@ public class SmallVideoFragment extends BaseFragment<SmallVideoPresenterImpl, Fr
         mViewBinding.fragmentSmallVideoRefresh.finishLoadMore();
     }
 
-    @Override
-    public void requestTTDrawFeedAds(List<TTDrawFeedAd> ads) {
-
-    }
+//    @Override
+//    public void requestTTDrawFeedAds(List<TTDrawFeedAd> ads) {
+//
+//    }
 
     @Override
     public void getRewardOf30secondSuccess(Serializable serializable) {

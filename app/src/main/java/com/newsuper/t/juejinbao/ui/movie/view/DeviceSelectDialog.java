@@ -10,15 +10,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.TextView;
 
 import com.newsuper.t.R;
 import com.newsuper.t.databinding.DialogDeviceselectBinding;
 import com.newsuper.t.juejinbao.ui.movie.adapter.EasyAdapter;
+import com.newsuper.t.juejinbao.ui.upnp.ClingDevice;
+import com.newsuper.t.juejinbao.ui.upnp.ClingManager;
+import com.newsuper.t.juejinbao.ui.upnp.IDevice;
 import com.newsuper.t.juejinbao.ui.upnp.UpnpManager;
-import com.newsuper.t.juejinbao.ui.upnp.entity.ClingDevice;
-import com.newsuper.t.juejinbao.ui.upnp.entity.IDevice;
-import com.newsuper.t.juejinbao.ui.upnp.service.manager.ClingManager;
+
 import com.newsuper.t.juejinbao.utils.MyToast;
 
 import java.util.ArrayList;

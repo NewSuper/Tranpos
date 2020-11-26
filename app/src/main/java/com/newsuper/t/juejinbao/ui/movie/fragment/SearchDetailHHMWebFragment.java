@@ -23,18 +23,21 @@ import android.webkit.WebViewClient;
 import android.widget.LinearLayout;
 
 import com.alibaba.fastjson.JSON;
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.FragmentSearchdetailhhmwebBinding;
-import com.juejinchain.android.module.movie.activity.MovieSearchMZSMActivity;
-import com.juejinchain.android.module.movie.activity.PlayMovieActivity;
-import com.juejinchain.android.module.movie.entity.MovieThirdIframeEntity;
-import com.juejinchain.android.module.movie.presenter.impl.SearchDetailHHMWebImpl;
-import com.juejinchain.android.module.movie.view.MovieWebLoadingDialog;
 
+
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.FragmentSearchdetailhhmwebBinding;
+import com.newsuper.t.juejinbao.base.BaseFragment;
+import com.newsuper.t.juejinbao.base.BusConstant;
+import com.newsuper.t.juejinbao.base.PagerCons;
+import com.newsuper.t.juejinbao.basepop.blur.thread.ThreadPoolManager;
+import com.newsuper.t.juejinbao.ui.movie.activity.MovieSearchMZSMActivity;
+import com.newsuper.t.juejinbao.ui.movie.activity.PlayMovieActivity;
+import com.newsuper.t.juejinbao.ui.movie.entity.MovieThirdIframeEntity;
+import com.newsuper.t.juejinbao.ui.movie.presenter.impl.SearchDetailHHMWebImpl;
+import com.newsuper.t.juejinbao.ui.movie.view.MovieWebLoadingDialog;
 import com.squareup.otto.Subscribe;
-import com.ys.network.base.BaseFragment;
-import com.ys.network.base.PagerCons;
-import com.ys.network.bus.BusConstant;
+
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -43,8 +46,6 @@ import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
-import razerdp.blur.thread.ThreadPoolManager;
 
 import static io.paperdb.Paper.book;
 

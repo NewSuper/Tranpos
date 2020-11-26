@@ -14,10 +14,10 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.bumptech.glide.request.RequestOptions;
-import com.juejinchain.android.R;
-import com.juejinchain.android.module.movie.activity.MovieDetailActivity;
-import com.juejinchain.android.module.movie.craw.BeanMovieSearchItem;
-import com.juejinchain.android.module.movie.utils.Utils;
+import com.newsuper.t.R;
+import com.newsuper.t.juejinbao.ui.movie.activity.MovieDetailActivity;
+import com.newsuper.t.juejinbao.ui.movie.craw.BeanMovieSearchItem;
+import com.newsuper.t.juejinbao.ui.movie.utils.Utils;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,11 +1,6 @@
 package com.newsuper.t.juejinbao.ui.home.activity;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.newsuper.t.R;
 import com.newsuper.t.databinding.ActivityHotPointSearchResultBinding;
@@ -14,8 +9,6 @@ import com.newsuper.t.juejinbao.ui.home.entity.HomeSearchResultEntity;
 import com.newsuper.t.juejinbao.ui.home.presenter.HotPointSearchResultPresenter;
 import com.newsuper.t.juejinbao.ui.home.presenter.impl.HotPointSearchResultImpl;
 import com.newsuper.t.juejinbao.ui.movie.adapter.EasyAdapter2;
-
-import org.greenrobot.eventbus.EventBus;
 
 import java.util.HashMap;
 import java.util.Map;

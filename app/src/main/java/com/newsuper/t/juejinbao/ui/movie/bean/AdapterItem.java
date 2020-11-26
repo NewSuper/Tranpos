@@ -1,6 +1,7 @@
 package com.newsuper.t.juejinbao.ui.movie.bean;
 
-import com.juejinchain.android.module.movie.entity.MoviePostDataEntity;
+
+import com.newsuper.t.juejinbao.ui.movie.entity.MoviePostDataEntity;
 
 import java.util.List;
 

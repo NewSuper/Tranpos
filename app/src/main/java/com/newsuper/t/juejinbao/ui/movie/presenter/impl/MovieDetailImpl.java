@@ -2,24 +2,24 @@ package com.newsuper.t.juejinbao.ui.movie.presenter.impl;
 
 import android.app.Activity;
 
-import com.juejinchain.android.base.ApiService;
-import com.juejinchain.android.base.BaseEntity;
-import com.juejinchain.android.module.MainActivity;
-import com.juejinchain.android.module.movie.bean.UpdateEntity;
-import com.juejinchain.android.module.movie.craw.ThreadPoolInstance;
-import com.juejinchain.android.module.movie.craw.moviedetail.BeanMovieDetail;
-import com.juejinchain.android.module.movie.craw.moviedetail.MovieDetailAnlysis;
-import com.juejinchain.android.module.movie.entity.MovieRadarMovieDetailEntity;
-import com.juejinchain.android.module.movie.entity.UploadMovieDetailBean;
-import com.juejinchain.android.module.share.entity.ShareDetailEntity;
-import com.juejinchain.android.utils.MyToast;
-import com.ys.network.base.BasePresenter;
-import com.ys.network.base.PagerCons;
-import com.ys.network.network.HttpRequestBody;
-import com.ys.network.network.RetrofitManager;
-import com.ys.network.progress.HttpResultFunc;
-import com.ys.network.progress.ProgressSubscriber;
-import com.ys.network.progress.SubscriberOnResponseListenter;
+import com.newsuper.t.juejinbao.base.ApiService;
+import com.newsuper.t.juejinbao.base.BasePresenter;
+import com.newsuper.t.juejinbao.base.PagerCons;
+import com.newsuper.t.juejinbao.base.RetrofitManager;
+import com.newsuper.t.juejinbao.bean.BaseEntity;
+import com.newsuper.t.juejinbao.ui.JunjinBaoMainActivity;
+import com.newsuper.t.juejinbao.ui.movie.bean.UpdateEntity;
+import com.newsuper.t.juejinbao.ui.movie.craw.ThreadPoolInstance;
+import com.newsuper.t.juejinbao.ui.movie.craw.moviedetail.BeanMovieDetail;
+import com.newsuper.t.juejinbao.ui.movie.craw.moviedetail.MovieDetailAnlysis;
+import com.newsuper.t.juejinbao.ui.movie.entity.MovieRadarMovieDetailEntity;
+import com.newsuper.t.juejinbao.ui.movie.entity.UploadMovieDetailBean;
+import com.newsuper.t.juejinbao.ui.share.entity.ShareDetailEntity;
+import com.newsuper.t.juejinbao.utils.MyToast;
+import com.newsuper.t.juejinbao.utils.SubscriberOnResponseListenter;
+import com.newsuper.t.juejinbao.utils.network.HttpRequestBody;
+import com.newsuper.t.juejinbao.utils.network.HttpResultFunc;
+import com.newsuper.t.juejinbao.utils.network.ProgressSubscriber;
 
 import java.net.MalformedURLException;
 import java.net.URI;
@@ -45,8 +45,8 @@ public class MovieDetailImpl extends BasePresenter<MovieDetailImpl.MvpView> {
             MvpView mvpView = getView();
             final String key = new URI(link).toURL().getHost();
 
-            if (MainActivity.movieRadarMovieDetailEntityMap != null && MainActivity.movieRadarMovieDetailEntityMap.containsKey(key) && MainActivity.movieRadarMovieDetailEntityMap.get(key) != null) {
-                movieRadarMovieDetailEntity = MainActivity.movieRadarMovieDetailEntityMap.get(key);
+            if (JunjinBaoMainActivity.movieRadarMovieDetailEntityMap != null && JunjinBaoMainActivity.movieRadarMovieDetailEntityMap.containsKey(key) && JunjinBaoMainActivity.movieRadarMovieDetailEntityMap.get(key) != null) {
+                movieRadarMovieDetailEntity = JunjinBaoMainActivity.movieRadarMovieDetailEntityMap.get(key);
 
 
 //                getMovieDetail(activity , link);
@@ -65,10 +65,10 @@ public class MovieDetailImpl extends BasePresenter<MovieDetailImpl.MvpView> {
                 public void next(MovieRadarMovieDetailEntity movieRadarMovieDetailEntity) {
                     if (movieRadarMovieDetailEntity.getCode() == 0) {
                         MovieDetailImpl.this.movieRadarMovieDetailEntity = movieRadarMovieDetailEntity;
-                        if (MainActivity.movieRadarMovieDetailEntityMap == null) {
-                            MainActivity.movieRadarMovieDetailEntityMap = new HashMap<>();
+                        if (JunjinBaoMainActivity.movieRadarMovieDetailEntityMap == null) {
+                            JunjinBaoMainActivity.movieRadarMovieDetailEntityMap = new HashMap<>();
                         }
-                        MainActivity.movieRadarMovieDetailEntityMap.put(key, movieRadarMovieDetailEntity);
+                        JunjinBaoMainActivity.movieRadarMovieDetailEntityMap.put(key, movieRadarMovieDetailEntity);
 //                        getMovieDetail(activity, link);
                         mvpView.movieDetailValue();
                     }

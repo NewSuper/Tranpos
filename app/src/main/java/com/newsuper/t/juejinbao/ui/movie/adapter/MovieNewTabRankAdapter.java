@@ -12,11 +12,10 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.ViewMovienewtabRankBinding;
-import com.juejinchain.android.module.movie.activity.MovieNewTabRankActivity;
-import com.juejinchain.android.module.movie.activity.RecommentVideoListActivity;
-import com.juejinchain.android.module.movie.entity.MovieIndexRecommendEntity;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ViewMovienewtabRankBinding;
+import com.newsuper.t.juejinbao.ui.movie.activity.MovieNewTabRankActivity;
+import com.newsuper.t.juejinbao.ui.movie.entity.MovieIndexRecommendEntity;
 
 import java.util.ArrayList;
 import java.util.List;

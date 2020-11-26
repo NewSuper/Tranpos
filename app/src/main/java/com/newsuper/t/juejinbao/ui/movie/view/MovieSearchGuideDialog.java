@@ -10,10 +10,10 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.DialogMoviesearchguideBinding;
-import com.juejinchain.android.module.movie.utils.Utils;
-import com.ys.network.base.PagerCons;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.DialogMoviesearchguideBinding;
+import com.newsuper.t.juejinbao.base.PagerCons;
+import com.newsuper.t.juejinbao.ui.movie.utils.Utils;
 
 import java.text.SimpleDateFormat;
 

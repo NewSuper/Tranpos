@@ -8,23 +8,18 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.RadioGroup;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.base.BaseEntity;
-import com.juejinchain.android.base.MyApplication;
-import com.juejinchain.android.databinding.ActivityNewfilterBinding;
-import com.juejinchain.android.module.movie.adapter.EasyAdapter;
-import com.juejinchain.android.module.movie.adapter.MovieNewFilterAdapter;
-import com.juejinchain.android.module.movie.adapter.MovieNewFilterTagAdapter;
-import com.juejinchain.android.module.movie.entity.MovieNewFilterEntity;
-import com.juejinchain.android.module.movie.entity.MovieNewFilterTagEntity;
-import com.juejinchain.android.module.movie.presenter.impl.MovieNewFilterImpl;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivityNewfilterBinding;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.ui.movie.adapter.MovieNewFilterAdapter;
+import com.newsuper.t.juejinbao.ui.movie.adapter.MovieNewFilterTagAdapter;
+import com.newsuper.t.juejinbao.ui.movie.entity.MovieNewFilterEntity;
+import com.newsuper.t.juejinbao.ui.movie.entity.MovieNewFilterTagEntity;
+import com.newsuper.t.juejinbao.ui.movie.presenter.impl.MovieNewFilterImpl;
+import com.newsuper.t.juejinbao.utils.androidUtils.StatusBarUtil;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
-import com.umeng.analytics.MobclickAgent;
-import com.ys.network.base.BaseActivity;
-import com.ys.network.base.EventID;
-import com.ys.network.utils.androidUtils.StatusBarUtil;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -68,8 +63,8 @@ public class MovieNewFilterActivity extends BaseActivity<MovieNewFilterImpl, Act
     @Override
     public void initView() {
 
-        MobclickAgent.onEvent(MyApplication.getContext(), EventID.FREEWATCHPAGE_SEARCHCATOG_PV);
-        MobclickAgent.onEvent(MyApplication.getContext(), EventID.FREEWATCHPAGE_SEARCHCATOG_UV);
+      //  MobclickAgent.onEvent(MyApplication.getContext(), EventID.FREEWATCHPAGE_SEARCHCATOG_PV);
+      //  MobclickAgent.onEvent(MyApplication.getContext(), EventID.FREEWATCHPAGE_SEARCHCATOG_UV);
 
         StatusBarUtil.setStatusBarDarkTheme(this, true);
 

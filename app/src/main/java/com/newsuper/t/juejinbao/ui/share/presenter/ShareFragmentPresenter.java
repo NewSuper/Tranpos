@@ -46,12 +46,7 @@ public class ShareFragmentPresenter extends ShareBasePresenter {
         }else if (type == 1){
 
         }
-
-
     }
-
-
-
 
     /**
      *  通过sdk 进行分享   这里只是提供一种写法，具体项目中怎么写还得看自己的情况，而且我rxjava也不怎么会2333

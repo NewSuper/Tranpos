@@ -13,12 +13,12 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
-import com.juejinchain.android.R;
-import com.juejinchain.android.base.Constant;
-import com.juejinchain.android.module.movie.activity.BridgeWebViewActivity;
-import com.juejinchain.android.module.movie.entity.DependentResourcesDataEntity;
-import com.juejinchain.android.module.movie.utils.Utils;
-import com.ys.network.network.RetrofitManager;
+import com.newsuper.t.R;
+import com.newsuper.t.juejinbao.base.Constant;
+import com.newsuper.t.juejinbao.base.RetrofitManager;
+import com.newsuper.t.juejinbao.ui.movie.activity.BridgeWebViewActivity;
+import com.newsuper.t.juejinbao.ui.movie.entity.DependentResourcesDataEntity;
+import com.newsuper.t.juejinbao.ui.movie.utils.Utils;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -6,7 +6,8 @@ import android.graphics.drawable.ColorDrawable;
 import android.view.View;
 import android.widget.PopupWindow;
 
-import com.juejinchain.android.R;
+import com.newsuper.t.R;
+
 
 public class HomeTipsPopupWindow extends PopupWindow {
     private Context mContext;

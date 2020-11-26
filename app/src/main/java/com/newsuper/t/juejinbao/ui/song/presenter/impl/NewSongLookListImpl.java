@@ -2,15 +2,15 @@ package com.newsuper.t.juejinbao.ui.song.presenter.impl;
 
 import android.content.Context;
 
-import com.juejinchain.android.base.ApiService;
-import com.juejinchain.android.base.Constant;
-import com.juejinchain.android.module.song.entity.LatestMusicListEntity;
 import com.lzx.starrysky.provider.SongInfo;
-import com.ys.network.base.BasePresenter;
-import com.ys.network.network.RetrofitManager;
-import com.ys.network.progress.HttpResultFunc;
-import com.ys.network.progress.ProgressSubscriber;
-import com.ys.network.progress.SubscriberOnResponseListenter;
+import com.newsuper.t.juejinbao.base.ApiService;
+import com.newsuper.t.juejinbao.base.BasePresenter;
+import com.newsuper.t.juejinbao.base.Constant;
+import com.newsuper.t.juejinbao.base.RetrofitManager;
+import com.newsuper.t.juejinbao.ui.song.entity.LatestMusicListEntity;
+import com.newsuper.t.juejinbao.utils.SubscriberOnResponseListenter;
+import com.newsuper.t.juejinbao.utils.network.HttpResultFunc;
+import com.newsuper.t.juejinbao.utils.network.ProgressSubscriber;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -20,7 +20,7 @@ import java.util.Map;
 import rx.Subscriber;
 import rx.Subscription;
 
-public class NewSongLookListImpl extends BasePresenter<NewSongLookListImpl.MvpView>{
+public class NewSongLookListImpl extends BasePresenter<NewSongLookListImpl.MvpView> {
 
     //新歌速递
     public void latestSongList(Context context , String en) {

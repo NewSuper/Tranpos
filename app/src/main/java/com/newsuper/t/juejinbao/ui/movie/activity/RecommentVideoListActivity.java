@@ -14,28 +14,26 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.SimpleTarget;
 import com.bumptech.glide.request.transition.Transition;
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.ActivityRecommentVideoListBinding;
-import com.juejinchain.android.module.login.activity.GuideLoginActivity;
-import com.juejinchain.android.module.movie.adapter.RecommentVideoListAdapter;
-import com.juejinchain.android.module.movie.craw.moviedetail.BeanMovieDetail;
-import com.juejinchain.android.module.movie.entity.MovieInfoEntity;
-import com.juejinchain.android.module.movie.entity.MovieRotationListEntity;
-import com.juejinchain.android.module.movie.entity.RecommendRankingEntity;
-import com.juejinchain.android.module.movie.entity.UploadMovieDetailBean;
-import com.juejinchain.android.module.movie.presenter.impl.RecommentVideoListImpl;
-import com.juejinchain.android.module.movie.utils.Utils;
-import com.juejinchain.android.module.share.dialog.ShareDialog;
-import com.juejinchain.android.module.share.entity.ShareConfigEntity;
-import com.juejinchain.android.module.share.entity.ShareInfo;
-import com.juejinchain.android.utils.GetPicByView;
+
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivityRecommentVideoListBinding;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.base.EventID;
+import com.newsuper.t.juejinbao.bean.LoginEntity;
+import com.newsuper.t.juejinbao.ui.login.activity.GuideLoginActivity;
+import com.newsuper.t.juejinbao.ui.movie.adapter.RecommentVideoListAdapter;
+import com.newsuper.t.juejinbao.ui.movie.entity.MovieInfoEntity;
+import com.newsuper.t.juejinbao.ui.movie.entity.MovieRotationListEntity;
+import com.newsuper.t.juejinbao.ui.movie.entity.RecommendRankingEntity;
+import com.newsuper.t.juejinbao.ui.movie.entity.UploadMovieDetailBean;
+import com.newsuper.t.juejinbao.ui.movie.presenter.impl.RecommentVideoListImpl;
+import com.newsuper.t.juejinbao.ui.share.dialog.ShareDialog;
+import com.newsuper.t.juejinbao.ui.share.entity.ShareConfigEntity;
+import com.newsuper.t.juejinbao.ui.share.entity.ShareInfo;
+import com.newsuper.t.juejinbao.utils.GetPicByView;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
-import com.umeng.analytics.MobclickAgent;
-import com.ys.network.base.BaseActivity;
-import com.ys.network.base.EventID;
-import com.ys.network.base.LoginEntity;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -113,11 +111,11 @@ public class RecommentVideoListActivity extends BaseActivity<RecommentVideoListI
                     GuideLoginActivity.start(mActivity, false, "");
                 }
                 if (shareDialog != null) {
-                    if(mType == 0) {
-                        MobclickAgent.onEvent(mActivity, EventID.VIDEO_SPECIAL_MOVIE_SHARE);    //免费专区-专题-电影推荐-分享-埋点
-                    }else {
-                        MobclickAgent.onEvent(mActivity, EventID.VIDEO_SPECIAL_TELEPLAY_SHARE); //免费专区-专题-电视剧推荐-分享-埋点
-                    }
+//                    if(mType == 0) {
+//                        MobclickAgent.onEvent(mActivity, EventID.VIDEO_SPECIAL_MOVIE_SHARE);    //免费专区-专题-电影推荐-分享-埋点
+//                    }else {
+//                        MobclickAgent.onEvent(mActivity, EventID.VIDEO_SPECIAL_TELEPLAY_SHARE); //免费专区-专题-电视剧推荐-分享-埋点
+//                    }
                     shareDialog.show();
                 } else {
                     if (dataList != null && dataList.size() > 0) {

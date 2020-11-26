@@ -4,16 +4,15 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.databinding.DataBindingUtil;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.DialogShandiandownloadprogressBinding;
-import com.juejinchain.android.module.movie.activity.ScreenTeachActivity;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.DialogShandiandownloadprogressBinding;
+
 
 public class MyProgressDialog {
     private Activity activity;

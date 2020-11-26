@@ -8,8 +8,26 @@ import android.util.Log;
 import com.newsuper.t.juejinbao.base.ApiService;
 import com.newsuper.t.juejinbao.base.BasePresenter;
 import com.newsuper.t.juejinbao.base.RetrofitManager;
+import com.newsuper.t.juejinbao.bean.BaseConfigEntity;
+import com.newsuper.t.juejinbao.bean.BaseEntity;
+import com.newsuper.t.juejinbao.ui.JunjinBaoMainActivity;
+import com.newsuper.t.juejinbao.ui.ad.HomeAdDialogEntity;
+import com.newsuper.t.juejinbao.ui.home.entity.ADConfigEntity;
 import com.newsuper.t.juejinbao.ui.home.entity.BackCardEntity;
+import com.newsuper.t.juejinbao.ui.home.entity.ExChangeMiniProgramEntity;
+import com.newsuper.t.juejinbao.ui.home.entity.ExChangeWalkMiniProgramEntity;
+import com.newsuper.t.juejinbao.ui.home.entity.HomeBottomTabEntity;
+import com.newsuper.t.juejinbao.ui.home.entity.Read60Reword;
+import com.newsuper.t.juejinbao.ui.home.entity.UnReadEntity;
+import com.newsuper.t.juejinbao.ui.home.entity.WelFareRewardEntity;
+import com.newsuper.t.juejinbao.ui.home.entity.WelfareEntity;
 import com.newsuper.t.juejinbao.ui.home.presenter.MainPresenter;
+import com.newsuper.t.juejinbao.ui.login.entity.IsShowQQEntity;
+import com.newsuper.t.juejinbao.ui.login.entity.PostAliasEntity;
+import com.newsuper.t.juejinbao.ui.movie.entity.MovieRadarSearchListEntity;
+import com.newsuper.t.juejinbao.ui.share.entity.ShareConfigEntity;
+import com.newsuper.t.juejinbao.ui.share.entity.ShareDomainEntity;
+import com.newsuper.t.juejinbao.ui.share.entity.SharePicsEntity;
 import com.newsuper.t.juejinbao.utils.SubscriberOnResponseListenter;
 import com.newsuper.t.juejinbao.utils.network.HttpRequestBody;
 import com.newsuper.t.juejinbao.utils.network.HttpResultFunc;
@@ -362,7 +380,7 @@ public class MainPresenterImpl extends BasePresenter<MainPresenter.View> impleme
             @Override
             public void next(MovieRadarSearchListEntity movieRadarSearchListEntity) {
                 if (movieRadarSearchListEntity.getCode() == 0) {
-                    MainActivity.movieRadarSearchListEntity = movieRadarSearchListEntity;
+                    JunjinBaoMainActivity.movieRadarSearchListEntity = movieRadarSearchListEntity;
                 }
             }
 

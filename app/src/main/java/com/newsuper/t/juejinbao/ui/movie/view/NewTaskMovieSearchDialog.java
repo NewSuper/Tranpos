@@ -8,11 +8,10 @@ import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.module.home.interf.CustomItemClickListener;
-import com.juejinchain.android.module.movie.activity.MovieSearchActivity;
-import com.juejinchain.android.module.my.entity.UserDataEntity;
-import com.ys.network.base.PagerCons;
+import com.newsuper.t.R;
+import com.newsuper.t.juejinbao.base.PagerCons;
+import com.newsuper.t.juejinbao.ui.home.interf.CustomItemClickListener;
+import com.newsuper.t.juejinbao.ui.my.entity.UserDataEntity;
 
 import io.paperdb.Paper;
 

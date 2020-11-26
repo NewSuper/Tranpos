@@ -15,7 +15,6 @@ import android.widget.TextView;
 //import com.bytedance.sdk.openadsdk.FilterWord;
 //import com.bytedance.sdk.openadsdk.TTDislikeDialogAbstract;
 //import com.bytedance.sdk.openadsdk.dislike.TTDislikeListView;
-import com.juejinchain.android.R;
 
 import java.util.ArrayList;
 import java.util.List;

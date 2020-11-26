@@ -7,19 +7,19 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.view.View;
 
 import com.bumptech.glide.Glide;
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.ActivityMovieShownsoonBinding;
-import com.juejinchain.android.module.movie.adapter.EasyAdapter;
-import com.juejinchain.android.module.movie.adapter.MovieShownSoonAdapter;
-import com.juejinchain.android.module.movie.entity.MovieIndexRecommendEntity;
-import com.juejinchain.android.module.movie.entity.MovieNewTabRankEntity;
-import com.juejinchain.android.module.movie.presenter.impl.MovieShownSoonImpl;
-import com.juejinchain.android.utils.MyToast;
+
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivityMovieShownsoonBinding;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.ui.movie.adapter.EasyAdapter;
+import com.newsuper.t.juejinbao.ui.movie.adapter.MovieShownSoonAdapter;
+import com.newsuper.t.juejinbao.ui.movie.entity.MovieNewTabRankEntity;
+import com.newsuper.t.juejinbao.ui.movie.presenter.impl.MovieShownSoonImpl;
+import com.newsuper.t.juejinbao.utils.MyToast;
+import com.newsuper.t.juejinbao.utils.androidUtils.StatusBarUtil;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
-import com.ys.network.base.BaseActivity;
-import com.ys.network.utils.androidUtils.StatusBarUtil;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -29,7 +29,7 @@ import java.util.Map;
 /**
  * 即将上映
  */
-public class MovieShownSoonActivity extends BaseActivity<MovieShownSoonImpl , ActivityMovieShownsoonBinding> implements MovieShownSoonImpl.MvpView {
+public class MovieShownSoonActivity extends BaseActivity<MovieShownSoonImpl, ActivityMovieShownsoonBinding> implements MovieShownSoonImpl.MvpView {
 
 
     MovieShownSoonAdapter adapter;

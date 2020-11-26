@@ -9,12 +9,12 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.ActivityMovieShowhotBinding;
-import com.juejinchain.android.module.movie.adapter.MovieShowHotPageAdapter;
-import com.ys.network.base.BaseActivity;
-import com.ys.network.base.BasePresenter;
-import com.ys.network.utils.androidUtils.StatusBarUtil;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivityMovieShowhotBinding;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.base.BasePresenter;
+import com.newsuper.t.juejinbao.ui.movie.adapter.MovieShowHotPageAdapter;
+import com.newsuper.t.juejinbao.utils.androidUtils.StatusBarUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +22,7 @@ import java.util.List;
 /**
  * 综艺热门
  */
-public class MovieShowHotActivity extends BaseActivity<BasePresenter, ActivityMovieShowhotBinding>{
+public class MovieShowHotActivity extends BaseActivity<BasePresenter, ActivityMovieShowhotBinding> {
 
     MovieShowHotPageAdapter pageAdapter;
 

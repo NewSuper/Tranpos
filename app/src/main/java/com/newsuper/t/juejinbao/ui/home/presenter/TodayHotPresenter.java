@@ -2,9 +2,7 @@ package com.newsuper.t.juejinbao.ui.home.presenter;
 
 import android.app.Activity;
 
-import com.juejinchain.android.module.home.entity.HotPointEntity;
-import com.juejinchain.android.module.home.entity.TodayHotEntity;
-import com.juejinchain.android.module.movie.entity.ResponseEntity;
+import com.newsuper.t.juejinbao.ui.home.entity.TodayHotEntity;
 
 import java.io.Serializable;
 import java.util.Map;

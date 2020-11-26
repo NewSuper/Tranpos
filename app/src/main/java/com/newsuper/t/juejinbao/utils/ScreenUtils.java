@@ -50,8 +50,9 @@ public class ScreenUtils {
      * 获取屏幕宽度
      *
      * @return
+     * @param context
      */
-    public static int getScreenWidth() {
+    public static int getScreenWidth(Context context) {
         return JJBApplication.getContext().getResources().getDisplayMetrics().widthPixels;
     }
 

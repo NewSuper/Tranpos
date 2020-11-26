@@ -44,7 +44,7 @@ public class ThemeManager {
     }
 
     public static Bitmap getThemeDrawable(int theme) {
-        Bitmap bmp = Bitmap.createBitmap(ScreenUtils.getScreenWidth(), ScreenUtils.getScreenHeight(), Bitmap.Config.ARGB_8888);
+        Bitmap bmp = Bitmap.createBitmap(ScreenUtils.getScreenWidth( JJBApplication.getContext()), ScreenUtils.getScreenHeight(), Bitmap.Config.ARGB_8888);
         switch (theme) {
             case THEME1:
                 bmp.eraseColor(ContextCompat.getColor(JJBApplication.getContext(), R.color.theme1));

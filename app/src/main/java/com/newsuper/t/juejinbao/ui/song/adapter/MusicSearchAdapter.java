@@ -9,10 +9,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.module.movie.adapter.MyViewHolder;
-import com.juejinchain.android.module.movie.utils.Utils;
-import com.juejinchain.android.module.song.entity.MusicSearchEntity;
+
+import com.newsuper.t.R;
+import com.newsuper.t.juejinbao.ui.movie.utils.Utils;
+import com.newsuper.t.juejinbao.ui.song.entity.MusicSearchEntity;
 
 import java.util.ArrayList;
 import java.util.List;

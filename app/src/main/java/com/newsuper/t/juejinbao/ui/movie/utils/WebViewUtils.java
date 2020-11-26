@@ -32,6 +32,74 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.FutureTarget;
 import com.bumptech.glide.request.target.SimpleTarget;
 import com.bumptech.glide.request.transition.Transition;
+import com.newsuper.t.juejinbao.base.ApiService;
+import com.newsuper.t.juejinbao.base.BusConstant;
+import com.newsuper.t.juejinbao.base.BusProvider;
+import com.newsuper.t.juejinbao.base.Constant;
+import com.newsuper.t.juejinbao.base.JJBApplication;
+import com.newsuper.t.juejinbao.base.PagerCons;
+import com.newsuper.t.juejinbao.base.RetrofitManager;
+import com.newsuper.t.juejinbao.basepop.blur.thread.ThreadPoolManager;
+import com.newsuper.t.juejinbao.bean.EventBusOffLineEntity;
+import com.newsuper.t.juejinbao.bean.LoginEntity;
+import com.newsuper.t.juejinbao.ui.JunjinBaoMainActivity;
+import com.newsuper.t.juejinbao.ui.WebFragment;
+import com.newsuper.t.juejinbao.ui.ad.BaoquGameActivity;
+import com.newsuper.t.juejinbao.ui.home.activity.HomeDetailActivity;
+import com.newsuper.t.juejinbao.ui.home.activity.PictureViewPagerActivity;
+import com.newsuper.t.juejinbao.ui.home.entity.HomeListEntity;
+import com.newsuper.t.juejinbao.ui.home.entity.RaffleEntity;
+import com.newsuper.t.juejinbao.ui.home.entity.RewardEntity;
+import com.newsuper.t.juejinbao.ui.home.interf.CustomItemClickListener;
+import com.newsuper.t.juejinbao.ui.home.ppw.RafflePop;
+import com.newsuper.t.juejinbao.ui.home.ppw.RewardMoreCoinPop;
+import com.newsuper.t.juejinbao.ui.login.activity.GuideLoginActivity;
+import com.newsuper.t.juejinbao.ui.movie.activity.BridgeWebViewActivity;
+import com.newsuper.t.juejinbao.ui.movie.activity.JSWebActivity;
+import com.newsuper.t.juejinbao.ui.movie.activity.MovieDetailActivity;
+import com.newsuper.t.juejinbao.ui.movie.activity.PlayLocalVideoActivity;
+import com.newsuper.t.juejinbao.ui.movie.activity.PlayMovieActivity;
+import com.newsuper.t.juejinbao.ui.movie.activity.PlayRewardVideoAdActicity;
+import com.newsuper.t.juejinbao.ui.movie.activity.WebActivity;
+import com.newsuper.t.juejinbao.ui.movie.craw.moviedetail.BeanMovieDetail;
+import com.newsuper.t.juejinbao.ui.movie.entity.ADDataEntity;
+import com.newsuper.t.juejinbao.ui.movie.entity.BindThirdEntity;
+import com.newsuper.t.juejinbao.ui.movie.entity.CheckInEntity;
+import com.newsuper.t.juejinbao.ui.movie.entity.MovieThirdIframeEntity;
+import com.newsuper.t.juejinbao.ui.movie.entity.VIPPlatformEntity;
+import com.newsuper.t.juejinbao.ui.movie.view.ForceShareByPlayMovieDialog;
+import com.newsuper.t.juejinbao.ui.movie.view.GoldDialog;
+import com.newsuper.t.juejinbao.ui.movie.vip.AlertWebActivity;
+import com.newsuper.t.juejinbao.ui.movie.vip.VipWebActivity;
+import com.newsuper.t.juejinbao.ui.my.activity.InviteFriendActivity;
+import com.newsuper.t.juejinbao.ui.my.activity.PrivacyActivity;
+import com.newsuper.t.juejinbao.ui.my.activity.UserInfoActivity;
+import com.newsuper.t.juejinbao.ui.share.entity.ShareDomainEntity;
+import com.newsuper.t.juejinbao.ui.share.entity.ShareInfo;
+import com.newsuper.t.juejinbao.ui.share.util.ShareUtils;
+import com.newsuper.t.juejinbao.ui.task.entity.BigTurnTabRewardEntity;
+import com.newsuper.t.juejinbao.utils.AudioCompressHelper;
+import com.newsuper.t.juejinbao.utils.BitmapCompressHelper;
+import com.newsuper.t.juejinbao.utils.ClickUtil;
+import com.newsuper.t.juejinbao.utils.ClipboardUtil;
+import com.newsuper.t.juejinbao.utils.DeviceUtil;
+import com.newsuper.t.juejinbao.utils.FileUtil;
+import com.newsuper.t.juejinbao.utils.MyToast;
+import com.newsuper.t.juejinbao.utils.NetworkUtils;
+import com.newsuper.t.juejinbao.utils.StepUtils;
+import com.newsuper.t.juejinbao.utils.StringUtils;
+import com.newsuper.t.juejinbao.utils.SubscriberOnResponseListenter;
+import com.newsuper.t.juejinbao.utils.ToastUtils;
+import com.newsuper.t.juejinbao.utils.UpAppUtil;
+import com.newsuper.t.juejinbao.utils.VideoCompressHelperNew;
+import com.newsuper.t.juejinbao.utils.WXLaunchMiniUtil;
+import com.newsuper.t.juejinbao.utils.jsbridge.BridgeHandler;
+import com.newsuper.t.juejinbao.utils.jsbridge.BridgeWebView;
+import com.newsuper.t.juejinbao.utils.jsbridge.BridgeWebViewClient;
+import com.newsuper.t.juejinbao.utils.jsbridge.CallBackFunction;
+import com.newsuper.t.juejinbao.utils.network.HttpRequestBody;
+import com.newsuper.t.juejinbao.utils.network.HttpResultFunc;
+import com.newsuper.t.juejinbao.utils.network.ProgressSubscriber;
 
 import org.greenrobot.eventbus.EventBus;
 import org.json.JSONArray;
@@ -46,7 +114,6 @@ import java.util.List;
 import java.util.Map;
 
 import io.paperdb.Paper;
-import razerdp.blur.thread.ThreadPoolManager;
 import rx.Subscriber;
 import rx.Subscription;
 
@@ -290,7 +357,7 @@ public class WebViewUtils {
                     JSONObject json = new JSONObject();
                     try {
                         json.put("code", 1);
-                        json.put("channel", BaseApplication.getChannel());
+                        json.put("channel", JJBApplication.getChannel());
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
@@ -378,7 +445,7 @@ public class WebViewUtils {
                             msg.obj = query;
 
                             BusProvider.getInstance().post(msg);
-                            activity.startActivity(new Intent(activity, MainActivity.class));
+                            activity.startActivity(new Intent(activity, JunjinBaoMainActivity.class));
 //                            activity.finish();
                         } else {
                             //强制跳转
@@ -439,13 +506,13 @@ public class WebViewUtils {
                         Toast.makeText(activity, "未安装微信", Toast.LENGTH_SHORT).show();
                         return;
                     }
-                    authorization(SHARE_MEDIA.WEIXIN);
+                 //   authorization(SHARE_MEDIA.WEIXIN);
                 } else if (data.equals("qq")) {
                     if (!Utils.isQQClientAvailable(activity)) {
                         Toast.makeText(activity, "未安装QQ", Toast.LENGTH_SHORT).show();
                         return;
                     }
-                    authorization(SHARE_MEDIA.QQ);
+                   // authorization(SHARE_MEDIA.QQ);
                 }
             }
         });
@@ -536,7 +603,7 @@ public class WebViewUtils {
                     openBox(url, coin, share_friend, inviting_friend);
 
                     //埋点（点击打开宝箱按钮分享按钮）
-                    MobclickAgent.onEvent(MyApplication.getContext(), EventID.MISSION_EVERYDAYMISSION_OPENBOX_SHARE);
+                   // MobclickAgent.onEvent(MyApplication.getContext(), EventID.MISSION_EVERYDAYMISSION_OPENBOX_SHARE);
 
                 } catch (JSONException e) {
                 }
@@ -1431,7 +1498,7 @@ public class WebViewUtils {
                 try {
                     JSONObject jsonObject = new JSONObject(datas);
                     String webViewTag = jsonObject.optString("tag");
-                    MyApplication.WebViewTag = webViewTag;
+                    JJBApplication.WebViewTag = webViewTag;
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -1445,7 +1512,7 @@ public class WebViewUtils {
             public void handler(String datas, CallBackFunction function) {
                 try {
                     JSONObject jsonObject = new JSONObject(datas);
-                    jsonObject.put("tag", MyApplication.WebViewTag);
+                    jsonObject.put("tag", JJBApplication.WebViewTag);
                     function.onCallBack(jsonObject.toString());
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -1651,11 +1718,11 @@ public class WebViewUtils {
                     String event = jsonObject.optString("event");
                     int value = jsonObject.optInt("value");
                     if (value == 0) {
-                        MobclickAgent.onEvent(MyApplication.getContext(), event);
+                       // MobclickAgent.onEvent(MyApplication.getContext(), event);
                     } else {
                         Map<String, Object> map = new HashMap<>();
                         map.put("onLine", value);
-                        MobclickAgent.onEventObject(MyApplication.getContext(), event, map);
+                       // MobclickAgent.onEventObject(MyApplication.getContext(), event, map);
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -1901,9 +1968,7 @@ public class WebViewUtils {
             public void handler(String datas, CallBackFunction function) {
                 try {
                     JSONObject jsonObject = new JSONObject(datas);
-
                     BeanMovieDetail beanMovieDetail = JSON.parseObject(jsonObject.toString(), BeanMovieDetail.class);
-
                     MovieDetailActivity.intentMe(activity, beanMovieDetail.getOrigin(), beanMovieDetail);
 
                 } catch (Exception e) {
@@ -1952,20 +2017,20 @@ public class WebViewUtils {
                     int mode = jsonObject.optInt("mode");  // 0线上  1测试
 
 
-                    UMImage umImage = new UMImage(activity, thumb);
-
-                    ShareUtils.shareToWXMiniProgram(
-                            activity,
-                            ShareConfigEntity.getDownLoadUrl(),
-                            umImage,
-                            title,
-                            description,
-                            mini_program_path + "&uid=" + LoginEntity.getUid()
-                            ,
-                            mini_program_id,
-                            SHARE_MEDIA.WEIXIN,
-                            mode
-                    );
+//                    UMImage umImage = new UMImage(activity, thumb);
+//
+//                    ShareUtils.shareToWXMiniProgram(
+//                            activity,
+//                            ShareConfigEntity.getDownLoadUrl(),
+//                            umImage,
+//                            title,
+//                            description,
+//                            mini_program_path + "&uid=" + LoginEntity.getUid()
+//                            ,
+//                            mini_program_id,
+//                            SHARE_MEDIA.WEIXIN,
+//                            mode
+//                    );
 
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -2566,217 +2631,217 @@ public class WebViewUtils {
 //            }
 //        });
 //    }
-    private void authorization(SHARE_MEDIA share_media) {
-        UMShareAPI.get(activity).getPlatformInfo(activity, share_media, umAuthListener);
-    }
+//    private void authorization(SHARE_MEDIA share_media) {
+//        UMShareAPI.get(activity).getPlatformInfo(activity, share_media, umAuthListener);
+//    }
 
     /**
      * 授权监听
      */
-    private UMAuthListener umAuthListener = new UMAuthListener() {
-        @Override
-        public void onStart(SHARE_MEDIA platform) {
-            //授权开始的回调
-            Log.e("TAG", "onStart =============》》》》》》》" + "授权开始的回调");
-        }
-
-        @Override
-        public void onComplete(SHARE_MEDIA share_media, int action, Map<String, String> map) {
-
-            Log.e("TAG", "onComplete =============》》》》》》》" + "授权完成");
-            //sdk是6.4.4的,但是获取值的时候用的是6.2以前的(access_token)才能获取到值,未知原因
-            String uid = map.get("uid");
-            String openid = map.get("openid");//微博没有
-            String unionid = map.get("unionid");//微博没有
-            String access_token = map.get("access_token");
-            String refresh_token = map.get("refresh_token");//微信,qq,微博都没有获取到
-            String expires_in = map.get("expires_in");
-            String name = map.get("name");
-            String gender = map.get("gender");
-            String iconurl = map.get("iconurl");
-            Log.e("TAG", "onComplete: 打印第三方获取的参数=======>>>>>" + "name=" + name
-                    + "uid=" + uid
-                    + "openid=" + openid
-                    + "unionid =" + unionid
-                    + "access_token =" + access_token
-                    + "refresh_token=" + refresh_token
-                    + "expires_in=" + expires_in
-                    + "gender=" + gender
-                    + "iconurl=" + iconurl);
-
-
-            //绑定第三方接口
-            Map<String, String> paramMap = new HashMap<>();
-            paramMap.put("access_token", access_token);
-            paramMap.put("openid", openid);
-            if (share_media.equals(SHARE_MEDIA.WEIXIN)) {
-                paramMap.put("platform", "wechat");
-
-                rx.Observable<BindThirdEntity> observable = RetrofitManager.getInstance(activity).create(ApiService.class).bindWX(paramMap).map((new HttpResultFunc<BindThirdEntity>()));
-                Subscription rxSubscription = new ProgressSubscriber<>(new SubscriberOnResponseListenter<BindThirdEntity>() {
-                    @Override
-                    public void next(BindThirdEntity testBean) {
-                        //关联成功
-                        if (testBean.getCode() == 0) {
-                            if (authorizeFunction != null) {
-//                                authorizeFunction.onCallBack("");
-                                //显示奖励框
-//                            if(goldDialog == null) {
-//                                goldDialog = new GoldDialog(activity);
+//    private UMAuthListener umAuthListener = new UMAuthListener() {
+//        @Override
+//        public void onStart(SHARE_MEDIA platform) {
+//            //授权开始的回调
+//            Log.e("TAG", "onStart =============》》》》》》》" + "授权开始的回调");
+//        }
+//
+//        @Override
+//        public void onComplete(SHARE_MEDIA share_media, int action, Map<String, String> map) {
+//
+//            Log.e("TAG", "onComplete =============》》》》》》》" + "授权完成");
+//            //sdk是6.4.4的,但是获取值的时候用的是6.2以前的(access_token)才能获取到值,未知原因
+//            String uid = map.get("uid");
+//            String openid = map.get("openid");//微博没有
+//            String unionid = map.get("unionid");//微博没有
+//            String access_token = map.get("access_token");
+//            String refresh_token = map.get("refresh_token");//微信,qq,微博都没有获取到
+//            String expires_in = map.get("expires_in");
+//            String name = map.get("name");
+//            String gender = map.get("gender");
+//            String iconurl = map.get("iconurl");
+//            Log.e("TAG", "onComplete: 打印第三方获取的参数=======>>>>>" + "name=" + name
+//                    + "uid=" + uid
+//                    + "openid=" + openid
+//                    + "unionid =" + unionid
+//                    + "access_token =" + access_token
+//                    + "refresh_token=" + refresh_token
+//                    + "expires_in=" + expires_in
+//                    + "gender=" + gender
+//                    + "iconurl=" + iconurl);
+//
+//
+//            //绑定第三方接口
+//            Map<String, String> paramMap = new HashMap<>();
+//            paramMap.put("access_token", access_token);
+//            paramMap.put("openid", openid);
+//            if (share_media.equals(SHARE_MEDIA.WEIXIN)) {
+//                paramMap.put("platform", "wechat");
+//
+//                rx.Observable<BindThirdEntity> observable = RetrofitManager.getInstance(activity).create(ApiService.class).bindWX(paramMap).map((new HttpResultFunc<BindThirdEntity>()));
+//                Subscription rxSubscription = new ProgressSubscriber<>(new SubscriberOnResponseListenter<BindThirdEntity>() {
+//                    @Override
+//                    public void next(BindThirdEntity testBean) {
+//                        //关联成功
+//                        if (testBean.getCode() == 0) {
+//                            if (authorizeFunction != null) {
+////                                authorizeFunction.onCallBack("");
+//                                //显示奖励框
+////                            if(goldDialog == null) {
+////                                goldDialog = new GoldDialog(activity);
+////                            }
+////                            goldDialog.show(testBean.getData().getCoin(), "奖励到账", "阅读赚车赚房");
+//                                showReward(Utils.FormatGold(testBean.getData().getCoin()), "奖励到账", "认证微信成功");
+//                                if (authorizeFunction != null) {
+//                                    activity.runOnUiThread(new Runnable() {
+//                                        @Override
+//                                        public void run() {
+//                                            authorizeFunction.onCallBack("{}");
+//
+//                                        }
+//                                    });
+//
+//                                }
 //                            }
-//                            goldDialog.show(testBean.getData().getCoin(), "奖励到账", "阅读赚车赚房");
-                                showReward(Utils.FormatGold(testBean.getData().getCoin()), "奖励到账", "认证微信成功");
-                                if (authorizeFunction != null) {
-                                    activity.runOnUiThread(new Runnable() {
-                                        @Override
-                                        public void run() {
-                                            authorizeFunction.onCallBack("{}");
-
-                                        }
-                                    });
-
-                                }
-                            }
-                        } else {
-                            AlertDialog.Builder builder = new AlertDialog.Builder(activity);
-                            builder.setTitle(testBean.getMsg());
-                            //点击对话框以外的区域是否让对话框消失
-                            builder.setCancelable(true);
-                            //设置正面按钮
-                            builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    dialog.dismiss();
-                                }
-                            });
-                            builder.show();
-
-
-//                            Toast.makeText(activity, testBean.getMsg(), Toast.LENGTH_SHORT).show();
-                        }
-                    }
-
-                    @Override
-                    public void error(String target, Throwable e, String errResponse) {
-                        Log.e("zy", "bindThird error=====++++e=" + e.toString());
-//                baseView.error(errResponse);
-                    }
-                }, activity, false);
-                RetrofitManager.getInstance(activity).toSubscribe(observable, (Subscriber) rxSubscription);
-
-
-            } else if (share_media.equals(SHARE_MEDIA.QQ)) {
-                paramMap.put("platform", "qq");
-
-                rx.Observable<BindThirdEntity> observable = RetrofitManager.getInstance(activity).create(ApiService.class).bindThird(paramMap).map((new HttpResultFunc<BindThirdEntity>()));
-                Subscription rxSubscription = new ProgressSubscriber<>(new SubscriberOnResponseListenter<BindThirdEntity>() {
-                    @Override
-                    public void next(BindThirdEntity testBean) {
-                        //关联成功
-                        if (testBean.getCode() == 0) {
-
-                            if (!TextUtils.isEmpty(testBean.getData().getUser_token())) {
-                                LoginEntity loginEntity = Paper.book().read(PagerCons.USER_DATA);
-                                loginEntity.getData().setUser_token(testBean.getData().getUser_token());
-                                Paper.book().write(PagerCons.USER_DATA, loginEntity);
-                            }
-                            if (authorizeFunction != null) {
-//                                authorizeFunction.onCallBack("");
-                                //显示奖励框
-//                            if(goldDialog == null) {
-//                                goldDialog = new GoldDialog(activity);
+//                        } else {
+//                            AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+//                            builder.setTitle(testBean.getMsg());
+//                            //点击对话框以外的区域是否让对话框消失
+//                            builder.setCancelable(true);
+//                            //设置正面按钮
+//                            builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+//                                @Override
+//                                public void onClick(DialogInterface dialog, int which) {
+//                                    dialog.dismiss();
+//                                }
+//                            });
+//                            builder.show();
+//
+//
+////                            Toast.makeText(activity, testBean.getMsg(), Toast.LENGTH_SHORT).show();
+//                        }
+//                    }
+//
+//                    @Override
+//                    public void error(String target, Throwable e, String errResponse) {
+//                        Log.e("zy", "bindThird error=====++++e=" + e.toString());
+////                baseView.error(errResponse);
+//                    }
+//                }, activity, false);
+//                RetrofitManager.getInstance(activity).toSubscribe(observable, (Subscriber) rxSubscription);
+//
+//
+//            } else if (share_media.equals(SHARE_MEDIA.QQ)) {
+//                paramMap.put("platform", "qq");
+//
+//                rx.Observable<BindThirdEntity> observable = RetrofitManager.getInstance(activity).create(ApiService.class).bindThird(paramMap).map((new HttpResultFunc<BindThirdEntity>()));
+//                Subscription rxSubscription = new ProgressSubscriber<>(new SubscriberOnResponseListenter<BindThirdEntity>() {
+//                    @Override
+//                    public void next(BindThirdEntity testBean) {
+//                        //关联成功
+//                        if (testBean.getCode() == 0) {
+//
+//                            if (!TextUtils.isEmpty(testBean.getData().getUser_token())) {
+//                                LoginEntity loginEntity = Paper.book().read(PagerCons.USER_DATA);
+//                                loginEntity.getData().setUser_token(testBean.getData().getUser_token());
+//                                Paper.book().write(PagerCons.USER_DATA, loginEntity);
 //                            }
-//                            goldDialog.show(testBean.getData().getCoin(), "奖励到账", "阅读赚车赚房");
-                                showReward(Utils.FormatGold(testBean.getData().getCoin()), "奖励到账", "关联QQ成功");
-                                if (authorizeFunction != null) {
-                                    activity.runOnUiThread(new Runnable() {
-                                        @Override
-                                        public void run() {
-                                            authorizeFunction.onCallBack("{}");
-
-                                        }
-                                    });
-
-                                }
-
-                            }
-                        } else {
-                            AlertDialog.Builder builder = new AlertDialog.Builder(activity);
-                            builder.setTitle(testBean.getMsg());
-                            //点击对话框以外的区域是否让对话框消失
-                            builder.setCancelable(true);
-                            //设置正面按钮
-                            builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    dialog.dismiss();
-                                }
-                            });
-                            builder.show();
-
-
-//                            Toast.makeText(activity, testBean.getMsg(), Toast.LENGTH_SHORT).show();
-                        }
-                    }
-
-                    @Override
-                    public void error(String target, Throwable e, String errResponse) {
-                        Log.e("zy", "bindThird error=====++++e=" + e.toString());
-//                baseView.error(errResponse);
-                    }
-                }, activity, false);
-                RetrofitManager.getInstance(activity).toSubscribe(observable, (Subscriber) rxSubscription);
-
-            } else {
-                return;
-            }
-
-
-            //直接取消授权
-            UMShareAPI.get(activity).deleteOauth(activity, share_media, new UMAuthListener() {
-                @Override
-                public void onStart(SHARE_MEDIA share_media) {
-
-                }
-
-                @Override
-                public void onComplete(SHARE_MEDIA share_media, int i, Map<String, String> map) {
-
-                }
-
-                @Override
-                public void onError(SHARE_MEDIA share_media, int i, Throwable throwable) {
-
-                }
-
-                @Override
-                public void onCancel(SHARE_MEDIA share_media, int i) {
-
-                }
-            });
-
-//            if(authorizeFunction != null){
-//                authorizeFunction.onCallBack("");
-//                //显示奖励框
-//                if (goldDialog == null) {
-//                    goldDialog = new GoldDialog(activity);
-//                }
-//                goldDialog.show();
+//                            if (authorizeFunction != null) {
+////                                authorizeFunction.onCallBack("");
+//                                //显示奖励框
+////                            if(goldDialog == null) {
+////                                goldDialog = new GoldDialog(activity);
+////                            }
+////                            goldDialog.show(testBean.getData().getCoin(), "奖励到账", "阅读赚车赚房");
+//                                showReward(Utils.FormatGold(testBean.getData().getCoin()), "奖励到账", "关联QQ成功");
+//                                if (authorizeFunction != null) {
+//                                    activity.runOnUiThread(new Runnable() {
+//                                        @Override
+//                                        public void run() {
+//                                            authorizeFunction.onCallBack("{}");
+//
+//                                        }
+//                                    });
+//
+//                                }
+//
+//                            }
+//                        } else {
+//                            AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+//                            builder.setTitle(testBean.getMsg());
+//                            //点击对话框以外的区域是否让对话框消失
+//                            builder.setCancelable(true);
+//                            //设置正面按钮
+//                            builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+//                                @Override
+//                                public void onClick(DialogInterface dialog, int which) {
+//                                    dialog.dismiss();
+//                                }
+//                            });
+//                            builder.show();
+//
+//
+////                            Toast.makeText(activity, testBean.getMsg(), Toast.LENGTH_SHORT).show();
+//                        }
+//                    }
+//
+//                    @Override
+//                    public void error(String target, Throwable e, String errResponse) {
+//                        Log.e("zy", "bindThird error=====++++e=" + e.toString());
+////                baseView.error(errResponse);
+//                    }
+//                }, activity, false);
+//                RetrofitManager.getInstance(activity).toSubscribe(observable, (Subscriber) rxSubscription);
+//
+//            } else {
+//                return;
 //            }
-
-        }
-
-        @Override
-        public void onError(SHARE_MEDIA platform, int action, Throwable t) {
-            Log.e("TAG", "onError =============》》》》》》》" + "onError");
-        }
-
-        @Override
-        public void onCancel(SHARE_MEDIA platform, int action) {
-            Log.e("TAG", "onCancel =============》》》》》》》" + "onCancel");
-//            Toast.makeText( getApplicationContext(), "Authorize cancel", Toast.LENGTH_SHORT).show();
-        }
-    };
+//
+//
+//            //直接取消授权
+//            UMShareAPI.get(activity).deleteOauth(activity, share_media, new UMAuthListener() {
+//                @Override
+//                public void onStart(SHARE_MEDIA share_media) {
+//
+//                }
+//
+//                @Override
+//                public void onComplete(SHARE_MEDIA share_media, int i, Map<String, String> map) {
+//
+//                }
+//
+//                @Override
+//                public void onError(SHARE_MEDIA share_media, int i, Throwable throwable) {
+//
+//                }
+//
+//                @Override
+//                public void onCancel(SHARE_MEDIA share_media, int i) {
+//
+//                }
+//            });
+//
+////            if(authorizeFunction != null){
+////                authorizeFunction.onCallBack("");
+////                //显示奖励框
+////                if (goldDialog == null) {
+////                    goldDialog = new GoldDialog(activity);
+////                }
+////                goldDialog.show();
+////            }
+//
+//        }
+//
+//        @Override
+//        public void onError(SHARE_MEDIA platform, int action, Throwable t) {
+//            Log.e("TAG", "onError =============》》》》》》》" + "onError");
+//        }
+//
+//        @Override
+//        public void onCancel(SHARE_MEDIA platform, int action) {
+//            Log.e("TAG", "onCancel =============》》》》》》》" + "onCancel");
+////            Toast.makeText( getApplicationContext(), "Authorize cancel", Toast.LENGTH_SHORT).show();
+//        }
+//    };
 
     public void showRewardPop(double coin) {
         RewardEntity rewardEntity = new RewardEntity();

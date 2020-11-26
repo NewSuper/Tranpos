@@ -16,22 +16,12 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bytedance.sdk.openadsdk.AdSlot;
-import com.bytedance.sdk.openadsdk.FilterWord;
-import com.bytedance.sdk.openadsdk.TTAdConstant;
-import com.bytedance.sdk.openadsdk.TTAdDislike;
-import com.bytedance.sdk.openadsdk.TTAdNative;
-import com.bytedance.sdk.openadsdk.TTAppDownloadListener;
-import com.bytedance.sdk.openadsdk.TTBannerAd;
-import com.bytedance.sdk.openadsdk.TTNativeExpressAd;
-import com.juejinchain.android.R;
-import com.juejinchain.android.config.TTAdManagerHolder;
-import com.juejinchain.android.module.ad.ADSwitchUtil;
-import com.juejinchain.android.module.ad.GDTHolder;
-import com.juejinchain.android.module.home.entity.RewardEntity;
-import com.juejinchain.android.module.movie.utils.Utils;
-import com.juejinchain.android.utils.DislikeDialog;
-import com.juejinchain.android.utils.MyToast;
+import com.newsuper.t.R;
+import com.newsuper.t.juejinbao.basepop.BasePopupWindow;
+import com.newsuper.t.juejinbao.ui.ad.ADSwitchUtil;
+import com.newsuper.t.juejinbao.ui.ad.GDTHolder;
+import com.newsuper.t.juejinbao.ui.home.entity.RewardEntity;
+import com.newsuper.t.juejinbao.ui.movie.utils.Utils;
 import com.qq.e.ads.banner2.UnifiedBannerADListener;
 import com.qq.e.ads.banner2.UnifiedBannerView;
 import com.qq.e.ads.cfg.VideoOption;
@@ -48,7 +38,6 @@ import com.qq.e.comm.util.AdError;
 import java.util.List;
 import java.util.Locale;
 
-import razerdp.basepopup.BasePopupWindow;
 
 /**
  * 阅读奖励pop 带banner广告
@@ -67,9 +56,9 @@ public class RewardMoreCoinPop_2 extends BasePopupWindow {
     OnClickListener onClickListener;
 
     //穿山甲
-    private TTAdNative mTTAdNative;
+   // private TTAdNative mTTAdNative;
     private FrameLayout mExpressContainer;
-    private TTNativeExpressAd mTTAd;
+   // private TTNativeExpressAd mTTAd;
     private long startTime = 0;
 
     //广点通
@@ -83,24 +72,20 @@ public class RewardMoreCoinPop_2 extends BasePopupWindow {
     public RewardMoreCoinPop_2(Activity context) {
         super(context);
         this.mContext = context;
-        initAdManager(context);
+     //   initAdManager(context);
         initView();
 
     }
 
-    private void initAdManager(Activity context) {
-        mTTAdNative = TTAdManagerHolder.get().createAdNative(context);
-        //step3:(可选，强烈建议在合适的时机调用):申请部分权限，如read_phone_state,防止获取不了imei时候，下载类广告没有填充的问题。
-        TTAdManagerHolder.get().requestPermissionIfNecessary(context);
-    }
+//    private void initAdManager(Activity context) {
+//        mTTAdNative = TTAdManagerHolder.get().createAdNative(context);
+//        //step3:(可选，强烈建议在合适的时机调用):申请部分权限，如read_phone_state,防止获取不了imei时候，下载类广告没有填充的问题。
+//        TTAdManagerHolder.get().requestPermissionIfNecessary(context);
+//    }
 
 
     public void setView(RewardEntity entity) {
-
-
         if (entity == null) return;
-
-
         if (!TextUtils.isEmpty(entity.getTitle())) {
             mTvTitle.setText(entity.getTitle());
         } else {
@@ -150,7 +135,7 @@ public class RewardMoreCoinPop_2 extends BasePopupWindow {
 
         int i = ADSwitchUtil.calculateBannerType();
         if(i==0){
-            loadBannerAd(TTAdManagerHolder.POS_ID_BANNER);
+           // loadBannerAd(TTAdManagerHolder.POS_ID_BANNER);
         }else {
             refreshAd();
         }
@@ -182,38 +167,38 @@ public class RewardMoreCoinPop_2 extends BasePopupWindow {
         void onclick(View view);
     }
 
-    private void loadBannerAd(String codeId) {
-        llRoot.setVisibility(View.GONE);
-        mExpressContainer.removeAllViews();
-        //step4:创建广告请求参数AdSlot,具体参数含义参考文档
-        AdSlot adSlot = new AdSlot.Builder()
-                .setCodeId(codeId) //广告位id
-                .setSupportDeepLink(true)
-                .setAdCount(1) //请求广告数量为1到3条
-                .setExpressViewAcceptedSize(300, 200) //期望模板广告view的size,单位dp
-                .build();
-        //step5:请求广告，对请求回调的广告作渲染处理
-        mTTAdNative.loadBannerExpressAd(adSlot, new TTAdNative.NativeExpressAdListener() {
-            @Override
-            public void onError(int code, String message) {
-
-                mExpressContainer.removeAllViews();
-
-                showLoading(false);
-            }
-
-            @Override
-            public void onNativeExpressAdLoad(List<TTNativeExpressAd> ads) {
-                if (ads == null || ads.size() == 0) {
-                    return;
-                }
-                mTTAd = ads.get(0);
-                bindAdListener(mTTAd);
-                startTime = System.currentTimeMillis();
-                mTTAd.render();
-            }
-        });
-    }
+//    private void loadBannerAd(String codeId) {
+//        llRoot.setVisibility(View.GONE);
+//        mExpressContainer.removeAllViews();
+//        //step4:创建广告请求参数AdSlot,具体参数含义参考文档
+//        AdSlot adSlot = new AdSlot.Builder()
+//                .setCodeId(codeId) //广告位id
+//                .setSupportDeepLink(true)
+//                .setAdCount(1) //请求广告数量为1到3条
+//                .setExpressViewAcceptedSize(300, 200) //期望模板广告view的size,单位dp
+//                .build();
+//        //step5:请求广告，对请求回调的广告作渲染处理
+//        mTTAdNative.loadBannerExpressAd(adSlot, new TTAdNative.NativeExpressAdListener() {
+//            @Override
+//            public void onError(int code, String message) {
+//
+//                mExpressContainer.removeAllViews();
+//
+//                showLoading(false);
+//            }
+//
+//            @Override
+//            public void onNativeExpressAdLoad(List<TTNativeExpressAd> ads) {
+//                if (ads == null || ads.size() == 0) {
+//                    return;
+//                }
+//                mTTAd = ads.get(0);
+//                bindAdListener(mTTAd);
+//                startTime = System.currentTimeMillis();
+//                mTTAd.render();
+//            }
+//        });
+//    }
 
     public void showLoading(boolean isShow){
 
@@ -229,75 +214,75 @@ public class RewardMoreCoinPop_2 extends BasePopupWindow {
 
     private boolean mHasShowDownloadActive = false;
 
-    private void bindAdListener(TTNativeExpressAd ad) {
-        ad.setExpressInteractionListener(new TTNativeExpressAd.ExpressAdInteractionListener() {
-            @Override
-            public void onAdClicked(View view, int type) {
-
-            }
-
-            @Override
-            public void onAdShow(View view, int type) {
-
-                showLoading(false);
-            }
-
-            @Override
-            public void onRenderFail(View view, String msg, int code) {
-                Log.e("ExpressView", "render fail:" + (System.currentTimeMillis() - startTime));
-                showLoading(false);
-            }
-
-            @Override
-            public void onRenderSuccess(View view, float width, float height) {
-                Log.e("ExpressView", "render suc:" + (System.currentTimeMillis() - startTime));
-                //返回view的宽高 单位 dp
-
-                mExpressContainer.removeAllViews();
-                mExpressContainer.addView(view);
-                showLoading(false);
-            }
-        });
-        //dislike设置
-        bindDislike(ad, false);
-        if (ad.getInteractionType() != TTAdConstant.INTERACTION_TYPE_DOWNLOAD) {
-            return;
-        }
-        ad.setDownloadListener(new TTAppDownloadListener() {
-            @Override
-            public void onIdle() {
-
-            }
-
-            @Override
-            public void onDownloadActive(long totalBytes, long currBytes, String fileName, String appName) {
-                if (!mHasShowDownloadActive) {
-                    mHasShowDownloadActive = true;
-
-                }
-            }
-
-            @Override
-            public void onDownloadPaused(long totalBytes, long currBytes, String fileName, String appName) {
-
-            }
-
-            @Override
-            public void onDownloadFailed(long totalBytes, long currBytes, String fileName, String appName) {
-
-            }
-
-            @Override
-            public void onInstalled(String fileName, String appName) {
-
-            }
-
-            @Override
-            public void onDownloadFinished(long totalBytes, String fileName, String appName) {
-
-            }
-        });
-    }
+//    private void bindAdListener(TTNativeExpressAd ad) {
+//        ad.setExpressInteractionListener(new TTNativeExpressAd.ExpressAdInteractionListener() {
+//            @Override
+//            public void onAdClicked(View view, int type) {
+//
+//            }
+//
+//            @Override
+//            public void onAdShow(View view, int type) {
+//
+//                showLoading(false);
+//            }
+//
+//            @Override
+//            public void onRenderFail(View view, String msg, int code) {
+//                Log.e("ExpressView", "render fail:" + (System.currentTimeMillis() - startTime));
+//                showLoading(false);
+//            }
+//
+//            @Override
+//            public void onRenderSuccess(View view, float width, float height) {
+//                Log.e("ExpressView", "render suc:" + (System.currentTimeMillis() - startTime));
+//                //返回view的宽高 单位 dp
+//
+//                mExpressContainer.removeAllViews();
+//                mExpressContainer.addView(view);
+//                showLoading(false);
+//            }
+//        });
+//        //dislike设置
+//        bindDislike(ad, false);
+//        if (ad.getInteractionType() != TTAdConstant.INTERACTION_TYPE_DOWNLOAD) {
+//            return;
+//        }
+//        ad.setDownloadListener(new TTAppDownloadListener() {
+//            @Override
+//            public void onIdle() {
+//
+//            }
+//
+//            @Override
+//            public void onDownloadActive(long totalBytes, long currBytes, String fileName, String appName) {
+//                if (!mHasShowDownloadActive) {
+//                    mHasShowDownloadActive = true;
+//
+//                }
+//            }
+//
+//            @Override
+//            public void onDownloadPaused(long totalBytes, long currBytes, String fileName, String appName) {
+//
+//            }
+//
+//            @Override
+//            public void onDownloadFailed(long totalBytes, long currBytes, String fileName, String appName) {
+//
+//            }
+//
+//            @Override
+//            public void onInstalled(String fileName, String appName) {
+//
+//            }
+//
+//            @Override
+//            public void onDownloadFinished(long totalBytes, String fileName, String appName) {
+//
+//            }
+//        });
+//    }
 
     /**
      * 设置广告的不喜欢, 注意：强烈建议设置该逻辑，如果不设置dislike处理逻辑，则模板广告中的 dislike区域不响应dislike事件。
@@ -305,42 +290,42 @@ public class RewardMoreCoinPop_2 extends BasePopupWindow {
      * @param ad
      * @param customStyle 是否自定义样式，true:样式自定义
      */
-    private void bindDislike(TTNativeExpressAd ad, boolean customStyle) {
-        if (customStyle) {
-            //使用自定义样式
-            List<FilterWord> words = ad.getFilterWords();
-            if (words == null || words.isEmpty()) {
-                return;
-            }
-
-            final DislikeDialog dislikeDialog = new DislikeDialog(mContext, words);
-            dislikeDialog.setOnDislikeItemClick(new DislikeDialog.OnDislikeItemClick() {
-                @Override
-                public void onItemClick(FilterWord filterWord) {
-                    //屏蔽广告
-
-                    //用户选择不喜欢原因后，移除广告展示
-                    mExpressContainer.removeAllViews();
-                }
-            });
-            ad.setDislikeDialog(dislikeDialog);
-            return;
-        }
-        //使用默认模板中默认dislike弹出样式
-        ad.setDislikeCallback(mContext, new TTAdDislike.DislikeInteractionCallback() {
-            @Override
-            public void onSelected(int position, String value) {
-
-                //用户选择不喜欢原因后，移除广告展示
-                mExpressContainer.removeAllViews();
-            }
-
-            @Override
-            public void onCancel() {
-
-            }
-        });
-    }
+//    private void bindDislike(TTNativeExpressAd ad, boolean customStyle) {
+//        if (customStyle) {
+//            //使用自定义样式
+//            List<FilterWord> words = ad.getFilterWords();
+//            if (words == null || words.isEmpty()) {
+//                return;
+//            }
+//
+//            final DislikeDialog dislikeDialog = new DislikeDialog(mContext, words);
+//            dislikeDialog.setOnDislikeItemClick(new DislikeDialog.OnDislikeItemClick() {
+//                @Override
+//                public void onItemClick(FilterWord filterWord) {
+//                    //屏蔽广告
+//
+//                    //用户选择不喜欢原因后，移除广告展示
+//                    mExpressContainer.removeAllViews();
+//                }
+//            });
+//            ad.setDislikeDialog(dislikeDialog);
+//            return;
+//        }
+//        //使用默认模板中默认dislike弹出样式
+//        ad.setDislikeCallback(mContext, new TTAdDislike.DislikeInteractionCallback() {
+//            @Override
+//            public void onSelected(int position, String value) {
+//
+//                //用户选择不喜欢原因后，移除广告展示
+//                mExpressContainer.removeAllViews();
+//            }
+//
+//            @Override
+//            public void onCancel() {
+//
+//            }
+//        });
+//    }
 
 
     /****************  广点通  *************************/

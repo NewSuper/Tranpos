@@ -3,35 +3,29 @@ package com.newsuper.t.juejinbao.ui.my.activity;
 import android.view.View;
 import android.widget.CompoundButton;
 
-import com.huawei.android.hms.agent.HMSAgent;
-import com.juejinchain.android.R;
-import com.juejinchain.android.base.Constant;
-import com.juejinchain.android.databinding.ActivityModelSettingBinding;
-import com.juejinchain.android.event.LoginEvent;
-import com.juejinchain.android.module.home.entity.RaffleEntity;
-import com.juejinchain.android.module.home.ppw.RafflePop;
-import com.juejinchain.android.module.login.activity.GuideLoginActivity;
-import com.juejinchain.android.module.login.activity.WebSmsActivity;
-import com.juejinchain.android.module.movie.activity.BridgeWebViewActivity;
-import com.juejinchain.android.module.movie.activity.PlayRewardVideoAdActicity;
-import com.juejinchain.android.module.my.dialog.ConfigDialog;
-import com.juejinchain.android.module.my.presenter.SettingPresenter;
-import com.juejinchain.android.module.my.presenter.impl.SettingPresenterImpl;
-import com.juejinchain.android.module.song.manager.SongPlayManager;
-import com.juejinchain.android.utils.DataCleanManager;
-import com.juejinchain.android.utils.MyToast;
-import com.juejinchain.android.utils.Utils;
-import com.umeng.socialize.UMAuthListener;
-import com.umeng.socialize.UMShareAPI;
-import com.umeng.socialize.bean.SHARE_MEDIA;
-import com.xiaomi.mipush.sdk.MiPushClient;
-import com.ys.network.base.BaseActivity;
-import com.ys.network.base.BaseApplication;
-import com.ys.network.base.LoginEntity;
-import com.ys.network.base.PagerCons;
-import com.ys.network.event.SettingLoginEvent;
-import com.ys.network.network.RetrofitManager;
-import com.ys.network.utils.androidUtils.OSUtils;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivityModelSettingBinding;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.base.Constant;
+import com.newsuper.t.juejinbao.base.JJBApplication;
+import com.newsuper.t.juejinbao.base.PagerCons;
+import com.newsuper.t.juejinbao.base.RetrofitManager;
+import com.newsuper.t.juejinbao.bean.LoginEntity;
+import com.newsuper.t.juejinbao.bean.LoginEvent;
+import com.newsuper.t.juejinbao.bean.SettingLoginEvent;
+import com.newsuper.t.juejinbao.ui.home.entity.RaffleEntity;
+import com.newsuper.t.juejinbao.ui.home.ppw.RafflePop;
+import com.newsuper.t.juejinbao.ui.login.activity.GuideLoginActivity;
+import com.newsuper.t.juejinbao.ui.login.activity.WebSmsActivity;
+import com.newsuper.t.juejinbao.ui.movie.activity.BridgeWebViewActivity;
+import com.newsuper.t.juejinbao.ui.movie.activity.PlayRewardVideoAdActicity;
+import com.newsuper.t.juejinbao.ui.my.dialog.ConfigDialog;
+import com.newsuper.t.juejinbao.ui.my.presenter.SettingPresenter;
+import com.newsuper.t.juejinbao.ui.my.presenter.impl.SettingPresenterImpl;
+import com.newsuper.t.juejinbao.ui.song.manager.SongPlayManager;
+import com.newsuper.t.juejinbao.utils.DataCleanManager;
+import com.newsuper.t.juejinbao.utils.MyToast;
+import com.newsuper.t.juejinbao.utils.Utils;
 
 import org.greenrobot.eventbus.EventBus;
 import org.json.JSONException;
@@ -42,12 +36,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 import butterknife.OnClick;
-import cn.jpush.android.api.JPushInterface;
+
 import io.paperdb.Paper;
 
 import static io.paperdb.Paper.book;
 
-//import com.igexin.sdk.PushManager;
 
 public class SettingActivity extends BaseActivity<SettingPresenterImpl, ActivityModelSettingBinding> implements
         SettingPresenter.SettingView {
@@ -86,11 +79,11 @@ public class SettingActivity extends BaseActivity<SettingPresenterImpl, Activity
 
                 } else {
                     Paper.book().write(PagerCons.PUSH_TYPE, "2");
-                    if (OSUtils.isMiuiRom()) {
-                        MiPushClient.unregisterPush(mActivity);
-                    } else if (OSUtils.isHuaweiRom()) {
-                        HMSAgent.destroy();
-                    }
+//                    if (OSUtils.isMiuiRom()) {
+//                        MiPushClient.unregisterPush(mActivity);
+//                    } else if (OSUtils.isHuaweiRom()) {
+//                        HMSAgent.destroy();
+//                    }
 //                        else if (OSUtils.isOPPORom()) {
 //
 //                        } else if (OSUtils.isVivoRom()) {
@@ -98,9 +91,9 @@ public class SettingActivity extends BaseActivity<SettingPresenterImpl, Activity
 //                        } else if (OSUtils.isFlyme()) {
 //                            com.meizu.cloud.pushsdk.PushManager.unRegister(mActivity, MyApplication.MEIZU_APP_ID, MyApplication.MEIZU_APP_KEY);
 //                        }
-                    else {
+            //        else {
 //                        PushManager.getInstance().stopService(mActivity);
-                    }
+              //      }
                 }
             }
         });
@@ -113,7 +106,7 @@ public class SettingActivity extends BaseActivity<SettingPresenterImpl, Activity
         } else {
             mViewBinding.rlCurrentVersion.setVisibility(View.VISIBLE);
             String domain = "dev.api.juejinchain.cn".equals(RetrofitManager.APP_URL_DOMAIN) ? "测试环境" : "预发布";
-            mViewBinding.tvCurrentVersion.setText("版本：" +  Utils.getVersion() + "-" + domain + "-" + "渠道号：" + BaseApplication.getChannel());
+            mViewBinding.tvCurrentVersion.setText("版本：" +  Utils.getVersion() + "-" + domain + "-" + "渠道号：" + JJBApplication.getChannel());
 
 
         }
@@ -233,12 +226,12 @@ public class SettingActivity extends BaseActivity<SettingPresenterImpl, Activity
                             MyToast.showToast("当前未登录");
                             return;
                         }
-                        if (OSUtils.isMiuiRom()) {
-                            MiPushClient.unregisterPush(mActivity);
-                            MiPushClient.unsetAlias(mActivity, loginEntity == null ? "" : loginEntity.getData() == null ? "" : String.valueOf(loginEntity.getData().getUid()), "");
-                        } else if (OSUtils.isHuaweiRom()) {
-                            HMSAgent.destroy();
-                        }
+//                        if (OSUtils.isMiuiRom()) {
+//                            MiPushClient.unregisterPush(mActivity);
+//                            MiPushClient.unsetAlias(mActivity, loginEntity == null ? "" : loginEntity.getData() == null ? "" : String.valueOf(loginEntity.getData().getUid()), "");
+//                        } else if (OSUtils.isHuaweiRom()) {
+//                            HMSAgent.destroy();
+//                        }
 //                        else if (OSUtils.isOPPORom()) {
 //
 //                        } else if (OSUtils.isVivoRom()) {
@@ -250,51 +243,51 @@ public class SettingActivity extends BaseActivity<SettingPresenterImpl, Activity
 //                            PushManager.getInstance().unBindAlias(mActivity, (loginEntity == null ? "" : loginEntity.getData() == null ? "" :
 //                                    String.valueOf(loginEntity.getData().getUid())), true);
 //                            PushManager.getInstance().stopService(mActivity);
-                            JPushInterface.deleteAlias(mActivity , 0);
+                          //  JPushInterface.deleteAlias(mActivity , 0);
                         }
 
-                        UMShareAPI.get(mActivity).deleteOauth(mActivity, SHARE_MEDIA.QQ, new UMAuthListener() {
-                            @Override
-                            public void onStart(SHARE_MEDIA share_media) {
-
-                            }
-
-                            @Override
-                            public void onComplete(SHARE_MEDIA share_media, int i, Map<String, String> map) {
-
-                            }
-
-                            @Override
-                            public void onError(SHARE_MEDIA share_media, int i, Throwable throwable) {
-
-                            }
-
-                            @Override
-                            public void onCancel(SHARE_MEDIA share_media, int i) {
-
-                            }
-                        });
-                        UMShareAPI.get(mActivity).deleteOauth(mActivity, SHARE_MEDIA.WEIXIN, new UMAuthListener() {
-                            @Override
-                            public void onStart(SHARE_MEDIA share_media) {
-
-                            }
-
-                            @Override
-                            public void onComplete(SHARE_MEDIA share_media, int i, Map<String, String> map) {
-
-                            }
-
-                            @Override
-                            public void onError(SHARE_MEDIA share_media, int i, Throwable throwable) {
-
-                            }
-
-                            @Override
-                            public void onCancel(SHARE_MEDIA share_media, int i) {
-
-                            }
-                        });
+//                        UMShareAPI.get(mActivity).deleteOauth(mActivity, SHARE_MEDIA.QQ, new UMAuthListener() {
+//                            @Override
+//                            public void onStart(SHARE_MEDIA share_media) {
+//
+//                            }
+//
+//                            @Override
+//                            public void onComplete(SHARE_MEDIA share_media, int i, Map<String, String> map) {
+//
+//                            }
+//
+//                            @Override
+//                            public void onError(SHARE_MEDIA share_media, int i, Throwable throwable) {
+//
+//                            }
+//
+//                            @Override
+//                            public void onCancel(SHARE_MEDIA share_media, int i) {
+//
+//                            }
+//                        });
+//                        UMShareAPI.get(mActivity).deleteOauth(mActivity, SHARE_MEDIA.WEIXIN, new UMAuthListener() {
+//                            @Override
+//                            public void onStart(SHARE_MEDIA share_media) {
+//
+//                            }
+//
+//                            @Override
+//                            public void onComplete(SHARE_MEDIA share_media, int i, Map<String, String> map) {
+//
+//                            }
+//
+//                            @Override
+//                            public void onError(SHARE_MEDIA share_media, int i, Throwable throwable) {
+//
+//                            }
+//
+//                            @Override
+//                            public void onCancel(SHARE_MEDIA share_media, int i) {
+//
+//                            }
+//                        });
 
                         Map<String, String> map = new HashMap<>();
                         mPresenter.LoginOut(map, mActivity);
@@ -329,7 +322,6 @@ public class SettingActivity extends BaseActivity<SettingPresenterImpl, Activity
 //                        DataCleanManager.cleanInternalCache(getApplicationContext());
                         MyToast.showToast("清除成功");
 //                        mViewBinding.tvCacheSize.setText("0.0KB");
-
 
                         configDialog.dismiss();
                     }

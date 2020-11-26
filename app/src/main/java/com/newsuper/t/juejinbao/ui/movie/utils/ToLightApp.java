@@ -15,14 +15,14 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
-import com.juejinchain.android.base.ApiService;
-import com.juejinchain.android.base.MyApplication;
-import com.juejinchain.android.callback.ProgressResponseBody;
-import com.juejinchain.android.module.movie.entity.MovieThirdIframeEntity;
-import com.juejinchain.android.module.movie.view.MyProgressDialog;
-import com.juejinchain.android.module.share.util.ShareToolUtil;
-import com.juejinchain.android.utils.FileUtil;
-import com.juejinchain.android.utils.MyToast;
+import com.newsuper.t.juejinbao.base.ApiService;
+import com.newsuper.t.juejinbao.base.JJBApplication;
+import com.newsuper.t.juejinbao.ui.movie.entity.MovieThirdIframeEntity;
+import com.newsuper.t.juejinbao.ui.movie.view.MyProgressDialog;
+import com.newsuper.t.juejinbao.ui.share.util.ShareToolUtil;
+import com.newsuper.t.juejinbao.utils.FileUtil;
+import com.newsuper.t.juejinbao.utils.MyToast;
+import com.newsuper.t.juejinbao.utils.ProgressResponseBody;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -238,12 +238,12 @@ public class ToLightApp {
                     }
                 }).build();
         if (TextUtils.isEmpty(url)) {
-            MyToast.show(MyApplication.getInstance(), "安装包路径为空！");
+            MyToast.show(JJBApplication.getInstance(), "安装包路径为空！");
             return;
         }
 
         if (url.lastIndexOf("/") == -1) {
-            MyToast.show(MyApplication.getInstance(), "安装包路径为空！");
+            MyToast.show(JJBApplication.getInstance(), "安装包路径为空！");
             return;
         }
 
@@ -281,7 +281,7 @@ public class ToLightApp {
                         if (file != null && file.exists()) {
                             installationApp(file);
                         } else {
-                            Toast.makeText(MyApplication.getInstance(), "安装包错误", Toast.LENGTH_LONG);
+                            Toast.makeText(JJBApplication.getInstance(), "安装包错误", Toast.LENGTH_LONG);
                         }
 
                     }
@@ -296,7 +296,7 @@ public class ToLightApp {
             Intent install;
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {//判读版本是否在7.0以上
                 //在AndroidManifest中的android:authorities值
-                Uri apkUri = FileProvider.getUriForFile(MyApplication.getInstance(), ShareToolUtil.AUTHORITY, file);
+                Uri apkUri = FileProvider.getUriForFile(JJBApplication.getInstance(), ShareToolUtil.AUTHORITY, file);
                 install = new Intent(Intent.ACTION_VIEW);
                 install.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 install.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
@@ -307,7 +307,7 @@ public class ToLightApp {
                 install.setDataAndType(Uri.fromFile(file), "application/vnd.android.package-archive");
                 install.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             }
-            MyApplication.getInstance().startActivity(install);
+            JJBApplication.getInstance().startActivity(install);
 
 
         } catch (Exception e) {

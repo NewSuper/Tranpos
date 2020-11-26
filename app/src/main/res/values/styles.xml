@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
@@ -187,13 +187,6 @@
         <item name="android:textSize">@dimen/ws18dp</item>
     </style>
 
-    <declare-styleable name="LoadingLayout">
-        <attr name="loadingView" format="reference"/>
-        <attr name="errorView" format="reference"/>
-        <attr name="emptyView" format="reference"/>
-    </declare-styleable>
-
-
 
     <!--dialog弹出动画-->
     <style name="dialog_animation" parent="android:Animation">
@@ -293,25 +286,10 @@
         <item name="android:button">@drawable/check_box</item>
     </style>
 
+    <style
+        android:windowbackground="null"
+        name="AppTheme.Splash" parent="AppTheme">
 
-    <declare-styleable name="LyricView">
-        <attr name="text_size" format="dimension"/>
-        <attr name="text_divider" format="dimension"/>
-        <attr name="normal_color" format="reference|color"/>
-        <attr name="current_color" format="reference|color"/>
-        <attr name="default_label" format="string"/>
-        <attr name="lrc_padding" format="dimension"/>
-        <attr name="timeline_color" format="reference|color"/>
-        <attr name="time_color" format="reference|color"/>
-        <attr name="time_text_size" format="dimension"/>
-        <attr name="text_gravity">
-            <enum name="center" value="0" />
-            <enum name="left" value="1" />
-            <enum name="right" value="2" />
-        </attr>
-    </declare-styleable>
-
-    <declare-styleable name="MaxHeightRecyclerView">
-        <attr name="maxHeight" format="dimension" />
-    </declare-styleable>
+        <item name="android:windowBackground">@mipmap/splash</item>
+    </style>
 </resources>

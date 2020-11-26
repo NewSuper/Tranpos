@@ -24,9 +24,7 @@
                     android:layout_centerInParent="true"
                     android:id="@+id/model_activity_micro_video_jzvdPlayer"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                </com.juejinchain.android.view.JzvdStdSmallVideo_withCache>
+                    android:layout_height="wrap_content"/>
 
                 <ImageView
                     android:id="@+id/model_activity_micro_video_jzvdPlayer_img"

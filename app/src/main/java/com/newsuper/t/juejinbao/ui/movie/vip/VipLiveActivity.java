@@ -24,19 +24,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.juejinchain.android.R;
-import com.juejinchain.android.base.MyApplication;
-import com.juejinchain.android.databinding.ActivityVipliveBinding;
-import com.juejinchain.android.databinding.ActivityVipplayBinding;
-import com.juejinchain.android.jsbridge.BridgeWebView;
-import com.juejinchain.android.jsbridge.BridgeWebViewClient;
-import com.juejinchain.android.module.home.presenter.impl.PublicPresenterImpl;
-import com.juejinchain.android.module.movie.activity.BridgeWebViewActivity;
-import com.juejinchain.android.module.movie.presenter.impl.VipPlayImpl;
-import com.juejinchain.android.module.movie.utils.Utils;
-import com.umeng.analytics.MobclickAgent;
-import com.ys.network.base.BaseActivity;
-import com.ys.network.base.EventID;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivityVipliveBinding;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.ui.home.presenter.impl.PublicPresenterImpl;
+import com.newsuper.t.juejinbao.ui.movie.utils.Utils;
+import com.newsuper.t.juejinbao.utils.jsbridge.BridgeWebView;
+import com.newsuper.t.juejinbao.utils.jsbridge.BridgeWebViewClient;
+
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -230,7 +225,7 @@ public class VipLiveActivity extends BaseActivity<PublicPresenterImpl, ActivityV
         int alertTime = (int) ((endTime-startTime)/1000);
         Map<String, Object> time = new HashMap<>();
         time.put("alertTimeInSeconds",alertTime);
-        MobclickAgent.onEventObject(MyApplication.getContext(), EventID.VIP_LIVE_ONLINE_TIME, time);
+        //MobclickAgent.onEventObject(MyApplication.getContext(), EventID.VIP_LIVE_ONLINE_TIME, time);
 
         if (webView != null) {
             // 如果先调用destroy()方法，则会命中if (isDestroyed()) return;这一行代码，需要先onDetachedFromWindow()，再

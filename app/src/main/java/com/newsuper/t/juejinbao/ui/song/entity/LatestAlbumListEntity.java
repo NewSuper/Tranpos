@@ -1,6 +1,7 @@
 package com.newsuper.t.juejinbao.ui.song.entity;
 
-import com.juejinchain.android.module.movie.adapter.EasyAdapter;
+
+import com.newsuper.t.juejinbao.ui.movie.adapter.EasyAdapter;
 
 import java.util.List;
 

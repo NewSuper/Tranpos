@@ -11,35 +11,30 @@ import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.ActivityLoginSetInviteCodeBinding;
-import com.juejinchain.android.event.LoginEvent;
-import com.juejinchain.android.event.LoginStateEvent;
-import com.juejinchain.android.module.login.entity.BindInviterEntity;
-import com.juejinchain.android.module.login.presenter.LoginSetInviteCodePresenter;
-import com.juejinchain.android.module.login.presenter.impl.LoginSetInviteCodeImpl;
-import com.juejinchain.android.module.movie.entity.BindThirdEntity;
-import com.juejinchain.android.utils.MyToast;
-import com.umeng.socialize.UMAuthListener;
-import com.umeng.socialize.UMShareAPI;
-import com.umeng.socialize.bean.SHARE_MEDIA;
-import com.ys.network.base.BaseActivity;
-import com.ys.network.base.BaseApplication;
-import com.ys.network.base.LoginEntity;
-import com.ys.network.base.PagerCons;
-import com.ys.network.utils.PhoneUtils;
-import com.ys.network.utils.StringUtils;
-import com.ys.network.utils.ToastUtils;
-import com.ys.network.utils.androidUtils.StatusBarUtil;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivityLoginSetInviteCodeBinding;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.base.JJBApplication;
+import com.newsuper.t.juejinbao.base.PagerCons;
+import com.newsuper.t.juejinbao.bean.LoginEntity;
+import com.newsuper.t.juejinbao.bean.LoginEvent;
+import com.newsuper.t.juejinbao.bean.LoginStateEvent;
+import com.newsuper.t.juejinbao.ui.login.entity.BindInviterEntity;
+import com.newsuper.t.juejinbao.ui.login.presenter.LoginSetInviteCodePresenter;
+import com.newsuper.t.juejinbao.ui.login.presenter.impl.LoginSetInviteCodeImpl;
+import com.newsuper.t.juejinbao.ui.movie.entity.BindThirdEntity;
+import com.newsuper.t.juejinbao.utils.MyToast;
+import com.newsuper.t.juejinbao.utils.PhoneUtils;
+import com.newsuper.t.juejinbao.utils.StringUtils;
+import com.newsuper.t.juejinbao.utils.ToastUtils;
+import com.newsuper.t.juejinbao.utils.androidUtils.StatusBarUtil;
 
 import org.greenrobot.eventbus.EventBus;
 
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
-
 import io.paperdb.Paper;
-import razerdp.util.InputMethodUtils;
 
 
 public class LoginSetInviteCodeActivity extends BaseActivity<LoginSetInviteCodeImpl, ActivityLoginSetInviteCodeBinding> implements
@@ -68,8 +63,6 @@ public class LoginSetInviteCodeActivity extends BaseActivity<LoginSetInviteCodeI
 
     @Override
     public void initView() {
-
-
         StatusBarUtil.setStatusBarDarkTheme(this, true);
         Intent intent = getIntent();
         loginEntity = (LoginEntity) intent.getSerializableExtra(LOGIN_DATE);
@@ -120,7 +113,7 @@ public class LoginSetInviteCodeActivity extends BaseActivity<LoginSetInviteCodeI
     @Override
     protected void onResume() {
         super.onResume();
-        InputMethodUtils.showInputMethod(mViewBinding.edInput);
+       // InputMethodUtils.showInputMethod(mViewBinding.edInput);
     }
 
     public static void intentMe(Activity context, LoginEntity loginEntity, int loginOtherType) {
@@ -171,7 +164,7 @@ public class LoginSetInviteCodeActivity extends BaseActivity<LoginSetInviteCodeI
             MyToast.showToast(entity.getMsg());
 
         } else if (entity.getCode() == 802) {
-            authorization(SHARE_MEDIA.WEIXIN);
+            //authorization(SHARE_MEDIA.WEIXIN);
         } else {
             ToastUtils.getInstance().show(mActivity, entity.getMsg());
         }
@@ -278,7 +271,7 @@ public class LoginSetInviteCodeActivity extends BaseActivity<LoginSetInviteCodeI
         Map<String, String> map = new HashMap<>();
         map.put("invitation_code", invateCode);
         map.put("user_token", loginEntity.getData().getUser_token());
-        map.put("channel", BaseApplication.getChannel());
+        map.put("channel", JJBApplication.getChannel());
         map.put("from", "native_jjb");
         map.put("uid", "0");
         map.put("source_style", "7");
@@ -293,7 +286,7 @@ public class LoginSetInviteCodeActivity extends BaseActivity<LoginSetInviteCodeI
         map.put("access_token", access_token);
         map.put("openid", openid);
         map.put("user_token", loginEntity.getData().getUser_token());
-        map.put("channel", BaseApplication.getChannel());
+        map.put("channel", JJBApplication.getChannel());
         map.put("uid", "0");
         map.put("source_style", "7");
         map.put("from", "native_jjb");
@@ -354,63 +347,63 @@ public class LoginSetInviteCodeActivity extends BaseActivity<LoginSetInviteCodeI
     }
 
     //授权
-    private void authorization(SHARE_MEDIA share_media) {
-        UMShareAPI.get(this).getPlatformInfo(this, share_media, new UMAuthListener() {
-            @Override
-            public void onStart(SHARE_MEDIA share_media) {
-
-                Log.e("zzz", "onStart " + "授权开始");
-            }
-
-            @Override
-            public void onComplete(SHARE_MEDIA share_media, int i, Map<String, String> map) {
-
-                Log.e("zzz", "onStart =============》》》》》》》" + "授权完成");
-                //sdk是6.4.4的,但是获取值的时候用的是6.2以前的(access_token)才能获取到值,未知原因
-                String uid = map.get("uid");
-                String openid = map.get("openid");//微博没有
-                String unionid = map.get("unionid");//微博没有
-                String access_token = map.get("access_token");
-                String refresh_token = map.get("refresh_token");//微信,qq,微博都没有获取到
-                String expires_in = map.get("expires_in");
-                String name = map.get("name");
-                String gender = map.get("gender");
-                String iconurl = map.get("iconurl");
-                Log.e("TAG", "onComplete: 打印第三方获取的参数=======>>>>>" + "name=" + name
-                        + "uid=" + uid
-                        + "openid=" + openid
-                        + "unionid =" + unionid
-                        + "access_token =" + access_token
-                        + "refresh_token=" + refresh_token
-                        + "expires_in=" + expires_in
-                        + "gender=" + gender
-                        + "iconurl=" + iconurl);
-                mViewBinding.loadingProgressbarLogin.setVisibility(View.VISIBLE);
-                if (share_media.equals(SHARE_MEDIA.WEIXIN)) {
-
-                    Log.e("zzz", "调用绑定微信号接口");
-                    bindWechat(access_token, openid);
-                }
-            }
-
-            @Override
-            public void onError(SHARE_MEDIA share_media, int i, Throwable throwable) {
-                mViewBinding.loadingProgressbarLogin.setVisibility(View.GONE);
-                if (share_media.equals(SHARE_MEDIA.WEIXIN)) {
-
-                    ToastUtils.getInstance().show(getApplicationContext(), "未安装微信客户端，请选择其他登录方式！");
-                } else if (share_media.equals(SHARE_MEDIA.QQ)) {
-                    ToastUtils.getInstance().show(getApplicationContext(), "未安装QQ，请安装QQ或选择其他登录方式！");
-                }
-            }
-
-            @Override
-            public void onCancel(SHARE_MEDIA share_media, int i) {
-                mViewBinding.loadingProgressbarLogin.setVisibility(View.GONE);
-                showFailDialog("设置邀请码前请先绑定微信");
-                Log.d("TAG", "onCancel " + "授权取消");
-            }
-        });
-    }
+//    private void authorization(SHARE_MEDIA share_media) {
+//        UMShareAPI.get(this).getPlatformInfo(this, share_media, new UMAuthListener() {
+//            @Override
+//            public void onStart(SHARE_MEDIA share_media) {
+//
+//                Log.e("zzz", "onStart " + "授权开始");
+//            }
+//
+//            @Override
+//            public void onComplete(SHARE_MEDIA share_media, int i, Map<String, String> map) {
+//
+//                Log.e("zzz", "onStart =============》》》》》》》" + "授权完成");
+//                //sdk是6.4.4的,但是获取值的时候用的是6.2以前的(access_token)才能获取到值,未知原因
+//                String uid = map.get("uid");
+//                String openid = map.get("openid");//微博没有
+//                String unionid = map.get("unionid");//微博没有
+//                String access_token = map.get("access_token");
+//                String refresh_token = map.get("refresh_token");//微信,qq,微博都没有获取到
+//                String expires_in = map.get("expires_in");
+//                String name = map.get("name");
+//                String gender = map.get("gender");
+//                String iconurl = map.get("iconurl");
+//                Log.e("TAG", "onComplete: 打印第三方获取的参数=======>>>>>" + "name=" + name
+//                        + "uid=" + uid
+//                        + "openid=" + openid
+//                        + "unionid =" + unionid
+//                        + "access_token =" + access_token
+//                        + "refresh_token=" + refresh_token
+//                        + "expires_in=" + expires_in
+//                        + "gender=" + gender
+//                        + "iconurl=" + iconurl);
+//                mViewBinding.loadingProgressbarLogin.setVisibility(View.VISIBLE);
+//                if (share_media.equals(SHARE_MEDIA.WEIXIN)) {
+//
+//                    Log.e("zzz", "调用绑定微信号接口");
+//                    bindWechat(access_token, openid);
+//                }
+//            }
+//
+//            @Override
+//            public void onError(SHARE_MEDIA share_media, int i, Throwable throwable) {
+//                mViewBinding.loadingProgressbarLogin.setVisibility(View.GONE);
+//                if (share_media.equals(SHARE_MEDIA.WEIXIN)) {
+//
+//                    ToastUtils.getInstance().show(getApplicationContext(), "未安装微信客户端，请选择其他登录方式！");
+//                } else if (share_media.equals(SHARE_MEDIA.QQ)) {
+//                    ToastUtils.getInstance().show(getApplicationContext(), "未安装QQ，请安装QQ或选择其他登录方式！");
+//                }
+//            }
+//
+//            @Override
+//            public void onCancel(SHARE_MEDIA share_media, int i) {
+//                mViewBinding.loadingProgressbarLogin.setVisibility(View.GONE);
+//                showFailDialog("设置邀请码前请先绑定微信");
+//                Log.d("TAG", "onCancel " + "授权取消");
+//            }
+//        });
+//    }
 
 }

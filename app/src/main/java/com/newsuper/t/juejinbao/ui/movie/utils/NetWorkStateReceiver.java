@@ -8,9 +8,10 @@ import android.net.Network;
 import android.net.NetworkInfo;
 import android.util.Log;
 
-import com.juejinchain.android.module.movie.player.EventNetChange;
-import com.ys.network.bus.BusConstant;
-import com.ys.network.bus.BusProvider;
+
+import com.newsuper.t.juejinbao.base.BusConstant;
+import com.newsuper.t.juejinbao.base.BusProvider;
+import com.newsuper.t.juejinbao.ui.movie.player.EventNetChange;
 
 import org.greenrobot.eventbus.EventBus;
 

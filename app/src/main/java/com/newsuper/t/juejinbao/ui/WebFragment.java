@@ -29,33 +29,37 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.gyf.immersionbar.ImmersionBar;
 import com.gyf.immersionbar.components.ImmersionFragment;
-import com.juejinchain.android.R;
-import com.juejinchain.android.base.ApiService;
-import com.juejinchain.android.event.SwitchTabEvent;
-import com.juejinchain.android.jsbridge.BridgeHandler;
-import com.juejinchain.android.jsbridge.BridgeWebView;
-import com.juejinchain.android.jsbridge.CallBackFunction;
-import com.juejinchain.android.module.home.entity.FinishTaskEntity;
-import com.juejinchain.android.module.home.entity.NewTaskEvent;
-import com.juejinchain.android.module.home.entity.TabChangeEvent;
-import com.juejinchain.android.module.login.activity.GuideLoginActivity;
-import com.juejinchain.android.module.movie.entity.BoxShareEntity;
-import com.juejinchain.android.module.movie.utils.Utils;
-import com.juejinchain.android.module.movie.utils.WebViewUtils;
-import com.juejinchain.android.module.movie.view.TreasureBoxDialog;
-import com.juejinchain.android.module.share.dialog.ShareDialog;
-import com.juejinchain.android.module.share.entity.ShareInfo;
-import com.juejinchain.android.view.CirclePercentView;
+
+import com.newsuper.t.R;
+import com.newsuper.t.juejinbao.base.ApiService;
+import com.newsuper.t.juejinbao.base.PagerCons;
+import com.newsuper.t.juejinbao.base.RetrofitManager;
+import com.newsuper.t.juejinbao.bean.LoginEntity;
+import com.newsuper.t.juejinbao.bean.SwitchTabEvent;
+import com.newsuper.t.juejinbao.ui.home.entity.FinishTaskEntity;
+import com.newsuper.t.juejinbao.ui.home.entity.NewTaskEvent;
+import com.newsuper.t.juejinbao.ui.home.entity.TabChangeEvent;
+import com.newsuper.t.juejinbao.ui.login.activity.GuideLoginActivity;
+import com.newsuper.t.juejinbao.ui.movie.entity.BoxShareEntity;
+import com.newsuper.t.juejinbao.ui.movie.utils.Utils;
+import com.newsuper.t.juejinbao.ui.movie.utils.WebViewUtils;
+import com.newsuper.t.juejinbao.ui.movie.view.TreasureBoxDialog;
+import com.newsuper.t.juejinbao.ui.share.dialog.ShareDialog;
+import com.newsuper.t.juejinbao.ui.share.entity.ShareInfo;
+import com.newsuper.t.juejinbao.utils.NetworkUtils;
+import com.newsuper.t.juejinbao.utils.SubscriberOnResponseListenter;
+import com.newsuper.t.juejinbao.utils.ToastUtils;
+import com.newsuper.t.juejinbao.utils.jsbridge.BridgeHandler;
+import com.newsuper.t.juejinbao.utils.jsbridge.BridgeWebView;
+import com.newsuper.t.juejinbao.utils.jsbridge.CallBackFunction;
+import com.newsuper.t.juejinbao.utils.network.HttpRequestBody;
+import com.newsuper.t.juejinbao.utils.network.HttpResultFunc;
+import com.newsuper.t.juejinbao.utils.network.ProgressSubscriber;
+import com.newsuper.t.juejinbao.view.CirclePercentView;
+import com.newsuper.t.juejinbao.view.ReceiveTwoEggsDialog;
+import com.newsuper.t.juejinbao.view.ReceiveTwoEggsSuccessDialog;
 import com.qq.e.comm.util.StringUtil;
-import com.ys.network.base.LoginEntity;
-import com.ys.network.base.PagerCons;
-import com.ys.network.network.HttpRequestBody;
-import com.ys.network.network.RetrofitManager;
-import com.ys.network.progress.HttpResultFunc;
-import com.ys.network.progress.ProgressSubscriber;
-import com.ys.network.progress.SubscriberOnResponseListenter;
-import com.ys.network.utils.NetworkUtils;
-import com.ys.network.utils.ToastUtils;
+
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -221,7 +225,7 @@ public class WebFragment extends ImmersionFragment {
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onTabChange(TabChangeEvent event) {
-        if (((MainActivity) mActivity).Is_Show_Movie && event.getTabPosition() == 2 || !((MainActivity) mActivity).Is_Show_Movie && event.getTabPosition() == 1) {
+        if (((JunjinBaoMainActivity) mActivity).Is_Show_Movie && event.getTabPosition() == 2 || !((JunjinBaoMainActivity) mActivity).Is_Show_Movie && event.getTabPosition() == 1) {
             if(!Paper.book().read(PagerCons.FINISH_TASK1_RECEIVE_EGGS,false) &&
                     Paper.book().read(PagerCons.HAS_TASK_RECEIVE_EGGS,false)){
                 rlCircleReward.setVisibility(View.VISIBLE);
@@ -247,9 +251,9 @@ public class WebFragment extends ImmersionFragment {
 
     @Subscribe(threadMode = ThreadMode.MAIN,sticky = true)
     public void onNewTaskEvent(NewTaskEvent event) {
-        if(((MainActivity)mActivity).Is_Show_Movie && event.getTabPosition() == 102){
+        if(((JunjinBaoMainActivity)mActivity).Is_Show_Movie && event.getTabPosition() == 102){
             showReceiveTwoEggsDialog();
-        }else if(!((MainActivity)mActivity).Is_Show_Movie && event.getTabPosition() == 101){
+        }else if(!((JunjinBaoMainActivity)mActivity).Is_Show_Movie && event.getTabPosition() == 101){
             showReceiveTwoEggsDialog();
         }
     }

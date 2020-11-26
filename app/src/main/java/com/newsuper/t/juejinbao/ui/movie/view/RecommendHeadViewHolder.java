@@ -5,9 +5,10 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.module.movie.adapter.CommPagerAdapter;
-import com.juejinchain.android.module.movie.adapter.MyViewHolder;
+import com.newsuper.t.R;
+import com.newsuper.t.juejinbao.ui.movie.adapter.CommPagerAdapter;
+import com.newsuper.t.juejinbao.ui.movie.adapter.MyViewHolder;
+
 
 public class RecommendHeadViewHolder extends MyViewHolder {
 

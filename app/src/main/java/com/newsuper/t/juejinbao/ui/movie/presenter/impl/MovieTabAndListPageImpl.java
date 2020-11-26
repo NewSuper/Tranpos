@@ -1,10 +1,9 @@
 package com.newsuper.t.juejinbao.ui.movie.presenter.impl;
 
-import com.ys.network.base.BasePresenter;
+
+import com.newsuper.t.juejinbao.base.BasePresenter;
 
 public class MovieTabAndListPageImpl  extends BasePresenter<MovieTabAndListPageImpl.MvpView> {
-
-
 
     public interface MvpView {
 

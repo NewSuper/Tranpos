@@ -19,35 +19,29 @@ import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.bytedance.sdk.openadsdk.AdSlot;
-import com.bytedance.sdk.openadsdk.TTAdNative;
-import com.bytedance.sdk.openadsdk.TTSplashAd;
-import com.juejinchain.android.R;
-import com.juejinchain.android.base.BaseEntity;
-import com.juejinchain.android.base.Constant;
-import com.juejinchain.android.base.MyApplication;
-import com.juejinchain.android.config.TTAdManagerHolder;
-import com.juejinchain.android.databinding.ActivitySplashBinding;
-import com.juejinchain.android.hook.DeviceUtil;
-import com.juejinchain.android.hook.entity.OwnADEntity;
-import com.juejinchain.android.hook.presenter.ADOpenPresenter;
-import com.juejinchain.android.hook.presenter.impl.ADOpenPresenterImpl;
-import com.juejinchain.android.module.MainActivity;
-import com.juejinchain.android.module.ad.ADCommitType;
-import com.juejinchain.android.module.home.entity.AuditEntity;
-import com.juejinchain.android.utils.MD5Utils;
-import com.juejinchain.android.utils.PermissionPageUtils;
-import com.juejinchain.android.utils.WeakHandler;
+
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivitySplashBinding;
+import com.newsuper.t.juejinbao.base.ActivityCollector;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.base.Constant;
+import com.newsuper.t.juejinbao.base.PagerCons;
+import com.newsuper.t.juejinbao.bean.BaseEntity;
+import com.newsuper.t.juejinbao.bean.LoginEntity;
+import com.newsuper.t.juejinbao.bean.OwnADEntity;
+import com.newsuper.t.juejinbao.ui.JunjinBaoMainActivity;
+import com.newsuper.t.juejinbao.ui.ad.ADCommitType;
+import com.newsuper.t.juejinbao.ui.home.entity.AuditEntity;
+import com.newsuper.t.juejinbao.ui.splash.presenter.ADOpenPresenter;
+import com.newsuper.t.juejinbao.ui.splash.presenter.ADOpenPresenterImpl;
+import com.newsuper.t.juejinbao.utils.DeviceUtil;
+import com.newsuper.t.juejinbao.utils.MD5Utils;
+import com.newsuper.t.juejinbao.utils.PermissionPageUtils;
+import com.newsuper.t.juejinbao.utils.StringUtils;
+import com.newsuper.t.juejinbao.utils.WeakHandler;
 import com.qq.e.ads.splash.SplashAD;
 import com.qq.e.ads.splash.SplashADListener;
 import com.qq.e.comm.util.AdError;
-import com.umeng.analytics.MobclickAgent;
-import com.ys.network.base.BaseActivity;
-import com.ys.network.base.EventID;
-import com.ys.network.base.LoginEntity;
-import com.ys.network.base.PagerCons;
-import com.ys.network.utils.ActivityCollector;
-import com.ys.network.utils.StringUtils;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -66,7 +60,7 @@ public class SplashActivity extends BaseActivity<ADOpenPresenterImpl, ActivitySp
     private boolean canJump;
 
 
-    private TTAdNative mTTAdNative;
+    //private TTAdNative mTTAdNative;
     //是否强制跳转到主页面
     private boolean mForceGoMain;
     //开屏广告加载发生超时但是SDK没有及时回调结果的时候，做的一层保护。
@@ -100,11 +94,6 @@ public class SplashActivity extends BaseActivity<ADOpenPresenterImpl, ActivitySp
 
     //是否是从后台切换至前台
     boolean isBackGroundChange;
-
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
 
     @Override
     public boolean isSupportSwipeBack() {
@@ -170,7 +159,7 @@ public class SplashActivity extends BaseActivity<ADOpenPresenterImpl, ActivitySp
             int isCloseOpenAD = auditMap.get(Constant.KEY_AD_CONTROL) == null ? 0 : auditMap.get(Constant.KEY_AD_CONTROL);
 
 
-            if (ActivityCollector.isActivityExist(MainActivity.class)) {
+            if (ActivityCollector.isActivityExist(JunjinBaoMainActivity.class)) {
                 isBackGroundChange = true;
 
                 // mainactivity已存在 说明是后台切换至前台
@@ -193,7 +182,7 @@ public class SplashActivity extends BaseActivity<ADOpenPresenterImpl, ActivitySp
                     mViewBinding.container.postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+                            Intent intent = new Intent(SplashActivity.this, JunjinBaoMainActivity.class);
                             startActivity(intent);
                             SplashActivity.this.finish();
                         }
@@ -212,7 +201,7 @@ public class SplashActivity extends BaseActivity<ADOpenPresenterImpl, ActivitySp
             mViewBinding.llOwnAd.setVisibility(View.VISIBLE);
         } else if (adType == OPEN_AD_TYPE_CSJ) {
             // 穿山甲
-            loadSplashAd();
+           // loadSplashAd();
         }else {
             // 广点通
             requestAds();
@@ -230,7 +219,7 @@ public class SplashActivity extends BaseActivity<ADOpenPresenterImpl, ActivitySp
         @Override
         public void onFinish() {
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
-            Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+            Intent intent = new Intent(SplashActivity.this, JunjinBaoMainActivity.class);
             startActivity(intent);
             finish();
         }
@@ -267,10 +256,10 @@ public class SplashActivity extends BaseActivity<ADOpenPresenterImpl, ActivitySp
             @Override
             public void onADClicked() {
                 //埋点（点击开屏页）
-                MobclickAgent.onEvent(MyApplication.getContext(), EventID.OPENING_THE_PAGE_ADVERTISEMENT);
-                MobclickAgent.onEvent(MyApplication.getContext(), EventID.LUNCHPAGE_ADS_CLICKUSERS);
+              //  MobclickAgent.onEvent(MyApplication.getContext(), EventID.OPENING_THE_PAGE_ADVERTISEMENT);
+            //    MobclickAgent.onEvent(MyApplication.getContext(), EventID.LUNCHPAGE_ADS_CLICKUSERS);
                 //广告被点击
-                commitAdData(ADCommitType.AD_TYPE_GDT_CLICK);
+             //   commitAdData(ADCommitType.AD_TYPE_GDT_CLICK);
             }
 
             @Override
@@ -308,7 +297,7 @@ public class SplashActivity extends BaseActivity<ADOpenPresenterImpl, ActivitySp
             if (isBackGroundChange) {
                 finish();
             } else {
-                Intent intent = new Intent(this, MainActivity.class);
+                Intent intent = new Intent(this, JunjinBaoMainActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -351,82 +340,82 @@ public class SplashActivity extends BaseActivity<ADOpenPresenterImpl, ActivitySp
     /**
      * 加载开屏广告
      */
-    private void loadSplashAd() {
-        mTTAdNative = TTAdManagerHolder.get().createAdNative(this);
-        mHandler.sendEmptyMessageDelayed(MSG_GO_MAIN, AD_TIME_OUT);
-
-        //step3:创建开屏广告请求参数AdSlot,具体参数含义参考文档
-        AdSlot adSlot = new AdSlot.Builder()
-                .setCodeId(TTAdManagerHolder.POS_ID_OPEN)
-                .setSupportDeepLink(true)
-                .setImageAcceptedSize(1080, 1920)
-                .build();
-        //step4:请求广告，调用开屏广告异步请求接口，对请求回调的广告作渲染处理
-        mTTAdNative.loadSplashAd(adSlot, new TTAdNative.SplashAdListener() {
-            @Override
-            @MainThread
-            public void onError(int code, String message) {
-                mHasLoaded = true;
-//                showToast(message);
-                goToMainActivity();
-            }
-
-            @Override
-            @MainThread
-            public void onTimeout() {
-                mHasLoaded = true;
-//                showToast("开屏广告加载超时");
-                goToMainActivity();
-            }
-
-            @Override
-            @MainThread
-            public void onSplashAdLoad(TTSplashAd ad) {
-                mHasLoaded = true;
-                mHandler.removeCallbacksAndMessages(null);
-                if (ad == null) {
-                    return;
-                }
-                //获取SplashView
-                View view = ad.getSplashView();
-                mViewBinding.container.removeAllViews();
-                //把SplashView 添加到ViewGroup中,注意开屏广告view：width >=70%屏幕宽；height >=50%屏幕宽
-                mViewBinding.container.addView(view);
-                //设置不开启开屏广告倒计时功能以及不显示跳过按钮,如果这么设置，您需要自定义倒计时逻辑
-                //ad.setNotAllowSdkCountdown();
-
-                //设置SplashView的交互监听器
-                ad.setSplashInteractionListener(new TTSplashAd.AdInteractionListener() {
-                    @Override
-                    public void onAdClicked(View view, int type) {
-                        //埋点（点击开屏页）
-                        MobclickAgent.onEvent(MyApplication.getContext(), EventID.OPENING_THE_PAGE_ADVERTISEMENT);
-                        MobclickAgent.onEvent(MyApplication.getContext(), EventID.LUNCHPAGE_ADS_CLICKUSERS);
-                        commitAdData(ADCommitType.AD_TYPE_CSJ_CLICK);
-                    }
-
-                    @Override
-                    public void onAdShow(View view, int type) {
-
-                        commitAdData(ADCommitType.AD_TYPE_CSJ_SHOW);
-                    }
-
-                    @Override
-                    public void onAdSkip() {
-
-                        goToMainActivity();
-
-                    }
-
-                    @Override
-                    public void onAdTimeOver() {
-
-                        goToMainActivity();
-                    }
-                });
-            }
-        }, AD_TIME_OUT);
-    }
+//    private void loadSplashAd() {
+//        mTTAdNative = TTAdManagerHolder.get().createAdNative(this);
+//        mHandler.sendEmptyMessageDelayed(MSG_GO_MAIN, AD_TIME_OUT);
+//
+//        //step3:创建开屏广告请求参数AdSlot,具体参数含义参考文档
+//        AdSlot adSlot = new AdSlot.Builder()
+//                .setCodeId(TTAdManagerHolder.POS_ID_OPEN)
+//                .setSupportDeepLink(true)
+//                .setImageAcceptedSize(1080, 1920)
+//                .build();
+//        //step4:请求广告，调用开屏广告异步请求接口，对请求回调的广告作渲染处理
+//        mTTAdNative.loadSplashAd(adSlot, new TTAdNative.SplashAdListener() {
+//            @Override
+//            @MainThread
+//            public void onError(int code, String message) {
+//                mHasLoaded = true;
+////                showToast(message);
+//                goToMainActivity();
+//            }
+//
+//            @Override
+//            @MainThread
+//            public void onTimeout() {
+//                mHasLoaded = true;
+////                showToast("开屏广告加载超时");
+//                goToMainActivity();
+//            }
+//
+//            @Override
+//            @MainThread
+//            public void onSplashAdLoad(TTSplashAd ad) {
+//                mHasLoaded = true;
+//                mHandler.removeCallbacksAndMessages(null);
+//                if (ad == null) {
+//                    return;
+//                }
+//                //获取SplashView
+//                View view = ad.getSplashView();
+//                mViewBinding.container.removeAllViews();
+//                //把SplashView 添加到ViewGroup中,注意开屏广告view：width >=70%屏幕宽；height >=50%屏幕宽
+//                mViewBinding.container.addView(view);
+//                //设置不开启开屏广告倒计时功能以及不显示跳过按钮,如果这么设置，您需要自定义倒计时逻辑
+//                //ad.setNotAllowSdkCountdown();
+//
+//                //设置SplashView的交互监听器
+//                ad.setSplashInteractionListener(new TTSplashAd.AdInteractionListener() {
+//                    @Override
+//                    public void onAdClicked(View view, int type) {
+//                        //埋点（点击开屏页）
+//                        MobclickAgent.onEvent(MyApplication.getContext(), EventID.OPENING_THE_PAGE_ADVERTISEMENT);
+//                        MobclickAgent.onEvent(MyApplication.getContext(), EventID.LUNCHPAGE_ADS_CLICKUSERS);
+//                        commitAdData(ADCommitType.AD_TYPE_CSJ_CLICK);
+//                    }
+//
+//                    @Override
+//                    public void onAdShow(View view, int type) {
+//
+//                        commitAdData(ADCommitType.AD_TYPE_CSJ_SHOW);
+//                    }
+//
+//                    @Override
+//                    public void onAdSkip() {
+//
+//                        goToMainActivity();
+//
+//                    }
+//
+//                    @Override
+//                    public void onAdTimeOver() {
+//
+//                        goToMainActivity();
+//                    }
+//                });
+//            }
+//        }, AD_TIME_OUT);
+//    }
 
     /**
      * 跳转到主页面
@@ -435,7 +424,7 @@ public class SplashActivity extends BaseActivity<ADOpenPresenterImpl, ActivitySp
         if (isBackGroundChange) {
             finish();
         } else {
-            Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+            Intent intent = new Intent(SplashActivity.this, JunjinBaoMainActivity.class);
             startActivity(intent);
             this.finish();
         }
@@ -515,8 +504,8 @@ public class SplashActivity extends BaseActivity<ADOpenPresenterImpl, ActivitySp
                 @Override
                 public void onClick(View view) {
                     //埋点（点击开屏页）
-                    MobclickAgent.onEvent(MyApplication.getContext(), EventID.OPENING_THE_PAGE_ADVERTISEMENT);
-                    MobclickAgent.onEvent(MyApplication.getContext(), EventID.LUNCHPAGE_ADS_CLICKUSERS);
+                    //MobclickAgent.onEvent(MyApplication.getContext(), EventID.OPENING_THE_PAGE_ADVERTISEMENT);
+                  //  MobclickAgent.onEvent(MyApplication.getContext(), EventID.LUNCHPAGE_ADS_CLICKUSERS);
 //                Log.d(TAG, "onClick: 点击了图片");
                     takeAd("1", ownADEntity.getData().getAd_info().get(0).getId());
                     commitAdData(ADCommitType.AD_TYPE_JJB_CLICK);
@@ -556,9 +545,7 @@ public class SplashActivity extends BaseActivity<ADOpenPresenterImpl, ActivitySp
         long nowTime = System.currentTimeMillis() / 1000;
         long expire = nowTime + 300;
         String ad_contribute_type = type;
-
         String encrypt = MD5Utils.md5(user_token + expire);
-
         String signature = MD5Utils.md5(encrypt + ADCommitType.AD_SECREKEY + version + ad_contribute_type);
 
         Map<String, String> param = new HashMap<>();
@@ -626,19 +613,5 @@ public class SplashActivity extends BaseActivity<ADOpenPresenterImpl, ActivitySp
         }
         return super.onKeyDown(keyCode, event);
     }
-
-
-    @Override
-    protected void onNewIntent(Intent intent) {
-        super.onNewIntent(intent);
-
-    }
-
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-    }
-
 
 }

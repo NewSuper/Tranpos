@@ -12,9 +12,9 @@ import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.juejinchain.android.R;
+import com.newsuper.t.R;
+import com.newsuper.t.juejinbao.basepop.BasePopupWindow;
 
-import razerdp.basepopup.BasePopupWindow;
 
 /**
  *

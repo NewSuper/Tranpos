@@ -17,18 +17,17 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.flyco.tablayout.listener.OnTabSelectListener;
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.FragmentSearchdetailBinding;
-import com.juejinchain.android.module.movie.activity.MovieSearchMZSMActivity;
-import com.juejinchain.android.module.movie.adapter.MovieSearchDetailTab1Adapter;
-import com.juejinchain.android.module.movie.entity.MovieSearchthirdWebEntity;
-import com.juejinchain.android.module.movie.presenter.impl.SearchDetailImpl;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.FragmentSearchdetailBinding;
+import com.newsuper.t.juejinbao.base.BaseFragment;
+import com.newsuper.t.juejinbao.base.BusConstant;
+import com.newsuper.t.juejinbao.base.BusProvider;
+import com.newsuper.t.juejinbao.base.Constant;
+import com.newsuper.t.juejinbao.ui.movie.activity.MovieSearchMZSMActivity;
+import com.newsuper.t.juejinbao.ui.movie.adapter.MovieSearchDetailTab1Adapter;
+import com.newsuper.t.juejinbao.ui.movie.entity.MovieSearchthirdWebEntity;
+import com.newsuper.t.juejinbao.ui.movie.presenter.impl.SearchDetailImpl;
 import com.squareup.otto.Subscribe;
-import com.ys.network.BaseConstants;
-import com.ys.network.base.BaseFragment;
-import com.ys.network.bus.BusConstant;
-import com.ys.network.bus.BusProvider;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -155,13 +154,13 @@ public class SearchDetailFragment extends BaseFragment<SearchDetailImpl, Fragmen
         //储存历史记录
         if(!TextUtils.isEmpty(kw.trim())){
             //储存标签
-            ArrayList<String> labels = book().read(BaseConstants.MOVIE_SEARCH_HISTORY , new ArrayList<String>());
+            ArrayList<String> labels = book().read(Constant.MOVIE_SEARCH_HISTORY , new ArrayList<String>());
 
             if(!labels.contains(kw.trim())) {
                 labels.add(0 ,kw.trim());
             }
 
-            book().write(BaseConstants.MOVIE_SEARCH_HISTORY, labels);
+            book().write(Constant.MOVIE_SEARCH_HISTORY, labels);
         }
 
         if(mPresenter == null || mAdapter == null){

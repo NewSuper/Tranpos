@@ -8,30 +8,27 @@ import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.base.Constant;
-import com.juejinchain.android.base.MyApplication;
-import com.juejinchain.android.databinding.ActivitySetAndChangePswBinding;
-import com.juejinchain.android.event.LoginEvent;
-import com.juejinchain.android.event.LoginStateEvent;
-import com.juejinchain.android.module.login.entity.BindInviterEntity;
-import com.juejinchain.android.module.login.entity.PhoneIsRegistEntity;
-import com.juejinchain.android.module.login.entity.SetAndChangePswEntity;
-import com.juejinchain.android.module.login.presenter.SetAndChangePresenter;
-import com.juejinchain.android.module.login.presenter.impl.SetAndChangePresenterImpl;
-import com.juejinchain.android.module.my.dialog.ConfigDialog;
-import com.juejinchain.android.module.my.dialog.FragmentMyConfigDialog;
-import com.juejinchain.android.utils.MyToast;
-import com.juejinchain.android.utils.RxjavaTimer;
-import com.umeng.analytics.MobclickAgent;
-import com.ys.network.base.BaseActivity;
-import com.ys.network.base.BaseApplication;
-import com.ys.network.base.EventID;
-import com.ys.network.base.LoginEntity;
-import com.ys.network.base.PagerCons;
-import com.ys.network.utils.StringUtils;
-import com.ys.network.utils.ToastUtils;
-import com.ys.network.utils.androidUtils.StatusBarUtil;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivitySetAndChangePswBinding;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.base.Constant;
+import com.newsuper.t.juejinbao.base.JJBApplication;
+import com.newsuper.t.juejinbao.base.PagerCons;
+import com.newsuper.t.juejinbao.bean.LoginEntity;
+import com.newsuper.t.juejinbao.bean.LoginEvent;
+import com.newsuper.t.juejinbao.bean.LoginStateEvent;
+import com.newsuper.t.juejinbao.ui.login.entity.BindInviterEntity;
+import com.newsuper.t.juejinbao.ui.login.entity.PhoneIsRegistEntity;
+import com.newsuper.t.juejinbao.ui.login.entity.SetAndChangePswEntity;
+import com.newsuper.t.juejinbao.ui.login.presenter.SetAndChangePresenter;
+import com.newsuper.t.juejinbao.ui.login.presenter.impl.SetAndChangePresenterImpl;
+import com.newsuper.t.juejinbao.ui.my.dialog.ConfigDialog;
+import com.newsuper.t.juejinbao.ui.my.dialog.FragmentMyConfigDialog;
+import com.newsuper.t.juejinbao.utils.MyToast;
+import com.newsuper.t.juejinbao.utils.RxjavaTimer;
+import com.newsuper.t.juejinbao.utils.StringUtils;
+import com.newsuper.t.juejinbao.utils.ToastUtils;
+import com.newsuper.t.juejinbao.utils.androidUtils.StatusBarUtil;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -420,7 +417,7 @@ public class SetAndChangePswActivity extends BaseActivity<SetAndChangePresenterI
         BindInviterEntity entity = (BindInviterEntity) serializable;
         if (entity.getCode() == 0) {
 
-            MobclickAgent.onEvent(MyApplication.getContext(), EventID.OPEN_INSTALL_COUNT); //openInstall用户数量
+          //  MobclickAgent.onEvent(MyApplication.getContext(), EventID.OPEN_INSTALL_COUNT); //openInstall用户数量
             //使用过邀请锁粉邀请码之后，清除将邀请置为已使用
             Paper.book().write(PagerCons.KEY_INVATECODE_FROM_OPENINSTALL, "used");
 
@@ -543,7 +540,7 @@ public class SetAndChangePswActivity extends BaseActivity<SetAndChangePresenterI
         Map<String, String> map = new HashMap<>();
         map.put("invitation_code", invateCode);
         map.put("user_token", loginEntity.getData().getUser_token());
-        map.put("channel", BaseApplication.getChannel());
+        map.put("channel", JJBApplication.getChannel());
         map.put("from", "native_jjb");
         map.put("uid", "0");
         map.put("source_style", "8");

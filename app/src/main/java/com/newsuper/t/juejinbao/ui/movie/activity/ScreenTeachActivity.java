@@ -8,12 +8,11 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.ActivityMoviehelpBinding;
-import com.juejinchain.android.databinding.ActivityScreenteachBinding;
-import com.juejinchain.android.module.home.presenter.impl.PublicPresenterImpl;
-import com.ys.network.base.BaseActivity;
-import com.ys.network.utils.androidUtils.StatusBarUtil;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivityScreenteachBinding;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.ui.home.presenter.impl.PublicPresenterImpl;
+import com.newsuper.t.juejinbao.utils.androidUtils.StatusBarUtil;
 
 /**
  * 投屏教程

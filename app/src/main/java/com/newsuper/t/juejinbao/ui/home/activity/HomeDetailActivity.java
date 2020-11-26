@@ -36,7 +36,9 @@ import com.newsuper.t.juejinbao.base.Constant;
 import com.newsuper.t.juejinbao.base.EventID;
 import com.newsuper.t.juejinbao.base.PagerCons;
 import com.newsuper.t.juejinbao.base.RetrofitManager;
+import com.newsuper.t.juejinbao.basepop.util.InputMethodUtils;
 import com.newsuper.t.juejinbao.bean.LoginEntity;
+import com.newsuper.t.juejinbao.bean.TextSettingEvent;
 import com.newsuper.t.juejinbao.ui.ad.GDTHolder;
 import com.newsuper.t.juejinbao.ui.home.adapter.DetailRecomentAdapter;
 import com.newsuper.t.juejinbao.ui.home.adapter.HomePagerAdapter;
@@ -1737,9 +1739,9 @@ public class HomeDetailActivity extends BaseActivity<HomeDetailPresenterImpl, Ac
                     Iterator<Object> iterator = mData.iterator();
                     while (iterator.hasNext()) {
                         Object value = iterator.next();
-                        if (value instanceof TTFeedAd) {
+                       // if (value instanceof TTFeedAd) {
                             iterator.remove();
-                        }
+                       // }
                     }
                 }
 

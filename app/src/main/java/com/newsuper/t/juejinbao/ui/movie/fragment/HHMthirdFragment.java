@@ -19,18 +19,21 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 
 import com.alibaba.fastjson.JSON;
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.FragmentHhmthridBinding;
-import com.juejinchain.android.module.movie.activity.MovieSearchActivity;
-import com.juejinchain.android.module.movie.adapter.EasyAdapter;
-import com.juejinchain.android.module.movie.adapter.SearchMovieThirdAdapter;
-import com.juejinchain.android.module.movie.bean.LoadState;
-import com.juejinchain.android.module.movie.bean.SearchMovieCache;
-import com.juejinchain.android.module.movie.entity.JSMovieSearchWebBean;
-import com.juejinchain.android.module.movie.entity.MovieCinamesEntity;
-import com.juejinchain.android.module.movie.presenter.impl.HHMthirdFragmentImpl;
-import com.juejinchain.android.module.movie.view.MovieLoadingDialog;
-import com.juejinchain.android.module.movie.view.WrapContentGridViewManager;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.FragmentHhmthridBinding;
+import com.newsuper.t.juejinbao.base.BaseFragment;
+import com.newsuper.t.juejinbao.base.BusConstant;
+import com.newsuper.t.juejinbao.base.BusProvider;
+import com.newsuper.t.juejinbao.basepop.blur.thread.ThreadPoolManager;
+import com.newsuper.t.juejinbao.ui.movie.activity.MovieSearchActivity;
+import com.newsuper.t.juejinbao.ui.movie.adapter.SearchMovieThirdAdapter;
+import com.newsuper.t.juejinbao.ui.movie.bean.LoadState;
+import com.newsuper.t.juejinbao.ui.movie.bean.SearchMovieCache;
+import com.newsuper.t.juejinbao.ui.movie.entity.JSMovieSearchWebBean;
+import com.newsuper.t.juejinbao.ui.movie.entity.MovieCinamesEntity;
+import com.newsuper.t.juejinbao.ui.movie.presenter.impl.HHMthirdFragmentImpl;
+import com.newsuper.t.juejinbao.ui.movie.view.MovieLoadingDialog;
+import com.newsuper.t.juejinbao.ui.movie.view.WrapContentGridViewManager;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 import com.squareup.otto.Subscribe;
@@ -39,16 +42,9 @@ import com.tencent.smtt.export.external.interfaces.WebResourceResponse;
 import com.tencent.smtt.sdk.ValueCallback;
 import com.tencent.smtt.sdk.WebChromeClient;
 import com.tencent.smtt.sdk.WebView;
-import com.umeng.commonsdk.debug.E;
-import com.ys.network.base.BaseFragment;
-import com.ys.network.bus.BusConstant;
-import com.ys.network.bus.BusProvider;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
-import razerdp.blur.thread.ThreadPoolManager;
 import rx.Observable;
 import rx.Subscriber;
 import rx.Subscription;
@@ -67,11 +63,7 @@ public class HHMthirdFragment extends BaseFragment<HHMthirdFragmentImpl, Fragmen
 
     //暗中webview
     private WebView webView2;
-
-
     MovieLoadingDialog movieLoadingDialog;
-
-
 //    private String kw = "";
     //注入的JS
     private String getVideoJs = null;
@@ -148,10 +140,6 @@ public class HHMthirdFragment extends BaseFragment<HHMthirdFragmentImpl, Fragmen
         searchMovieThirdAdapter = new SearchMovieThirdAdapter(context);
         mViewBinding.rvThirdmovie.setAdapter(searchMovieThirdAdapter);
 
-
-
-
-
         //下拉刷新
         mViewBinding.srl3.setOnRefreshListener(new OnRefreshListener() {
             @Override
@@ -215,17 +203,10 @@ public class HHMthirdFragment extends BaseFragment<HHMthirdFragmentImpl, Fragmen
 //            if (!TextUtils.isEmpty((String) message.obj)) {
 //                this.showKw = (String) message.obj;
 //            }
-//
-//
 //            if (getUserVisibleHint()) {
 //                kw = showKw;
-//
 //                requestData(cinema);
 //            }
-
-
-
-
         }
     }
 

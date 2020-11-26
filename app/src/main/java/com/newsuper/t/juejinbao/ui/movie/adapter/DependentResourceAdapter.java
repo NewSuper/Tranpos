@@ -19,6 +19,7 @@ import com.newsuper.t.juejinbao.base.Constant;
 import com.newsuper.t.juejinbao.base.RetrofitManager;
 import com.newsuper.t.juejinbao.ui.movie.activity.BridgeWebViewActivity;
 import com.newsuper.t.juejinbao.ui.movie.entity.DependentResourcesDataEntity;
+import com.newsuper.t.juejinbao.ui.movie.utils.Utils;
 
 
 import java.util.ArrayList;

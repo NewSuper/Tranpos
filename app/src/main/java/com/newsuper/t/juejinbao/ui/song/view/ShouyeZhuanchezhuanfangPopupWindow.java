@@ -9,9 +9,8 @@ import android.view.View;
 import android.widget.GridView;
 import android.widget.PopupWindow;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.module.movie.utils.Utils;
-import com.ys.network.base.BaseActivity;
+import com.newsuper.t.R;
+import com.newsuper.t.juejinbao.ui.movie.utils.Utils;
 
 import java.util.Timer;
 import java.util.TimerTask;

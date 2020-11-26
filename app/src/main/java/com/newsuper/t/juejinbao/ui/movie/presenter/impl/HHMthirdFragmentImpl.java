@@ -3,9 +3,9 @@ package com.newsuper.t.juejinbao.ui.movie.presenter.impl;
 import android.text.TextUtils;
 
 import com.alibaba.fastjson.JSON;
-import com.juejinchain.android.module.movie.bean.SearchMovieCache;
-import com.ys.network.base.BasePresenter;
-import com.ys.network.base.PagerCons;
+import com.newsuper.t.juejinbao.base.BasePresenter;
+import com.newsuper.t.juejinbao.base.PagerCons;
+import com.newsuper.t.juejinbao.ui.movie.bean.SearchMovieCache;
 
 import java.util.ArrayList;
 import java.util.List;

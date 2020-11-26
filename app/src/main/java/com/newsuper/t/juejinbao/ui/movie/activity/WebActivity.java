@@ -14,11 +14,12 @@ import android.webkit.WebSettings;
 import android.webkit.WebViewClient;
 import android.widget.LinearLayout;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.ActivityNewwebBinding;
-import com.juejinchain.android.jsbridge.BridgeWebView;
-import com.juejinchain.android.module.movie.presenter.impl.WebActivityImpl;
-import com.ys.network.base.BaseActivity;
+
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivityNewwebBinding;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.ui.movie.presenter.impl.WebActivityImpl;
+import com.newsuper.t.juejinbao.utils.jsbridge.BridgeWebView;
 
 import static io.paperdb.Paper.book;
 

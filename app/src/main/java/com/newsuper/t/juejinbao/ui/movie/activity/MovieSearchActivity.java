@@ -19,37 +19,30 @@ import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.base.Constant;
-import com.juejinchain.android.base.MyApplication;
-import com.juejinchain.android.databinding.ActivityMoviesearchBinding;
-import com.juejinchain.android.module.login.activity.GuideLoginActivity;
-import com.juejinchain.android.module.movie.craw.BeanMovieSearchItem;
-import com.juejinchain.android.module.movie.fragment.MovieTabFragment;
-import com.juejinchain.android.module.movie.fragment.SearchDetailFragment;
-import com.juejinchain.android.module.movie.fragment.SearchHistoryFragment;
-import com.juejinchain.android.module.movie.fragment.SearchResultFragment;
-import com.juejinchain.android.module.movie.presenter.impl.MovieSearchImpl;
-import com.juejinchain.android.module.movie.presenter.impl.SearchHistoryImpl;
-import com.juejinchain.android.module.movie.utils.DateUtils;
-import com.juejinchain.android.module.movie.utils.Utils;
-import com.juejinchain.android.module.movie.view.MovieSearchGuideDialog;
-import com.juejinchain.android.module.movie.view.NewTaskMovieRewardDialog;
-import com.juejinchain.android.module.movie.view.NewTaskMovieSearchDialog;
-import com.juejinchain.android.module.my.entity.UserDataEntity;
-import com.juejinchain.android.utils.ClickUtil;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivityMoviesearchBinding;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.base.BaseFragment;
+import com.newsuper.t.juejinbao.base.BusConstant;
+import com.newsuper.t.juejinbao.base.BusProvider;
+import com.newsuper.t.juejinbao.base.Constant;
+import com.newsuper.t.juejinbao.base.PagerCons;
+import com.newsuper.t.juejinbao.bean.LoginEntity;
+import com.newsuper.t.juejinbao.ui.login.activity.GuideLoginActivity;
+import com.newsuper.t.juejinbao.ui.movie.craw.BeanMovieSearchItem;
+import com.newsuper.t.juejinbao.ui.movie.fragment.SearchDetailFragment;
+import com.newsuper.t.juejinbao.ui.movie.fragment.SearchHistoryFragment;
+import com.newsuper.t.juejinbao.ui.movie.fragment.SearchResultFragment;
+import com.newsuper.t.juejinbao.ui.movie.presenter.impl.MovieSearchImpl;
+import com.newsuper.t.juejinbao.ui.movie.utils.Utils;
+import com.newsuper.t.juejinbao.ui.movie.view.MovieSearchGuideDialog;
+import com.newsuper.t.juejinbao.ui.movie.view.NewTaskMovieSearchDialog;
+import com.newsuper.t.juejinbao.ui.my.entity.UserDataEntity;
+import com.newsuper.t.juejinbao.utils.ClickUtil;
+import com.newsuper.t.juejinbao.utils.ToastUtils;
+import com.newsuper.t.juejinbao.utils.androidUtils.StatusBarUtil;
 import com.squareup.otto.Subscribe;
-import com.tencent.bugly.crashreport.CrashReport;
-import com.umeng.analytics.MobclickAgent;
-import com.ys.network.base.BaseActivity;
-import com.ys.network.base.BaseFragment;
-import com.ys.network.base.EventID;
-import com.ys.network.base.LoginEntity;
-import com.ys.network.base.PagerCons;
-import com.ys.network.bus.BusConstant;
-import com.ys.network.bus.BusProvider;
-import com.ys.network.utils.ToastUtils;
-import com.ys.network.utils.androidUtils.StatusBarUtil;
+
 
 import java.text.SimpleDateFormat;
 import java.util.HashMap;
@@ -100,8 +93,8 @@ public class MovieSearchActivity extends BaseActivity<MovieSearchImpl, ActivityM
         StatusBarUtil.setStatusBarDarkTheme(this, true);
         book().write(PagerCons.KEY_MOVIESEARCH_PMDIN, true);
 
-        MobclickAgent.onEvent(MyApplication.getContext(), EventID.FREEWATCHPAGE_SEARCH_PV);
-        MobclickAgent.onEvent(MyApplication.getContext(), EventID.FREEWATCHPAGE_SEARCH_UV);
+        //MobclickAgent.onEvent(MyApplication.getContext(), EventID.FREEWATCHPAGE_SEARCH_PV);
+      //  MobclickAgent.onEvent(MyApplication.getContext(), EventID.FREEWATCHPAGE_SEARCH_UV);
     }
 
     @Override

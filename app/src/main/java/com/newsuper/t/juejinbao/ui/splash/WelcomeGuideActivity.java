@@ -3,25 +3,23 @@ package com.newsuper.t.juejinbao.ui.splash;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.base.Constant;
-import com.juejinchain.android.databinding.ActivityWelcomeGuideBinding;
-import com.juejinchain.android.module.MainActivity;
-import com.juejinchain.android.module.home.entity.AuditEntity;
-import com.juejinchain.android.module.home.presenter.impl.PublicPresenterImpl;
-import com.juejinchain.android.module.my.dialog.ConfigDialog;
-import com.juejinchain.android.module.splash.adapter.VpAdapter;
-import com.juejinchain.android.module.splash.presenter.WelcomePresenter;
-import com.juejinchain.android.module.splash.presenter.WelcomePresenterImpl;
-import com.ys.network.base.BaseActivity;
-import com.ys.network.base.PagerCons;
-import com.ys.network.utils.androidUtils.PermissionsUtils;
+
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivityWelcomeGuideBinding;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.base.Constant;
+import com.newsuper.t.juejinbao.base.PagerCons;
+import com.newsuper.t.juejinbao.ui.JunjinBaoMainActivity;
+import com.newsuper.t.juejinbao.ui.home.entity.AuditEntity;
+import com.newsuper.t.juejinbao.ui.my.dialog.ConfigDialog;
+import com.newsuper.t.juejinbao.ui.splash.adapter.VpAdapter;
+import com.newsuper.t.juejinbao.ui.splash.presenter.WelcomePresenter;
+import com.newsuper.t.juejinbao.ui.splash.presenter.WelcomePresenterImpl;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -125,7 +123,7 @@ public class WelcomeGuideActivity extends BaseActivity<WelcomePresenterImpl, Act
                     }catch (Exception e){
                         e.printStackTrace();
                     }
-                    Intent toMainActivity = new Intent(WelcomeGuideActivity.this, MainActivity.class);//跳转到主界面
+                    Intent toMainActivity = new Intent(WelcomeGuideActivity.this, JunjinBaoMainActivity.class);//跳转到主界面
                     startActivity(toMainActivity);
                     WelcomeGuideActivity.this.finish();
                 }
@@ -137,7 +135,7 @@ public class WelcomeGuideActivity extends BaseActivity<WelcomePresenterImpl, Act
             public void onClick(View v) {
                 mViewBinding.progress.setVisibility(View.VISIBLE);
                 Paper.book().write(PagerCons.WELCOME, "1");
-                Intent toMainActivity = new Intent(WelcomeGuideActivity.this, MainActivity.class);//跳转到主界面
+                Intent toMainActivity = new Intent(WelcomeGuideActivity.this, JunjinBaoMainActivity.class);//跳转到主界面
                 startActivity(toMainActivity);
                 WelcomeGuideActivity.this.finish();
             }

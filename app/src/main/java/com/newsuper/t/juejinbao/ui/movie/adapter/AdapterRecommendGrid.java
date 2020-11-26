@@ -14,16 +14,14 @@ import android.widget.RelativeLayout;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
-import com.juejinchain.android.R;
-import com.juejinchain.android.module.movie.entity.MoviePostDataEntity;
-import com.ys.network.utils.StringUtils;
+import com.newsuper.t.R;
+import com.newsuper.t.juejinbao.ui.movie.entity.MoviePostDataEntity;
+import com.newsuper.t.juejinbao.utils.StringUtils;
+
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Administrator on 2017/7/5 0005.
- */
 
 public class AdapterRecommendGrid extends BaseAdapter {
     private Context context;

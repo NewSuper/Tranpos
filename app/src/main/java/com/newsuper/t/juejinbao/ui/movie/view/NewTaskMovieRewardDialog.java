@@ -7,9 +7,9 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.module.home.interf.CustomItemClickListener;
-import com.juejinchain.android.view.CustomLayout;
+import com.newsuper.t.R;
+import com.newsuper.t.juejinbao.ui.home.interf.CustomItemClickListener;
+import com.newsuper.t.juejinbao.view.CustomLayout;
 
 /**
  * 视频奖励指引

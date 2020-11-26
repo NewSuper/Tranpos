@@ -4,19 +4,19 @@ import android.content.Context;
 import android.text.TextUtils;
 import android.view.View;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.ActivitySetPasswordBinding;
-import com.juejinchain.android.event.LoginEvent;
-import com.juejinchain.android.event.LoginStateEvent;
-import com.juejinchain.android.module.home.ppw.TimeRewardPopup;
-import com.juejinchain.android.module.login.entity.BindInviterEntity;
-import com.juejinchain.android.module.login.presenter.impl.SetPasswordPresenterImpl;
-import com.juejinchain.android.module.my.dialog.FragmentMyConfigDialog;
-import com.juejinchain.android.utils.MyToast;
-import com.ys.network.base.BaseActivity;
-import com.ys.network.base.LoginEntity;
-import com.ys.network.base.PagerCons;
-import com.ys.network.utils.androidUtils.StatusBarUtil;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivitySetPasswordBinding;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.base.PagerCons;
+import com.newsuper.t.juejinbao.bean.LoginEntity;
+import com.newsuper.t.juejinbao.bean.LoginEvent;
+import com.newsuper.t.juejinbao.bean.LoginStateEvent;
+import com.newsuper.t.juejinbao.ui.home.ppw.TimeRewardPopup;
+import com.newsuper.t.juejinbao.ui.login.entity.BindInviterEntity;
+import com.newsuper.t.juejinbao.ui.login.presenter.impl.SetPasswordPresenterImpl;
+import com.newsuper.t.juejinbao.ui.my.dialog.FragmentMyConfigDialog;
+import com.newsuper.t.juejinbao.utils.MyToast;
+import com.newsuper.t.juejinbao.utils.androidUtils.StatusBarUtil;
 
 import org.greenrobot.eventbus.EventBus;
 

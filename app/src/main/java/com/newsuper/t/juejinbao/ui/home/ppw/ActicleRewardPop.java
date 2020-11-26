@@ -6,12 +6,11 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.widget.TextView;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.module.home.entity.GetCoinEntity;
-import com.juejinchain.android.module.home.entity.RewardEntity;
-import com.juejinchain.android.module.movie.utils.Utils;
+import com.newsuper.t.R;
+import com.newsuper.t.juejinbao.basepop.BasePopupWindow;
+import com.newsuper.t.juejinbao.ui.home.entity.RewardEntity;
+import com.newsuper.t.juejinbao.ui.movie.utils.Utils;
 
-import razerdp.basepopup.BasePopupWindow;
 
 /**
  * 阅读奖励pop

@@ -7,8 +7,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.view.ViewGroup;
 
-import com.juejinchain.android.module.movie.fragment.MovieShowHotFragment;
-import com.juejinchain.android.module.movie.fragment.MovieTVHotFragment;
+import com.newsuper.t.juejinbao.ui.movie.fragment.MovieShowHotFragment;
 
 import java.util.List;
 

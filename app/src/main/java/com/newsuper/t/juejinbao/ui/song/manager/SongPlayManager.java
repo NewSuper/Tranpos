@@ -3,24 +3,26 @@ package com.newsuper.t.juejinbao.ui.song.manager;
 import android.content.Context;
 import android.util.Log;
 
-import com.juejinchain.android.base.ApiService;
-import com.juejinchain.android.base.BaseEntity;
-import com.juejinchain.android.base.MyApplication;
-import com.juejinchain.android.module.song.Event.MusicCancelEvent;
-import com.juejinchain.android.module.song.Event.MusicErrorEvent;
-import com.juejinchain.android.module.song.Event.MusicPauseEvent;
-import com.juejinchain.android.module.song.Event.MusicStartEvent;
-import com.juejinchain.android.module.song.Event.StopMusicEvent;
-import com.juejinchain.android.module.song.entity.MusicCanPlayBean;
-import com.juejinchain.android.module.song.entity.SongDetailBean;
+
 import com.lzx.starrysky.StarrySky;
 import com.lzx.starrysky.control.OnPlayerEventListener;
 import com.lzx.starrysky.provider.SongInfo;
-import com.ys.network.base.PagerCons;
-import com.ys.network.network.HttpRequestBody;
-import com.ys.network.network.RetrofitManager;
-import com.ys.network.progress.HttpResultFunc;
-import com.ys.network.utils.ToastUtils;
+import com.newsuper.t.juejinbao.base.ApiService;
+import com.newsuper.t.juejinbao.base.JJBApplication;
+import com.newsuper.t.juejinbao.base.PagerCons;
+import com.newsuper.t.juejinbao.base.RetrofitManager;
+import com.newsuper.t.juejinbao.bean.BaseEntity;
+import com.newsuper.t.juejinbao.ui.song.Event.MusicCancelEvent;
+import com.newsuper.t.juejinbao.ui.song.Event.MusicErrorEvent;
+import com.newsuper.t.juejinbao.ui.song.Event.MusicPauseEvent;
+import com.newsuper.t.juejinbao.ui.song.Event.MusicStartEvent;
+import com.newsuper.t.juejinbao.ui.song.Event.StopMusicEvent;
+import com.newsuper.t.juejinbao.ui.song.entity.MusicCanPlayBean;
+import com.newsuper.t.juejinbao.ui.song.entity.SongDetailBean;
+import com.newsuper.t.juejinbao.utils.ToastUtils;
+import com.newsuper.t.juejinbao.utils.network.HttpRequestBody;
+import com.newsuper.t.juejinbao.utils.network.HttpResultFunc;
+
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -236,8 +238,8 @@ public class SongPlayManager {
      */
     public void playMusic(String songId) {
         try {
-            addHistory(MyApplication.getContext(), songId);
-            songIn(MyApplication.getContext(), songId);
+            addHistory(JJBApplication.getContext(), songId);
+            songIn(JJBApplication.getContext(), songId);
 //        Log.d(TAG, "songId :" + songId + "music size : " + songList.size());
 
             Log.e(TAG, "playMusic " + songId);

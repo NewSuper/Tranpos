@@ -7,9 +7,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.view.ViewGroup;
 
-import com.juejinchain.android.module.song.entity.LatestMusicTagEntity;
-import com.juejinchain.android.module.song.fragment.LatestAlbumListFragment;
-import com.juejinchain.android.module.song.fragment.NewSongLookListFragment;
+import com.newsuper.t.juejinbao.ui.song.entity.LatestMusicTagEntity;
+import com.newsuper.t.juejinbao.ui.song.fragment.NewSongLookListFragment;
 
 import java.util.List;
 

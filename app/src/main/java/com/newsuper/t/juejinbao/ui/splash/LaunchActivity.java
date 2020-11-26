@@ -9,23 +9,19 @@ import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.base.MyApplication;
-import com.juejinchain.android.databinding.ActivityLaunchBinding;
-import com.juejinchain.android.module.MainActivity;
-import com.juejinchain.android.module.home.presenter.impl.PublicPresenterImpl;
-import com.juejinchain.android.module.my.dialog.ConfigDialog;
-import com.juejinchain.android.utils.PermissionPageUtils;
-import com.juejinchain.android.view.UserAgreementDialog;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivityLaunchBinding;
+import com.newsuper.t.juejinbao.base.ActivityCollector;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.base.PagerCons;
+import com.newsuper.t.juejinbao.base.RetrofitManager;
+import com.newsuper.t.juejinbao.ui.JunjinBaoMainActivity;
+import com.newsuper.t.juejinbao.ui.home.presenter.impl.PublicPresenterImpl;
+import com.newsuper.t.juejinbao.ui.my.dialog.ConfigDialog;
+import com.newsuper.t.juejinbao.utils.PermissionPageUtils;
+import com.newsuper.t.juejinbao.view.UserAgreementDialog;
 import com.qq.e.comm.util.StringUtil;
 import com.tbruyelle.rxpermissions.RxPermissions;
-import com.umeng.analytics.MobclickAgent;
-import com.ys.network.base.BaseActivity;
-import com.ys.network.base.EventID;
-import com.ys.network.base.LoginEntity;
-import com.ys.network.base.PagerCons;
-import com.ys.network.network.RetrofitManager;
-import com.ys.network.utils.ActivityCollector;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -153,8 +149,8 @@ public class LaunchActivity extends BaseActivity<PublicPresenterImpl, ActivityLa
 
     private void init() {
 
-        isBackGroundChange = ActivityCollector.isActivityExist(MainActivity.class);
-        if (!RetrofitManager.RELEASE) {
+        isBackGroundChange = ActivityCollector.isActivityExist(JunjinBaoMainActivity.class);
+      //  if (!RetrofitManager.RELEASE) {
             String api = getIntent().getStringExtra("api");
             String res = getIntent().getStringExtra("res");
             String web = getIntent().getStringExtra("web");
@@ -170,7 +166,7 @@ public class LaunchActivity extends BaseActivity<PublicPresenterImpl, ActivityLa
                     RetrofitManager.WEB_URL_ONLINE = web;
                     RetrofitManager.VIP_JS_URL = web;
                 }
-        }
+      //  }
 
         stringExtra = getIntent().getStringExtra("to");
 
@@ -257,7 +253,7 @@ public class LaunchActivity extends BaseActivity<PublicPresenterImpl, ActivityLa
                         finish();
                     }
                     // 选用AUTO页面采集模式
-                    MobclickAgent.setPageCollectionMode(MobclickAgent.PageMode.AUTO);
+                   // MobclickAgent.setPageCollectionMode(MobclickAgent.PageMode.AUTO);
 
                 } else {
                     configDialog.show();
@@ -270,23 +266,23 @@ public class LaunchActivity extends BaseActivity<PublicPresenterImpl, ActivityLa
     @Override
     protected void onResume() {
         super.onResume();
-        MobclickAgent.onEvent(MyApplication.getContext(), EventID.LUNCHPAGE_PV);
-        if(LoginEntity.getIsLogin()){
-            if(LoginEntity.getIsNew()){
-                MobclickAgent.onEvent(MyApplication.getContext(), EventID.LUNCHPAGE_NEWUSER_UV);
-            }else{
-                MobclickAgent.onEvent(MyApplication.getContext(), EventID.LUNCHPAGE_OLDUSER_UV);
-            }
-        }else{
-            MobclickAgent.onEvent(MyApplication.getContext(), EventID.LUNCHPAGE_TOURISTS_UV);
-        }
+   //     MobclickAgent.onEvent(MyApplication.getContext(), EventID.LUNCHPAGE_PV);
+//        if(LoginEntity.getIsLogin()){
+//            if(LoginEntity.getIsNew()){
+//                MobclickAgent.onEvent(MyApplication.getContext(), EventID.LUNCHPAGE_NEWUSER_UV);
+//            }else{
+//                MobclickAgent.onEvent(MyApplication.getContext(), EventID.LUNCHPAGE_OLDUSER_UV);
+//            }
+//        }else{
+//            MobclickAgent.onEvent(MyApplication.getContext(), EventID.LUNCHPAGE_TOURISTS_UV);
+//        }
     }
 
     private void goToMainActivity() {
         if (isBackGroundChange) {
             finish();
         } else {
-            Intent intent = new Intent(this, MainActivity.class);
+            Intent intent = new Intent(this, JunjinBaoMainActivity.class);
             startActivity(intent);
             this.finish();
         }

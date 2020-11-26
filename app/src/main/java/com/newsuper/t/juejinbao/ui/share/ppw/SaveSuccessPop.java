@@ -10,9 +10,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-
-
-import razerdp.basepopup.BasePopupWindow;
+import com.newsuper.t.R;
+import com.newsuper.t.juejinbao.basepop.BasePopupWindow;
+import com.newsuper.t.juejinbao.ui.share.interf.OnButtonClickLintener;
 
 public class SaveSuccessPop extends BasePopupWindow {
 

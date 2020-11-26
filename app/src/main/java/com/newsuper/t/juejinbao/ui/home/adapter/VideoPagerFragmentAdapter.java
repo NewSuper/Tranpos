@@ -5,9 +5,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.view.ViewGroup;
 
-import com.juejinchain.android.module.home.entity.ChannelEntity;
-import com.juejinchain.android.module.home.entity.VideoChannelEntity;
-import com.juejinchain.android.module.home.fragment.VideoPagerFragment;
+import com.newsuper.t.juejinbao.ui.home.entity.ChannelEntity;
+import com.newsuper.t.juejinbao.ui.home.fragment.VideoPagerFragment;
 
 import java.util.List;
 

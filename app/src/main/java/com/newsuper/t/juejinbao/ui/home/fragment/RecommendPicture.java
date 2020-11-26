@@ -1,6 +1,5 @@
 package com.newsuper.t.juejinbao.ui.home.fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -11,14 +10,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.FragmentRecommendPictureBinding;
-import com.juejinchain.android.module.home.activity.PictureViewPagerActivity;
-import com.juejinchain.android.module.home.adapter.RecommendPictureAdapter;
-import com.juejinchain.android.module.home.entity.PictureContentEntity;
-import com.juejinchain.android.module.home.presenter.impl.PictureContentPresenterImpl;
-import com.ys.network.base.BaseFragment;
-import com.ys.network.base.PagerCons;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.FragmentRecommendPictureBinding;
+import com.newsuper.t.juejinbao.base.BaseFragment;
+import com.newsuper.t.juejinbao.base.PagerCons;
+import com.newsuper.t.juejinbao.ui.home.activity.PictureViewPagerActivity;
+import com.newsuper.t.juejinbao.ui.home.adapter.RecommendPictureAdapter;
+import com.newsuper.t.juejinbao.ui.home.entity.PictureContentEntity;
+import com.newsuper.t.juejinbao.ui.home.presenter.impl.PictureContentPresenterImpl;
 
 import java.io.Serializable;
 import java.util.ArrayList;

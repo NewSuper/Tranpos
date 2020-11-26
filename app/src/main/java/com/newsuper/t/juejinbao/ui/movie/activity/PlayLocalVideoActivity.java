@@ -4,10 +4,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.ActivityPlayLocalVideoBinding;
-import com.ys.network.base.BaseActivity;
-import com.ys.network.base.BasePresenter;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivityPlayLocalVideoBinding;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.base.BasePresenter;
 
 import java.io.File;
 

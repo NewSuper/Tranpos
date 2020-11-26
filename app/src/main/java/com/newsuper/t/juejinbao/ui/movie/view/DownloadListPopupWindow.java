@@ -28,22 +28,17 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.base.ApiService;
-import com.juejinchain.android.base.MyApplication;
-import com.juejinchain.android.callback.ProgressResponseBody;
-import com.juejinchain.android.databinding.ViewDownloadlistPopupBinding;
-import com.juejinchain.android.module.movie.adapter.EasyAdapter;
-import com.juejinchain.android.module.movie.bean.DownloadSniff;
-import com.juejinchain.android.module.movie.bean.Sniff;
-import com.juejinchain.android.module.movie.entity.MovieThirdIframeEntity;
-import com.juejinchain.android.module.movie.utils.PlayerExFunc;
-import com.juejinchain.android.module.movie.utils.StartSniffingListener;
-import com.juejinchain.android.module.movie.utils.ToLightApp;
-import com.juejinchain.android.module.movie.utils.Utils;
-import com.juejinchain.android.module.share.util.ShareToolUtil;
-import com.juejinchain.android.utils.FileUtil;
-import com.juejinchain.android.utils.MyToast;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ViewDownloadlistPopupBinding;
+import com.newsuper.t.juejinbao.ui.movie.adapter.EasyAdapter;
+import com.newsuper.t.juejinbao.ui.movie.bean.DownloadSniff;
+import com.newsuper.t.juejinbao.ui.movie.bean.Sniff;
+import com.newsuper.t.juejinbao.ui.movie.entity.MovieThirdIframeEntity;
+import com.newsuper.t.juejinbao.ui.movie.utils.PlayerExFunc;
+import com.newsuper.t.juejinbao.ui.movie.utils.StartSniffingListener;
+import com.newsuper.t.juejinbao.ui.movie.utils.ToLightApp;
+import com.newsuper.t.juejinbao.ui.movie.utils.Utils;
+import com.newsuper.t.juejinbao.utils.MyToast;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -225,7 +220,7 @@ public class DownloadListPopupWindow {
             @Override
             public void onClick(View v) {
                 //确认下载
-                ToLightApp.download(activity , downListBeans , startSniffingListener.getVideoName() , appDownloadUrl ,PlayerExFunc.LIGHT_DOWNLOAD);
+                ToLightApp.download(activity , downListBeans , startSniffingListener.getVideoName() , appDownloadUrl , PlayerExFunc.LIGHT_DOWNLOAD);
                 hide();
             }
         });

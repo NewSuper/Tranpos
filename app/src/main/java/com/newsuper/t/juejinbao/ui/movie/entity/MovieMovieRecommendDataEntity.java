@@ -1,7 +1,7 @@
 package com.newsuper.t.juejinbao.ui.movie.entity;
 
-import com.juejinchain.android.module.movie.adapter.EasyAdapter;
-import com.juejinchain.android.module.movie.adapter.MovieMovieRecommendAdapter;
+
+import com.newsuper.t.juejinbao.ui.movie.adapter.EasyAdapter;
 
 import java.io.Serializable;
 import java.util.List;

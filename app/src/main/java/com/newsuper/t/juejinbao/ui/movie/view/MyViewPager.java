@@ -7,8 +7,6 @@ import android.view.MotionEvent;
 
 /**
  * @ explain:这个 ViewPager是用来解决ScrollView里面嵌套ViewPager的 内部解决法的
- * @ author：xujun on 2016/10/25 16:38
- * @ email：gdutxiaoxu@163.com
  */
 public class MyViewPager extends ViewPager {
 

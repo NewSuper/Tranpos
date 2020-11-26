@@ -8,20 +8,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.FragmentMovietvhotBinding;
-import com.juejinchain.android.module.movie.adapter.EasyAdapter;
-import com.juejinchain.android.module.movie.adapter.MovieShowHotAdapter;
-import com.juejinchain.android.module.movie.adapter.MovieTVHotAdapter;
-import com.juejinchain.android.module.movie.entity.MovieShowHotEntity;
-import com.juejinchain.android.module.movie.entity.MovieTVHotEntity;
-import com.juejinchain.android.module.movie.presenter.impl.MovieShowHotImpl;
-import com.juejinchain.android.module.movie.presenter.impl.MovieTVHotImpl;
-import com.juejinchain.android.utils.MyToast;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.FragmentMovietvhotBinding;
+import com.newsuper.t.juejinbao.base.BaseFragment;
+import com.newsuper.t.juejinbao.ui.movie.adapter.EasyAdapter;
+import com.newsuper.t.juejinbao.ui.movie.adapter.MovieShowHotAdapter;
+import com.newsuper.t.juejinbao.ui.movie.entity.MovieShowHotEntity;
+import com.newsuper.t.juejinbao.ui.movie.presenter.impl.MovieShowHotImpl;
+import com.newsuper.t.juejinbao.utils.MyToast;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
-import com.ys.network.base.BaseFragment;
 
 import java.util.ArrayList;
 import java.util.HashMap;

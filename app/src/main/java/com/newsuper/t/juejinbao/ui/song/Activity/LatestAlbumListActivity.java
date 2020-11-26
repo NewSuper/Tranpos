@@ -11,14 +11,14 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.ActivityLatestalbumListBinding;
-import com.juejinchain.android.module.song.adapter.LatestAlbumPageAdapter;
-import com.juejinchain.android.module.song.entity.LatestAlbumTagEntity;
-import com.juejinchain.android.module.song.manager.SongPlayManager;
-import com.juejinchain.android.module.song.presenter.impl.LatestAlbumImpl;
-import com.ys.network.base.BaseActivity;
-import com.ys.network.utils.androidUtils.StatusBarUtil;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivityLatestalbumListBinding;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.ui.song.adapter.LatestAlbumPageAdapter;
+import com.newsuper.t.juejinbao.ui.song.entity.LatestAlbumTagEntity;
+import com.newsuper.t.juejinbao.ui.song.manager.SongPlayManager;
+import com.newsuper.t.juejinbao.ui.song.presenter.impl.LatestAlbumImpl;
+import com.newsuper.t.juejinbao.utils.androidUtils.StatusBarUtil;
 
 
 public class LatestAlbumListActivity extends BaseActivity<LatestAlbumImpl, ActivityLatestalbumListBinding> implements LatestAlbumImpl.MvpView {
@@ -67,18 +67,13 @@ public class LatestAlbumListActivity extends BaseActivity<LatestAlbumImpl, Activ
 
             }
         });
-
     }
 
 
 
     @Override
     public void initData() {
-
-
-
         mPresenter.albumTag(mActivity);
-
     }
 
     public static void intentMe(Context context){

@@ -27,35 +27,29 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import com.bumptech.glide.Glide;
-import com.juejinchain.android.R;
-import com.juejinchain.android.base.MyApplication;
-import com.juejinchain.android.databinding.ActivityBridgewebviewBinding;
-import com.juejinchain.android.event.WXRespEvent;
-import com.juejinchain.android.jsbridge.BridgeWebView;
-import com.juejinchain.android.jsbridge.BridgeWebViewClient;
-import com.juejinchain.android.module.home.presenter.impl.PublicPresenterImpl;
-import com.juejinchain.android.module.login.activity.GuideLoginActivity;
-import com.juejinchain.android.module.movie.utils.PaxWebChromeClient;
-import com.juejinchain.android.module.movie.utils.Utils;
-import com.juejinchain.android.module.movie.utils.WebViewUtils;
-import com.juejinchain.android.module.share.dialog.ShareDialog;
-import com.juejinchain.android.module.share.entity.ShareInfo;
-import com.juejinchain.android.utils.NetUtil;
-import com.juejinchain.android.utils.UUIDUtil;
+
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivityBridgewebviewBinding;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.base.JJBApplication;
+import com.newsuper.t.juejinbao.base.RetrofitManager;
+import com.newsuper.t.juejinbao.bean.LoginEntity;
+import com.newsuper.t.juejinbao.bean.WXRespEvent;
+import com.newsuper.t.juejinbao.ui.home.presenter.impl.PublicPresenterImpl;
+import com.newsuper.t.juejinbao.ui.login.activity.GuideLoginActivity;
+import com.newsuper.t.juejinbao.ui.movie.utils.PaxWebChromeClient;
+import com.newsuper.t.juejinbao.ui.movie.utils.Utils;
+import com.newsuper.t.juejinbao.ui.movie.utils.WebViewUtils;
+import com.newsuper.t.juejinbao.ui.share.dialog.ShareDialog;
+import com.newsuper.t.juejinbao.ui.share.entity.ShareInfo;
+import com.newsuper.t.juejinbao.utils.NetUtil;
+import com.newsuper.t.juejinbao.utils.StringUtils;
+import com.newsuper.t.juejinbao.utils.ToastUtils;
+import com.newsuper.t.juejinbao.utils.androidUtils.StatusBarUtil;
+import com.newsuper.t.juejinbao.utils.jsbridge.BridgeWebView;
+import com.newsuper.t.juejinbao.utils.jsbridge.BridgeWebViewClient;
 import com.tbruyelle.rxpermissions.RxPermissions;
 import com.tencent.smtt.sdk.WebChromeClient;
-import com.tuia.ad.Ad;
-import com.tuia.ad.AdCallBack;
-import com.umeng.analytics.MobclickAgent;
-import com.umeng.socialize.UMShareAPI;
-import com.ys.network.base.BaseActivity;
-import com.ys.network.base.EventID;
-import com.ys.network.base.LoginEntity;
-import com.ys.network.network.RetrofitManager;
-import com.ys.network.utils.StringUtils;
-import com.ys.network.utils.ToastUtils;
-import com.ys.network.utils.androidUtils.StatusBarUtil;
-
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
@@ -115,7 +109,7 @@ public class BridgeWebViewFullActivity extends BaseActivity<PublicPresenterImpl,
     //暗webview
     private com.tencent.smtt.sdk.WebView webView2;
     private boolean isReading = false;
-    private Ad ad;
+  //  private Ad ad;
 
     private long startTime;
     private String url;
@@ -203,9 +197,9 @@ public class BridgeWebViewFullActivity extends BaseActivity<PublicPresenterImpl,
                 mViewBinding.ivAdvEnter.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        if (ad != null) {
-                            ad.show();
-                        }
+//                        if (ad != null) {
+//                            ad.show();
+//                        }
                     }
                 });
             } else {
@@ -349,42 +343,42 @@ public class BridgeWebViewFullActivity extends BaseActivity<PublicPresenterImpl,
 
             @Override
             public void onNext(Boolean aBoolean) {
-                if (aBoolean) {
-                    //初始化推啊广告
-                    ad = new Ad("4BVnp1k1bnNGyf8ynrpC1r9KoLfJ", "304292", LoginEntity.getUserToken(), UUIDUtil.getMyUUID(mActivity));
-
-                    ad.init(mActivity, null, new AdCallBack() {
-                        @Override
-                        public void onActivityClose() {
-                            Log.i("tuia", "onActivityClose: ");
-                        }
-
-                        @Override
-                        public void onActivityShow() {
-                            Log.i("tuia", "onActivityShow: ");
-                        }
-
-                        @Override
-                        public void onRewardClose() {
-                            Log.i("tuia", "onRewardClose: ");
-                        }
-
-                        @Override
-                        public void onRewardShow() {
-                            Log.i("tuia", "onRewardShow: ");
-                        }
-
-                        @Override
-                        public void onPrizeClose() {
-                            Log.i("tuia", "onPrizeClose: ");
-                        }
-
-                        @Override
-                        public void onPrizeShow() {
-                            Log.i("tuia", "onPrizeShow: ");
-                        }
-                    });
-                }
+//                if (aBoolean) {
+//                    //初始化推啊广告
+//                    ad = new Ad("4BVnp1k1bnNGyf8ynrpC1r9KoLfJ", "304292", LoginEntity.getUserToken(), UUIDUtil.getMyUUID(mActivity));
+//
+//                    ad.init(mActivity, null, new AdCallBack() {
+//                        @Override
+//                        public void onActivityClose() {
+//                            Log.i("tuia", "onActivityClose: ");
+//                        }
+//
+//                        @Override
+//                        public void onActivityShow() {
+//                            Log.i("tuia", "onActivityShow: ");
+//                        }
+//
+//                        @Override
+//                        public void onRewardClose() {
+//                            Log.i("tuia", "onRewardClose: ");
+//                        }
+//
+//                        @Override
+//                        public void onRewardShow() {
+//                            Log.i("tuia", "onRewardShow: ");
+//                        }
+//
+//                        @Override
+//                        public void onPrizeClose() {
+//                            Log.i("tuia", "onPrizeClose: ");
+//                        }
+//
+//                        @Override
+//                        public void onPrizeShow() {
+//                            Log.i("tuia", "onPrizeShow: ");
+//                        }
+//                    });
+//                }
             }
         });
 
@@ -524,7 +518,7 @@ public class BridgeWebViewFullActivity extends BaseActivity<PublicPresenterImpl,
 
         myWebChromeClient.onActivityResult(requestCode, resultCode, data);
         super.onActivityResult(requestCode, resultCode, data);
-        UMShareAPI.get(this).onActivityResult(requestCode, resultCode, data);
+        //UMShareAPI.get(this).onActivityResult(requestCode, resultCode, data);
         webViewUtils.onActivityResult(requestCode, resultCode, data);
     }
 
@@ -542,7 +536,7 @@ public class BridgeWebViewFullActivity extends BaseActivity<PublicPresenterImpl,
             //埋点（统计小说页面用户在线时间）
             Map<String, Object> time = new HashMap<>();
             time.put("bookTimeInSeconds", bookTime);
-            MobclickAgent.onEventObject(MyApplication.getContext(), EventID.VIP_READ_ONLINE_TIME, time);
+           // MobclickAgent.onEventObject(MyApplication.getContext(), EventID.VIP_READ_ONLINE_TIME, time);
         }
         if (webViewUtils != null) {
             webViewUtils.onDestory();
@@ -573,12 +567,12 @@ public class BridgeWebViewFullActivity extends BaseActivity<PublicPresenterImpl,
             }
 
         }
-        Glide.get(MyApplication.getInstance()).clearMemory();
+        Glide.get(JJBApplication.getInstance()).clearMemory();
 
         new Thread(new Runnable() {
             @Override
             public void run() {
-                Glide.get(MyApplication.getInstance()).clearDiskCache();
+                Glide.get(JJBApplication.getInstance()).clearDiskCache();
             }
         }).start();
 
@@ -596,9 +590,9 @@ public class BridgeWebViewFullActivity extends BaseActivity<PublicPresenterImpl,
             subscription = null;
         }
 
-        if (ad != null) {
-            ad.destroy();
-        }
+//        if (ad != null) {
+//            ad.destroy();
+//        }
 
         super.onDestroy();
 

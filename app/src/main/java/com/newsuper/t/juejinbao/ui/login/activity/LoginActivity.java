@@ -8,37 +8,29 @@ import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 
-import com.android.dingtalk.share.ddsharemodule.DDShareApiFactory;
-import com.android.dingtalk.share.ddsharemodule.IDDShareApi;
-import com.juejinchain.android.R;
-import com.juejinchain.android.base.Constant;
-import com.juejinchain.android.base.MyApplication;
-import com.juejinchain.android.databinding.ActivityLoginBinding;
-import com.juejinchain.android.event.LoginEvent;
-import com.juejinchain.android.event.LoginStateEvent;
-import com.juejinchain.android.module.login.entity.BindInviterEntity;
-import com.juejinchain.android.module.login.entity.IsShowQQEntity;
-import com.juejinchain.android.module.login.entity.SetAndChangePswEntity;
-import com.juejinchain.android.module.login.presenter.LoginPresenter;
-import com.juejinchain.android.module.login.presenter.impl.LoginPresenterImpl;
-import com.juejinchain.android.module.movie.entity.BindThirdEntity;
-import com.juejinchain.android.module.my.dialog.ConfigDialog;
-import com.juejinchain.android.module.my.dialog.FragmentMyConfigDialog;
-import com.juejinchain.android.utils.MyToast;
-import com.umeng.analytics.MobclickAgent;
-import com.umeng.socialize.UMAuthListener;
-import com.umeng.socialize.UMShareAPI;
-import com.umeng.socialize.bean.SHARE_MEDIA;
-import com.ys.network.base.BaseActivity;
-import com.ys.network.base.BaseApplication;
-import com.ys.network.base.EventID;
-import com.ys.network.base.LoginEntity;
-import com.ys.network.base.PagerCons;
-import com.ys.network.network.RetrofitManager;
-import com.ys.network.utils.PhoneUtils;
-import com.ys.network.utils.StringUtils;
-import com.ys.network.utils.ToastUtils;
-import com.ys.network.utils.androidUtils.StatusBarUtil;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivityLoginBinding;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.base.Constant;
+import com.newsuper.t.juejinbao.base.JJBApplication;
+import com.newsuper.t.juejinbao.base.PagerCons;
+import com.newsuper.t.juejinbao.base.RetrofitManager;
+import com.newsuper.t.juejinbao.bean.LoginEntity;
+import com.newsuper.t.juejinbao.bean.LoginEvent;
+import com.newsuper.t.juejinbao.bean.LoginStateEvent;
+import com.newsuper.t.juejinbao.ui.login.entity.BindInviterEntity;
+import com.newsuper.t.juejinbao.ui.login.entity.IsShowQQEntity;
+import com.newsuper.t.juejinbao.ui.login.entity.SetAndChangePswEntity;
+import com.newsuper.t.juejinbao.ui.login.presenter.LoginPresenter;
+import com.newsuper.t.juejinbao.ui.login.presenter.impl.LoginPresenterImpl;
+import com.newsuper.t.juejinbao.ui.movie.entity.BindThirdEntity;
+import com.newsuper.t.juejinbao.ui.my.dialog.ConfigDialog;
+import com.newsuper.t.juejinbao.ui.my.dialog.FragmentMyConfigDialog;
+import com.newsuper.t.juejinbao.utils.MyToast;
+import com.newsuper.t.juejinbao.utils.PhoneUtils;
+import com.newsuper.t.juejinbao.utils.StringUtils;
+import com.newsuper.t.juejinbao.utils.ToastUtils;
+import com.newsuper.t.juejinbao.utils.androidUtils.StatusBarUtil;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -53,7 +45,7 @@ import io.paperdb.Paper;
 
 public class LoginActivity extends BaseActivity<LoginPresenterImpl, ActivityLoginBinding> implements
         LoginPresenter.LoginView {
-    private IDDShareApi iddShareApi;
+//    private IDDShareApi iddShareApi;
     //短信登录 1  账号密码登录2
     private int loginType = Constant.ONE;
     private Intent intent;
@@ -99,7 +91,7 @@ public class LoginActivity extends BaseActivity<LoginPresenterImpl, ActivityLogi
     public void initData() {
 
         //初始化钉钉
-        iddShareApi = DDShareApiFactory.createDDShareApi(this, Constant.DDINGG_APP_ID, false);
+       // iddShareApi = DDShareApiFactory.createDDShareApi(this, Constant.DDINGG_APP_ID, false);
         //edit的监听
         initEdit();
         mViewBinding.loadingProgressbarLogin.setOnClickListener(new View.OnClickListener() {
@@ -305,48 +297,48 @@ public class LoginActivity extends BaseActivity<LoginPresenterImpl, ActivityLogi
     }
 
     private void initCancelLogin() {
-        UMShareAPI.get(mActivity).deleteOauth(mActivity, SHARE_MEDIA.QQ, new UMAuthListener() {
-            @Override
-            public void onStart(SHARE_MEDIA share_media) {
-
-            }
-
-            @Override
-            public void onComplete(SHARE_MEDIA share_media, int i, Map<String, String> map) {
-
-            }
-
-            @Override
-            public void onError(SHARE_MEDIA share_media, int i, Throwable throwable) {
-
-            }
-
-            @Override
-            public void onCancel(SHARE_MEDIA share_media, int i) {
-
-            }
-        });
-        UMShareAPI.get(mActivity).deleteOauth(mActivity, SHARE_MEDIA.WEIXIN, new UMAuthListener() {
-            @Override
-            public void onStart(SHARE_MEDIA share_media) {
-
-            }
-
-            @Override
-            public void onComplete(SHARE_MEDIA share_media, int i, Map<String, String> map) {
-
-            }
-
-            @Override
-            public void onError(SHARE_MEDIA share_media, int i, Throwable throwable) {
-
-            }
-
-            @Override
-            public void onCancel(SHARE_MEDIA share_media, int i) {
-
-            }
-        });
+//        UMShareAPI.get(mActivity).deleteOauth(mActivity, SHARE_MEDIA.QQ, new UMAuthListener() {
+//            @Override
+//            public void onStart(SHARE_MEDIA share_media) {
+//
+//            }
+//
+//            @Override
+//            public void onComplete(SHARE_MEDIA share_media, int i, Map<String, String> map) {
+//
+//            }
+//
+//            @Override
+//            public void onError(SHARE_MEDIA share_media, int i, Throwable throwable) {
+//
+//            }
+//
+//            @Override
+//            public void onCancel(SHARE_MEDIA share_media, int i) {
+//
+//            }
+//        });
+//        UMShareAPI.get(mActivity).deleteOauth(mActivity, SHARE_MEDIA.WEIXIN, new UMAuthListener() {
+//            @Override
+//            public void onStart(SHARE_MEDIA share_media) {
+//
+//            }
+//
+//            @Override
+//            public void onComplete(SHARE_MEDIA share_media, int i, Map<String, String> map) {
+//
+//            }
+//
+//            @Override
+//            public void onError(SHARE_MEDIA share_media, int i, Throwable throwable) {
+//
+//            }
+//
+//            @Override
+//            public void onCancel(SHARE_MEDIA share_media, int i) {
+//
+//            }
+//        });
 
     }
 
@@ -508,7 +500,7 @@ public class LoginActivity extends BaseActivity<LoginPresenterImpl, ActivityLogi
                     Map<String, String> map = new HashMap<>();
                     map.put("invitation_code", code);
                     map.put("user_token", loginEntity.getData().getUser_token());
-                    map.put("channel", BaseApplication.getChannel());
+                    map.put("channel", JJBApplication.getChannel());
                     map.put("from", "native_jjb");
                     map.put("uid", "0");
                     map.put("source_style", "7");
@@ -545,7 +537,7 @@ public class LoginActivity extends BaseActivity<LoginPresenterImpl, ActivityLogi
         mViewBinding.loadingProgressbarLogin.setVisibility(View.GONE);
         if (entity.getCode() == 0) {
 
-            MobclickAgent.onEvent(MyApplication.getContext(), EventID.OPEN_INSTALL_COUNT); //openInstall用户数量
+          //  MobclickAgent.onEvent(MyApplication.getContext(), EventID.OPEN_INSTALL_COUNT); //openInstall用户数量
             //使用过邀请锁粉邀请码之后，清除将邀请置为已使用
             Paper.book().write(PagerCons.KEY_INVATECODE_FROM_OPENINSTALL, "used");
 
@@ -669,11 +661,11 @@ public class LoginActivity extends BaseActivity<LoginPresenterImpl, ActivityLogi
 //                        "这是来自微信分享的掘金宝消息", "", R.mipmap.icon_app, SHARE_MEDIA.WEIXIN);
 
                 //埋点（点击微信登录按钮）
-                MobclickAgent.onEvent(MyApplication.getContext(), EventID.LOGIN_WITH_WECHAT);
+               // MobclickAgent.onEvent(MyApplication.getContext(), EventID.LOGIN_WITH_WECHAT);
 
                 loginOtherType = 2;
 
-                authorization(SHARE_MEDIA.WEIXIN);
+              //  authorization(SHARE_MEDIA.WEIXIN);
                 break;
             //QQ
             case R.id.activity_login_qq:
@@ -681,26 +673,26 @@ public class LoginActivity extends BaseActivity<LoginPresenterImpl, ActivityLogi
 //                        "这是来自QQ分享的掘金宝消息", "", R.mipmap.icon_app, SHARE_MEDIA.QQ);
 
                 //埋点（点击QQ登录按钮）
-                MobclickAgent.onEvent(MyApplication.getContext(), EventID.LOGIN_WITH_QQ);
+               // MobclickAgent.onEvent(MyApplication.getContext(), EventID.LOGIN_WITH_QQ);
 
                 loginOtherType = 1;
-                authorization(SHARE_MEDIA.QQ);
+              //  authorization(SHARE_MEDIA.QQ);
                 break;
             //新浪
             case R.id.activity_login_sina:
 //                ShareUtils.shareWeb(this, "http://www.juejinchain.com/", "掘金宝",
 //                        "这是来自新浪微博分享的掘金宝消息", "", R.mipmap.icon_app, SHARE_MEDIA.SINA);
 
-                authorization(SHARE_MEDIA.SINA);
+             //   authorization(SHARE_MEDIA.SINA);
                 break;
             //钉钉
             case R.id.activity_login_dding:
-                if (iddShareApi.isDDAppInstalled()) {
-//                    ShareUtils.sendTextMessage(false, getApplicationContext(), iddShareApi, "这是来自钉钉分享的掘金宝消息");
-                    sendAuth();
-                } else {
-                    ToastUtils.getInstance().show(getApplicationContext(), "未安装钉钉客户端，请选择其他登录方式！");
-                }
+//                if (iddShareApi.isDDAppInstalled()) {
+////                    ShareUtils.sendTextMessage(false, getApplicationContext(), iddShareApi, "这是来自钉钉分享的掘金宝消息");
+//                    sendAuth();
+//                } else {
+//                    ToastUtils.getInstance().show(getApplicationContext(), "未安装钉钉客户端，请选择其他登录方式！");
+//                }
 
                 break;
             //获取验证码
@@ -759,7 +751,7 @@ public class LoginActivity extends BaseActivity<LoginPresenterImpl, ActivityLogi
             //短信登录
             case R.id.activity_login_type:
                 //埋点（点击短信登录按钮）
-                MobclickAgent.onEvent(MyApplication.getContext(), EventID.LOGIN_WITH_NOTE);
+               // MobclickAgent.onEvent(MyApplication.getContext(), EventID.LOGIN_WITH_NOTE);
 
                 initViewLoginType(1);
                 loginType = 1;
@@ -768,7 +760,7 @@ public class LoginActivity extends BaseActivity<LoginPresenterImpl, ActivityLogi
             //账号密码登录
             case R.id.activity_login_to_psw:
                 //埋点（点击账号密码登录按钮）
-                MobclickAgent.onEvent(MyApplication.getContext(), EventID.LOGIN_WITH_PASSWORD);
+               // MobclickAgent.onEvent(MyApplication.getContext(), EventID.LOGIN_WITH_PASSWORD);
                 initViewLoginType(2);
                 loginType = 2;
                 mViewBinding.activityLoginToPsw.setVisibility(View.GONE);
@@ -792,7 +784,6 @@ public class LoginActivity extends BaseActivity<LoginPresenterImpl, ActivityLogi
             //用户协议
             case R.id.login_use_agreement:
                 WebSmsActivity.intentMe(mActivity, RetrofitManager.VIP_JS_URL + Constant.WEB_ONLINE_USE_AGREEMENT, "掘金宝用户协议");
-
                 break;
             //隐私协议
             case R.id.login_sms_agreement:
@@ -875,7 +866,7 @@ public class LoginActivity extends BaseActivity<LoginPresenterImpl, ActivityLogi
         //绑定微信号
         if (isBindWechat) {
             map.put("user_token", loginEntity.getData().getUser_token());
-            map.put("channel", BaseApplication.getChannel());
+            map.put("channel", JJBApplication.getChannel());
             map.put("uid", "0");
             map.put("source_style", "7");
             map.put("from", "native_jjb");
@@ -943,72 +934,72 @@ public class LoginActivity extends BaseActivity<LoginPresenterImpl, ActivityLogi
     }
 
     //授权
-    private void authorization(SHARE_MEDIA share_media) {
-        UMShareAPI.get(this).getPlatformInfo(this, share_media, new UMAuthListener() {
-            @Override
-            public void onStart(SHARE_MEDIA share_media) {
-
-                Log.e("TAG", "onStart " + "授权开始");
-            }
-
-            @Override
-            public void onComplete(SHARE_MEDIA share_media, int i, Map<String, String> map) {
-
-                Log.e("TAG", "onStart =============》》》》》》》" + "授权完成");
-                //sdk是6.4.4的,但是获取值的时候用的是6.2以前的(access_token)才能获取到值,未知原因
-                String uid = map.get("uid");
-                String openid = map.get("openid");//微博没有
-                String unionid = map.get("unionid");//微博没有
-                String access_token = map.get("access_token");
-                String refresh_token = map.get("refresh_token");//微信,qq,微博都没有获取到
-                String expires_in = map.get("expires_in");
-                String name = map.get("name");
-                String gender = map.get("gender");
-                String iconurl = map.get("iconurl");
-                Log.e("TAG", "onComplete: 打印第三方获取的参数=======>>>>>" + "name=" + name
-                        + "uid=" + uid
-                        + "openid=" + openid
-                        + "unionid =" + unionid
-                        + "access_token =" + access_token
-                        + "refresh_token=" + refresh_token
-                        + "expires_in=" + expires_in
-                        + "gender=" + gender
-                        + "iconurl=" + iconurl);
-                mViewBinding.loadingProgressbarLogin.setVisibility(View.VISIBLE);
-                if (share_media.equals(SHARE_MEDIA.WEIXIN)) {
-                    initWXCommit(unionid, access_token, openid);
-                } else if (share_media.equals(SHARE_MEDIA.QQ)) {
-                    initQQCommit(access_token, openid);
-                } else if (share_media.equals(SHARE_MEDIA.SINA)) {
-
-                }
-
-            }
-
-            @Override
-            public void onError(SHARE_MEDIA share_media, int i, Throwable throwable) {
-                mViewBinding.loadingProgressbarLogin.setVisibility(View.GONE);
-                if (share_media.equals(SHARE_MEDIA.WEIXIN)) {
-
-                    ToastUtils.getInstance().show(getApplicationContext(), "未安装微信客户端，请选择其他登录方式！");
-                } else if (share_media.equals(SHARE_MEDIA.QQ)) {
-                    ToastUtils.getInstance().show(getApplicationContext(), "未安装QQ，请安装QQ或选择其他登录方式！");
-                }
-            }
-
-            @Override
-            public void onCancel(SHARE_MEDIA share_media, int i) {
-                mViewBinding.loadingProgressbarLogin.setVisibility(View.GONE);
-                Log.d("TAG", "onCancel " + "授权取消");
-            }
-        });
-    }
+//    private void authorization(SHARE_MEDIA share_media) {
+//        UMShareAPI.get(this).getPlatformInfo(this, share_media, new UMAuthListener() {
+//            @Override
+//            public void onStart(SHARE_MEDIA share_media) {
+//
+//                Log.e("TAG", "onStart " + "授权开始");
+//            }
+//
+//            @Override
+//            public void onComplete(SHARE_MEDIA share_media, int i, Map<String, String> map) {
+//
+//                Log.e("TAG", "onStart =============》》》》》》》" + "授权完成");
+//                //sdk是6.4.4的,但是获取值的时候用的是6.2以前的(access_token)才能获取到值,未知原因
+//                String uid = map.get("uid");
+//                String openid = map.get("openid");//微博没有
+//                String unionid = map.get("unionid");//微博没有
+//                String access_token = map.get("access_token");
+//                String refresh_token = map.get("refresh_token");//微信,qq,微博都没有获取到
+//                String expires_in = map.get("expires_in");
+//                String name = map.get("name");
+//                String gender = map.get("gender");
+//                String iconurl = map.get("iconurl");
+//                Log.e("TAG", "onComplete: 打印第三方获取的参数=======>>>>>" + "name=" + name
+//                        + "uid=" + uid
+//                        + "openid=" + openid
+//                        + "unionid =" + unionid
+//                        + "access_token =" + access_token
+//                        + "refresh_token=" + refresh_token
+//                        + "expires_in=" + expires_in
+//                        + "gender=" + gender
+//                        + "iconurl=" + iconurl);
+//                mViewBinding.loadingProgressbarLogin.setVisibility(View.VISIBLE);
+//                if (share_media.equals(SHARE_MEDIA.WEIXIN)) {
+//                    initWXCommit(unionid, access_token, openid);
+//                } else if (share_media.equals(SHARE_MEDIA.QQ)) {
+//                    initQQCommit(access_token, openid);
+//                } else if (share_media.equals(SHARE_MEDIA.SINA)) {
+//
+//                }
+//
+//            }
+//
+//            @Override
+//            public void onError(SHARE_MEDIA share_media, int i, Throwable throwable) {
+//                mViewBinding.loadingProgressbarLogin.setVisibility(View.GONE);
+//                if (share_media.equals(SHARE_MEDIA.WEIXIN)) {
+//
+//                    ToastUtils.getInstance().show(getApplicationContext(), "未安装微信客户端，请选择其他登录方式！");
+//                } else if (share_media.equals(SHARE_MEDIA.QQ)) {
+//                    ToastUtils.getInstance().show(getApplicationContext(), "未安装QQ，请安装QQ或选择其他登录方式！");
+//                }
+//            }
+//
+//            @Override
+//            public void onCancel(SHARE_MEDIA share_media, int i) {
+//                mViewBinding.loadingProgressbarLogin.setVisibility(View.GONE);
+//                Log.d("TAG", "onCancel " + "授权取消");
+//            }
+//        });
+//    }
 
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        UMShareAPI.get(this).onActivityResult(requestCode, resultCode, data);
+   //     UMShareAPI.get(this).onActivityResult(requestCode, resultCode, data);
     }
 
     public void setInvateCode(String invateCode) {
@@ -1016,7 +1007,7 @@ public class LoginActivity extends BaseActivity<LoginPresenterImpl, ActivityLogi
         Map<String, String> map = new HashMap<>();
         map.put("invitation_code", invateCode);
         map.put("user_token", loginEntity.getData().getUser_token());
-        map.put("channel", BaseApplication.getChannel());
+        map.put("channel", JJBApplication.getChannel());
         map.put("from", "native_jjb");
         map.put("uid", "0");
         map.put("source_style", "8");

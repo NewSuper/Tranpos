@@ -21,32 +21,31 @@ import com.bumptech.glide.request.target.SimpleTarget;
 import com.bumptech.glide.request.transition.Transition;
 import com.flyco.tablayout.listener.OnTabSelectListener;
 import com.gyf.immersionbar.ImmersionBar;
-import com.juejinchain.android.R;
-import com.juejinchain.android.base.Constant;
-import com.juejinchain.android.base.MyApplication;
-import com.juejinchain.android.callback.NoDoubleListener;
-import com.juejinchain.android.databinding.FragmentVipBinding;
-import com.juejinchain.android.module.MainActivity;
-import com.juejinchain.android.module.book.activity.BookSearchActivity;
-import com.juejinchain.android.module.home.entity.NewTaskEvent;
-import com.juejinchain.android.module.login.activity.GuideLoginActivity;
-import com.juejinchain.android.module.movie.activity.BridgeWebViewActivity;
-import com.juejinchain.android.module.movie.activity.MovieSearchActivity;
-import com.juejinchain.android.module.movie.adapter.VipPagerFragmentAdapter;
-import com.juejinchain.android.module.movie.entity.MovieShowBookEntity;
-import com.juejinchain.android.module.movie.presenter.impl.VipFragmentImpl;
-import com.juejinchain.android.module.movie.view.NewTaskMovieRewardDialog;
-import com.juejinchain.android.module.share.dialog.ShareDialog;
-import com.juejinchain.android.module.share.entity.ShareInfo;
-import com.juejinchain.android.module.song.Activity.MusicSearchActivity;
+
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.FragmentVipBinding;
+import com.newsuper.t.juejinbao.base.BaseFragment;
+import com.newsuper.t.juejinbao.base.Constant;
+import com.newsuper.t.juejinbao.base.EventID;
+import com.newsuper.t.juejinbao.base.PagerCons;
+import com.newsuper.t.juejinbao.base.RetrofitManager;
+import com.newsuper.t.juejinbao.bean.LoginEntity;
+import com.newsuper.t.juejinbao.ui.JunjinBaoMainActivity;
+import com.newsuper.t.juejinbao.ui.book.activity.BookSearchActivity;
+import com.newsuper.t.juejinbao.ui.home.entity.NewTaskEvent;
+import com.newsuper.t.juejinbao.ui.login.activity.GuideLoginActivity;
+import com.newsuper.t.juejinbao.ui.movie.activity.BridgeWebViewActivity;
+import com.newsuper.t.juejinbao.ui.movie.activity.MovieSearchActivity;
+import com.newsuper.t.juejinbao.ui.movie.adapter.VipPagerFragmentAdapter;
+import com.newsuper.t.juejinbao.ui.movie.entity.MovieShowBookEntity;
+import com.newsuper.t.juejinbao.ui.movie.presenter.impl.VipFragmentImpl;
+import com.newsuper.t.juejinbao.ui.movie.view.NewTaskMovieRewardDialog;
+import com.newsuper.t.juejinbao.ui.share.dialog.ShareDialog;
+import com.newsuper.t.juejinbao.ui.share.entity.ShareInfo;
+import com.newsuper.t.juejinbao.ui.song.Activity.MusicSearchActivity;
+import com.newsuper.t.juejinbao.utils.NoDoubleListener;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
-import com.umeng.analytics.MobclickAgent;
-import com.ys.network.base.BaseFragment;
-import com.ys.network.base.EventID;
-import com.ys.network.base.LoginEntity;
-import com.ys.network.base.PagerCons;
-import com.ys.network.network.RetrofitManager;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -122,7 +121,7 @@ public class VipFragment extends BaseFragment<VipFragmentImpl, FragmentVipBindin
             @Override
             public void onNoDoubleClick(View view) {
                 if (LoginEntity.getIsLogin()) {
-                    MobclickAgent.onEvent(context, EventID.VIDEO_TOPRIGHT_SHARE);   //免费专区-分享-埋点
+                  //  MobclickAgent.onEvent(context, EventID.VIDEO_TOPRIGHT_SHARE);   //免费专区-分享-埋点
                     shareInfo.setUrl_type(ShareInfo.TYPE_MOVIE_LIST);
                     shareInfo.setUrl_path(ShareInfo.PATH_MOVIE);
                     mShareDialog = new ShareDialog(getActivity(), shareInfo, null);
@@ -173,13 +172,13 @@ public class VipFragment extends BaseFragment<VipFragmentImpl, FragmentVipBindin
         oldUserStartTime = System.currentTimeMillis()/1000;
         touristsStartTime = System.currentTimeMillis()/1000;
 
-        MobclickAgent.onEvent(MyApplication.getContext(), EventID.FREEWATCHPAGE_PV);
-        MobclickAgent.onEvent(MyApplication.getContext(), EventID.FREEWATCHPAGE_UV);
+       // MobclickAgent.onEvent(MyApplication.getContext(), EventID.FREEWATCHPAGE_PV);
+      //  MobclickAgent.onEvent(MyApplication.getContext(), EventID.FREEWATCHPAGE_UV);
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN,sticky = true)
     public void onTabChange(NewTaskEvent event) {
-        if(((MainActivity)mActivity).Is_Show_Movie && event.getTabPosition() == 1){
+        if(((JunjinBaoMainActivity)mActivity).Is_Show_Movie && event.getTabPosition() == 1){
             showNewTaskReadDialog();
 
             newUserStartTime = System.currentTimeMillis()/1000;
@@ -205,7 +204,7 @@ public class VipFragment extends BaseFragment<VipFragmentImpl, FragmentVipBindin
             int movieTime = (int) ((System.currentTimeMillis()-movieStartTime)/1000);
             Map<String, Object> time = new HashMap<>();
             time.put("movieTimeInSeconds",movieTime);
-            MobclickAgent.onEventObject(MyApplication.getContext(), EventID.VIP_MOVIE_ONLINE_TIME, time);
+           // MobclickAgent.onEventObject(MyApplication.getContext(), EventID.VIP_MOVIE_ONLINE_TIME, time);
             Paper.book().write(PagerCons.INTO_MOVIE_TIME, "0");
         }else{
             Paper.book().write(PagerCons.INTO_MOVIE_TIME,System.currentTimeMillis()+"");
@@ -336,14 +335,14 @@ public class VipFragment extends BaseFragment<VipFragmentImpl, FragmentVipBindin
         if(LoginEntity.getIsLogin()){
             if(LoginEntity.getIsNew()){
                 map.put("onLine", System.currentTimeMillis()/1000-(newUserStartTime==0?System.currentTimeMillis()/1000:touristsStartTime));
-                MobclickAgent.onEventObject(MyApplication.getContext(), EventID.FREEWATCHPAGE_USETIME, map);
+                //MobclickAgent.onEventObject(MyApplication.getContext(), EventID.FREEWATCHPAGE_USETIME, map);
             }else{
                 map.put("onLine", System.currentTimeMillis()/1000-(oldUserStartTime==0?System.currentTimeMillis()/1000:touristsStartTime));
-                MobclickAgent.onEventObject(MyApplication.getContext(), EventID.FREEWATCHPAGE_OLD_USETIME, map);
+             //   MobclickAgent.onEventObject(MyApplication.getContext(), EventID.FREEWATCHPAGE_OLD_USETIME, map);
             }
         }else{
             map.put("onLine", System.currentTimeMillis()/1000-(touristsStartTime==0?System.currentTimeMillis()/1000:touristsStartTime));
-            MobclickAgent.onEventObject(MyApplication.getContext(), EventID.FREEWATCHPAGE_TOURISTS_USETIME, map);
+          //  MobclickAgent.onEventObject(MyApplication.getContext(), EventID.FREEWATCHPAGE_TOURISTS_USETIME, map);
         }
     }
 }

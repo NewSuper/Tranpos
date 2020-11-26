@@ -7,6 +7,8 @@ import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
 
+import com.newsuper.t.R;
+
 
 public class ScoreView extends View {
     private Context context;
@@ -63,9 +65,6 @@ public class ScoreView extends View {
         }
 
         setMeasuredDimension(viewWidth, viewHight);
-
-
-
 
     }
 

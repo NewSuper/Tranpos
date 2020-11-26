@@ -10,17 +10,17 @@ import android.util.Log;
 
 
 import com.alibaba.fastjson.JSON;
-import com.juejinchain.android.module.movie.bean.DownloadSniff;
-import com.juejinchain.android.module.movie.bean.Sniff;
-import com.juejinchain.android.module.movie.entity.MovieDetailEntity;
-import com.juejinchain.android.module.movie.entity.MovieThirdIframeEntity;
-import com.juejinchain.android.module.movie.presenter.impl.PlayerExFuncImpl;
-import com.juejinchain.android.module.movie.view.DeviceSelectDialog;
-import com.juejinchain.android.module.movie.view.DownloadListPopupWindow;
-import com.juejinchain.android.module.movie.view.PlayerPopupWindow;
-import com.juejinchain.android.module.movie.view.PlayerSpeedPopupWindow;
-import com.juejinchain.android.module.movie.view.SelectTVPlayPopupWindow;
-import com.juejinchain.android.utils.MyToast;
+import com.newsuper.t.juejinbao.ui.movie.bean.Sniff;
+import com.newsuper.t.juejinbao.ui.movie.entity.MovieDetailEntity;
+import com.newsuper.t.juejinbao.ui.movie.entity.MovieThirdIframeEntity;
+import com.newsuper.t.juejinbao.ui.movie.presenter.impl.PlayerExFuncImpl;
+import com.newsuper.t.juejinbao.ui.movie.view.DeviceSelectDialog;
+import com.newsuper.t.juejinbao.ui.movie.view.DownloadListPopupWindow;
+import com.newsuper.t.juejinbao.ui.movie.view.PlayerPopupWindow;
+import com.newsuper.t.juejinbao.ui.movie.view.PlayerSpeedPopupWindow;
+import com.newsuper.t.juejinbao.ui.movie.view.SelectTVPlayPopupWindow;
+import com.newsuper.t.juejinbao.utils.MyToast;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;

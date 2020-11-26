@@ -1,6 +1,7 @@
 package com.newsuper.t.juejinbao.ui.movie.craw.crawmusic;
 
-import com.juejinchain.android.module.movie.adapter.EasyAdapter;
+
+import com.newsuper.t.juejinbao.ui.movie.adapter.EasyAdapter;
 
 import java.io.Serializable;
 

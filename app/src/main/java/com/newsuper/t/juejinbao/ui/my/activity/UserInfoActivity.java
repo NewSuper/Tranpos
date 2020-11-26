@@ -24,20 +24,20 @@ import com.jph.takephoto.model.TResult;
 import com.jph.takephoto.permission.InvokeListener;
 import com.jph.takephoto.permission.PermissionManager;
 import com.jph.takephoto.permission.TakePhotoInvocationHandler;
-import com.juejinchain.android.R;
-import com.juejinchain.android.base.BaseEntity;
-import com.juejinchain.android.base.Constant;
-import com.juejinchain.android.databinding.ActivityUserInfoBinding;
-import com.juejinchain.android.module.movie.activity.BridgeWebViewActivity;
-import com.juejinchain.android.module.movie.utils.Utils;
-import com.juejinchain.android.module.my.entity.UserProfileEntity;
-import com.juejinchain.android.module.my.presenter.impl.UserInfoImpl;
-import com.juejinchain.android.utils.BitmapCompressHelper;
-import com.juejinchain.android.utils.MyToast;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivityUserInfoBinding;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.base.Constant;
+import com.newsuper.t.juejinbao.base.RetrofitManager;
+import com.newsuper.t.juejinbao.bean.BaseEntity;
+import com.newsuper.t.juejinbao.ui.movie.activity.BridgeWebViewActivity;
+import com.newsuper.t.juejinbao.ui.movie.utils.Utils;
+import com.newsuper.t.juejinbao.ui.my.entity.UserProfileEntity;
+import com.newsuper.t.juejinbao.ui.my.presenter.impl.UserInfoImpl;
+import com.newsuper.t.juejinbao.utils.BitmapCompressHelper;
+import com.newsuper.t.juejinbao.utils.MyToast;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
-import com.ys.network.base.BaseActivity;
-import com.ys.network.network.RetrofitManager;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -198,14 +198,8 @@ public class UserInfoActivity extends BaseActivity<UserInfoImpl, ActivityUserInf
                     }
                 }).start();
 
-
-
-
-
                 break;
             case R.id.tv_qq_save:
-
-
                 new Thread(new Runnable() {
                     @Override
                     public void run() {

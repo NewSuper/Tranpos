@@ -9,14 +9,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridLayout;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.FragmentMovieNewtabstabBinding;
-import com.juejinchain.android.module.movie.adapter.MovieNewTabGridAdapter;
-import com.juejinchain.android.module.movie.adapter.MovieRadarGridAdapter;
-import com.juejinchain.android.module.movie.entity.MovieIndexRecommendEntity;
-import com.juejinchain.android.module.movie.presenter.impl.MovieNewTabsTabImpl;
-import com.juejinchain.android.module.movie.view.WrapContentGridViewManager;
-import com.ys.network.base.BaseFragment;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.FragmentMovieNewtabstabBinding;
+import com.newsuper.t.juejinbao.base.BaseFragment;
+import com.newsuper.t.juejinbao.ui.movie.adapter.MovieNewTabGridAdapter;
+import com.newsuper.t.juejinbao.ui.movie.entity.MovieIndexRecommendEntity;
+import com.newsuper.t.juejinbao.ui.movie.presenter.impl.MovieNewTabsTabImpl;
+import com.newsuper.t.juejinbao.ui.movie.view.WrapContentGridViewManager;
 
 /**
  * vip-影视-子界面-子界面

@@ -17,26 +17,18 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.alibaba.fastjson.JSON;
-import com.juejinchain.android.R;
-import com.juejinchain.android.module.movie.activity.ScreenTeachActivity;
-import com.juejinchain.android.module.movie.craw.moviedetail.BeanMovieDetail;
-import com.juejinchain.android.module.movie.entity.MovieDetailEntity;
-import com.juejinchain.android.module.movie.entity.MovieRadarMovieDetailEntity;
-import com.juejinchain.android.module.movie.entity.MovieThirdIframeEntity;
-import com.juejinchain.android.module.movie.utils.PlayerExFunc;
-import com.juejinchain.android.module.movie.utils.ToLightApp;
-import com.juejinchain.android.module.movie.utils.ToLightApp2;
-import com.juejinchain.android.module.movie.utils.Utils;
-import com.juejinchain.android.module.movie.view.DeviceSelectDialog;
-import com.juejinchain.android.module.movie.view.DownloadListPopupWindow;
-import com.juejinchain.android.module.movie.view.DownloadListPopupWindow2;
-import com.juejinchain.android.module.movie.view.PlayerPopupWindow;
-import com.juejinchain.android.module.movie.view.PlayerPopupWindow2;
-import com.juejinchain.android.module.movie.view.PlayerSpeedPopupWindow;
-import com.juejinchain.android.module.movie.view.PlayerSpeedPopupWindow2;
-import com.juejinchain.android.module.movie.view.SelectTVPlayPopupWindow2;
-import com.juejinchain.android.utils.MyToast;
-import com.ys.network.utils.androidUtils.OSUtils;
+import com.newsuper.t.R;
+import com.newsuper.t.juejinbao.ui.movie.activity.ScreenTeachActivity;
+import com.newsuper.t.juejinbao.ui.movie.craw.moviedetail.BeanMovieDetail;
+import com.newsuper.t.juejinbao.ui.movie.entity.MovieRadarMovieDetailEntity;
+import com.newsuper.t.juejinbao.ui.movie.utils.PlayerExFunc;
+import com.newsuper.t.juejinbao.ui.movie.utils.ToLightApp2;
+import com.newsuper.t.juejinbao.ui.movie.utils.Utils;
+import com.newsuper.t.juejinbao.ui.movie.view.DownloadListPopupWindow2;
+import com.newsuper.t.juejinbao.ui.movie.view.PlayerPopupWindow2;
+import com.newsuper.t.juejinbao.ui.movie.view.PlayerSpeedPopupWindow2;
+import com.newsuper.t.juejinbao.ui.movie.view.SelectTVPlayPopupWindow2;
+import com.newsuper.t.juejinbao.utils.MyToast;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -257,7 +249,7 @@ public class JzvdPlayerBusiness extends JzvdPlayerNet {
             public void onClick(View v) {
                 BeanMovieDetail.PlaybackSource.Drama drama = null;
 
-                if(dramaList == null){
+                if (dramaList == null) {
                     return;
                 }
 
@@ -280,7 +272,7 @@ public class JzvdPlayerBusiness extends JzvdPlayerNet {
                 ClipData myClip = ClipData.newPlainText("text", drama.getVideoDownloadUrl());
                 myClipboard.setPrimaryClip(myClip);
 
-                MyToast.show(activity , "已复制到剪贴板");
+                MyToast.show(activity, "已复制到剪贴板");
             }
         });
     }
@@ -301,7 +293,7 @@ public class JzvdPlayerBusiness extends JzvdPlayerNet {
             MyToast.show(activity, "已经是最后一集");
             if (isFull) {
                 backPress();
-            }else{
+            } else {
                 EventBus.getDefault().post(new EventControllerPlayUrl(EventControllerPlayUrl.TYPE_PLAY, dramaList.get(0), dramaList));
 
             }
@@ -438,7 +430,7 @@ public class JzvdPlayerBusiness extends JzvdPlayerNet {
         //掘金宝移除投屏功能，改为下载
         if (!TextUtils.isEmpty(appDownloadUrl)) {
             //直接切到竖屏，以免回到掘金宝横竖屏错误
-            if(isFull){
+            if (isFull) {
                 fullscreenButton.performClick();
             }
 

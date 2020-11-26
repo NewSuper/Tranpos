@@ -899,7 +899,7 @@ public class HomePagerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
             holder.container.addView(adView);
             adView.render(); // 调用render方法后sdk才会开始展示广告
         } else {
-            bindAdViewHolder(viewHolder, position);
+          //  bindAdViewHolder(viewHolder, position);
         }
     }
 

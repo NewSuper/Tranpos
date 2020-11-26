@@ -12,33 +12,19 @@ import android.widget.GridLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.module.MainActivity;
-import com.juejinchain.android.module.movie.activity.MovieSearchActivity;
-import com.juejinchain.android.module.movie.craw.BeanMovieSearchItem;
-import com.juejinchain.android.module.movie.entity.MovieMovieRecommendDataEntity;
-import com.juejinchain.android.module.movie.fragment.MovieTabRecommendFragment;
-import com.juejinchain.android.module.movie.utils.OnClickReturnStringListener;
-import com.juejinchain.android.module.movie.view.DependentResourceDialog;
-import com.juejinchain.android.module.movie.view.WrapContentGridViewManager;
-import com.umeng.commonsdk.debug.W;
+import com.newsuper.t.R;
+import com.newsuper.t.juejinbao.ui.movie.activity.MovieSearchActivity;
+import com.newsuper.t.juejinbao.ui.movie.craw.BeanMovieSearchItem;
+import com.newsuper.t.juejinbao.ui.movie.entity.MovieMovieRecommendDataEntity;
+import com.newsuper.t.juejinbao.ui.movie.fragment.MovieTabRecommendFragment;
+import com.newsuper.t.juejinbao.ui.movie.utils.OnClickReturnStringListener;
+import com.newsuper.t.juejinbao.ui.movie.view.WrapContentGridViewManager;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @projectName: funball
- * @package: com.yunzhou.funlive.module.selectcode.adapter
- * @className: GridTextMatchAdapter
- * @description: 用于平均分的textview的grid
- * @author: Mages
- * @email: 940167298@qq.com
- * @createDate: 2019/4/2 17:16
- * @updateUser: 更新者
- * @updateDate: 2019/4/2 17:16
- * @updateRemark: 更新说明
- * @version: 1.0
- * @copyright: 2018-2019 (C)深圳市云舟网络科技有限公司 Inc. All rights reserved.
+ * * @description: 用于平均分的textview的grid
  */
 public class TVAdapter extends RecyclerView.Adapter<MyViewHolder> {
     private Context context;

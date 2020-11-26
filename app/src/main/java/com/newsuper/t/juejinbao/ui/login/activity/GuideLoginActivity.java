@@ -13,9 +13,25 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivityGuideLoginBinding;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.base.Constant;
+import com.newsuper.t.juejinbao.base.EventID;
+import com.newsuper.t.juejinbao.base.JJBApplication;
+import com.newsuper.t.juejinbao.base.PagerCons;
+import com.newsuper.t.juejinbao.base.RetrofitManager;
 import com.newsuper.t.juejinbao.bean.LoginEntity;
+import com.newsuper.t.juejinbao.bean.LoginEvent;
+import com.newsuper.t.juejinbao.bean.LoginStateEvent;
+import com.newsuper.t.juejinbao.ui.login.entity.BindInviterEntity;
+import com.newsuper.t.juejinbao.ui.login.entity.IsShowQQEntity;
+import com.newsuper.t.juejinbao.ui.login.entity.SetAndChangePswEntity;
 import com.newsuper.t.juejinbao.ui.login.presenter.impl.LoginPresenterImpl;
+import com.newsuper.t.juejinbao.ui.my.dialog.FragmentMyConfigDialog;
+import com.newsuper.t.juejinbao.utils.MyToast;
 import com.newsuper.t.juejinbao.utils.PhoneInfoUtils;
+import com.newsuper.t.juejinbao.utils.StringUtils;
+import com.newsuper.t.juejinbao.utils.ToastUtils;
 import com.newsuper.t.juejinbao.utils.androidUtils.StatusBarUtil;
 import com.tbruyelle.rxpermissions.RxPermissions;
 
@@ -176,7 +192,7 @@ public class GuideLoginActivity extends BaseActivity<LoginPresenterImpl, Activit
             //手机号一建登录
             case R.id.activity_guide_login_wechat:
                 //埋点（点击手机号一键注册/登录按钮）
-                MobclickAgent.onEvent(MyApplication.getContext(), EventID.MOBILE_PHONE_NUMBER_ONE_KEY_TO_LOGIN);
+             //   MobclickAgent.onEvent(MyApplication.getContext(), EventID.MOBILE_PHONE_NUMBER_ONE_KEY_TO_LOGIN);
 
 //                if (phone != null && phone.length() > 0 && phone.length() == 11) {
 //                    //直接登录
@@ -237,10 +253,10 @@ public class GuideLoginActivity extends BaseActivity<LoginPresenterImpl, Activit
 //                        "这是来自QQ分享的掘金宝消息", "", R.mipmap.icon_app, SHARE_MEDIA.QQ);
 
                 //埋点（点击QQ登录按钮）
-                MobclickAgent.onEvent(MyApplication.getContext(), EventID.LOGIN_WITH_QQ);
+              //  MobclickAgent.onEvent(MyApplication.getContext(), EventID.LOGIN_WITH_QQ);
 
                 loginOtherType = 1;
-                authorization(SHARE_MEDIA.QQ);
+             //   authorization(SHARE_MEDIA.QQ);
 
                 break;
              case R.id.activity_guide_logina_wechat:
@@ -248,20 +264,20 @@ public class GuideLoginActivity extends BaseActivity<LoginPresenterImpl, Activit
 //                        "这是来自QQ分享的掘金宝消息", "", R.mipmap.icon_app, SHARE_MEDIA.QQ);
 
                 //埋点（点击微信登录按钮）
-                MobclickAgent.onEvent(MyApplication.getContext(), EventID.LOGIN_WITH_WECHAT);
+              //  MobclickAgent.onEvent(MyApplication.getContext(), EventID.LOGIN_WITH_WECHAT);
 
                 loginOtherType = 2;
-                authorization(SHARE_MEDIA.WEIXIN);
+              //  authorization(SHARE_MEDIA.WEIXIN);
                 break;
                 //切换登录形态
             case R.id.activity_guide_logina_phone:
                 setLoginUI(1 , -1 , 1);
                 break;
             case R.id.ll_wxlogin:
-                MobclickAgent.onEvent(MyApplication.getContext(), EventID.LOGIN_WITH_WECHAT);
+              //  MobclickAgent.onEvent(MyApplication.getContext(), EventID.LOGIN_WITH_WECHAT);
 
                 loginOtherType = 2;
-                authorization(SHARE_MEDIA.WEIXIN);
+             //   authorization(SHARE_MEDIA.WEIXIN);
                 break;
             //用户协议
             case R.id.login_use_agreement:
@@ -274,71 +290,71 @@ public class GuideLoginActivity extends BaseActivity<LoginPresenterImpl, Activit
         }
     }
 
-    private void authorization(SHARE_MEDIA share_media) {
-        UMShareAPI.get(this).getPlatformInfo(this, share_media, umAuthListener);
-    }
+//    private void authorization(SHARE_MEDIA share_media) {
+//        UMShareAPI.get(this).getPlatformInfo(this, share_media, umAuthListener);
+//    }
 
     /**
      * 授权监听
      */
-    private UMAuthListener umAuthListener = new UMAuthListener() {
-        @Override
-        public void onStart(SHARE_MEDIA platform) {
-            //授权开始的回调
-            Log.e("TAG", "onStart =============》》》》》》》" + "授权开始");
-        }
-
-        @Override
-        public void onComplete(SHARE_MEDIA share_media, int action, Map<String, String> map) {
-
-            Log.e("TAG", "onComplete =============》》》》》》》" + "授权完成");
-            //sdk是6.4.4的,但是获取值的时候用的是6.2以前的(access_token)才能获取到值,未知原因
-            String uid = map.get("uid");
-            String openid = map.get("openid");//微博没有
-            String unionid = map.get("unionid");//微博没有
-            String access_token = map.get("access_token");
-            String refresh_token = map.get("refresh_token");//微信,qq,微博都没有获取到
-            String expires_in = map.get("expires_in");
-            String name = map.get("name");
-            String gender = map.get("gender");
-            String iconurl = map.get("iconurl");
-            Log.e("TAG", "onComplete: 打印第三方获取的参数=======>>>>>" + "name=" + name
-                    + "uid=" + uid
-                    + "openid=" + openid
-                    + "unionid =" + unionid
-                    + "access_token =" + access_token
-                    + "refresh_token=" + refresh_token
-                    + "expires_in=" + expires_in
-                    + "gender=" + gender
-                    + "iconurl=" + iconurl);
-
-            mViewBinding.loadingProgressbarLogin.setVisibility(View.VISIBLE);
-            if (share_media.equals(SHARE_MEDIA.WEIXIN)) {
-                initWXCommit(access_token, openid);
-            } else if (share_media.equals(SHARE_MEDIA.QQ)) {
-                initQQCommit(access_token, openid);
-            } else if (share_media.equals(SHARE_MEDIA.SINA)) {
-
-            }
-        }
-
-        @Override
-        public void onError(SHARE_MEDIA platform, int action, Throwable t) {
-            mViewBinding.loadingProgressbarLogin.setVisibility(View.GONE);
-            Log.e("TAG", "onError: ======>>>>>" + action);
-            if (platform.equals(SHARE_MEDIA.WEIXIN)) {
-                ToastUtils.getInstance().show(getApplicationContext(), "未安装微信客户端，请选择其他登录方式！");
-            } else if (platform.equals(SHARE_MEDIA.QQ)) {
-                ToastUtils.getInstance().show(getApplicationContext(), "未安装QQ，请安装QQ或选择其他登录方式！");
-            }
-        }
-
-        @Override
-        public void onCancel(SHARE_MEDIA platform, int action) {
-            mViewBinding.loadingProgressbarLogin.setVisibility(View.GONE);
-            Toast.makeText(getApplicationContext(), "授权取消", Toast.LENGTH_SHORT).show();
-        }
-    };
+//    private UMAuthListener umAuthListener = new UMAuthListener() {
+//        @Override
+//        public void onStart(SHARE_MEDIA platform) {
+//            //授权开始的回调
+//            Log.e("TAG", "onStart =============》》》》》》》" + "授权开始");
+//        }
+//
+//        @Override
+//        public void onComplete(SHARE_MEDIA share_media, int action, Map<String, String> map) {
+//
+//            Log.e("TAG", "onComplete =============》》》》》》》" + "授权完成");
+//            //sdk是6.4.4的,但是获取值的时候用的是6.2以前的(access_token)才能获取到值,未知原因
+//            String uid = map.get("uid");
+//            String openid = map.get("openid");//微博没有
+//            String unionid = map.get("unionid");//微博没有
+//            String access_token = map.get("access_token");
+//            String refresh_token = map.get("refresh_token");//微信,qq,微博都没有获取到
+//            String expires_in = map.get("expires_in");
+//            String name = map.get("name");
+//            String gender = map.get("gender");
+//            String iconurl = map.get("iconurl");
+//            Log.e("TAG", "onComplete: 打印第三方获取的参数=======>>>>>" + "name=" + name
+//                    + "uid=" + uid
+//                    + "openid=" + openid
+//                    + "unionid =" + unionid
+//                    + "access_token =" + access_token
+//                    + "refresh_token=" + refresh_token
+//                    + "expires_in=" + expires_in
+//                    + "gender=" + gender
+//                    + "iconurl=" + iconurl);
+//
+//            mViewBinding.loadingProgressbarLogin.setVisibility(View.VISIBLE);
+//            if (share_media.equals(SHARE_MEDIA.WEIXIN)) {
+//                initWXCommit(access_token, openid);
+//            } else if (share_media.equals(SHARE_MEDIA.QQ)) {
+//                initQQCommit(access_token, openid);
+//            } else if (share_media.equals(SHARE_MEDIA.SINA)) {
+//
+//            }
+//        }
+//
+//        @Override
+//        public void onError(SHARE_MEDIA platform, int action, Throwable t) {
+//            mViewBinding.loadingProgressbarLogin.setVisibility(View.GONE);
+//            Log.e("TAG", "onError: ======>>>>>" + action);
+//            if (platform.equals(SHARE_MEDIA.WEIXIN)) {
+//                ToastUtils.getInstance().show(getApplicationContext(), "未安装微信客户端，请选择其他登录方式！");
+//            } else if (platform.equals(SHARE_MEDIA.QQ)) {
+//                ToastUtils.getInstance().show(getApplicationContext(), "未安装QQ，请安装QQ或选择其他登录方式！");
+//            }
+//        }
+//
+//        @Override
+//        public void onCancel(SHARE_MEDIA platform, int action) {
+//            mViewBinding.loadingProgressbarLogin.setVisibility(View.GONE);
+//            Toast.makeText(getApplicationContext(), "授权取消", Toast.LENGTH_SHORT).show();
+//        }
+//    };
 
     //weixin登录
     private void initWXCommit(String access_token, String openid) {
@@ -432,48 +448,48 @@ public class GuideLoginActivity extends BaseActivity<LoginPresenterImpl, Activit
     }
 
     private void initCancelLogin() {
-        UMShareAPI.get(mActivity).deleteOauth(mActivity, SHARE_MEDIA.QQ, new UMAuthListener() {
-            @Override
-            public void onStart(SHARE_MEDIA share_media) {
-
-            }
-
-            @Override
-            public void onComplete(SHARE_MEDIA share_media, int i, Map<String, String> map) {
-
-            }
-
-            @Override
-            public void onError(SHARE_MEDIA share_media, int i, Throwable throwable) {
-
-            }
-
-            @Override
-            public void onCancel(SHARE_MEDIA share_media, int i) {
-
-            }
-        });
-        UMShareAPI.get(mActivity).deleteOauth(mActivity, SHARE_MEDIA.WEIXIN, new UMAuthListener() {
-            @Override
-            public void onStart(SHARE_MEDIA share_media) {
-
-            }
-
-            @Override
-            public void onComplete(SHARE_MEDIA share_media, int i, Map<String, String> map) {
-
-            }
-
-            @Override
-            public void onError(SHARE_MEDIA share_media, int i, Throwable throwable) {
-
-            }
-
-            @Override
-            public void onCancel(SHARE_MEDIA share_media, int i) {
-
-            }
-        });
+//        UMShareAPI.get(mActivity).deleteOauth(mActivity, SHARE_MEDIA.QQ, new UMAuthListener() {
+//            @Override
+//            public void onStart(SHARE_MEDIA share_media) {
+//
+//            }
+//
+//            @Override
+//            public void onComplete(SHARE_MEDIA share_media, int i, Map<String, String> map) {
+//
+//            }
+//
+//            @Override
+//            public void onError(SHARE_MEDIA share_media, int i, Throwable throwable) {
+//
+//            }
+//
+//            @Override
+//            public void onCancel(SHARE_MEDIA share_media, int i) {
+//
+//            }
+//        });
+//        UMShareAPI.get(mActivity).deleteOauth(mActivity, SHARE_MEDIA.WEIXIN, new UMAuthListener() {
+//            @Override
+//            public void onStart(SHARE_MEDIA share_media) {
+//
+//            }
+//
+//            @Override
+//            public void onComplete(SHARE_MEDIA share_media, int i, Map<String, String> map) {
+//
+//            }
+//
+//            @Override
+//            public void onError(SHARE_MEDIA share_media, int i, Throwable throwable) {
+//
+//            }
+//
+//            @Override
+//            public void onCancel(SHARE_MEDIA share_media, int i) {
+//
+//            }
+//        });
 
     }
 
@@ -584,7 +600,7 @@ public class GuideLoginActivity extends BaseActivity<LoginPresenterImpl, Activit
 //            EventBus.getDefault().post(new LoginEvent());
 //            EventBus.getDefault().post(new LoginStateEvent(true));
 //            finish();
-            MobclickAgent.onEvent(MyApplication.getContext(), EventID.OPEN_INSTALL_COUNT); //openInstall用户数量
+          //  MobclickAgent.onEvent(MyApplication.getContext(), EventID.OPEN_INSTALL_COUNT); //openInstall用户数量
             //使用过邀请锁粉邀请码之后，清除将邀请置为已使用
             Paper.book().write(PagerCons.KEY_INVATECODE_FROM_OPENINSTALL, "used");
 
@@ -642,7 +658,7 @@ public class GuideLoginActivity extends BaseActivity<LoginPresenterImpl, Activit
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        UMShareAPI.get(this).onActivityResult(requestCode, resultCode, data);
+       // UMShareAPI.get(this).onActivityResult(requestCode, resultCode, data);
 
     }
 
@@ -710,7 +726,7 @@ public class GuideLoginActivity extends BaseActivity<LoginPresenterImpl, Activit
         Map<String, String> map = new HashMap<>();
         map.put("invitation_code", invateCode);
         map.put("user_token", loginEntity.getData().getUser_token());
-        map.put("channel", BaseApplication.getChannel());
+        map.put("channel", JJBApplication.getChannel());
         map.put("from", "native_jjb");
         map.put("uid", "0");
         map.put("source_style", "8");

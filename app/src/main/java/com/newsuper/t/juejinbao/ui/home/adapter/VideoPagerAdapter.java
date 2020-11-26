@@ -53,10 +53,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-//import com.tencent.smtt.sdk.WebView;
-//import com.tencent.smtt.sdk.WebViewClient;
-
-
 /**
  * 视频页adapter
  * 加入了穿山甲信息流

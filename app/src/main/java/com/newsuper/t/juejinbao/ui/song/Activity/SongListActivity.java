@@ -12,6 +12,15 @@ import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import com.lzx.starrysky.provider.SongInfo;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ActivitySongListBinding;
+import com.newsuper.t.juejinbao.base.BaseActivity;
+import com.newsuper.t.juejinbao.base.BasePresenter;
+import com.newsuper.t.juejinbao.ui.song.adapter.SongListAdapter;
+import com.newsuper.t.juejinbao.ui.song.manager.SongPlayManager;
+import com.newsuper.t.juejinbao.utils.ClickUtil;
+import com.newsuper.t.juejinbao.utils.MyToast;
+
 import java.util.ArrayList;
 import java.util.List;
 

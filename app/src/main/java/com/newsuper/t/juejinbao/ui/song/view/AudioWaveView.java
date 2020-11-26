@@ -9,7 +9,7 @@ import android.os.Message;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.juejinchain.android.R;
+import com.newsuper.t.R;
 
 import java.util.Random;
 

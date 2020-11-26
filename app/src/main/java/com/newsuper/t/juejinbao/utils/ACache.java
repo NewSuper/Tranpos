@@ -9,7 +9,8 @@ import android.graphics.PixelFormat;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 
-import com.juejinchain.android.base.Constant;
+
+import com.newsuper.t.juejinbao.base.Constant;
 
 import org.json.JSONArray;
 import org.json.JSONObject;

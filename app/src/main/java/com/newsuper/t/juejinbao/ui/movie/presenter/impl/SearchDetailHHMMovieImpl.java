@@ -4,16 +4,16 @@ import android.content.Context;
 import android.text.TextUtils;
 
 import com.alibaba.fastjson.JSON;
-import com.juejinchain.android.base.ApiService;
-import com.juejinchain.android.module.movie.bean.SearchMovieCache;
-import com.juejinchain.android.module.movie.entity.DependentResourcesDataEntity;
-import com.juejinchain.android.module.movie.entity.MovieCinamesEntity;
-import com.ys.network.base.BasePresenter;
-import com.ys.network.base.PagerCons;
-import com.ys.network.network.RetrofitManager;
-import com.ys.network.progress.HttpResultFunc;
-import com.ys.network.progress.ProgressSubscriber;
-import com.ys.network.progress.SubscriberOnResponseListenter;
+import com.newsuper.t.juejinbao.base.ApiService;
+import com.newsuper.t.juejinbao.base.BasePresenter;
+import com.newsuper.t.juejinbao.base.PagerCons;
+import com.newsuper.t.juejinbao.base.RetrofitManager;
+import com.newsuper.t.juejinbao.ui.movie.bean.SearchMovieCache;
+import com.newsuper.t.juejinbao.ui.movie.entity.DependentResourcesDataEntity;
+import com.newsuper.t.juejinbao.ui.movie.entity.MovieCinamesEntity;
+import com.newsuper.t.juejinbao.utils.SubscriberOnResponseListenter;
+import com.newsuper.t.juejinbao.utils.network.HttpResultFunc;
+import com.newsuper.t.juejinbao.utils.network.ProgressSubscriber;
 
 import java.util.ArrayList;
 import java.util.List;

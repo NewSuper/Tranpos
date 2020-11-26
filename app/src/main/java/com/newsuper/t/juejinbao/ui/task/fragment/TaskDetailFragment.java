@@ -29,76 +29,68 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.CircleCrop;
 import com.bumptech.glide.request.RequestOptions;
-import com.juejinchain.android.R;
-import com.juejinchain.android.base.ApiService;
-import com.juejinchain.android.base.BaseEntity;
-import com.juejinchain.android.base.Constant;
-import com.juejinchain.android.base.MyApplication;
-import com.juejinchain.android.databinding.FragmentTaskDetailBinding;
-import com.juejinchain.android.event.SwitchTabEvent;
-import com.juejinchain.android.module.MainActivity;
-import com.juejinchain.android.module.ReceiveTwoEggsDialog;
-import com.juejinchain.android.module.ReceiveTwoEggsSuccessDialog;
-import com.juejinchain.android.module.ad.BaoquGameActivity;
-import com.juejinchain.android.module.home.entity.FinishTaskEntity;
-import com.juejinchain.android.module.home.entity.NewTaskEvent;
-import com.juejinchain.android.module.home.entity.RewardEntity;
-import com.juejinchain.android.module.home.entity.TabChangeEvent;
-import com.juejinchain.android.module.home.ppw.RewardMoreCoinPop_2;
-import com.juejinchain.android.module.login.activity.GuideLoginActivity;
-import com.juejinchain.android.module.movie.activity.BridgeWebViewActivity;
-import com.juejinchain.android.module.movie.activity.PlayRewardVideoAdActicity;
-import com.juejinchain.android.module.movie.activity.WebActivity;
-import com.juejinchain.android.module.movie.entity.BindThirdEntity;
-import com.juejinchain.android.module.movie.entity.BoxShareEntity;
-import com.juejinchain.android.module.movie.utils.Utils;
-import com.juejinchain.android.module.movie.view.GoldDialog;
-import com.juejinchain.android.module.movie.view.TreasureBoxDialog;
-import com.juejinchain.android.module.my.activity.InviteFriendActivity;
-import com.juejinchain.android.module.my.activity.UserInfoActivity;
-import com.juejinchain.android.module.my.dialog.FragmentMyConfigDialog;
-import com.juejinchain.android.module.my.entity.UserDataEntity;
-import com.juejinchain.android.module.my.entity.UserInfoEntity;
-import com.juejinchain.android.module.share.dialog.ShareDialog;
-import com.juejinchain.android.module.share.entity.ShareInfo;
-import com.juejinchain.android.module.share.util.LogUtil;
-import com.juejinchain.android.module.task.NewTaskDialog;
-import com.juejinchain.android.module.task.NewTasksRewordDialog;
-import com.juejinchain.android.module.task.adapter.TaskAdapter;
-import com.juejinchain.android.module.task.adapter.TaskListAdapter;
-import com.juejinchain.android.module.task.adapter.TaskSignAdapter;
-import com.juejinchain.android.module.task.entity.BoxInfoEntity;
-import com.juejinchain.android.module.task.entity.BoxTimeEntity;
-import com.juejinchain.android.module.task.entity.SignEntity;
-import com.juejinchain.android.module.task.entity.TaskListEntity;
-import com.juejinchain.android.module.task.entity.TaskMsgEntity;
-import com.juejinchain.android.module.task.entity.TaskSignBean;
-import com.juejinchain.android.module.task.presenter.TaskDetailPresenterImpl;
-import com.juejinchain.android.module.task.sleep.SleepMoneyActivity;
-import com.juejinchain.android.utils.ClickUtil;
-import com.juejinchain.android.utils.GlideImgsLoader;
-import com.juejinchain.android.view.ViewDragMode;
-import com.mdad.sdk.mduisdk.AdManager;
+
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.FragmentTaskDetailBinding;
+import com.newsuper.t.juejinbao.base.ApiService;
+import com.newsuper.t.juejinbao.base.BaseFragment;
+import com.newsuper.t.juejinbao.base.BusConstant;
+import com.newsuper.t.juejinbao.base.BusProvider;
+import com.newsuper.t.juejinbao.base.Constant;
+import com.newsuper.t.juejinbao.base.PagerCons;
+import com.newsuper.t.juejinbao.base.RetrofitManager;
+import com.newsuper.t.juejinbao.bean.BaseEntity;
+import com.newsuper.t.juejinbao.bean.LoginEntity;
+import com.newsuper.t.juejinbao.bean.SwitchTabEvent;
+import com.newsuper.t.juejinbao.ui.JunjinBaoMainActivity;
+import com.newsuper.t.juejinbao.ui.ad.BaoquGameActivity;
+import com.newsuper.t.juejinbao.ui.home.entity.FinishTaskEntity;
+import com.newsuper.t.juejinbao.ui.home.entity.NewTaskEvent;
+import com.newsuper.t.juejinbao.ui.home.entity.RewardEntity;
+import com.newsuper.t.juejinbao.ui.home.entity.TabChangeEvent;
+import com.newsuper.t.juejinbao.ui.home.ppw.RewardMoreCoinPop_2;
+import com.newsuper.t.juejinbao.ui.login.activity.GuideLoginActivity;
+import com.newsuper.t.juejinbao.ui.movie.activity.BridgeWebViewActivity;
+import com.newsuper.t.juejinbao.ui.movie.activity.PlayRewardVideoAdActicity;
+import com.newsuper.t.juejinbao.ui.movie.activity.WebActivity;
+import com.newsuper.t.juejinbao.ui.movie.entity.BoxShareEntity;
+import com.newsuper.t.juejinbao.ui.movie.utils.Utils;
+import com.newsuper.t.juejinbao.ui.movie.view.GoldDialog;
+import com.newsuper.t.juejinbao.ui.movie.view.TreasureBoxDialog;
+import com.newsuper.t.juejinbao.ui.my.activity.InviteFriendActivity;
+import com.newsuper.t.juejinbao.ui.my.activity.UserInfoActivity;
+import com.newsuper.t.juejinbao.ui.my.dialog.FragmentMyConfigDialog;
+import com.newsuper.t.juejinbao.ui.my.entity.UserDataEntity;
+import com.newsuper.t.juejinbao.ui.my.entity.UserInfoEntity;
+import com.newsuper.t.juejinbao.ui.share.dialog.ShareDialog;
+import com.newsuper.t.juejinbao.ui.share.entity.ShareInfo;
+import com.newsuper.t.juejinbao.ui.share.util.LogUtil;
+import com.newsuper.t.juejinbao.ui.task.NewTaskDialog;
+import com.newsuper.t.juejinbao.ui.task.NewTasksRewordDialog;
+import com.newsuper.t.juejinbao.ui.task.adapter.TaskAdapter;
+import com.newsuper.t.juejinbao.ui.task.adapter.TaskListAdapter;
+import com.newsuper.t.juejinbao.ui.task.adapter.TaskSignAdapter;
+import com.newsuper.t.juejinbao.ui.task.entity.BoxInfoEntity;
+import com.newsuper.t.juejinbao.ui.task.entity.BoxTimeEntity;
+import com.newsuper.t.juejinbao.ui.task.entity.SignEntity;
+import com.newsuper.t.juejinbao.ui.task.entity.TaskListEntity;
+import com.newsuper.t.juejinbao.ui.task.entity.TaskMsgEntity;
+import com.newsuper.t.juejinbao.ui.task.entity.TaskSignBean;
+import com.newsuper.t.juejinbao.ui.task.presenter.TaskDetailPresenterImpl;
+import com.newsuper.t.juejinbao.ui.task.sleep.SleepMoneyActivity;
+import com.newsuper.t.juejinbao.utils.ClickUtil;
+import com.newsuper.t.juejinbao.utils.GlideImgsLoader;
+import com.newsuper.t.juejinbao.utils.StringUtils;
+import com.newsuper.t.juejinbao.utils.SubscriberOnResponseListenter;
+import com.newsuper.t.juejinbao.utils.ToastUtils;
+import com.newsuper.t.juejinbao.utils.network.HttpResultFunc;
+import com.newsuper.t.juejinbao.utils.network.ProgressSubscriber;
+import com.newsuper.t.juejinbao.view.ReceiveTwoEggsDialog;
+import com.newsuper.t.juejinbao.view.ReceiveTwoEggsSuccessDialog;
+import com.newsuper.t.juejinbao.view.ViewDragMode;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
-import com.umeng.analytics.MobclickAgent;
-import com.umeng.socialize.UMAuthListener;
-import com.umeng.socialize.UMShareAPI;
-import com.umeng.socialize.bean.SHARE_MEDIA;
 import com.youth.banner.listener.OnBannerListener;
-import com.ys.network.base.BaseFragment;
-import com.ys.network.base.EventID;
-import com.ys.network.base.LoginEntity;
-import com.ys.network.base.PagerCons;
-import com.ys.network.bus.BusConstant;
-import com.ys.network.bus.BusProvider;
-import com.ys.network.network.RetrofitManager;
-import com.ys.network.progress.HttpResultFunc;
-import com.ys.network.progress.ProgressSubscriber;
-import com.ys.network.progress.SubscriberOnResponseListenter;
-import com.ys.network.utils.StringUtils;
-import com.ys.network.utils.ToastUtils;
-
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
@@ -166,11 +158,11 @@ public class TaskDetailFragment extends BaseFragment<TaskDetailPresenterImpl, Fr
     // 每次Tab切换都刷
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onTabChange(TabChangeEvent tabChangeEvent) {
-        if (((MainActivity)mActivity).Is_Show_Movie && tabChangeEvent.getTabPosition() == 3) {
+        if (((JunjinBaoMainActivity)mActivity).Is_Show_Movie && tabChangeEvent.getTabPosition() == 3) {
             // 默认清空标记任务
             Paper.book().write(PagerCons.SELECT_TAG, "");
             getData();
-        }else if(!((MainActivity)mActivity).Is_Show_Movie && tabChangeEvent.getTabPosition() == 2){
+        }else if(!((JunjinBaoMainActivity)mActivity).Is_Show_Movie && tabChangeEvent.getTabPosition() == 2){
             // 默认清空标记任务
             Paper.book().write(PagerCons.SELECT_TAG, "");
             getData();
@@ -191,7 +183,7 @@ public class TaskDetailFragment extends BaseFragment<TaskDetailPresenterImpl, Fr
 
     @Subscribe(threadMode = ThreadMode.MAIN,sticky = true)
     public void onNewTaskEvent(NewTaskEvent event) {
-        if(((MainActivity)mActivity).Is_Show_Movie){
+        if(((JunjinBaoMainActivity)mActivity).Is_Show_Movie){
             if(event.getTabPosition() == 3){
                 // 新手任务跳转
                 showNewTaskDialog = true;
@@ -353,7 +345,7 @@ public class TaskDetailFragment extends BaseFragment<TaskDetailPresenterImpl, Fr
         signAdapter.update(signList);
         mViewBinding.srl.finishRefresh();
 
-        MobclickAgent.onEvent(MyApplication.getContext(), EventID.MISSION_DAILY_ATTENDANCE);
+      //  MobclickAgent.onEvent(MyApplication.getContext(), EventID.MISSION_DAILY_ATTENDANCE);
     }
 
     @Override
@@ -635,7 +627,7 @@ public class TaskDetailFragment extends BaseFragment<TaskDetailPresenterImpl, Fr
             case R.id.tv_title:
                 BridgeWebViewActivity.intentMe(getActivity(), RetrofitManager.WEB_URL_ONLINE + Constant.WEB_ONLINE_TECH_EARN_MONEY);
 
-                MobclickAgent.onEvent(MyApplication.getContext(), EventID.EARNMONEYPAGE_HOWEARN_CLICK);
+             //   MobclickAgent.onEvent(MyApplication.getContext(), EventID.EARNMONEYPAGE_HOWEARN_CLICK);
                 break;
             case R.id.tv_sign_question:
 //                BridgeWebViewActivity.intentMe(getActivity(), RetrofitManager.WEB_URL_ONLINE + Constant.WEB_ONLINE_USER_FEED_BACK);
@@ -657,7 +649,7 @@ public class TaskDetailFragment extends BaseFragment<TaskDetailPresenterImpl, Fr
                 }
                 showRewordDialog();
 
-                MobclickAgent.onEvent(MyApplication.getContext(), EventID.EARNMONEYPAGE_OPENBOX_CLICK);
+              //  MobclickAgent.onEvent(MyApplication.getContext(), EventID.EARNMONEYPAGE_OPENBOX_CLICK);
                 break;
             case R.id.tv_end:
                 BridgeWebViewActivity.intentMe(getActivity(), RetrofitManager.WEB_URL_ONLINE + Constant.WEB_ONLINE_TECH_SECRET_BOOK);
@@ -671,7 +663,7 @@ public class TaskDetailFragment extends BaseFragment<TaskDetailPresenterImpl, Fr
                     return;
                 }
                 startActivity(new Intent(mActivity, BaoquGameActivity.class));
-                MobclickAgent.onEvent(MyApplication.getContext(), EventID.MISSION_EVERYDAYMISSION_FISHADV);
+               // MobclickAgent.onEvent(MyApplication.getContext(), EventID.MISSION_EVERYDAYMISSION_FISHADV);
                 break;
         }
     }
@@ -696,7 +688,7 @@ public class TaskDetailFragment extends BaseFragment<TaskDetailPresenterImpl, Fr
                 InviteFriendActivity.intentMe(mActivity);
                 return;
             } else if (bean.getTitle().equals("走路赚钱")) {
-                MobclickAgent.onEvent(MyApplication.getContext(), EventID.SPORT_ENTRANCE_BANNER);
+              ///  MobclickAgent.onEvent(MyApplication.getContext(), EventID.SPORT_ENTRANCE_BANNER);
             } else if (bean.getTitle().equals("睡眠赚")) {
                 LoginEntity loginEntity = Paper.book().read(PagerCons.USER_DATA);
                 if (loginEntity == null) {
@@ -723,7 +715,7 @@ public class TaskDetailFragment extends BaseFragment<TaskDetailPresenterImpl, Fr
                                     ToastUtils.getInstance().show(mActivity, "您未安装微信");
                                     return;
                                 }
-                                authorization(SHARE_MEDIA.WEIXIN);
+                              //  authorization(SHARE_MEDIA.WEIXIN);
                             })
                             .setNegativeButton("取消", (dialog, which) -> dialog.dismiss())
                             .create()
@@ -731,7 +723,7 @@ public class TaskDetailFragment extends BaseFragment<TaskDetailPresenterImpl, Fr
                     return;
                 }
                 //埋点（点击转盘入口）
-                MobclickAgent.onEvent(MyApplication.getContext(), EventID.TURNTABLE_PUSH_ACTIVITY_BANNER);
+               // MobclickAgent.onEvent(MyApplication.getContext(), EventID.TURNTABLE_PUSH_ACTIVITY_BANNER);
             }
 
             if (bean.getUrl().contains("http")) {
@@ -767,14 +759,14 @@ public class TaskDetailFragment extends BaseFragment<TaskDetailPresenterImpl, Fr
                         ToastUtils.getInstance().show(mActivity, "您未安装微信");
                         return;
                     }
-                    authorization(SHARE_MEDIA.WEIXIN);
+                   // authorization(SHARE_MEDIA.WEIXIN);
                     break;
                 case "qq_certification"://关联QQ
                     if (!Utils.isQQClientAvailable(mActivity)) {
                         Toast.makeText(mActivity, "未安装QQ", Toast.LENGTH_SHORT).show();
                         return;
                     }
-                    authorization(SHARE_MEDIA.QQ);
+                   // authorization(SHARE_MEDIA.QQ);
                     break;
                 case "fill_invitation_code"://填邀请码
                     BridgeWebViewActivity.intentMe(getActivity(), RetrofitManager.WEB_URL_ONLINE + Constant.WEB_ONLINE_SET_INVATE_CODE);
@@ -786,7 +778,7 @@ public class TaskDetailFragment extends BaseFragment<TaskDetailPresenterImpl, Fr
                     //BridgeWebViewActivity.intentMe(getActivity(), RetrofitManager.WEB_URL_ONLINE + Constant.WEB_ONLINE_INVITE_FRIEND);
                     startActivity(new Intent(mActivity, InviteFriendActivity.class));
 
-                    MobclickAgent.onEvent(MyApplication.getContext(), EventID.MISSION_INVITEFRIEND);
+                  //  MobclickAgent.onEvent(MyApplication.getContext(), EventID.MISSION_INVITEFRIEND);
                     break;
                 case "questionnaire_investigation"://问卷调查
                     BridgeWebViewActivity.intentMe(getActivity(), RetrofitManager.WEB_URL_ONLINE + Constant.WEB_ONLINE_QUESTIONAIRE);
@@ -812,16 +804,16 @@ public class TaskDetailFragment extends BaseFragment<TaskDetailPresenterImpl, Fr
                 case "sharing_article"://分享文章
                     jumpTab(null, 1, 0, null);
                     ToastUtils.getInstance().show(mActivity, "分享文章给新用户浏览，即可赚取奖励");
-                    MobclickAgent.onEvent(MyApplication.getContext(), EventID.MISSION_EVERYDAYMISSION_SHARE_ARTICLE_CLICK);
+                   // MobclickAgent.onEvent(MyApplication.getContext(), EventID.MISSION_EVERYDAYMISSION_SHARE_ARTICLE_CLICK);
                     break;
                 case "exposure_to_income"://晒收入
                     BridgeWebViewActivity.intentMe(getActivity(), RetrofitManager.WEB_URL_ONLINE + Constant.WEB_ONLINE_MY_WALLET);
-                    MobclickAgent.onEvent(MyApplication.getContext(), EventID.MISSION_EVERYDAYMISSION_SHARE_INCOME_CLICK);
+                   // MobclickAgent.onEvent(MyApplication.getContext(), EventID.MISSION_EVERYDAYMISSION_SHARE_INCOME_CLICK);
                     break;
                 case "walk_make_coin"://走路赚钱
                     BridgeWebViewActivity.intentMe(getActivity(), RetrofitManager.WEB_URL_ONLINE + Constant.WEB_ONLINE_WALK_MONEY);
 
-                    MobclickAgent.onEvent(MyApplication.getContext(), EventID.SPORT_ENTRANCE_BUTTON);
+                   // MobclickAgent.onEvent(MyApplication.getContext(), EventID.SPORT_ENTRANCE_BUTTON);
                     break;
                 case "view_ad_movie"://完成视频任务赚金币
                     PlayRewardVideoAdActicity.intentMe(mActivity, PlayRewardVideoAdActicity.WATCHAD);
@@ -836,10 +828,10 @@ public class TaskDetailFragment extends BaseFragment<TaskDetailPresenterImpl, Fr
                     UserInfoActivity.intentMe(LoginEntity.getInvitation(), 0, mActivity, 1);
                     break;
                 case "download_app_task": //下载试玩领金币
-                    AdManager.getInstance(mActivity).openCommonTaskList(mActivity);
+                 //   AdManager.getInstance(mActivity).openCommonTaskList(mActivity);
                     break;
                 case "wx_applet_task": //小程序任务
-                    AdManager.getInstance(mActivity).openWeChatTaskSetList(mActivity);
+                   // AdManager.getInstance(mActivity).openWeChatTaskSetList(mActivity);
                     break;
             }
         } else {
@@ -876,7 +868,7 @@ public class TaskDetailFragment extends BaseFragment<TaskDetailPresenterImpl, Fr
             msg.obj = query;
 
             BusProvider.getInstance().post(msg);
-            startActivity(new Intent(mActivity, MainActivity.class));
+            startActivity(new Intent(mActivity, JunjinBaoMainActivity.class));
         } else {
             if (self == 1) {
                 //刷新页面
@@ -898,159 +890,159 @@ public class TaskDetailFragment extends BaseFragment<TaskDetailPresenterImpl, Fr
         }
     }
 
-    public void authorization(SHARE_MEDIA share_media) {
-        UMShareAPI.get(mActivity).getPlatformInfo(mActivity, share_media, umAuthListener);
-    }
+//    public void authorization(SHARE_MEDIA share_media) {
+//        UMShareAPI.get(mActivity).getPlatformInfo(mActivity, share_media, umAuthListener);
+//    }
 
     /**
      * 授权监听
      */
-    private UMAuthListener umAuthListener = new UMAuthListener() {
-        @Override
-        public void onStart(SHARE_MEDIA platform) {
-            //授权开始的回调
-            Log.e("TAG", "onStart =============》》》》》》》" + "授权开始的回调");
-        }
-
-        @Override
-        public void onComplete(SHARE_MEDIA share_media, int action, Map<String, String> map) {
-
-            Log.e("TAG", "onComplete =============》》》》》》》" + "授权完成");
-            //sdk是6.4.4的,但是获取值的时候用的是6.2以前的(access_token)才能获取到值,未知原因
-            String uid = map.get("uid");
-            String openid = map.get("openid");//微博没有
-            String unionid = map.get("unionid");//微博没有
-            String access_token = map.get("access_token");
-            String refresh_token = map.get("refresh_token");//微信,qq,微博都没有获取到
-            String expires_in = map.get("expires_in");
-            String name = map.get("name");
-            String gender = map.get("gender");
-            String iconurl = map.get("iconurl");
-            Log.e("TAG", "onComplete: 打印第三方获取的参数=======>>>>>" + "name=" + name
-                    + "uid=" + uid
-                    + "openid=" + openid
-                    + "unionid =" + unionid
-                    + "access_token =" + access_token
-                    + "refresh_token=" + refresh_token
-                    + "expires_in=" + expires_in
-                    + "gender=" + gender
-                    + "iconurl=" + iconurl);
-
-
-            //绑定第三方接口
-            Map<String, String> paramMap = new HashMap<>();
-            paramMap.put("access_token", access_token);
-            paramMap.put("openid", openid);
-            if (share_media.equals(SHARE_MEDIA.WEIXIN)) {
-                paramMap.put("platform", "wechat");
-
-                rx.Observable<BindThirdEntity> observable = RetrofitManager.getInstance(mActivity).create(ApiService.class).bindWX(paramMap).map((new HttpResultFunc<BindThirdEntity>()));
-                Subscription rxSubscription = new ProgressSubscriber<>(new SubscriberOnResponseListenter<BindThirdEntity>() {
-                    @Override
-                    public void next(BindThirdEntity testBean) {
-                        //关联成功
-                        if (testBean.getCode() == 0) {
-                            showReward(Utils.FormatGold(testBean.getData().getCoin()), "奖励到账", "认证微信成功");
-                        } else {
-                            AlertDialog.Builder builder = new AlertDialog.Builder(mActivity);
-                            builder.setTitle(testBean.getMsg());
-                            //点击对话框以外的区域是否让对话框消失
-                            builder.setCancelable(true);
-                            //设置正面按钮
-                            builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    dialog.dismiss();
-                                }
-                            });
-                            builder.show();
-                        }
-                    }
-
-                    @Override
-                    public void error(String target, Throwable e, String errResponse) {
-                        Log.e("zy", "bindThird error=====++++e=" + e.toString());
-                    }
-                }, mActivity, false);
-                RetrofitManager.getInstance(mActivity).toSubscribe(observable, (Subscriber) rxSubscription);
-
-            } else if (share_media.equals(SHARE_MEDIA.QQ)) {
-                paramMap.put("platform", "qq");
-
-                rx.Observable<BindThirdEntity> observable = RetrofitManager.getInstance(mActivity).create(ApiService.class).bindThird(paramMap).map((new HttpResultFunc<BindThirdEntity>()));
-                Subscription rxSubscription = new ProgressSubscriber<>(new SubscriberOnResponseListenter<BindThirdEntity>() {
-                    @Override
-                    public void next(BindThirdEntity testBean) {
-                        //关联成功
-                        if (testBean.getCode() == 0) {
-
-                            if (!TextUtils.isEmpty(testBean.getData().getUser_token())) {
-                                LoginEntity loginEntity = Paper.book().read(PagerCons.USER_DATA);
-                                loginEntity.getData().setUser_token(testBean.getData().getUser_token());
-                                Paper.book().write(PagerCons.USER_DATA, loginEntity);
-                            }
-                            showReward(Utils.FormatGold(testBean.getData().getCoin()), "奖励到账", "关联QQ成功");
-                        } else {
-                            AlertDialog.Builder builder = new AlertDialog.Builder(mActivity);
-                            builder.setTitle(testBean.getMsg());
-                            //点击对话框以外的区域是否让对话框消失
-                            builder.setCancelable(true);
-                            //设置正面按钮
-                            builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    dialog.dismiss();
-                                }
-                            });
-                            builder.show();
-                        }
-                    }
-
-                    @Override
-                    public void error(String target, Throwable e, String errResponse) {
-                        Log.e("zy", "bindThird error=====++++e=" + e.toString());
-                    }
-                }, mActivity, false);
-                RetrofitManager.getInstance(mActivity).toSubscribe(observable, (Subscriber) rxSubscription);
-            } else {
-                return;
-            }
-
-
-            //直接取消授权
-            UMShareAPI.get(mActivity).deleteOauth(mActivity, share_media, new UMAuthListener() {
-                @Override
-                public void onStart(SHARE_MEDIA share_media) {
-
-                }
-
-                @Override
-                public void onComplete(SHARE_MEDIA share_media, int i, Map<String, String> map) {
-
-                }
-
-                @Override
-                public void onError(SHARE_MEDIA share_media, int i, Throwable throwable) {
-
-                }
-
-                @Override
-                public void onCancel(SHARE_MEDIA share_media, int i) {
-
-                }
-            });
-        }
-
-        @Override
-        public void onError(SHARE_MEDIA platform, int action, Throwable t) {
-            Log.e("TAG", "onError =============》》》》》》》" + "onError");
-        }
-
-        @Override
-        public void onCancel(SHARE_MEDIA platform, int action) {
-            Log.e("TAG", "onCancel =============》》》》》》》" + "onCancel");
-        }
-    };
+//    private UMAuthListener umAuthListener = new UMAuthListener() {
+//        @Override
+//        public void onStart(SHARE_MEDIA platform) {
+//            //授权开始的回调
+//            Log.e("TAG", "onStart =============》》》》》》》" + "授权开始的回调");
+//        }
+//
+//        @Override
+//        public void onComplete(SHARE_MEDIA share_media, int action, Map<String, String> map) {
+//
+//            Log.e("TAG", "onComplete =============》》》》》》》" + "授权完成");
+//            //sdk是6.4.4的,但是获取值的时候用的是6.2以前的(access_token)才能获取到值,未知原因
+//            String uid = map.get("uid");
+//            String openid = map.get("openid");//微博没有
+//            String unionid = map.get("unionid");//微博没有
+//            String access_token = map.get("access_token");
+//            String refresh_token = map.get("refresh_token");//微信,qq,微博都没有获取到
+//            String expires_in = map.get("expires_in");
+//            String name = map.get("name");
+//            String gender = map.get("gender");
+//            String iconurl = map.get("iconurl");
+//            Log.e("TAG", "onComplete: 打印第三方获取的参数=======>>>>>" + "name=" + name
+//                    + "uid=" + uid
+//                    + "openid=" + openid
+//                    + "unionid =" + unionid
+//                    + "access_token =" + access_token
+//                    + "refresh_token=" + refresh_token
+//                    + "expires_in=" + expires_in
+//                    + "gender=" + gender
+//                    + "iconurl=" + iconurl);
+//
+//
+//            //绑定第三方接口
+//            Map<String, String> paramMap = new HashMap<>();
+//            paramMap.put("access_token", access_token);
+//            paramMap.put("openid", openid);
+//            if (share_media.equals(SHARE_MEDIA.WEIXIN)) {
+//                paramMap.put("platform", "wechat");
+//
+//                rx.Observable<BindThirdEntity> observable = RetrofitManager.getInstance(mActivity).create(ApiService.class).bindWX(paramMap).map((new HttpResultFunc<BindThirdEntity>()));
+//                Subscription rxSubscription = new ProgressSubscriber<>(new SubscriberOnResponseListenter<BindThirdEntity>() {
+//                    @Override
+//                    public void next(BindThirdEntity testBean) {
+//                        //关联成功
+//                        if (testBean.getCode() == 0) {
+//                            showReward(Utils.FormatGold(testBean.getData().getCoin()), "奖励到账", "认证微信成功");
+//                        } else {
+//                            AlertDialog.Builder builder = new AlertDialog.Builder(mActivity);
+//                            builder.setTitle(testBean.getMsg());
+//                            //点击对话框以外的区域是否让对话框消失
+//                            builder.setCancelable(true);
+//                            //设置正面按钮
+//                            builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+//                                @Override
+//                                public void onClick(DialogInterface dialog, int which) {
+//                                    dialog.dismiss();
+//                                }
+//                            });
+//                            builder.show();
+//                        }
+//                    }
+//
+//                    @Override
+//                    public void error(String target, Throwable e, String errResponse) {
+//                        Log.e("zy", "bindThird error=====++++e=" + e.toString());
+//                    }
+//                }, mActivity, false);
+//                RetrofitManager.getInstance(mActivity).toSubscribe(observable, (Subscriber) rxSubscription);
+//
+//            } else if (share_media.equals(SHARE_MEDIA.QQ)) {
+//                paramMap.put("platform", "qq");
+//
+//                rx.Observable<BindThirdEntity> observable = RetrofitManager.getInstance(mActivity).create(ApiService.class).bindThird(paramMap).map((new HttpResultFunc<BindThirdEntity>()));
+//                Subscription rxSubscription = new ProgressSubscriber<>(new SubscriberOnResponseListenter<BindThirdEntity>() {
+//                    @Override
+//                    public void next(BindThirdEntity testBean) {
+//                        //关联成功
+//                        if (testBean.getCode() == 0) {
+//
+//                            if (!TextUtils.isEmpty(testBean.getData().getUser_token())) {
+//                                LoginEntity loginEntity = Paper.book().read(PagerCons.USER_DATA);
+//                                loginEntity.getData().setUser_token(testBean.getData().getUser_token());
+//                                Paper.book().write(PagerCons.USER_DATA, loginEntity);
+//                            }
+//                            showReward(Utils.FormatGold(testBean.getData().getCoin()), "奖励到账", "关联QQ成功");
+//                        } else {
+//                            AlertDialog.Builder builder = new AlertDialog.Builder(mActivity);
+//                            builder.setTitle(testBean.getMsg());
+//                            //点击对话框以外的区域是否让对话框消失
+//                            builder.setCancelable(true);
+//                            //设置正面按钮
+//                            builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+//                                @Override
+//                                public void onClick(DialogInterface dialog, int which) {
+//                                    dialog.dismiss();
+//                                }
+//                            });
+//                            builder.show();
+//                        }
+//                    }
+//
+//                    @Override
+//                    public void error(String target, Throwable e, String errResponse) {
+//                        Log.e("zy", "bindThird error=====++++e=" + e.toString());
+//                    }
+//                }, mActivity, false);
+//                RetrofitManager.getInstance(mActivity).toSubscribe(observable, (Subscriber) rxSubscription);
+//            } else {
+//                return;
+//            }
+//
+//
+//            //直接取消授权
+//            UMShareAPI.get(mActivity).deleteOauth(mActivity, share_media, new UMAuthListener() {
+//                @Override
+//                public void onStart(SHARE_MEDIA share_media) {
+//
+//                }
+//
+//                @Override
+//                public void onComplete(SHARE_MEDIA share_media, int i, Map<String, String> map) {
+//
+//                }
+//
+//                @Override
+//                public void onError(SHARE_MEDIA share_media, int i, Throwable throwable) {
+//
+//                }
+//
+//                @Override
+//                public void onCancel(SHARE_MEDIA share_media, int i) {
+//
+//                }
+//            });
+//        }
+//
+//        @Override
+//        public void onError(SHARE_MEDIA platform, int action, Throwable t) {
+//            Log.e("TAG", "onError =============》》》》》》》" + "onError");
+//        }
+//
+//        @Override
+//        public void onCancel(SHARE_MEDIA platform, int action) {
+//            Log.e("TAG", "onCancel =============》》》》》》》" + "onCancel");
+//        }
+//    };
 
     //显示奖励框
     public void showReward(String gold, String title, String detail) {

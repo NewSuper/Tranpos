@@ -15,6 +15,14 @@ public class JJBApplication extends Application {
     private static Context context;
     private static JJBApplication instance;
     public static JunjinBaoMainActivity mainActivity;
+    public static String WebViewTag = "";
+
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+
+    }
+
     @Override
     public void onCreate() {
         super.onCreate();

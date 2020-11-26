@@ -16,18 +16,14 @@ import android.widget.GridLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.ViewDownloadlistPopupBinding;
-import com.juejinchain.android.databinding.ViewSelecttvplaylistPopupBinding;
-import com.juejinchain.android.module.movie.adapter.EasyAdapter;
-import com.juejinchain.android.module.movie.bean.DownloadSniff;
-import com.juejinchain.android.module.movie.bean.SelectSniff;
-import com.juejinchain.android.module.movie.bean.Sniff;
-import com.juejinchain.android.module.movie.entity.MovieInfoEntity;
-import com.juejinchain.android.module.movie.entity.MovieThirdIframeEntity;
-import com.juejinchain.android.module.movie.utils.StartSniffingListener;
-import com.juejinchain.android.module.movie.utils.Utils;
-import com.juejinchain.android.utils.MyToast;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.ViewSelecttvplaylistPopupBinding;
+import com.newsuper.t.juejinbao.ui.movie.adapter.EasyAdapter;
+import com.newsuper.t.juejinbao.ui.movie.bean.SelectSniff;
+import com.newsuper.t.juejinbao.ui.movie.entity.MovieThirdIframeEntity;
+import com.newsuper.t.juejinbao.ui.movie.utils.StartSniffingListener;
+import com.newsuper.t.juejinbao.ui.movie.utils.Utils;
+import com.newsuper.t.juejinbao.utils.MyToast;
 
 import java.util.List;
 

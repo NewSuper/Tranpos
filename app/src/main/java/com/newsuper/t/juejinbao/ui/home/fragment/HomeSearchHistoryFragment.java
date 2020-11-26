@@ -26,6 +26,7 @@ import com.newsuper.t.juejinbao.ui.home.entity.HomeSearchDetailNotifyEntity;
 import com.newsuper.t.juejinbao.ui.home.entity.TodayHotEntity;
 import com.newsuper.t.juejinbao.ui.home.presenter.HomeSearchHistoryImpl;
 import com.newsuper.t.juejinbao.ui.movie.adapter.EasyAdapter2;
+import com.newsuper.t.juejinbao.utils.MyToast;
 
 import org.greenrobot.eventbus.EventBus;
 

@@ -11,20 +11,19 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.alibaba.fastjson.JSON;
-import com.juejinchain.android.R;
-import com.juejinchain.android.databinding.FragmentMovietabandlistpageBinding;
-import com.juejinchain.android.module.movie.adapter.MovieNewTabAndListAdapter;
-import com.juejinchain.android.module.movie.adapter.MovieNewTabListAdapter;
-import com.juejinchain.android.module.movie.entity.V2PlayListEntity;
-import com.juejinchain.android.module.movie.presenter.impl.MovieTabAndListPageImpl;
-import com.ys.network.base.BaseFragment;
+import com.newsuper.t.R;
+import com.newsuper.t.databinding.FragmentMovietabandlistpageBinding;
+import com.newsuper.t.juejinbao.base.BaseFragment;
+import com.newsuper.t.juejinbao.ui.movie.adapter.MovieNewTabAndListAdapter;
+import com.newsuper.t.juejinbao.ui.movie.entity.V2PlayListEntity;
+import com.newsuper.t.juejinbao.ui.movie.presenter.impl.MovieTabAndListPageImpl;
 
 import java.util.List;
 
 /**
  * 电视剧播出时间表子界面
  */
-public class MovieTabAndListPageFragment extends BaseFragment<MovieTabAndListPageImpl , FragmentMovietabandlistpageBinding> implements MovieTabAndListPageImpl.MvpView {
+public class MovieTabAndListPageFragment extends BaseFragment<MovieTabAndListPageImpl, FragmentMovietabandlistpageBinding> implements MovieTabAndListPageImpl.MvpView {
 
 
     private List<V2PlayListEntity.DataBean.TvsBean> beans;
