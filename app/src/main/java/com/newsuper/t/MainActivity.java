@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
+import com.newsuper.t.consumer.ConsumerActivity;
 import com.newsuper.t.juejinbao.ui.JueJinBaoLaunchActivity;
 import com.newsuper.t.juejinbao.utils.BaseExpandableRecyclerViewAdapter;
 
@@ -27,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_enter);
 
         mRvList = (RecyclerView) findViewById(R.id.rvList);
         List<GroupBean> groupBeans = initGroupData();
@@ -107,6 +108,7 @@ public class MainActivity extends AppCompatActivity {
 
         List<ChildBean> videoConnectChildList = new ArrayList<>();
         videoConnectChildList.add(new ChildBean("掘金宝", R.drawable.room_multi, 0, JueJinBaoLaunchActivity.class));
+        videoConnectChildList.add(new ChildBean("消费者", R.drawable.room_multi, 0, ConsumerActivity.class));
         if (videoConnectChildList.size() != 0) {
             GroupBean videoConnectGroupBean = new GroupBean("主入口", R.drawable.room_multi, videoConnectChildList);
             groupList.add(videoConnectGroupBean);

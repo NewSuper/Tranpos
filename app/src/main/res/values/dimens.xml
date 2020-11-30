@@ -1,4 +1,30 @@
 <resources>
+    <dimen name="toolbar_height">45dp</dimen>
+    <dimen name="side_width">13dp</dimen>
+    <dimen name="tab_text_18">16sp</dimen>
+    <dimen name="star_padding">2dp</dimen>
+
+    <!--时间控件的相关参数-->
+    <!-- 顶部按钮栏高度 -->
+    <dimen name="pickerview_topbar_height">44dp</dimen>
+
+    <!-- 顶部按钮padding -->
+    <dimen name="pickerview_topbar_padding">20dp</dimen>
+
+    <!-- 顶部按钮文字大小 -->
+    <dimen name="pickerview_topbar_btn_textsize">17sp</dimen>
+    <dimen name="pickerview_topbar_title_textsize">18sp</dimen>
+    <!-- 选项文字大小 -->
+    <dimen name="pickerview_textsize">20sp</dimen>
+    <dimen name="corner_radius">6dp</dimen>
+
+    <dimen name="three_len">83dp</dimen>
+    <dimen name="four_len">6dp</dimen>
+    <dimen name="five_len">6dp</dimen>
+
+    <!-- consumerend -->
+
+
     <dimen name="dialog_radius">15dp</dimen>
     <dimen name="topBar_height">@dimen/ws48dp</dimen>
 
@@ -6,7 +32,7 @@
     <dimen name="app_text2">@dimen/ws14dp</dimen>
     <dimen name="app_text3">@dimen/ws12dp</dimen>
 
-    <!-- Default screen margins, per the Android Design guidelines. -->
+
     <dimen name="alerter_activity_horizontal_margin">18dp</dimen>
     <dimen name="alerter_activity_vertical_margin">16dp</dimen>
 

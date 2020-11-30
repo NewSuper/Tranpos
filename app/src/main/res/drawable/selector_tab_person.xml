@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_checked="true" android:drawable="@mipmap/tab_person_press_2" />
+    <item android:state_checked="false" android:drawable="@mipmap/tab_person_normal_2" />
+</selector>

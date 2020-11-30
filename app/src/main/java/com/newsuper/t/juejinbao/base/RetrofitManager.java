@@ -46,17 +46,17 @@ public class RetrofitManager {
     private final Retrofit mRetrofit;
     public static String token = "";
 
-    //设置请求超时s
-    public static final int REQUEST_TIME_OUT = 25;
-    //设备类型Android=7，iOS=6
-    public static final int DEVICE_TYPE = 7;
-
-    //请求参数key start
-    public static final String PK_UserToken = "user_token";
-    //第几页key
-    public static final String PK_Page = "page";
-    //每页条数key
-    public static final String PK_PerPage = "per_page";
+//    //设置请求超时s
+//    public static final int REQUEST_TIME_OUT = 25;
+//    //设备类型Android=7，iOS=6
+//    public static final int DEVICE_TYPE = 7;
+//
+//    //请求参数key start
+//    public static final String PK_UserToken = "user_token";
+//    //第几页key
+//    public static final String PK_Page = "page";
+//    //每页条数key
+//    public static final String PK_PerPage = "per_page";
 
 
     private Object api; //创建服务类

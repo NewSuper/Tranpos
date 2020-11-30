@@ -2,18 +2,98 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.newsuper.t">
+
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 安卓8.0安装权限 -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <!-- bugly使用权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- 往sdcard中写入数据的权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 在sdcard中创建/删除文件的权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- Android6.0 蓝牙扫描才需要 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!--  -->
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- 手机震动权限 -->
+    <!-- 拨打电话权限 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- 友盟统计所用到的权限 -->
+    <!-- 高德地图定位导航所用权限 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!-- 百度语音 -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <!-- 百度语音结束 -->
+    <!-- bugly权限 -->
+    <!-- ugly权限结束 -->
+    <!-- 阿里移动推送相关权限 -->
+    <!-- Android 6.0版本可去除，用于选举信息（通道复用）的同步 -->
+    <!-- 进行网络访问和网络状态监控相关的权限声明 -->
+    <!-- 允许对sd卡进行读写操作 -->
+    <!-- 网络库使用，当网络操作时需要确保事务完成不被杀掉 -->
+    <!-- 用于读取手机硬件信息等，用于机型过滤 -->
+    <!-- 选举使用，当应用有删除或者更新时需要重新选举，复用推送通道 -->
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <!-- 补偿通道小米PUSH使用，不用可去除 -->
+    <!-- 补偿通道GCM使用，不使用可去除 -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- 允许监听启动完成事件 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- 允许访问震动器 -->
+    <!-- 允许task重排序 -->
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <!-- 个推自定义 -->
+    <uses-permission android:name="getui.permission.GetuiService.${applicationId}" />
+    <!-- 硬件加速对X5视频播放非常重要，建议开启 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- 魅族推送相关 -->
     <!-- 兼容 Flyme5 以下版本，魅族内部接入 PushSDK 必填，不然无法收到消息 -->
     <uses-permission android:name="com.meizu.flyme.push.permission.RECEIVE" />
-    <permission
-        android:name="com.juejinchain.android.push.permission.MESSAGE"
-        android:protectionLevel="signature" />
-    <uses-permission android:name="com.juejinchain.android.push.permission.MESSAGE" /> <!-- 兼容 Flyme3 配置权限 -->
-    <uses-permission android:name="com.meizu.c2dm.permission.RECEIVE" />
-    <permission
-        android:name="com.juejinchain.androidpermission.C2D_MESSAGE"
-        android:protectionLevel="signature" />
-    <uses-permission android:name="com.juejinchain.android.permission.C2D_MESSAGE" /> <!-- 魅族推送相关 -->
+<!--    <permission-->
+<!--        android:name="com.juejinchain.android.push.permission.MESSAGE"-->
+<!--        android:protectionLevel="signature" />-->
+<!--    <uses-permission android:name="com.juejinchain.android.push.permission.MESSAGE" /> &lt;!&ndash; 兼容 Flyme3 配置权限 &ndash;&gt;-->
+<!--    <uses-permission android:name="com.meizu.c2dm.permission.RECEIVE" />-->
+<!--    <permission-->
+<!--        android:name="com.juejinchain.androidpermission.C2D_MESSAGE"-->
+<!--        android:protectionLevel="signature" />-->
+<!--    <uses-permission android:name="com.juejinchain.android.permission.C2D_MESSAGE" /> &lt;!&ndash; 魅族推送相关 &ndash;&gt;-->
     <!-- 个推SDK权限 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
@@ -43,16 +123,16 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 硬件加速对X5视频播放非常重要，建议开启 -->
     <uses-permission android:name="android.permission.GET_TASKS" />
     <permission android:name="android.permission.READ_LOGS" /> <!-- 小米推送相关 -->
-    <permission
-        android:name="com.juejinchain.android.permission.MIPUSH_RECEIVE"
-        android:protectionLevel="signature" /> <!-- 这里com.xiaomi.mipushdemo改成app的包名 -->
-    <uses-permission android:name="com.juejinchain.android.permission.MIPUSH_RECEIVE" /> <!-- 这里com.xiaomi.mipushdemo改成app的包名 -->
-    <!-- 华为推送 -->
-    <!-- 接收PUSH TOKEN的广播以及PUSH消息需要定义该权限 ${PACKAGE_NAME} 要替换上您应用的包名 -->
-    <permission
-        android:name="com.juejinchain.android.permission.PROCESS_PUSH_MSG"
-        android:protectionLevel="signatureOrSystem" /> <!-- 接收PUSH TOKEN的广播以及PUSH消息需要定义该权限 ${PACKAGE_NAME} 要替换上您应用的包名 -->
-    <uses-permission android:name="com.juejinchain.android.permission.PROCESS_PUSH_MSG" /> <!-- 钱盟盟sdk权限 -->
+<!--    <permission-->
+<!--        android:name="com.juejinchain.android.permission.MIPUSH_RECEIVE"-->
+<!--        android:protectionLevel="signature" /> &lt;!&ndash; 这里com.xiaomi.mipushdemo改成app的包名 &ndash;&gt;-->
+<!--    <uses-permission android:name="com.juejinchain.android.permission.MIPUSH_RECEIVE" /> &lt;!&ndash; 这里com.xiaomi.mipushdemo改成app的包名 &ndash;&gt;-->
+<!--    &lt;!&ndash; 华为推送 &ndash;&gt;-->
+<!--    &lt;!&ndash; 接收PUSH TOKEN的广播以及PUSH消息需要定义该权限 ${PACKAGE_NAME} 要替换上您应用的包名 &ndash;&gt;-->
+<!--    <permission-->
+<!--        android:name="com.juejinchain.android.permission.PROCESS_PUSH_MSG"-->
+<!--        android:protectionLevel="signatureOrSystem" /> &lt;!&ndash; 接收PUSH TOKEN的广播以及PUSH消息需要定义该权限 ${PACKAGE_NAME} 要替换上您应用的包名 &ndash;&gt;-->
+<!--    <uses-permission android:name="com.juejinchain.android.permission.PROCESS_PUSH_MSG" /> &lt;!&ndash; 钱盟盟sdk权限 &ndash;&gt;-->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.READ_CALL_LOG" />
@@ -66,10 +146,10 @@
 
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.autofocus" /> <!-- 极光推送权限 -->
-    <permission
-        android:name="com.juejinchain.android.permission.JPUSH_MESSAGE"
-        android:protectionLevel="signature" /> <!-- Required -->
-    <uses-permission android:name="com.juejinchain.android.permission.JPUSH_MESSAGE" />
+<!--    <permission-->
+<!--        android:name="com.juejinchain.android.permission.JPUSH_MESSAGE"-->
+<!--        android:protectionLevel="signature" /> &lt;!&ndash; Required &ndash;&gt;-->
+<!--    <uses-permission android:name="com.juejinchain.android.permission.JPUSH_MESSAGE" />-->
     <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -96,7 +176,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:networkSecurityConfig="@xml/network_security_config">
         <meta-data
             android:name="design_width_in_dp"
             android:value="512" />
@@ -128,8 +209,41 @@
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:launchMode="singleTask"
             android:theme="@style/AppTheme.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.VIEW" />-->
+
+<!--                <category android:name="android.intent.category.DEFAULT" />-->
+<!--                <category android:name="android.intent.category.BROWSABLE" />-->
+
+<!--                <data android:scheme="qhw53c" />-->
+<!--            </intent-filter>-->
         </activity>
+
+        <activity android:name=".juejinbao.ui.JunjinBaoMainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|keyboard|navigation|mcc|mnc|fontScale"
+            android:hardwareAccelerated="true"
+            android:largeHeap="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+<!--                <data-->
+<!--                    android:host="com.juejinchain.android"-->
+<!--                    android:path="/huaweipushnotification"-->
+<!--                    android:scheme="huaweipush" />-->
+            </intent-filter>
+        </activity>
+
         <activity
             android:name=".juejinbao.ui.ad.YoudaoPlayRewardVideoActivity"
             android:configChanges="keyboardHidden|orientation"
@@ -238,7 +352,6 @@
             android:name=".juejinbao.ui.login.activity.SetAndChangePswActivity"
             android:launchMode="singleTask"
             android:theme="@style/AppTheme.Transparent" />
-        <activity android:name=".juejinbao.ui.JunjinBaoMainActivity" />
 
         <activity android:name=".juejinbao.ui.ad.BaoquGameActivity" />
         <activity
@@ -334,7 +447,33 @@
         <activity android:name=".juejinbao.ui.song.Activity.NewSongLookActivity" />
         <activity android:name=".juejinbao.ui.song.Activity.MusicCollectionActivity" />
         <activity android:name=".juejinbao.ui.my.activity.SelectPictureActivity" />
-
+        <activity
+            android:name=".juejinbao.ui.movie.activity.MovieNewTabRankActivity"
+            android:theme="@style/AppTheme.Transparent" />
+        <activity
+            android:name="com.qq.e.ads.ADActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="com.qq.e.ads.PortraitADActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.qq.e.ads.LandscapeADActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="landscape" /> <!-- 腾讯广点通 end -->
+        <service
+            android:name="com.qq.e.comm.DownloadService"
+            android:exported="false" />
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.newsuper.t.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
 
         <!--       <activity android:name=".juejinbao.ui.JunjinBaoMainActivity"-->
         <!--           android:configChanges="orientation|keyboardHidden|screenSize|keyboard|navigation|mcc|mnc|fontScale"-->
@@ -386,20 +525,7 @@
         <!--            android:exported="false" /> -->
         <!-- 穿山甲provider配置 end -->
         <!-- 腾讯广点通 -->
-        <activity
-            android:name="com.qq.e.ads.ADActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
-        <activity
-            android:name="com.qq.e.ads.PortraitADActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.qq.e.ads.LandscapeADActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            android:screenOrientation="landscape" /> <!-- 腾讯广点通 end -->
-        <service
-            android:name="com.qq.e.comm.DownloadService"
-            android:exported="false" />
+
 
 
         <!--        <activity-->
@@ -453,17 +579,7 @@
         <!--            </intent-filter>-->
         <!--        </activity>-->
 
-
-        <provider
-            android:name="android.support.v4.content.FileProvider"
-            android:authorities="com.juejinchain.android.FileProvider"
-            android:exported="false"
-            android:grantUriPermissions="true"
-            tools:replace="android:authorities">
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths" />
-        </provider> <!-- 小米推送相关service -->
+        <!-- 小米推送相关service -->
 <!--        <service-->
 <!--            android:name="com.xiaomi.push.service.XMPushService"-->
 <!--            android:enabled="true"-->
@@ -539,12 +655,12 @@
        Access HMSSDK need to register AppID parameters. Value "100513437" is replaced with the actual application APPID, derived from the Developer affiliate website application.
        Format android:value= "appid=xxxxxx"
         -->
-        <meta-data
-            android:name="com.huawei.hms.client.appid"
-            android:value="appid=100513437" />
-        <meta-data
-            android:name="UMENG_CHANNEL"
-            android:value="${UMENG_CHANNEL_VALUE}" />
+<!--        <meta-data-->
+<!--            android:name="com.huawei.hms.client.appid"-->
+<!--            android:value="appid=100513437" />-->
+<!--        <meta-data-->
+<!--            android:name="UMENG_CHANNEL"-->
+<!--            android:value="${UMENG_CHANNEL_VALUE}" />-->
         <!--
  接入HMSSDK 需要注册的provider，authorities 一定不能与其他应用一样，所以这边 com.juejinchain.android 要替换上您应用的包名
             Access HMSSDK need to register provider,authorities must not be the same as other applications, so this side ${package_name} to replace the package name you applied
@@ -617,9 +733,6 @@
 <!--                android:name="hwc-theme"-->
 <!--                android:value="androidhwext:style/Theme.Emui.Translucent" />-->
 <!--        </activity>-->
-        <activity
-            android:name=".juejinbao.ui.movie.activity.MovieNewTabRankActivity"
-            android:theme="@style/AppTheme.Transparent" />
         <!--
  接入HMSSDK PUSH模块需要注册，第三方相关 :接收Push消息（注册、透传消息、通知栏点击事件）广播，
                 此receiver类需要开发者自己创建并继承com.huawei.hms.support.api.push.PushReceiver类，

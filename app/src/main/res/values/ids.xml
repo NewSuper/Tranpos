@@ -2,6 +2,11 @@
 <resources>
     <item name="expandable_text" type="id" />
     <item name="expand_collapse" type="id" />
-
     <item name="base_popup_content_root" type="id"/>
+    <!--juejinbaoend-->
+
+    <item type="id" name="Comment_List_Position"/>
+    <item type="id" name="tag_from"/>
+    <item type="id" name="tag_address"/>
+    <item type="id" name="tag_address_detail"/>
 </resources>

@@ -4,6 +4,55 @@
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
 
+
+    <color name="tran_white">#c0ffffff</color>
+    <color name="white_f5">#f5f5f5</color>
+    <color name="theme_red">#FB797B</color>
+    <color name="tv_cart_pay">#D6D6D6</color>
+    <color name="order_list">#DF5457</color>
+    <color name="text_color_82">#828282</color>
+    <color name="text_color_57">#575757</color>
+    <color name="text_color_58">#585858</color>
+    <color name="text_color_67">#676767</color>
+    <color name="text_color_66">#666666</color>
+    <color name="text_color_37">#373737</color>
+    <color name="text_color_88">#888888</color>
+    <color name="text_color_99">#999999</color>
+    <color name="text_color_33">#333333</color>
+    <color name="text_color_c5">#c5c5c5</color>
+    <color name="bg_gray">#EAEAEA</color>
+    <color name="sliding_select">#000000</color>
+    <color name="sliding_normal">#888888</color>
+    <color name="transparent_half">#80000000</color>
+    <color name="side_bar">#f87a7c</color>
+    <color name="divider_color_eb">#EBEBEB</color>
+    <color name="bg_eb">#EBEBEB</color>
+    <color name="bg_F5">#f5f5f5</color>
+    <color name="vv_line">#D0D0D0</color>
+    <color name="tab_normal">#BCBBBB</color>
+    <color name="tab_select">#E15355</color>
+    <color name="cart_red">#df5458</color>
+    <color name="text_red_f8">#f87a7c</color>
+    <color name="label_yellow">#FFCC00</color>
+    <color name="label_green">#50BC60</color>
+    <color name="fb_yellow">#ffb015</color>
+    <color name="tv_price_red">#FE7A7A</color>
+    <color name="map_stroke_Color">#436EEE</color>
+    <color name="map_fill_Color">#1AF5F5F5</color>
+    <color name="cart_price">#FB5B5D</color>
+    <!--选择时间控件相关-->
+    <color name="pickerview_timebtn_nor">#FB797B</color>
+    <color name="pickerview_timebtn_pre">#FB797B</color>
+    <color name="pickerview_bg_topbar">#f5f5f5</color>
+    <color name="pickerview_topbar_title">#000000</color>
+    <color name="pickerview_wheelview_textcolor_out">#a8a8a8</color>
+    <color name="pickerview_wheelview_textcolor_center">#2a2a2a</color>
+    <color name="pickerview_wheelview_textcolor_divider">#d5d5d5</color>
+    <color name="pickerview_bgColor_overlay">#60000000</color>
+    <color name="pickerview_bgColor_default">#FFFFFFFF</color>
+
+
+
     <!--MainActivity item被选中的颜色-->
     <color name="main_item_selected_color">#FF173370</color>
     <color name="main_item_unselected_color">#ff0D2C5B</color>
