@@ -8,7 +8,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.xunjoy.lewaimai.consumer.R;
+
+import com.newsuper.t.R;
 
 import java.util.ArrayList;
 

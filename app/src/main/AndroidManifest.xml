@@ -69,31 +69,18 @@
     <!-- 硬件加速对X5视频播放非常重要，建议开启 -->
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     <!-- 魅族推送相关 -->
     <!-- 兼容 Flyme5 以下版本，魅族内部接入 PushSDK 必填，不然无法收到消息 -->
     <uses-permission android:name="com.meizu.flyme.push.permission.RECEIVE" />
-<!--    <permission-->
-<!--        android:name="com.juejinchain.android.push.permission.MESSAGE"-->
-<!--        android:protectionLevel="signature" />-->
-<!--    <uses-permission android:name="com.juejinchain.android.push.permission.MESSAGE" /> &lt;!&ndash; 兼容 Flyme3 配置权限 &ndash;&gt;-->
-<!--    <uses-permission android:name="com.meizu.c2dm.permission.RECEIVE" />-->
-<!--    <permission-->
-<!--        android:name="com.juejinchain.androidpermission.C2D_MESSAGE"-->
-<!--        android:protectionLevel="signature" />-->
-<!--    <uses-permission android:name="com.juejinchain.android.permission.C2D_MESSAGE" /> &lt;!&ndash; 魅族推送相关 &ndash;&gt;-->
+    <!--    <permission-->
+    <!--        android:name="com.juejinchain.android.push.permission.MESSAGE"-->
+    <!--        android:protectionLevel="signature" />-->
+    <!--    <uses-permission android:name="com.juejinchain.android.push.permission.MESSAGE" /> &lt;!&ndash; 兼容 Flyme3 配置权限 &ndash;&gt;-->
+    <!--    <uses-permission android:name="com.meizu.c2dm.permission.RECEIVE" />-->
+    <!--    <permission-->
+    <!--        android:name="com.juejinchain.androidpermission.C2D_MESSAGE"-->
+    <!--        android:protectionLevel="signature" />-->
+    <!--    <uses-permission android:name="com.juejinchain.android.permission.C2D_MESSAGE" /> &lt;!&ndash; 魅族推送相关 &ndash;&gt;-->
     <!-- 个推SDK权限 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
@@ -123,16 +110,16 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 硬件加速对X5视频播放非常重要，建议开启 -->
     <uses-permission android:name="android.permission.GET_TASKS" />
     <permission android:name="android.permission.READ_LOGS" /> <!-- 小米推送相关 -->
-<!--    <permission-->
-<!--        android:name="com.juejinchain.android.permission.MIPUSH_RECEIVE"-->
-<!--        android:protectionLevel="signature" /> &lt;!&ndash; 这里com.xiaomi.mipushdemo改成app的包名 &ndash;&gt;-->
-<!--    <uses-permission android:name="com.juejinchain.android.permission.MIPUSH_RECEIVE" /> &lt;!&ndash; 这里com.xiaomi.mipushdemo改成app的包名 &ndash;&gt;-->
-<!--    &lt;!&ndash; 华为推送 &ndash;&gt;-->
-<!--    &lt;!&ndash; 接收PUSH TOKEN的广播以及PUSH消息需要定义该权限 ${PACKAGE_NAME} 要替换上您应用的包名 &ndash;&gt;-->
-<!--    <permission-->
-<!--        android:name="com.juejinchain.android.permission.PROCESS_PUSH_MSG"-->
-<!--        android:protectionLevel="signatureOrSystem" /> &lt;!&ndash; 接收PUSH TOKEN的广播以及PUSH消息需要定义该权限 ${PACKAGE_NAME} 要替换上您应用的包名 &ndash;&gt;-->
-<!--    <uses-permission android:name="com.juejinchain.android.permission.PROCESS_PUSH_MSG" /> &lt;!&ndash; 钱盟盟sdk权限 &ndash;&gt;-->
+    <!--    <permission-->
+    <!--        android:name="com.juejinchain.android.permission.MIPUSH_RECEIVE"-->
+    <!--        android:protectionLevel="signature" /> &lt;!&ndash; 这里com.xiaomi.mipushdemo改成app的包名 &ndash;&gt;-->
+    <!--    <uses-permission android:name="com.juejinchain.android.permission.MIPUSH_RECEIVE" /> &lt;!&ndash; 这里com.xiaomi.mipushdemo改成app的包名 &ndash;&gt;-->
+    <!--    &lt;!&ndash; 华为推送 &ndash;&gt;-->
+    <!--    &lt;!&ndash; 接收PUSH TOKEN的广播以及PUSH消息需要定义该权限 ${PACKAGE_NAME} 要替换上您应用的包名 &ndash;&gt;-->
+    <!--    <permission-->
+    <!--        android:name="com.juejinchain.android.permission.PROCESS_PUSH_MSG"-->
+    <!--        android:protectionLevel="signatureOrSystem" /> &lt;!&ndash; 接收PUSH TOKEN的广播以及PUSH消息需要定义该权限 ${PACKAGE_NAME} 要替换上您应用的包名 &ndash;&gt;-->
+    <!--    <uses-permission android:name="com.juejinchain.android.permission.PROCESS_PUSH_MSG" /> &lt;!&ndash; 钱盟盟sdk权限 &ndash;&gt;-->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.READ_CALL_LOG" />
@@ -146,16 +133,17 @@
 
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.autofocus" /> <!-- 极光推送权限 -->
-<!--    <permission-->
-<!--        android:name="com.juejinchain.android.permission.JPUSH_MESSAGE"-->
-<!--        android:protectionLevel="signature" /> &lt;!&ndash; Required &ndash;&gt;-->
-<!--    <uses-permission android:name="com.juejinchain.android.permission.JPUSH_MESSAGE" />-->
+    <!--    <permission-->
+    <!--        android:name="com.juejinchain.android.permission.JPUSH_MESSAGE"-->
+    <!--        android:protectionLevel="signature" /> &lt;!&ndash; Required &ndash;&gt;-->
+    <!--    <uses-permission android:name="com.juejinchain.android.permission.JPUSH_MESSAGE" />-->
     <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
         tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- Optional. Required for location feature -->
@@ -168,16 +156,17 @@
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.VIBRATE" />
-
+  <!--android:name=".juejinbao.base.JJBApplication"-->
+  <!--android:name=".consumer.application.BaseApplication"-->
     <application
-        android:name=".juejinbao.base.JJBApplication"
+        android:name=".consumer.application.BaseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:networkSecurityConfig="@xml/network_security_config">
+        android:theme="@style/AppTheme">
         <meta-data
             android:name="design_width_in_dp"
             android:value="512" />
@@ -214,17 +203,18 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.VIEW" />-->
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.VIEW" />-->
 
-<!--                <category android:name="android.intent.category.DEFAULT" />-->
-<!--                <category android:name="android.intent.category.BROWSABLE" />-->
+            <!--                <category android:name="android.intent.category.DEFAULT" />-->
+            <!--                <category android:name="android.intent.category.BROWSABLE" />-->
 
-<!--                <data android:scheme="qhw53c" />-->
-<!--            </intent-filter>-->
+            <!--                <data android:scheme="qhw53c" />-->
+            <!--            </intent-filter>-->
         </activity>
 
-        <activity android:name=".juejinbao.ui.JunjinBaoMainActivity"
+        <activity
+            android:name=".juejinbao.ui.JunjinBaoMainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize|keyboard|navigation|mcc|mnc|fontScale"
             android:hardwareAccelerated="true"
             android:largeHeap="true"
@@ -237,10 +227,10 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
 
-<!--                <data-->
-<!--                    android:host="com.juejinchain.android"-->
-<!--                    android:path="/huaweipushnotification"-->
-<!--                    android:scheme="huaweipush" />-->
+                <!--                <data-->
+                <!--                    android:host="com.juejinchain.android"-->
+                <!--                    android:path="/huaweipushnotification"-->
+                <!--                    android:scheme="huaweipush" />-->
             </intent-filter>
         </activity>
 
@@ -527,7 +517,6 @@
         <!-- 腾讯广点通 -->
 
 
-
         <!--        <activity-->
         <!--            android:name=".wxapi.WXEntryActivity"-->
         <!--            android:configChanges="keyboardHidden|orientation|screenSize"-->
@@ -580,74 +569,74 @@
         <!--        </activity>-->
 
         <!-- 小米推送相关service -->
-<!--        <service-->
-<!--            android:name="com.xiaomi.push.service.XMPushService"-->
-<!--            android:enabled="true"-->
-<!--            android:process=":pushservice" />-->
-<!--        <service-->
-<!--            android:name="com.xiaomi.push.service.XMJobService"-->
-<!--            android:enabled="true"-->
-<!--            android:exported="false"-->
-<!--            android:permission="android.permission.BIND_JOB_SERVICE"-->
-<!--            android:process=":pushservice" /> &lt;!&ndash; 注：此service必须在3.0.1版本以后（包括3.0.1版本）加入 &ndash;&gt;-->
-<!--        <service-->
-<!--            android:name="com.xiaomi.mipush.sdk.PushMessageHandler"-->
-<!--            android:enabled="true"-->
-<!--            android:exported="true" />-->
-<!--        <service-->
-<!--            android:name="com.xiaomi.mipush.sdk.MessageHandleService"-->
-<!--            android:enabled="true" /> &lt;!&ndash; 注：此service必须在2.2.5版本以后（包括2.2.5版本）加入 &ndash;&gt;-->
-<!--        <receiver-->
-<!--            android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver"-->
-<!--            android:exported="true">-->
-<!--            <intent-filter>-->
-<!--                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />-->
+        <!--        <service-->
+        <!--            android:name="com.xiaomi.push.service.XMPushService"-->
+        <!--            android:enabled="true"-->
+        <!--            android:process=":pushservice" />-->
+        <!--        <service-->
+        <!--            android:name="com.xiaomi.push.service.XMJobService"-->
+        <!--            android:enabled="true"-->
+        <!--            android:exported="false"-->
+        <!--            android:permission="android.permission.BIND_JOB_SERVICE"-->
+        <!--            android:process=":pushservice" /> &lt;!&ndash; 注：此service必须在3.0.1版本以后（包括3.0.1版本）加入 &ndash;&gt;-->
+        <!--        <service-->
+        <!--            android:name="com.xiaomi.mipush.sdk.PushMessageHandler"-->
+        <!--            android:enabled="true"-->
+        <!--            android:exported="true" />-->
+        <!--        <service-->
+        <!--            android:name="com.xiaomi.mipush.sdk.MessageHandleService"-->
+        <!--            android:enabled="true" /> &lt;!&ndash; 注：此service必须在2.2.5版本以后（包括2.2.5版本）加入 &ndash;&gt;-->
+        <!--        <receiver-->
+        <!--            android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver"-->
+        <!--            android:exported="true">-->
+        <!--            <intent-filter>-->
+        <!--                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />-->
 
-<!--                <category android:name="android.intent.category.DEFAULT" />-->
-<!--            </intent-filter>-->
-<!--        </receiver>-->
-<!--        <receiver-->
-<!--            android:name="com.xiaomi.push.service.receivers.PingReceiver"-->
-<!--            android:exported="false"-->
-<!--            android:process=":pushservice">-->
-<!--            <intent-filter>-->
-<!--                <action android:name="com.xiaomi.push.PING_TIMER" />-->
-<!--            </intent-filter>-->
-<!--        </receiver>-->
-<!--        <receiver-->
-<!--            android:name=".module_service.MiPushReceiver"-->
-<!--            android:exported="true">-->
+        <!--                <category android:name="android.intent.category.DEFAULT" />-->
+        <!--            </intent-filter>-->
+        <!--        </receiver>-->
+        <!--        <receiver-->
+        <!--            android:name="com.xiaomi.push.service.receivers.PingReceiver"-->
+        <!--            android:exported="false"-->
+        <!--            android:process=":pushservice">-->
+        <!--            <intent-filter>-->
+        <!--                <action android:name="com.xiaomi.push.PING_TIMER" />-->
+        <!--            </intent-filter>-->
+        <!--        </receiver>-->
+        <!--        <receiver-->
+        <!--            android:name=".module_service.MiPushReceiver"-->
+        <!--            android:exported="true">-->
 
-<!--            &lt;!&ndash; 这里com.xiaomi.mipushdemo.DemoMessageRreceiver改成app中定义的完整类名 &ndash;&gt;-->
-<!--            <intent-filter>-->
-<!--                <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE" />-->
-<!--            </intent-filter>-->
-<!--            <intent-filter>-->
-<!--                <action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED" />-->
-<!--            </intent-filter>-->
-<!--            <intent-filter>-->
-<!--                <action android:name="com.xiaomi.mipush.ERROR" />-->
-<!--            </intent-filter>-->
-<!--        </receiver>-->
-<!--        &lt;!&ndash; 小米推送相关service &ndash;&gt;-->
-<!--        &lt;!&ndash; 魅族PUSH相关 &ndash;&gt;-->
-<!--        &lt;!&ndash; push 应用定义消息 receiver 声明 &ndash;&gt;-->
-<!--        <receiver android:name=".module_service.MyPushMeiuMsgReceiver">-->
-<!--            <intent-filter>-->
+        <!--            &lt;!&ndash; 这里com.xiaomi.mipushdemo.DemoMessageRreceiver改成app中定义的完整类名 &ndash;&gt;-->
+        <!--            <intent-filter>-->
+        <!--                <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE" />-->
+        <!--            </intent-filter>-->
+        <!--            <intent-filter>-->
+        <!--                <action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED" />-->
+        <!--            </intent-filter>-->
+        <!--            <intent-filter>-->
+        <!--                <action android:name="com.xiaomi.mipush.ERROR" />-->
+        <!--            </intent-filter>-->
+        <!--        </receiver>-->
+        <!--        &lt;!&ndash; 小米推送相关service &ndash;&gt;-->
+        <!--        &lt;!&ndash; 魅族PUSH相关 &ndash;&gt;-->
+        <!--        &lt;!&ndash; push 应用定义消息 receiver 声明 &ndash;&gt;-->
+        <!--        <receiver android:name=".module_service.MyPushMeiuMsgReceiver">-->
+        <!--            <intent-filter>-->
 
-<!--                &lt;!&ndash; 接收 push 消息 &ndash;&gt;-->
-<!--                <action android:name="com.meizu.flyme.push.intent.MESSAGE" />-->
-<!--                &lt;!&ndash; 接收 register 消息 &ndash;&gt;-->
-<!--                <action android:name="com.meizu.flyme.push.intent.REGISTER.FEEDBACK" />-->
-<!--                &lt;!&ndash; 接收 unregister 消息 &ndash;&gt;-->
-<!--                <action android:name="com.meizu.flyme.push.intent.UNREGISTER.FEEDBACK" />-->
-<!--                &lt;!&ndash; 兼容低版本 Flyme3 推送服务配置 &ndash;&gt;-->
-<!--                <action android:name="com.meizu.c2dm.intent.REGISTRATION" />-->
-<!--                <action android:name="com.meizu.c2dm.intent.RECEIVE" />-->
+        <!--                &lt;!&ndash; 接收 push 消息 &ndash;&gt;-->
+        <!--                <action android:name="com.meizu.flyme.push.intent.MESSAGE" />-->
+        <!--                &lt;!&ndash; 接收 register 消息 &ndash;&gt;-->
+        <!--                <action android:name="com.meizu.flyme.push.intent.REGISTER.FEEDBACK" />-->
+        <!--                &lt;!&ndash; 接收 unregister 消息 &ndash;&gt;-->
+        <!--                <action android:name="com.meizu.flyme.push.intent.UNREGISTER.FEEDBACK" />-->
+        <!--                &lt;!&ndash; 兼容低版本 Flyme3 推送服务配置 &ndash;&gt;-->
+        <!--                <action android:name="com.meizu.c2dm.intent.REGISTRATION" />-->
+        <!--                <action android:name="com.meizu.c2dm.intent.RECEIVE" />-->
 
-<!--                <category android:name="com.juejinchain.android" />-->
-<!--            </intent-filter>-->
-<!--        </receiver> &lt;!&ndash; 魅族PUSH相关 &ndash;&gt;-->
+        <!--                <category android:name="com.juejinchain.android" />-->
+        <!--            </intent-filter>-->
+        <!--        </receiver> &lt;!&ndash; 魅族PUSH相关 &ndash;&gt;-->
         <!-- 华为推送相关 -->
         <!--
  接入HMSSDK 需要注册的appid参数。value的值中“100513437”用实际申请的appid替换，来源于开发者联盟网站应用的权益详情。
@@ -655,12 +644,12 @@
        Access HMSSDK need to register AppID parameters. Value "100513437" is replaced with the actual application APPID, derived from the Developer affiliate website application.
        Format android:value= "appid=xxxxxx"
         -->
-<!--        <meta-data-->
-<!--            android:name="com.huawei.hms.client.appid"-->
-<!--            android:value="appid=100513437" />-->
-<!--        <meta-data-->
-<!--            android:name="UMENG_CHANNEL"-->
-<!--            android:value="${UMENG_CHANNEL_VALUE}" />-->
+        <!--        <meta-data-->
+        <!--            android:name="com.huawei.hms.client.appid"-->
+        <!--            android:value="appid=100513437" />-->
+        <!--        <meta-data-->
+        <!--            android:name="UMENG_CHANNEL"-->
+        <!--            android:value="${UMENG_CHANNEL_VALUE}" />-->
         <!--
  接入HMSSDK 需要注册的provider，authorities 一定不能与其他应用一样，所以这边 com.juejinchain.android 要替换上您应用的包名
             Access HMSSDK need to register provider,authorities must not be the same as other applications, so this side ${package_name} to replace the package name you applied
@@ -683,75 +672,75 @@
         <!-- 使用 HMSAgent 代码接入HMSSDK 需要注册的activity | Use hmsagent code to access HMSSDK activity that requires registration -->
 
 
-<!--        <provider-->
-<!--            android:name="com.huawei.updatesdk.fileprovider.UpdateSdkFileProvider"-->
-<!--            android:authorities="com.juejinchain.android.updateSdk.fileProvider"-->
-<!--            android:exported="false"-->
-<!--            android:grantUriPermissions="true" /> -->
+        <!--        <provider-->
+        <!--            android:name="com.huawei.updatesdk.fileprovider.UpdateSdkFileProvider"-->
+        <!--            android:authorities="com.juejinchain.android.updateSdk.fileProvider"-->
+        <!--            android:exported="false"-->
+        <!--            android:grantUriPermissions="true" /> -->
         <!-- <activity android:name=".OpendeviceActivity"/> -->
         <!-- 使用 HMSAgent 代码接入HMSSDK 需要注册的activity | Use hmsagent code to access HMSSDK activity that requires registration -->
-<!--        <activity-->
-<!--            android:name="com.huawei.android.hms.agent.common.HMSAgentActivity"-->
-<!--            android:configChanges="orientation|locale|screenSize|layoutDirection|fontScale"-->
-<!--            android:excludeFromRecents="true"-->
-<!--            android:exported="false"-->
-<!--            android:hardwareAccelerated="true"-->
-<!--            android:theme="@android:style/Theme.Translucent">-->
-<!--            <meta-data-->
-<!--                android:name="hwc-theme"-->
-<!--                android:value="androidhwext:style/Theme.Emui.Translucent" />-->
-<!--        </activity> -->
+        <!--        <activity-->
+        <!--            android:name="com.huawei.android.hms.agent.common.HMSAgentActivity"-->
+        <!--            android:configChanges="orientation|locale|screenSize|layoutDirection|fontScale"-->
+        <!--            android:excludeFromRecents="true"-->
+        <!--            android:exported="false"-->
+        <!--            android:hardwareAccelerated="true"-->
+        <!--            android:theme="@android:style/Theme.Translucent">-->
+        <!--            <meta-data-->
+        <!--                android:name="hwc-theme"-->
+        <!--                android:value="androidhwext:style/Theme.Emui.Translucent" />-->
+        <!--        </activity> -->
         <!-- 接入HMSSDK 需要注册的activity | Access HMSSDK activity to be registered -->
-<!--        <activity-->
-<!--            android:name="com.huawei.hms.activity.BridgeActivity"-->
-<!--            android:configChanges="orientation|locale|screenSize|layoutDirection|fontScale"-->
-<!--            android:excludeFromRecents="true"-->
-<!--            android:exported="false"-->
-<!--            android:hardwareAccelerated="true"-->
-<!--            android:theme="@android:style/Theme.Translucent">-->
-<!--            <meta-data-->
-<!--                android:name="hwc-theme"-->
-<!--                android:value="androidhwext:style/Theme.Emui.Translucent" />-->
-<!--        </activity> -->
+        <!--        <activity-->
+        <!--            android:name="com.huawei.hms.activity.BridgeActivity"-->
+        <!--            android:configChanges="orientation|locale|screenSize|layoutDirection|fontScale"-->
+        <!--            android:excludeFromRecents="true"-->
+        <!--            android:exported="false"-->
+        <!--            android:hardwareAccelerated="true"-->
+        <!--            android:theme="@android:style/Theme.Translucent">-->
+        <!--            <meta-data-->
+        <!--                android:name="hwc-theme"-->
+        <!--                android:value="androidhwext:style/Theme.Emui.Translucent" />-->
+        <!--        </activity> -->
         <!-- 接入HMSSDK 需要注册的activity | Access HMSSDK activity to be registered -->
-<!--        <activity-->
-<!--            android:name="com.huawei.updatesdk.service.otaupdate.AppUpdateActivity"-->
-<!--            android:configChanges="orientation|screenSize"-->
-<!--            android:exported="false"-->
-<!--            android:theme="@style/upsdkDlDialog">-->
-<!--            <meta-data-->
-<!--                android:name="hwc-theme"-->
-<!--                android:value="androidhwext:style/Theme.Emui.Translucent.NoTitleBar" />-->
-<!--        </activity>-->
+        <!--        <activity-->
+        <!--            android:name="com.huawei.updatesdk.service.otaupdate.AppUpdateActivity"-->
+        <!--            android:configChanges="orientation|screenSize"-->
+        <!--            android:exported="false"-->
+        <!--            android:theme="@style/upsdkDlDialog">-->
+        <!--            <meta-data-->
+        <!--                android:name="hwc-theme"-->
+        <!--                android:value="androidhwext:style/Theme.Emui.Translucent.NoTitleBar" />-->
+        <!--        </activity>-->
         <!-- 接入HMSSDK 需要注册的activity | Access HMSSDK activity to be registered -->
-<!--        <activity-->
-<!--            android:name="com.huawei.updatesdk.support.pm.PackageInstallerActivity"-->
-<!--            android:configChanges="orientation|keyboardHidden|screenSize"-->
-<!--            android:exported="false"-->
-<!--            android:theme="@style/upsdkDlDialog">-->
-<!--            <meta-data-->
-<!--                android:name="hwc-theme"-->
-<!--                android:value="androidhwext:style/Theme.Emui.Translucent" />-->
-<!--        </activity>-->
+        <!--        <activity-->
+        <!--            android:name="com.huawei.updatesdk.support.pm.PackageInstallerActivity"-->
+        <!--            android:configChanges="orientation|keyboardHidden|screenSize"-->
+        <!--            android:exported="false"-->
+        <!--            android:theme="@style/upsdkDlDialog">-->
+        <!--            <meta-data-->
+        <!--                android:name="hwc-theme"-->
+        <!--                android:value="androidhwext:style/Theme.Emui.Translucent" />-->
+        <!--        </activity>-->
         <!--
  接入HMSSDK PUSH模块需要注册，第三方相关 :接收Push消息（注册、透传消息、通知栏点击事件）广播，
                 此receiver类需要开发者自己创建并继承com.huawei.hms.support.api.push.PushReceiver类，
                 参考示例代码中的类：com.huawei.hmsagent.HuaweiPushRevicer
         com.juejinchain.android 要替换上您应用的包名
         -->
-<!--        <receiver-->
-<!--            android:name=".module_service.MyHuweiService"-->
-<!--            android:permission="com.juejinchain.android.permission.PROCESS_PUSH_MSG">-->
-<!--            <intent-filter>-->
+        <!--        <receiver-->
+        <!--            android:name=".module_service.MyHuweiService"-->
+        <!--            android:permission="com.juejinchain.android.permission.PROCESS_PUSH_MSG">-->
+        <!--            <intent-filter>-->
 
-<!--                &lt;!&ndash; 必须,用于接收token &ndash;&gt;-->
-<!--                <action android:name="com.huawei.android.push.intent.REGISTRATION" />-->
-<!--                &lt;!&ndash; 必须, 用于接收透传消息 &ndash;&gt;-->
-<!--                <action android:name="com.huawei.android.push.intent.RECEIVE" />-->
-<!--                &lt;!&ndash; 必须, 用于接收通知栏消息点击事件 此事件不需要开发者处理，只需注册就可以 &ndash;&gt;-->
-<!--                <action android:name="com.huawei.intent.action.PUSH_DELAY_NOTIFY" />-->
-<!--            </intent-filter>-->
-<!--        </receiver>-->
+        <!--                &lt;!&ndash; 必须,用于接收token &ndash;&gt;-->
+        <!--                <action android:name="com.huawei.android.push.intent.REGISTRATION" />-->
+        <!--                &lt;!&ndash; 必须, 用于接收透传消息 &ndash;&gt;-->
+        <!--                <action android:name="com.huawei.android.push.intent.RECEIVE" />-->
+        <!--                &lt;!&ndash; 必须, 用于接收通知栏消息点击事件 此事件不需要开发者处理，只需注册就可以 &ndash;&gt;-->
+        <!--                <action android:name="com.huawei.intent.action.PUSH_DELAY_NOTIFY" />-->
+        <!--            </intent-filter>-->
+        <!--        </receiver>-->
         <!--
 如下2个通知会在以后的版本中逐渐废弃
             接入HMSSDK PUSH模块需要注册，第三方相关 :接收Push消息（点击通知栏或通知栏上的按钮后触发onEvent回调、查看push通道是否连接）广播，
@@ -759,174 +748,850 @@
                 参考示例代码中的类：com.huawei.hmsagent.HuaweiPushRevicer
         com.juejinchain.android 要替换上您应用的包名
         -->
-<!--        <receiver android:name=".module_service.MyHuaWeiNotifyReceiver">-->
-<!--            <intent-filter>-->
+        <!--        <receiver android:name=".module_service.MyHuaWeiNotifyReceiver">-->
+        <!--            <intent-filter>-->
 
-<!--                &lt;!&ndash; 用于点击通知栏或通知栏上的按钮后触发onEvent回调 &ndash;&gt;-->
-<!--                <action android:name="com.huawei.android.push.intent.CLICK" />-->
-<!--                &lt;!&ndash; 查看push通道是否连接, 不查看则不需要 &ndash;&gt;-->
-<!--                <action android:name="com.huawei.intent.action.PUSH_STATE" />-->
-<!--            </intent-filter>-->
-<!--        </receiver>-->
+        <!--                &lt;!&ndash; 用于点击通知栏或通知栏上的按钮后触发onEvent回调 &ndash;&gt;-->
+        <!--                <action android:name="com.huawei.android.push.intent.CLICK" />-->
+        <!--                &lt;!&ndash; 查看push通道是否连接, 不查看则不需要 &ndash;&gt;-->
+        <!--                <action android:name="com.huawei.intent.action.PUSH_STATE" />-->
+        <!--            </intent-filter>-->
+        <!--        </receiver>-->
         <!-- 接入HMSSDK PUSH模块需要注册该service，不需要开发者处理 -->
-<!--        <service-->
-<!--            android:name="com.huawei.hms.support.api.push.service.HmsMsgService"-->
-<!--            android:enabled="true"-->
-<!--            android:exported="true"-->
-<!--            android:process=":pushservice">-->
-<!--            <intent-filter>-->
-<!--                <action android:name="com.huawei.push.msg.NOTIFY_MSG" />-->
-<!--                <action android:name="com.huawei.push.msg.PASSBY_MSG" />-->
-<!--            </intent-filter>-->
-<!--        </service> &lt;!&ndash; 接入HMSSDK 需要注册的应用下载服务 | Access HMSSDK need to register app download service &ndash;&gt;-->
-<!--        <service-->
-<!--            android:name="com.huawei.updatesdk.service.deamon.download.DownloadService"-->
-<!--            android:exported="false" /> &lt;!&ndash; 投屏功能 &ndash;&gt;-->
-<!--        <service-->
-<!--            android:name=".module.upnp.service.ClingUpnpService"-->
-<!--            android:exported="false" />-->
-<!--        <service-->
-<!--            android:name=".module.upnp.service.SystemService"-->
-<!--            android:exported="false" /> &lt;!&ndash; 适配华为（huawei）刘海屏 &ndash;&gt;-->
-<!--        <meta-data-->
-<!--            android:name="android.notch_support"-->
-<!--            android:value="true" /> &lt;!&ndash; 适配小米（xiaomi）刘海屏 &ndash;&gt;-->
-<!--        <meta-data-->
-<!--            android:name="notch.config"-->
-<!--            android:value="portrait|landscape" />-->
+        <!--        <service-->
+        <!--            android:name="com.huawei.hms.support.api.push.service.HmsMsgService"-->
+        <!--            android:enabled="true"-->
+        <!--            android:exported="true"-->
+        <!--            android:process=":pushservice">-->
+        <!--            <intent-filter>-->
+        <!--                <action android:name="com.huawei.push.msg.NOTIFY_MSG" />-->
+        <!--                <action android:name="com.huawei.push.msg.PASSBY_MSG" />-->
+        <!--            </intent-filter>-->
+        <!--        </service> &lt;!&ndash; 接入HMSSDK 需要注册的应用下载服务 | Access HMSSDK need to register app download service &ndash;&gt;-->
+        <!--        <service-->
+        <!--            android:name="com.huawei.updatesdk.service.deamon.download.DownloadService"-->
+        <!--            android:exported="false" /> &lt;!&ndash; 投屏功能 &ndash;&gt;-->
+        <!--        <service-->
+        <!--            android:name=".module.upnp.service.ClingUpnpService"-->
+        <!--            android:exported="false" />-->
+        <!--        <service-->
+        <!--            android:name=".module.upnp.service.SystemService"-->
+        <!--            android:exported="false" /> &lt;!&ndash; 适配华为（huawei）刘海屏 &ndash;&gt;-->
+        <!--        <meta-data-->
+        <!--            android:name="android.notch_support"-->
+        <!--            android:value="true" /> &lt;!&ndash; 适配小米（xiaomi）刘海屏 &ndash;&gt;-->
+        <!--        <meta-data-->
+        <!--            android:name="notch.config"-->
+        <!--            android:value="portrait|landscape" />-->
 
-<!--        <receiver-->
-<!--            android:name=".wxapi.AppRegister"-->
-<!--            android:permission="com.tencent.mm.plugin.permission.SEND">-->
-<!--            <intent-filter>-->
-<!--                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />-->
-<!--            </intent-filter>-->
-<!--        </receiver> &lt;!&ndash; 以下是极光推送 &ndash;&gt;-->
-<!--        <provider-->
-<!--            android:name="cn.jpush.android.service.DataProvider"-->
-<!--            android:authorities="${applicationId}.DataProvider"-->
-<!--            android:exported="true"-->
-<!--            tools:replace="android:exported" /> &lt;!&ndash; since 1.8.0 option 可选项。用于同一设备中不同应用的 JPush 服务相互拉起的功能。 &ndash;&gt;-->
-<!--        &lt;!&ndash; 若不启用该功能可删除该组件，或把 enabled 设置成 false ；App 不会被其他 App 拉起，但会拉起其他的 App。 &ndash;&gt;-->
-<!--        <service-->
-<!--            android:name="cn.jpush.android.service.DaemonService"-->
-<!--            android:enabled="true"-->
-<!--            android:exported="true">-->
-<!--            <intent-filter>-->
-<!--                <action android:name="cn.jpush.android.intent.DaemonService" />-->
+        <!--        <receiver-->
+        <!--            android:name=".wxapi.AppRegister"-->
+        <!--            android:permission="com.tencent.mm.plugin.permission.SEND">-->
+        <!--            <intent-filter>-->
+        <!--                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />-->
+        <!--            </intent-filter>-->
+        <!--        </receiver> &lt;!&ndash; 以下是极光推送 &ndash;&gt;-->
+        <!--        <provider-->
+        <!--            android:name="cn.jpush.android.service.DataProvider"-->
+        <!--            android:authorities="${applicationId}.DataProvider"-->
+        <!--            android:exported="true"-->
+        <!--            tools:replace="android:exported" /> &lt;!&ndash; since 1.8.0 option 可选项。用于同一设备中不同应用的 JPush 服务相互拉起的功能。 &ndash;&gt;-->
+        <!--        &lt;!&ndash; 若不启用该功能可删除该组件，或把 enabled 设置成 false ；App 不会被其他 App 拉起，但会拉起其他的 App。 &ndash;&gt;-->
+        <!--        <service-->
+        <!--            android:name="cn.jpush.android.service.DaemonService"-->
+        <!--            android:enabled="true"-->
+        <!--            android:exported="true">-->
+        <!--            <intent-filter>-->
+        <!--                <action android:name="cn.jpush.android.intent.DaemonService" />-->
 
-<!--                <category android:name="${applicationId}" />-->
-<!--            </intent-filter>-->
-<!--        </service> -->
+        <!--                <category android:name="${applicationId}" />-->
+        <!--            </intent-filter>-->
+        <!--        </service> -->
         <!-- since 3.1.0 Required SDK 核心功能 -->
-<!--        <provider-->
-<!--            android:name="cn.jpush.android.service.DownloadProvider"-->
-<!--            android:authorities="${applicationId}.DownloadProvider"-->
-<!--            android:exported="true" /> &lt;!&ndash; Required SDK 核心功能 &ndash;&gt;-->
-<!--        &lt;!&ndash; 若您的业务中有使用极光富媒体功能，或者极光早上好功能，需要把此 Activity 的 exported 设置成 true。 &ndash;&gt;-->
-<!--        <activity-->
-<!--            android:name="cn.jpush.android.ui.PushActivity"-->
-<!--            android:configChanges="orientation|keyboardHidden"-->
-<!--            android:exported="false"-->
-<!--            android:theme="@android:style/Theme.NoTitleBar"-->
-<!--            tools:replace="android:exported">-->
-<!--            <intent-filter>-->
-<!--                <action android:name="cn.jpush.android.ui.PushActivity" />-->
+        <!--        <provider-->
+        <!--            android:name="cn.jpush.android.service.DownloadProvider"-->
+        <!--            android:authorities="${applicationId}.DownloadProvider"-->
+        <!--            android:exported="true" /> &lt;!&ndash; Required SDK 核心功能 &ndash;&gt;-->
+        <!--        &lt;!&ndash; 若您的业务中有使用极光富媒体功能，或者极光早上好功能，需要把此 Activity 的 exported 设置成 true。 &ndash;&gt;-->
+        <!--        <activity-->
+        <!--            android:name="cn.jpush.android.ui.PushActivity"-->
+        <!--            android:configChanges="orientation|keyboardHidden"-->
+        <!--            android:exported="false"-->
+        <!--            android:theme="@android:style/Theme.NoTitleBar"-->
+        <!--            tools:replace="android:exported">-->
+        <!--            <intent-filter>-->
+        <!--                <action android:name="cn.jpush.android.ui.PushActivity" />-->
 
-<!--                <category android:name="android.intent.category.DEFAULT" />-->
-<!--                <category android:name="${applicationId}" />-->
-<!--            </intent-filter>-->
-<!--        </activity> -->
+        <!--                <category android:name="android.intent.category.DEFAULT" />-->
+        <!--                <category android:name="${applicationId}" />-->
+        <!--            </intent-filter>-->
+        <!--        </activity> -->
         <!-- SDK 核心功能 -->
         <!-- 若您的业务中有使用极光富媒体功能，或者极光早上好功能，需要把此 Activity 的 exported 设置成 true。 -->
-<!--        <activity-->
-<!--            android:name="cn.jpush.android.ui.PopWinActivity"-->
-<!--            android:configChanges="orientation|keyboardHidden"-->
-<!--            android:exported="false"-->
-<!--            android:theme="@style/MyDialogStyle"-->
-<!--            tools:replace="android:exported">-->
-<!--            <intent-filter>-->
-<!--                <category android:name="android.intent.category.DEFAULT" />-->
-<!--                <category android:name="${applicationId}" />-->
-<!--            </intent-filter>-->
-<!--        </activity>-->
+        <!--        <activity-->
+        <!--            android:name="cn.jpush.android.ui.PopWinActivity"-->
+        <!--            android:configChanges="orientation|keyboardHidden"-->
+        <!--            android:exported="false"-->
+        <!--            android:theme="@style/MyDialogStyle"-->
+        <!--            tools:replace="android:exported">-->
+        <!--            <intent-filter>-->
+        <!--                <category android:name="android.intent.category.DEFAULT" />-->
+        <!--                <category android:name="${applicationId}" />-->
+        <!--            </intent-filter>-->
+        <!--        </activity>-->
 
-<!--        <receiver-->
-<!--            android:name="cn.jpush.android.service.PushReceiver"-->
-<!--            android:enabled="true">-->
-<!--            <intent-filter android:priority="1000">-->
-<!--                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />-->
+        <!--        <receiver-->
+        <!--            android:name="cn.jpush.android.service.PushReceiver"-->
+        <!--            android:enabled="true">-->
+        <!--            <intent-filter android:priority="1000">-->
+        <!--                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />-->
 
-<!--                <category android:name="${applicationId}" />-->
-<!--            </intent-filter>-->
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.USER_PRESENT" />-->
-<!--                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />-->
-<!--            </intent-filter>-->
-<!--            &lt;!&ndash; Optional &ndash;&gt;-->
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.PACKAGE_ADDED" />-->
-<!--                <action android:name="android.intent.action.PACKAGE_REMOVED" />-->
+        <!--                <category android:name="${applicationId}" />-->
+        <!--            </intent-filter>-->
+        <!--            <intent-filter>-->
+        <!--                <action android:name="android.intent.action.USER_PRESENT" />-->
+        <!--                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />-->
+        <!--            </intent-filter>-->
+        <!--            &lt;!&ndash; Optional &ndash;&gt;-->
+        <!--            <intent-filter>-->
+        <!--                <action android:name="android.intent.action.PACKAGE_ADDED" />-->
+        <!--                <action android:name="android.intent.action.PACKAGE_REMOVED" />-->
 
-<!--                <data android:scheme="package" />-->
-<!--            </intent-filter>-->
-<!--        </receiver> -->
+        <!--                <data android:scheme="package" />-->
+        <!--            </intent-filter>-->
+        <!--        </receiver> -->
         <!-- Since JCore2.0.0 Required SDK核心功能 -->
         <!--
 可配置android:process参数将Service放在其他进程中；android:enabled属性不能是false
          这个是自定义Service，要继承极光JCommonService，可以在更多手机平台上使得推送通道保持的更稳定
         -->
-<!--        <service-->
-<!--            android:name=".module.jpush.PushService"-->
-<!--            android:enabled="true"-->
-<!--            android:exported="false"-->
-<!--            android:process=":pushcore">-->
-<!--            <intent-filter>-->
-<!--                <action android:name="cn.jiguang.user.service.action" />-->
-<!--            </intent-filter>-->
-<!--        </service> &lt;!&ndash; Required since 3.0.7 &ndash;&gt;-->
-<!--        &lt;!&ndash; 新的 tag/alias 接口结果返回需要开发者配置一个自定的广播 &ndash;&gt;-->
-<!--        &lt;!&ndash; 3.3.0开始所有事件将通过该类回调 &ndash;&gt;-->
-<!--        &lt;!&ndash; 该广播需要继承 JPush 提供的 JPushMessageReceiver 类, 并如下新增一个 Intent-Filter &ndash;&gt;-->
-<!--        <receiver-->
-<!--            android:name=".module.jpush.PushMessageReceiver"-->
-<!--            android:enabled="true"-->
-<!--            android:exported="false">-->
-<!--            <intent-filter>-->
-<!--                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />-->
+        <!--        <service-->
+        <!--            android:name=".module.jpush.PushService"-->
+        <!--            android:enabled="true"-->
+        <!--            android:exported="false"-->
+        <!--            android:process=":pushcore">-->
+        <!--            <intent-filter>-->
+        <!--                <action android:name="cn.jiguang.user.service.action" />-->
+        <!--            </intent-filter>-->
+        <!--        </service> &lt;!&ndash; Required since 3.0.7 &ndash;&gt;-->
+        <!--        &lt;!&ndash; 新的 tag/alias 接口结果返回需要开发者配置一个自定的广播 &ndash;&gt;-->
+        <!--        &lt;!&ndash; 3.3.0开始所有事件将通过该类回调 &ndash;&gt;-->
+        <!--        &lt;!&ndash; 该广播需要继承 JPush 提供的 JPushMessageReceiver 类, 并如下新增一个 Intent-Filter &ndash;&gt;-->
+        <!--        <receiver-->
+        <!--            android:name=".module.jpush.PushMessageReceiver"-->
+        <!--            android:enabled="true"-->
+        <!--            android:exported="false">-->
+        <!--            <intent-filter>-->
+        <!--                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />-->
 
-<!--                <category android:name="${applicationId}" />-->
-<!--            </intent-filter>-->
-<!--        </receiver>-->
-<!--        <receiver android:name="cn.jpush.android.service.AlarmReceiver" />-->
+        <!--                <category android:name="${applicationId}" />-->
+        <!--            </intent-filter>-->
+        <!--        </receiver>-->
+        <!--        <receiver android:name="cn.jpush.android.service.AlarmReceiver" />-->
+
+        <!--        <activity-->
+        <!--            android:name="cn.jpush.android.service.JNotifyActivity"-->
+        <!--            android:exported="true"-->
+        <!--            android:taskAffinity="jpush.custom"-->
+        <!--            android:theme="@android:style/Theme.Translucent.NoTitleBar">-->
+        <!--            <intent-filter>-->
+        <!--                <action android:name="cn.jpush.android.intent.JNotifyActivity" />-->
+
+        <!--                <category android:name="${applicationId}" />-->
+        <!--            </intent-filter>-->
+        <!--        </activity>-->
+        <!--        &lt;!&ndash; 视频广告Activity配置，必须配置 &ndash;&gt;-->
+        <!--        <activity-->
+        <!--            android:name="com.youdao.sdk.video.YouDaoVideoActivity"-->
+        <!--            android:configChanges="keyboardHidden|orientation|screenSize"-->
+        <!--            android:hardwareAccelerated="true"-->
+        <!--            android:launchMode="singleTask" />-->
+
+        <!--        <activity-->
+        <!--            android:name="com.youdao.sdk.common.YouDaoBrowser"-->
+        <!--            android:configChanges="keyboardHidden|orientation|screenSize"-->
+        <!--            android:launchMode="singleTask" />-->
+        <!--        &lt;!&ndash; 应用下载服务，用于应用下载&ndash;&gt;-->
+        <!--        <service-->
+        <!--            android:name="com.youdao.sdk.common.YouDaoAppService"-->
+        <!--            android:enabled="true"></service>-->
+
+
+        <activity
+            android:name=".consumer.ConsumerActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme2"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".consumer.function.TopActivity3"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".consumer.function.selectgoods.activity.SelectGoodsActivity3"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="com.xunjoy.lewaimai.consumer"
+                    android:pathPrefix="/openwith"
+                    android:scheme="@string/share_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".consumer.function.selectgoods.activity.GoodsDetailActivity2"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="com.xunjoy.lewaimai.consumer"
+                    android:pathPrefix="/openwith"
+                    android:scheme="@string/share_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".consumer.function.selectgoods.activity.ShopAddressActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.selectgoods.activity.ServiceAreaActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.selectgoods.activity.CouponGoodsActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.order.activity.MyOrderActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.order.activity.ShopCommentActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.selectgoods.activity.ShopZiZhiActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.order.activity.CourierAddressActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.person.MyCollectionActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".consumer.function.vip.activity.VipMainActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".consumer.function.vip.activity.EditVipInfoActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.order.activity.QuitOrderActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.vip.activity.NoOpenVipMainActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.vip.activity.InfoOpenSuccessActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.vip.activity.ChargeOpenSuccessActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.vip.activity.OpenVipConditionActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.vip.activity.CommitVipInfoActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.vip.activity.VipChargeActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.vip.activity.ChangePhoneActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.vip.activity.VipCardDetailActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.vip.activity.ChargeOpenVipActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.person.activity.MyAddressActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.selectgoods.activity.PhotoviewActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.person.activity.NewAddressActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.person.activity.ChooseAddressActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.top.avtivity.TopLocationActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.top.avtivity.ShopSearchActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.person.activity.MyCouponActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.person.AboutActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.person.UserInformationActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.person.activity.InvalidCouponAty"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.person.activity.ModifyNameAty"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.login.LoginActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.login.LoginByPasswordActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.login.RegisterActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.login.RegisterActivity2"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.login.GetBackPasswordActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.person.activity.SettingActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.selectgoods.activity.SelectAddressActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.selectgoods.activity.SelectCouponActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.selectgoods.activity.YuseActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.selectgoods.activity.BeizhuActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.selectgoods.activity.ShoppingCartListActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.selectgoods.activity.GoodsSearchActivity2"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.top.avtivity.WShopListActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".consumer.function.login.BindPhoneActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.order.activity.SelectPayTypeActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.soundcloud.android.crop.CropImageActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.vip.activity.BalanceDetailActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.vip.activity.FreezeVipActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.vip.activity.QRCodePayActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.person.activity.SignActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.top.avtivity.WeiWebViewActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.top.avtivity.FormActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.top.avtivity.WeiActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.distribution.PaotuiOrderActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.distribution.ReceiveAddressActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.distribution.PaotuiTopActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.distribution.PayOrderActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.distribution.PaySuccessActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.top.avtivity.WMapActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.distribution.HelpClassifyActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.cityinfo.activity.PublishSearchActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.cityinfo.activity.PublishAgreementActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.cityinfo.activity.PublishDetailActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.cityinfo.activity.PublishCollectActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.cityinfo.activity.MyPublishActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.cityinfo.activity.CityInfoActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.cityinfo.activity.PublishInfoActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.cityinfo.activity.PublishSuccessActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.cityinfo.activity.PictureSelectActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name=".consumer.function.top.avtivity.WeiGroupActivity" />
+        <activity
+            android:name=".consumer.function.person.activity.MessageCenterActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.person.activity.MessageDetailActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.distribution.AddressBookActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.distribution.NearAddressListActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.distribution.SaveAddressActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.distribution.PaotuiCouponActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.person.InviteFriendActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.order.activity.OrderListActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.person.activity.MyTraceActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.person.activity.MyEvaluateActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.top.avtivity.DredgeAreaActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.top.avtivity.DredgeMapActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.person.activity.DepositDetailActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.person.activity.DepositHistoryActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.person.activity.MyDepositActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.top.avtivity.JoinActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".consumer.function.vip.activity.VipLevelActivity"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".consumer.function.GuideActivity"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".consumer.function.login.AgreementActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".consumer.function.selectgoods.activity.ShoppingCartActivity2"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan" />
+
+        <service android:name=".consumer.service.LocationService" />
+
+        <!-- 高德地图配置 -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="@string/gaode_map_key" />
+        <!-- 每个app拥有自己单独的定位service -->
+        <service android:name="com.amap.api.location.APSService" />
+
+
+        <!-- 注册SDKActivity -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="1106200468" /> <!-- QQ开放平台获取的APPID -->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <receiver android:name=".consumer.receiver.AppRegister">
+            <intent-filter>
+                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />
+            </intent-filter>
+        </receiver>
 
 <!--        <activity-->
-<!--            android:name="cn.jpush.android.service.JNotifyActivity"-->
+<!--            android:name="${applicationId}.wxapi.WXEntryActivity"-->
 <!--            android:exported="true"-->
-<!--            android:taskAffinity="jpush.custom"-->
+<!--            android:label="@string/app_name"-->
+<!--            android:launchMode="singleTask"-->
 <!--            android:theme="@android:style/Theme.Translucent.NoTitleBar">-->
 <!--            <intent-filter>-->
-<!--                <action android:name="cn.jpush.android.intent.JNotifyActivity" />-->
+<!--                <action android:name="android.intent.action.VIEW" />-->
 
-<!--                <category android:name="${applicationId}" />-->
+<!--                <category android:name="android.intent.category.DEFAULT" />-->
+
+<!--                <data android:scheme="wx096761a5c9a3c379" />-->
 <!--            </intent-filter>-->
 <!--        </activity>-->
-<!--        &lt;!&ndash; 视频广告Activity配置，必须配置 &ndash;&gt;-->
 <!--        <activity-->
-<!--            android:name="com.youdao.sdk.video.YouDaoVideoActivity"-->
-<!--            android:configChanges="keyboardHidden|orientation|screenSize"-->
-<!--            android:hardwareAccelerated="true"-->
-<!--            android:launchMode="singleTask" />-->
+<!--            android:name="${applicationId}.wxapi.WXPayEntryActivity"-->
+<!--            android:exported="true"-->
+<!--            android:launchMode="singleTop"-->
+<!--            android:theme="@android:style/Theme.Translucent.NoTitleBar" /> -->
+        <activity
+            android:name=".consumer.wxapi.WXEntryActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
 
-<!--        <activity-->
-<!--            android:name="com.youdao.sdk.common.YouDaoBrowser"-->
-<!--            android:configChanges="keyboardHidden|orientation|screenSize"-->
-<!--            android:launchMode="singleTask" />-->
-<!--        &lt;!&ndash; 应用下载服务，用于应用下载&ndash;&gt;-->
-<!--        <service-->
-<!--            android:name="com.youdao.sdk.common.YouDaoAppService"-->
-<!--            android:enabled="true"></service>-->
+                <category android:name="android.intent.category.DEFAULT" />
 
+                <data android:scheme="wx096761a5c9a3c379" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".consumer.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 个推SDK配置 -->
+
+
+        <!-- 用户自定义服务继承自GTIntentService,作为SDK与APP桥梁服务,用来接收各种消息和命令回复 -->
+        <service
+            android:name=".consumer.service.GeTuiIntentService"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":pushservice" />
+        <!-- 用户自定义服务名 -->
+        <service
+            android:name=".consumer.service.GeTuiPushService"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":pushservice" />
+
+        <meta-data
+            android:name="PUSH_APPID"
+            android:value="${GETUI_APP_ID}" />
+        <meta-data
+            android:name="PUSH_APPKEY"
+            android:value="${GETUI_APP_KEY}" />
+        <meta-data
+            android:name="PUSH_APPSECRET"
+            android:value="${GETUI_APP_SECRET}" />
+        <!-- 配置SDK核心服务 -->
+        <service
+            android:name="com.igexin.sdk.PushService"
+            android:exported="false"
+            android:label="NotificationCenter"
+            android:process=":pushservice">
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.service.message" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name="com.igexin.sdk.PushReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="com.igexin.sdk.action.refreshls" />
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.igexin.sdk.PushActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:process=":pushservice"
+            android:taskAffinity="com.igexin.sdk.PushActivityTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <service
+            android:name="com.igexin.download.DownloadService"
+            android:process=":pushservice" />
+
+        <receiver android:name="com.igexin.download.DownloadReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="com.igexin.download.DownloadProvider"
+            android:authorities="downloads.${applicationId}"
+            android:exported="true"
+            android:process=":pushservice" />
+
+        <activity
+            android:name="com.igexin.sdk.GActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:process=":pushservice"
+            android:taskAffinity="com.igexin.sdk.PushActivityTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 个推SDK配置结束 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <!-- 配置bugly -->
+<!--        <meta-data-->
+<!--            android:name="BUGLY_APPID"-->
+<!--            android:value="4835960b66" />-->
+<!--        &lt;!&ndash; 配置APP版本号 &ndash;&gt;-->
+<!--        <meta-data-->
+<!--            android:name="BUGLY_APP_VERSION"-->
+<!--            android:value="c340c009-169a-41a7-83fc-03da2c37a88b" />-->
+
+<!--        &lt;!&ndash; 配置APP渠道号 &ndash;&gt;-->
+<!--        <meta-data-->
+<!--            android:name="BUGLY_APP_CHANNEL"-->
+<!--            android:value="lewaimai.consumer" />-->
     </application>
 
 </manifest>

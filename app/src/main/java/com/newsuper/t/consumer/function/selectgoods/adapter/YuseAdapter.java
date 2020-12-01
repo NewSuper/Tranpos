@@ -8,9 +8,9 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.bean.ShoppingCartBean;
-import com.xunjoy.lewaimai.consumer.utils.FormatUtil;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.bean.ShoppingCartBean;
+import com.newsuper.t.consumer.utils.FormatUtil;
 
 import java.util.ArrayList;
 import java.util.Map;

@@ -11,7 +11,8 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.xunjoy.lewaimai.consumer.R;
+
+import com.newsuper.t.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

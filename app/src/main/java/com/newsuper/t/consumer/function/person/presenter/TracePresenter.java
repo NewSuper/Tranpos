@@ -1,12 +1,12 @@
 package com.newsuper.t.consumer.function.person.presenter;
 
 import com.google.gson.Gson;
-import com.xunjoy.lewaimai.consumer.bean.TraceBean;
-import com.xunjoy.lewaimai.consumer.function.person.internal.ITraceView;
-import com.xunjoy.lewaimai.consumer.function.person.request.AddressRequest;
-import com.xunjoy.lewaimai.consumer.manager.HttpManager;
-import com.xunjoy.lewaimai.consumer.manager.listener.HttpRequestListener;
-import com.xunjoy.lewaimai.consumer.utils.SharedPreferencesUtil;
+import com.newsuper.t.consumer.bean.TraceBean;
+import com.newsuper.t.consumer.function.person.internal.ITraceView;
+import com.newsuper.t.consumer.function.person.request.AddressRequest;
+import com.newsuper.t.consumer.manager.HttpManager;
+import com.newsuper.t.consumer.manager.listener.HttpRequestListener;
+import com.newsuper.t.consumer.utils.SharedPreferencesUtil;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,6 +1,7 @@
 package com.newsuper.t.consumer.function.top.internal;
 
-import com.xunjoy.lewaimai.consumer.bean.TopBean;
+
+import com.newsuper.t.consumer.bean.TopBean;
 
 /**
  * Created by Administrator on 2017/8/7 0007.

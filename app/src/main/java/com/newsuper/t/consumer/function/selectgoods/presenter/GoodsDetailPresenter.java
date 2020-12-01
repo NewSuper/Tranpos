@@ -1,14 +1,14 @@
 package com.newsuper.t.consumer.function.selectgoods.presenter;
 
 import com.google.gson.Gson;
-import com.xunjoy.lewaimai.consumer.bean.GoodsDetailBean;
-import com.xunjoy.lewaimai.consumer.bean.PackageDetailBean;
-import com.xunjoy.lewaimai.consumer.bean.ShoppingCartBean;
-import com.xunjoy.lewaimai.consumer.function.selectgoods.inter.IGoodsDetailView;
-import com.xunjoy.lewaimai.consumer.function.selectgoods.request.ShopInfoRequest;
-import com.xunjoy.lewaimai.consumer.manager.HttpManager;
-import com.xunjoy.lewaimai.consumer.manager.listener.HttpRequestListener;
-import com.xunjoy.lewaimai.consumer.utils.UrlConst;
+import com.newsuper.t.consumer.bean.GoodsDetailBean;
+import com.newsuper.t.consumer.bean.PackageDetailBean;
+import com.newsuper.t.consumer.bean.ShoppingCartBean;
+import com.newsuper.t.consumer.function.selectgoods.inter.IGoodsDetailView;
+import com.newsuper.t.consumer.function.selectgoods.request.ShopInfoRequest;
+import com.newsuper.t.consumer.manager.HttpManager;
+import com.newsuper.t.consumer.manager.listener.HttpRequestListener;
+import com.newsuper.t.consumer.utils.UrlConst;
 
 import java.util.HashMap;
 

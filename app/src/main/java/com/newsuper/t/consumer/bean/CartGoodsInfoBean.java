@@ -1,9 +1,9 @@
 package com.newsuper.t.consumer.bean;
 
-import com.xunjoy.lewaimai.consumer.application.BaseApplication;
-import com.xunjoy.lewaimai.consumer.utils.FormatUtil;
-import com.xunjoy.lewaimai.consumer.utils.LogUtil;
-import com.xunjoy.lewaimai.consumer.utils.StringUtils;
+import com.newsuper.t.consumer.application.BaseApplication;
+import com.newsuper.t.consumer.utils.FormatUtil;
+import com.newsuper.t.consumer.utils.LogUtil;
+import com.newsuper.t.consumer.utils.StringUtils;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;

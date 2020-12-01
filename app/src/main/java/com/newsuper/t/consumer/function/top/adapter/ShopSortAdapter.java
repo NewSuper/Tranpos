@@ -9,8 +9,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.bean.TopBean;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.bean.TopBean;
 import java.util.ArrayList;
 public class ShopSortAdapter extends BaseAdapter{
     private ArrayList<TopBean.ShopType> sortList;

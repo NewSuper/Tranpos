@@ -10,11 +10,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.bean.PersonCenterBean;
-import com.xunjoy.lewaimai.consumer.function.person.internal.PersonSelectListener;
-import com.xunjoy.lewaimai.consumer.utils.StringUtils;
-import com.xunjoy.lewaimai.consumer.utils.UIUtils;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.bean.PersonCenterBean;
+import com.newsuper.t.consumer.function.person.internal.PersonSelectListener;
+import com.newsuper.t.consumer.utils.StringUtils;
+import com.newsuper.t.consumer.utils.UIUtils;
 
 import java.util.ArrayList;
 

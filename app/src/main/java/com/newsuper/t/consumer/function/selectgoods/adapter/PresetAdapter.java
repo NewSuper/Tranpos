@@ -8,10 +8,10 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.bean.ShoppingCartBean;
-import com.xunjoy.lewaimai.consumer.utils.FormatUtil;
-import com.xunjoy.lewaimai.consumer.utils.StringUtils;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.bean.ShoppingCartBean;
+import com.newsuper.t.consumer.utils.FormatUtil;
+import com.newsuper.t.consumer.utils.StringUtils;
 
 import org.json.JSONException;
 import org.json.JSONObject;

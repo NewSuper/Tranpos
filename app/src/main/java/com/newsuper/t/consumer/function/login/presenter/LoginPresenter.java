@@ -3,21 +3,18 @@ package com.newsuper.t.consumer.function.login.presenter;
 import android.util.Log;
 
 import com.google.gson.Gson;
-import com.igexin.sdk.PushManager;
-import com.xunjoy.lewaimai.consumer.bean.CustomerInfoBean;
-import com.xunjoy.lewaimai.consumer.bean.LoginBean;
-import com.xunjoy.lewaimai.consumer.function.login.internal.ILoginView;
-import com.xunjoy.lewaimai.consumer.function.login.request.LoginRequest;
-import com.xunjoy.lewaimai.consumer.function.person.request.CustomerInfoRequest;
-import com.xunjoy.lewaimai.consumer.manager.HttpManager;
-import com.xunjoy.lewaimai.consumer.manager.RetrofitManager;
-import com.xunjoy.lewaimai.consumer.manager.listener.HttpRequestListener;
-import com.xunjoy.lewaimai.consumer.utils.Const;
-import com.xunjoy.lewaimai.consumer.utils.LogUtil;
-import com.xunjoy.lewaimai.consumer.utils.RetrofitUtil;
-import com.xunjoy.lewaimai.consumer.utils.SharedPreferencesUtil;
-import com.xunjoy.lewaimai.consumer.utils.StringUtils;
-import com.xunjoy.lewaimai.consumer.utils.UrlConst;
+import com.newsuper.t.consumer.bean.CustomerInfoBean;
+import com.newsuper.t.consumer.bean.LoginBean;
+import com.newsuper.t.consumer.function.login.internal.ILoginView;
+import com.newsuper.t.consumer.function.login.request.LoginRequest;
+import com.newsuper.t.consumer.function.person.request.CustomerInfoRequest;
+import com.newsuper.t.consumer.manager.HttpManager;
+import com.newsuper.t.consumer.manager.listener.HttpRequestListener;
+import com.newsuper.t.consumer.utils.Const;
+import com.newsuper.t.consumer.utils.LogUtil;
+import com.newsuper.t.consumer.utils.SharedPreferencesUtil;
+import com.newsuper.t.consumer.utils.StringUtils;
+import com.newsuper.t.consumer.utils.UrlConst;
 
 import java.util.HashMap;
 

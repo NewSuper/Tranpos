@@ -1,8 +1,8 @@
 package com.newsuper.t.consumer.function.top.internal;
 
-import com.xunjoy.lewaimai.consumer.bean.GetCouponBean;
-import com.xunjoy.lewaimai.consumer.bean.TopBean;
-import com.xunjoy.lewaimai.consumer.bean.WTopBean;
+import com.newsuper.t.consumer.bean.GetCouponBean;
+import com.newsuper.t.consumer.bean.TopBean;
+import com.newsuper.t.consumer.bean.WTopBean;
 
 /**
  * Created by Administrator on 2017/7/24 0024.

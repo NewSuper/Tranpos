@@ -4,8 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.text.SpannableString;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,24 +14,23 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.bean.ShopSearchBean;
-import com.xunjoy.lewaimai.consumer.function.selectgoods.activity.SelectGoodsActivity3;
-import com.xunjoy.lewaimai.consumer.manager.RetrofitManager;
-import com.xunjoy.lewaimai.consumer.utils.FormatUtil;
-import com.xunjoy.lewaimai.consumer.utils.LogUtil;
-import com.xunjoy.lewaimai.consumer.utils.StringUtils;
-import com.xunjoy.lewaimai.consumer.utils.UIUtils;
-import com.xunjoy.lewaimai.consumer.widget.ActivityLabelLayout;
-import com.xunjoy.lewaimai.consumer.widget.ListViewForScrollView;
-import com.xunjoy.lewaimai.consumer.widget.NoticeTextView;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.bean.ShopSearchBean;
+import com.newsuper.t.consumer.function.selectgoods.activity.SelectGoodsActivity3;
+import com.newsuper.t.consumer.manager.RetrofitManager;
+import com.newsuper.t.consumer.utils.FormatUtil;
+import com.newsuper.t.consumer.utils.StringUtils;
+import com.newsuper.t.consumer.utils.UIUtils;
+import com.newsuper.t.consumer.widget.ActivityLabelLayout;
+import com.newsuper.t.consumer.widget.ListViewForScrollView;
+import com.newsuper.t.consumer.widget.NoticeTextView;
 
 import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-import static com.xunjoy.lewaimai.consumer.utils.Const.STRING_DIVER;
+import static com.newsuper.t.consumer.utils.Const.STRING_DIVER;
 
 public class ShopSearchAdapter extends BaseAdapter {
     private Context context;

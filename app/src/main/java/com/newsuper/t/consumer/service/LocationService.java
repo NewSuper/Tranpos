@@ -1,4 +1,4 @@
-/*
+
 package com.newsuper.t.consumer.service;
 
 import android.app.Service;
@@ -10,14 +10,12 @@ import android.util.Log;
 
 import com.amap.api.location.AMapLocation;
 import com.amap.api.location.AMapLocationListener;
-import com.xunjoy.lewaimai.consumer.function.top.presenter.LocationPresenter;
-import com.xunjoy.lewaimai.consumer.utils.LogUtil;
+import com.newsuper.t.consumer.function.top.presenter.LocationPresenter;
+import com.newsuper.t.consumer.utils.LogUtil;
 
-*/
 /**
  * Created by Administrator on 2017/11/20 0020.
- *//*
-
+ */
 
 public class LocationService extends Service implements AMapLocationListener{
     private  LocationPresenter locationPresenter;
@@ -78,4 +76,3 @@ public class LocationService extends Service implements AMapLocationListener{
         void getAMapLocation(AMapLocation aMapLocation);
     }
 }
-*/

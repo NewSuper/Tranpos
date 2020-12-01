@@ -24,6 +24,7 @@ import com.newsuper.t.consumer.function.top.adapter.ShopSortAdapter;
 import com.newsuper.t.consumer.utils.LogUtil;
 import com.newsuper.t.consumer.utils.SharedPreferencesUtil;
 import com.newsuper.t.consumer.utils.UIUtils;
+import com.newsuper.t.consumer.widget.defineTopView.WGridView;
 
 import java.util.ArrayList;
 import java.util.HashSet;

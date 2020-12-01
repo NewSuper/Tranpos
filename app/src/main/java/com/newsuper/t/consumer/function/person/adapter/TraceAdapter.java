@@ -12,27 +12,24 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.bean.TopBean;
-import com.xunjoy.lewaimai.consumer.bean.TraceBean;
-import com.xunjoy.lewaimai.consumer.bean.TraceChildBean;
-import com.xunjoy.lewaimai.consumer.bean.TraceGroupBean;
-import com.xunjoy.lewaimai.consumer.function.selectgoods.activity.SelectGoodsActivity3;
-import com.xunjoy.lewaimai.consumer.manager.RetrofitManager;
-import com.xunjoy.lewaimai.consumer.utils.FormatUtil;
-import com.xunjoy.lewaimai.consumer.utils.StringUtils;
-import com.xunjoy.lewaimai.consumer.utils.UIUtils;
-import com.xunjoy.lewaimai.consumer.widget.ActivityLabelLayout;
-import com.xunjoy.lewaimai.consumer.widget.NoticeTextView;
-import com.xunjoy.lewaimai.consumer.widget.RatingBar;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.bean.TraceBean;
+import com.newsuper.t.consumer.bean.TraceChildBean;
+import com.newsuper.t.consumer.bean.TraceGroupBean;
+import com.newsuper.t.consumer.function.selectgoods.activity.SelectGoodsActivity3;
+import com.newsuper.t.consumer.manager.RetrofitManager;
+import com.newsuper.t.consumer.utils.FormatUtil;
+import com.newsuper.t.consumer.utils.StringUtils;
+import com.newsuper.t.consumer.utils.UIUtils;
+import com.newsuper.t.consumer.widget.ActivityLabelLayout;
+import com.newsuper.t.consumer.widget.NoticeTextView;
+import com.newsuper.t.consumer.widget.RatingBar;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-
-import static com.xunjoy.lewaimai.consumer.utils.Const.STRING_DIVER;
 
 /**
  * Create by Administrator on 2019/4/26 0026

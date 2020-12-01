@@ -9,8 +9,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.Priority;
-//
-import com.xunjoy.lewaimai.consumer.R;
+import com.newsuper.t.R;
+
 import java.io.File;
 import java.util.List;
 import java.util.Map;

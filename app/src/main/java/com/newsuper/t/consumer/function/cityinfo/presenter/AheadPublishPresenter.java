@@ -2,17 +2,10 @@ package com.newsuper.t.consumer.function.cityinfo.presenter;
 
 import com.google.gson.Gson;
 import com.newsuper.t.consumer.bean.DefaultPublishInfo;
-import com.newsuper.t.consumer.bean.PublishDetailBean;
 import com.newsuper.t.consumer.function.cityinfo.internal.IGetDefaultInfo;
-import com.newsuper.t.consumer.function.cityinfo.internal.IPublishDetailView;
-import com.newsuper.t.consumer.function.cityinfo.request.PublishRequest;
 import com.newsuper.t.consumer.manager.HttpManager;
 import com.newsuper.t.consumer.manager.listener.HttpRequestListener;
-import com.newsuper.t.consumer.utils.Const;
-import com.newsuper.t.consumer.utils.RetrofitUtil;
-import com.newsuper.t.consumer.utils.UrlConst;
 
-import java.util.HashMap;
 import java.util.Map;
 
 /**

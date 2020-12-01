@@ -13,10 +13,10 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.bean.WTopBean;
-import com.xunjoy.lewaimai.consumer.function.selectgoods.inter.IGoodsToDetailPage;
-import com.xunjoy.lewaimai.consumer.utils.UIUtils;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.bean.WTopBean;
+import com.newsuper.t.consumer.function.selectgoods.inter.IGoodsToDetailPage;
+import com.newsuper.t.consumer.utils.UIUtils;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;

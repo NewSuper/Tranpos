@@ -9,8 +9,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.utils.StringUtils;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.utils.StringUtils;
 
 import java.util.ArrayList;
 

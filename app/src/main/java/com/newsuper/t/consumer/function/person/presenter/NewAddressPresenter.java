@@ -1,14 +1,14 @@
 package com.newsuper.t.consumer.function.person.presenter;
 
 import com.google.gson.Gson;
-import com.xunjoy.lewaimai.consumer.bean.AddressBean;
-import com.xunjoy.lewaimai.consumer.bean.DelAddressBean;
-import com.xunjoy.lewaimai.consumer.function.person.internal.IAddressView;
-import com.xunjoy.lewaimai.consumer.function.person.request.CollectionRequest;
-import com.xunjoy.lewaimai.consumer.function.person.request.DelAddressRequest;
-import com.xunjoy.lewaimai.consumer.function.person.request.NewddressRequest;
-import com.xunjoy.lewaimai.consumer.manager.HttpManager;
-import com.xunjoy.lewaimai.consumer.manager.listener.HttpRequestListener;
+import com.newsuper.t.consumer.bean.AddressBean;
+import com.newsuper.t.consumer.bean.DelAddressBean;
+import com.newsuper.t.consumer.function.person.internal.IAddressView;
+import com.newsuper.t.consumer.function.person.request.CollectionRequest;
+import com.newsuper.t.consumer.function.person.request.DelAddressRequest;
+import com.newsuper.t.consumer.function.person.request.NewddressRequest;
+import com.newsuper.t.consumer.manager.HttpManager;
+import com.newsuper.t.consumer.manager.listener.HttpRequestListener;
 
 import java.util.HashMap;
 import java.util.Map;

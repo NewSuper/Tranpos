@@ -11,22 +11,22 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.amap.api.maps.model.LatLng;
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.base.BaseActivity;
-import com.xunjoy.lewaimai.consumer.bean.AddressBean;
-import com.xunjoy.lewaimai.consumer.function.person.activity.NewAddressActivity;
-import com.xunjoy.lewaimai.consumer.function.selectgoods.adapter.AddressInRangeAdapter;
-import com.xunjoy.lewaimai.consumer.function.selectgoods.adapter.AddressOutRangeAdapter;
-import com.xunjoy.lewaimai.consumer.function.selectgoods.inter.ISelectAddressView;
-import com.xunjoy.lewaimai.consumer.function.selectgoods.presenter.SelectAddressPresenter;
-import com.xunjoy.lewaimai.consumer.manager.AddressManager;
-import com.xunjoy.lewaimai.consumer.utils.LogUtil;
-import com.xunjoy.lewaimai.consumer.utils.SharedPreferencesUtil;
-import com.xunjoy.lewaimai.consumer.utils.StringUtils;
-import com.xunjoy.lewaimai.consumer.utils.ToastUtil;
-import com.xunjoy.lewaimai.consumer.widget.CustomToolbar;
-import com.xunjoy.lewaimai.consumer.widget.ListViewForScrollView;
-import com.xunjoy.lewaimai.consumer.widget.LoadingAnimatorView;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.base.BaseActivity;
+import com.newsuper.t.consumer.bean.AddressBean;
+import com.newsuper.t.consumer.function.person.activity.NewAddressActivity;
+import com.newsuper.t.consumer.function.selectgoods.adapter.AddressInRangeAdapter;
+import com.newsuper.t.consumer.function.selectgoods.adapter.AddressOutRangeAdapter;
+import com.newsuper.t.consumer.function.selectgoods.inter.ISelectAddressView;
+import com.newsuper.t.consumer.function.selectgoods.presenter.SelectAddressPresenter;
+import com.newsuper.t.consumer.manager.AddressManager;
+import com.newsuper.t.consumer.utils.LogUtil;
+import com.newsuper.t.consumer.utils.SharedPreferencesUtil;
+import com.newsuper.t.consumer.utils.StringUtils;
+import com.newsuper.t.consumer.utils.ToastUtil;
+import com.newsuper.t.consumer.widget.CustomToolbar;
+import com.newsuper.t.consumer.widget.ListViewForScrollView;
+import com.newsuper.t.consumer.widget.LoadingAnimatorView;
 
 import java.util.ArrayList;
 

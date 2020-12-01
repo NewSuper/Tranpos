@@ -7,7 +7,7 @@ import com.newsuper.t.consumer.bean.LocationSearchBean;
 import com.newsuper.t.consumer.bean.ShopHistoryBean;
 
 import java.util.ArrayList;
-
+import com.amap.api.services.core.PoiItem;
 public class SharedPreferencesUtil {
     private static final String LAT_KEY = "lat";
     private static final String LNG_KEY = "lng";

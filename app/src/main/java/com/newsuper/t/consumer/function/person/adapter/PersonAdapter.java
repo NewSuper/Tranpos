@@ -13,8 +13,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.function.person.internal.PersonSelectListener;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.function.person.internal.PersonSelectListener;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -9,11 +9,11 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.bean.CommentBean.Comment;
-import com.xunjoy.lewaimai.consumer.function.selectgoods.inter.OnPhotoClickListener;
-import com.xunjoy.lewaimai.consumer.widget.MultiImageViewLayout;
-import com.xunjoy.lewaimai.consumer.widget.RatingBar;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.bean.CommentBean.Comment;
+import com.newsuper.t.consumer.function.selectgoods.inter.OnPhotoClickListener;
+import com.newsuper.t.consumer.widget.MultiImageViewLayout;
+import com.newsuper.t.consumer.widget.RatingBar;
 
 import java.util.ArrayList;
 import java.util.List;

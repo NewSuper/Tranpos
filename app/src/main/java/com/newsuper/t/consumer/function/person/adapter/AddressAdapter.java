@@ -12,12 +12,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.bean.AddressBean;
-import com.xunjoy.lewaimai.consumer.function.person.activity.MyAddressActivity;
-import com.xunjoy.lewaimai.consumer.function.person.activity.NewAddressActivity;
-import com.xunjoy.lewaimai.consumer.function.person.activity.SignActivity;
-import com.xunjoy.lewaimai.consumer.utils.UIUtils;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.bean.AddressBean;
+import com.newsuper.t.consumer.function.person.activity.MyAddressActivity;
+import com.newsuper.t.consumer.function.person.activity.NewAddressActivity;
+import com.newsuper.t.consumer.function.person.activity.SignActivity;
+import com.newsuper.t.consumer.utils.UIUtils;
 
 import java.util.ArrayList;
 

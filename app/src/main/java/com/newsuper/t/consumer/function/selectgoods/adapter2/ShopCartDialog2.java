@@ -11,15 +11,15 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.application.BaseApplication;
-import com.xunjoy.lewaimai.consumer.bean.GoodsListBean;
-import com.xunjoy.lewaimai.consumer.bean.ShopCart2;
-import com.xunjoy.lewaimai.consumer.function.selectgoods.adapter.DividerDecoration;
-import com.xunjoy.lewaimai.consumer.function.selectgoods.adapter.MyItemAnimator;
-import com.xunjoy.lewaimai.consumer.function.selectgoods.inter.IShopCart;
-import com.xunjoy.lewaimai.consumer.function.selectgoods.inter.IShopCartDialog;
-import com.xunjoy.lewaimai.consumer.widget.MaxHeightRecycleView;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.application.BaseApplication;
+import com.newsuper.t.consumer.bean.GoodsListBean;
+import com.newsuper.t.consumer.bean.ShopCart2;
+import com.newsuper.t.consumer.function.selectgoods.adapter.DividerDecoration;
+import com.newsuper.t.consumer.function.selectgoods.adapter.MyItemAnimator;
+import com.newsuper.t.consumer.function.selectgoods.inter.IShopCart;
+import com.newsuper.t.consumer.function.selectgoods.inter.IShopCartDialog;
+import com.newsuper.t.consumer.widget.MaxHeightRecycleView;
 
 public class ShopCartDialog2 extends Dialog implements View.OnClickListener,IShopCart {
 

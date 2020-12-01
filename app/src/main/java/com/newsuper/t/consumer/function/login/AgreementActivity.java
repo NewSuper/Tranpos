@@ -6,17 +6,16 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.widget.ProgressBar;
 
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.base.BaseActivity;
-import com.xunjoy.lewaimai.consumer.bean.AgreementBean;
-import com.xunjoy.lewaimai.consumer.function.login.internal.IAgreementView;
-import com.xunjoy.lewaimai.consumer.function.login.presenter.AgreementPresenter;
-import com.xunjoy.lewaimai.consumer.utils.Const;
-import com.xunjoy.lewaimai.consumer.utils.RetrofitUtil;
-import com.xunjoy.lewaimai.consumer.utils.SharedPreferencesUtil;
-import com.xunjoy.lewaimai.consumer.utils.StringUtils;
-import com.xunjoy.lewaimai.consumer.utils.ToastUtil;
-import com.xunjoy.lewaimai.consumer.widget.CustomToolbar;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.base.BaseActivity;
+import com.newsuper.t.consumer.bean.AgreementBean;
+import com.newsuper.t.consumer.function.login.internal.IAgreementView;
+import com.newsuper.t.consumer.function.login.presenter.AgreementPresenter;
+import com.newsuper.t.consumer.utils.Const;
+import com.newsuper.t.consumer.utils.RetrofitUtil;
+import com.newsuper.t.consumer.utils.StringUtils;
+import com.newsuper.t.consumer.utils.ToastUtil;
+import com.newsuper.t.consumer.widget.CustomToolbar;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

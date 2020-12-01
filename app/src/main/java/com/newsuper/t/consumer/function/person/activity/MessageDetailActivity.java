@@ -7,12 +7,12 @@ import android.widget.TextView;
 import com.tencent.smtt.sdk.WebSettings;
 import com.tencent.smtt.sdk.WebView;
 import com.tencent.smtt.sdk.WebViewClient;
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.base.BaseActivity;
-import com.xunjoy.lewaimai.consumer.bean.MsgDetailBean;
-import com.xunjoy.lewaimai.consumer.function.person.internal.IMessageDetailView;
-import com.xunjoy.lewaimai.consumer.function.person.presenter.MessageDetailPresenter;
-import com.xunjoy.lewaimai.consumer.widget.CustomToolbar;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.base.BaseActivity;
+import com.newsuper.t.consumer.bean.MsgDetailBean;
+import com.newsuper.t.consumer.function.person.internal.IMessageDetailView;
+import com.newsuper.t.consumer.function.person.presenter.MessageDetailPresenter;
+import com.newsuper.t.consumer.widget.CustomToolbar;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

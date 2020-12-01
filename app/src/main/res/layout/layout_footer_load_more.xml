@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/ll_root"
+    android:background="#EAEAEA"
+    android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_load_more"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="加载中..."
+            android:textColor="@color/text_color_82"
+            android:textSize="13sp"/>
+        <LinearLayout
+            android:id="@+id/ll_logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="150dp"
+            android:paddingBottom="80dp"
+            android:visibility="gone">
+                <include layout="@layout/layout_lewaimai_logo"/>
+        </LinearLayout>
+        <View
+            android:id="@+id/v_empty"
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:visibility="gone"/>
+</LinearLayout>

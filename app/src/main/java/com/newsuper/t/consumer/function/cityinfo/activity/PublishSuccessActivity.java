@@ -3,9 +3,9 @@ package com.newsuper.t.consumer.function.cityinfo.activity;
 import android.content.Intent;
 import android.view.View;
 import android.widget.TextView;
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.base.BaseActivity;
-import com.xunjoy.lewaimai.consumer.widget.CustomToolbar;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.base.BaseActivity;
+import com.newsuper.t.consumer.widget.CustomToolbar;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 

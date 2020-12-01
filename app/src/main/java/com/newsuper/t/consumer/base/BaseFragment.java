@@ -19,10 +19,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.squareup.leakcanary.RefWatcher;
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.application.BaseApplication;
-import com.xunjoy.lewaimai.consumer.function.top.avtivity.TopLocationActivity;
+//import com.squareup.leakcanary.RefWatcher;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.application.BaseApplication;
+import com.newsuper.t.consumer.function.top.avtivity.TopLocationActivity;
 
 public abstract class BaseFragment extends Fragment {
     protected boolean isFirstLoad; //第一次加载

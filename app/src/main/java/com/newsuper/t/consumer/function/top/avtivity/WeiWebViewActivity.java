@@ -14,13 +14,13 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.base.BaseActivity;
-import com.xunjoy.lewaimai.consumer.function.top.fragment.WeiWebFragment;
-import com.xunjoy.lewaimai.consumer.utils.LogUtil;
-import com.xunjoy.lewaimai.consumer.utils.SharedPreferencesUtil;
-import com.xunjoy.lewaimai.consumer.widget.CustomToolbar;
-import com.xunjoy.lewaimai.consumer.widget.LoadingDialog2;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.base.BaseActivity;
+import com.newsuper.t.consumer.function.top.fragment.WeiWebFragment;
+import com.newsuper.t.consumer.utils.LogUtil;
+import com.newsuper.t.consumer.utils.SharedPreferencesUtil;
+import com.newsuper.t.consumer.widget.CustomToolbar;
+import com.newsuper.t.consumer.widget.LoadingDialog2;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

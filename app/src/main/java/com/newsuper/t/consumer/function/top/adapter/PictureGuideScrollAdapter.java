@@ -13,12 +13,12 @@ import android.widget.TextView;
 
 import com.makeramen.roundedimageview.RoundedImageView;
 import com.squareup.picasso.Picasso;
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.bean.WTopBean;
-import com.xunjoy.lewaimai.consumer.manager.RetrofitManager;
-import com.xunjoy.lewaimai.consumer.utils.StringUtils;
-import com.xunjoy.lewaimai.consumer.utils.UIUtils;
-import com.xunjoy.lewaimai.consumer.widget.PictureGuideView;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.bean.WTopBean;
+import com.newsuper.t.consumer.manager.RetrofitManager;
+import com.newsuper.t.consumer.utils.StringUtils;
+import com.newsuper.t.consumer.utils.UIUtils;
+import com.newsuper.t.consumer.widget.PictureGuideView;
 
 import java.util.ArrayList;
 

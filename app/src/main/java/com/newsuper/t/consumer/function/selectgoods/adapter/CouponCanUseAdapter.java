@@ -15,12 +15,12 @@ import com.google.zxing.BarcodeFormat;
 import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.bean.ShoppingCartBean;
-import com.xunjoy.lewaimai.consumer.utils.FormatUtil;
-import com.xunjoy.lewaimai.consumer.utils.LogUtil;
-import com.xunjoy.lewaimai.consumer.widget.OvalImageView;
-import com.xunjoy.lewaimai.consumer.widget.expandablelayout.ExpandableLayout;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.bean.ShoppingCartBean;
+import com.newsuper.t.consumer.utils.FormatUtil;
+import com.newsuper.t.consumer.utils.LogUtil;
+import com.newsuper.t.consumer.widget.OvalImageView;
+import com.newsuper.t.consumer.widget.expandablelayout.ExpandableLayout;
 
 import java.util.ArrayList;
 import java.util.HashSet;

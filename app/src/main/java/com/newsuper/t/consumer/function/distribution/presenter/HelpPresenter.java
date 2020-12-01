@@ -1,7 +1,6 @@
 package com.newsuper.t.consumer.function.distribution.presenter;
 
 import com.google.gson.Gson;
-import com.newsuper.t.consumer.bean.CouponBean;
 import com.newsuper.t.consumer.bean.HelpBean;
 import com.newsuper.t.consumer.bean.PaotuiCouponBean;
 import com.newsuper.t.consumer.bean.PaotuiOrderBean;
@@ -13,7 +12,6 @@ import com.newsuper.t.consumer.utils.Const;
 import com.newsuper.t.consumer.utils.SharedPreferencesUtil;
 import com.newsuper.t.consumer.utils.UrlConst;
 
-import java.util.ArrayList;
 import java.util.Map;
 
 /**

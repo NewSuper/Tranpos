@@ -8,8 +8,8 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.amap.api.services.core.PoiItem;
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.bean.LocationSearchBean;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.bean.LocationSearchBean;
 
 import java.util.ArrayList;
 

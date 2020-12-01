@@ -1,7 +1,8 @@
 package com.newsuper.t.consumer.function.selectgoods.inter;
 
 import android.view.View;
-import com.xunjoy.lewaimai.consumer.bean.GoodsListBean;
+
+import com.newsuper.t.consumer.bean.GoodsListBean;
 
 
 public interface IShopCart {

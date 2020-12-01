@@ -1,12 +1,12 @@
 package com.newsuper.t.consumer.function.top.presenter;
 
 import com.google.gson.Gson;
-import com.xunjoy.lewaimai.consumer.bean.AddressBean;
-import com.xunjoy.lewaimai.consumer.function.top.internal.ITopLocationView;
-import com.xunjoy.lewaimai.consumer.function.top.request.TopRequest;
-import com.xunjoy.lewaimai.consumer.manager.HttpManager;
-import com.xunjoy.lewaimai.consumer.manager.listener.HttpRequestListener;
-import com.xunjoy.lewaimai.consumer.utils.UrlConst;
+import com.newsuper.t.consumer.bean.AddressBean;
+import com.newsuper.t.consumer.function.top.internal.ITopLocationView;
+import com.newsuper.t.consumer.function.top.request.TopRequest;
+import com.newsuper.t.consumer.manager.HttpManager;
+import com.newsuper.t.consumer.manager.listener.HttpRequestListener;
+import com.newsuper.t.consumer.utils.UrlConst;
 
 import java.util.Map;
 

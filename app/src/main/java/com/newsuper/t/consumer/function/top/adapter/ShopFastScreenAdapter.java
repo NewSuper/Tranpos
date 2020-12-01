@@ -8,10 +8,10 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.bean.TopBean;
-import com.xunjoy.lewaimai.consumer.utils.LogUtil;
-import com.xunjoy.lewaimai.consumer.utils.StringUtils;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.bean.TopBean;
+import com.newsuper.t.consumer.utils.LogUtil;
+import com.newsuper.t.consumer.utils.StringUtils;
 
 import java.util.ArrayList;
 import java.util.HashSet;

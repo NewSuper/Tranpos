@@ -1,6 +1,7 @@
 package com.newsuper.t.consumer.function.top.presenter;
 
-import com.xunjoy.lewaimai.consumer.function.top.internal.IMapView;
+
+import com.newsuper.t.consumer.function.top.internal.IMapView;
 
 /**
  * Created by Administrator on 2018/5/8 0008.

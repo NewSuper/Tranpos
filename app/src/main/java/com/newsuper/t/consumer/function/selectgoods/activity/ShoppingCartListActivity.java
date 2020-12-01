@@ -11,22 +11,22 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.application.BaseApplication;
-import com.xunjoy.lewaimai.consumer.base.BaseActivity;
-import com.xunjoy.lewaimai.consumer.bean.CartGoodsInfoBean;
-import com.xunjoy.lewaimai.consumer.bean.CartGoodsModel;
-import com.xunjoy.lewaimai.consumer.bean.GoodsListBean;
-import com.xunjoy.lewaimai.consumer.bean.ShopCartListBean;
-import com.xunjoy.lewaimai.consumer.function.selectgoods.adapter.CartGoodsLvAdapter;
-import com.xunjoy.lewaimai.consumer.function.selectgoods.inter.IShoppingCartListView;
-import com.xunjoy.lewaimai.consumer.function.selectgoods.presenter.ShoppingCartListPresenter;
-import com.xunjoy.lewaimai.consumer.utils.SharedPreferencesUtil;
-import com.xunjoy.lewaimai.consumer.utils.StringUtils;
-import com.xunjoy.lewaimai.consumer.utils.ToastUtil;
-import com.xunjoy.lewaimai.consumer.widget.CustomToolbar;
-import com.xunjoy.lewaimai.consumer.widget.ListViewForScrollView;
-import com.xunjoy.lewaimai.consumer.widget.LoadingAnimatorView;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.application.BaseApplication;
+import com.newsuper.t.consumer.base.BaseActivity;
+import com.newsuper.t.consumer.bean.CartGoodsInfoBean;
+import com.newsuper.t.consumer.bean.CartGoodsModel;
+import com.newsuper.t.consumer.bean.GoodsListBean;
+import com.newsuper.t.consumer.bean.ShopCartListBean;
+import com.newsuper.t.consumer.function.selectgoods.adapter.CartGoodsLvAdapter;
+import com.newsuper.t.consumer.function.selectgoods.inter.IShoppingCartListView;
+import com.newsuper.t.consumer.function.selectgoods.presenter.ShoppingCartListPresenter;
+import com.newsuper.t.consumer.utils.SharedPreferencesUtil;
+import com.newsuper.t.consumer.utils.StringUtils;
+import com.newsuper.t.consumer.utils.ToastUtil;
+import com.newsuper.t.consumer.widget.CustomToolbar;
+import com.newsuper.t.consumer.widget.ListViewForScrollView;
+import com.newsuper.t.consumer.widget.LoadingAnimatorView;
 
 import org.json.JSONArray;
 

@@ -1,12 +1,10 @@
 package com.newsuper.t.consumer.function.order.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.base.BaseActivity;
-import com.xunjoy.lewaimai.consumer.function.distribution.fragment.DistributionFragment;
-import com.xunjoy.lewaimai.consumer.function.order.fragment.OrderFragment;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.base.BaseActivity;
+import com.newsuper.t.consumer.function.order.fragment.OrderFragment;
 
 public class OrderListActivity extends BaseActivity {
 

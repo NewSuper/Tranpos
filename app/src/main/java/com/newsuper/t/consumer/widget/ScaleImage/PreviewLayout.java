@@ -20,8 +20,6 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
-import com.github.chrisbanes.photoview.PhotoView;
-import com.github.chrisbanes.photoview.PhotoViewAttacher;
 import com.newsuper.t.R;
 import com.newsuper.t.consumer.manager.RetrofitManager;
 import com.newsuper.t.consumer.widget.HackyViewPager;
@@ -29,6 +27,9 @@ import com.newsuper.t.consumer.widget.HackyViewPager;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import uk.co.senab.photoview.PhotoView;
+import uk.co.senab.photoview.PhotoViewAttacher;
 
 
 /**

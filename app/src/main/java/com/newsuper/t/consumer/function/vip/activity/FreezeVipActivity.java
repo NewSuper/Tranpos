@@ -16,17 +16,17 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.base.BaseActivity;
-import com.xunjoy.lewaimai.consumer.function.vip.inter.IFreezeVipView;
-import com.xunjoy.lewaimai.consumer.function.vip.presenter.FreezeVipPresenter;
-import com.xunjoy.lewaimai.consumer.manager.RetrofitManager;
-import com.xunjoy.lewaimai.consumer.utils.LogUtil;
-import com.xunjoy.lewaimai.consumer.utils.SharedPreferencesUtil;
-import com.xunjoy.lewaimai.consumer.utils.StringUtils;
-import com.xunjoy.lewaimai.consumer.utils.ToastUtil;
-import com.xunjoy.lewaimai.consumer.utils.UIUtils;
-import com.xunjoy.lewaimai.consumer.widget.CustomToolbar;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.base.BaseActivity;
+import com.newsuper.t.consumer.function.vip.inter.IFreezeVipView;
+import com.newsuper.t.consumer.function.vip.presenter.FreezeVipPresenter;
+import com.newsuper.t.consumer.manager.RetrofitManager;
+import com.newsuper.t.consumer.utils.LogUtil;
+import com.newsuper.t.consumer.utils.SharedPreferencesUtil;
+import com.newsuper.t.consumer.utils.StringUtils;
+import com.newsuper.t.consumer.utils.ToastUtil;
+import com.newsuper.t.consumer.utils.UIUtils;
+import com.newsuper.t.consumer.widget.CustomToolbar;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

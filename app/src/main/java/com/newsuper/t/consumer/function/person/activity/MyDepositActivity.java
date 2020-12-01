@@ -9,17 +9,17 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.base.BaseActivity;
-import com.xunjoy.lewaimai.consumer.bean.DepositBean;
-import com.xunjoy.lewaimai.consumer.function.person.adapter.DepositAdapter;
-import com.xunjoy.lewaimai.consumer.function.person.internal.IDepositView;
-import com.xunjoy.lewaimai.consumer.function.person.presenter.DepositPresenter;
-import com.xunjoy.lewaimai.consumer.function.person.request.DepositRequest;
-import com.xunjoy.lewaimai.consumer.utils.SharedPreferencesUtil;
-import com.xunjoy.lewaimai.consumer.utils.UrlConst;
-import com.xunjoy.lewaimai.consumer.widget.CustomToolbar;
-import com.xunjoy.lewaimai.consumer.widget.LoadingAnimatorView;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.base.BaseActivity;
+import com.newsuper.t.consumer.bean.DepositBean;
+import com.newsuper.t.consumer.function.person.adapter.DepositAdapter;
+import com.newsuper.t.consumer.function.person.internal.IDepositView;
+import com.newsuper.t.consumer.function.person.presenter.DepositPresenter;
+import com.newsuper.t.consumer.function.person.request.DepositRequest;
+import com.newsuper.t.consumer.utils.SharedPreferencesUtil;
+import com.newsuper.t.consumer.utils.UrlConst;
+import com.newsuper.t.consumer.widget.CustomToolbar;
+import com.newsuper.t.consumer.widget.LoadingAnimatorView;
 
 import java.util.ArrayList;
 import java.util.HashMap;

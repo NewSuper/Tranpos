@@ -17,6 +17,7 @@ import com.newsuper.t.consumer.function.selectgoods.inter.IGoodsToDetailPage;
 import com.newsuper.t.consumer.function.selectgoods.inter.IWShopCart;
 import com.newsuper.t.consumer.utils.FormatUtil;
 import com.newsuper.t.consumer.utils.MemberUtil;
+import com.newsuper.t.consumer.utils.StringUtils;
 import com.newsuper.t.consumer.utils.UIUtils;
 
 import java.text.DecimalFormat;

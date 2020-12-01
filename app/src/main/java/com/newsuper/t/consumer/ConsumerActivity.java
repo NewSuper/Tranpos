@@ -5,11 +5,13 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.os.Build;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
@@ -23,7 +25,6 @@ import com.google.gson.Gson;
 import android.Manifest;
 import com.newsuper.t.R;
 import com.newsuper.t.consumer.application.BaseApplication;
-import com.newsuper.t.consumer.base.BaseActivity;
 import com.newsuper.t.consumer.bean.GrayBean;
 import com.newsuper.t.consumer.function.GuideActivity;
 import com.newsuper.t.consumer.function.TopActivity3;
@@ -43,7 +44,7 @@ import java.util.HashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class ConsumerActivity extends BaseActivity implements View.OnClickListener{
+public class ConsumerActivity extends AppCompatActivity implements View.OnClickListener{
     private Handler handler = new Handler(){
         @Override
         public void handleMessage(Message msg) {
@@ -63,13 +64,11 @@ public class ConsumerActivity extends BaseActivity implements View.OnClickListen
     };
     private static final int time = 2 * 1000;
 
-    @Override
-    public void initData() {
 
-    }
     @Override
-    public void initView() {
-        setContentView( R.layout.activity_consumer_main);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
         fullScreen();
         SharedPreferencesUtil.saveAdminId(Const.ADMIN_ID);
         LogUtil.log("MainActivity_APP_ID","app_id == "+Const.ADMIN_ID);
@@ -93,20 +92,6 @@ public class ConsumerActivity extends BaseActivity implements View.OnClickListen
                     2000);
         }else {
             comeIn();
-        }
-    }
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.tv_no:
-                dialog.dismiss();
-                goNextActivity();
-                break;
-            case R.id.tv_yes:
-                dialog.dismiss();
-                SharedPreferencesUtil.isAgree(true);
-                goNextActivity();
-                break;
         }
     }
     private void comeIn(){
@@ -177,9 +162,9 @@ public class ConsumerActivity extends BaseActivity implements View.OnClickListen
      */
     private void fullScreen() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            Window window = getWindow();
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 //5.x开始需要把颜色设置透明，否则导航栏会呈现系统默认的浅灰色
-                Window window = getWindow();
                 View decorView = window.getDecorView();
                 //两个 flag 要结合使用，表示让应用的主体内容占用系统状态栏的空间
                 int option = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
@@ -190,7 +175,6 @@ public class ConsumerActivity extends BaseActivity implements View.OnClickListen
                 //导航栏颜色也可以正常设置
 //                window.setNavigationBarColor(Color.TRANSPARENT);
             } else {
-                Window window = getWindow();
                 WindowManager.LayoutParams attributes = window.getAttributes();
                 int flagTranslucentStatus = WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS;
                 attributes.flags |= flagTranslucentStatus;
@@ -253,8 +237,6 @@ public class ConsumerActivity extends BaseActivity implements View.OnClickListen
             dialog.setCancelable(false);
         }
         dialog.show();
-
-
     }
 
     public  void setTextHighLightWithClick(TextView tv, String text, String keyWord,String keyWord2, View.OnClickListener listener,View.OnClickListener listener2){
@@ -264,7 +246,6 @@ public class ConsumerActivity extends BaseActivity implements View.OnClickListen
         SpannableString s = new SpannableString(text);
         Pattern p = Pattern.compile(keyWord);
         Matcher m = p.matcher(s);
-
         while (m.find()){
             int start = m.start();
             int end = m.end();
@@ -277,9 +258,23 @@ public class ConsumerActivity extends BaseActivity implements View.OnClickListen
             int end = m2.end();
             s.setSpan(new MyClickSpan(ContextCompat.getColor(this,R.color.theme_red),listener2), start, end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         }
+
         tv.setText(s);
 
     }
-
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.tv_no:
+                dialog.dismiss();
+                goNextActivity();
+                break;
+            case R.id.tv_yes:
+                dialog.dismiss();
+                SharedPreferencesUtil.isAgree(true);
+                goNextActivity();
+                break;
+        }
+    }
 }
 

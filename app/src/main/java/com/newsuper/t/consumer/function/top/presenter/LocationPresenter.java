@@ -13,10 +13,10 @@ import com.amap.api.services.geocoder.GeocodeSearch;
 import com.amap.api.services.geocoder.RegeocodeQuery;
 import com.amap.api.services.poisearch.PoiResult;
 import com.amap.api.services.poisearch.PoiSearch;
-import com.xunjoy.lewaimai.consumer.function.db.City;
-import com.xunjoy.lewaimai.consumer.function.db.DBManager;
-import com.xunjoy.lewaimai.consumer.utils.LogUtil;
-import com.xunjoy.lewaimai.consumer.utils.SharedPreferencesUtil;
+import com.newsuper.t.consumer.function.db.City;
+import com.newsuper.t.consumer.function.db.DBManager;
+import com.newsuper.t.consumer.utils.LogUtil;
+import com.newsuper.t.consumer.utils.SharedPreferencesUtil;
 
 import java.util.List;
 

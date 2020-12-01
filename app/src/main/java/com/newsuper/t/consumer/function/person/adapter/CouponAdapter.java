@@ -15,9 +15,9 @@ import com.google.zxing.BarcodeFormat;
 import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.bean.CouponBean;
-import com.xunjoy.lewaimai.consumer.widget.expandablelayout.ExpandableLayout;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.bean.CouponBean;
+import com.newsuper.t.consumer.widget.expandablelayout.ExpandableLayout;
 
 import java.util.ArrayList;
 import java.util.HashSet;

@@ -1,5 +1,7 @@
 <resources>
+
     <string name="app_name" translatable="false">tcode</string>
+    <string name="share_scheme">consumer</string>
     <string name="login_agreement" translatable="false">“使用协议和隐私政策”</string>
     <string name="login_agree_to_a_deal" translatable="false">登录/注册表示同意</string>
     <string name="login_edt_phone" translatable="false">请输入11位手机号</string>

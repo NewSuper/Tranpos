@@ -1,13 +1,8 @@
 package com.newsuper.t.consumer.function.top.adapter;
 
-import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.util.DiffUtil;
 import android.support.v7.widget.RecyclerView;
-import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,25 +10,21 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
 //
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.bean.TopBean;
-import com.xunjoy.lewaimai.consumer.manager.RetrofitManager;
-import com.xunjoy.lewaimai.consumer.utils.Const;
-import com.xunjoy.lewaimai.consumer.utils.FormatUtil;
-import com.xunjoy.lewaimai.consumer.utils.SharedPreferencesUtil;
-import com.xunjoy.lewaimai.consumer.utils.StringUtils;
-import com.xunjoy.lewaimai.consumer.utils.UIUtils;
-import com.xunjoy.lewaimai.consumer.widget.ActivityLabelLayout;
-import com.xunjoy.lewaimai.consumer.widget.NoticeTextView;
-import com.xunjoy.lewaimai.consumer.widget.RatingBar;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.bean.TopBean;
+import com.newsuper.t.consumer.manager.RetrofitManager;
+import com.newsuper.t.consumer.utils.FormatUtil;
+import com.newsuper.t.consumer.utils.StringUtils;
+import com.newsuper.t.consumer.utils.UIUtils;
+import com.newsuper.t.consumer.widget.ActivityLabelLayout;
+import com.newsuper.t.consumer.widget.NoticeTextView;
+import com.newsuper.t.consumer.widget.RatingBar;
 
 import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import static com.xunjoy.lewaimai.consumer.utils.Const.STRING_DIVER;
 
 
 /**

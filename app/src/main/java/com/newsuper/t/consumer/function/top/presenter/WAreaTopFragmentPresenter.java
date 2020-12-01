@@ -7,17 +7,17 @@ import android.util.Log;
 
 import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
-import com.xunjoy.lewaimai.consumer.bean.GetCouponBean;
-import com.xunjoy.lewaimai.consumer.bean.TopBean;
-import com.xunjoy.lewaimai.consumer.bean.WTopBean;
-import com.xunjoy.lewaimai.consumer.function.top.internal.IWTopFragmentView;
-import com.xunjoy.lewaimai.consumer.function.top.request.TopRequest;
-import com.xunjoy.lewaimai.consumer.manager.HttpManager;
-import com.xunjoy.lewaimai.consumer.manager.listener.HttpRequestListener;
-import com.xunjoy.lewaimai.consumer.utils.LogUtil;
-import com.xunjoy.lewaimai.consumer.utils.RetrofitUtil;
-import com.xunjoy.lewaimai.consumer.utils.SharedPreferencesUtil;
-import com.xunjoy.lewaimai.consumer.utils.UrlConst;
+import com.newsuper.t.consumer.bean.GetCouponBean;
+import com.newsuper.t.consumer.bean.TopBean;
+import com.newsuper.t.consumer.bean.WTopBean;
+import com.newsuper.t.consumer.function.top.internal.IWTopFragmentView;
+import com.newsuper.t.consumer.function.top.request.TopRequest;
+import com.newsuper.t.consumer.manager.HttpManager;
+import com.newsuper.t.consumer.manager.listener.HttpRequestListener;
+import com.newsuper.t.consumer.utils.LogUtil;
+import com.newsuper.t.consumer.utils.RetrofitUtil;
+import com.newsuper.t.consumer.utils.SharedPreferencesUtil;
+import com.newsuper.t.consumer.utils.UrlConst;
 
 import java.util.ArrayList;
 import java.util.Collections;

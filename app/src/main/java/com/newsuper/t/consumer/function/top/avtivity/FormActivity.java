@@ -2,9 +2,9 @@ package com.newsuper.t.consumer.function.top.avtivity;
 
 import android.os.Bundle;
 
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.base.BaseActivity;
-import com.xunjoy.lewaimai.consumer.function.top.fragment.FormFragment;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.base.BaseActivity;
+import com.newsuper.t.consumer.function.top.fragment.FormFragment;
 
 public class FormActivity extends BaseActivity {
     @Override

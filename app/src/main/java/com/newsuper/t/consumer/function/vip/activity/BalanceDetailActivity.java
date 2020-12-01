@@ -7,16 +7,16 @@ import android.widget.AbsListView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.base.BaseActivity;
-import com.xunjoy.lewaimai.consumer.bean.BalanceDetailBean;
-import com.xunjoy.lewaimai.consumer.function.vip.adapter.BalanceAdapter;
-import com.xunjoy.lewaimai.consumer.function.vip.inter.IBalanceDetail;
-import com.xunjoy.lewaimai.consumer.function.vip.presenter.BalanceDetailPresenter;
-import com.xunjoy.lewaimai.consumer.utils.SharedPreferencesUtil;
-import com.xunjoy.lewaimai.consumer.utils.ToastUtil;
-import com.xunjoy.lewaimai.consumer.widget.CustomToolbar;
-import com.xunjoy.lewaimai.consumer.widget.LoadingAnimatorView;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.base.BaseActivity;
+import com.newsuper.t.consumer.bean.BalanceDetailBean;
+import com.newsuper.t.consumer.function.vip.adapter.BalanceAdapter;
+import com.newsuper.t.consumer.function.vip.inter.IBalanceDetail;
+import com.newsuper.t.consumer.function.vip.presenter.BalanceDetailPresenter;
+import com.newsuper.t.consumer.utils.SharedPreferencesUtil;
+import com.newsuper.t.consumer.utils.ToastUtil;
+import com.newsuper.t.consumer.widget.CustomToolbar;
+import com.newsuper.t.consumer.widget.LoadingAnimatorView;
 
 import java.util.ArrayList;
 

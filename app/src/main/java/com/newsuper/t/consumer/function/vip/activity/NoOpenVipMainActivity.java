@@ -12,17 +12,17 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.base.BaseActivity;
-import com.xunjoy.lewaimai.consumer.bean.VipInfoBean;
-import com.xunjoy.lewaimai.consumer.bean.VipTopInfoBean;
-import com.xunjoy.lewaimai.consumer.function.vip.inter.IVipInfoView;
-import com.xunjoy.lewaimai.consumer.function.vip.presenter.VipTopInfoPresenter;
-import com.xunjoy.lewaimai.consumer.utils.Const;
-import com.xunjoy.lewaimai.consumer.utils.SharedPreferencesUtil;
-import com.xunjoy.lewaimai.consumer.utils.UIUtils;
-import com.xunjoy.lewaimai.consumer.widget.CustomToolbar;
-import com.xunjoy.lewaimai.consumer.widget.RefreshThirdStepView;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.base.BaseActivity;
+import com.newsuper.t.consumer.bean.VipInfoBean;
+import com.newsuper.t.consumer.bean.VipTopInfoBean;
+import com.newsuper.t.consumer.function.vip.inter.IVipInfoView;
+import com.newsuper.t.consumer.function.vip.presenter.VipTopInfoPresenter;
+import com.newsuper.t.consumer.utils.Const;
+import com.newsuper.t.consumer.utils.SharedPreferencesUtil;
+import com.newsuper.t.consumer.utils.UIUtils;
+import com.newsuper.t.consumer.widget.CustomToolbar;
+import com.newsuper.t.consumer.widget.RefreshThirdStepView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

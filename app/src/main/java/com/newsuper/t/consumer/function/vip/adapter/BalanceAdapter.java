@@ -9,9 +9,9 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.bean.BalanceDetailBean;
-import com.xunjoy.lewaimai.consumer.utils.FormatUtil;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.bean.BalanceDetailBean;
+import com.newsuper.t.consumer.utils.FormatUtil;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;

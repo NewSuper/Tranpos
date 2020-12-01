@@ -4,16 +4,16 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import com.google.gson.Gson;
-import com.xunjoy.lewaimai.consumer.application.BaseApplication;
-import com.xunjoy.lewaimai.consumer.bean.CartGoodsModel;
-import com.xunjoy.lewaimai.consumer.bean.GoodsListBean;
-import com.xunjoy.lewaimai.consumer.bean.ShopCartListBean;
-import com.xunjoy.lewaimai.consumer.function.selectgoods.inter.IShoppingCartListView;
-import com.xunjoy.lewaimai.consumer.function.selectgoods.request.ShopInfoRequest;
-import com.xunjoy.lewaimai.consumer.manager.GreenDaoManager;
-import com.xunjoy.lewaimai.consumer.manager.HttpManager;
-import com.xunjoy.lewaimai.consumer.manager.listener.HttpRequestListener;
-import com.xunjoy.lewaimai.consumer.utils.UrlConst;
+import com.newsuper.t.consumer.application.BaseApplication;
+import com.newsuper.t.consumer.bean.CartGoodsModel;
+import com.newsuper.t.consumer.bean.GoodsListBean;
+import com.newsuper.t.consumer.bean.ShopCartListBean;
+import com.newsuper.t.consumer.function.selectgoods.inter.IShoppingCartListView;
+import com.newsuper.t.consumer.function.selectgoods.request.ShopInfoRequest;
+import com.newsuper.t.consumer.manager.GreenDaoManager;
+import com.newsuper.t.consumer.manager.HttpManager;
+import com.newsuper.t.consumer.manager.listener.HttpRequestListener;
+import com.newsuper.t.consumer.utils.UrlConst;
 
 import org.json.JSONArray;
 

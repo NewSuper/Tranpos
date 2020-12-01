@@ -7,14 +7,14 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.base.BaseActivity;
-import com.xunjoy.lewaimai.consumer.bean.MsgCenterBean;
-import com.xunjoy.lewaimai.consumer.function.person.adapter.MessageAdapter;
-import com.xunjoy.lewaimai.consumer.function.person.internal.IMessageCenterView;
-import com.xunjoy.lewaimai.consumer.function.person.presenter.MessageCenterPresenter;
-import com.xunjoy.lewaimai.consumer.utils.ToastUtil;
-import com.xunjoy.lewaimai.consumer.widget.CustomToolbar;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.base.BaseActivity;
+import com.newsuper.t.consumer.bean.MsgCenterBean;
+import com.newsuper.t.consumer.function.person.adapter.MessageAdapter;
+import com.newsuper.t.consumer.function.person.internal.IMessageCenterView;
+import com.newsuper.t.consumer.function.person.presenter.MessageCenterPresenter;
+import com.newsuper.t.consumer.utils.ToastUtil;
+import com.newsuper.t.consumer.widget.CustomToolbar;
 
 import java.util.ArrayList;
 

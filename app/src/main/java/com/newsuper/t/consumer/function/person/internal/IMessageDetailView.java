@@ -1,7 +1,7 @@
 package com.newsuper.t.consumer.function.person.internal;
 
-import com.xunjoy.lewaimai.consumer.bean.MsgDetailBean;
-import com.xunjoy.lewaimai.consumer.function.top.internal.IBaseView;
+import com.newsuper.t.consumer.bean.MsgDetailBean;
+import com.newsuper.t.consumer.function.top.internal.IBaseView;
 
 /**
  * Created by Administrator on 2018/7/24 0024.

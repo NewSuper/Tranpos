@@ -1,65 +1,57 @@
-/*
 package com.newsuper.t.consumer.service;
 
-import android.Manifest;
 import android.app.ActivityManager;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
-import android.app.Service;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
-import android.media.AudioManager;
 import android.net.Uri;
 import android.os.Build;
-import android.os.IBinder;
-import android.os.Message;
-import android.os.Vibrator;
 import android.provider.Settings;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.NotificationCompat;
-import android.support.v7.app.AlertDialog;
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.SoundEffectConstants;
-import android.view.View;
-import android.view.WindowManager;
-import android.widget.TextView;
 
 import com.google.gson.Gson;
-
-
-import org.json.JSONException;
-import org.json.JSONObject;
+import com.igexin.sdk.GTIntentService;
+import com.igexin.sdk.PushConsts;
+import com.igexin.sdk.PushManager;
+import com.igexin.sdk.message.FeedbackCmdMessage;
+import com.igexin.sdk.message.GTCmdMessage;
+import com.igexin.sdk.message.GTNotificationMessage;
+import com.igexin.sdk.message.GTTransmitMessage;
+import com.igexin.sdk.message.SetTagCmdMessage;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.bean.GetuiBean;
+import com.newsuper.t.consumer.function.TopActivity3;
+import com.newsuper.t.consumer.function.order.activity.MyOrderActivity;
+import com.newsuper.t.consumer.function.person.activity.MessageCenterActivity;
+import com.newsuper.t.consumer.function.person.activity.MyCouponActivity;
+import com.newsuper.t.consumer.utils.Const;
+import com.newsuper.t.consumer.utils.LogUtil;
+import com.newsuper.t.consumer.utils.SharedPreferencesUtil;
+import com.newsuper.t.consumer.utils.StringUtils;
 
 import java.util.List;
 
-import static android.media.AudioManager.RINGER_MODE_VIBRATE;
-//import static com.xunjoy.lewaimai.consumer.utils.Const.BROADCAST_ACTION_ORDER;
-
-*/
 /**
  * 继承 GTIntentService 接收来自个推的消息, 所有消息在线程中回调, 如果注册了该服务, 则务必要在 AndroidManifest中声明, 否则无法接受消息<br>
  * onReceiveMessageData 处理透传消息<br>
  * onReceiveClientId 接收 cid <br>
  * onReceiveOnlineState cid 离线上线通知 <br>
  * onReceiveCommandResult 各种事件处理回执 <br>
- *//*
-
+ */
 
 public class GeTuiIntentService extends GTIntentService {
     private static final String TAG = "GetuiSdkDemo";
     public static final String channel_id = "channel_1";
     public static final String channel_name = "channel_name_1";
 
-    */
-/**
+    /**
      * 为了观察透传数据变化.
-     *//*
-
+     */
     private static int cnt;
     public GeTuiIntentService() {
 
@@ -263,12 +255,10 @@ public class GeTuiIntentService extends GTIntentService {
 
 
     private void showNotification(Context context,String title,String content,String order_id,String order_no){
-     */
-/*   DEFAULT_ALL                  使用所有默认值，比如声音，震动，闪屏等等
+     /*   DEFAULT_ALL                  使用所有默认值，比如声音，震动，闪屏等等
         DEFAULT_LIGHTS            使用默认闪光提示
         DEFAULT_SOUNDS         使用默认提示声音
-        DEFAULT_VIBRATE         使用默认手机震动*//*
-
+        DEFAULT_VIBRATE         使用默认手机震动*/
         Intent []in = makeIntentStack(context,order_id,order_no);
         PendingIntent contentIntent = PendingIntent.getActivities(context, 0 ,in ,PendingIntent.FLAG_UPDATE_CURRENT);
         NotificationManager manager = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
@@ -381,12 +371,10 @@ public class GeTuiIntentService extends GTIntentService {
             builder1.setContentText(content);
             builder1.setTicker(title);
 
-         */
-/*   DEFAULT_ALL                  使用所有默认值，比如声音，震动，闪屏等等
+         /*   DEFAULT_ALL                  使用所有默认值，比如声音，震动，闪屏等等
         DEFAULT_LIGHTS            使用默认闪光提示
         DEFAULT_SOUNDS         使用默认提示声音
-        DEFAULT_VIBRATE         使用默认手机震动*//*
-
+        DEFAULT_VIBRATE         使用默认手机震动*/
             // 设置显示通知时的默认的发声、振动、Light效果
             if (SharedPreferencesUtil.getShake() && SharedPreferencesUtil.getVoice()){
                 LogUtil.log("GetuiSdkDemo","使用所有默认值，比如声音，震动，闪屏 ");
@@ -453,12 +441,10 @@ public class GeTuiIntentService extends GTIntentService {
             builder1.setContentText(content);
             builder1.setTicker(title);
 
-         */
-/*   DEFAULT_ALL                  使用所有默认值，比如声音，震动，闪屏等等
+         /*   DEFAULT_ALL                  使用所有默认值，比如声音，震动，闪屏等等
         DEFAULT_LIGHTS            使用默认闪光提示
         DEFAULT_SOUNDS         使用默认提示声音
-        DEFAULT_VIBRATE         使用默认手机震动*//*
-
+        DEFAULT_VIBRATE         使用默认手机震动*/
             // 设置显示通知时的默认的发声、振动、Light效果
             if (SharedPreferencesUtil.getShake() && SharedPreferencesUtil.getVoice()){
                 LogUtil.log("GetuiSdkDemo","使用所有默认值，比如声音，震动，闪屏 ");
@@ -539,4 +525,4 @@ public class GeTuiIntentService extends GTIntentService {
         super.onDestroy();
     }
 
-}*/
+}

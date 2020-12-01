@@ -18,15 +18,15 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
 //
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.bean.GoodsListBean;
-import com.xunjoy.lewaimai.consumer.bean.WShopCart2;
-import com.xunjoy.lewaimai.consumer.function.selectgoods.inter.IGoodsToDetailPage;
-import com.xunjoy.lewaimai.consumer.function.selectgoods.inter.IWShopCart;
-import com.xunjoy.lewaimai.consumer.utils.FormatUtil;
-import com.xunjoy.lewaimai.consumer.utils.MemberUtil;
-import com.xunjoy.lewaimai.consumer.utils.StringUtils;
-import com.xunjoy.lewaimai.consumer.utils.UIUtils;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.bean.GoodsListBean;
+import com.newsuper.t.consumer.bean.WShopCart2;
+import com.newsuper.t.consumer.function.selectgoods.inter.IGoodsToDetailPage;
+import com.newsuper.t.consumer.function.selectgoods.inter.IWShopCart;
+import com.newsuper.t.consumer.utils.FormatUtil;
+import com.newsuper.t.consumer.utils.MemberUtil;
+import com.newsuper.t.consumer.utils.StringUtils;
+import com.newsuper.t.consumer.utils.UIUtils;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;

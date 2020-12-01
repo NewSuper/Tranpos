@@ -17,11 +17,13 @@ import android.widget.ImageView;
 
 import com.newsuper.t.R;
 import com.newsuper.t.consumer.application.BaseApplication;
+import com.tencent.connect.share.QQShare;
 import com.tencent.mm.opensdk.modelmsg.SendMessageToWX;
 import com.tencent.mm.opensdk.modelmsg.WXMediaMessage;
 import com.tencent.mm.opensdk.modelmsg.WXTextObject;
 import com.tencent.mm.opensdk.modelmsg.WXWebpageObject;
 import com.tencent.mm.opensdk.openapi.IWXAPI;
+import com.tencent.tauth.Tencent;
 
 
 import java.io.BufferedInputStream;
@@ -190,19 +192,19 @@ public class ShareUtils {
         }
     }
 
-//    public static void QQshare(Tencent mTencent, Activity activity,String title,String url,String content,String imageUrl) {
-//        //分享类型
-//        final Bundle params = new Bundle();
-//        params.putInt(QQShare.SHARE_TO_QQ_KEY_TYPE, QQShare.SHARE_TO_QQ_TYPE_DEFAULT);
-//        params.putString(QQShare.SHARE_TO_QQ_TITLE,title);
-//        params.putString(QQShare.SHARE_TO_QQ_TARGET_URL,url);
-//        params.putString(QQShare.SHARE_TO_QQ_SUMMARY, content);
-//        params.putString(QQShare.SHARE_TO_QQ_IMAGE_URL,imageUrl);
-//        params.putString(QQShare.SHARE_TO_QQ_APP_NAME, "乐外卖");
-//        if (mTencent != null) {
-//            mTencent.shareToQQ(activity, params, null);
-//        }
-//    }
+    public static void QQshare(Tencent mTencent, Activity activity, String title, String url, String content, String imageUrl) {
+        //分享类型
+        final Bundle params = new Bundle();
+        params.putInt(QQShare.SHARE_TO_QQ_KEY_TYPE, QQShare.SHARE_TO_QQ_TYPE_DEFAULT);
+        params.putString(QQShare.SHARE_TO_QQ_TITLE,title);
+        params.putString(QQShare.SHARE_TO_QQ_TARGET_URL,url);
+        params.putString(QQShare.SHARE_TO_QQ_SUMMARY, content);
+        params.putString(QQShare.SHARE_TO_QQ_IMAGE_URL,imageUrl);
+        params.putString(QQShare.SHARE_TO_QQ_APP_NAME, "乐外卖");
+        if (mTencent != null) {
+            mTencent.shareToQQ(activity, params, null);
+        }
+    }
 
     /**
      * 把Bitmap转Byte

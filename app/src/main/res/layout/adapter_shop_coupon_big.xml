@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/rl_coupon_1"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@mipmap/coupon_bg_white_big">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="3.7"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_coupon_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/theme_red"
+                android:textSize="18sp"
+                android:text="￥10"/>
+            <TextView
+                android:id="@+id/tv_coupon_limit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/theme_red"
+                android:textSize="10sp"
+                android:text="￥10 店铺"/>
+            <TextView
+                android:id="@+id/tv_coupon_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/theme_red"
+                android:textSize="9sp"
+                android:text="￥10 店铺"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_coupon_status"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/theme_red"
+            android:textSize="13sp"
+            android:text="领"/>
+    </LinearLayout>
+</LinearLayout>

@@ -4,7 +4,6 @@ import com.google.gson.Gson;
 import com.newsuper.t.consumer.bean.PaoTuiBean;
 import com.newsuper.t.consumer.function.distribution.internal.IDistributionView;
 import com.newsuper.t.consumer.function.distribution.request.DistributionRequest;
-import com.newsuper.t.consumer.function.top.request.TopRequest;
 import com.newsuper.t.consumer.manager.HttpManager;
 import com.newsuper.t.consumer.manager.listener.HttpRequestListener;
 import com.newsuper.t.consumer.utils.Const;

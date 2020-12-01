@@ -5,7 +5,6 @@ import com.newsuper.t.consumer.bean.PublishDetailBean;
 import com.newsuper.t.consumer.function.cityinfo.internal.IPublishDetailView;
 import com.newsuper.t.consumer.function.cityinfo.request.PublishRequest;
 import com.newsuper.t.consumer.manager.HttpManager;
-import com.newsuper.t.consumer.manager.RetrofitManager;
 import com.newsuper.t.consumer.manager.listener.HttpRequestListener;
 import com.newsuper.t.consumer.utils.Const;
 import com.newsuper.t.consumer.utils.RetrofitUtil;

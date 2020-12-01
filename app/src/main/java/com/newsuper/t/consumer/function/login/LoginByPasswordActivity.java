@@ -11,17 +11,17 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.igexin.sdk.PushManager;
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.base.BaseActivity;
-import com.xunjoy.lewaimai.consumer.bean.CustomerInfoBean;
-import com.xunjoy.lewaimai.consumer.function.login.internal.ILoginView;
-import com.xunjoy.lewaimai.consumer.function.login.presenter.LoginPresenter;
-import com.xunjoy.lewaimai.consumer.utils.SharedPreferencesUtil;
-import com.xunjoy.lewaimai.consumer.utils.StringUtils;
-import com.xunjoy.lewaimai.consumer.utils.ToastUtil;
-import com.xunjoy.lewaimai.consumer.widget.CustomToolbar;
-import com.xunjoy.lewaimai.consumer.widget.LoadingDialog2;
+//import com.igexin.sdk.PushManager;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.base.BaseActivity;
+import com.newsuper.t.consumer.bean.CustomerInfoBean;
+import com.newsuper.t.consumer.function.login.internal.ILoginView;
+import com.newsuper.t.consumer.function.login.presenter.LoginPresenter;
+import com.newsuper.t.consumer.utils.SharedPreferencesUtil;
+import com.newsuper.t.consumer.utils.StringUtils;
+import com.newsuper.t.consumer.utils.ToastUtil;
+import com.newsuper.t.consumer.widget.CustomToolbar;
+import com.newsuper.t.consumer.widget.LoadingDialog2;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -201,7 +201,7 @@ public class LoginByPasswordActivity extends BaseActivity implements View.OnClic
     @Override
     public void loginSuccess(String token,String bind) {
         if (!StringUtils.isEmpty(token)){
-            PushManager.getInstance().bindAlias(this, SharedPreferencesUtil.getUserId());
+        //    PushManager.getInstance().bindAlias(this, SharedPreferencesUtil.getUserId());
             SharedPreferencesUtil.saveToken(token);
             new Handler().postDelayed(new Runnable() {
                 @Override

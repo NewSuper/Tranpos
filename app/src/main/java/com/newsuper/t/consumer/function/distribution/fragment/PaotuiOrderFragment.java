@@ -36,8 +36,6 @@ import com.newsuper.t.consumer.utils.StringUtils;
 import com.newsuper.t.consumer.utils.UIUtils;
 import com.newsuper.t.consumer.widget.CustomToolbar;
 
-import java.net.Socket;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 

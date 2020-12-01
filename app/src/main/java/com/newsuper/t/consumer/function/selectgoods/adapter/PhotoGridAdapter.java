@@ -9,11 +9,11 @@ import android.widget.ImageView;
 
 //
 import com.squareup.picasso.Picasso;
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.function.selectgoods.inter.OnPhotoClickListener;
-import com.xunjoy.lewaimai.consumer.manager.RetrofitManager;
-import com.xunjoy.lewaimai.consumer.utils.StringUtils;
-import com.xunjoy.lewaimai.consumer.utils.UIUtils;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.function.selectgoods.inter.OnPhotoClickListener;
+import com.newsuper.t.consumer.manager.RetrofitManager;
+import com.newsuper.t.consumer.utils.StringUtils;
+import com.newsuper.t.consumer.utils.UIUtils;
 
 import java.util.ArrayList;
 

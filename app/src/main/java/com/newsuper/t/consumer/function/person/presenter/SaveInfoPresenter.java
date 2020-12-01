@@ -1,10 +1,10 @@
 package com.newsuper.t.consumer.function.person.presenter;
 
 import com.google.gson.Gson;
-import com.xunjoy.lewaimai.consumer.bean.UpdateImgBean;
-import com.xunjoy.lewaimai.consumer.function.person.internal.ISaveInfoView;
-import com.xunjoy.lewaimai.consumer.manager.HttpManager;
-import com.xunjoy.lewaimai.consumer.manager.listener.HttpRequestListener;
+import com.newsuper.t.consumer.bean.UpdateImgBean;
+import com.newsuper.t.consumer.function.person.internal.ISaveInfoView;
+import com.newsuper.t.consumer.manager.HttpManager;
+import com.newsuper.t.consumer.manager.listener.HttpRequestListener;
 
 import java.util.Map;
 

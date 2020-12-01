@@ -20,6 +20,7 @@ import android.widget.ListView;
 
 import com.newsuper.t.R;
 import com.newsuper.t.consumer.bean.WTopBean;
+import com.newsuper.t.consumer.function.top.adapter.WTabGridViewAdapter;
 import com.newsuper.t.consumer.utils.LogUtil;
 import com.newsuper.t.consumer.utils.UIUtils;
 

@@ -17,11 +17,12 @@ import com.google.zxing.BarcodeFormat;
 import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.bean.BaseCouponData;
-import com.xunjoy.lewaimai.consumer.bean.CouponBean;
-import com.xunjoy.lewaimai.consumer.utils.FormatUtil;
-import com.xunjoy.lewaimai.consumer.widget.expandablelayout.ExpandableLayout;
+import com.newsuper.t.consumer.bean.PaotuiCouponBean;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.bean.BaseCouponData;
+import com.newsuper.t.consumer.bean.CouponBean;
+import com.newsuper.t.consumer.utils.FormatUtil;
+import com.newsuper.t.consumer.widget.expandablelayout.ExpandableLayout;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -151,7 +152,7 @@ public class CouponListAdapter extends BaseAdapter {
             }else {
                 holder2 = (CouponViewHolder2)convertView.getTag();
             }
-            com.xunjoy.lewaimai.consumer.bean.PaotuiCouponBean.CouponList  coupon = (com.xunjoy.lewaimai.consumer.bean.PaotuiCouponBean.CouponList)mCouponLists.get(position);
+       PaotuiCouponBean.CouponList  coupon = (PaotuiCouponBean.CouponList)mCouponLists.get(position);
             final CouponViewHolder2 holder1 = holder2;
 
             holder1.mTvCouponMoney.setText(FormatUtil.numFormat(coupon.coupon_value +""));

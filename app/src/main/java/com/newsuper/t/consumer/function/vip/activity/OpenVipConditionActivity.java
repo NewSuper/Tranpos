@@ -6,10 +6,10 @@ import android.view.View;
 import android.webkit.WebView;
 import android.widget.LinearLayout;
 
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.base.BaseActivity;
-import com.xunjoy.lewaimai.consumer.bean.VipTopInfoBean;
-import com.xunjoy.lewaimai.consumer.widget.CustomToolbar;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.base.BaseActivity;
+import com.newsuper.t.consumer.bean.VipTopInfoBean;
+import com.newsuper.t.consumer.widget.CustomToolbar;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

@@ -1,6 +1,7 @@
 package com.newsuper.t.consumer.function.selectgoods.inter;
 
-import com.xunjoy.lewaimai.consumer.bean.OrderInfoBean;
+
+import com.newsuper.t.consumer.bean.OrderInfoBean;
 
 /**
  * Created by Administrator on 2017/7/20 0020.

@@ -1,6 +1,7 @@
 package com.newsuper.t.consumer.function.top.internal;
 
-import com.xunjoy.lewaimai.consumer.bean.DredgeMapBean;
+
+import com.newsuper.t.consumer.bean.DredgeMapBean;
 
 /**
  * Create by Administrator on 2019/5/6 0006

@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,27 +16,27 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.application.BaseApplication;
-import com.xunjoy.lewaimai.consumer.bean.CartGoodsModel;
-import com.xunjoy.lewaimai.consumer.bean.GoodsListBean;
-import com.xunjoy.lewaimai.consumer.bean.ShopCartListBean;
-import com.xunjoy.lewaimai.consumer.function.selectgoods.activity.SelectGoodsActivity3;
-import com.xunjoy.lewaimai.consumer.function.selectgoods.activity.ShoppingCartActivity2;
-import com.xunjoy.lewaimai.consumer.function.selectgoods.inter.ICheckGoodsMustView;
-import com.xunjoy.lewaimai.consumer.function.selectgoods.presenter.CheckGoodsMustPresenter;
-import com.xunjoy.lewaimai.consumer.function.selectgoods.request.IsCollectRequest;
-import com.xunjoy.lewaimai.consumer.utils.Const;
-import com.xunjoy.lewaimai.consumer.utils.DialogUtils;
-import com.xunjoy.lewaimai.consumer.utils.FormatUtil;
-import com.xunjoy.lewaimai.consumer.utils.LogUtil;
-import com.xunjoy.lewaimai.consumer.utils.SharedPreferencesUtil;
-import com.xunjoy.lewaimai.consumer.utils.StringUtils;
-import com.xunjoy.lewaimai.consumer.utils.ToastUtil;
-import com.xunjoy.lewaimai.consumer.utils.UIUtils;
-import com.xunjoy.lewaimai.consumer.utils.UrlConst;
-import com.xunjoy.lewaimai.consumer.widget.GoodsListView;
-import com.xunjoy.lewaimai.consumer.widget.ListViewForScrollView;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.application.BaseApplication;
+import com.newsuper.t.consumer.bean.CartGoodsModel;
+import com.newsuper.t.consumer.bean.GoodsListBean;
+import com.newsuper.t.consumer.bean.ShopCartListBean;
+import com.newsuper.t.consumer.function.selectgoods.activity.SelectGoodsActivity3;
+import com.newsuper.t.consumer.function.selectgoods.activity.ShoppingCartActivity2;
+import com.newsuper.t.consumer.function.selectgoods.inter.ICheckGoodsMustView;
+import com.newsuper.t.consumer.function.selectgoods.presenter.CheckGoodsMustPresenter;
+import com.newsuper.t.consumer.function.selectgoods.request.IsCollectRequest;
+import com.newsuper.t.consumer.utils.Const;
+import com.newsuper.t.consumer.utils.DialogUtils;
+import com.newsuper.t.consumer.utils.FormatUtil;
+import com.newsuper.t.consumer.utils.LogUtil;
+import com.newsuper.t.consumer.utils.SharedPreferencesUtil;
+import com.newsuper.t.consumer.utils.StringUtils;
+import com.newsuper.t.consumer.utils.ToastUtil;
+import com.newsuper.t.consumer.utils.UIUtils;
+import com.newsuper.t.consumer.utils.UrlConst;
+import com.newsuper.t.consumer.widget.GoodsListView;
+import com.newsuper.t.consumer.widget.ListViewForScrollView;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -47,7 +46,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-import static com.xunjoy.lewaimai.consumer.function.selectgoods.activity.ShoppingCartListActivity.ACTIVITY_RESULT;
+import static com.newsuper.t.consumer.function.selectgoods.activity.ShoppingCartListActivity.ACTIVITY_RESULT;
 
 /**
  * Created by Administrator on 2017/6/20 0020.

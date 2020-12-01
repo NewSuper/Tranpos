@@ -1,5 +1,6 @@
 package com.newsuper.t.consumer.function;
 
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.newsuper.t.R;
@@ -11,14 +12,10 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.ImageView;
+
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
@@ -26,7 +23,7 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-public class GuideActivity extends BaseActivity {
+public class GuideActivity extends AppCompatActivity implements View.OnClickListener {
     @BindView(R.id.viewpager)
     ViewPager viewpager;
     @BindView(R.id.ll_views)
@@ -73,6 +70,7 @@ public class GuideActivity extends BaseActivity {
 //            case "leedian":
 //                GUIDE_SUM = 5;
 //                break;
+//
 //        }
         GUIDE_SUM = 3;
         for (int i = 0; i < GUIDE_SUM;i++ ){
@@ -118,16 +116,6 @@ public class GuideActivity extends BaseActivity {
 
             }
         });
-    }
-
-    @Override
-    public void initData() {
-
-    }
-
-    @Override
-    public void initView() {
-
     }
 
     @Override

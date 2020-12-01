@@ -1,13 +1,13 @@
 package com.newsuper.t.consumer.function.order.presenter;
 
 import com.google.gson.Gson;
-import com.xunjoy.lewaimai.consumer.bean.ContinuePayResultBean;
-import com.xunjoy.lewaimai.consumer.bean.ContinuePayTypeBean;
-import com.xunjoy.lewaimai.consumer.bean.OrderInfoBean;
-import com.xunjoy.lewaimai.consumer.function.inter.IContinuePay;
-import com.xunjoy.lewaimai.consumer.function.inter.IOrderInfoActivityView;
-import com.xunjoy.lewaimai.consumer.manager.HttpManager;
-import com.xunjoy.lewaimai.consumer.manager.listener.HttpRequestListener;
+import com.newsuper.t.consumer.bean.ContinuePayResultBean;
+import com.newsuper.t.consumer.bean.ContinuePayTypeBean;
+import com.newsuper.t.consumer.bean.OrderInfoBean;
+import com.newsuper.t.consumer.function.inter.IContinuePay;
+import com.newsuper.t.consumer.function.inter.IOrderInfoActivityView;
+import com.newsuper.t.consumer.manager.HttpManager;
+import com.newsuper.t.consumer.manager.listener.HttpRequestListener;
 
 import java.util.Map;
 

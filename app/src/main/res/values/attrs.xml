@@ -29,7 +29,7 @@
         <attr name="dashWidth" format="dimension" />
         <attr name="lineWidth" format="dimension" />
         <attr name="lineHeight" format="dimension" />
-        <attr name="lineColor" format="color" />
+        <attr name="lineColor2" format="color" />
         <attr name="dashOrientation" format="integer" />
     </declare-styleable>
     <declare-styleable name="auto_roll_view">

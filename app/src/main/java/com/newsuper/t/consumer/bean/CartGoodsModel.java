@@ -2,9 +2,9 @@ package com.newsuper.t.consumer.bean;
 
 import android.util.Log;
 
-import com.xunjoy.lewaimai.consumer.utils.LogUtil;
-import com.xunjoy.lewaimai.consumer.utils.MemberUtil;
-import com.xunjoy.lewaimai.consumer.utils.StringUtils;
+import com.newsuper.t.consumer.utils.LogUtil;
+import com.newsuper.t.consumer.utils.MemberUtil;
+import com.newsuper.t.consumer.utils.StringUtils;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;

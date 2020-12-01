@@ -8,15 +8,15 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.bean.GoodsListBean;
-import com.xunjoy.lewaimai.consumer.bean.GoodsType;
-import com.xunjoy.lewaimai.consumer.bean.ShopCart2;
-import com.xunjoy.lewaimai.consumer.bean.ShopInfoBean;
-import com.xunjoy.lewaimai.consumer.function.selectgoods.inter.IGoodsToDetailPage;
-import com.xunjoy.lewaimai.consumer.function.selectgoods.inter.IMiddleGoodsShopCart;
-import com.xunjoy.lewaimai.consumer.function.selectgoods.inter.IShowLimitTime;
-import com.xunjoy.lewaimai.consumer.widget.CustomNoScrollListView.CustomNoScrollGridView;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.bean.GoodsListBean;
+import com.newsuper.t.consumer.bean.GoodsType;
+import com.newsuper.t.consumer.bean.ShopCart2;
+import com.newsuper.t.consumer.bean.ShopInfoBean;
+import com.newsuper.t.consumer.function.selectgoods.inter.IGoodsToDetailPage;
+import com.newsuper.t.consumer.function.selectgoods.inter.IMiddleGoodsShopCart;
+import com.newsuper.t.consumer.function.selectgoods.inter.IShowLimitTime;
+import com.newsuper.t.consumer.widget.CustomNoScrollListView.CustomNoScrollGridView;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;

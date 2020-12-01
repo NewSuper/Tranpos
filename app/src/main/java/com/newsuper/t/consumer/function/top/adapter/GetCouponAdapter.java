@@ -7,9 +7,9 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.bean.GetCouponBean;
-import com.xunjoy.lewaimai.consumer.bean.WTopBean;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.bean.GetCouponBean;
+import com.newsuper.t.consumer.bean.WTopBean;
 
 import java.util.ArrayList;
 

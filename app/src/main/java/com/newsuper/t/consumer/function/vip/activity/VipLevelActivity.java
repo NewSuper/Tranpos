@@ -20,17 +20,17 @@ import android.widget.Toast;
 
 import com.pixplicity.multiviewpager.MultiViewPager;
 import com.rd.PageIndicatorView;
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.base.BaseActivity;
-import com.xunjoy.lewaimai.consumer.bean.VipLevelBean;
-import com.xunjoy.lewaimai.consumer.function.vip.adapter.VipLevelPageFragment;
-import com.xunjoy.lewaimai.consumer.function.vip.inter.IVipLevelView;
-import com.xunjoy.lewaimai.consumer.function.vip.presenter.VipLevelPresenter;
-import com.xunjoy.lewaimai.consumer.function.vip.request.VipLevelRequest;
-import com.xunjoy.lewaimai.consumer.utils.SharedPreferencesUtil;
-import com.xunjoy.lewaimai.consumer.utils.UIUtils;
-import com.xunjoy.lewaimai.consumer.utils.UrlConst;
-import com.xunjoy.lewaimai.consumer.widget.CustomToolbar;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.base.BaseActivity;
+import com.newsuper.t.consumer.bean.VipLevelBean;
+import com.newsuper.t.consumer.function.vip.adapter.VipLevelPageFragment;
+import com.newsuper.t.consumer.function.vip.inter.IVipLevelView;
+import com.newsuper.t.consumer.function.vip.presenter.VipLevelPresenter;
+import com.newsuper.t.consumer.function.vip.request.VipLevelRequest;
+import com.newsuper.t.consumer.utils.SharedPreferencesUtil;
+import com.newsuper.t.consumer.utils.UIUtils;
+import com.newsuper.t.consumer.utils.UrlConst;
+import com.newsuper.t.consumer.widget.CustomToolbar;
 
 import java.util.ArrayList;
 import java.util.HashMap;

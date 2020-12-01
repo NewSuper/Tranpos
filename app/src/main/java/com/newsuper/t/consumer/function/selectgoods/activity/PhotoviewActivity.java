@@ -6,23 +6,22 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
-//
+
 import com.squareup.picasso.Picasso;
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.manager.RetrofitManager;
-import com.xunjoy.lewaimai.consumer.utils.StringUtils;
-import com.xunjoy.lewaimai.consumer.utils.UIUtils;
-import com.xunjoy.lewaimai.consumer.widget.PhotoViewPager;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.manager.RetrofitManager;
+import com.newsuper.t.consumer.utils.StringUtils;
+import com.newsuper.t.consumer.utils.UIUtils;
+import com.newsuper.t.consumer.widget.PhotoViewPager;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
 import uk.co.senab.photoview.PhotoView;
 import uk.co.senab.photoview.PhotoViewAttacher;
-import uk.co.senab.photoview.PhotoViewAttacher.OnViewTapListener;
 
 
-public class PhotoviewActivity extends AppCompatActivity implements OnViewTapListener{
+public class PhotoviewActivity extends AppCompatActivity implements uk.co.senab.photoview.PhotoViewAttacher.OnViewTapListener {
     private PhotoViewPager mViewPager;
     private PhotoView mPhotoView;
     private ArrayList<String> mImgUrls;

@@ -13,16 +13,16 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 //
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.base.BaseActivity;
-import com.xunjoy.lewaimai.consumer.bean.VipCardInfoBean;
-import com.xunjoy.lewaimai.consumer.function.vip.inter.IVipCardView;
-import com.xunjoy.lewaimai.consumer.function.vip.presenter.VipCardPresenter;
-import com.xunjoy.lewaimai.consumer.utils.Const;
-import com.xunjoy.lewaimai.consumer.utils.SharedPreferencesUtil;
-import com.xunjoy.lewaimai.consumer.utils.UIUtils;
-import com.xunjoy.lewaimai.consumer.widget.CustomToolbar;
-import com.xunjoy.lewaimai.consumer.widget.RefreshThirdStepView;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.base.BaseActivity;
+import com.newsuper.t.consumer.bean.VipCardInfoBean;
+import com.newsuper.t.consumer.function.vip.inter.IVipCardView;
+import com.newsuper.t.consumer.function.vip.presenter.VipCardPresenter;
+import com.newsuper.t.consumer.utils.Const;
+import com.newsuper.t.consumer.utils.SharedPreferencesUtil;
+import com.newsuper.t.consumer.utils.UIUtils;
+import com.newsuper.t.consumer.widget.CustomToolbar;
+import com.newsuper.t.consumer.widget.RefreshThirdStepView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

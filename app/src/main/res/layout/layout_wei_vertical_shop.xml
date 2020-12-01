@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.newsuper.t.consumer.widget.RadioView
+        android:id="@+id/radioView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.newsuper.t.consumer.widget.RadioView>
+    <com.newsuper.t.consumer.widget.ListViewForScrollView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tv_load_more"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#EAEAEA"
+        android:gravity="center"
+        android:text="加载中..."
+        android:textColor="@color/text_color_82"
+        android:textSize="14sp"
+        android:visibility="gone"/>
+
+</LinearLayout>

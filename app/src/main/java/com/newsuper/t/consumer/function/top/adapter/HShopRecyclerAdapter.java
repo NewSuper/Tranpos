@@ -9,14 +9,14 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-//
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.bean.WTopBean;
-import com.xunjoy.lewaimai.consumer.function.selectgoods.activity.SelectGoodsActivity3;
-import com.xunjoy.lewaimai.consumer.manager.RetrofitManager;
-import com.xunjoy.lewaimai.consumer.utils.LogUtil;
-import com.xunjoy.lewaimai.consumer.utils.StringUtils;
-import com.xunjoy.lewaimai.consumer.utils.UIUtils;
+
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.bean.WTopBean;
+import com.newsuper.t.consumer.function.selectgoods.activity.SelectGoodsActivity3;
+import com.newsuper.t.consumer.manager.RetrofitManager;
+import com.newsuper.t.consumer.utils.LogUtil;
+import com.newsuper.t.consumer.utils.StringUtils;
+import com.newsuper.t.consumer.utils.UIUtils;
 
 import java.util.ArrayList;
 

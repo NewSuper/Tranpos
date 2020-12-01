@@ -7,17 +7,17 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Toast;
 
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.base.BaseActivity;
-import com.xunjoy.lewaimai.consumer.bean.DredgeAreaBean;
-import com.xunjoy.lewaimai.consumer.function.top.adapter.DredgeAreaAdapter;
-import com.xunjoy.lewaimai.consumer.function.top.internal.IDredgeAreaView;
-import com.xunjoy.lewaimai.consumer.function.top.presenter.DredgeAreaPresenter;
-import com.xunjoy.lewaimai.consumer.function.top.request.DredgeAreaRequest;
-import com.xunjoy.lewaimai.consumer.utils.SharedPreferencesUtil;
-import com.xunjoy.lewaimai.consumer.utils.UrlConst;
-import com.xunjoy.lewaimai.consumer.widget.CustomToolbar;
-import com.xunjoy.lewaimai.consumer.widget.LoadingAnimatorView;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.base.BaseActivity;
+import com.newsuper.t.consumer.bean.DredgeAreaBean;
+import com.newsuper.t.consumer.function.top.adapter.DredgeAreaAdapter;
+import com.newsuper.t.consumer.function.top.internal.IDredgeAreaView;
+import com.newsuper.t.consumer.function.top.presenter.DredgeAreaPresenter;
+import com.newsuper.t.consumer.function.top.request.DredgeAreaRequest;
+import com.newsuper.t.consumer.utils.SharedPreferencesUtil;
+import com.newsuper.t.consumer.utils.UrlConst;
+import com.newsuper.t.consumer.widget.CustomToolbar;
+import com.newsuper.t.consumer.widget.LoadingAnimatorView;
 
 import java.util.ArrayList;
 import java.util.HashMap;

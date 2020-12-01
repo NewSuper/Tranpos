@@ -1,7 +1,6 @@
 package com.newsuper.t.consumer.function.distribution.presenter;
 
 import com.google.gson.Gson;
-import com.newsuper.t.consumer.bean.HelpBean;
 import com.newsuper.t.consumer.bean.PayOrderBean;
 import com.newsuper.t.consumer.function.distribution.internal.IPayOrderView;
 import com.newsuper.t.consumer.function.distribution.request.DistributionRequest;

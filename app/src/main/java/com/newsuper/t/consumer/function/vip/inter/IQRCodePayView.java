@@ -1,8 +1,8 @@
 package com.newsuper.t.consumer.function.vip.inter;
 
-import com.xunjoy.lewaimai.consumer.bean.CheckQRCodePayBean;
-import com.xunjoy.lewaimai.consumer.bean.QRCodePayBean;
-import com.xunjoy.lewaimai.consumer.function.top.internal.IBaseView;
+import com.newsuper.t.consumer.bean.CheckQRCodePayBean;
+import com.newsuper.t.consumer.bean.QRCodePayBean;
+import com.newsuper.t.consumer.function.top.internal.IBaseView;
 
 /**
  * Created by Administrator on 2017/12/5 0005.

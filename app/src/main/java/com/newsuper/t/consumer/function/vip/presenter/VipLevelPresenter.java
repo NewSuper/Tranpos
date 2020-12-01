@@ -1,10 +1,10 @@
 package com.newsuper.t.consumer.function.vip.presenter;
 
 import com.google.gson.Gson;
-import com.xunjoy.lewaimai.consumer.bean.VipLevelBean;
-import com.xunjoy.lewaimai.consumer.function.vip.inter.IVipLevelView;
-import com.xunjoy.lewaimai.consumer.manager.HttpManager;
-import com.xunjoy.lewaimai.consumer.manager.listener.HttpRequestListener;
+import com.newsuper.t.consumer.bean.VipLevelBean;
+import com.newsuper.t.consumer.function.vip.inter.IVipLevelView;
+import com.newsuper.t.consumer.manager.HttpManager;
+import com.newsuper.t.consumer.manager.listener.HttpRequestListener;
 
 import java.util.Map;
 

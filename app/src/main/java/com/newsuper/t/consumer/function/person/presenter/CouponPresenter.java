@@ -1,16 +1,16 @@
 package com.newsuper.t.consumer.function.person.presenter;
 
 import com.google.gson.Gson;
-import com.xunjoy.lewaimai.consumer.bean.CouponBean;
-import com.xunjoy.lewaimai.consumer.bean.PaotuiCouponBean;
-import com.xunjoy.lewaimai.consumer.function.distribution.request.DistributionRequest;
-import com.xunjoy.lewaimai.consumer.function.person.internal.ICouponView;
-import com.xunjoy.lewaimai.consumer.function.person.request.CouponRequest;
-import com.xunjoy.lewaimai.consumer.manager.HttpManager;
-import com.xunjoy.lewaimai.consumer.manager.listener.HttpRequestListener;
-import com.xunjoy.lewaimai.consumer.utils.Const;
-import com.xunjoy.lewaimai.consumer.utils.SharedPreferencesUtil;
-import com.xunjoy.lewaimai.consumer.utils.UrlConst;
+import com.newsuper.t.consumer.bean.CouponBean;
+import com.newsuper.t.consumer.bean.PaotuiCouponBean;
+import com.newsuper.t.consumer.function.distribution.request.DistributionRequest;
+import com.newsuper.t.consumer.function.person.internal.ICouponView;
+import com.newsuper.t.consumer.function.person.request.CouponRequest;
+import com.newsuper.t.consumer.manager.HttpManager;
+import com.newsuper.t.consumer.manager.listener.HttpRequestListener;
+import com.newsuper.t.consumer.utils.Const;
+import com.newsuper.t.consumer.utils.SharedPreferencesUtil;
+import com.newsuper.t.consumer.utils.UrlConst;
 
 import java.util.HashMap;
 import java.util.Map;

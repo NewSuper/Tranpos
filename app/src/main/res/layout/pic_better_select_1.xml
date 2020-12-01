@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_picture"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/store_logo_default"/>
+
+        <TextView
+            android:id="@+id/tv_picture_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="9dp"
+            android:maxEms="4"
+            android:ellipsize="end"
+            android:textColor="@color/text_color_37"
+            android:textSize="12sp"
+            android:text="名称"/>
+    </LinearLayout>
+
+</LinearLayout>

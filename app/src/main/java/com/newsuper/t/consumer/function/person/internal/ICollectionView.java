@@ -1,7 +1,7 @@
 package com.newsuper.t.consumer.function.person.internal;
 
-import com.xunjoy.lewaimai.consumer.bean.CollectionBean;
-import com.xunjoy.lewaimai.consumer.function.top.internal.IBaseView;
+import com.newsuper.t.consumer.bean.CollectionBean;
+import com.newsuper.t.consumer.function.top.internal.IBaseView;
 
 public interface ICollectionView extends IBaseView{
     void showDataToVIew(CollectionBean bean);

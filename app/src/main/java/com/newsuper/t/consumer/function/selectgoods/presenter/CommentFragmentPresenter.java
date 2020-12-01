@@ -1,10 +1,10 @@
 package com.newsuper.t.consumer.function.selectgoods.presenter;
 
 import com.google.gson.Gson;
-import com.xunjoy.lewaimai.consumer.bean.CommentBean;
-import com.xunjoy.lewaimai.consumer.function.selectgoods.inter.ICommentFragmentView;
-import com.xunjoy.lewaimai.consumer.manager.HttpManager;
-import com.xunjoy.lewaimai.consumer.manager.listener.HttpRequestListener;
+import com.newsuper.t.consumer.bean.CommentBean;
+import com.newsuper.t.consumer.function.selectgoods.inter.ICommentFragmentView;
+import com.newsuper.t.consumer.manager.HttpManager;
+import com.newsuper.t.consumer.manager.listener.HttpRequestListener;
 import java.util.Map;
 
 

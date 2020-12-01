@@ -9,13 +9,13 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.base.BaseActivity;
-import com.xunjoy.lewaimai.consumer.bean.ShoppingCartBean;
-import com.xunjoy.lewaimai.consumer.function.selectgoods.adapter.CouponCanNoAdapter;
-import com.xunjoy.lewaimai.consumer.function.selectgoods.adapter.CouponCanUseAdapter;
-import com.xunjoy.lewaimai.consumer.widget.CustomToolbar;
-import com.xunjoy.lewaimai.consumer.widget.ListViewForScrollView;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.base.BaseActivity;
+import com.newsuper.t.consumer.bean.ShoppingCartBean;
+import com.newsuper.t.consumer.function.selectgoods.adapter.CouponCanNoAdapter;
+import com.newsuper.t.consumer.function.selectgoods.adapter.CouponCanUseAdapter;
+import com.newsuper.t.consumer.widget.CustomToolbar;
+import com.newsuper.t.consumer.widget.ListViewForScrollView;
 
 import java.util.ArrayList;
 

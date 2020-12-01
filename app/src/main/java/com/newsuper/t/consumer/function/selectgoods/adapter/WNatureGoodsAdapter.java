@@ -12,17 +12,17 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.application.BaseApplication;
-import com.xunjoy.lewaimai.consumer.bean.GoodsListBean;
-import com.xunjoy.lewaimai.consumer.bean.WShopCart2;
-import com.xunjoy.lewaimai.consumer.function.selectgoods.inter.IWDeleteNatureGoods;
-import com.xunjoy.lewaimai.consumer.utils.FormatUtil;
-import com.xunjoy.lewaimai.consumer.utils.SharedPreferencesUtil;
-import com.xunjoy.lewaimai.consumer.widget.FlowLayout.FlowLayout;
-import com.xunjoy.lewaimai.consumer.widget.FlowLayout.TagAdapter;
-import com.xunjoy.lewaimai.consumer.widget.FlowLayout.TagFlowLayout;
-import com.xunjoy.lewaimai.consumer.widget.FlowLayout.TagView;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.application.BaseApplication;
+import com.newsuper.t.consumer.bean.GoodsListBean;
+import com.newsuper.t.consumer.bean.WShopCart2;
+import com.newsuper.t.consumer.function.selectgoods.inter.IWDeleteNatureGoods;
+import com.newsuper.t.consumer.utils.FormatUtil;
+import com.newsuper.t.consumer.utils.SharedPreferencesUtil;
+import com.newsuper.t.consumer.widget.FlowLayout.FlowLayout;
+import com.newsuper.t.consumer.widget.FlowLayout.TagAdapter;
+import com.newsuper.t.consumer.widget.FlowLayout.TagFlowLayout;
+import com.newsuper.t.consumer.widget.FlowLayout.TagView;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;

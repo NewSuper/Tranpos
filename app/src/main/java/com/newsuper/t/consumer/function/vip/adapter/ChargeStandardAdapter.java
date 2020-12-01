@@ -11,10 +11,10 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.bean.VipChargeInfoBean;
-import com.xunjoy.lewaimai.consumer.bean.VipChargeInfoBean.ChargeSend;
-import com.xunjoy.lewaimai.consumer.function.vip.inter.ISelectChargeMoney;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.bean.VipChargeInfoBean;
+import com.newsuper.t.consumer.bean.VipChargeInfoBean.ChargeSend;
+import com.newsuper.t.consumer.function.vip.inter.ISelectChargeMoney;
 
 import java.util.ArrayList;
 import java.util.List;

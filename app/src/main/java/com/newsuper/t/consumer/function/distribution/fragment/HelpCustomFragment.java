@@ -66,7 +66,6 @@ import com.newsuper.t.consumer.widget.LoadingDialog3;
 import com.newsuper.t.consumer.widget.defineTopView.WGridView;
 import com.newsuper.t.consumer.widget.popupwindow.AllPricePopupWindow;
 import com.newsuper.t.consumer.wxapi.Constants;
-import com.newsuper.t.consumer.wxapi.WXPayEntryActivity;
 
 import org.json.JSONException;
 

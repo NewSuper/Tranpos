@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="#f4f4f4"
+        android:textSize="14sp"
+        android:textColor="@color/text_color_37"
+        android:text="{ 夜宵精选 }"
+        android:gravity="center"
+        android:visibility="gone"/>
+    <com.newsuper.t.consumer.widget.defineTopView.WGridView
+        android:id="@+id/shop_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:horizontalSpacing="8dp"
+        android:numColumns="3"/>
+
+</LinearLayout>

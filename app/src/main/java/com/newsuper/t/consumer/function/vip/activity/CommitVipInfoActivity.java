@@ -9,17 +9,17 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.base.BaseActivity;
-import com.xunjoy.lewaimai.consumer.bean.VipCommitInfoBean;
-import com.xunjoy.lewaimai.consumer.function.vip.inter.IVipCommitView;
-import com.xunjoy.lewaimai.consumer.function.vip.presenter.VipInfoCommitPresenter;
-import com.xunjoy.lewaimai.consumer.utils.Const;
-import com.xunjoy.lewaimai.consumer.utils.SharedPreferencesUtil;
-import com.xunjoy.lewaimai.consumer.utils.UIUtils;
-import com.xunjoy.lewaimai.consumer.widget.CustomToolbar;
-import com.xunjoy.lewaimai.consumer.widget.LoadingDialog2;
-import com.xunjoy.lewaimai.consumer.widget.TimePicker.TimePickerView;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.base.BaseActivity;
+import com.newsuper.t.consumer.bean.VipCommitInfoBean;
+import com.newsuper.t.consumer.function.vip.inter.IVipCommitView;
+import com.newsuper.t.consumer.function.vip.presenter.VipInfoCommitPresenter;
+import com.newsuper.t.consumer.utils.Const;
+import com.newsuper.t.consumer.utils.SharedPreferencesUtil;
+import com.newsuper.t.consumer.utils.UIUtils;
+import com.newsuper.t.consumer.widget.CustomToolbar;
+import com.newsuper.t.consumer.widget.LoadingDialog2;
+import com.newsuper.t.consumer.widget.TimePicker.TimePickerView;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

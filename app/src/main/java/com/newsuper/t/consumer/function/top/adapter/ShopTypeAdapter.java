@@ -10,10 +10,10 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.bean.TopBean;
-import com.xunjoy.lewaimai.consumer.utils.StringUtils;
-import com.xunjoy.lewaimai.consumer.widget.popupwindow.ShopSelectPopupWindow;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.bean.TopBean;
+import com.newsuper.t.consumer.utils.StringUtils;
+import com.newsuper.t.consumer.widget.popupwindow.ShopSelectPopupWindow;
 
 import java.util.ArrayList;
 

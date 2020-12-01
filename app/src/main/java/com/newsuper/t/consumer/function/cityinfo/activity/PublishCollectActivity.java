@@ -3,9 +3,9 @@ package com.newsuper.t.consumer.function.cityinfo.activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.base.BaseActivity;
-import com.xunjoy.lewaimai.consumer.function.cityinfo.fragment.PublishCollectFragment;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.base.BaseActivity;
+import com.newsuper.t.consumer.function.cityinfo.fragment.PublishCollectFragment;
 
 public class PublishCollectActivity extends BaseActivity {
     private PublishCollectFragment fragment;

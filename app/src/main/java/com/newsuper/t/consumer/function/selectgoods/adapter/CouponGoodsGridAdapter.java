@@ -15,18 +15,18 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 //
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.bean.GoodsListBean;
-import com.xunjoy.lewaimai.consumer.bean.ShopCart;
-import com.xunjoy.lewaimai.consumer.bean.ShopInfoBean;
-import com.xunjoy.lewaimai.consumer.function.selectgoods.inter.IGoodsToDetailPage;
-import com.xunjoy.lewaimai.consumer.function.selectgoods.inter.IShopCart;
-import com.xunjoy.lewaimai.consumer.function.selectgoods.inter.IShowLimitTime;
-import com.xunjoy.lewaimai.consumer.manager.RetrofitManager;
-import com.xunjoy.lewaimai.consumer.utils.FormatUtil;
-import com.xunjoy.lewaimai.consumer.utils.SharedPreferencesUtil;
-import com.xunjoy.lewaimai.consumer.utils.StringUtils;
-import com.xunjoy.lewaimai.consumer.utils.UIUtils;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.bean.GoodsListBean;
+import com.newsuper.t.consumer.bean.ShopCart;
+import com.newsuper.t.consumer.bean.ShopInfoBean;
+import com.newsuper.t.consumer.function.selectgoods.inter.IGoodsToDetailPage;
+import com.newsuper.t.consumer.function.selectgoods.inter.IShopCart;
+import com.newsuper.t.consumer.function.selectgoods.inter.IShowLimitTime;
+import com.newsuper.t.consumer.manager.RetrofitManager;
+import com.newsuper.t.consumer.utils.FormatUtil;
+import com.newsuper.t.consumer.utils.SharedPreferencesUtil;
+import com.newsuper.t.consumer.utils.StringUtils;
+import com.newsuper.t.consumer.utils.UIUtils;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;

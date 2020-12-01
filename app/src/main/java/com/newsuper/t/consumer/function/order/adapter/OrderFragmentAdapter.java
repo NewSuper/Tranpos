@@ -4,8 +4,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.xunjoy.lewaimai.consumer.function.order.fragment.BaseOrderFragment;
-import com.xunjoy.lewaimai.consumer.function.selectgoods.fragment.BasePageFragment;
+import com.newsuper.t.consumer.function.order.fragment.BaseOrderFragment;
+import com.newsuper.t.consumer.function.selectgoods.fragment.BasePageFragment;
 import java.util.ArrayList;
 import java.util.List;
 

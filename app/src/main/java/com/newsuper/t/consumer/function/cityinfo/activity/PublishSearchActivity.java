@@ -13,21 +13,21 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.base.BaseActivity;
-import com.xunjoy.lewaimai.consumer.bean.PublishSearchBean;
-import com.xunjoy.lewaimai.consumer.bean.ShopHistoryBean;
-import com.xunjoy.lewaimai.consumer.function.cityinfo.adapter.PublishDetailPicAdapter;
-import com.xunjoy.lewaimai.consumer.function.cityinfo.adapter.PublishSearchAdapter;
-import com.xunjoy.lewaimai.consumer.function.cityinfo.internal.IPublishSearchView;
-import com.xunjoy.lewaimai.consumer.function.cityinfo.presenter.PublishSearchPresenter;
-import com.xunjoy.lewaimai.consumer.function.top.adapter.ShopHistoryAdapter;
-import com.xunjoy.lewaimai.consumer.utils.SharedPreferencesUtil;
-import com.xunjoy.lewaimai.consumer.utils.StringUtils;
-import com.xunjoy.lewaimai.consumer.utils.ToastUtil;
-import com.xunjoy.lewaimai.consumer.widget.CustomToolbar;
-import com.xunjoy.lewaimai.consumer.widget.ListViewForScrollView;
-import com.xunjoy.lewaimai.consumer.widget.LoadingDialog2;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.base.BaseActivity;
+import com.newsuper.t.consumer.bean.PublishSearchBean;
+import com.newsuper.t.consumer.bean.ShopHistoryBean;
+import com.newsuper.t.consumer.function.cityinfo.adapter.PublishDetailPicAdapter;
+import com.newsuper.t.consumer.function.cityinfo.adapter.PublishSearchAdapter;
+import com.newsuper.t.consumer.function.cityinfo.internal.IPublishSearchView;
+import com.newsuper.t.consumer.function.cityinfo.presenter.PublishSearchPresenter;
+import com.newsuper.t.consumer.function.top.adapter.ShopHistoryAdapter;
+import com.newsuper.t.consumer.utils.SharedPreferencesUtil;
+import com.newsuper.t.consumer.utils.StringUtils;
+import com.newsuper.t.consumer.utils.ToastUtil;
+import com.newsuper.t.consumer.widget.CustomToolbar;
+import com.newsuper.t.consumer.widget.ListViewForScrollView;
+import com.newsuper.t.consumer.widget.LoadingDialog2;
 
 import java.util.ArrayList;
 

@@ -1,15 +1,14 @@
 package com.newsuper.t.consumer.function.person.presenter;
 
 import com.google.gson.Gson;
-import com.xunjoy.lewaimai.consumer.bean.CustomerInfoBean;
-import com.xunjoy.lewaimai.consumer.bean.MsgCenterBean;
-import com.xunjoy.lewaimai.consumer.function.person.internal.IMessageCenterView;
-import com.xunjoy.lewaimai.consumer.function.person.request.MessageCenterRequest;
-import com.xunjoy.lewaimai.consumer.manager.HttpManager;
-import com.xunjoy.lewaimai.consumer.manager.listener.HttpRequestListener;
-import com.xunjoy.lewaimai.consumer.utils.Const;
-import com.xunjoy.lewaimai.consumer.utils.SharedPreferencesUtil;
-import com.xunjoy.lewaimai.consumer.utils.UrlConst;
+import com.newsuper.t.consumer.bean.MsgCenterBean;
+import com.newsuper.t.consumer.function.person.internal.IMessageCenterView;
+import com.newsuper.t.consumer.function.person.request.MessageCenterRequest;
+import com.newsuper.t.consumer.manager.HttpManager;
+import com.newsuper.t.consumer.manager.listener.HttpRequestListener;
+import com.newsuper.t.consumer.utils.Const;
+import com.newsuper.t.consumer.utils.SharedPreferencesUtil;
+import com.newsuper.t.consumer.utils.UrlConst;
 
 import java.util.Map;
 

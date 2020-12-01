@@ -4,15 +4,15 @@ import android.util.Log;
 
 import com.amap.api.services.core.PoiItem;
 import com.google.gson.Gson;
-import com.xunjoy.lewaimai.consumer.bean.ShopHistoryBean;
-import com.xunjoy.lewaimai.consumer.bean.ShopSearchBean;
-import com.xunjoy.lewaimai.consumer.function.top.internal.IShopSearchView;
-import com.xunjoy.lewaimai.consumer.function.top.request.ShopSearchRequest;
-import com.xunjoy.lewaimai.consumer.manager.HttpManager;
-import com.xunjoy.lewaimai.consumer.manager.listener.HttpRequestListener;
-import com.xunjoy.lewaimai.consumer.utils.SharedPreferencesUtil;
-import com.xunjoy.lewaimai.consumer.utils.StringUtils;
-import com.xunjoy.lewaimai.consumer.utils.UrlConst;
+import com.newsuper.t.consumer.bean.ShopHistoryBean;
+import com.newsuper.t.consumer.bean.ShopSearchBean;
+import com.newsuper.t.consumer.function.top.internal.IShopSearchView;
+import com.newsuper.t.consumer.function.top.request.ShopSearchRequest;
+import com.newsuper.t.consumer.manager.HttpManager;
+import com.newsuper.t.consumer.manager.listener.HttpRequestListener;
+import com.newsuper.t.consumer.utils.SharedPreferencesUtil;
+import com.newsuper.t.consumer.utils.StringUtils;
+import com.newsuper.t.consumer.utils.UrlConst;
 
 import java.util.HashMap;
 

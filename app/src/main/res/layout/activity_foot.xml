@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.newsuper.t.consumer.widget.CustomToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@color/theme_red"/>
+
+    <com.newsuper.t.consumer.widget.LoadingAnimatorView
+        android:id="@+id/load_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"/>
+    <LinearLayout
+        android:id="@+id/ll_none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/expression2"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="暂无足迹哦"
+            android:textColor="#676767"
+            android:textSize="16sp"/>
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ExpandableListView
+            android:id="@+id/elv_activity_foot"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:id="@+id/ll_activity_foot_edit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:background="#991A1A1A"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="2.4"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <CheckBox
+                    android:id="@+id/cb_activity_foot_all"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:background="@drawable/checkbox_selector"
+                    android:button="@null"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="全选"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="10dp"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tv_activity_foot_delete"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="#FB5B5D"
+                android:text="删除"
+                android:textSize="17sp"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

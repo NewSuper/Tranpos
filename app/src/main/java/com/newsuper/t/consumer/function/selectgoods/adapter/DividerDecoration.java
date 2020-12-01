@@ -7,8 +7,8 @@ import android.graphics.Rect;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import com.xunjoy.lewaimai.consumer.application.BaseApplication;
-import com.xunjoy.lewaimai.consumer.utils.UIUtils;
+import com.newsuper.t.consumer.application.BaseApplication;
+import com.newsuper.t.consumer.utils.UIUtils;
 
 
 public class DividerDecoration extends RecyclerView.ItemDecoration {

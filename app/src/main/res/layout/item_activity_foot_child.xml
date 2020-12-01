@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical">
+
+    <CheckBox
+        android:id="@+id/cb_item_activity_foot_child"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:button="@null"
+        android:visibility="gone"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/checkbox_selector"/>
+
+    <include layout="@layout/adapter_shop_list"/>
+</LinearLayout>

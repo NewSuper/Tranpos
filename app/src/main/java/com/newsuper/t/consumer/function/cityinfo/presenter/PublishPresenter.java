@@ -1,7 +1,6 @@
 package com.newsuper.t.consumer.function.cityinfo.presenter;
 
 import com.google.gson.Gson;
-import com.newsuper.t.consumer.bean.AgreementBean;
 import com.newsuper.t.consumer.bean.CategoryBean;
 import com.newsuper.t.consumer.bean.PublishAreabean;
 import com.newsuper.t.consumer.bean.PublishListBean;

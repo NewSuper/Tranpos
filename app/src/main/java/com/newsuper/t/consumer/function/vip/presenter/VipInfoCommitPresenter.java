@@ -1,12 +1,12 @@
 package com.newsuper.t.consumer.function.vip.presenter;
 
 import com.google.gson.Gson;
-import com.xunjoy.lewaimai.consumer.bean.VipCommitInfoBean;
-import com.xunjoy.lewaimai.consumer.function.vip.inter.IVipCommitView;
-import com.xunjoy.lewaimai.consumer.function.vip.request.VipInfoCommitRequest;
-import com.xunjoy.lewaimai.consumer.manager.HttpManager;
-import com.xunjoy.lewaimai.consumer.manager.listener.HttpRequestListener;
-import com.xunjoy.lewaimai.consumer.utils.UrlConst;
+import com.newsuper.t.consumer.bean.VipCommitInfoBean;
+import com.newsuper.t.consumer.function.vip.inter.IVipCommitView;
+import com.newsuper.t.consumer.function.vip.request.VipInfoCommitRequest;
+import com.newsuper.t.consumer.manager.HttpManager;
+import com.newsuper.t.consumer.manager.listener.HttpRequestListener;
+import com.newsuper.t.consumer.utils.UrlConst;
 
 import java.util.HashMap;
 

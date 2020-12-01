@@ -8,17 +8,17 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.base.BaseActivity;
-import com.xunjoy.lewaimai.consumer.bean.CategoryBean;
-import com.xunjoy.lewaimai.consumer.function.cityinfo.fragment.MyPublishFragment;
-import com.xunjoy.lewaimai.consumer.function.cityinfo.fragment.TopPublishFragment;
-import com.xunjoy.lewaimai.consumer.function.cityinfo.internal.ICityInfoView;
-import com.xunjoy.lewaimai.consumer.function.cityinfo.presenter.CityInfoPresenter;
-import com.xunjoy.lewaimai.consumer.utils.StatusBarUtil;
-import com.xunjoy.lewaimai.consumer.utils.ToastUtil;
-import com.xunjoy.lewaimai.consumer.widget.LimitScrollViewPager;
-import com.xunjoy.lewaimai.consumer.widget.popupwindow.PublishPopupWindow;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.base.BaseActivity;
+import com.newsuper.t.consumer.bean.CategoryBean;
+import com.newsuper.t.consumer.function.cityinfo.fragment.MyPublishFragment;
+import com.newsuper.t.consumer.function.cityinfo.fragment.TopPublishFragment;
+import com.newsuper.t.consumer.function.cityinfo.internal.ICityInfoView;
+import com.newsuper.t.consumer.function.cityinfo.presenter.CityInfoPresenter;
+import com.newsuper.t.consumer.utils.StatusBarUtil;
+import com.newsuper.t.consumer.utils.ToastUtil;
+import com.newsuper.t.consumer.widget.LimitScrollViewPager;
+import com.newsuper.t.consumer.widget.popupwindow.PublishPopupWindow;
 
 import java.util.ArrayList;
 

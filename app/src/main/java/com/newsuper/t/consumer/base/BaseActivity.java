@@ -31,7 +31,7 @@ import com.newsuper.t.consumer.utils.StringUtils;
  *  基类activity
  */
 
-public abstract class BaseActivity extends AppCompatActivity implements View.OnClickListener{
+public abstract class BaseActivity extends AppCompatActivity {
     private OrderBroadcastReceiver receiver;
     private CouponBroadcastReceiver cReceiver;
     public boolean isShowOrderDialog;

@@ -1,13 +1,9 @@
 package com.newsuper.t.consumer.function.person.activity;
 
-import android.content.Context;
 import android.graphics.Color;
-import android.net.http.SslError;
 import android.os.Build;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.TextUtils;
-import android.util.Log;
+
 import com.tencent.smtt.sdk.CookieManager;
 import com.tencent.smtt.sdk.CookieSyncManager;
 import com.tencent.smtt.sdk.WebBackForwardList;
@@ -22,18 +18,15 @@ import android.view.View;
 import android.widget.ProgressBar;
 
 import com.tencent.smtt.export.external.interfaces.SslErrorHandler;
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.base.BaseActivity;
-import com.xunjoy.lewaimai.consumer.utils.Const;
-import com.xunjoy.lewaimai.consumer.utils.LogUtil;
-import com.xunjoy.lewaimai.consumer.utils.SharedPreferencesUtil;
-import com.xunjoy.lewaimai.consumer.utils.StringUtils;
-import com.xunjoy.lewaimai.consumer.widget.CustomToolbar;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.base.BaseActivity;
+import com.newsuper.t.consumer.utils.Const;
+import com.newsuper.t.consumer.utils.LogUtil;
+import com.newsuper.t.consumer.utils.SharedPreferencesUtil;
+import com.newsuper.t.consumer.utils.StringUtils;
+import com.newsuper.t.consumer.widget.CustomToolbar;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import static com.xunjoy.lewaimai.consumer.manager.RetrofitManager.BASE_URL_H5;
+import static com.newsuper.t.consumer.manager.RetrofitManager.BASE_URL_H5;
 
 /**
  * 签到,积分，抽奖

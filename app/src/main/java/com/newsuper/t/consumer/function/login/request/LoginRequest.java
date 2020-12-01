@@ -1,11 +1,11 @@
 package com.newsuper.t.consumer.function.login.request;
 
-import com.xunjoy.lewaimai.consumer.utils.MyDateUtils;
-import com.xunjoy.lewaimai.consumer.utils.NewSign;
-import com.xunjoy.lewaimai.consumer.utils.RetrofitUtil;
-import com.xunjoy.lewaimai.consumer.utils.SharedPreferencesUtil;
-import com.xunjoy.lewaimai.consumer.utils.StringRandom;
-import com.xunjoy.lewaimai.consumer.utils.StringUtils;
+import com.newsuper.t.consumer.utils.MyDateUtils;
+import com.newsuper.t.consumer.utils.NewSign;
+import com.newsuper.t.consumer.utils.RetrofitUtil;
+import com.newsuper.t.consumer.utils.SharedPreferencesUtil;
+import com.newsuper.t.consumer.utils.StringRandom;
+import com.newsuper.t.consumer.utils.StringUtils;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;

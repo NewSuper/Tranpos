@@ -7,8 +7,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.bean.MsgCenterBean;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.bean.MsgCenterBean;
 
 import java.util.ArrayList;
 

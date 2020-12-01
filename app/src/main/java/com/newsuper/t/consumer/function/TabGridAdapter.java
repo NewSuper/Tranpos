@@ -13,11 +13,11 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.bean.TopTabBean;
-import com.xunjoy.lewaimai.consumer.manager.RetrofitManager;
-import com.xunjoy.lewaimai.consumer.utils.StringUtils;
-import com.xunjoy.lewaimai.consumer.widget.CustomCircleImagView;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.bean.TopTabBean;
+import com.newsuper.t.consumer.manager.RetrofitManager;
+import com.newsuper.t.consumer.utils.StringUtils;
+import com.newsuper.t.consumer.widget.CustomCircleImagView;
 
 import java.util.ArrayList;
 

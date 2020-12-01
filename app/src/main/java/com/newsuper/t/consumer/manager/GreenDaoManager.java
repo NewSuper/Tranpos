@@ -8,12 +8,17 @@ import com.newsuper.t.consumer.application.BaseApplication;
 import com.newsuper.t.consumer.bean.GoodsDbBean;
 import com.newsuper.t.consumer.bean.GoodsListBean;
 import com.newsuper.t.consumer.bean.GoodsListBean.GoodsInfo;
+import com.newsuper.t.consumer.greendao.DaoMaster;
+import com.newsuper.t.consumer.greendao.DaoSession;
+import com.newsuper.t.consumer.greendao.GoodsDbBeanDao;
+import com.newsuper.t.consumer.greendao.GoodsDbBeanDao.Properties;
 
+
+import org.greenrobot.greendao.query.QueryBuilder;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Properties;
 import java.util.Set;
 
 

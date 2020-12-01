@@ -1,12 +1,12 @@
 package com.newsuper.t.consumer.function.login.presenter;
 
 import com.google.gson.Gson;
-import com.xunjoy.lewaimai.consumer.bean.LoginBean;
-import com.xunjoy.lewaimai.consumer.function.login.internal.IRegisterView;
-import com.xunjoy.lewaimai.consumer.function.login.request.LoginRequest;
-import com.xunjoy.lewaimai.consumer.manager.HttpManager;
-import com.xunjoy.lewaimai.consumer.manager.listener.HttpRequestListener;
-import com.xunjoy.lewaimai.consumer.utils.UrlConst;
+import com.newsuper.t.consumer.bean.LoginBean;
+import com.newsuper.t.consumer.function.login.internal.IRegisterView;
+import com.newsuper.t.consumer.function.login.request.LoginRequest;
+import com.newsuper.t.consumer.manager.HttpManager;
+import com.newsuper.t.consumer.manager.listener.HttpRequestListener;
+import com.newsuper.t.consumer.utils.UrlConst;
 
 import java.util.HashMap;
 

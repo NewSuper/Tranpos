@@ -10,8 +10,8 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.amap.api.services.core.PoiItem;
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.utils.StringUtils;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.utils.StringUtils;
 
 import java.util.ArrayList;
 

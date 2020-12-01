@@ -10,17 +10,17 @@ import android.widget.Toast;
 
 import com.makeramen.roundedimageview.RoundedImageView;
 import com.squareup.picasso.Picasso;
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.base.BaseActivity;
-import com.xunjoy.lewaimai.consumer.bean.CheckQRCodePayBean;
-import com.xunjoy.lewaimai.consumer.bean.QRCodePayBean;
-import com.xunjoy.lewaimai.consumer.function.vip.inter.IQRCodePayView;
-import com.xunjoy.lewaimai.consumer.function.vip.presenter.QRCodePayPresenter;
-import com.xunjoy.lewaimai.consumer.utils.SharedPreferencesUtil;
-import com.xunjoy.lewaimai.consumer.utils.StringUtils;
-import com.xunjoy.lewaimai.consumer.utils.ToastUtil;
-import com.xunjoy.lewaimai.consumer.widget.CustomToolbar;
-import com.xunjoy.lewaimai.consumer.widget.LoadingAnimatorView;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.base.BaseActivity;
+import com.newsuper.t.consumer.bean.CheckQRCodePayBean;
+import com.newsuper.t.consumer.bean.QRCodePayBean;
+import com.newsuper.t.consumer.function.vip.inter.IQRCodePayView;
+import com.newsuper.t.consumer.function.vip.presenter.QRCodePayPresenter;
+import com.newsuper.t.consumer.utils.SharedPreferencesUtil;
+import com.newsuper.t.consumer.utils.StringUtils;
+import com.newsuper.t.consumer.utils.ToastUtil;
+import com.newsuper.t.consumer.widget.CustomToolbar;
+import com.newsuper.t.consumer.widget.LoadingAnimatorView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

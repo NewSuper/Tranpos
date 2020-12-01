@@ -8,14 +8,14 @@ import android.util.TypedValue;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.base.BaseActivity;
-import com.xunjoy.lewaimai.consumer.function.person.adapter.DepositFragmentAdapter;
-import com.xunjoy.lewaimai.consumer.function.person.fragment.DepositHistoryAllFragment;
-import com.xunjoy.lewaimai.consumer.function.person.fragment.DepositHistoryPayFragment;
-import com.xunjoy.lewaimai.consumer.function.person.fragment.DepositHistoryRefundFragment;
-import com.xunjoy.lewaimai.consumer.widget.CustomToolbar;
-import com.xunjoy.lewaimai.consumer.widget.advertisment.adapter.AdPagerAdapter;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.base.BaseActivity;
+import com.newsuper.t.consumer.function.person.adapter.DepositFragmentAdapter;
+import com.newsuper.t.consumer.function.person.fragment.DepositHistoryAllFragment;
+import com.newsuper.t.consumer.function.person.fragment.DepositHistoryPayFragment;
+import com.newsuper.t.consumer.function.person.fragment.DepositHistoryRefundFragment;
+import com.newsuper.t.consumer.widget.CustomToolbar;
+import com.newsuper.t.consumer.widget.advertisment.adapter.AdPagerAdapter;
 
 import java.lang.reflect.Field;
 

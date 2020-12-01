@@ -8,17 +8,17 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.base.BaseActivity;
-import com.xunjoy.lewaimai.consumer.bean.CollectionBean;
-import com.xunjoy.lewaimai.consumer.function.person.adapter.CollectionAdapter;
-import com.xunjoy.lewaimai.consumer.function.person.internal.ICollectionView;
-import com.xunjoy.lewaimai.consumer.function.person.presenter.CollectionPresenter;
-import com.xunjoy.lewaimai.consumer.function.person.request.CollectionRequest;
-import com.xunjoy.lewaimai.consumer.utils.SharedPreferencesUtil;
-import com.xunjoy.lewaimai.consumer.utils.UrlConst;
-import com.xunjoy.lewaimai.consumer.widget.CustomToolbar;
-import com.xunjoy.lewaimai.consumer.widget.LoadingAnimatorView;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.base.BaseActivity;
+import com.newsuper.t.consumer.bean.CollectionBean;
+import com.newsuper.t.consumer.function.person.adapter.CollectionAdapter;
+import com.newsuper.t.consumer.function.person.internal.ICollectionView;
+import com.newsuper.t.consumer.function.person.presenter.CollectionPresenter;
+import com.newsuper.t.consumer.function.person.request.CollectionRequest;
+import com.newsuper.t.consumer.utils.SharedPreferencesUtil;
+import com.newsuper.t.consumer.utils.UrlConst;
+import com.newsuper.t.consumer.widget.CustomToolbar;
+import com.newsuper.t.consumer.widget.LoadingAnimatorView;
 
 import java.util.HashMap;
 

@@ -2,7 +2,6 @@ package com.newsuper.t.consumer.function.distribution.presenter;
 
 import com.google.gson.Gson;
 import com.newsuper.t.consumer.bean.PaotuiPayOrderInfo;
-import com.newsuper.t.consumer.bean.PayOrderBean;
 import com.newsuper.t.consumer.function.distribution.internal.IPayOrderSuccessView;
 import com.newsuper.t.consumer.function.distribution.request.DistributionRequest;
 import com.newsuper.t.consumer.manager.HttpManager;

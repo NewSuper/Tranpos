@@ -10,10 +10,10 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.bean.AddressBean;
-import com.xunjoy.lewaimai.consumer.function.person.activity.NewAddressActivity;
-import com.xunjoy.lewaimai.consumer.function.selectgoods.activity.SelectAddressActivity;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.bean.AddressBean;
+import com.newsuper.t.consumer.function.person.activity.NewAddressActivity;
+import com.newsuper.t.consumer.function.selectgoods.activity.SelectAddressActivity;
 
 import java.util.ArrayList;
 

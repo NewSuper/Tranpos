@@ -1,20 +1,11 @@
 package com.newsuper.t.consumer.function.distribution.fragment;
 
-import android.Manifest;
 import android.app.Dialog;
-import android.content.ContentResolver;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.database.Cursor;
-import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.provider.ContactsContract;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -32,7 +23,6 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import com.amap.api.maps.model.LatLng;
 import com.amap.api.services.core.LatLonPoint;
 import com.amap.api.services.route.BusRouteResult;
 import com.amap.api.services.route.DriveRouteResult;
@@ -57,7 +47,6 @@ import com.newsuper.t.consumer.function.distribution.NearAddressListActivity;
 import com.newsuper.t.consumer.function.distribution.PaotuiCouponActivity;
 import com.newsuper.t.consumer.function.distribution.PaotuiOrderActivity;
 import com.newsuper.t.consumer.function.distribution.PaySuccessActivity;
-import com.newsuper.t.consumer.function.distribution.ReceiveAddressActivity;
 import com.newsuper.t.consumer.function.distribution.SaveAddressActivity;
 import com.newsuper.t.consumer.function.distribution.adapter.HelpBuyTypeAdapter;
 import com.newsuper.t.consumer.function.distribution.adapter.RequirementAdapter;
@@ -82,7 +71,6 @@ import com.newsuper.t.consumer.widget.CustomToolbar;
 import com.newsuper.t.consumer.widget.LoadingDialog3;
 import com.newsuper.t.consumer.widget.popupwindow.AllPricePopupWindow;
 import com.newsuper.t.consumer.wxapi.Constants;
-import com.newsuper.t.consumer.wxapi.WXPayEntryActivity;
 
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;

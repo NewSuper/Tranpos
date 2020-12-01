@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/rl_coupon_1"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:paddingLeft="5dp"
+        android:orientation="horizontal"
+        android:background="@mipmap/coupon_bg_red_small">
+        <TextView
+            android:id="@+id/tv_coupon_name"
+            android:layout_width="0dp"
+            android:layout_weight="1.9"
+            android:layout_height="match_parent"
+            android:textColor="@color/theme_red"
+            android:gravity="center|left"
+            android:textSize="12sp"
+            android:text="￥10 店铺"/>
+        <TextView
+            android:id="@+id/tv_coupon_status"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/theme_red"
+            android:textSize="12sp"
+            android:text="领"/>
+    </LinearLayout>
+</LinearLayout>

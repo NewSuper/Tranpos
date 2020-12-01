@@ -25,6 +25,12 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 
+import com.amap.api.location.AMapLocation;
+import com.amap.api.location.AMapLocationListener;
+import com.amap.api.services.core.LatLonPoint;
+import com.amap.api.services.core.PoiItem;
+import com.amap.api.services.poisearch.PoiResult;
+import com.amap.api.services.poisearch.PoiSearch;
 import com.newsuper.t.R;
 import com.newsuper.t.consumer.bean.CategoryBean;
 import com.newsuper.t.consumer.bean.PublishAreabean;

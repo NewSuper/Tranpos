@@ -2,7 +2,6 @@ package com.newsuper.t.consumer.function.distribution.presenter;
 
 import com.google.gson.Gson;
 import com.newsuper.t.consumer.bean.CustomAddressBean;
-import com.newsuper.t.consumer.bean.HelpBean;
 import com.newsuper.t.consumer.function.distribution.internal.ICustomeHelpView;
 import com.newsuper.t.consumer.function.distribution.internal.IHelpView;
 import com.newsuper.t.consumer.function.distribution.request.DistributionRequest;

@@ -1,11 +1,11 @@
 package com.newsuper.t.consumer.function.order.presenter;
 
 import com.google.gson.Gson;
-import com.xunjoy.lewaimai.consumer.bean.ShopCommentInfo;
-import com.xunjoy.lewaimai.consumer.function.inter.ICommitComments;
-import com.xunjoy.lewaimai.consumer.manager.HttpManager;
-import com.xunjoy.lewaimai.consumer.manager.listener.HttpRequestListener;
-import com.xunjoy.lewaimai.consumer.utils.UrlConst;
+import com.newsuper.t.consumer.bean.ShopCommentInfo;
+import com.newsuper.t.consumer.function.inter.ICommitComments;
+import com.newsuper.t.consumer.manager.HttpManager;
+import com.newsuper.t.consumer.manager.listener.HttpRequestListener;
+import com.newsuper.t.consumer.utils.UrlConst;
 
 import java.util.Map;
 

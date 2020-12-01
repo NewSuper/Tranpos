@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:textColor="@color/text_color_82"
+        android:text="支付方式"
+        android:background="#E3E3E3"/>
+    <ListView
+        android:id="@+id/listview_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"></ListView>
+</LinearLayout>

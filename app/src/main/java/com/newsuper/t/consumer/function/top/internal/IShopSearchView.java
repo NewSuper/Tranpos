@@ -1,6 +1,7 @@
 package com.newsuper.t.consumer.function.top.internal;
 
-import com.xunjoy.lewaimai.consumer.bean.ShopSearchBean;
+
+import com.newsuper.t.consumer.bean.ShopSearchBean;
 
 public interface IShopSearchView extends IBaseView {
 

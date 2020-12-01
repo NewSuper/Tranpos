@@ -1,8 +1,8 @@
 package com.newsuper.t.consumer.function.top.presenter;
 
-import com.xunjoy.lewaimai.consumer.function.top.internal.IJoinView;
-import com.xunjoy.lewaimai.consumer.manager.HttpManager;
-import com.xunjoy.lewaimai.consumer.manager.listener.HttpRequestListener;
+import com.newsuper.t.consumer.function.top.internal.IJoinView;
+import com.newsuper.t.consumer.manager.HttpManager;
+import com.newsuper.t.consumer.manager.listener.HttpRequestListener;
 
 import java.util.Map;
 

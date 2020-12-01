@@ -10,9 +10,9 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.bean.DepositHistoryBean;
-import com.xunjoy.lewaimai.consumer.function.person.activity.DepositDetailActivity;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.bean.DepositHistoryBean;
+import com.newsuper.t.consumer.function.person.activity.DepositDetailActivity;
 
 import java.util.ArrayList;
 

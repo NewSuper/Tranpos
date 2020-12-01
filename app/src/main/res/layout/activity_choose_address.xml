@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.newsuper.t.consumer.widget.CustomToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_location_search"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:maxWidth="40dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="城市"
+                    android:textColor="@color/text_color_37"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/tv_city_pull"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="1dp"
+                    android:src="@mipmap/icon_cart_pull_down" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="14dp"
+                android:background="#B5B5B5"
+                android:visibility="visible"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/search_store_list"
+                android:visibility="gone"/>
+
+            <EditText
+                android:id="@+id/keyWord"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:gravity="center|left"
+                android:hint="搜索附近的写字楼、小区、学校等"
+                android:textColor="@color/black"
+                android:textColorHint="#B5B5B5"
+                android:textSize="13sp" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/bg_eb"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_top"
+        android:orientation="vertical"
+        android:visibility="visible">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <com.amap.api.maps.MapView
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+                <ImageView
+                    android:id="@+id/ivLocation"
+                    android:layout_width="20dp"
+                    android:layout_height="25dp"
+                    android:layout_marginBottom="20dp"
+                    android:src="@mipmap/location_address_red_select"
+                    android:visibility="visible"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="#EAEAEA"
+            android:dividerHeight="1dp"></ListView>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/ll_top"
+        android:background="@color/white"
+        android:visibility="gone">
+        <ListView
+            android:id="@+id/search_listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dividerHeight="1dp"
+            android:divider="#EAEAEA">
+        </ListView>
+    </LinearLayout>
+    <com.newsuper.t.consumer.widget.SelectCityView
+        android:id="@+id/selectCityView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/ll_top"
+        android:background="@color/white"
+        android:visibility="gone">
+    </com.newsuper.t.consumer.widget.SelectCityView>
+
+</RelativeLayout>
+

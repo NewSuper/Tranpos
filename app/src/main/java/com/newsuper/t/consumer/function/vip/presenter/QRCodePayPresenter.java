@@ -7,13 +7,13 @@ import com.google.zxing.BarcodeFormat;
 import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
-import com.xunjoy.lewaimai.consumer.bean.CheckQRCodePayBean;
-import com.xunjoy.lewaimai.consumer.bean.QRCodePayBean;
-import com.xunjoy.lewaimai.consumer.function.vip.inter.IQRCodePayView;
-import com.xunjoy.lewaimai.consumer.function.vip.request.VipCardRequest;
-import com.xunjoy.lewaimai.consumer.manager.HttpManager;
-import com.xunjoy.lewaimai.consumer.manager.listener.HttpRequestListener;
-import com.xunjoy.lewaimai.consumer.utils.UrlConst;
+import com.newsuper.t.consumer.bean.CheckQRCodePayBean;
+import com.newsuper.t.consumer.bean.QRCodePayBean;
+import com.newsuper.t.consumer.function.vip.inter.IQRCodePayView;
+import com.newsuper.t.consumer.function.vip.request.VipCardRequest;
+import com.newsuper.t.consumer.manager.HttpManager;
+import com.newsuper.t.consumer.manager.listener.HttpRequestListener;
+import com.newsuper.t.consumer.utils.UrlConst;
 
 import java.util.HashMap;
 

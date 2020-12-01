@@ -13,6 +13,8 @@ import android.widget.LinearLayout;
 
 
 import com.newsuper.t.R;
+import com.newsuper.t.consumer.application.BaseApplication;
+import com.newsuper.t.consumer.bean.GoodsListBean;
 import com.newsuper.t.consumer.bean.ShopCart;
 import com.newsuper.t.consumer.function.selectgoods.adapter.CartDetailAdapter;
 import com.newsuper.t.consumer.function.selectgoods.adapter.DividerDecoration;
@@ -126,6 +128,8 @@ public class ShopCartDialog extends Dialog implements View.OnClickListener, ISho
     }
 
     @Override
+
+
     public void remove(int position, GoodsListBean.GoodsInfo goods) {
         if(null!=iShopCartDialog){
             iShopCartDialog.updateCartData();

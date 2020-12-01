@@ -2,7 +2,6 @@ package com.newsuper.t.consumer.function.cityinfo.presenter;
 
 import com.google.gson.Gson;
 import com.newsuper.t.consumer.bean.MyPublishListBean;
-import com.newsuper.t.consumer.bean.PublishListBean;
 import com.newsuper.t.consumer.bean.SetTopInfoBean;
 import com.newsuper.t.consumer.bean.SetTopPayBean;
 import com.newsuper.t.consumer.function.cityinfo.internal.IMyPublishView;

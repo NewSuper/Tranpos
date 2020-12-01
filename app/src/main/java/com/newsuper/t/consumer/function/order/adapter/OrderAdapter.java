@@ -1,5 +1,6 @@
 package com.newsuper.t.consumer.function.order.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.support.v7.util.DiffUtil;
 import android.support.v7.widget.RecyclerView;
@@ -10,17 +11,17 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.base.BaseFragment;
-import com.xunjoy.lewaimai.consumer.bean.OrderBean;
-import com.xunjoy.lewaimai.consumer.function.inter.IComment;
-import com.xunjoy.lewaimai.consumer.function.inter.IOnPay;
-import com.xunjoy.lewaimai.consumer.function.order.activity.MyOrderActivity;
-import com.xunjoy.lewaimai.consumer.function.order.callback.OrderCallBack;
-import com.xunjoy.lewaimai.consumer.function.order.activity.SelectPayTypeActivity;
-import com.xunjoy.lewaimai.consumer.function.selectgoods.activity.SelectGoodsActivity3;
-import com.xunjoy.lewaimai.consumer.utils.FormatUtil;
-import com.xunjoy.lewaimai.consumer.utils.UIUtils;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.base.BaseFragment;
+import com.newsuper.t.consumer.bean.OrderBean;
+import com.newsuper.t.consumer.function.inter.IComment;
+import com.newsuper.t.consumer.function.inter.IOnPay;
+import com.newsuper.t.consumer.function.order.activity.MyOrderActivity;
+import com.newsuper.t.consumer.function.order.callback.OrderCallBack;
+import com.newsuper.t.consumer.function.order.activity.SelectPayTypeActivity;
+import com.newsuper.t.consumer.function.selectgoods.activity.SelectGoodsActivity3;
+import com.newsuper.t.consumer.utils.FormatUtil;
+import com.newsuper.t.consumer.utils.UIUtils;
 
 import java.util.ArrayList;
 
@@ -116,7 +117,7 @@ public class OrderAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     }
 
     @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         if (holder instanceof FooterViewHolder) {
             FooterViewHolder holder1 = (FooterViewHolder) holder;
             if (isLoadAll) {

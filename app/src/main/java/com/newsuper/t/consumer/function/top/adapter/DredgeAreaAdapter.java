@@ -10,9 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.bean.DredgeAreaBean;
-import com.xunjoy.lewaimai.consumer.function.top.avtivity.DredgeMapActivity;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.bean.DredgeAreaBean;
+import com.newsuper.t.consumer.function.top.avtivity.DredgeMapActivity;
 
 import java.util.ArrayList;
 

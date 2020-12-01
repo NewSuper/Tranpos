@@ -11,6 +11,8 @@ buildscript {
     dependencies {
         classpath "com.android.tools.build:gradle:3.4.1"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${KOTLIN_VERSION}"
+
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.2.2'
     }
 }
 
@@ -23,6 +25,9 @@ allprojects {
         //--投屏库
         maven {
             url 'http://4thline.org/m2'
+        }
+        maven {
+            url "http://mvn.gt.igexin.com/nexus/content/repositories/releases/"
         }
     }
 }

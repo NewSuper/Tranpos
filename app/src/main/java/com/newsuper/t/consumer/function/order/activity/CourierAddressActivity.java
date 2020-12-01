@@ -26,16 +26,16 @@ import com.amap.api.maps.model.Marker;
 import com.amap.api.maps.model.MarkerOptions;
 import com.amap.api.maps.model.MyLocationStyle;
 import com.bumptech.glide.Glide;
-import com.xunjoy.lewaimai.consumer.R;
-import com.xunjoy.lewaimai.consumer.manager.RetrofitManager;
-import com.xunjoy.lewaimai.consumer.widget.CustomToolbar;
+import com.newsuper.t.R;
+import com.newsuper.t.consumer.widget.CustomToolbar;
+
 
 import java.text.DecimalFormat;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class CourierAddressActivity extends AppCompatActivity implements LocationSource, AMapLocationListener, AMap.InfoWindowAdapter,CustomToolbar.CustomToolbarListener {
+public class CourierAddressActivity extends AppCompatActivity implements LocationSource, AMapLocationListener, AMap.InfoWindowAdapter, CustomToolbar.CustomToolbarListener {
     @BindView(R.id.mapView)
     MapView mapView;
     @BindView(R.id.toolbar)

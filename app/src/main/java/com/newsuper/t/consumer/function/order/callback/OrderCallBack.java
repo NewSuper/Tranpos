@@ -3,8 +3,8 @@ package com.newsuper.t.consumer.function.order.callback;
 import android.support.annotation.Nullable;
 import android.support.v7.util.DiffUtil;
 
-import com.xunjoy.lewaimai.consumer.bean.OrderBean;
-import com.xunjoy.lewaimai.consumer.bean.TopBean;
+import com.newsuper.t.consumer.bean.OrderBean;
+import com.newsuper.t.consumer.bean.TopBean;
 
 import java.util.ArrayList;
 

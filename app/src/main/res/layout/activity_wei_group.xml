@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <com.newsuper.t.consumer.widget.LimitScrollViewPager
+        android:id="@+id/top_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="51dp"/>
+    <LinearLayout
+        android:id="@+id/ll_tab"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:orientation="vertical"
+        android:clipChildren="false"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/bg_eb"/>
+        <com.newsuper.t.consumer.widget.defineTopView.WGridView
+            android:id="@+id/tab_gridview"
+            android:layout_width="match_parent"
+            android:clipChildren="false"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</RelativeLayout>

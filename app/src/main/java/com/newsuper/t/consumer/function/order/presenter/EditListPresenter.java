@@ -1,9 +1,9 @@
 package com.newsuper.t.consumer.function.order.presenter;
 
-import com.xunjoy.lewaimai.consumer.function.inter.IEditOrderFragmentView;
-import com.xunjoy.lewaimai.consumer.manager.HttpManager;
-import com.xunjoy.lewaimai.consumer.manager.listener.HttpRequestListener;
-import com.xunjoy.lewaimai.consumer.utils.UIUtils;
+import com.newsuper.t.consumer.function.inter.IEditOrderFragmentView;
+import com.newsuper.t.consumer.manager.HttpManager;
+import com.newsuper.t.consumer.manager.listener.HttpRequestListener;
+import com.newsuper.t.consumer.utils.UIUtils;
 
 import java.util.Map;
 

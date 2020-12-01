@@ -2,10 +2,10 @@ package com.newsuper.t.consumer.utils.UpyunUtils.common;
 
 
 
-import com.xunjoy.lewaimai.consumer.utils.UpyunUtils.listener.SignatureListener;
-import com.xunjoy.lewaimai.consumer.utils.UpyunUtils.listener.UpCompleteListener;
-import com.xunjoy.lewaimai.consumer.utils.UpyunUtils.listener.UpProgressListener;
-import com.xunjoy.lewaimai.consumer.utils.UpyunUtils.utils.AsyncRun;
+import com.newsuper.t.consumer.utils.UpyunUtils.listener.SignatureListener;
+import com.newsuper.t.consumer.utils.UpyunUtils.listener.UpCompleteListener;
+import com.newsuper.t.consumer.utils.UpyunUtils.listener.UpProgressListener;
+import com.newsuper.t.consumer.utils.UpyunUtils.utils.AsyncRun;
 
 import java.io.File;
 import java.util.HashMap;
