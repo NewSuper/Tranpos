@@ -35,7 +35,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
 import com.newsuper.t.R;
-import com.newsuper.t.consumer.application.BaseApplication;
+import com.newsuper.t.consumer.base.BaseApplication;
 import com.newsuper.t.consumer.base.BaseActivity;
 import com.newsuper.t.consumer.bean.GoodsListBean;
 import com.newsuper.t.consumer.bean.GoodsSearchBean;

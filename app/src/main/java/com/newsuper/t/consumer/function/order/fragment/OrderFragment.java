@@ -33,7 +33,7 @@ import com.tencent.mm.opensdk.modelpay.PayReq;
 import com.tencent.mm.opensdk.openapi.IWXAPI;
 import com.tencent.mm.opensdk.openapi.WXAPIFactory;
 import com.newsuper.t.R;
-import com.newsuper.t.consumer.application.BaseApplication;
+import com.newsuper.t.consumer.base.BaseApplication;
 import com.newsuper.t.consumer.base.BaseFragment;
 import com.newsuper.t.consumer.bean.ContinuePayResultBean;
 import com.newsuper.t.consumer.bean.ContinuePayTypeBean;

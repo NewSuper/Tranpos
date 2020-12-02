@@ -1,14 +1,12 @@
 package com.newsuper.t.consumer.function.selectgoods.adapter;
 
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import com.newsuper.t.consumer.application.BaseApplication;
-import com.newsuper.t.consumer.utils.UIUtils;
+import com.newsuper.t.consumer.base.BaseApplication;
 
 
 public class DividerDecoration extends RecyclerView.ItemDecoration {

@@ -1,4 +1,4 @@
-package com.newsuper.t.consumer.api;
+package com.newsuper.t.consumer.base;
 
 import com.newsuper.t.consumer.bean.TestModle;
 

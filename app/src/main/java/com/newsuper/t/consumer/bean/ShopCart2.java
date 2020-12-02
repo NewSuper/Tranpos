@@ -1,11 +1,8 @@
 package com.newsuper.t.consumer.bean;
 
 import android.text.TextUtils;
-import android.util.Log;
 
-import com.google.gson.Gson;
-import com.newsuper.t.consumer.application.BaseApplication;
-import com.newsuper.t.consumer.utils.FormatUtil;
+import com.newsuper.t.consumer.base.BaseApplication;
 import com.newsuper.t.consumer.utils.LogUtil;
 import com.newsuper.t.consumer.utils.MemberUtil;
 import com.newsuper.t.consumer.utils.SharedPreferencesUtil;

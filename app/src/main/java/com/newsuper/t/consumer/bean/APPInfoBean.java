@@ -1,8 +1,5 @@
 package com.newsuper.t.consumer.bean;
 
-/**
- * Created by Administrator on 2017/10/30 0030.
- */
 
 public class APPInfoBean extends BaseBean{
 

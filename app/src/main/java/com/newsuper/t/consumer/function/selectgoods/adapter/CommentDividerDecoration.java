@@ -6,7 +6,7 @@ import android.graphics.Rect;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import com.newsuper.t.consumer.application.BaseApplication;
+import com.newsuper.t.consumer.base.BaseApplication;
 
 
 public class CommentDividerDecoration extends RecyclerView.ItemDecoration {

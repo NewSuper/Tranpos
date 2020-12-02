@@ -1,16 +1,12 @@
 package com.newsuper.t.consumer.bean;
 
-import com.newsuper.t.consumer.application.BaseApplication;
+import com.newsuper.t.consumer.base.BaseApplication;
 import com.newsuper.t.consumer.utils.FormatUtil;
 import com.newsuper.t.consumer.utils.LogUtil;
 import com.newsuper.t.consumer.utils.StringUtils;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-
-/**
- * Created by Administrator on 2018/6/22 0022.
- */
 
 public class CartGoodsInfoBean {
     public boolean isVip;

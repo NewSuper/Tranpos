@@ -17,7 +17,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.newsuper.t.R;
-import com.newsuper.t.consumer.application.BaseApplication;
+import com.newsuper.t.consumer.base.BaseApplication;
 import com.newsuper.t.consumer.bean.GoodsType;
 import com.newsuper.t.consumer.utils.LogUtil;
 import com.newsuper.t.consumer.utils.StringUtils;
@@ -25,9 +25,7 @@ import com.newsuper.t.consumer.utils.UIUtils;
 import com.newsuper.t.consumer.widget.MyImageSpan;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 
 public class TypeAdapter2 extends RecyclerView.Adapter<RecyclerView.ViewHolder> {

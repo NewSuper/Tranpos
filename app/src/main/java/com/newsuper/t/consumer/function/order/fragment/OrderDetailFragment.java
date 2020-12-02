@@ -22,7 +22,7 @@ import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.QRCodeWriter;
 import com.newsuper.t.R;
-import com.newsuper.t.consumer.application.BaseApplication;
+import com.newsuper.t.consumer.base.BaseApplication;
 import com.newsuper.t.consumer.bean.OrderAgainBean;
 import com.newsuper.t.consumer.bean.OrderInfoBean;
 import com.newsuper.t.consumer.function.inter.IEditOrderFragmentView;

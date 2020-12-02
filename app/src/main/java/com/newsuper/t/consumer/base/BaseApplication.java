@@ -1,9 +1,8 @@
-package com.newsuper.t.consumer.application;
+package com.newsuper.t.consumer.base;
 
 import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.os.StrictMode;
 import android.support.multidex.MultiDex;
 import android.text.TextUtils;
 import android.view.WindowManager;

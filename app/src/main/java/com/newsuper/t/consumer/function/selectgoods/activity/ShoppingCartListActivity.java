@@ -3,8 +3,6 @@ package com.newsuper.t.consumer.function.selectgoods.activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -12,10 +10,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.newsuper.t.R;
-import com.newsuper.t.consumer.application.BaseApplication;
+import com.newsuper.t.consumer.base.BaseApplication;
 import com.newsuper.t.consumer.base.BaseActivity;
 import com.newsuper.t.consumer.bean.CartGoodsInfoBean;
-import com.newsuper.t.consumer.bean.CartGoodsModel;
 import com.newsuper.t.consumer.bean.GoodsListBean;
 import com.newsuper.t.consumer.bean.ShopCartListBean;
 import com.newsuper.t.consumer.function.selectgoods.adapter.CartGoodsLvAdapter;
@@ -25,7 +22,6 @@ import com.newsuper.t.consumer.utils.SharedPreferencesUtil;
 import com.newsuper.t.consumer.utils.StringUtils;
 import com.newsuper.t.consumer.utils.ToastUtil;
 import com.newsuper.t.consumer.widget.CustomToolbar;
-import com.newsuper.t.consumer.widget.ListViewForScrollView;
 import com.newsuper.t.consumer.widget.LoadingAnimatorView;
 
 import org.json.JSONArray;

@@ -1,22 +1,16 @@
 package com.newsuper.t.consumer.bean;
 
-import android.util.Log;
 
 import com.newsuper.t.consumer.utils.LogUtil;
 import com.newsuper.t.consumer.utils.MemberUtil;
 import com.newsuper.t.consumer.utils.StringUtils;
 
-import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-/**
- * Created by Administrator on 2017/7/1 0001.
- */
 
 public class CartGoodsModel {
     public String id;

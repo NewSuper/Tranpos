@@ -45,7 +45,7 @@ import com.tencent.mm.opensdk.openapi.IWXAPI;
 import com.tencent.mm.opensdk.openapi.WXAPIFactory;
 import com.tencent.tauth.Tencent;
 import com.newsuper.t.R;
-import com.newsuper.t.consumer.application.BaseApplication;
+import com.newsuper.t.consumer.base.BaseApplication;
 import com.newsuper.t.consumer.bean.CollectBean;
 import com.newsuper.t.consumer.bean.GoodsByType;
 import com.newsuper.t.consumer.bean.GoodsListBean;

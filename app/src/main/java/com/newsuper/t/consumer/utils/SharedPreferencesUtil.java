@@ -2,7 +2,7 @@ package com.newsuper.t.consumer.utils;
 
 import android.content.SharedPreferences;
 import com.google.gson.Gson;
-import com.newsuper.t.consumer.application.BaseApplication;
+import com.newsuper.t.consumer.base.BaseApplication;
 import com.newsuper.t.consumer.bean.LocationSearchBean;
 import com.newsuper.t.consumer.bean.ShopHistoryBean;
 

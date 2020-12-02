@@ -1,10 +1,8 @@
 package com.newsuper.t.consumer.manager;
-import android.os.Looper;
-import android.util.Log;
 
 import com.google.gson.Gson;
-import com.newsuper.t.consumer.api.BaseApi;
-import com.newsuper.t.consumer.application.BaseApplication;
+import com.newsuper.t.consumer.base.BaseApi;
+import com.newsuper.t.consumer.base.BaseApplication;
 import com.newsuper.t.consumer.bean.BaseBean;
 import com.newsuper.t.consumer.manager.listener.HttpRequestListener;
 import com.newsuper.t.consumer.utils.MyLogUtils;
@@ -21,7 +19,6 @@ import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 import okhttp3.ResponseBody;
-import retrofit2.Call;
 import retrofit2.HttpException;
 
 /**

@@ -54,7 +54,7 @@ import com.tencent.mm.opensdk.openapi.WXAPIFactory;
 import com.wx.wheelview.adapter.ArrayWheelAdapter;
 import com.wx.wheelview.widget.WheelView;
 import com.newsuper.t.R;
-import com.newsuper.t.consumer.application.BaseApplication;
+import com.newsuper.t.consumer.base.BaseApplication;
 import com.newsuper.t.consumer.base.BaseActivity;
 import com.newsuper.t.consumer.bean.AddressBean;
 import com.newsuper.t.consumer.bean.CartGoodsModel;

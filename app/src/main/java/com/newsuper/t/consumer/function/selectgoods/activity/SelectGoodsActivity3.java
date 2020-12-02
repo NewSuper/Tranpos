@@ -46,7 +46,7 @@ import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
 import com.google.gson.Gson;
 import com.newsuper.t.R;
-import com.newsuper.t.consumer.application.BaseApplication;
+import com.newsuper.t.consumer.base.BaseApplication;
 import com.newsuper.t.consumer.base.BaseActivity;
 import com.newsuper.t.consumer.bean.CollectionBean;
 import com.newsuper.t.consumer.bean.GoodsListBean;

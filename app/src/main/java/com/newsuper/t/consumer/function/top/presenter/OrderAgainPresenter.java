@@ -3,18 +3,15 @@ package com.newsuper.t.consumer.function.top.presenter;
 import android.text.TextUtils;
 
 import com.google.gson.Gson;
-import com.newsuper.t.consumer.application.BaseApplication;
+import com.newsuper.t.consumer.base.BaseApplication;
 import com.newsuper.t.consumer.bean.GoodsListBean;
 import com.newsuper.t.consumer.bean.OrderAgainBean;
-import com.newsuper.t.consumer.bean.ShopCart2;
-import com.newsuper.t.consumer.bean.WShopCart2;
 import com.newsuper.t.consumer.function.order.request.OrderInfoRequest;
 import com.newsuper.t.consumer.function.top.internal.IOrderAgainView;
 import com.newsuper.t.consumer.manager.HttpManager;
 import com.newsuper.t.consumer.manager.listener.HttpRequestListener;
 import com.newsuper.t.consumer.utils.FormatUtil;
 import com.newsuper.t.consumer.utils.LogUtil;
-import com.newsuper.t.consumer.utils.MemberUtil;
 import com.newsuper.t.consumer.utils.SharedPreferencesUtil;
 import com.newsuper.t.consumer.utils.StringUtils;
 import com.newsuper.t.consumer.utils.UIUtils;
@@ -22,7 +19,6 @@ import com.newsuper.t.consumer.utils.UrlConst;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 
 public class OrderAgainPresenter {
     IOrderAgainView againView;

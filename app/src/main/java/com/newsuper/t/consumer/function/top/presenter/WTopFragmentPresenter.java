@@ -1,33 +1,20 @@
 package com.newsuper.t.consumer.function.top.presenter;
 
-import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.drawable.Drawable;
-import android.util.Log;
-
 import com.google.gson.Gson;
-import com.squareup.picasso.Picasso;
-import com.newsuper.t.consumer.application.BaseApplication;
 import com.newsuper.t.consumer.bean.GetCouponBean;
-import com.newsuper.t.consumer.bean.GoodsListBean;
 import com.newsuper.t.consumer.bean.TopBean;
 import com.newsuper.t.consumer.bean.WTopBean;
 import com.newsuper.t.consumer.function.top.internal.IWTopFragmentView;
 import com.newsuper.t.consumer.function.top.request.TopRequest;
 import com.newsuper.t.consumer.manager.HttpManager;
 import com.newsuper.t.consumer.manager.listener.HttpRequestListener;
-import com.newsuper.t.consumer.utils.LogUtil;
 import com.newsuper.t.consumer.utils.RetrofitUtil;
 import com.newsuper.t.consumer.utils.SharedPreferencesUtil;
 import com.newsuper.t.consumer.utils.StringUtils;
 import com.newsuper.t.consumer.utils.UrlConst;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 /**
  * Created by Administrator on 2017/7/24 0024.

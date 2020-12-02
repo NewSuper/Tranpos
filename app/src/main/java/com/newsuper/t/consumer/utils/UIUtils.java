@@ -36,7 +36,7 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-import static com.newsuper.t.consumer.application.BaseApplication.getApplication;
+import static com.newsuper.t.consumer.base.BaseApplication.getApplication;
 
 
 public class UIUtils {

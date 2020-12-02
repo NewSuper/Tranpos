@@ -4,8 +4,6 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import com.google.gson.Gson;
-import com.newsuper.t.consumer.application.BaseApplication;
-import com.newsuper.t.consumer.bean.CartGoodsModel;
 import com.newsuper.t.consumer.bean.GoodsListBean;
 import com.newsuper.t.consumer.bean.ShopCartListBean;
 import com.newsuper.t.consumer.function.selectgoods.inter.IShoppingCartListView;
@@ -17,9 +15,7 @@ import com.newsuper.t.consumer.utils.UrlConst;
 
 import org.json.JSONArray;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 /**
  * Created by Administrator on 2017/6/26 0026.

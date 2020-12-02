@@ -18,11 +18,9 @@ import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.newsuper.t.R;
-import com.newsuper.t.consumer.application.BaseApplication;
+import com.newsuper.t.consumer.base.BaseApplication;
 import com.newsuper.t.consumer.bean.GoodsListBean;
-import com.newsuper.t.consumer.bean.ShopCart;
 import com.newsuper.t.consumer.bean.ShopCart2;
-import com.newsuper.t.consumer.function.selectgoods.adapter.CartDetailAdapter;
 import com.newsuper.t.consumer.function.selectgoods.inter.IShopCart;
 import com.newsuper.t.consumer.utils.FormatUtil;
 import com.newsuper.t.consumer.utils.MemberUtil;

@@ -18,7 +18,7 @@ import android.widget.TextView;
 import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 import com.newsuper.t.R;
-import com.newsuper.t.consumer.application.BaseApplication;
+import com.newsuper.t.consumer.base.BaseApplication;
 import com.newsuper.t.consumer.bean.CartGoodsInfoBean;
 import com.newsuper.t.consumer.bean.CartGoodsModel;
 import com.newsuper.t.consumer.bean.GoodsListBean;

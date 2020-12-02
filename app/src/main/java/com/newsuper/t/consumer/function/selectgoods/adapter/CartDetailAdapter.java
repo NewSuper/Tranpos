@@ -10,7 +10,6 @@ import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.TextUtils;
 import android.text.style.ImageSpan;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,7 +18,7 @@ import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.newsuper.t.R;
-import com.newsuper.t.consumer.application.BaseApplication;
+import com.newsuper.t.consumer.base.BaseApplication;
 import com.newsuper.t.consumer.bean.GoodsListBean;
 import com.newsuper.t.consumer.bean.ShopCart;
 import com.newsuper.t.consumer.function.selectgoods.inter.IShopCart;
@@ -29,8 +28,6 @@ import com.newsuper.t.consumer.utils.UIUtils;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.security.auth.login.LoginException;
 
 public class CartDetailAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private Context mContext;

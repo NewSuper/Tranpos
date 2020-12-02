@@ -24,7 +24,7 @@ import android.widget.TextView;
 import com.google.gson.Gson;
 import android.Manifest;
 import com.newsuper.t.R;
-import com.newsuper.t.consumer.application.BaseApplication;
+import com.newsuper.t.consumer.base.BaseApplication;
 import com.newsuper.t.consumer.bean.GrayBean;
 import com.newsuper.t.consumer.function.GuideActivity;
 import com.newsuper.t.consumer.function.TopActivity3;

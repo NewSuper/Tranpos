@@ -24,7 +24,7 @@ import android.widget.TextView;
 
 import com.igexin.sdk.PushManager;
 import com.newsuper.t.R;
-import com.newsuper.t.consumer.application.BaseApplication;
+import com.newsuper.t.consumer.base.BaseApplication;
 import com.newsuper.t.consumer.base.BaseActivity;
 import com.newsuper.t.consumer.base.BaseFragment;
 import com.newsuper.t.consumer.bean.APPInfoBean;

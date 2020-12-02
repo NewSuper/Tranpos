@@ -36,7 +36,7 @@ import com.igexin.sdk.PushManager;
 import com.makeramen.roundedimageview.RoundedImageView;
 import com.squareup.picasso.Picasso;
 import com.newsuper.t.R;
-import com.newsuper.t.consumer.application.BaseApplication;
+import com.newsuper.t.consumer.base.BaseApplication;
 import com.newsuper.t.consumer.base.BaseFragment;
 import com.newsuper.t.consumer.bean.CustomerInfoBean;
 import com.newsuper.t.consumer.bean.MsgCountBean;

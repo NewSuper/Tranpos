@@ -13,7 +13,7 @@ import android.widget.LinearLayout;
 
 
 import com.newsuper.t.R;
-import com.newsuper.t.consumer.application.BaseApplication;
+import com.newsuper.t.consumer.base.BaseApplication;
 import com.newsuper.t.consumer.bean.GoodsListBean;
 import com.newsuper.t.consumer.bean.ShopCart;
 import com.newsuper.t.consumer.function.selectgoods.adapter.CartDetailAdapter;
@@ -21,8 +21,6 @@ import com.newsuper.t.consumer.function.selectgoods.adapter.DividerDecoration;
 import com.newsuper.t.consumer.function.selectgoods.adapter.MyItemAnimator;
 import com.newsuper.t.consumer.function.selectgoods.inter.IShopCart;
 import com.newsuper.t.consumer.function.selectgoods.inter.IShopCartDialog;
-
-import java.text.DecimalFormat;
 
 public class ShopCartDialog extends Dialog implements View.OnClickListener, IShopCart {
 

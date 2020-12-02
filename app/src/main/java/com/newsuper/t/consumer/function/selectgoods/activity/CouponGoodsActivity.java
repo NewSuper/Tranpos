@@ -33,7 +33,7 @@ import android.widget.TextView;
 //
 import com.google.gson.Gson;
 import com.newsuper.t.R;
-import com.newsuper.t.consumer.application.BaseApplication;
+import com.newsuper.t.consumer.base.BaseApplication;
 import com.newsuper.t.consumer.base.BaseActivity;
 import com.newsuper.t.consumer.bean.GoodsCouponBean;
 import com.newsuper.t.consumer.bean.GoodsListBean;

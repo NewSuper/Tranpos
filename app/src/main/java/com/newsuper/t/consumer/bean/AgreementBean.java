@@ -1,10 +1,6 @@
 package com.newsuper.t.consumer.bean;
 
-import java.util.ArrayList;
 
-/**
- * Created by Administrator on 2017/8/15 0015.
- */
 
 public class AgreementBean extends BaseBean{
     public AgreementData data;

@@ -2,9 +2,6 @@ package com.newsuper.t.consumer.bean;
 
 import java.util.ArrayList;
 
-/**
- * Created by Administrator on 2018/6/19 0019.
- */
 
 public class CategoryBean extends BaseBean{
     public CategoryData data;
