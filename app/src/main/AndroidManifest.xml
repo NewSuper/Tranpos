@@ -3,7 +3,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.newsuper.t">
 
+    <!-- 显示系统窗口权限 -->
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- 在 屏幕最顶部显示addview -->
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.modify_phone_state" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <!--驱动打印运行需要的权限 -->
+    <uses-permission android:name="android.hardware.usb.accessory" />
+    <uses-permission
+        android:name="android.hardware.usb.host"
+        android:required="true" />
+    <uses-permission
+        android:name="android.permission.DEVICE_POWER"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- BluetoothLeService service 运行需要的权限 -->
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+    <!-- 蓝牙权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <!-- 蓝牙权限salemarkerend -->
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <!-- 安卓8.0安装权限 -->
@@ -12,16 +62,17 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <!-- 往sdcard中写入数据的权限 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <!-- 在sdcard中创建/删除文件的权限 -->
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"   tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"  tools:ignore="ProtectedPermissions"  />
     <uses-permission android:name="android.permission.VIBRATE" />
     <!-- Android6.0 蓝牙扫描才需要 -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -38,21 +89,11 @@
     <!-- 高德地图定位导航所用权限 -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"   tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
     <!-- 百度语音 -->
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
-    <!-- 百度语音结束 -->
-    <!-- bugly权限 -->
-    <!-- ugly权限结束 -->
-    <!-- 阿里移动推送相关权限 -->
-    <!-- Android 6.0版本可去除，用于选举信息（通道复用）的同步 -->
-    <!-- 进行网络访问和网络状态监控相关的权限声明 -->
-    <!-- 允许对sd卡进行读写操作 -->
-    <!-- 网络库使用，当网络操作时需要确保事务完成不被杀掉 -->
-    <!-- 用于读取手机硬件信息等，用于机型过滤 -->
-    <!-- 选举使用，当应用有删除或者更新时需要重新选举，复用推送通道 -->
     <uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED" />
     <uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED" />
     <uses-permission android:name="android.permission.RESTART_PACKAGES" />
@@ -67,7 +108,6 @@
     <!-- 个推自定义 -->
     <uses-permission android:name="getui.permission.GetuiService.${applicationId}" />
     <!-- 硬件加速对X5视频播放非常重要，建议开启 -->
-
 
     <!-- 魅族推送相关 -->
     <!-- 兼容 Flyme5 以下版本，魅族内部接入 PushSDK 必填，不然无法收到消息 -->
@@ -158,8 +198,10 @@
     <uses-permission android:name="android.permission.VIBRATE" />
   <!--android:name=".juejinbao.base.JJBApplication"-->
   <!--android:name=".consumer.application.BaseApplication"-->
+  <!--android:name=".markert.base.BaseApp"-->
+  <!--android:name=".sale.base.BaseApp"-->
     <application
-        android:name=".consumer.base.BaseApplication"
+        android:name=".sale.base.BaseApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -193,16 +235,59 @@
                 <data android:scheme="qhw53c" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name=".markert.service.PrintService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name=".markert.service.SummiPrintService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service android:name=".markert.utils.summiPrint.SummiPrinterQueneService"/>
+        <service
+            android:name=".markert.utils.usbPrint.UsbPhoneService"
+            android:process=":print" />
+        <service
+            android:name=".markert.service.UploadService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+      <activity android:name=".markert.ui.register.SplashActivity"/>
+        <activity android:name=".markert.ui.register.RegisterActivity"/>
+        <activity android:name=".markert.ui.login.LoginActivity"/>
+        <activity android:name=".markert.ui.food.FoodActivity"
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden|navigation"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateAlwaysHidden|stateHidden"/>
+
+
+
+        <activity android:name=".sale.ui.splash.SplashActivity"/>
+        <activity android:name=".sale.ui.register.RegisterActivity"/>
+        <activity android:name=".sale.ui.login.LoginActivity"/>
+        <activity android:name=".sale.ui.food.FoodActivity"/>
+        <activity android:name=".sale.ui.set.SettingActivity"/>
+        <activity android:name=".sale.ui.navi.VipLoginWaysActivity"/>
+        <activity android:name=".sale.ui.navi.PhoneLoginActivity"/>
+        <activity android:name=".sale.ui.navi.VipScanCodeLoginActivity"/>
+        <activity android:name=".sale.ui.navi.FaceLoginActivity"/>
+        <activity android:name=".sale.ui.scan.PromptScanCodeActivity"/>
+        <activity android:name=".sale.ui.scan.AccountsActivity"/>
+        <activity android:name=".sale.ui.scan.ScanCodePayActivity"/>
+        <activity android:name=".sale.ui.scan.PaySuccessActivity"/>
+
+
+
         <activity
             android:name=".juejinbao.ui.JueJinBaoLaunchActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:launchMode="singleTask"
             android:theme="@style/AppTheme.Splash">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
             <!--            <intent-filter>-->
             <!--                <action android:name="android.intent.action.VIEW" />-->
 
@@ -922,11 +1007,11 @@
             android:launchMode="standard"
             android:theme="@style/AppTheme2"
             android:windowSoftInputMode="stateHidden">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
         </activity>
         <activity
             android:name=".consumer.function.TopActivity3"

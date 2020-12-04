@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_45"
+    android:background="@drawable/shape_actionbar_bg"
+    android:gravity="center_vertical">
+    <ImageView
+        android:layout_width="@dimen/dp_114"
+        android:layout_height="@dimen/dp_20"
+        android:src="@mipmap/ic_ac_logo"
+        android:scaleType="centerCrop"
+        android:layout_marginLeft="@dimen/dp_16"/>
+    <TextView
+        android:id="@+id/tv_member_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:textSize="@dimen/sp_15"
+        android:visibility="invisible"
+        android:text="@string/txt_actionbar_title"/>
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+    <TextView
+        android:id="@+id/tv_deal"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_15"
+        android:layout_marginRight="@dimen/dp_16"
+        android:text="@string/txt_actionbar_content"/>
+</LinearLayout>

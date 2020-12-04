@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="26dp"
+        android:background="@drawable/layerlist_1ec1b3"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:gravity="center|left"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/title_logo" />
+
+            <TextView
+                android:id="@+id/tv_storeName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_10" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center"
+            android:layout_weight="1"
+            android:gravity="right|center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/ll_weiOrder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dp_4_5"
+                    android:layout_marginBottom="@dimen/dp_4_5"
+                    android:background="@drawable/shape_0db3a5"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="微订单"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_8" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/ll_guaDan"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dp_4_5"
+                    android:layout_marginBottom="@dimen/dp_4_5"
+                    android:background="@drawable/shape_0db3a5"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_hang_order"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="挂单"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_8" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/iv_wifi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/wifi_ok" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_switch"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/iv_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/switchbtn" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/iv_jian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/jian" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_close"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/iv_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/close" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/fragment_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:background="@color/c_1EC1B3"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/rg_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.newsuper.t.markert.view.CenterRadioButton
+                    android:id="@+id/rb_cash"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_72"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_radiobutton"
+                    android:button="@null"
+                    android:drawableTop="@mipmap/cash"
+                    android:gravity="center"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="收银"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_7" />
+
+                <com.newsuper.t.markert.view.CenterRadioButton
+                    android:id="@+id/rb_merber"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_72"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_radiobutton"
+                    android:button="@null"
+                    android:drawableTop="@mipmap/merber"
+                    android:gravity="center"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="会员"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_7" />
+
+                <com.newsuper.t.markert.view.CenterRadioButton
+                    android:id="@+id/rb_small_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_72"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_radiobutton"
+                    android:button="@null"
+                    android:drawableTop="@mipmap/order"
+                    android:gravity="center"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="微订单"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_7" />
+                <com.newsuper.t.markert.view.CenterRadioButton
+                    android:id="@+id/rb_succession"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_72"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_radiobutton"
+                    android:button="@null"
+                    android:drawableTop="@mipmap/jiaojie"
+                    android:gravity="center"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="交接班"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_7" />
+
+                <com.newsuper.t.markert.view.CenterRadioButton
+                    android:id="@+id/rb_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_72"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_radiobutton"
+                    android:button="@null"
+                    android:drawableTop="@mipmap/data"
+                    android:gravity="center"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="数据"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_7" />
+
+                <com.newsuper.t.markert.view.CenterRadioButton
+                    android:id="@+id/rb_set"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_72"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_radiobutton"
+                    android:button="@null"
+                    android:drawableTop="@mipmap/set"
+                    android:gravity="center"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="设置"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_7" />
+                <com.newsuper.t.markert.view.CenterRadioButton
+                    android:id="@+id/rb_goweb"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_72"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_radiobutton"
+                    android:button="@null"
+                    android:drawableTop="@mipmap/goweb"
+                    android:gravity="center"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="进入\n后台"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_7" />
+
+                <com.newsuper.t.markert.view.CenterRadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_72"
+                    android:layout_weight="1"
+                    android:button="@null" />
+
+            </RadioGroup>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_32">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="版本号"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_7" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/dp_8"
+                        android:text="1.0"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_7" />
+                </LinearLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+    </android.support.v4.widget.DrawerLayout>
+</LinearLayout>
+

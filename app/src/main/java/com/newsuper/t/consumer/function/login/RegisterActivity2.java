@@ -129,7 +129,7 @@ public class RegisterActivity2 extends BaseActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register2);
+        setContentView(R.layout.activity_register_consumer2);
         ButterKnife.bind(this);
         stepChange(1);
         presenter = new RegisterPresenter(this);

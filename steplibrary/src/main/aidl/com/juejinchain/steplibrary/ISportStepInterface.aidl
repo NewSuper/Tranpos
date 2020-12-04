@@ -1,4 +1,3 @@
-// ISportStepInterface.aidl
 package com.juejinchain.steplibrary;
 
 interface ISportStepInterface {

@@ -70,7 +70,7 @@ import com.newsuper.t.consumer.function.selectgoods.presenter.ShopInfoFragmentPr
 import com.newsuper.t.consumer.function.selectgoods.request.GetCouponRequest;
 import com.newsuper.t.consumer.function.selectgoods.request.ShopInfoRequest;
 import com.newsuper.t.consumer.manager.RetrofitManager;
-import com.newsuper.t.consumer.t.consumer.function.selectgoods.fragment.SelectGoodsFragment2;
+import com.newsuper.t.consumer.function.selectgoods.fragment.SelectGoodsFragment2;
 import com.newsuper.t.consumer.utils.Const;
 import com.newsuper.t.consumer.utils.FormatUtil;
 import com.newsuper.t.consumer.utils.LogUtil;

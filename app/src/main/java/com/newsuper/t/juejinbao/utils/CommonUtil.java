@@ -1,17 +1,89 @@
 package com.newsuper.t.juejinbao.utils;
 
+import android.app.ActivityManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.net.Uri;
+import android.text.TextUtils;
 import android.util.Log;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 public class CommonUtil {
+
+
+    private static String sCurProcessName = null;
+
+    public static boolean isMainProcess(Context context) {
+        String processName = getCurProcessName(context);
+        if (processName != null && processName.contains(":")) {
+            return false;
+        }
+        return (processName != null && processName.equals(context.getPackageName()));
+    }
+
+    public static int dp2px(Context context, int dp) {
+        float scale = context.getResources().getDisplayMetrics().density;
+        return (int) (dp * scale + 0.5f);
+    }
+
+    public static String getCurProcessName(Context context) {
+        String procName = sCurProcessName;
+        if (!TextUtils.isEmpty(procName)) {
+            return procName;
+        }
+        try {
+            int pid = android.os.Process.myPid();
+            ActivityManager activityManager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+            for (ActivityManager.RunningAppProcessInfo appProcess : activityManager.getRunningAppProcesses()) {
+                if (appProcess.pid == pid) {
+                    sCurProcessName = appProcess.processName;
+                    return sCurProcessName;
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        sCurProcessName = getCurProcessNameFromProc();
+        return sCurProcessName;
+    }
+
+    private static String getCurProcessNameFromProc() {
+        BufferedReader cmdlineReader = null;
+        try {
+            cmdlineReader = new BufferedReader(new InputStreamReader(
+                    new FileInputStream(
+                            "/proc/" + android.os.Process.myPid() + "/cmdline"),
+                    "iso-8859-1"));
+            int c;
+            StringBuilder processName = new StringBuilder();
+            while ((c = cmdlineReader.read()) > 0) {
+                processName.append(c);
+            }
+            return processName.toString();
+        } catch (Exception e) {
+//            e.printStackTrace();
+        } finally {
+            if (cmdlineReader != null) {
+                try {
+                    cmdlineReader.close();
+                } catch (Exception e) {
+
+                }
+            }
+        }
+        return null;
+    }
+
+
+
     /**
      * 日志标签
      */

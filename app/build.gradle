@@ -43,6 +43,16 @@ android {
         //dev
 //        buildConfigField "String" ,"ADMIN_APP_ID" ,"\"4506CUXAWN1527932706\""
     }
+    sourceSets {
+        main {
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            java.srcDirs = ['src/main/java', 'src/main/aidl']
+            resources.srcDirs = ['src/main/java', 'src/main/aidl']
+            aidl.srcDirs = ['src/main/aidl']
+            res.srcDirs = ['src/main/res']
+            assets.srcDirs = ['src/main/assets']
+        }
+    }
     dexOptions {
         preDexLibraries = false
         javaMaxHeapSize "2g"
@@ -106,141 +116,141 @@ android {
             dimension "default"
         }
         //爱上梁平
-        aishangliangping{
-            applicationId "com.xunjoy.lewaimai.user.consumer.aishangliangping"
-            buildConfigField "String" ,"APP_NAME" ,"\"aishangliangping\""
-            buildConfigField "String" ,"ADMIN_ID" ,"\"72996\""
-            buildConfigField "String" ,"QQ_APP_ID" ,"\"1108269109\""
-            buildConfigField "String" ,"WEIXIN_APP_ID" ,"\"wx15830746e5876141\""
-            buildConfigField "String" ,"ADMIN_APP_ID" ,"\"1741HUGROS1553486435\""
-            dimension "default"
-
-            manifestPlaceholders = [
-                    GETUI_APP_ID    : "UNif3iqYI97zaWjnSGhs87",
-                    GETUI_APP_KEY   : "UETajNDlKH798Do1iP3vI2",
-                    GETUI_APP_SECRET: "oIhf0prMeLAeo3VPRkmV63"
-            ]
-        }
+//        aishangliangping{
+//            applicationId "com.xunjoy.lewaimai.user.consumer.aishangliangping"
+//            buildConfigField "String" ,"APP_NAME" ,"\"aishangliangping\""
+//            buildConfigField "String" ,"ADMIN_ID" ,"\"72996\""
+//            buildConfigField "String" ,"QQ_APP_ID" ,"\"1108269109\""
+//            buildConfigField "String" ,"WEIXIN_APP_ID" ,"\"wx15830746e5876141\""
+//            buildConfigField "String" ,"ADMIN_APP_ID" ,"\"1741HUGROS1553486435\""
+//            dimension "default"
+//
+//            manifestPlaceholders = [
+//                    GETUI_APP_ID    : "UNif3iqYI97zaWjnSGhs87",
+//                    GETUI_APP_KEY   : "UETajNDlKH798Do1iP3vI2",
+//                    GETUI_APP_SECRET: "oIhf0prMeLAeo3VPRkmV63"
+//            ]
+//        }
         //菜鲜送
-        caixiansong{
-            versionCode 22
-            versionName "2.0.9"
-            applicationId "com.xunjoy.lewaimai.user.consumer.caixiansong"
-            buildConfigField "String" ,"APP_NAME" ,"\"caixiansong\""
-            buildConfigField "String" ,"ADMIN_ID" ,"\"91723\""
-            buildConfigField "String" ,"QQ_APP_ID" ,"\"1109541771\""
-            buildConfigField "String" ,"WEIXIN_APP_ID" ,"\"wx046592856223cd2b\""
-            buildConfigField "String" ,"ADMIN_APP_ID" ,"\"1610FLBAUK1562580624\""
-            dimension "default"
-
-            manifestPlaceholders = [
-                    GETUI_APP_ID    : "AyfFCDS0zN8A60khe7GqO3",
-                    GETUI_APP_KEY   : "jZt84W8vMF7udr8JYIKU86",
-                    GETUI_APP_SECRET: "crQvWfnr8JAuKZt1pfeg79"
-            ]
-        }
+//        caixiansong{
+//            versionCode 22
+//            versionName "2.0.9"
+//            applicationId "com.xunjoy.lewaimai.user.consumer.caixiansong"
+//            buildConfigField "String" ,"APP_NAME" ,"\"caixiansong\""
+//            buildConfigField "String" ,"ADMIN_ID" ,"\"91723\""
+//            buildConfigField "String" ,"QQ_APP_ID" ,"\"1109541771\""
+//            buildConfigField "String" ,"WEIXIN_APP_ID" ,"\"wx046592856223cd2b\""
+//            buildConfigField "String" ,"ADMIN_APP_ID" ,"\"1610FLBAUK1562580624\""
+//            dimension "default"
+//
+//            manifestPlaceholders = [
+//                    GETUI_APP_ID    : "AyfFCDS0zN8A60khe7GqO3",
+//                    GETUI_APP_KEY   : "jZt84W8vMF7udr8JYIKU86",
+//                    GETUI_APP_SECRET: "crQvWfnr8JAuKZt1pfeg79"
+//            ]
+//        }
         //吃乎外卖
-        chihuwaimai{
-            applicationId "com.xunjoy.lewaimai.user.consumer.chihuwaimai"
-            buildConfigField "String" ,"APP_NAME" ,"\"chihuwaimai\""
-            buildConfigField "String" ,"ADMIN_ID" ,"\"54488\""
-            buildConfigField "String" ,"QQ_APP_ID" ,"\"1106863695\""
-            buildConfigField "String" ,"WEIXIN_APP_ID" ,"\"wx7674e3a8a1d8d588\""
-            buildConfigField "String" ,"ADMIN_APP_ID" ,"\"9108QMRNJQ1515374998\""
-            dimension "default"
-
-            manifestPlaceholders = [
-                    GETUI_APP_ID    : "VzHwtwOovK7HdbIyTHvnM3",
-                    GETUI_APP_KEY   : "AbdirT8OC57qi8qbwihwtA",
-                    GETUI_APP_SECRET: "hdNIqpnKRe7cbPvXCK03BA"
-            ]
-        }
+//        chihuwaimai{
+//            applicationId "com.xunjoy.lewaimai.user.consumer.chihuwaimai"
+//            buildConfigField "String" ,"APP_NAME" ,"\"chihuwaimai\""
+//            buildConfigField "String" ,"ADMIN_ID" ,"\"54488\""
+//            buildConfigField "String" ,"QQ_APP_ID" ,"\"1106863695\""
+//            buildConfigField "String" ,"WEIXIN_APP_ID" ,"\"wx7674e3a8a1d8d588\""
+//            buildConfigField "String" ,"ADMIN_APP_ID" ,"\"9108QMRNJQ1515374998\""
+//            dimension "default"
+//
+//            manifestPlaceholders = [
+//                    GETUI_APP_ID    : "VzHwtwOovK7HdbIyTHvnM3",
+//                    GETUI_APP_KEY   : "AbdirT8OC57qi8qbwihwtA",
+//                    GETUI_APP_SECRET: "hdNIqpnKRe7cbPvXCK03BA"
+//            ]
+//        }
         //点我开化
-        dianwokaihua{
-            applicationId "com.xunjoy.lewaimai.user.consumer.dianwokaihua"
-            buildConfigField "String" ,"APP_NAME" ,"\"dianwokaihua\""
-            buildConfigField "String" ,"ADMIN_ID" ,"\"86581\""
-            buildConfigField "String" ,"QQ_APP_ID" ,"\"1107940543\""
-            buildConfigField "String" ,"WEIXIN_APP_ID" ,"\"wx3b50e95d248c4243\""
-            buildConfigField "String" ,"ADMIN_APP_ID" ,"\"9704FUUBYP1545703379\""
-            dimension "default"
-
-            manifestPlaceholders = [
-                    GETUI_APP_ID    : "FfS6TtVBBb6oX9tTfpDQb9",
-                    GETUI_APP_KEY   : "EvrexASoF38pcLV2lmz104",
-                    GETUI_APP_SECRET: "U1lraQocq670hpP80Mvqs2"
-            ]
-        }
+//        dianwokaihua{
+//            applicationId "com.xunjoy.lewaimai.user.consumer.dianwokaihua"
+//            buildConfigField "String" ,"APP_NAME" ,"\"dianwokaihua\""
+//            buildConfigField "String" ,"ADMIN_ID" ,"\"86581\""
+//            buildConfigField "String" ,"QQ_APP_ID" ,"\"1107940543\""
+//            buildConfigField "String" ,"WEIXIN_APP_ID" ,"\"wx3b50e95d248c4243\""
+//            buildConfigField "String" ,"ADMIN_APP_ID" ,"\"9704FUUBYP1545703379\""
+//            dimension "default"
+//
+//            manifestPlaceholders = [
+//                    GETUI_APP_ID    : "FfS6TtVBBb6oX9tTfpDQb9",
+//                    GETUI_APP_KEY   : "EvrexASoF38pcLV2lmz104",
+//                    GETUI_APP_SECRET: "U1lraQocq670hpP80Mvqs2"
+//            ]
+//        }
         //脚爆爆外卖
-        jiaobaobaowaimai{
-            applicationId "com.xunjoy.lewaimai.user.consumer.jiaobaobaowaimai"
-            buildConfigField "String" ,"APP_NAME" ,"\"jiaobaobaowaimai\""
-            buildConfigField "String" ,"ADMIN_ID" ,"\"76857\""
-            buildConfigField "String" ,"QQ_APP_ID" ,"\"1109573651\""
-            buildConfigField "String" ,"WEIXIN_APP_ID" ,"\"wx268f0bc570759410\""
-            buildConfigField "String" ,"ADMIN_APP_ID" ,"\"7831XJBWYT1564629106\""
-            dimension "default"
-
-            manifestPlaceholders = [
-                    GETUI_APP_ID    : "ezd7jvgSkR8Si0v5Ks1VV3",
-                    GETUI_APP_KEY   : "SovYalzQqy8EI8eHRtVhD7",
-                    GETUI_APP_SECRET: "0CkLMjvLi271XLgPfJNR95"
-            ]
-        }
+//        jiaobaobaowaimai{
+//            applicationId "com.xunjoy.lewaimai.user.consumer.jiaobaobaowaimai"
+//            buildConfigField "String" ,"APP_NAME" ,"\"jiaobaobaowaimai\""
+//            buildConfigField "String" ,"ADMIN_ID" ,"\"76857\""
+//            buildConfigField "String" ,"QQ_APP_ID" ,"\"1109573651\""
+//            buildConfigField "String" ,"WEIXIN_APP_ID" ,"\"wx268f0bc570759410\""
+//            buildConfigField "String" ,"ADMIN_APP_ID" ,"\"7831XJBWYT1564629106\""
+//            dimension "default"
+//
+//            manifestPlaceholders = [
+//                    GETUI_APP_ID    : "ezd7jvgSkR8Si0v5Ks1VV3",
+//                    GETUI_APP_KEY   : "SovYalzQqy8EI8eHRtVhD7",
+//                    GETUI_APP_SECRET: "0CkLMjvLi271XLgPfJNR95"
+//            ]
+//        }
         //乐e点
-        leedian{
-            versionCode 20
-            versionName "2.0.7"
-            applicationId "com.xunjoy.lewaimai.user.consumer.leedian"
-            buildConfigField "String" ,"APP_NAME" ,"\"leedian\""
-            buildConfigField "String" ,"ADMIN_ID" ,"\"92544\""
-            buildConfigField "String" ,"QQ_APP_ID" ,"\"1108557486\""
-            buildConfigField "String" ,"WEIXIN_APP_ID" ,"\"wxf508eb991ec75b30\""
-            buildConfigField "String" ,"ADMIN_APP_ID" ,"\"9836MVPMAH1554172438\""
-            dimension "default"
-
-            manifestPlaceholders = [
-                    GETUI_APP_ID    : "SQ7KHukTGl7FPs1t18oGN5",
-                    GETUI_APP_KEY   : "vVvvTnPLX567fwGdAo9Wr3",
-                    GETUI_APP_SECRET: "HTVIt2MEuK90TThu8o5Vq9"
-            ]
-        }
+//        leedian{
+//            versionCode 20
+//            versionName "2.0.7"
+//            applicationId "com.xunjoy.lewaimai.user.consumer.leedian"
+//            buildConfigField "String" ,"APP_NAME" ,"\"leedian\""
+//            buildConfigField "String" ,"ADMIN_ID" ,"\"92544\""
+//            buildConfigField "String" ,"QQ_APP_ID" ,"\"1108557486\""
+//            buildConfigField "String" ,"WEIXIN_APP_ID" ,"\"wxf508eb991ec75b30\""
+//            buildConfigField "String" ,"ADMIN_APP_ID" ,"\"9836MVPMAH1554172438\""
+//            dimension "default"
+//
+//            manifestPlaceholders = [
+//                    GETUI_APP_ID    : "SQ7KHukTGl7FPs1t18oGN5",
+//                    GETUI_APP_KEY   : "vVvvTnPLX567fwGdAo9Wr3",
+//                    GETUI_APP_SECRET: "HTVIt2MEuK90TThu8o5Vq9"
+//            ]
+//        }
         //兴文懒人
-        xingwenlanren{
-            versionCode 22
-            versionName "2.0.9"
-            applicationId "com.xunjoy.lewaimai.user.consumer.xingwenlanren"
-            buildConfigField "String" ,"APP_NAME" ,"\"xingwenlanren\""
-            buildConfigField "String" ,"ADMIN_ID" ,"\"64180\""
-            buildConfigField "String" ,"QQ_APP_ID" ,"\"1109706557\""
-            buildConfigField "String" ,"WEIXIN_APP_ID" ,"\"wx8613c7c32ef8b5e6\""
-            buildConfigField "String" ,"ADMIN_APP_ID" ,"\"5001OKCKJE1565250418\""
-            dimension "default"
-
-            manifestPlaceholders = [
-                    GETUI_APP_ID    : "74QWifioaX8pIt1TRZjEG9",
-                    GETUI_APP_KEY   : "q0ksjh14Rf9NUmoSXLZMC4",
-                    GETUI_APP_SECRET: "tppNnVaAAm7hI16kmx3th8"
-            ]
-        }
+//        xingwenlanren{
+//            versionCode 22
+//            versionName "2.0.9"
+//            applicationId "com.xunjoy.lewaimai.user.consumer.xingwenlanren"
+//            buildConfigField "String" ,"APP_NAME" ,"\"xingwenlanren\""
+//            buildConfigField "String" ,"ADMIN_ID" ,"\"64180\""
+//            buildConfigField "String" ,"QQ_APP_ID" ,"\"1109706557\""
+//            buildConfigField "String" ,"WEIXIN_APP_ID" ,"\"wx8613c7c32ef8b5e6\""
+//            buildConfigField "String" ,"ADMIN_APP_ID" ,"\"5001OKCKJE1565250418\""
+//            dimension "default"
+//
+//            manifestPlaceholders = [
+//                    GETUI_APP_ID    : "74QWifioaX8pIt1TRZjEG9",
+//                    GETUI_APP_KEY   : "q0ksjh14Rf9NUmoSXLZMC4",
+//                    GETUI_APP_SECRET: "tppNnVaAAm7hI16kmx3th8"
+//            ]
+//        }
         //巡场懒人
-        xunchanglanren{
-            versionCode 2
-            versionName "1.0.1"
-            applicationId "com.xunjoy.lewaimai.user.consumer.xunchanglanren"
-            buildConfigField "String" ,"APP_NAME" ,"\"xunchanglanren\""
-            buildConfigField "String" ,"ADMIN_ID" ,"\"69746\""
-            buildConfigField "String" ,"QQ_APP_ID" ,"\"1109891434\""
-            buildConfigField "String" ,"WEIXIN_APP_ID" ,"\"wxbe6b3dec157d7c26\""
-            buildConfigField "String" ,"ADMIN_APP_ID" ,"\"3093WGQRLC1570273163\""
-            dimension "default"
-
-            manifestPlaceholders = [
-                    GETUI_APP_ID    : "bxs7C78CYU9vm7cUp0MNU8",
-                    GETUI_APP_KEY   : "14kUpTT2wAAbrRmLIQ8LAA",
-                    GETUI_APP_SECRET: "eDiFU1tV1c6Dk2IV5f2PE3"
-            ]
-        }
+//        xunchanglanren{
+//            versionCode 2
+//            versionName "1.0.1"
+//            applicationId "com.xunjoy.lewaimai.user.consumer.xunchanglanren"
+//            buildConfigField "String" ,"APP_NAME" ,"\"xunchanglanren\""
+//            buildConfigField "String" ,"ADMIN_ID" ,"\"69746\""
+//            buildConfigField "String" ,"QQ_APP_ID" ,"\"1109891434\""
+//            buildConfigField "String" ,"WEIXIN_APP_ID" ,"\"wxbe6b3dec157d7c26\""
+//            buildConfigField "String" ,"ADMIN_APP_ID" ,"\"3093WGQRLC1570273163\""
+//            dimension "default"
+//
+//            manifestPlaceholders = [
+//                    GETUI_APP_ID    : "bxs7C78CYU9vm7cUp0MNU8",
+//                    GETUI_APP_KEY   : "14kUpTT2wAAbrRmLIQ8LAA",
+//                    GETUI_APP_SECRET: "eDiFU1tV1c6Dk2IV5f2PE3"
+//            ]
+//        }
         //迅享猫
         xunxiangmao{
             applicationId "com.xunjoy.xunxiangmao.consumer"
@@ -258,71 +268,71 @@ android {
             ]
         }
         //阳光外卖
-        yangguangwaimai{
-            applicationId "com.xunjoy.lewaimai.user.consumer.yangguangwaimai"
-            buildConfigField "String" ,"APP_NAME" ,"\"yangguangwaimai\""
-            buildConfigField "String" ,"ADMIN_ID" ,"\"89658\""
-            buildConfigField "String" ,"QQ_APP_ID" ,"\"1108334714\""
-            buildConfigField "String" ,"WEIXIN_APP_ID" ,"\"wx569e9497ff3e1dc4\""
-            buildConfigField "String" ,"ADMIN_APP_ID" ,"\"9709VANQES1553563544\""
-            dimension "default"
-
-            manifestPlaceholders = [
-                    GETUI_APP_ID    : "60oFaQpqaf9orCQbCQ9IAA",
-                    GETUI_APP_KEY   : "tSz46sIi5D89FzbN2dit24",
-                    GETUI_APP_SECRET: "rWJZ217OZe6LjxSxVzRM38"
-            ]
-        }
+//        yangguangwaimai{
+//            applicationId "com.xunjoy.lewaimai.user.consumer.yangguangwaimai"
+//            buildConfigField "String" ,"APP_NAME" ,"\"yangguangwaimai\""
+//            buildConfigField "String" ,"ADMIN_ID" ,"\"89658\""
+//            buildConfigField "String" ,"QQ_APP_ID" ,"\"1108334714\""
+//            buildConfigField "String" ,"WEIXIN_APP_ID" ,"\"wx569e9497ff3e1dc4\""
+//            buildConfigField "String" ,"ADMIN_APP_ID" ,"\"9709VANQES1553563544\""
+//            dimension "default"
+//
+//            manifestPlaceholders = [
+//                    GETUI_APP_ID    : "60oFaQpqaf9orCQbCQ9IAA",
+//                    GETUI_APP_KEY   : "tSz46sIi5D89FzbN2dit24",
+//                    GETUI_APP_SECRET: "rWJZ217OZe6LjxSxVzRM38"
+//            ]
+//        }
         //云膳外卖
-        yunshanwaimai{
-            versionCode 2
-            versionName "1.0.1"
-            applicationId "com.xunjoy.lewaimai.user.consumer.yunshanwaimai"
-            buildConfigField "String" ,"APP_NAME" ,"\"yunshanwaimai\""
-            buildConfigField "String" ,"ADMIN_ID" ,"\"98865\""
-            buildConfigField "String" ,"QQ_APP_ID" ,"\"1109830339\""
-            buildConfigField "String" ,"WEIXIN_APP_ID" ,"\"wx67c38d57617233c6\""
-            buildConfigField "String" ,"ADMIN_APP_ID" ,"\"5885MREDTL1568194625\""
-            dimension "default"
-
-            manifestPlaceholders = [
-                    GETUI_APP_ID    : "PxZCCvGZ8Z7oUzmPImkBW8",
-                    GETUI_APP_KEY   : "f6t56yn79W5ACwkapy4jG9",
-                    GETUI_APP_SECRET: "tMmxBYh2ta77LwqTuUVye"
-            ]
-        }
+//        yunshanwaimai{
+//            versionCode 2
+//            versionName "1.0.1"
+//            applicationId "com.xunjoy.lewaimai.user.consumer.yunshanwaimai"
+//            buildConfigField "String" ,"APP_NAME" ,"\"yunshanwaimai\""
+//            buildConfigField "String" ,"ADMIN_ID" ,"\"98865\""
+//            buildConfigField "String" ,"QQ_APP_ID" ,"\"1109830339\""
+//            buildConfigField "String" ,"WEIXIN_APP_ID" ,"\"wx67c38d57617233c6\""
+//            buildConfigField "String" ,"ADMIN_APP_ID" ,"\"5885MREDTL1568194625\""
+//            dimension "default"
+//
+//            manifestPlaceholders = [
+//                    GETUI_APP_ID    : "PxZCCvGZ8Z7oUzmPImkBW8",
+//                    GETUI_APP_KEY   : "f6t56yn79W5ACwkapy4jG9",
+//                    GETUI_APP_SECRET: "tMmxBYh2ta77LwqTuUVye"
+//            ]
+//        }
         //逐趣同城
-        zhuqucity{
-            applicationId "com.xunjoy.zhuqu.city.consumer"
-            buildConfigField "String" ,"APP_NAME" ,"\"zhuqucity\""
-            buildConfigField "String" ,"ADMIN_ID" ,"\"91159\""
-            buildConfigField "String" ,"QQ_APP_ID" ,"\"1108038095\""
-            buildConfigField "String" ,"WEIXIN_APP_ID" ,"\"wxb81b42ea45612e65\""
-            buildConfigField "String" ,"ADMIN_APP_ID" ,"\"6598XYISGZ1547015094\""
-            dimension "default"
-
-            manifestPlaceholders = [
-                    GETUI_APP_ID    : "Dw19tAiWLe8cZYOSVu0M53",
-                    GETUI_APP_KEY   : "RU8aHIkvv98GfggosT9WPA",
-                    GETUI_APP_SECRET: "QUGZZQCABW5Z0bgCITceZ"
-            ]
-        }
+//        zhuqucity{
+//            applicationId "com.xunjoy.zhuqu.city.consumer"
+//            buildConfigField "String" ,"APP_NAME" ,"\"zhuqucity\""
+//            buildConfigField "String" ,"ADMIN_ID" ,"\"91159\""
+//            buildConfigField "String" ,"QQ_APP_ID" ,"\"1108038095\""
+//            buildConfigField "String" ,"WEIXIN_APP_ID" ,"\"wxb81b42ea45612e65\""
+//            buildConfigField "String" ,"ADMIN_APP_ID" ,"\"6598XYISGZ1547015094\""
+//            dimension "default"
+//
+//            manifestPlaceholders = [
+//                    GETUI_APP_ID    : "Dw19tAiWLe8cZYOSVu0M53",
+//                    GETUI_APP_KEY   : "RU8aHIkvv98GfggosT9WPA",
+//                    GETUI_APP_SECRET: "QUGZZQCABW5Z0bgCITceZ"
+//            ]
+//        }
         //逐趣校园
-        campus{
-            applicationId "com.xunjoy.zhuqu.campus.consumer"
-            buildConfigField "String" ,"APP_NAME" ,"\"campus\""
-            buildConfigField "String" ,"ADMIN_ID" ,"\"85663\""
-            buildConfigField "String" ,"QQ_APP_ID" ,"\"1107769990\""
-            buildConfigField "String" ,"WEIXIN_APP_ID" ,"\"wx2d3b778f31d7fb09\""
-            buildConfigField "String" ,"ADMIN_APP_ID" ,"\"6555CVVVSJ1534331524\""
-            dimension "default"
-
-            manifestPlaceholders = [
-                    GETUI_APP_ID    : "pUpTNkOzvz9B5x35psw2E",
-                    GETUI_APP_KEY   : "5qOlIIb4n57OkQhUu6WFC8",
-                    GETUI_APP_SECRET: "kK91gMmUbl5H2j9MV8v811"
-            ]
-        }
+//        campus{
+//            applicationId "com.xunjoy.zhuqu.campus.consumer"
+//            buildConfigField "String" ,"APP_NAME" ,"\"campus\""
+//            buildConfigField "String" ,"ADMIN_ID" ,"\"85663\""
+//            buildConfigField "String" ,"QQ_APP_ID" ,"\"1107769990\""
+//            buildConfigField "String" ,"WEIXIN_APP_ID" ,"\"wx2d3b778f31d7fb09\""
+//            buildConfigField "String" ,"ADMIN_APP_ID" ,"\"6555CVVVSJ1534331524\""
+//            dimension "default"
+//
+//            manifestPlaceholders = [
+//                    GETUI_APP_ID    : "pUpTNkOzvz9B5x35psw2E",
+//                    GETUI_APP_KEY   : "5qOlIIb4n57OkQhUu6WFC8",
+//                    GETUI_APP_SECRET: "kK91gMmUbl5H2j9MV8v811"
+//            ]
+//        }
 
         applicationVariants.all { variant ->
             variant.outputs.all {
@@ -471,4 +481,10 @@ dependencies {
     implementation 'in.srain.cube:ptr-load-more:1.0.6'
     implementation 'com.github.chrisbanes.photoview:library:1.2.4'
     implementation 'com.squareup.retrofit2:converter-scalars:2.2.0'
+
+
+    implementation project(':PosLibs:network')
+    api 'com.tencent:mmkv:1.0.10'
+    api 'net.grandcentrix.tray:tray:0.12.0'
+    implementation files('libs/wxfacepay-release.aar')
 }

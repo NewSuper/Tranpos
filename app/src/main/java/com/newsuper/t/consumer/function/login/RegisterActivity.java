@@ -111,7 +111,7 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
 
     @Override
     public void initView() {
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_register_consumer);
         ButterKnife.bind(this);
         toolbar.setMenuText("");
         toolbar.setTitleText("注册");

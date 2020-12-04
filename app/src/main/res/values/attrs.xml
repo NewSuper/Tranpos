@@ -1,6 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--自定义加载框-->
+    <declare-styleable name="LVCircularRing">
+        <attr name="bgColor" format="color" />
+        <attr name="barColor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="RoundButton">
+        <!-- 背景色 -->
+        <attr name="btn_normalSolidColor" format="color"/>
+        <!--按下的背景色-->
+        <attr name="btn_pressedSolidcolor" format="color"/>
+        <!--unable背景色-->
+        <attr name="btn_unableSolidcolor" format="color"/>
+        <!--文字颜色-->
+        <attr name="btn_normalTextcolor" format="color"/>
+        <!--文字按下的颜色-->
+        <attr name="btn_pressedTextcolor" format="color"/>
+        <!--unable文字颜色-->
+        <attr name="btn_unableTextcolor" format="color"/>
 
+        <!-- 边框色 -->
+        <attr name="btn_normalStrokeColor" format="color"/>
+        <!--按下的边框颜色-->
+        <attr name="btn_pressedStokeColor" format="color"/>
+        <attr name="btn_unableStrokeColor" format="color"/>
+        <!-- 边框厚度 -->
+        <attr name="btn_normalStrokeWidth" format="dimension"/>
+        <!--按下的边框线宽-->
+        <attr name="btn_pressedStrokeWidth" format="dimension"/>
+        <!--unable-->
+        <attr name="btn_unableStrokeWidth" format="dimension"/>
+        <!-- 边框虚线长度 -->
+        <attr name="btnStrokeDashWidth" format="dimension"/>
+        <!-- 边框虚线间隙 -->
+        <attr name="btnStrokeDashGap" format="dimension"/>
+        <!-- 圆角半径，stadium 表示半径为 min(height,width) / 2-->
+        <attr name="btnCornerRadius" format="dimension">
+            <enum name="stadium" value="-1"/>
+        </attr>
+        <attr name="btn_gradient_orientation" format="integer">
+            <enum name="top_bottom" value="1"/>
+            <enum name="left_right" value="2"/>
+        </attr>
+        <!-- 自动计算按下(pressed)状态颜色的系数, 值为0时不自动计算 -->
+        <attr name="btnPressedRatio" format="float"/>
+        <attr name="btn_is_gradient" format="boolean"/>
+        <attr name="btn_gradient_colors" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="AmountView">
+        <!-- 左右2边+-按钮的宽度 -->
+        <attr name="btnWidth" format="dimension" />
+        <!-- 中间TextView的宽度 -->
+        <attr name="tvWidth" format="dimension" />
+        <!--<attr name="tvColor" format="color"/>-->
+        <attr name="tvTextSize" format="dimension"/>
+        <attr name="btnTextSize" format="dimension"/>
+    </declare-styleable>
 
 
     <declare-styleable name="ExpandableLayout">

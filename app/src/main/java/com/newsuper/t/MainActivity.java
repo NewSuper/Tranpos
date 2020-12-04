@@ -16,6 +16,7 @@ import android.widget.TextView;
 import com.newsuper.t.consumer.ConsumerActivity;
 import com.newsuper.t.juejinbao.ui.JueJinBaoLaunchActivity;
 import com.newsuper.t.juejinbao.utils.BaseExpandableRecyclerViewAdapter;
+import com.newsuper.t.markert.ui.register.SplashActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,17 +53,6 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onChildClicked(GroupBean groupItem, ChildBean childItem) {
-//                if (childItem.mIconId == R.drawable.xiaoshipin) {
-//                    Intent intent = new Intent(Intent.ACTION_VIEW);
-//                    intent.setData(Uri.parse("http://dldir1.qq.com/hudongzhibo/xiaozhibo/XiaoShiPin.apk"));
-//                    startActivity(intent);
-//                    return;
-//                } else if (childItem.mIconId == R.drawable.xiaozhibo) {
-//                    Intent intent = new Intent(Intent.ACTION_VIEW);
-//                    intent.setData(Uri.parse("http://dldir1.qq.com/hudongzhibo/xiaozhibo/xiaozhibo.apk"));
-//                    startActivity(intent);
-//                    return;
-//                }
                 Intent intent = new Intent(MainActivity.this, childItem.getTargetClass());
                 intent.putExtra("TITLE", childItem.mName);
                 intent.putExtra("TYPE", childItem.mType);
@@ -74,41 +64,11 @@ public class MainActivity extends AppCompatActivity {
 
     private List<GroupBean> initGroupData() {
         List<GroupBean> groupList = new ArrayList<>();
-//        // 直播
-//        List<ChildBean> pusherChildList = new ArrayList<>();
-//        pusherChildList.add(new ChildBean("MLVBLiveRoom", R.drawable.room_live, 0, LiveRoomActivity.class));
-//        pusherChildList.add(new ChildBean("摄像头推流", R.drawable.push, 0, CameraPushEntranceActivity.class));
-//        pusherChildList.add(new ChildBean("直播播放器", R.drawable.live, 0, LivePlayerEntranceActivity.class));
-//        if (pusherChildList.size() != 0) {
-//            // 这个是网页链接，配合build.sh避免在如ugc_smart版中出现
-//            pusherChildList.add(new ChildBean("小直播", R.drawable.xiaozhibo, 0, null));
-//            GroupBean pusherGroupBean = new GroupBean("移动直播", R.drawable.room_live, pusherChildList);
-//            groupList.add(pusherGroupBean);
-//        }
-//        // 初始化播放器
-//        List<ChildBean> playerChildList = new ArrayList<>();
-//        playerChildList.add(new ChildBean("超级播放器", R.drawable.play, 3, SuperPlayerActivity.class));
-//        if (playerChildList.size() != 0) {
-//            GroupBean playerGroupBean = new GroupBean("播放器", R.drawable.composite, playerChildList);
-//            groupList.add(playerGroupBean);
-//        }
-//        // 短视频
-//        List<ChildBean> shortVideoChildList = new ArrayList<>();
-//        shortVideoChildList.add(new ChildBean("视频录制", R.drawable.video, 0, TCVideoSettingActivity.class));
-//        shortVideoChildList.add(new ChildBean("特效编辑", R.drawable.cut, 0, TCVideoPickerActivity.class));
-//        shortVideoChildList.add(new ChildBean("视频拼接", R.drawable.composite, TCVideoJoinChooseActivity.TYPE_MULTI_CHOOSE, TCVideoJoinChooseActivity.class));
-//        shortVideoChildList.add(new ChildBean("图片转场", R.drawable.short_video_picture, TCVideoJoinChooseActivity.TYPE_MULTI_CHOOSE_PICTURE, TCVideoJoinChooseActivity.class));
-//        shortVideoChildList.add(new ChildBean("视频上传", R.drawable.update, TCVideoJoinChooseActivity.TYPE_PUBLISH_CHOOSE, TCVideoJoinChooseActivity.class));
-//        if (shortVideoChildList.size() != 0) {
-//            // 这个是网页链接，配合build.sh避免在其他版本中出现
-//            shortVideoChildList.add(new ChildBean("小视频", R.drawable.xiaoshipin, 0, null));
-//            GroupBean shortVideoGroupBean = new GroupBean("短视频", R.drawable.video, shortVideoChildList);
-//            groupList.add(shortVideoGroupBean);
-//        }
-
         List<ChildBean> videoConnectChildList = new ArrayList<>();
         videoConnectChildList.add(new ChildBean("掘金宝", R.drawable.room_multi, 0, JueJinBaoLaunchActivity.class));
         videoConnectChildList.add(new ChildBean("消费者", R.drawable.room_multi, 0, ConsumerActivity.class));
+        videoConnectChildList.add(new ChildBean("超市收银", R.drawable.room_multi, 0, SplashActivity.class));
+        videoConnectChildList.add(new ChildBean("自助收银", R.drawable.room_multi, 0, com.newsuper.t.sale.ui.splash.SplashActivity.class));
         if (videoConnectChildList.size() != 0) {
             GroupBean videoConnectGroupBean = new GroupBean("主入口", R.drawable.room_multi, videoConnectChildList);
             groupList.add(videoConnectGroupBean);

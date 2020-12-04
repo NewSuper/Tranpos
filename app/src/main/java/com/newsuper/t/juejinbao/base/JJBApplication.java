@@ -6,6 +6,9 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 
 import com.danikula.videocache.HttpProxyCacheServer;
+import com.newsuper.t.inittask.SmartRefreshLayoutTask;
+import com.newsuper.t.inittask.TaskDispatcher;
+import com.newsuper.t.inittask.X5WebTask;
 import com.newsuper.t.juejinbao.ui.JunjinBaoMainActivity;
 import com.newsuper.t.juejinbao.utils.SP;
 
@@ -45,6 +48,13 @@ public class JJBApplication extends Application {
         String zr = SP.getAccount(this).getString(RetrofitManager.SP_VIP_JS_URL, RetrofitManager.VIP_JS_URL0);
         RetrofitManager.VIP_JS_URL = zr;
         //    }
+
+        //程序入口处异步初始化的方案
+        TaskDispatcher.init(this);
+        TaskDispatcher dispatcher = TaskDispatcher.createInstance();
+        dispatcher.addTask(new SmartRefreshLayoutTask())
+                .addTask(new X5WebTask())
+                .start();
     }
 
 
