@@ -38,6 +38,25 @@ public class SharedPreferencesUtil {
     private static final String IS_AGRENN = "is_agree";
     private static final String SHOP_LIST_SIZE = "shop_list_size";
     private static final String GOODS_CHANGE = "goods_change";
+    private static final String RONGYUN_USER = "rongyun_user";
+    private static final String RONGYUN_TOKEN = "rongyun_token";
+    public static String getRongYunToken() {
+        SharedPreferences sp = BaseApplication.getPreferences();
+        String s = sp.getString(RONGYUN_TOKEN, "");
+        return s;
+    }
+
+    public static String getRongYunUser() {
+        SharedPreferences sp = BaseApplication.getPreferences();
+        String s = sp.getString(RONGYUN_USER, "");
+        return s;
+    }
+    public static void saveRongYunUser(String value) {
+        SharedPreferences sp = BaseApplication.getPreferences();
+        SharedPreferences.Editor editor = sp.edit();
+        editor.putString(RONGYUN_USER, value);
+        editor.commit();
+    }
 
     public static boolean getGoodsChange() {
         SharedPreferences sp = BaseApplication.getPreferences();

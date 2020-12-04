@@ -8,6 +8,8 @@ import android.text.TextUtils;
 import android.text.style.CharacterStyle;
 import android.text.style.ForegroundColorSpan;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.text.DecimalFormat;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -15,6 +17,33 @@ import java.util.regex.Pattern;
 
 
 public class StringUtils {
+    /**
+     * MD5加密
+     */
+    public static String md5(String sourceStr) {
+        String result = "";
+        try {
+            MessageDigest md = MessageDigest.getInstance("MD5");
+            md.update(sourceStr.getBytes());
+            byte b[] = md.digest();
+            int i;
+            StringBuffer buf = new StringBuffer("");
+            for (int offset = 0; offset < b.length; offset++) {
+                i = b[offset];
+                if (i < 0)
+                    i += 256;
+                if (i < 16)
+                    buf.append("0");
+                buf.append(Integer.toHexString(i));
+            }
+            result = buf.toString();//32位的加密
+//			result = result.substring(8, 24); // 16位的加密
+            //Logger.error(TAG, "MD5加密结果=" + buf.toString());
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
     public final static String UTF_8 = "utf-8";
 
     /**
