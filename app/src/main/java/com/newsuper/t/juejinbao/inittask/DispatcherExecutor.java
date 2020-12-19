@@ -1,4 +1,4 @@
-package com.newsuper.t.inittask;
+package com.newsuper.t.juejinbao.inittask;
 
 import java.util.concurrent.BlockingDeque;
 import java.util.concurrent.ExecutorService;

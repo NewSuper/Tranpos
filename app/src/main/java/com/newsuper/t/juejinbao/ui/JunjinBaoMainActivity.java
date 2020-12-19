@@ -865,11 +865,7 @@ public class JunjinBaoMainActivity extends BaseActivity<MainPresenterImpl, Activ
         }
         try {
             if (Jzvd.CURRENT_JZVD != null) {
-                if (Jzvd.CURRENT_JZVD.screen == Jzvd.SCREEN_FULLSCREEN) {
-                    Jzvd.goOnPlayOnPause();
-                } else {
-                    Jzvd.goOnPlayOnPause();
-                }
+                Jzvd.goOnPlayOnPause();
             }
         } catch (Exception e) {
             e.printStackTrace();

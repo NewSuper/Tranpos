@@ -25,11 +25,7 @@ import com.newsuper.t.juejinbao.basepop.interceptor.PopupWindowEventInterceptor;
 
 import java.lang.ref.WeakReference;
 
-/**
- * Created by 大灯泡 on 2017/12/12.
- * <p>
- * popupoption
- */
+
 final class BasePopupHelper implements PopupTouchController, PopupWindowActionListener, PopupWindowLocationListener,
         PopupKeyboardStateChangeListener, BasePopupFlag {
 

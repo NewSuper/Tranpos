@@ -1,4 +1,4 @@
-package com.newsuper.t.inittask;
+package com.newsuper.t.juejinbao.inittask;
 
 public class TaskStatBean {
     private String situation;

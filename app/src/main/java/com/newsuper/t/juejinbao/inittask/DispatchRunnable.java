@@ -1,4 +1,4 @@
-package com.newsuper.t.inittask;
+package com.newsuper.t.juejinbao.inittask;
 
 import android.os.Looper;
 import android.support.v4.os.TraceCompat;

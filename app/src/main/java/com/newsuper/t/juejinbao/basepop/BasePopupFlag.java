@@ -1,10 +1,5 @@
 package com.newsuper.t.juejinbao.basepop;
 
-/**
- * Created by 大灯泡 on 2019/5/8
- * <p>
- * Description：
- */
 public interface BasePopupFlag {
 
     /**

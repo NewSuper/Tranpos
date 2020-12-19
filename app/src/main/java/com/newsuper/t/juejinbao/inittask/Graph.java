@@ -1,4 +1,4 @@
-package com.newsuper.t.inittask;
+package com.newsuper.t.juejinbao.inittask;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

@@ -1,4 +1,4 @@
-package com.newsuper.t.inittask;
+package com.newsuper.t.juejinbao.inittask;
 
 import com.newsuper.t.R;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;

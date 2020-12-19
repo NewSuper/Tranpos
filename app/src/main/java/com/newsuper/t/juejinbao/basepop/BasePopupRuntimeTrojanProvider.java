@@ -6,8 +6,6 @@ import android.database.Cursor;
 import android.net.Uri;
 
 /**
- * Created by 大灯泡 on 2019/5/13
- * <p>
  * Description：一个BasePopup的provider注入木马嘿嘿~用来初始化依赖的插件
  */
 public final class BasePopupRuntimeTrojanProvider extends ContentProvider {

@@ -6,9 +6,9 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 
 import com.danikula.videocache.HttpProxyCacheServer;
-import com.newsuper.t.inittask.SmartRefreshLayoutTask;
-import com.newsuper.t.inittask.TaskDispatcher;
-import com.newsuper.t.inittask.X5WebTask;
+import com.newsuper.t.juejinbao.inittask.SmartRefreshLayoutTask;
+import com.newsuper.t.juejinbao.inittask.TaskDispatcher;
+import com.newsuper.t.juejinbao.inittask.X5WebTask;
 import com.newsuper.t.juejinbao.ui.JunjinBaoMainActivity;
 import com.newsuper.t.juejinbao.utils.SP;
 
@@ -23,7 +23,6 @@ public class JJBApplication extends Application {
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
-
     }
 
     @Override

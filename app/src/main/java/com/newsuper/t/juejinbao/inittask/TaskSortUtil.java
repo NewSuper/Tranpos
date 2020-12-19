@@ -1,4 +1,4 @@
-package com.newsuper.t.inittask;
+package com.newsuper.t.juejinbao.inittask;
 
 import android.support.annotation.NonNull;
 import android.support.v4.util.ArraySet;
