@@ -8,10 +8,6 @@ import com.newsuper.t.consumer.wxapi.Constants;
 import com.tencent.mm.opensdk.openapi.IWXAPI;
 import com.tencent.mm.opensdk.openapi.WXAPIFactory;
 
-/**
- * Created by Administrator on 2017/7/13 0013.
- */
-
 public class AppRegister extends BroadcastReceiver {
 
     @Override

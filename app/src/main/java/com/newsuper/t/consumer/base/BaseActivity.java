@@ -26,11 +26,6 @@ import com.newsuper.t.consumer.utils.SharedPreferencesUtil;
 import com.newsuper.t.consumer.utils.StatusBarUtil;
 import com.newsuper.t.consumer.utils.StringUtils;
 
-
-/**
- *  基类activity
- */
-
 public abstract class BaseActivity extends AppCompatActivity {
     private OrderBroadcastReceiver receiver;
     private CouponBroadcastReceiver cReceiver;
