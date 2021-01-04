@@ -6,16 +6,11 @@ import android.content.Intent;
 import android.os.Binder;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
-import android.util.Log;
 
 import com.amap.api.location.AMapLocation;
 import com.amap.api.location.AMapLocationListener;
 import com.newsuper.t.consumer.function.top.presenter.LocationPresenter;
 import com.newsuper.t.consumer.utils.LogUtil;
-
-/**
- * Created by Administrator on 2017/11/20 0020.
- */
 
 public class LocationService extends Service implements AMapLocationListener{
     private  LocationPresenter locationPresenter;

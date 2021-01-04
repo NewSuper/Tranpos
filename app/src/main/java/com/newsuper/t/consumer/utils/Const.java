@@ -1,7 +1,5 @@
 package com.newsuper.t.consumer.utils;
-/**
- * Created by Administrator on 2017/6/3 0003.
- */
+
 public class Const  {
 
 //    public static final String ADMIN_ID = BuildConfig.ADMIN_ID;//开发

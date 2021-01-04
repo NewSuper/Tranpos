@@ -1,17 +1,11 @@
 package com.newsuper.t.consumer.utils;
 
-
-
 import android.util.Base64;
 
 import java.security.Key;
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
-
-/**
- * Created by Administrator on 2018/1/17 0017.
- */
 
 public class AESUtil {
     private static final String AESTYPE ="AES/ECB/PKCS5Padding";
