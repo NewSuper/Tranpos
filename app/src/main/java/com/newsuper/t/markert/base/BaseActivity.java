@@ -52,7 +52,7 @@ public abstract class BaseActivity extends AppCompatActivity implements CustomAd
 
     /**
      * 沉浸式
-     * @return
+     *
      */
     protected boolean isSetSystemTransparent(){
         return true;
