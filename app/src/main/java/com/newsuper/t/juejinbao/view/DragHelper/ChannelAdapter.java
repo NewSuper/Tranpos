@@ -30,7 +30,6 @@ import java.util.List;
 
 /**
  * 拖拽排序 + 增删
- * Created by YoKeyword on 15/12/28.
  */
 public class ChannelAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> implements OnItemMoveListener {
     // 我的频道 标题部分
@@ -72,8 +71,6 @@ public class ChannelAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     public interface EditedListener {
         /**
          * 更新本地保存的channel
-         *
-         * @param list
          */
         void updateChannel(List<ChannelEntity> list);
     }

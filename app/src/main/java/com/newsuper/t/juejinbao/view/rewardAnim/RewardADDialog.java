@@ -53,19 +53,9 @@ public class RewardADDialog extends Dialog {
 
         tv_reward_coin = findViewById(R.id.tv_reward_coin);
 
-        ll_dialog.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                viewClickListener.ad();
-            }
-        });
+        ll_dialog.setOnClickListener(v -> viewClickListener.ad());
 
-        img_close.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                viewClickListener.close();
-            }
-        });
+        img_close.setOnClickListener(v -> viewClickListener.close());
 
         //文章奖励
         if(object instanceof RewardEntity){
