@@ -15,9 +15,6 @@ import android.view.View;
 import com.newsuper.t.R;
 
 
-/**
- * Created by daimajia on 14-4-30.
- */
 public class NumberProgressBar extends View {
 
     /**

@@ -34,9 +34,8 @@ public class MyHeader extends LinearLayout implements RefreshHeader {
     private ImageView mRotateView;
     private int mRotateAniTime = 300;
     Random mRandom = new Random();
-    /**
-     * 旋转动画
-     */
+   //旋转动画
+
     private RotateAnimation mRotateAnimation;
     private static final int[] IMG_RES = {
             R.mipmap.ic_refresh_01,
