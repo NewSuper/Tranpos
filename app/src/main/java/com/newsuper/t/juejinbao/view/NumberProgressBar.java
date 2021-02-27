@@ -17,9 +17,6 @@ import com.newsuper.t.R;
 
 public class NumberProgressBar extends View {
 
-    /**
-     * For save and restore instance of progressbar.
-     */
     private static final String INSTANCE_STATE = "saved_instance";
     private static final String INSTANCE_TEXT_COLOR = "text_color";
     private static final String INSTANCE_TEXT_SIZE = "text_size";
