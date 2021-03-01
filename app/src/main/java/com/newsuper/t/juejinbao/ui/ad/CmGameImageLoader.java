@@ -18,7 +18,6 @@ import com.bumptech.glide.request.RequestOptions;
 //public class CmGameImageLoader implements IImageLoader {
 //    @Override
 //    public void loadImage(Context context, String imageUrl, ImageView imageView, int defRsid) {
-//
 //        Glide.with(context)
 //                .load(imageUrl)
 //                .apply(new RequestOptions().placeholder(defRsid).error(defRsid).diskCacheStrategy(DiskCacheStrategy.RESOURCE))
