@@ -12,9 +12,6 @@ import okhttp3.ResponseBody;
 import retrofit2.Converter;
 import retrofit2.Retrofit;
 
-/**
- * Created by Administrator on 2017/4/24 0024.
- */
 
 public final  class CustomGsonConverterFactory extends Converter.Factory {
     public static CustomGsonConverterFactory create() {
