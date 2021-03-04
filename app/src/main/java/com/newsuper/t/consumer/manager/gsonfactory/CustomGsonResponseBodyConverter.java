@@ -10,9 +10,6 @@ import java.io.IOException;
 import okhttp3.ResponseBody;
 import retrofit2.Converter;
 
-/**
- * Created by Administrator on 2017/4/24 0024.
- */
 
 public class CustomGsonResponseBodyConverter  <T> implements Converter<ResponseBody, T> {
     private final Gson gson;
