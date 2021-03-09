@@ -5,9 +5,7 @@ import com.newsuper.t.consumer.bean.AddressBean;
 
 import java.util.ArrayList;
 
-/**
- * Created by Administrator on 2017/6/19 0019.
- */
+
 
 public class AddressManager  {
     private static AddressManager manager;

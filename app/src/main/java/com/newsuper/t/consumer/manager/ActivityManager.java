@@ -4,9 +4,6 @@ import android.app.Activity;
 
 import java.util.ArrayList;
 
-/**
- * Created by Administrator on 2017/8/15 0015.
- */
 
 public class ActivityManager {
     private static ActivityManager manager;
