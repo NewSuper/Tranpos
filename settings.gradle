@@ -1,2 +1,0 @@
-include ':app',':jiaozivideoplayer', ':steplibrary',':videocompressor' ,':PosLibs:network', ':PosLibs:thread', ':PosLibs:tools'
-rootProject.name = "T"
