@@ -1,0 +1,15 @@
+syntax = "proto3";
+package com.qx.it.protos;
+
+option java_outer_classname="C2SAuth";
+
+message Auth
+{
+  string appId = 1;
+  string token =2;
+  string deviceNo =3;
+  string deviceTyoe =4;
+  string deviceCode = 5;
+  string systemVersion =6;
+  string language =7;
+}
