@@ -1,10 +1,64 @@
 package com.qx.imlib
 
+import android.app.Application
 import android.content.Context
+import android.os.Handler
+import android.os.HandlerThread
+import android.os.Parcel
+import com.qx.im.model.RTCServerConfig
+import com.qx.imlib.netty.NettyClientModel
+import com.qx.imlib.utils.net.NetWorkMonitorManager
 import com.qx.message.ICustomEventProvider
+import org.greenrobot.eventbus.EventBus
 
 internal class LibHandlerStub constructor(private val mContext: Context,private val mAppkey:String)
     :IHandler.Stub(){
+
+    private val mWorkHandler: Handler
+    private var mConnectStringCallback: IConnectStringCallback? = null
+    private var mOnReceiveMessageListener: IOnReceiveMessageListener? = null
+    private var mConversationListener: IConversationListener? = null
+    private var mMessageReceiptListener: IMessageReceiptListener? = null
+    private var mOnChatRoomMessageReceiveListener: IOnChatRoomMessageReceiveListener? = null
+    private var mOnChatNoticeReceivedListenerList = arrayListOf<IOnChatNoticeReceivedListener>()
+    private var connectionStatus: ConnectionStatusListener.Status? = null
+    private var mConnectionStatusListener: IConnectionStatusListener? = null
+
+    private var mNettyClientModel: NettyClientModel? = null
+    private var isNetworkAvailable = false
+    private var mCallReceiveMessageListener: ICallReceiveMessageListener? = null
+
+    // RTC信令消息回调
+    private var mRTCReceiveMessageListener: IRTCMessageListener? = null
+
+    private var rtcConfig: RTCServerConfig? = null
+
+    companion object{
+        private val TAG = LibHandlerStub::class.java.simpleName
+    }
+
+    init {
+        val handlerThread = HandlerThread("IPC_SERVICE")
+        handlerThread.start()
+        mWorkHandler = Handler(handlerThread.looper)
+        mNettyClientModel =  NettyClientModel(mContext)
+        if (!EventBus.getDefault().isRegistered(this)) {
+            EventBus.getDefault().register(this)
+        }
+        if (mContext.applicationContext is Application) {
+            NetWorkMonitorManager.getInstance().init(mContext.applicationContext as Application)
+            NetWorkMonitorManager.getInstance().register(this)
+        }
+    }
+
+    override fun onTransact(code: Int, data: Parcel, reply: Parcel?, flags: Int): Boolean {
+        try {
+            return super.onTransact(code, data, reply, flags)
+        } catch (e: java.lang.Exception) {
+            throw e;
+        }
+    }
+
     override fun connectServer(
         token: String?,
         imServerUrl: String?,

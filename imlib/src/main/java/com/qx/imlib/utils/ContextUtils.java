@@ -2,20 +2,21 @@ package com.qx.imlib.utils;
 
 import android.content.Context;
 
-public class GlobalContextManager {
+public class ContextUtils {
     private Context context;
 
     static class Holder{
-        final static GlobalContextManager instance = new GlobalContextManager();
+        final static ContextUtils instance = new ContextUtils();
     }
 
-    public static GlobalContextManager getInstance(){
+    public static ContextUtils getInstance(){
         return Holder.instance;
     }
 
     public Context getContext() {
         return context;
     }
+
     public void cacheApplicationContext(Context context){
         this.context = context;
     }

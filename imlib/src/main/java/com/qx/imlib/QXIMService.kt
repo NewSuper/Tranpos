@@ -6,7 +6,7 @@ import android.os.IBinder
 import android.os.Process
 import android.text.TextUtils
 import com.qx.imlib.qlog.QLog
-import com.qx.imlib.utils.GlobalContextManager
+import com.qx.imlib.utils.ContextUtils
 
 class QXIMService :Service(),Thread.UncaughtExceptionHandler {
 
@@ -24,7 +24,7 @@ class QXIMService :Service(),Thread.UncaughtExceptionHandler {
     override fun onCreate() {
         super.onCreate()
         defaultExceptionHandler = Thread.getDefaultUncaughtExceptionHandler()
-        GlobalContextManager.getInstance().cacheApplicationContext(this)
+        ContextUtils.getInstance().cacheApplicationContext(this)
         Thread.setDefaultUncaughtExceptionHandler(this)
     }
 

@@ -1,7 +1,7 @@
 package com.qx.imlib.qlog
 
 import android.util.Log
-import com.qx.imlib.utils.NetUtils
+import com.qx.imlib.utils.net.NetUtils
 import org.json.JSONObject
 import java.io.*
 import java.net.HttpURLConnection
