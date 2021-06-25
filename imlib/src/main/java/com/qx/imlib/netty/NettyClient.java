@@ -3,6 +3,9 @@ package com.qx.imlib.netty;
 
 import android.util.Log;
 
+import com.qx.imlib.utils.event.EventBusUtil;
+import com.qx.imlib.utils.event.SendMessageEvent;
+
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;

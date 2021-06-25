@@ -85,54 +85,27 @@ class IMDatabaseRepository {
     fun calcUnTrustTime(conversationType: String, targetId: String, min: Long, max: Long) {
         Log.e(TAG, "calcUnTrustTime: ============ 历史消息后端查询成功，开始计算不信任时间窗:$min    $max")
         unTrustTimeDao.startsWithAndUpdate(
-            conversationType,
-            targetId,
-            UserInfoCache.getUserId(),
-            min,
-            max
-        )
+            conversationType, targetId, UserInfoCache.getUserId(), min, max)
         unTrustTimeDao.endsWithAndUpdate(
-            conversationType,
-            targetId,
-            UserInfoCache.getUserId(),
-            min,
-            max
-        )
+            conversationType, targetId, UserInfoCache.getUserId(), min, max)
         //获取当前这个时间窗包含的消息窗列表
         val list = unTrustTimeDao.containsWithAndUpdate(
-            conversationType,
-            targetId,
-            UserInfoCache.getUserId(),
-            min,
-            max
-        )
+            conversationType, targetId, UserInfoCache.getUserId(), min, max)
         Log.e(TAG, "calcUnTrustTime:  包含在数据库的时间窗列表：$list")
         //如果list不为空，则说明不信任区域时间区间包含min和max，则需要拆分该时间区域一分为二，然后再删除该时间区域
         if (!list.isNullOrEmpty()) {
             for (time in list) {
                 Log.e(TAG, "calcUnTrustTime: 拿到的单条时间窗：" + time.toString())
                 var time1 = TBUnTrustTime.obtain(
-                    time.ownerId,
-                    time.conversationType,
-                    time.targetId,
-                    time.startTime,
-                    min
-                )
+                    time.ownerId, time.conversationType, time.targetId, time.startTime, min)
                 var time2 = TBUnTrustTime.obtain(
-                    time.ownerId,
-                    time.conversationType,
-                    time.targetId,
-                    max,
-                    time.endTime
-                )
+                    time.ownerId, time.conversationType, time.targetId, max, time.endTime)
                 unTrustTimeDao.insert(time1)
                 unTrustTimeDao.insert(time2)
                 unTrustTimeDao.delete(time.id)
-                QLog.e(
-                    TAG,
+                QLog.e(TAG,
                     "calcUnTrustTime: insert target:${targetId}, time1 start: ${time1.startTime} end:${time1.endTime}," +
-                            "time2 start:${time2.startTime} end: ${time2.endTime}, min:$min,max:$max, and delete: ${time.startTime}"
-                )
+                            "time2 start:${time2.startTime} end: ${time2.endTime}, min:$min,max:$max, and delete: ${time.startTime}")
             }
         }
         unTrustTimeDao.beContain(conversationType, targetId, UserInfoCache.getUserId(), min, max)
@@ -829,15 +802,10 @@ class IMDatabaseRepository {
     }
 
     fun getHistoryMessage(
-        conversationType: String,
-        targetId: String,
-        timestamp: Long,
-        searchType: Int
-    ) {
-        QLog.d(
-            TAG,
-            "从服务器上获取消息记录： conversationType=$conversationType targetId=$targetId timestamp=$timestamp searchType=$searchType"
-        )
+        conversationType: String, targetId: String,
+        timestamp: Long, searchType: Int) {
+        QLog.d(TAG,
+            "从服务器上获取消息记录： conversationType=$conversationType targetId=$targetId timestamp=$timestamp searchType=$searchType")
         var body = C2SMessageLoad.MessageLoad.newBuilder().setSendType(conversationType)
             .setSearchType(searchType).setTargetId(targetId).setTimestamp(timestamp).build()
         var msg = S2CSndMessage()
@@ -1273,7 +1241,9 @@ class IMDatabaseRepository {
         }
         return null
     }
-
+    fun insertUnTrustTime(unTrustTime: TBUnTrustTime) {
+        unTrustTimeDao.insert(unTrustTime)
+    }
     ///**** call_message START ****///
     fun insertOrReplace(message: TBCallMessage): Long {
         return callMessageDao.insertOrReplaceCallMessage(message)

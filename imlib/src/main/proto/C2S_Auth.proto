@@ -8,7 +8,7 @@ message Auth
   string appId = 1;
   string token =2;
   string deviceNo =3;
-  string deviceTyoe =4;
+  string deviceType =4;
   string deviceCode = 5;
   string systemVersion =6;
   string language =7;
