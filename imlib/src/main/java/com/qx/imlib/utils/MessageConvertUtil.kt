@@ -8,7 +8,7 @@ import com.qx.im.model.MsgToMessageEntity
 import com.qx.im.model.UserInfoCache
 import com.qx.im.model.json.*
 import com.qx.imlib.SystemCmd
-import com.qx.imlib.db.entity.MessageEntity
+import com.qx.imlib.db.entity.*
 import com.qx.imlib.netty.S2CSndMessage
 import com.qx.imlib.qlog.QLog
 import com.qx.it.protos.S2CCustomMessage
@@ -606,7 +606,173 @@ class MessageConvertUtil {
         }
         return jsonMessage
     }
+    fun messageToMessageEntity(message: Message): MessageEntity {
+        val messageEntity = MessageEntity.obtain(
+            message.conversationType, message.messageType, message.senderUserId, message.targetId
+        )
+        messageEntity.messageId = message.messageId
+        messageEntity.state = message.state
 
+        when (message.messageContent) {
+            is TextMessage -> {
+                messageEntity.messageType = MessageType.TYPE_TEXT
+                val textMessage = message.messageContent as TextMessage
+                val tm = TBTextMessage.obtain(
+                    "", message.messageId, textMessage.content, textMessage.extra
+                )
+                val list: MutableList<TBAtToMessage> = java.util.ArrayList()
+                for (atm in textMessage.atToMessageList) {
+                    val at = TBAtToMessage.obtain(
+                        "", message.messageId, atm.atTo, TBAtToMessage.ReadState.STATE_READ, message.timestamp
+                    )
+                    list.add(at)
+                }
+                messageEntity.textMessage = tm
+                messageEntity.atToMessage = list
+            }
+            is AudioMessage -> {
+                messageEntity.messageType = MessageType.TYPE_AUDIO
+                val audioMessage = message.messageContent as AudioMessage
+                val audio = TBAudioMessage.obtain(
+                    "", message.messageId, audioMessage.localPath, audioMessage.originUrl, audioMessage.size,
+                    audioMessage.duration, audioMessage.extra
+                )
+                messageEntity.audioMessage = audio
+            }
+            is VideoMessage -> {
+                messageEntity.messageType = MessageType.TYPE_VIDEO
+                val videoMessage = message.messageContent as VideoMessage
+                val video = TBVideoMessage.obtain(
+                    "",
+                    message.messageId,
+                    videoMessage.headUrl,
+                    videoMessage.originUrl,
+                    videoMessage.localPath,
+                    videoMessage.width,
+                    videoMessage.height,
+                    videoMessage.size,
+                    videoMessage.duration,
+                    videoMessage.extra
+                )
+                messageEntity.videoMessage = video
+            }
+            is GeoMessage -> {
+                messageEntity.messageType = MessageType.TYPE_GEO
+                val geoMessage = message.messageContent as GeoMessage
+                val geo = TBGeoMessage.obtain(
+                    "",
+                    message.messageId,
+                    geoMessage.title,
+                    geoMessage.address,
+                    geoMessage.previewUrl,
+                    geoMessage.localPath,
+                    geoMessage.lon.toFloat(),
+                    geoMessage.lat.toFloat(),
+                    geoMessage.extra
+                )
+                messageEntity.geoMessage = geo
+            }
+            is ImageMessage -> {
+                messageEntity.messageType = MessageType.TYPE_IMAGE
+                val imageMessage = message.messageContent as ImageMessage
+                val image = TBImageMessage.obtain(
+                    "",
+                    message.messageId,
+                    imageMessage.originUrl,
+                    imageMessage.breviary_url,
+                    imageMessage.localPath,
+                    imageMessage.width,
+                    imageMessage.height,
+                    imageMessage.size,
+                    imageMessage.extra
+                )
+                messageEntity.imageMessage = image
+            }
+            is ImageTextMessage -> {
+                messageEntity.messageType = MessageType.TYPE_IMAGE_AND_TEXT
+                val imageTextMessage = message.messageContent as ImageTextMessage
+                val imageText = TBImageTextMessage.obtain(
+                    "",
+                    message.messageId,
+                    imageTextMessage.title,
+                    imageTextMessage.content,
+                    imageTextMessage.imageUrl,
+                    imageTextMessage.redirectUrl,
+                    imageTextMessage.tag,
+                    imageTextMessage.extra
+                )
+                messageEntity.imageTextMessage = imageText
+            }
+            is FileMessage -> {
+                messageEntity.messageType = MessageType.TYPE_FILE
+                val fileMessage = message.messageContent as FileMessage
+                val file = TBFileMessage.obtain(
+                    "",
+                    message.messageId,
+                    fileMessage.fileName,
+                    fileMessage.originUrl,
+                    fileMessage.localPath,
+                    fileMessage.type,
+                    fileMessage.size,
+                    fileMessage.extra
+                )
+                messageEntity.fileMessage = file
+            }
+            is NoticeMessage -> {
+                messageEntity.messageType = MessageType.TYPE_NOTICE
+                val noticeMessage = message.messageContent as NoticeMessage
+                val notice = TBNoticeMessage.obtain(
+                    "", message.messageId, noticeMessage.operateUser, noticeMessage.users,
+                    noticeMessage.type, noticeMessage.content, noticeMessage.extra
+                )
+                messageEntity.noticeMessage = notice
+            }
+            is InputStatusMessage -> {
+                messageEntity.messageType = MessageType.TYPE_STATUS
+                val inputStatusMessage = message.messageContent as InputStatusMessage
+                val stus = TBInputStatusMessage.obtain(
+                    message.messageId, inputStatusMessage.content, inputStatusMessage.extra
+                )
+                messageEntity.inputStatusMessage = stus
+            }
+            //回复消息
+            is ReplyMessage -> {
+                messageEntity.messageType = MessageType.TYPE_REPLY
+                val replyMessage = message.messageContent as ReplyMessage
+
+                var orgin = messageToJSonMessage(replyMessage.origin)
+                var answer = messageToJSonMessage(replyMessage.answer)
+
+                val reply = TBReplyMessage.obtain(message.conversationId, message.messageId,
+                    Gson().toJson(orgin), Gson().toJson(answer), replyMessage.extra)
+                messageEntity.replyMessage = reply
+            }
+            //转发消息
+            is RecordMessage -> {
+                messageEntity.messageType = MessageType.TYPE_RECORD
+                val retransmissionMessage = message.messageContent as RecordMessage
+
+                var list = arrayListOf<JSonMessage>()
+                for (index in 0 until retransmissionMessage.messages.size) {
+                    var jsonMessage = messageToJSonMessage(retransmissionMessage.messages[index])
+                    list.add(jsonMessage)
+                }
+                val retransmission = TBRetransmissionMessage.obtain(message.conversationId,
+                    message.messageId, Gson().toJson(list), retransmissionMessage.extra)
+                messageEntity.retransmissionMessage = retransmission
+            }
+            //自定义消息
+            is CustomMessage -> {
+                messageEntity.messageType = message.messageType
+                var customMessage = message.messageContent as CustomMessage
+
+                var custom = TBCustomMessage.obtain(message.conversationId, message.messageId,
+                    customMessage.content, customMessage.extra)
+                messageEntity.customMessage = custom
+            }
+        }
+        return messageEntity
+    }
     /*fun getSendMessage(body: Msg?, message: MessageEntity): S2CSndMessage {
     val msg = com.qx.im.core.network.tcp.message.S2CSndMessage()
     msg.cmd = ChatType.getSystemCmd(message.sendType)
