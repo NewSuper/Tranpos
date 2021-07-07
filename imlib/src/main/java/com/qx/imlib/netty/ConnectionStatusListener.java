@@ -34,8 +34,7 @@ public interface ConnectionStatusListener {
         TOKEN_INCORRECT(STATUS_TOKEN_INCORRECT, "token错误"),
         REFUSE(STATUS_REFUSE, "非法访问"),
         LOGOUT(STATUS_LOGOUT, "注销成功"),
-        TIMEOUT(STATUS_TIME_OUT, "连接超时"),
-        ;
+        TIMEOUT(STATUS_TIME_OUT, "连接超时");
 
         private int value;
         private String message;

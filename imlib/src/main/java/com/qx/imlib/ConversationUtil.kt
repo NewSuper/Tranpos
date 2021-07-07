@@ -3,6 +3,7 @@ package com.qx.imlib
 import com.qx.im.model.UserInfoCache
 import com.qx.imlib.db.IMDatabaseRepository
 import com.qx.imlib.db.entity.ConversationEntity
+import com.qx.imlib.utils.MessageConvertUtil
 import com.qx.message.Conversation
 import com.qx.message.Message
 
